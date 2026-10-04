@@ -1,0 +1,59 @@
+{
+  "workload": [
+    192,
+    768,
+    3072
+  ],
+  "domain": {
+    "tile_M": [
+      32,
+      64
+    ],
+    "tile_N": [
+      32,
+      64
+    ],
+    "tile_K": [
+      32
+    ],
+    "split_K": [
+      1,
+      2,
+      4,
+      8,
+      16
+    ],
+    "buffers": [
+      1,
+      2,
+      3,
+      4,
+      6
+    ]
+  },
+  "parameters": {
+    "SMs": 170,
+    "shared_per_SM": 102400,
+    "shared_per_block": 101376,
+    "register_words_per_SM": 65536,
+    "max_warps": 48,
+    "max_blocks": 24,
+    "threads": 128,
+    "warps": 4,
+    "clock_cycles_per_us": 2940,
+    "L2_bytes_per_us": 3444000.0,
+    "operand_ready_cycles": 340,
+    "HMMA_effective_result_cycles": 64,
+    "HMMA_interval_cycles": 8,
+    "schedulers": 4,
+    "shared_bytes_per_cycle": 128,
+    "launch_cycles": 3346,
+    "workspace_limit": 67108864,
+    "scalar_adds_per_SM_cycle": 128
+  },
+  "parameter_scope": "340 scalar-load composite transferred to tile arrival;64/II8 isolated-register surrogate transferred;3.444TB/s aggregate service prior;128B/cycle conflict-free shared service is architectural ideal;3346cy startup from older model, not measured CUDA launch.",
+  "register_estimate": "32 control words +ceil(tileM*tileN/128) accumulators +ceil(tileK*(tileM+tileN)/128) double operand buffers perthread; matches captured64tile96regs, unverified elsewhere.",
+  "cache_service": "Every logical staged input byte charged to warm L2; no inferred hit ratio or measured candidate runtime.",
+  "library_reference": "64x64x32 split8 buffers6,96regs,49152shared,4718592workspace, logical288tasks (captured grid384not modeled).",
+  "claim": "Structural optimistic timing proxy; no compiledcandidate/GPUvalidation orhardwareoptimality. Numerical GPU runtimes are absent from solver inputs."
+}

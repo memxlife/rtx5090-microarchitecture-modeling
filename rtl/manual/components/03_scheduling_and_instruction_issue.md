@@ -179,3 +179,26 @@ Retain the verification expectations and existing receipts in Section 8. The [in
 Issue capacity and dependency constraints belong in the MIP. Exact scheduler policy can remain provisional until a hardware mismatch depends on it.
 
 A parameter checked through documentation or a transferred prior can be used provisionally. Refine it when a new end-to-end case disagrees materially or when it changes the optimization choice. Do not spend time recovering a private property that the supported execution path does not exercise.
+
+
+## 11. Experimental four-partition staging issue
+
+Does the compiled staging repair need its own issue port, or must it share the scheduler partitions used by compute? The Step24 candidate replaces its single staging issue port with four partitions. A partition is one modeled instruction-admission lane. This is a provisional scheduling hypothesis, not a claim that the physical RTX 5090 arbitration policy has been recovered.
+
+### Resources and interface
+
+[The C++ staging component](../../../step24_staging_interaction_001/partition_candidate/staging_event.hpp) retains four producer warps per block, a 32-entry pending-load queue and a 32-entry pending-store queue per streaming multiprocessor (SM). Each partition owns one round-robin cursor over resident block contexts. Warp index selects its partition. The pending queues remain shared across partitions; increasing the issue lanes does not multiply their capacities.
+
+The `Input.blocked_partitions` field is a four-bit reservation mask. Bit `p` prevents staging from issuing on partition `p` during that edge. [The SM wiring](../../../step24_staging_interaction_001/partition_candidate/sm_event.hpp) reserves the selected native-compute partition before staging runs. This native-first arbitration prevents admitting a compute instruction plus four staging instructions through four modeled lanes on the same edge. It is an explicit priority rule rather than a measured hardware policy.
+
+### State, timing and stalls
+
+After accepting memory returns, commits and completion handshakes, the staging component retires eligible pending loads. It then visits partitions zero through three. An unblocked partition scans contexts from its own cursor, selects one eligible producer instruction, updates shared queue ownership, and advances that partition's cursor. Later partitions see those queue allocations on the same behavioral edge. A blocked or ineligible partition admits no instruction and leaves its cursor unchanged.
+
+The register readiness rule remains the later of `load issue + 340 cycles` and `last sector return + 1 cycle`. The 340-cycle value is a transferred composite prior, not intrinsic cache latency. Source-read capture and store commit remain one-cycle provisional rules. Source readiness, unfinished writers, read ownership, dependency tags and pending-queue capacity can stall issue independently of partition reservation. The candidate does not yet apply every encoded producer cooldown; [the control audit](../../../step24_staging_interaction_001/producer_control_audit.json) identifies that missing timing capability without promoting an untested interpretation.
+
+### Implementation and evidence
+
+[The behavioral Verilog counterpart](../../../step24_staging_interaction_001/partition_rtl/repaired_staging.sv) exports the same four-bit `blocked_partitions` input and preserves partition-ordered updates. [The differential receipt](../../../step24_staging_interaction_001/partition_rtl/parity_receipt.json) records 943,985 protocol, address and counter comparisons, plus 49,152 separate BF16 operand-value checks over 24 frames. BF16 is a 16-bit floating-point format. Tests cover early and late memory returns, output backpressure, rotating native reservations and all partitions blocked. Host multiplication checks the delivered operands; no Verilog matrix arithmetic or full-chip execution is tested.
+
+The [completed C++ small case](../../../step24_staging_interaction_001/partition_small.json) predicts 275.607823 microseconds for 128 × 96 output with reduction length 12,288: −27.5375% against the preserved GPU result. The [dense case](../../../step24_staging_interaction_001/partition_dense.json) predicts 269.960544 microseconds for 1,920 × 1,920 with reduction length 1,536: +10.4050%. Error means `100 × (prediction / measurement − 1)`; negative error underpredicts runtime. Both exceed 5%, so neither the four-partition candidate nor the earlier single-issue candidate is promoted. [The interaction report](../../../step24_staging_interaction_001/result_report.md) explains why component consistency does not establish physical scheduling accuracy.

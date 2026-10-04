@@ -1,0 +1,46 @@
+{
+  "status": "passed_component_differential",
+  "protocol_address_counter_comparisons": 943985,
+  "completed_frames": 24,
+  "rtl_halfword_payload_checks": 49152,
+  "scenario_cycles": [
+    4249,
+    6223,
+    4257,
+    4532
+  ],
+  "contexts": 3,
+  "stages_per_context": 2,
+  "timing": {
+    "register_ready_floor_cycles": 340,
+    "register_ready_rule": "max(issue + 340, last sector return + 1)",
+    "source_capture_cycles": 1,
+    "store_commit_cycles": 1
+  },
+  "coverage": [
+    "early sector returns (5 cycles)",
+    "late sector returns (500 cycles)",
+    "backing, store and done backpressure",
+    "simultaneous queue operations",
+    "context reuse after completion",
+    "Partition reservation stalls, all four blocked and rotating reserved native partition"
+  ],
+  "reset_scope": "Fresh reset before each scenario; midflight reset not tested.",
+  "stale_response_scope": "C++ rejects repeated completed-frame response ID; RTL negative response test not executed.",
+  "numerical_scope": "RTL delivers 36,864 nonconstant BF16 halfwords checked against global-address oracle. Host C++ multiplies delivered operands and compares stage products. No Verilog compute or full GEMM execution is tested.",
+  "payload_capture": "RTL group payload read at STS commit. Each group is written once per drained stage, so no intervening update is possible in this supported path. General store-data capture is not validated.",
+  "implementation_scope": "Behavioral blocking edge-order reproduces frozen C++ component. Not full-chip RTL equivalence, synthesis readiness, or calibrated hardware timing.",
+  "files_sha256": {
+    "repaired_staging.sv": "61974d11520269d33cfd974f9749c19995b331ec1fa5b407a5faff81fdc3013e",
+    "build.txt": "5c1f22245bafacc51d4743af1f2b593a2b01bfd68d82f11a012e41aea778f32f",
+    "producer_tables.svh": "0bcaca21c227e8b04d16ac65c35659c61d5e642f4ae506629b6b0df253650659",
+    "parity_stdout.txt": "0dc92730332fa319ec3fc4863e0f1b4e3b46fd8a46db7c25f3aa02bb249ca061",
+    "parity.cpp": "bdc08c1cdebb2c003ecb1fc023826b05b2fca5740885168067dac5cc59d04733"
+  },
+  "cpp_reference_sha256": "ba7981617a3eb9a49b9766556afb2040bdd360d400834b2470bddacdb7576a54",
+  "build_command": "/opt/homebrew/bin/verilator --cc --exe --build -j 4 -Wno-fatal --top-module repaired_staging --Mdir /private/tmp/staging_partition_rtl_build -Istep24_staging_interaction_001/partition_rtl -CFLAGS \"-std=c++20 -O2\" step24_staging_interaction_001/partition_rtl/repaired_staging.sv step24_staging_interaction_001/partition_rtl/parity.cpp",
+  "run_command": "/private/tmp/staging_partition_rtl_build/Vrepaired_staging",
+  "partition_count": 4,
+  "partition_rule": "One issue per unblocked partition per cycle; context round-robin cursor per partition; partition updates0..3 serialize shared queue allocations.",
+  "blocked_partitions": "Four-bit input reserves partitions for native compute; scenario3 exercises all blocked and rotating single-partition reservations."
+}

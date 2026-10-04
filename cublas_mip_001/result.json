@@ -1,0 +1,203 @@
+{
+  "solver": {
+    "API": "scipy.optimize.milp",
+    "SciPy": "1.18.0",
+    "HiGHS": "1.12.0",
+    "presolve": false
+  },
+  "solver_status": 0,
+  "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+  "solve_seconds": 0.04077775008045137,
+  "preparation_seconds": 0.0008513331413269043,
+  "enumeration_seconds": 2.8749927878379822e-05,
+  "total_seconds_excluding_import_and_JSON_output": 0.04170658299699426,
+  "variables": 203,
+  "binary_variables": 100,
+  "constraints": 662,
+  "mip_gap": 0.0,
+  "predicted_cycles": 39883.711219513,
+  "predicted_us": 13.565888169902381,
+  "selected": {
+    "tile_M": 64,
+    "tile_N": 64,
+    "tile_K": 32,
+    "split_K": 4,
+    "buffers": 6,
+    "shared_bytes": 49152,
+    "registers_per_thread": 96,
+    "resident_blocks_per_SM": 2,
+    "logical_tasks": 144,
+    "stages_per_task": 24,
+    "workspace_bytes": 2359296,
+    "waves": 1,
+    "period_bounds_cycles": [
+      1188.8390243902438,
+      128.0,
+      68.0
+    ],
+    "startup_cycles": 1316.8390243902438,
+    "global_copy_cycles": 28532.136585365857,
+    "workspace_write_cycles": 2014.0331707317073,
+    "reduction_cycles": 2517.541463414634,
+    "extra_launch_cycles": 3346
+  },
+  "independent_enumeration_min_cycles": 39883.711219512195,
+  "constraint_violation": 1.5543122344752192e-15,
+  "enumeration_match": true,
+  "enumeration_minimizers": [
+    {
+      "tile_M": 64,
+      "tile_N": 64,
+      "tile_K": 32,
+      "split_K": 4,
+      "buffers": 2,
+      "shared_bytes": 16384,
+      "registers_per_thread": 96,
+      "resident_blocks_per_SM": 5,
+      "logical_tasks": 144,
+      "stages_per_task": 24,
+      "workspace_bytes": 2359296,
+      "waves": 1,
+      "period_bounds_cycles": [
+        1188.8390243902438,
+        128.0,
+        340.0
+      ],
+      "startup_cycles": 1316.8390243902438,
+      "global_copy_cycles": 28532.136585365857,
+      "workspace_write_cycles": 2014.0331707317073,
+      "reduction_cycles": 2517.541463414634,
+      "extra_launch_cycles": 3346
+    },
+    {
+      "tile_M": 64,
+      "tile_N": 64,
+      "tile_K": 32,
+      "split_K": 4,
+      "buffers": 3,
+      "shared_bytes": 24576,
+      "registers_per_thread": 96,
+      "resident_blocks_per_SM": 4,
+      "logical_tasks": 144,
+      "stages_per_task": 24,
+      "workspace_bytes": 2359296,
+      "waves": 1,
+      "period_bounds_cycles": [
+        1188.8390243902438,
+        128.0,
+        170.0
+      ],
+      "startup_cycles": 1316.8390243902438,
+      "global_copy_cycles": 28532.136585365857,
+      "workspace_write_cycles": 2014.0331707317073,
+      "reduction_cycles": 2517.541463414634,
+      "extra_launch_cycles": 3346
+    },
+    {
+      "tile_M": 64,
+      "tile_N": 64,
+      "tile_K": 32,
+      "split_K": 4,
+      "buffers": 4,
+      "shared_bytes": 32768,
+      "registers_per_thread": 96,
+      "resident_blocks_per_SM": 3,
+      "logical_tasks": 144,
+      "stages_per_task": 24,
+      "workspace_bytes": 2359296,
+      "waves": 1,
+      "period_bounds_cycles": [
+        1188.8390243902438,
+        128.0,
+        113.33333333333333
+      ],
+      "startup_cycles": 1316.8390243902438,
+      "global_copy_cycles": 28532.136585365857,
+      "workspace_write_cycles": 2014.0331707317073,
+      "reduction_cycles": 2517.541463414634,
+      "extra_launch_cycles": 3346
+    },
+    {
+      "tile_M": 64,
+      "tile_N": 64,
+      "tile_K": 32,
+      "split_K": 4,
+      "buffers": 6,
+      "shared_bytes": 49152,
+      "registers_per_thread": 96,
+      "resident_blocks_per_SM": 2,
+      "logical_tasks": 144,
+      "stages_per_task": 24,
+      "workspace_bytes": 2359296,
+      "waves": 1,
+      "period_bounds_cycles": [
+        1188.8390243902438,
+        128.0,
+        68.0
+      ],
+      "startup_cycles": 1316.8390243902438,
+      "global_copy_cycles": 28532.136585365857,
+      "workspace_write_cycles": 2014.0331707317073,
+      "reduction_cycles": 2517.541463414634,
+      "extra_launch_cycles": 3346
+    }
+  ],
+  "reference_configurations": [
+    {
+      "config": {
+        "tile_M": 32,
+        "tile_N": 32,
+        "tile_K": 32,
+        "split_K": 1,
+        "buffers": 1,
+        "shared_bytes": 4096,
+        "registers_per_thread": 56,
+        "resident_blocks_per_SM": 9,
+        "logical_tasks": 144,
+        "stages_per_task": 96,
+        "workspace_bytes": 0,
+        "waves": 1,
+        "period_bounds_cycles": [
+          722.4195121951219
+        ],
+        "startup_cycles": 722.4195121951219,
+        "global_copy_cycles": 57064.273170731714,
+        "workspace_write_cycles": 0.0,
+        "reduction_cycles": 0,
+        "extra_launch_cycles": 0
+      },
+      "predicted_us": 24.727303799568606
+    },
+    {
+      "config": {
+        "tile_M": 64,
+        "tile_N": 64,
+        "tile_K": 32,
+        "split_K": 8,
+        "buffers": 6,
+        "shared_bytes": 49152,
+        "registers_per_thread": 96,
+        "resident_blocks_per_SM": 2,
+        "logical_tasks": 288,
+        "stages_per_task": 12,
+        "workspace_bytes": 4718592,
+        "waves": 1,
+        "period_bounds_cycles": [
+          2377.6780487804876,
+          256.0,
+          68.0
+        ],
+        "startup_cycles": 2633.6780487804876,
+        "global_copy_cycles": 24168.39804878049,
+        "workspace_write_cycles": 4028.0663414634146,
+        "reduction_cycles": 4531.574634146341,
+        "extra_launch_cycles": 3346
+      },
+      "predicted_us": 14.979516177202587
+    }
+  ],
+  "source_sha256": "8c83ac13a12b822fa1f751404ea3a23537e22aae8405b31bf3d078bbc13b0d8e",
+  "contract_sha256": "56e7bd6a1ed0ee043e02c49a5de1b2fc07d776c86fc1ca2b2e89f5bc0a124be1",
+  "no_GPU_or_Verilog": true,
+  "scope": "Structural optimistic timing proxy; no compiledcandidate/GPUvalidation orhardwareoptimality. Numerical GPU runtimes are absent from solver inputs."
+}

@@ -1,0 +1,52 @@
+{
+  "cases": [
+    {
+      "shape": [
+        128,
+        96,
+        12288
+      ],
+      "blocks": 12,
+      "stages_per_block": 384,
+      "minimum_max_SM_stages": 384,
+      "producer_issue_only_lower_bound_cycles": 333312,
+      "global_load_queue_only_lower_bound_cycles": 261120.0,
+      "old_cycles": 667007,
+      "candidate_cycles": 994607,
+      "candidate_over_issue_bound_percent": 198.40119767665132,
+      "issue_bound_excess_over_old_cycles": -333695
+    },
+    {
+      "shape": [
+        1920,
+        1920,
+        1536
+      ],
+      "blocks": 3600,
+      "stages_per_block": 48,
+      "minimum_max_SM_stages": 1056,
+      "producer_issue_only_lower_bound_cycles": 916608,
+      "global_load_queue_only_lower_bound_cycles": 718080.0,
+      "old_cycles": 720853,
+      "candidate_cycles": 945861,
+      "candidate_over_issue_bound_percent": 3.1914406158357833,
+      "issue_bound_excess_over_old_cycles": 195755
+    }
+  ],
+  "rule": "At leastceil(blocks/170) blocks shareoneSM; eachstage executes868producerinstructions; sourceissuesatmostoneperSMcycle.",
+  "source_evidence": {
+    "staging": "staging_event.hpp:43-47",
+    "separate_native_engine": "sm_event.hpp:50",
+    "sequential_same_block_phases": "resident_metadata.hpp:15-18",
+    "documented_driver_counts": "../../rtl/discovery_rounds/literature_sweep_036.json"
+  },
+  "doublecount": "Loadready=max(issue+340,finalreturn+1),not340pluscache. Sharedstorecommit1 remainsseparate.",
+  "queue_scope": "Hardcoded32pendingglobalLoadrecords; retainedthroughreadydeadline evenaftersectorreturn. This is separatefrom CLIsharedSlots32 native sharedreadpool. Resource meaningunidentified.",
+  "scheduler_evidence": {
+    "schedulers_per_SM": 4,
+    "max_instructions_per_scheduler_per_cycle": 1,
+    "max_instructions_per_SM_per_cycle": 4,
+    "warp_assignment": "notidentified"
+  },
+  "limitations": "Lowerboundswithinthissource model,notGPUtimepredictions;4schedulerpeakdoesnotproveallactualproducerinstructionscanissue4/cycle. No implementationchange,test,tuningorGPU."
+}

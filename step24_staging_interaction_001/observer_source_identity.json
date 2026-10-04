@@ -1,0 +1,28 @@
+{
+  "baseline": {
+    "changed_observer_files": [
+      "sm_event.hpp",
+      "full_gpu_parallel.cpp",
+      "staging_event.hpp"
+    ],
+    "expected_only": [
+      "full_gpu_parallel.cpp",
+      "sm_event.hpp",
+      "staging_event.hpp"
+    ],
+    "source_binary_sha256": "acfe9886da70bd332b81ccd6257f5411804e92f99f0ac3828bc06e529d127fae"
+  },
+  "candidate": {
+    "changed_observer_files": [
+      "sm_event.hpp",
+      "full_gpu_parallel.cpp",
+      "staging_event.hpp"
+    ],
+    "expected_only": [
+      "full_gpu_parallel.cpp",
+      "sm_event.hpp",
+      "staging_event.hpp"
+    ],
+    "source_binary_sha256": "f06349b01cf20670cded33c2c904d9f871f485a6394b50fe9eb3a8ccd5160ef9"
+  }
+}

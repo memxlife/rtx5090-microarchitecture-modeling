@@ -1,0 +1,127 @@
+{
+  "status": "saved_winner_identity_verified_no_retuning",
+  "raw_descriptor": [
+    {
+      "kind": "winner_identity",
+      "index": 1,
+      "id": 21,
+      "workspace_required": 4718592,
+      "workspace_allocated": 67108864,
+      "cublas_version": 120804
+    },
+    {
+      "attribute": "ID",
+      "status": 0,
+      "bytes": 4,
+      "value": 21
+    },
+    {
+      "attribute": "TILE_ID",
+      "status": 0,
+      "bytes": 4,
+      "value": 15
+    },
+    {
+      "attribute": "SPLITK_NUM",
+      "status": 0,
+      "bytes": 4,
+      "value": 8
+    },
+    {
+      "attribute": "REDUCTION_SCHEME",
+      "status": 0,
+      "bytes": 4,
+      "value": 2
+    },
+    {
+      "attribute": "CTA_SWIZZLING",
+      "status": 0,
+      "bytes": 4,
+      "value": 0
+    },
+    {
+      "attribute": "CUSTOM_OPTION",
+      "status": 0,
+      "bytes": 4,
+      "value": 0
+    },
+    {
+      "attribute": "STAGES_ID",
+      "status": 0,
+      "bytes": 4,
+      "value": 12
+    },
+    {
+      "attribute": "INNER_SHAPE_ID",
+      "status": 7,
+      "bytes": 0,
+      "value": 0
+    },
+    {
+      "attribute": "CLUSTER_SHAPE_ID",
+      "status": 7,
+      "bytes": 0,
+      "value": 0
+    },
+    {
+      "checked": 147456,
+      "bad": 0,
+      "maxabs": 4.991889e-05
+    }
+  ],
+  "launched_kernels": {
+    "0": {
+      "kernel": "void cutlass::Kernel2<cutlass_80_tensorop_s16816gemm_bf16_64x64_32x6_nn_align8>(T1::Params)",
+      "grid": "(24, 2, 8)",
+      "block": "(128, 1, 1)",
+      "metrics": {
+        "Block Size": "128",
+        "Cluster Scheduling Policy": "PolicySpread",
+        "Cluster Size": "0",
+        "Function Cache Configuration": "CachePreferNone",
+        "Grid Size": "384",
+        "Registers Per Thread": "96",
+        "Shared Memory Configuration Size": "102400",
+        "Driver Shared Memory Per Block": "1024",
+        "Dynamic Shared Memory Per Block": "49152",
+        "Static Shared Memory Per Block": "0",
+        "# SMs": "170",
+        "Stack Size": "1024",
+        "Threads": "49152",
+        "# TPCs": "85",
+        "Enabled TPC IDs": "all",
+        "Uses Green Context": "0",
+        "Waves Per SM": "1.13"
+      }
+    },
+    "1": {
+      "kernel": "void cublasLt::splitKreduce_kernel<32, 16, int, float, float, float, float, 0, float, float, float, 1, 0, 0>(cublasLt::cublasSplitKParams<T6>, const T4 *, const T10 *, T9 *, T5 *, const T6 *, const T6 *, const T11 *, const T4 *, T11 *, void *, long, T6 *, int *, T6 *, T6 *, const T6 *, const T6 *, const T6 *, const T6 *, const T6 *)",
+      "grid": "(24, 12, 1)",
+      "block": "(32, 16, 1)",
+      "metrics": {
+        "Block Size": "512",
+        "Cluster Scheduling Policy": "PolicySpread",
+        "Cluster Size": "0",
+        "Function Cache Configuration": "CachePreferNone",
+        "Grid Size": "288",
+        "Registers Per Thread": "46",
+        "Shared Memory Configuration Size": "8192",
+        "Driver Shared Memory Per Block": "1024",
+        "Dynamic Shared Memory Per Block": "0",
+        "Static Shared Memory Per Block": "0",
+        "# SMs": "170",
+        "Stack Size": "1024",
+        "Threads": "147456",
+        "# TPCs": "85",
+        "Enabled TPC IDs": "all",
+        "Uses Green Context": "0",
+        "Waves Per SM": "0.85"
+      }
+    }
+  },
+  "source_sha256": "f862b6193b0bdfd9a11ff9f49f379b7f054a757940449294258228161f8aff0b",
+  "profile_sha256": "5b2bc7b37f9208a32c0e04c25d1efaf6ae4cd5edf389bbd81c7823025d97475b",
+  "conditioning": "one numericcall plus100winnerwarmcalls thenfinalwinnercall (two kernels); ncu skip202/count2; cache/clock controls none",
+  "limits": "INNER_SHAPE/CLUSTER_SHAPE API status7 unavailable; enum tile/stage codes retained not guessed. Launch capture identifies winner source implementation but does not establish byte-linked SASS. No algorithm timings or search performed.",
+  "remote_jobs_finished": true
+}

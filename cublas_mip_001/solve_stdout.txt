@@ -1,0 +1,31 @@
+{
+  "solver_status": 0,
+  "solve_seconds": 0.04104495816864073,
+  "predicted_us": 13.565888169902381,
+  "selected": {
+    "tile_M": 64,
+    "tile_N": 64,
+    "tile_K": 32,
+    "split_K": 4,
+    "buffers": 6,
+    "shared_bytes": 49152,
+    "registers_per_thread": 96,
+    "resident_blocks_per_SM": 2,
+    "logical_tasks": 144,
+    "stages_per_task": 24,
+    "workspace_bytes": 2359296,
+    "waves": 1,
+    "period_bounds_cycles": [
+      1188.8390243902438,
+      128.0,
+      68.0
+    ],
+    "startup_cycles": 1316.8390243902438,
+    "global_copy_cycles": 28532.136585365857,
+    "workspace_write_cycles": 2014.0331707317073,
+    "reduction_cycles": 2517.541463414634,
+    "extra_launch_cycles": 3346
+  },
+  "enumeration_match": true,
+  "mip_gap": 0.0
+}

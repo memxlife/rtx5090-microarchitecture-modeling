@@ -1,0 +1,3257 @@
+{
+  "source": "studies/rtx5090_gemm_milp/step21_memory_path_ablation_001/anchor_gemm_only.sass",
+  "sha256": "c8a002e499e3578ea0a8b40b4d9f2decd2feb5382c622b423bf03d15238d7553",
+  "scope": "Full inbounds128thread producer prefix through first BAR; source CFG assumptions carried from reviewedStep21. Predicatedfalsezero-fill retained as no-effectissue.",
+  "rows": [
+    {
+      "pc": 544,
+      "opcode": "VIMNMX.U32",
+      "kind": 0,
+      "src": [
+        3
+      ],
+      "dst": [
+        6
+      ],
+      "req": 0,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0220*/                   VIMNMX.U32 R6, R3, 0x380, !PT                                  ?trans1;           /* 0x0000038003067848 */",
+      "group": -1
+    },
+    {
+      "pc": 560,
+      "opcode": "BSSY.RECONVERGENT",
+      "kind": 0,
+      "src": [],
+      "dst": [],
+      "req": 0,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0230*/                   BSSY.RECONVERGENT B0, 0x580                                    ?trans1;           /* 0x0000034000007945 */",
+      "group": -1
+    },
+    {
+      "pc": 576,
+      "opcode": "MOV",
+      "kind": 0,
+      "src": [
+        3
+      ],
+      "dst": [
+        26
+      ],
+      "req": 0,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0240*/                   MOV R26, R3                                                    ?WAIT3_END_GROUP;  /* 0x00000003001a7202 */",
+      "group": -1
+    },
+    {
+      "pc": 592,
+      "opcode": "IADD3",
+      "kind": 0,
+      "src": [
+        3,
+        6
+      ],
+      "dst": [
+        5
+      ],
+      "req": 0,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0250*/                   IADD3 R5, PT, PT, R6, 0x7f, -R3                                ?WAIT4_END_GROUP;  /* 0x0000007f06057810 */",
+      "group": -1
+    },
+    {
+      "pc": 608,
+      "opcode": "LEA.HI",
+      "kind": 0,
+      "src": [
+        5
+      ],
+      "dst": [
+        9
+      ],
+      "req": 10,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0260*/                   LEA.HI R9, R5, 0x1, RZ, 0x19                  &req={3,1}       ?WAIT4_END_GROUP;  /* 0x0000000105097811 */",
+      "group": -1
+    },
+    {
+      "pc": 624,
+      "opcode": "LOP3.LUT",
+      "kind": 0,
+      "src": [
+        9
+      ],
+      "dst": [
+        9
+      ],
+      "req": 0,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0270*/                   LOP3.LUT R9, R9, 0x3, RZ, 0xc0, !PT                            ?WAIT5_END_GROUP;  /* 0x0000000309097812 */",
+      "group": -1
+    },
+    {
+      "pc": 640,
+      "opcode": "ISETP.NE.AND",
+      "kind": 0,
+      "src": [
+        9
+      ],
+      "dst": [],
+      "req": 0,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0280*/                   ISETP.NE.AND P0, PT, R9, RZ, PT                                ?WAIT13_END_GROUP; /* 0x000000ff0900720c */",
+      "group": -1
+    },
+    {
+      "pc": 656,
+      "opcode": "BRA",
+      "kind": 0,
+      "src": [],
+      "dst": [],
+      "req": 0,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0290*/              @!P0 BRA 0x570                                                      ?trans5;           /* 0x0000000000b48947 */",
+      "group": -1
+    },
+    {
+      "pc": 1392,
+      "opcode": "BSYNC.RECONVERGENT",
+      "kind": 0,
+      "src": [],
+      "dst": [],
+      "req": 0,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0570*/                   BSYNC.RECONVERGENT B0                                          ?trans5;           /* 0x0000000000007941 */",
+      "group": -1
+    },
+    {
+      "pc": 1408,
+      "opcode": "ISETP.GE.U32.AND",
+      "kind": 0,
+      "src": [
+        5
+      ],
+      "dst": [],
+      "req": 0,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0580*/                   ISETP.GE.U32.AND P0, PT, R5, 0x180, PT                         ?trans1;           /* 0x000001800500780c */",
+      "group": -1
+    },
+    {
+      "pc": 1424,
+      "opcode": "LDCU",
+      "kind": 0,
+      "src": [],
+      "dst": [],
+      "req": 0,
+      "wr": 4,
+      "rd": -1,
+      "text": "/*0590*/                   LDCU UR9, c[0x0][0x398]                       &wr=0x4          ?trans1;           /* 0x00007300ff0977ac */",
+      "group": -1
+    },
+    {
+      "pc": 1440,
+      "opcode": "BSSY.RECONVERGENT",
+      "kind": 0,
+      "src": [],
+      "dst": [],
+      "req": 0,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*05a0*/                   BSSY.RECONVERGENT B0, 0x980                                    ?trans11;          /* 0x000003d000007945 */",
+      "group": -1
+    },
+    {
+      "pc": 1456,
+      "opcode": "BRA",
+      "kind": 0,
+      "src": [],
+      "dst": [],
+      "req": 0,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*05b0*/              @!P0 BRA 0x970                                                      ?trans5;           /* 0x0000000000ec8947 */",
+      "group": -1
+    },
+    {
+      "pc": 1472,
+      "opcode": "S2UR",
+      "kind": 0,
+      "src": [],
+      "dst": [],
+      "req": 0,
+      "wr": 5,
+      "rd": -1,
+      "text": "/*05c0*/                   S2UR UR7, SR_CgaCtaId                         &wr=0x5          ?trans1;           /* 0x00000000000779c3 */",
+      "group": -1
+    },
+    {
+      "pc": 1488,
+      "opcode": "LDCU",
+      "kind": 0,
+      "src": [],
+      "dst": [],
+      "req": 0,
+      "wr": 0,
+      "rd": -1,
+      "text": "/*05d0*/                   LDCU UR8, c[0x0][0x3a0]                       &wr=0x0          ?trans1;           /* 0x00007400ff0877ac */",
+      "group": -1
+    },
+    {
+      "pc": 1504,
+      "opcode": "LOP3.LUT",
+      "kind": 0,
+      "src": [
+        3
+      ],
+      "dst": [
+        2
+      ],
+      "req": 0,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*05e0*/                   LOP3.LUT R2, R3, 0x1f, RZ, 0xc0, !PT                           ?trans2;           /* 0x0000001f03027812 */",
+      "group": -1
+    },
+    {
+      "pc": 1520,
+      "opcode": "IADD3",
+      "kind": 0,
+      "src": [
+        26
+      ],
+      "dst": [
+        5
+      ],
+      "req": 0,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*05f0*/                   IADD3 R5, PT, PT, R26.reuse, 0x180, RZ                         ?trans1;           /* 0x000001801a057810 */",
+      "group": -1
+    },
+    {
+      "pc": 1536,
+      "opcode": "UMOV",
+      "kind": 0,
+      "src": [],
+      "dst": [],
+      "req": 0,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0600*/                   UMOV UR5, 0x400                                                ?trans1;           /* 0x0000040000057882 */",
+      "group": -1
+    },
+    {
+      "pc": 1552,
+      "opcode": "IADD3",
+      "kind": 0,
+      "src": [
+        26
+      ],
+      "dst": [
+        9
+      ],
+      "req": 8,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0610*/                   IADD3 R9, PT, PT, R26.reuse, 0x100, RZ        &req={3}         ?trans1;           /* 0x000001001a097810 */",
+      "group": -1
+    },
+    {
+      "pc": 1568,
+      "opcode": "UIADD3",
+      "kind": 0,
+      "src": [],
+      "dst": [],
+      "req": 0,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0620*/                   UIADD3 UR5, UPT, UPT, UR5, 0x1000, URZ                         ?trans1;           /* 0x0000100005057890 */",
+      "group": -1
+    },
+    {
+      "pc": 1584,
+      "opcode": "IADD3",
+      "kind": 0,
+      "src": [
+        26
+      ],
+      "dst": [
+        11
+      ],
+      "req": 0,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0630*/                   IADD3 R11, PT, PT, R26, 0x80, RZ                               ?trans2;           /* 0x000000801a0b7810 */",
+      "group": -1
+    },
+    {
+      "pc": 1600,
+      "opcode": "IADD3",
+      "kind": 0,
+      "src": [
+        2
+      ],
+      "dst": [
+        6
+      ],
+      "req": 4,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0640*/                   IADD3 R6, PT, PT, R2, UR4, RZ                 &req={2}         ?WAIT2_END_GROUP;  /* 0x0000000402067c10 */",
+      "group": -1
+    },
+    {
+      "pc": 1616,
+      "opcode": "LEA.HI",
+      "kind": 0,
+      "src": [
+        26
+      ],
+      "dst": [
+        25
+      ],
+      "req": 0,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0650*/                   LEA.HI R25, R26, UR6, RZ, 0x1b                                 ?trans2;           /* 0x000000061a197c11 */",
+      "group": -1
+    },
+    {
+      "pc": 1632,
+      "opcode": "LEA.HI",
+      "kind": 0,
+      "src": [
+        5
+      ],
+      "dst": [
+        5
+      ],
+      "req": 0,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0660*/                   LEA.HI R5, R5, UR6, RZ, 0x1b                                   ?trans2;           /* 0x0000000605057c11 */",
+      "group": -1
+    },
+    {
+      "pc": 1648,
+      "opcode": "LEA.HI",
+      "kind": 0,
+      "src": [
+        9
+      ],
+      "dst": [
+        9
+      ],
+      "req": 0,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0670*/                   LEA.HI R9, R9, UR6, RZ, 0x1b                                   ?trans2;           /* 0x0000000609097c11 */",
+      "group": -1
+    },
+    {
+      "pc": 1664,
+      "opcode": "LEA.HI",
+      "kind": 0,
+      "src": [
+        11
+      ],
+      "dst": [
+        11
+      ],
+      "req": 0,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0680*/                   LEA.HI R11, R11, UR6, RZ, 0x1b                                 ?trans1;           /* 0x000000060b0b7c11 */",
+      "group": -1
+    },
+    {
+      "pc": 1680,
+      "opcode": "ISETP.GE.AND",
+      "kind": 0,
+      "src": [
+        6
+      ],
+      "dst": [],
+      "req": 1,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0690*/                   ISETP.GE.AND P1, PT, R6, UR8, PT              &req={0}         ?trans1;           /* 0x0000000806007c0c */",
+      "group": -1
+    },
+    {
+      "pc": 1696,
+      "opcode": "IMAD",
+      "kind": 0,
+      "src": [
+        5,
+        6
+      ],
+      "dst": [
+        27
+      ],
+      "req": 0,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*06a0*/                   IMAD R27, R5, UR8, R6.reuse                                    ?trans2;           /* 0x00000008051b7c24 */",
+      "group": -1
+    },
+    {
+      "pc": 1712,
+      "opcode": "IMAD",
+      "kind": 0,
+      "src": [
+        6,
+        9
+      ],
+      "dst": [
+        10
+      ],
+      "req": 2,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*06b0*/                   IMAD R10, R9, UR8, R6.reuse                   &req={1}         ?trans1;           /* 0x00000008090a7c24 */",
+      "group": -1
+    },
+    {
+      "pc": 1728,
+      "opcode": "ULEA",
+      "kind": 0,
+      "src": [],
+      "dst": [],
+      "req": 32,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*06c0*/                   ULEA UR5, UR7, UR5, 0x18                      &req={5}         ?trans1;           /* 0x0000000507057291 */",
+      "group": -1
+    },
+    {
+      "pc": 1744,
+      "opcode": "IMAD",
+      "kind": 0,
+      "src": [
+        6,
+        11
+      ],
+      "dst": [
+        24
+      ],
+      "req": 0,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*06d0*/                   IMAD R24, R11, UR8, R6                                         ?WAIT2_END_GROUP;  /* 0x000000080b187c24 */",
+      "group": -1
+    },
+    {
+      "pc": 1760,
+      "opcode": "IMAD",
+      "kind": 0,
+      "src": [
+        6,
+        25
+      ],
+      "dst": [
+        7
+      ],
+      "req": 0,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*06e0*/                   IMAD R7, R25, UR8, R6                                          ?WAIT3_END_GROUP;  /* 0x0000000819077c24 */",
+      "group": -1
+    },
+    {
+      "pc": 1776,
+      "opcode": "IADD3",
+      "kind": 0,
+      "src": [
+        26
+      ],
+      "dst": [
+        8
+      ],
+      "req": 0,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*06f0*/                   IADD3 R8, PT, PT, R26, UR5, R26                                ?WAIT4_END_GROUP;  /* 0x000000051a087c10 */",
+      "group": -1
+    },
+    {
+      "pc": 1792,
+      "opcode": "IADD3",
+      "kind": 0,
+      "src": [
+        8
+      ],
+      "dst": [
+        8
+      ],
+      "req": 0,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0700*/                   IADD3 R8, PT, PT, R8, 0x200, RZ                                ?WAIT7_END_GROUP;  /* 0x0000020008087810 */",
+      "group": -1
+    },
+    {
+      "pc": 1808,
+      "opcode": "LDC",
+      "kind": 0,
+      "src": [],
+      "dst": [
+        29
+      ],
+      "req": 0,
+      "wr": 0,
+      "rd": -1,
+      "text": "/*0710*/                   LDC R29, c[0x0][0x3a0]                        &wr=0x0          ?trans1;           /* 0x0000e800ff1d7b82 */",
+      "group": -1
+    },
+    {
+      "pc": 1824,
+      "opcode": "ISETP.GE.OR",
+      "kind": 0,
+      "src": [
+        25
+      ],
+      "dst": [],
+      "req": 16,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0720*/                   ISETP.GE.OR P2, PT, R25, UR9, P1              &req={4}         ?trans1;           /* 0x0000000919007c0c */",
+      "group": -1
+    },
+    {
+      "pc": 1840,
+      "opcode": "ISETP.GE.AND",
+      "kind": 0,
+      "src": [
+        6,
+        29
+      ],
+      "dst": [],
+      "req": 1,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0730*/                   ISETP.GE.AND P0, PT, R6, R29, PT              &req={0}         ?WAIT5_END_GROUP;  /* 0x0000001d0600720c */",
+      "group": -1
+    },
+    {
+      "pc": 1856,
+      "opcode": "ISETP.LT.AND",
+      "kind": 0,
+      "src": [
+        11
+      ],
+      "dst": [],
+      "req": 0,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0740*/                   ISETP.LT.AND P3, PT, R11, UR9, !P0                             ?trans1;           /* 0x000000090b007c0c */",
+      "group": -1
+    },
+    {
+      "pc": 1872,
+      "opcode": "ISETP.LT.AND",
+      "kind": 0,
+      "src": [
+        9
+      ],
+      "dst": [],
+      "req": 0,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0750*/                   ISETP.LT.AND P4, PT, R9, UR9, !P0                              ?WAIT12_END_GROUP; /* 0x0000000909007c0c */",
+      "group": -1
+    },
+    {
+      "pc": 1888,
+      "opcode": "LDC.64",
+      "kind": 0,
+      "src": [],
+      "dst": [
+        14,
+        15
+      ],
+      "req": 0,
+      "wr": 0,
+      "rd": -1,
+      "text": "/*0760*/               @P3 LDC.64 R14, c[0x0][0x380]                     &wr=0x0          ?trans1;           /* 0x0000e000ff0e3b82 */",
+      "group": -1
+    },
+    {
+      "pc": 1904,
+      "opcode": "PRMT",
+      "kind": 0,
+      "src": [],
+      "dst": [],
+      "req": 0,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0770*/              @!P3 PRMT R37, RZ, 0x7610, R37                                      ?WAIT7_END_GROUP;  /* 0x00007610ff25b816 */",
+      "group": -1
+    },
+    {
+      "pc": 1920,
+      "opcode": "LDC.64",
+      "kind": 0,
+      "src": [],
+      "dst": [
+        12,
+        13
+      ],
+      "req": 0,
+      "wr": 1,
+      "rd": -1,
+      "text": "/*0780*/               @P4 LDC.64 R12, c[0x0][0x380]                     &wr=0x1          ?trans1;           /* 0x0000e000ff0c4b82 */",
+      "group": -1
+    },
+    {
+      "pc": 1936,
+      "opcode": "ISETP.LT.AND",
+      "kind": 0,
+      "src": [
+        5
+      ],
+      "dst": [],
+      "req": 0,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0790*/                   ISETP.LT.AND P0, PT, R5, UR9, !P0                              ?trans1;           /* 0x0000000905007c0c */",
+      "group": -1
+    },
+    {
+      "pc": 1952,
+      "opcode": "PRMT",
+      "kind": 0,
+      "src": [],
+      "dst": [],
+      "req": 0,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*07a0*/              @!P4 PRMT R35, RZ, 0x7610, R35                                      ?trans1;           /* 0x00007610ff23c816 */",
+      "group": -1
+    },
+    {
+      "pc": 1968,
+      "opcode": "IMAD.WIDE.U32",
+      "kind": 0,
+      "src": [
+        14,
+        24
+      ],
+      "dst": [
+        14,
+        15
+      ],
+      "req": 1,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*07b0*/               @P3 IMAD.WIDE.U32 R14, R24, 0x2, R14              &req={0}         ?WAIT5_END_GROUP;  /* 0x00000002180e3825 */",
+      "group": -1
+    },
+    {
+      "pc": 1984,
+      "opcode": "LDG.E.U16",
+      "kind": 1,
+      "src": [
+        14,
+        15
+      ],
+      "dst": [
+        37
+      ],
+      "req": 0,
+      "wr": 2,
+      "rd": 0,
+      "text": "/*07c0*/               @P3 LDG.E.U16 R37, desc[UR10][R14.64]             &rd=0x0 &wr=0x2  ?trans1;           /* 0x0000000a0e253981 */",
+      "group": 1
+    },
+    {
+      "pc": 2000,
+      "opcode": "IMAD.WIDE.U32",
+      "kind": 0,
+      "src": [
+        10,
+        12
+      ],
+      "dst": [
+        12,
+        13
+      ],
+      "req": 2,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*07d0*/               @P4 IMAD.WIDE.U32 R12, R10, 0x2, R12              &req={1}         ?WAIT5_END_GROUP;  /* 0x000000020a0c4825 */",
+      "group": -1
+    },
+    {
+      "pc": 2016,
+      "opcode": "LDG.E.U16",
+      "kind": 1,
+      "src": [
+        12,
+        13
+      ],
+      "dst": [
+        35
+      ],
+      "req": 0,
+      "wr": 3,
+      "rd": 1,
+      "text": "/*07e0*/               @P4 LDG.E.U16 R35, desc[UR10][R12.64]             &rd=0x1 &wr=0x3  ?trans1;           /* 0x0000000a0c234981 */",
+      "group": 2
+    },
+    {
+      "pc": 2032,
+      "opcode": "LDC.64",
+      "kind": 0,
+      "src": [],
+      "dst": [
+        14,
+        15
+      ],
+      "req": 1,
+      "wr": 0,
+      "rd": -1,
+      "text": "/*07f0*/              @!P2 LDC.64 R14, c[0x0][0x380]                     &req={0} &wr=0x0 ?trans8;           /* 0x0000e000ff0eab82 */",
+      "group": -1
+    },
+    {
+      "pc": 2048,
+      "opcode": "LDC.64",
+      "kind": 0,
+      "src": [],
+      "dst": [
+        12,
+        13
+      ],
+      "req": 2,
+      "wr": 1,
+      "rd": -1,
+      "text": "/*0800*/               @P0 LDC.64 R12, c[0x0][0x380]                     &req={1} &wr=0x1 ?trans1;           /* 0x0000e000ff0c0b82 */",
+      "group": -1
+    },
+    {
+      "pc": 2064,
+      "opcode": "PRMT",
+      "kind": 0,
+      "src": [],
+      "dst": [],
+      "req": 0,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0810*/              @!P0 PRMT R34, RZ, 0x7610, R34                                      ?trans1;           /* 0x00007610ff228816 */",
+      "group": -1
+    },
+    {
+      "pc": 2080,
+      "opcode": "IMAD.WIDE.U32",
+      "kind": 0,
+      "src": [
+        7,
+        14
+      ],
+      "dst": [
+        14,
+        15
+      ],
+      "req": 1,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0820*/              @!P2 IMAD.WIDE.U32 R14, R7, 0x2, R14               &req={0}         ?WAIT5_END_GROUP;  /* 0x00000002070ea825 */",
+      "group": -1
+    },
+    {
+      "pc": 2096,
+      "opcode": "LDG.E.U16",
+      "kind": 1,
+      "src": [
+        14,
+        15
+      ],
+      "dst": [
+        28
+      ],
+      "req": 0,
+      "wr": 4,
+      "rd": -1,
+      "text": "/*0830*/              @!P2 LDG.E.U16 R28, desc[UR10][R14.64]             &wr=0x4          ?trans1;           /* 0x0000000a0e1ca981 */",
+      "group": 0
+    },
+    {
+      "pc": 2112,
+      "opcode": "IMAD.WIDE.U32",
+      "kind": 0,
+      "src": [
+        12,
+        27
+      ],
+      "dst": [
+        12,
+        13
+      ],
+      "req": 2,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0840*/               @P0 IMAD.WIDE.U32 R12, R27, 0x2, R12              &req={1}         ?WAIT5_END_GROUP;  /* 0x000000021b0c0825 */",
+      "group": -1
+    },
+    {
+      "pc": 2128,
+      "opcode": "LDG.E.U16",
+      "kind": 1,
+      "src": [
+        12,
+        13
+      ],
+      "dst": [
+        34
+      ],
+      "req": 0,
+      "wr": 5,
+      "rd": -1,
+      "text": "/*0850*/               @P0 LDG.E.U16 R34, desc[UR10][R12.64]             &wr=0x5          ?trans1;           /* 0x0000000a0c220981 */",
+      "group": 3
+    },
+    {
+      "pc": 2144,
+      "opcode": "ISETP.GE.U32.AND",
+      "kind": 0,
+      "src": [
+        26
+      ],
+      "dst": [],
+      "req": 0,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0860*/                   ISETP.GE.U32.AND P0, PT, R26.reuse, 0x200, PT                  ?trans1;           /* 0x000002001a00780c */",
+      "group": -1
+    },
+    {
+      "pc": 2160,
+      "opcode": "IADD3",
+      "kind": 0,
+      "src": [
+        26
+      ],
+      "dst": [
+        26
+      ],
+      "req": 0,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0870*/                   IADD3 R26, PT, PT, R26, 0x200, RZ                              ?trans1;           /* 0x000002001a1a7810 */",
+      "group": -1
+    },
+    {
+      "pc": 2176,
+      "opcode": "IMAD",
+      "kind": 0,
+      "src": [
+        7,
+        29
+      ],
+      "dst": [
+        7
+      ],
+      "req": 0,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0880*/                   IMAD R7, R29, 0x10, R7                                         ?trans1;           /* 0x000000101d077824 */",
+      "group": -1
+    },
+    {
+      "pc": 2192,
+      "opcode": "IADD3",
+      "kind": 0,
+      "src": [
+        25
+      ],
+      "dst": [
+        25
+      ],
+      "req": 0,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0890*/                   IADD3 R25, PT, PT, R25, 0x10, RZ                               ?trans1;           /* 0x0000001019197810 */",
+      "group": -1
+    },
+    {
+      "pc": 2208,
+      "opcode": "IMAD",
+      "kind": 0,
+      "src": [
+        24,
+        29
+      ],
+      "dst": [
+        24
+      ],
+      "req": 0,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*08a0*/                   IMAD R24, R29, 0x10, R24                                       ?trans1;           /* 0x000000101d187824 */",
+      "group": -1
+    },
+    {
+      "pc": 2224,
+      "opcode": "IADD3",
+      "kind": 0,
+      "src": [
+        5
+      ],
+      "dst": [
+        5
+      ],
+      "req": 0,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*08b0*/                   IADD3 R5, PT, PT, R5, 0x10, RZ                                 ?trans1;           /* 0x0000001005057810 */",
+      "group": -1
+    },
+    {
+      "pc": 2240,
+      "opcode": "IMAD",
+      "kind": 0,
+      "src": [
+        10,
+        29
+      ],
+      "dst": [
+        10
+      ],
+      "req": 0,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*08c0*/                   IMAD R10, R29, 0x10, R10                                       ?trans1;           /* 0x000000101d0a7824 */",
+      "group": -1
+    },
+    {
+      "pc": 2256,
+      "opcode": "IADD3",
+      "kind": 0,
+      "src": [
+        9
+      ],
+      "dst": [
+        9
+      ],
+      "req": 0,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*08d0*/                   IADD3 R9, PT, PT, R9, 0x10, RZ                                 ?trans1;           /* 0x0000001009097810 */",
+      "group": -1
+    },
+    {
+      "pc": 2272,
+      "opcode": "IMAD",
+      "kind": 0,
+      "src": [
+        27,
+        29
+      ],
+      "dst": [
+        27
+      ],
+      "req": 0,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*08e0*/                   IMAD R27, R29, 0x10, R27                                       ?trans1;           /* 0x000000101d1b7824 */",
+      "group": -1
+    },
+    {
+      "pc": 2288,
+      "opcode": "IADD3",
+      "kind": 0,
+      "src": [
+        11
+      ],
+      "dst": [
+        11
+      ],
+      "req": 0,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*08f0*/                   IADD3 R11, PT, PT, R11, 0x10, RZ                               ?trans1;           /* 0x000000100b0b7810 */",
+      "group": -1
+    },
+    {
+      "pc": 2304,
+      "opcode": "STS.U16",
+      "kind": 2,
+      "src": [
+        8,
+        37
+      ],
+      "dst": [],
+      "req": 4,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0900*/                   STS.U16 [R8+-0x100], R37                      &req={2}         ?trans4;           /* 0xffff002508007388 */",
+      "group": 1
+    },
+    {
+      "pc": 2320,
+      "opcode": "STS.U16",
+      "kind": 2,
+      "src": [
+        8,
+        35
+      ],
+      "dst": [],
+      "req": 8,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0910*/                   STS.U16 [R8], R35                             &req={3}         ?trans1;           /* 0x0000002308007388 */",
+      "group": 2
+    },
+    {
+      "pc": 2336,
+      "opcode": "PRMT",
+      "kind": 0,
+      "src": [],
+      "dst": [],
+      "req": 0,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0920*/               @P2 PRMT R28, RZ, 0x7610, R28                                      ?WAIT5_END_GROUP;  /* 0x00007610ff1c2816 */",
+      "group": -1
+    },
+    {
+      "pc": 2352,
+      "opcode": "STS.U16",
+      "kind": 2,
+      "src": [
+        8,
+        28
+      ],
+      "dst": [],
+      "req": 16,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0930*/                   STS.U16 [R8+-0x200], R28                      &req={4}         ?trans4;           /* 0xfffe001c08007388 */",
+      "group": 0
+    },
+    {
+      "pc": 2368,
+      "opcode": "STS.U16",
+      "kind": 2,
+      "src": [
+        8,
+        34
+      ],
+      "dst": [],
+      "req": 32,
+      "wr": -1,
+      "rd": 0,
+      "text": "/*0940*/                   STS.U16 [R8+0x100], R34                       &req={5} &rd=0x0 ?trans2;           /* 0x0001002208007388 */",
+      "group": 3
+    },
+    {
+      "pc": 2384,
+      "opcode": "IADD3",
+      "kind": 0,
+      "src": [
+        8
+      ],
+      "dst": [
+        8
+      ],
+      "req": 1,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0950*/                   IADD3 R8, PT, PT, R8, 0x400, RZ               &req={0}         ?trans1;           /* 0x0000040008087810 */",
+      "group": -1
+    },
+    {
+      "pc": 2400,
+      "opcode": "BRA",
+      "kind": 0,
+      "src": [],
+      "dst": [],
+      "req": 0,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0960*/              @!P0 BRA 0x710                                                      ?trans6;           /* 0xfffffffc00688947 */",
+      "group": -1
+    },
+    {
+      "pc": 1808,
+      "opcode": "LDC",
+      "kind": 0,
+      "src": [],
+      "dst": [
+        29
+      ],
+      "req": 0,
+      "wr": 0,
+      "rd": -1,
+      "text": "/*0710*/                   LDC R29, c[0x0][0x3a0]                        &wr=0x0          ?trans1;           /* 0x0000e800ff1d7b82 */",
+      "group": -1
+    },
+    {
+      "pc": 1824,
+      "opcode": "ISETP.GE.OR",
+      "kind": 0,
+      "src": [
+        25
+      ],
+      "dst": [],
+      "req": 16,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0720*/                   ISETP.GE.OR P2, PT, R25, UR9, P1              &req={4}         ?trans1;           /* 0x0000000919007c0c */",
+      "group": -1
+    },
+    {
+      "pc": 1840,
+      "opcode": "ISETP.GE.AND",
+      "kind": 0,
+      "src": [
+        6,
+        29
+      ],
+      "dst": [],
+      "req": 1,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0730*/                   ISETP.GE.AND P0, PT, R6, R29, PT              &req={0}         ?WAIT5_END_GROUP;  /* 0x0000001d0600720c */",
+      "group": -1
+    },
+    {
+      "pc": 1856,
+      "opcode": "ISETP.LT.AND",
+      "kind": 0,
+      "src": [
+        11
+      ],
+      "dst": [],
+      "req": 0,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0740*/                   ISETP.LT.AND P3, PT, R11, UR9, !P0                             ?trans1;           /* 0x000000090b007c0c */",
+      "group": -1
+    },
+    {
+      "pc": 1872,
+      "opcode": "ISETP.LT.AND",
+      "kind": 0,
+      "src": [
+        9
+      ],
+      "dst": [],
+      "req": 0,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0750*/                   ISETP.LT.AND P4, PT, R9, UR9, !P0                              ?WAIT12_END_GROUP; /* 0x0000000909007c0c */",
+      "group": -1
+    },
+    {
+      "pc": 1888,
+      "opcode": "LDC.64",
+      "kind": 0,
+      "src": [],
+      "dst": [
+        14,
+        15
+      ],
+      "req": 0,
+      "wr": 0,
+      "rd": -1,
+      "text": "/*0760*/               @P3 LDC.64 R14, c[0x0][0x380]                     &wr=0x0          ?trans1;           /* 0x0000e000ff0e3b82 */",
+      "group": -1
+    },
+    {
+      "pc": 1904,
+      "opcode": "PRMT",
+      "kind": 0,
+      "src": [],
+      "dst": [],
+      "req": 0,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0770*/              @!P3 PRMT R37, RZ, 0x7610, R37                                      ?WAIT7_END_GROUP;  /* 0x00007610ff25b816 */",
+      "group": -1
+    },
+    {
+      "pc": 1920,
+      "opcode": "LDC.64",
+      "kind": 0,
+      "src": [],
+      "dst": [
+        12,
+        13
+      ],
+      "req": 0,
+      "wr": 1,
+      "rd": -1,
+      "text": "/*0780*/               @P4 LDC.64 R12, c[0x0][0x380]                     &wr=0x1          ?trans1;           /* 0x0000e000ff0c4b82 */",
+      "group": -1
+    },
+    {
+      "pc": 1936,
+      "opcode": "ISETP.LT.AND",
+      "kind": 0,
+      "src": [
+        5
+      ],
+      "dst": [],
+      "req": 0,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0790*/                   ISETP.LT.AND P0, PT, R5, UR9, !P0                              ?trans1;           /* 0x0000000905007c0c */",
+      "group": -1
+    },
+    {
+      "pc": 1952,
+      "opcode": "PRMT",
+      "kind": 0,
+      "src": [],
+      "dst": [],
+      "req": 0,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*07a0*/              @!P4 PRMT R35, RZ, 0x7610, R35                                      ?trans1;           /* 0x00007610ff23c816 */",
+      "group": -1
+    },
+    {
+      "pc": 1968,
+      "opcode": "IMAD.WIDE.U32",
+      "kind": 0,
+      "src": [
+        14,
+        24
+      ],
+      "dst": [
+        14,
+        15
+      ],
+      "req": 1,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*07b0*/               @P3 IMAD.WIDE.U32 R14, R24, 0x2, R14              &req={0}         ?WAIT5_END_GROUP;  /* 0x00000002180e3825 */",
+      "group": -1
+    },
+    {
+      "pc": 1984,
+      "opcode": "LDG.E.U16",
+      "kind": 1,
+      "src": [
+        14,
+        15
+      ],
+      "dst": [
+        37
+      ],
+      "req": 0,
+      "wr": 2,
+      "rd": 0,
+      "text": "/*07c0*/               @P3 LDG.E.U16 R37, desc[UR10][R14.64]             &rd=0x0 &wr=0x2  ?trans1;           /* 0x0000000a0e253981 */",
+      "group": 5
+    },
+    {
+      "pc": 2000,
+      "opcode": "IMAD.WIDE.U32",
+      "kind": 0,
+      "src": [
+        10,
+        12
+      ],
+      "dst": [
+        12,
+        13
+      ],
+      "req": 2,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*07d0*/               @P4 IMAD.WIDE.U32 R12, R10, 0x2, R12              &req={1}         ?WAIT5_END_GROUP;  /* 0x000000020a0c4825 */",
+      "group": -1
+    },
+    {
+      "pc": 2016,
+      "opcode": "LDG.E.U16",
+      "kind": 1,
+      "src": [
+        12,
+        13
+      ],
+      "dst": [
+        35
+      ],
+      "req": 0,
+      "wr": 3,
+      "rd": 1,
+      "text": "/*07e0*/               @P4 LDG.E.U16 R35, desc[UR10][R12.64]             &rd=0x1 &wr=0x3  ?trans1;           /* 0x0000000a0c234981 */",
+      "group": 6
+    },
+    {
+      "pc": 2032,
+      "opcode": "LDC.64",
+      "kind": 0,
+      "src": [],
+      "dst": [
+        14,
+        15
+      ],
+      "req": 1,
+      "wr": 0,
+      "rd": -1,
+      "text": "/*07f0*/              @!P2 LDC.64 R14, c[0x0][0x380]                     &req={0} &wr=0x0 ?trans8;           /* 0x0000e000ff0eab82 */",
+      "group": -1
+    },
+    {
+      "pc": 2048,
+      "opcode": "LDC.64",
+      "kind": 0,
+      "src": [],
+      "dst": [
+        12,
+        13
+      ],
+      "req": 2,
+      "wr": 1,
+      "rd": -1,
+      "text": "/*0800*/               @P0 LDC.64 R12, c[0x0][0x380]                     &req={1} &wr=0x1 ?trans1;           /* 0x0000e000ff0c0b82 */",
+      "group": -1
+    },
+    {
+      "pc": 2064,
+      "opcode": "PRMT",
+      "kind": 0,
+      "src": [],
+      "dst": [],
+      "req": 0,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0810*/              @!P0 PRMT R34, RZ, 0x7610, R34                                      ?trans1;           /* 0x00007610ff228816 */",
+      "group": -1
+    },
+    {
+      "pc": 2080,
+      "opcode": "IMAD.WIDE.U32",
+      "kind": 0,
+      "src": [
+        7,
+        14
+      ],
+      "dst": [
+        14,
+        15
+      ],
+      "req": 1,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0820*/              @!P2 IMAD.WIDE.U32 R14, R7, 0x2, R14               &req={0}         ?WAIT5_END_GROUP;  /* 0x00000002070ea825 */",
+      "group": -1
+    },
+    {
+      "pc": 2096,
+      "opcode": "LDG.E.U16",
+      "kind": 1,
+      "src": [
+        14,
+        15
+      ],
+      "dst": [
+        28
+      ],
+      "req": 0,
+      "wr": 4,
+      "rd": -1,
+      "text": "/*0830*/              @!P2 LDG.E.U16 R28, desc[UR10][R14.64]             &wr=0x4          ?trans1;           /* 0x0000000a0e1ca981 */",
+      "group": 4
+    },
+    {
+      "pc": 2112,
+      "opcode": "IMAD.WIDE.U32",
+      "kind": 0,
+      "src": [
+        12,
+        27
+      ],
+      "dst": [
+        12,
+        13
+      ],
+      "req": 2,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0840*/               @P0 IMAD.WIDE.U32 R12, R27, 0x2, R12              &req={1}         ?WAIT5_END_GROUP;  /* 0x000000021b0c0825 */",
+      "group": -1
+    },
+    {
+      "pc": 2128,
+      "opcode": "LDG.E.U16",
+      "kind": 1,
+      "src": [
+        12,
+        13
+      ],
+      "dst": [
+        34
+      ],
+      "req": 0,
+      "wr": 5,
+      "rd": -1,
+      "text": "/*0850*/               @P0 LDG.E.U16 R34, desc[UR10][R12.64]             &wr=0x5          ?trans1;           /* 0x0000000a0c220981 */",
+      "group": 7
+    },
+    {
+      "pc": 2144,
+      "opcode": "ISETP.GE.U32.AND",
+      "kind": 0,
+      "src": [
+        26
+      ],
+      "dst": [],
+      "req": 0,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0860*/                   ISETP.GE.U32.AND P0, PT, R26.reuse, 0x200, PT                  ?trans1;           /* 0x000002001a00780c */",
+      "group": -1
+    },
+    {
+      "pc": 2160,
+      "opcode": "IADD3",
+      "kind": 0,
+      "src": [
+        26
+      ],
+      "dst": [
+        26
+      ],
+      "req": 0,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0870*/                   IADD3 R26, PT, PT, R26, 0x200, RZ                              ?trans1;           /* 0x000002001a1a7810 */",
+      "group": -1
+    },
+    {
+      "pc": 2176,
+      "opcode": "IMAD",
+      "kind": 0,
+      "src": [
+        7,
+        29
+      ],
+      "dst": [
+        7
+      ],
+      "req": 0,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0880*/                   IMAD R7, R29, 0x10, R7                                         ?trans1;           /* 0x000000101d077824 */",
+      "group": -1
+    },
+    {
+      "pc": 2192,
+      "opcode": "IADD3",
+      "kind": 0,
+      "src": [
+        25
+      ],
+      "dst": [
+        25
+      ],
+      "req": 0,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0890*/                   IADD3 R25, PT, PT, R25, 0x10, RZ                               ?trans1;           /* 0x0000001019197810 */",
+      "group": -1
+    },
+    {
+      "pc": 2208,
+      "opcode": "IMAD",
+      "kind": 0,
+      "src": [
+        24,
+        29
+      ],
+      "dst": [
+        24
+      ],
+      "req": 0,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*08a0*/                   IMAD R24, R29, 0x10, R24                                       ?trans1;           /* 0x000000101d187824 */",
+      "group": -1
+    },
+    {
+      "pc": 2224,
+      "opcode": "IADD3",
+      "kind": 0,
+      "src": [
+        5
+      ],
+      "dst": [
+        5
+      ],
+      "req": 0,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*08b0*/                   IADD3 R5, PT, PT, R5, 0x10, RZ                                 ?trans1;           /* 0x0000001005057810 */",
+      "group": -1
+    },
+    {
+      "pc": 2240,
+      "opcode": "IMAD",
+      "kind": 0,
+      "src": [
+        10,
+        29
+      ],
+      "dst": [
+        10
+      ],
+      "req": 0,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*08c0*/                   IMAD R10, R29, 0x10, R10                                       ?trans1;           /* 0x000000101d0a7824 */",
+      "group": -1
+    },
+    {
+      "pc": 2256,
+      "opcode": "IADD3",
+      "kind": 0,
+      "src": [
+        9
+      ],
+      "dst": [
+        9
+      ],
+      "req": 0,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*08d0*/                   IADD3 R9, PT, PT, R9, 0x10, RZ                                 ?trans1;           /* 0x0000001009097810 */",
+      "group": -1
+    },
+    {
+      "pc": 2272,
+      "opcode": "IMAD",
+      "kind": 0,
+      "src": [
+        27,
+        29
+      ],
+      "dst": [
+        27
+      ],
+      "req": 0,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*08e0*/                   IMAD R27, R29, 0x10, R27                                       ?trans1;           /* 0x000000101d1b7824 */",
+      "group": -1
+    },
+    {
+      "pc": 2288,
+      "opcode": "IADD3",
+      "kind": 0,
+      "src": [
+        11
+      ],
+      "dst": [
+        11
+      ],
+      "req": 0,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*08f0*/                   IADD3 R11, PT, PT, R11, 0x10, RZ                               ?trans1;           /* 0x000000100b0b7810 */",
+      "group": -1
+    },
+    {
+      "pc": 2304,
+      "opcode": "STS.U16",
+      "kind": 2,
+      "src": [
+        8,
+        37
+      ],
+      "dst": [],
+      "req": 4,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0900*/                   STS.U16 [R8+-0x100], R37                      &req={2}         ?trans4;           /* 0xffff002508007388 */",
+      "group": 5
+    },
+    {
+      "pc": 2320,
+      "opcode": "STS.U16",
+      "kind": 2,
+      "src": [
+        8,
+        35
+      ],
+      "dst": [],
+      "req": 8,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0910*/                   STS.U16 [R8], R35                             &req={3}         ?trans1;           /* 0x0000002308007388 */",
+      "group": 6
+    },
+    {
+      "pc": 2336,
+      "opcode": "PRMT",
+      "kind": 0,
+      "src": [],
+      "dst": [],
+      "req": 0,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0920*/               @P2 PRMT R28, RZ, 0x7610, R28                                      ?WAIT5_END_GROUP;  /* 0x00007610ff1c2816 */",
+      "group": -1
+    },
+    {
+      "pc": 2352,
+      "opcode": "STS.U16",
+      "kind": 2,
+      "src": [
+        8,
+        28
+      ],
+      "dst": [],
+      "req": 16,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0930*/                   STS.U16 [R8+-0x200], R28                      &req={4}         ?trans4;           /* 0xfffe001c08007388 */",
+      "group": 4
+    },
+    {
+      "pc": 2368,
+      "opcode": "STS.U16",
+      "kind": 2,
+      "src": [
+        8,
+        34
+      ],
+      "dst": [],
+      "req": 32,
+      "wr": -1,
+      "rd": 0,
+      "text": "/*0940*/                   STS.U16 [R8+0x100], R34                       &req={5} &rd=0x0 ?trans2;           /* 0x0001002208007388 */",
+      "group": 7
+    },
+    {
+      "pc": 2384,
+      "opcode": "IADD3",
+      "kind": 0,
+      "src": [
+        8
+      ],
+      "dst": [
+        8
+      ],
+      "req": 1,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0950*/                   IADD3 R8, PT, PT, R8, 0x400, RZ               &req={0}         ?trans1;           /* 0x0000040008087810 */",
+      "group": -1
+    },
+    {
+      "pc": 2400,
+      "opcode": "BRA",
+      "kind": 0,
+      "src": [],
+      "dst": [],
+      "req": 0,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0960*/              @!P0 BRA 0x710                                                      ?trans6;           /* 0xfffffffc00688947 */",
+      "group": -1
+    },
+    {
+      "pc": 2416,
+      "opcode": "BSYNC.RECONVERGENT",
+      "kind": 0,
+      "src": [],
+      "dst": [],
+      "req": 16,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0970*/                   BSYNC.RECONVERGENT B0                         &req={4}         ?trans5;           /* 0x0000000000007941 */",
+      "group": -1
+    },
+    {
+      "pc": 2432,
+      "opcode": "VIMNMX.U32",
+      "kind": 0,
+      "src": [
+        3
+      ],
+      "dst": [
+        6
+      ],
+      "req": 4,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0980*/                   VIMNMX.U32 R6, R3, 0x380, !PT                 &req={2}         ?trans1;           /* 0x0000038003067848 */",
+      "group": -1
+    },
+    {
+      "pc": 2448,
+      "opcode": "BSSY.RECONVERGENT",
+      "kind": 0,
+      "src": [],
+      "dst": [],
+      "req": 0,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0990*/                   BSSY.RECONVERGENT B0, 0xcc0                                    ?trans1;           /* 0x0000032000007945 */",
+      "group": -1
+    },
+    {
+      "pc": 2464,
+      "opcode": "MOV",
+      "kind": 0,
+      "src": [
+        3
+      ],
+      "dst": [
+        8
+      ],
+      "req": 0,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*09a0*/                   MOV R8, R3                                                     ?WAIT3_END_GROUP;  /* 0x0000000300087202 */",
+      "group": -1
+    },
+    {
+      "pc": 2480,
+      "opcode": "IADD3",
+      "kind": 0,
+      "src": [
+        3,
+        6
+      ],
+      "dst": [
+        5
+      ],
+      "req": 0,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*09b0*/                   IADD3 R5, PT, PT, R6, 0x7f, -R3                                ?WAIT4_END_GROUP;  /* 0x0000007f06057810 */",
+      "group": -1
+    },
+    {
+      "pc": 2496,
+      "opcode": "LEA.HI",
+      "kind": 0,
+      "src": [
+        5
+      ],
+      "dst": [
+        6
+      ],
+      "req": 0,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*09c0*/                   LEA.HI R6, R5, 0x1, RZ, 0x19                                   ?WAIT4_END_GROUP;  /* 0x0000000105067811 */",
+      "group": -1
+    },
+    {
+      "pc": 2512,
+      "opcode": "LOP3.LUT",
+      "kind": 0,
+      "src": [
+        6
+      ],
+      "dst": [
+        10
+      ],
+      "req": 3,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*09d0*/                   LOP3.LUT R10, R6, 0x3, RZ, 0xc0, !PT          &req={1,0}       ?WAIT5_END_GROUP;  /* 0x00000003060a7812 */",
+      "group": -1
+    },
+    {
+      "pc": 2528,
+      "opcode": "ISETP.NE.AND",
+      "kind": 0,
+      "src": [
+        10
+      ],
+      "dst": [],
+      "req": 0,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*09e0*/                   ISETP.NE.AND P0, PT, R10, RZ, PT                               ?WAIT13_END_GROUP; /* 0x000000ff0a00720c */",
+      "group": -1
+    },
+    {
+      "pc": 2544,
+      "opcode": "BRA",
+      "kind": 0,
+      "src": [],
+      "dst": [],
+      "req": 0,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*09f0*/              @!P0 BRA 0xcb0                                                      ?trans5;           /* 0x0000000000ac8947 */",
+      "group": -1
+    },
+    {
+      "pc": 3248,
+      "opcode": "BSYNC.RECONVERGENT",
+      "kind": 0,
+      "src": [],
+      "dst": [],
+      "req": 0,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0cb0*/                   BSYNC.RECONVERGENT B0                                          ?trans5;           /* 0x0000000000007941 */",
+      "group": -1
+    },
+    {
+      "pc": 3264,
+      "opcode": "ISETP.GE.U32.AND",
+      "kind": 0,
+      "src": [
+        5
+      ],
+      "dst": [],
+      "req": 0,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0cc0*/                   ISETP.GE.U32.AND P0, PT, R5, 0x180, PT                         ?trans1;           /* 0x000001800500780c */",
+      "group": -1
+    },
+    {
+      "pc": 3280,
+      "opcode": "LDCU",
+      "kind": 0,
+      "src": [],
+      "dst": [],
+      "req": 0,
+      "wr": 2,
+      "rd": -1,
+      "text": "/*0cd0*/                   LDCU UR8, c[0x0][0x3a0]                       &wr=0x2          ?trans1;           /* 0x00007400ff0877ac */",
+      "group": -1
+    },
+    {
+      "pc": 3296,
+      "opcode": "BSSY.RECONVERGENT",
+      "kind": 0,
+      "src": [],
+      "dst": [],
+      "req": 0,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0ce0*/                   BSSY.RECONVERGENT B0, 0x1010                                   ?trans1;           /* 0x0000032000007945 */",
+      "group": -1
+    },
+    {
+      "pc": 3312,
+      "opcode": "ISETP.GT.U32.AND",
+      "kind": 0,
+      "src": [
+        3
+      ],
+      "dst": [],
+      "req": 0,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0cf0*/                   ISETP.GT.U32.AND P1, PT, R3, 0x7f, PT                          ?trans1;           /* 0x0000007f0300780c */",
+      "group": -1
+    },
+    {
+      "pc": 3328,
+      "opcode": "LDCU",
+      "kind": 0,
+      "src": [],
+      "dst": [],
+      "req": 0,
+      "wr": 4,
+      "rd": -1,
+      "text": "/*0d00*/                   LDCU UR9, c[0x0][0x39c]                       &wr=0x4          ?trans9;           /* 0x00007380ff0977ac */",
+      "group": -1
+    },
+    {
+      "pc": 3344,
+      "opcode": "BRA",
+      "kind": 0,
+      "src": [],
+      "dst": [],
+      "req": 0,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0d10*/              @!P0 BRA 0x1000                                                     ?trans5;           /* 0x0000000000b88947 */",
+      "group": -1
+    },
+    {
+      "pc": 3360,
+      "opcode": "LDCU",
+      "kind": 0,
+      "src": [],
+      "dst": [],
+      "req": 0,
+      "wr": 5,
+      "rd": -1,
+      "text": "/*0d20*/                   LDCU UR5, c[0x0][0x39c]                       &wr=0x5          ?trans2;           /* 0x00007380ff0577ac */",
+      "group": -1
+    },
+    {
+      "pc": 3376,
+      "opcode": "ISETP.GE.AND",
+      "kind": 0,
+      "src": [
+        0
+      ],
+      "dst": [],
+      "req": 32,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0d30*/                   ISETP.GE.AND P2, PT, R0, UR5, PT              &req={5}         ?WAIT13_END_GROUP; /* 0x0000000500007c0c */",
+      "group": -1
+    },
+    {
+      "pc": 3392,
+      "opcode": "IADD3",
+      "kind": 0,
+      "src": [
+        8
+      ],
+      "dst": [
+        5
+      ],
+      "req": 1,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0d40*/                   IADD3 R5, PT, PT, R8.reuse, 0x80, RZ          &req={0}         ?trans2;           /* 0x0000008008057810 */",
+      "group": -1
+    },
+    {
+      "pc": 3408,
+      "opcode": "IADD3",
+      "kind": 0,
+      "src": [
+        8
+      ],
+      "dst": [
+        6
+      ],
+      "req": 1,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0d50*/                   IADD3 R6, PT, PT, R8.reuse, 0x100, RZ         &req={0}         ?trans2;           /* 0x0000010008067810 */",
+      "group": -1
+    },
+    {
+      "pc": 3424,
+      "opcode": "LEA.HI",
+      "kind": 0,
+      "src": [
+        8
+      ],
+      "dst": [
+        9
+      ],
+      "req": 10,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0d60*/                   LEA.HI R9, R8, UR4, RZ, 0x1b                  &req={3,1}       ?trans1;           /* 0x0000000408097c11 */",
+      "group": -1
+    },
+    {
+      "pc": 3440,
+      "opcode": "ISETP.GE.AND",
+      "kind": 0,
+      "src": [
+        0
+      ],
+      "dst": [],
+      "req": 16,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0d70*/                   ISETP.GE.AND P0, PT, R0, UR9, PT              &req={4}         ?trans1;           /* 0x0000000900007c0c */",
+      "group": -1
+    },
+    {
+      "pc": 3456,
+      "opcode": "IADD3",
+      "kind": 0,
+      "src": [
+        8
+      ],
+      "dst": [
+        7
+      ],
+      "req": 0,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0d80*/                   IADD3 R7, PT, PT, R8, 0x180, RZ                                ?trans2;           /* 0x0000018008077810 */",
+      "group": -1
+    },
+    {
+      "pc": 3472,
+      "opcode": "LEA.HI",
+      "kind": 0,
+      "src": [
+        5
+      ],
+      "dst": [
+        25
+      ],
+      "req": 0,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0d90*/                   LEA.HI R25, R5, UR4, RZ, 0x1b                                  ?trans2;           /* 0x0000000405197c11 */",
+      "group": -1
+    },
+    {
+      "pc": 3488,
+      "opcode": "LEA.HI",
+      "kind": 0,
+      "src": [
+        6
+      ],
+      "dst": [
+        27
+      ],
+      "req": 0,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0da0*/                   LEA.HI R27, R6, UR4, RZ, 0x1b                                  ?trans1;           /* 0x00000004061b7c11 */",
+      "group": -1
+    },
+    {
+      "pc": 3504,
+      "opcode": "ISETP.GE.OR",
+      "kind": 0,
+      "src": [
+        9
+      ],
+      "dst": [],
+      "req": 4,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0db0*/                   ISETP.GE.OR P3, PT, R9, UR8, P2               &req={2}         ?trans1;           /* 0x0000000809007c0c */",
+      "group": -1
+    },
+    {
+      "pc": 3520,
+      "opcode": "LEA.HI",
+      "kind": 0,
+      "src": [
+        7
+      ],
+      "dst": [
+        5
+      ],
+      "req": 0,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0dc0*/                   LEA.HI R5, R7, UR4, RZ, 0x1b                                   ?trans1;           /* 0x0000000407057c11 */",
+      "group": -1
+    },
+    {
+      "pc": 3536,
+      "opcode": "ISETP.LT.AND",
+      "kind": 0,
+      "src": [
+        25
+      ],
+      "dst": [],
+      "req": 0,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0dd0*/                   ISETP.LT.AND P4, PT, R25, UR8, !P0                             ?WAIT2_END_GROUP;  /* 0x0000000819007c0c */",
+      "group": -1
+    },
+    {
+      "pc": 3552,
+      "opcode": "ISETP.LT.AND",
+      "kind": 0,
+      "src": [
+        27
+      ],
+      "dst": [],
+      "req": 0,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0de0*/                   ISETP.LT.AND P5, PT, R27, UR8, !P0                             ?trans2;           /* 0x000000081b007c0c */",
+      "group": -1
+    },
+    {
+      "pc": 3568,
+      "opcode": "ISETP.LT.AND",
+      "kind": 0,
+      "src": [
+        5
+      ],
+      "dst": [],
+      "req": 0,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0df0*/                   ISETP.LT.AND P0, PT, R5, UR8, !P0                              ?WAIT7_END_GROUP;  /* 0x0000000805007c0c */",
+      "group": -1
+    },
+    {
+      "pc": 3584,
+      "opcode": "LDC.64",
+      "kind": 0,
+      "src": [],
+      "dst": [
+        14,
+        15
+      ],
+      "req": 0,
+      "wr": 0,
+      "rd": -1,
+      "text": "/*0e00*/              @!P3 LDC.64 R14, c[0x0][0x388]                     &wr=0x0          ?trans1;           /* 0x0000e200ff0ebb82 */",
+      "group": -1
+    },
+    {
+      "pc": 3600,
+      "opcode": "IMAD",
+      "kind": 0,
+      "src": [
+        0,
+        9
+      ],
+      "dst": [
+        9
+      ],
+      "req": 0,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0e10*/              @!P3 IMAD R9, R9, UR9, R0.reuse                                     ?trans2;           /* 0x000000090909bc24 */",
+      "group": -1
+    },
+    {
+      "pc": 3616,
+      "opcode": "IMAD",
+      "kind": 0,
+      "src": [
+        0,
+        25
+      ],
+      "dst": [
+        25
+      ],
+      "req": 0,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0e20*/               @P4 IMAD R25, R25, UR9, R0.reuse                                   ?trans2;           /* 0x0000000919194c24 */",
+      "group": -1
+    },
+    {
+      "pc": 3632,
+      "opcode": "IMAD",
+      "kind": 0,
+      "src": [
+        0,
+        27
+      ],
+      "dst": [
+        27
+      ],
+      "req": 0,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0e30*/               @P5 IMAD R27, R27, UR9, R0                                         ?WAIT3_END_GROUP;  /* 0x000000091b1b5c24 */",
+      "group": -1
+    },
+    {
+      "pc": 3648,
+      "opcode": "LDC.64",
+      "kind": 0,
+      "src": [],
+      "dst": [
+        12,
+        13
+      ],
+      "req": 0,
+      "wr": 1,
+      "rd": -1,
+      "text": "/*0e40*/               @P4 LDC.64 R12, c[0x0][0x388]                     &wr=0x1          ?trans8;           /* 0x0000e200ff0c4b82 */",
+      "group": -1
+    },
+    {
+      "pc": 3664,
+      "opcode": "LDC.64",
+      "kind": 0,
+      "src": [],
+      "dst": [
+        10,
+        11
+      ],
+      "req": 0,
+      "wr": 2,
+      "rd": -1,
+      "text": "/*0e50*/               @P5 LDC.64 R10, c[0x0][0x388]                     &wr=0x2          ?trans8;           /* 0x0000e200ff0a5b82 */",
+      "group": -1
+    },
+    {
+      "pc": 3680,
+      "opcode": "LDC.64",
+      "kind": 0,
+      "src": [],
+      "dst": [
+        6,
+        7
+      ],
+      "req": 0,
+      "wr": 3,
+      "rd": -1,
+      "text": "/*0e60*/               @P0 LDC.64 R6, c[0x0][0x388]                      &wr=0x3          ?trans1;           /* 0x0000e200ff060b82 */",
+      "group": -1
+    },
+    {
+      "pc": 3696,
+      "opcode": "IMAD.WIDE",
+      "kind": 0,
+      "src": [
+        9,
+        14
+      ],
+      "dst": [
+        14,
+        15
+      ],
+      "req": 1,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0e70*/              @!P3 IMAD.WIDE R14, R9, 0x2, R14                   &req={0}         ?trans1;           /* 0x00000002090eb825 */",
+      "group": -1
+    },
+    {
+      "pc": 3712,
+      "opcode": "PRMT",
+      "kind": 0,
+      "src": [],
+      "dst": [],
+      "req": 0,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0e80*/              @!P5 PRMT R9, RZ, 0x7610, R9                                        ?WAIT2_END_GROUP;  /* 0x00007610ff09d816 */",
+      "group": -1
+    },
+    {
+      "pc": 3728,
+      "opcode": "PRMT",
+      "kind": 0,
+      "src": [],
+      "dst": [],
+      "req": 0,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0e90*/              @!P0 PRMT R24, RZ, 0x7610, R24                                      ?WAIT3_END_GROUP;  /* 0x00007610ff188816 */",
+      "group": -1
+    },
+    {
+      "pc": 3744,
+      "opcode": "LDG.E.U16",
+      "kind": 1,
+      "src": [
+        14,
+        15
+      ],
+      "dst": [
+        14
+      ],
+      "req": 0,
+      "wr": 4,
+      "rd": 0,
+      "text": "/*0ea0*/              @!P3 LDG.E.U16 R14, desc[UR10][R14.64]             &rd=0x0 &wr=0x4  ?trans1;           /* 0x0000000a0e0eb981 */",
+      "group": 32
+    },
+    {
+      "pc": 3760,
+      "opcode": "IMAD.WIDE",
+      "kind": 0,
+      "src": [
+        12,
+        25
+      ],
+      "dst": [
+        12,
+        13
+      ],
+      "req": 2,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0eb0*/               @P4 IMAD.WIDE R12, R25, 0x2, R12                  &req={1}         ?WAIT4_END_GROUP;  /* 0x00000002190c4825 */",
+      "group": -1
+    },
+    {
+      "pc": 3776,
+      "opcode": "IMAD",
+      "kind": 0,
+      "src": [
+        0,
+        5
+      ],
+      "dst": [
+        25
+      ],
+      "req": 0,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0ec0*/               @P0 IMAD R25, R5, UR9, R0                                          ?trans1;           /* 0x0000000905190c24 */",
+      "group": -1
+    },
+    {
+      "pc": 3792,
+      "opcode": "PRMT",
+      "kind": 0,
+      "src": [],
+      "dst": [],
+      "req": 0,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0ed0*/              @!P4 PRMT R5, RZ, 0x7610, R5                                        ?trans1;           /* 0x00007610ff05c816 */",
+      "group": -1
+    },
+    {
+      "pc": 3808,
+      "opcode": "IMAD.WIDE",
+      "kind": 0,
+      "src": [
+        10,
+        27
+      ],
+      "dst": [
+        10,
+        11
+      ],
+      "req": 4,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0ee0*/               @P5 IMAD.WIDE R10, R27, 0x2, R10                  &req={2}         ?WAIT5_END_GROUP;  /* 0x000000021b0a5825 */",
+      "group": -1
+    },
+    {
+      "pc": 3824,
+      "opcode": "LDG.E.U16",
+      "kind": 1,
+      "src": [
+        12,
+        13
+      ],
+      "dst": [
+        5
+      ],
+      "req": 0,
+      "wr": 2,
+      "rd": -1,
+      "text": "/*0ef0*/               @P4 LDG.E.U16 R5, desc[UR10][R12.64]              &wr=0x2          ?trans4;           /* 0x0000000a0c054981 */",
+      "group": 33
+    },
+    {
+      "pc": 3840,
+      "opcode": "LDG.E.U16",
+      "kind": 1,
+      "src": [
+        10,
+        11
+      ],
+      "dst": [
+        9
+      ],
+      "req": 0,
+      "wr": 5,
+      "rd": -1,
+      "text": "/*0f00*/               @P5 LDG.E.U16 R9, desc[UR10][R10.64]              &wr=0x5          ?trans1;           /* 0x0000000a0a095981 */",
+      "group": 34
+    },
+    {
+      "pc": 3856,
+      "opcode": "IMAD.WIDE",
+      "kind": 0,
+      "src": [
+        6,
+        25
+      ],
+      "dst": [
+        6,
+        7
+      ],
+      "req": 8,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0f10*/               @P0 IMAD.WIDE R6, R25, 0x2, R6                    &req={3}         ?WAIT5_END_GROUP;  /* 0x0000000219060825 */",
+      "group": -1
+    },
+    {
+      "pc": 3872,
+      "opcode": "LDG.E.U16",
+      "kind": 1,
+      "src": [
+        6,
+        7
+      ],
+      "dst": [
+        24
+      ],
+      "req": 0,
+      "wr": 3,
+      "rd": -1,
+      "text": "/*0f20*/               @P0 LDG.E.U16 R24, desc[UR10][R6.64]              &wr=0x3          ?trans1;           /* 0x0000000a06180981 */",
+      "group": 35
+    },
+    {
+      "pc": 3888,
+      "opcode": "S2UR",
+      "kind": 0,
+      "src": [],
+      "dst": [],
+      "req": 0,
+      "wr": 1,
+      "rd": -1,
+      "text": "/*0f30*/                   S2UR UR7, SR_CgaCtaId                         &wr=0x1          ?trans1;           /* 0x00000000000779c3 */",
+      "group": -1
+    },
+    {
+      "pc": 3904,
+      "opcode": "UMOV",
+      "kind": 0,
+      "src": [],
+      "dst": [],
+      "req": 0,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0f40*/                   UMOV UR5, 0x400                                                ?trans2;           /* 0x0000040000057882 */",
+      "group": -1
+    },
+    {
+      "pc": 3920,
+      "opcode": "UIADD3",
+      "kind": 0,
+      "src": [],
+      "dst": [],
+      "req": 0,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0f50*/                   UIADD3 UR5, UPT, UPT, UR5, 0x1000, URZ                         ?trans1;           /* 0x0000100005057890 */",
+      "group": -1
+    },
+    {
+      "pc": 3936,
+      "opcode": "ISETP.GE.U32.AND",
+      "kind": 0,
+      "src": [
+        8
+      ],
+      "dst": [],
+      "req": 0,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0f60*/                   ISETP.GE.U32.AND P0, PT, R8, 0x200, PT                         ?WAIT3_END_GROUP;  /* 0x000002000800780c */",
+      "group": -1
+    },
+    {
+      "pc": 3952,
+      "opcode": "ULEA",
+      "kind": 0,
+      "src": [],
+      "dst": [],
+      "req": 2,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0f70*/                   ULEA UR5, UR7, UR5, 0x18                      &req={1}         ?WAIT6_END_GROUP;  /* 0x0000000507057291 */",
+      "group": -1
+    },
+    {
+      "pc": 3968,
+      "opcode": "IADD3",
+      "kind": 0,
+      "src": [
+        8
+      ],
+      "dst": [
+        15
+      ],
+      "req": 1,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0f80*/                   IADD3 R15, PT, PT, R8.reuse, UR5, R8          &req={0}         ?trans2;           /* 0x00000005080f7c10 */",
+      "group": -1
+    },
+    {
+      "pc": 3984,
+      "opcode": "IADD3",
+      "kind": 0,
+      "src": [
+        8
+      ],
+      "dst": [
+        8
+      ],
+      "req": 0,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0f90*/                   IADD3 R8, PT, PT, R8, 0x200, RZ                                ?trans2;           /* 0x0000020008087810 */",
+      "group": -1
+    },
+    {
+      "pc": 4000,
+      "opcode": "PRMT",
+      "kind": 0,
+      "src": [],
+      "dst": [],
+      "req": 0,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0fa0*/               @P3 PRMT R14, RZ, 0x7610, R14                                      ?WAIT5_END_GROUP;  /* 0x00007610ff0e3816 */",
+      "group": -1
+    },
+    {
+      "pc": 4016,
+      "opcode": "STS.U16",
+      "kind": 2,
+      "src": [
+        14,
+        15
+      ],
+      "dst": [],
+      "req": 16,
+      "wr": -1,
+      "rd": 0,
+      "text": "/*0fb0*/                   STS.U16 [R15+0x800], R14                      &req={4} &rd=0x0 ?trans4;           /* 0x0008000e0f007388 */",
+      "group": 32
+    },
+    {
+      "pc": 4032,
+      "opcode": "STS.U16",
+      "kind": 2,
+      "src": [
+        5,
+        15
+      ],
+      "dst": [],
+      "req": 4,
+      "wr": -1,
+      "rd": 0,
+      "text": "/*0fc0*/                   STS.U16 [R15+0x900], R5                       &req={2} &rd=0x0 ?trans4;           /* 0x000900050f007388 */",
+      "group": 33
+    },
+    {
+      "pc": 4048,
+      "opcode": "STS.U16",
+      "kind": 2,
+      "src": [
+        9,
+        15
+      ],
+      "dst": [],
+      "req": 32,
+      "wr": -1,
+      "rd": 0,
+      "text": "/*0fd0*/                   STS.U16 [R15+0xa00], R9                       &req={5} &rd=0x0 ?trans4;           /* 0x000a00090f007388 */",
+      "group": 34
+    },
+    {
+      "pc": 4064,
+      "opcode": "STS.U16",
+      "kind": 2,
+      "src": [
+        15,
+        24
+      ],
+      "dst": [],
+      "req": 8,
+      "wr": -1,
+      "rd": 0,
+      "text": "/*0fe0*/                   STS.U16 [R15+0xb00], R24                      &req={3} &rd=0x0 ?trans1;           /* 0x000b00180f007388 */",
+      "group": 35
+    },
+    {
+      "pc": 4080,
+      "opcode": "BRA",
+      "kind": 0,
+      "src": [],
+      "dst": [],
+      "req": 0,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0ff0*/              @!P0 BRA 0xd40                                                      ?trans5;           /* 0xfffffffc00508947 */",
+      "group": -1
+    },
+    {
+      "pc": 3392,
+      "opcode": "IADD3",
+      "kind": 0,
+      "src": [
+        8
+      ],
+      "dst": [
+        5
+      ],
+      "req": 1,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0d40*/                   IADD3 R5, PT, PT, R8.reuse, 0x80, RZ          &req={0}         ?trans2;           /* 0x0000008008057810 */",
+      "group": -1
+    },
+    {
+      "pc": 3408,
+      "opcode": "IADD3",
+      "kind": 0,
+      "src": [
+        8
+      ],
+      "dst": [
+        6
+      ],
+      "req": 1,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0d50*/                   IADD3 R6, PT, PT, R8.reuse, 0x100, RZ         &req={0}         ?trans2;           /* 0x0000010008067810 */",
+      "group": -1
+    },
+    {
+      "pc": 3424,
+      "opcode": "LEA.HI",
+      "kind": 0,
+      "src": [
+        8
+      ],
+      "dst": [
+        9
+      ],
+      "req": 10,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0d60*/                   LEA.HI R9, R8, UR4, RZ, 0x1b                  &req={3,1}       ?trans1;           /* 0x0000000408097c11 */",
+      "group": -1
+    },
+    {
+      "pc": 3440,
+      "opcode": "ISETP.GE.AND",
+      "kind": 0,
+      "src": [
+        0
+      ],
+      "dst": [],
+      "req": 16,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0d70*/                   ISETP.GE.AND P0, PT, R0, UR9, PT              &req={4}         ?trans1;           /* 0x0000000900007c0c */",
+      "group": -1
+    },
+    {
+      "pc": 3456,
+      "opcode": "IADD3",
+      "kind": 0,
+      "src": [
+        8
+      ],
+      "dst": [
+        7
+      ],
+      "req": 0,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0d80*/                   IADD3 R7, PT, PT, R8, 0x180, RZ                                ?trans2;           /* 0x0000018008077810 */",
+      "group": -1
+    },
+    {
+      "pc": 3472,
+      "opcode": "LEA.HI",
+      "kind": 0,
+      "src": [
+        5
+      ],
+      "dst": [
+        25
+      ],
+      "req": 0,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0d90*/                   LEA.HI R25, R5, UR4, RZ, 0x1b                                  ?trans2;           /* 0x0000000405197c11 */",
+      "group": -1
+    },
+    {
+      "pc": 3488,
+      "opcode": "LEA.HI",
+      "kind": 0,
+      "src": [
+        6
+      ],
+      "dst": [
+        27
+      ],
+      "req": 0,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0da0*/                   LEA.HI R27, R6, UR4, RZ, 0x1b                                  ?trans1;           /* 0x00000004061b7c11 */",
+      "group": -1
+    },
+    {
+      "pc": 3504,
+      "opcode": "ISETP.GE.OR",
+      "kind": 0,
+      "src": [
+        9
+      ],
+      "dst": [],
+      "req": 4,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0db0*/                   ISETP.GE.OR P3, PT, R9, UR8, P2               &req={2}         ?trans1;           /* 0x0000000809007c0c */",
+      "group": -1
+    },
+    {
+      "pc": 3520,
+      "opcode": "LEA.HI",
+      "kind": 0,
+      "src": [
+        7
+      ],
+      "dst": [
+        5
+      ],
+      "req": 0,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0dc0*/                   LEA.HI R5, R7, UR4, RZ, 0x1b                                   ?trans1;           /* 0x0000000407057c11 */",
+      "group": -1
+    },
+    {
+      "pc": 3536,
+      "opcode": "ISETP.LT.AND",
+      "kind": 0,
+      "src": [
+        25
+      ],
+      "dst": [],
+      "req": 0,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0dd0*/                   ISETP.LT.AND P4, PT, R25, UR8, !P0                             ?WAIT2_END_GROUP;  /* 0x0000000819007c0c */",
+      "group": -1
+    },
+    {
+      "pc": 3552,
+      "opcode": "ISETP.LT.AND",
+      "kind": 0,
+      "src": [
+        27
+      ],
+      "dst": [],
+      "req": 0,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0de0*/                   ISETP.LT.AND P5, PT, R27, UR8, !P0                             ?trans2;           /* 0x000000081b007c0c */",
+      "group": -1
+    },
+    {
+      "pc": 3568,
+      "opcode": "ISETP.LT.AND",
+      "kind": 0,
+      "src": [
+        5
+      ],
+      "dst": [],
+      "req": 0,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0df0*/                   ISETP.LT.AND P0, PT, R5, UR8, !P0                              ?WAIT7_END_GROUP;  /* 0x0000000805007c0c */",
+      "group": -1
+    },
+    {
+      "pc": 3584,
+      "opcode": "LDC.64",
+      "kind": 0,
+      "src": [],
+      "dst": [
+        14,
+        15
+      ],
+      "req": 0,
+      "wr": 0,
+      "rd": -1,
+      "text": "/*0e00*/              @!P3 LDC.64 R14, c[0x0][0x388]                     &wr=0x0          ?trans1;           /* 0x0000e200ff0ebb82 */",
+      "group": -1
+    },
+    {
+      "pc": 3600,
+      "opcode": "IMAD",
+      "kind": 0,
+      "src": [
+        0,
+        9
+      ],
+      "dst": [
+        9
+      ],
+      "req": 0,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0e10*/              @!P3 IMAD R9, R9, UR9, R0.reuse                                     ?trans2;           /* 0x000000090909bc24 */",
+      "group": -1
+    },
+    {
+      "pc": 3616,
+      "opcode": "IMAD",
+      "kind": 0,
+      "src": [
+        0,
+        25
+      ],
+      "dst": [
+        25
+      ],
+      "req": 0,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0e20*/               @P4 IMAD R25, R25, UR9, R0.reuse                                   ?trans2;           /* 0x0000000919194c24 */",
+      "group": -1
+    },
+    {
+      "pc": 3632,
+      "opcode": "IMAD",
+      "kind": 0,
+      "src": [
+        0,
+        27
+      ],
+      "dst": [
+        27
+      ],
+      "req": 0,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0e30*/               @P5 IMAD R27, R27, UR9, R0                                         ?WAIT3_END_GROUP;  /* 0x000000091b1b5c24 */",
+      "group": -1
+    },
+    {
+      "pc": 3648,
+      "opcode": "LDC.64",
+      "kind": 0,
+      "src": [],
+      "dst": [
+        12,
+        13
+      ],
+      "req": 0,
+      "wr": 1,
+      "rd": -1,
+      "text": "/*0e40*/               @P4 LDC.64 R12, c[0x0][0x388]                     &wr=0x1          ?trans8;           /* 0x0000e200ff0c4b82 */",
+      "group": -1
+    },
+    {
+      "pc": 3664,
+      "opcode": "LDC.64",
+      "kind": 0,
+      "src": [],
+      "dst": [
+        10,
+        11
+      ],
+      "req": 0,
+      "wr": 2,
+      "rd": -1,
+      "text": "/*0e50*/               @P5 LDC.64 R10, c[0x0][0x388]                     &wr=0x2          ?trans8;           /* 0x0000e200ff0a5b82 */",
+      "group": -1
+    },
+    {
+      "pc": 3680,
+      "opcode": "LDC.64",
+      "kind": 0,
+      "src": [],
+      "dst": [
+        6,
+        7
+      ],
+      "req": 0,
+      "wr": 3,
+      "rd": -1,
+      "text": "/*0e60*/               @P0 LDC.64 R6, c[0x0][0x388]                      &wr=0x3          ?trans1;           /* 0x0000e200ff060b82 */",
+      "group": -1
+    },
+    {
+      "pc": 3696,
+      "opcode": "IMAD.WIDE",
+      "kind": 0,
+      "src": [
+        9,
+        14
+      ],
+      "dst": [
+        14,
+        15
+      ],
+      "req": 1,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0e70*/              @!P3 IMAD.WIDE R14, R9, 0x2, R14                   &req={0}         ?trans1;           /* 0x00000002090eb825 */",
+      "group": -1
+    },
+    {
+      "pc": 3712,
+      "opcode": "PRMT",
+      "kind": 0,
+      "src": [],
+      "dst": [],
+      "req": 0,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0e80*/              @!P5 PRMT R9, RZ, 0x7610, R9                                        ?WAIT2_END_GROUP;  /* 0x00007610ff09d816 */",
+      "group": -1
+    },
+    {
+      "pc": 3728,
+      "opcode": "PRMT",
+      "kind": 0,
+      "src": [],
+      "dst": [],
+      "req": 0,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0e90*/              @!P0 PRMT R24, RZ, 0x7610, R24                                      ?WAIT3_END_GROUP;  /* 0x00007610ff188816 */",
+      "group": -1
+    },
+    {
+      "pc": 3744,
+      "opcode": "LDG.E.U16",
+      "kind": 1,
+      "src": [
+        14,
+        15
+      ],
+      "dst": [
+        14
+      ],
+      "req": 0,
+      "wr": 4,
+      "rd": 0,
+      "text": "/*0ea0*/              @!P3 LDG.E.U16 R14, desc[UR10][R14.64]             &rd=0x0 &wr=0x4  ?trans1;           /* 0x0000000a0e0eb981 */",
+      "group": 36
+    },
+    {
+      "pc": 3760,
+      "opcode": "IMAD.WIDE",
+      "kind": 0,
+      "src": [
+        12,
+        25
+      ],
+      "dst": [
+        12,
+        13
+      ],
+      "req": 2,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0eb0*/               @P4 IMAD.WIDE R12, R25, 0x2, R12                  &req={1}         ?WAIT4_END_GROUP;  /* 0x00000002190c4825 */",
+      "group": -1
+    },
+    {
+      "pc": 3776,
+      "opcode": "IMAD",
+      "kind": 0,
+      "src": [
+        0,
+        5
+      ],
+      "dst": [
+        25
+      ],
+      "req": 0,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0ec0*/               @P0 IMAD R25, R5, UR9, R0                                          ?trans1;           /* 0x0000000905190c24 */",
+      "group": -1
+    },
+    {
+      "pc": 3792,
+      "opcode": "PRMT",
+      "kind": 0,
+      "src": [],
+      "dst": [],
+      "req": 0,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0ed0*/              @!P4 PRMT R5, RZ, 0x7610, R5                                        ?trans1;           /* 0x00007610ff05c816 */",
+      "group": -1
+    },
+    {
+      "pc": 3808,
+      "opcode": "IMAD.WIDE",
+      "kind": 0,
+      "src": [
+        10,
+        27
+      ],
+      "dst": [
+        10,
+        11
+      ],
+      "req": 4,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0ee0*/               @P5 IMAD.WIDE R10, R27, 0x2, R10                  &req={2}         ?WAIT5_END_GROUP;  /* 0x000000021b0a5825 */",
+      "group": -1
+    },
+    {
+      "pc": 3824,
+      "opcode": "LDG.E.U16",
+      "kind": 1,
+      "src": [
+        12,
+        13
+      ],
+      "dst": [
+        5
+      ],
+      "req": 0,
+      "wr": 2,
+      "rd": -1,
+      "text": "/*0ef0*/               @P4 LDG.E.U16 R5, desc[UR10][R12.64]              &wr=0x2          ?trans4;           /* 0x0000000a0c054981 */",
+      "group": 37
+    },
+    {
+      "pc": 3840,
+      "opcode": "LDG.E.U16",
+      "kind": 1,
+      "src": [
+        10,
+        11
+      ],
+      "dst": [
+        9
+      ],
+      "req": 0,
+      "wr": 5,
+      "rd": -1,
+      "text": "/*0f00*/               @P5 LDG.E.U16 R9, desc[UR10][R10.64]              &wr=0x5          ?trans1;           /* 0x0000000a0a095981 */",
+      "group": 38
+    },
+    {
+      "pc": 3856,
+      "opcode": "IMAD.WIDE",
+      "kind": 0,
+      "src": [
+        6,
+        25
+      ],
+      "dst": [
+        6,
+        7
+      ],
+      "req": 8,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0f10*/               @P0 IMAD.WIDE R6, R25, 0x2, R6                    &req={3}         ?WAIT5_END_GROUP;  /* 0x0000000219060825 */",
+      "group": -1
+    },
+    {
+      "pc": 3872,
+      "opcode": "LDG.E.U16",
+      "kind": 1,
+      "src": [
+        6,
+        7
+      ],
+      "dst": [
+        24
+      ],
+      "req": 0,
+      "wr": 3,
+      "rd": -1,
+      "text": "/*0f20*/               @P0 LDG.E.U16 R24, desc[UR10][R6.64]              &wr=0x3          ?trans1;           /* 0x0000000a06180981 */",
+      "group": 39
+    },
+    {
+      "pc": 3888,
+      "opcode": "S2UR",
+      "kind": 0,
+      "src": [],
+      "dst": [],
+      "req": 0,
+      "wr": 1,
+      "rd": -1,
+      "text": "/*0f30*/                   S2UR UR7, SR_CgaCtaId                         &wr=0x1          ?trans1;           /* 0x00000000000779c3 */",
+      "group": -1
+    },
+    {
+      "pc": 3904,
+      "opcode": "UMOV",
+      "kind": 0,
+      "src": [],
+      "dst": [],
+      "req": 0,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0f40*/                   UMOV UR5, 0x400                                                ?trans2;           /* 0x0000040000057882 */",
+      "group": -1
+    },
+    {
+      "pc": 3920,
+      "opcode": "UIADD3",
+      "kind": 0,
+      "src": [],
+      "dst": [],
+      "req": 0,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0f50*/                   UIADD3 UR5, UPT, UPT, UR5, 0x1000, URZ                         ?trans1;           /* 0x0000100005057890 */",
+      "group": -1
+    },
+    {
+      "pc": 3936,
+      "opcode": "ISETP.GE.U32.AND",
+      "kind": 0,
+      "src": [
+        8
+      ],
+      "dst": [],
+      "req": 0,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0f60*/                   ISETP.GE.U32.AND P0, PT, R8, 0x200, PT                         ?WAIT3_END_GROUP;  /* 0x000002000800780c */",
+      "group": -1
+    },
+    {
+      "pc": 3952,
+      "opcode": "ULEA",
+      "kind": 0,
+      "src": [],
+      "dst": [],
+      "req": 2,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0f70*/                   ULEA UR5, UR7, UR5, 0x18                      &req={1}         ?WAIT6_END_GROUP;  /* 0x0000000507057291 */",
+      "group": -1
+    },
+    {
+      "pc": 3968,
+      "opcode": "IADD3",
+      "kind": 0,
+      "src": [
+        8
+      ],
+      "dst": [
+        15
+      ],
+      "req": 1,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0f80*/                   IADD3 R15, PT, PT, R8.reuse, UR5, R8          &req={0}         ?trans2;           /* 0x00000005080f7c10 */",
+      "group": -1
+    },
+    {
+      "pc": 3984,
+      "opcode": "IADD3",
+      "kind": 0,
+      "src": [
+        8
+      ],
+      "dst": [
+        8
+      ],
+      "req": 0,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0f90*/                   IADD3 R8, PT, PT, R8, 0x200, RZ                                ?trans2;           /* 0x0000020008087810 */",
+      "group": -1
+    },
+    {
+      "pc": 4000,
+      "opcode": "PRMT",
+      "kind": 0,
+      "src": [],
+      "dst": [],
+      "req": 0,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0fa0*/               @P3 PRMT R14, RZ, 0x7610, R14                                      ?WAIT5_END_GROUP;  /* 0x00007610ff0e3816 */",
+      "group": -1
+    },
+    {
+      "pc": 4016,
+      "opcode": "STS.U16",
+      "kind": 2,
+      "src": [
+        14,
+        15
+      ],
+      "dst": [],
+      "req": 16,
+      "wr": -1,
+      "rd": 0,
+      "text": "/*0fb0*/                   STS.U16 [R15+0x800], R14                      &req={4} &rd=0x0 ?trans4;           /* 0x0008000e0f007388 */",
+      "group": 36
+    },
+    {
+      "pc": 4032,
+      "opcode": "STS.U16",
+      "kind": 2,
+      "src": [
+        5,
+        15
+      ],
+      "dst": [],
+      "req": 4,
+      "wr": -1,
+      "rd": 0,
+      "text": "/*0fc0*/                   STS.U16 [R15+0x900], R5                       &req={2} &rd=0x0 ?trans4;           /* 0x000900050f007388 */",
+      "group": 37
+    },
+    {
+      "pc": 4048,
+      "opcode": "STS.U16",
+      "kind": 2,
+      "src": [
+        9,
+        15
+      ],
+      "dst": [],
+      "req": 32,
+      "wr": -1,
+      "rd": 0,
+      "text": "/*0fd0*/                   STS.U16 [R15+0xa00], R9                       &req={5} &rd=0x0 ?trans4;           /* 0x000a00090f007388 */",
+      "group": 38
+    },
+    {
+      "pc": 4064,
+      "opcode": "STS.U16",
+      "kind": 2,
+      "src": [
+        15,
+        24
+      ],
+      "dst": [],
+      "req": 8,
+      "wr": -1,
+      "rd": 0,
+      "text": "/*0fe0*/                   STS.U16 [R15+0xb00], R24                      &req={3} &rd=0x0 ?trans1;           /* 0x000b00180f007388 */",
+      "group": 39
+    },
+    {
+      "pc": 4080,
+      "opcode": "BRA",
+      "kind": 0,
+      "src": [],
+      "dst": [],
+      "req": 0,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*0ff0*/              @!P0 BRA 0xd40                                                      ?trans5;           /* 0xfffffffc00508947 */",
+      "group": -1
+    },
+    {
+      "pc": 4096,
+      "opcode": "BSYNC.RECONVERGENT",
+      "kind": 0,
+      "src": [],
+      "dst": [],
+      "req": 20,
+      "wr": -1,
+      "rd": -1,
+      "text": "/*1000*/                   BSYNC.RECONVERGENT B0                         &req={4,2}       ?trans5;           /* 0x0000000000007941 */",
+      "group": -1
+    }
+  ]
+}

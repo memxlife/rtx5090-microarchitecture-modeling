@@ -1,0 +1,1036 @@
+{
+  "scope": "Model-only observational10k prefixes, no physical timings or parameter changes",
+  "fields": [
+    "active_staging_contexts",
+    "pending_load_instructions_or_baseline_loaders",
+    "pending_stores_or_baseline_response_owner",
+    "awaiting_sector_return",
+    "returned_waiting_ready_floor",
+    "loads_with_unsent_sectors",
+    "remaining_warp_instructions_or_baseline_contexts",
+    "dependency_eligible_warps_or_baseline_response_states",
+    "capacity_eligible_warps",
+    "source_register_blocked_warps",
+    "WAR_blocked_warps",
+    "cumulative_staging_instruction_issues",
+    "controller_stage_wait_contexts",
+    "controller_compute_wait_contexts",
+    "cumulative_stage_completions",
+    "cumulative_shared_commits"
+  ],
+  "rows": {
+    "baseline_small": {
+      "snapshots": [
+        {
+          "cycle": 1000,
+          "values": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "cycle": 2000,
+          "values": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "cycle": 3000,
+          "values": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "cycle": 4000,
+          "values": [
+            12,
+            11,
+            2,
+            6,
+            0,
+            2,
+            12,
+            3,
+            0,
+            0,
+            0,
+            0,
+            12,
+            0,
+            0,
+            415
+          ]
+        },
+        {
+          "cycle": 5000,
+          "values": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            12,
+            12,
+            768
+          ]
+        },
+        {
+          "cycle": 6000,
+          "values": [
+            12,
+            9,
+            1,
+            4,
+            0,
+            4,
+            12,
+            1,
+            0,
+            0,
+            0,
+            0,
+            12,
+            0,
+            12,
+            1372
+          ]
+        },
+        {
+          "cycle": 7000,
+          "values": [
+            12,
+            11,
+            1,
+            6,
+            0,
+            3,
+            12,
+            2,
+            0,
+            0,
+            0,
+            0,
+            12,
+            0,
+            24,
+            1659
+          ]
+        },
+        {
+          "cycle": 8000,
+          "values": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            12,
+            36,
+            2304
+          ]
+        },
+        {
+          "cycle": 9000,
+          "values": [
+            12,
+            11,
+            1,
+            7,
+            0,
+            3,
+            12,
+            1,
+            0,
+            0,
+            0,
+            0,
+            12,
+            0,
+            36,
+            2610
+          ]
+        },
+        {
+          "cycle": 10000,
+          "values": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            12,
+            48,
+            3072
+          ]
+        }
+      ],
+      "cycle_sum_fields": [
+        55805,
+        49517,
+        3072,
+        30720,
+        0,
+        12653,
+        55805,
+        6144,
+        0,
+        0,
+        0,
+        0,
+        55805,
+        23707,
+        0,
+        0
+      ],
+      "terminal": "PREFIX_ONLY limit=10000 elapsed=10000 requests=6144 hits=6144 misses=0 fills=0 native=7113",
+      "raw_sha256": "4aa23fd00055ffd239fd5c2b858f2d00bb6f4927cab442fd152c0b6edaf1b60b"
+    },
+    "baseline_dense": {
+      "snapshots": [
+        {
+          "cycle": 1000,
+          "values": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "cycle": 2000,
+          "values": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "cycle": 3000,
+          "values": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "cycle": 4000,
+          "values": [
+            326,
+            316,
+            6,
+            64,
+            0,
+            238,
+            326,
+            14,
+            0,
+            0,
+            0,
+            0,
+            326,
+            0,
+            0,
+            1795
+          ]
+        },
+        {
+          "cycle": 5000,
+          "values": [
+            826,
+            805,
+            5,
+            78,
+            0,
+            719,
+            826,
+            8,
+            0,
+            0,
+            0,
+            0,
+            826,
+            0,
+            0,
+            8324
+          ]
+        },
+        {
+          "cycle": 6000,
+          "values": [
+            1326,
+            1302,
+            9,
+            86,
+            0,
+            1200,
+            1326,
+            16,
+            0,
+            0,
+            0,
+            0,
+            1326,
+            0,
+            0,
+            16068
+          ]
+        },
+        {
+          "cycle": 7000,
+          "values": [
+            1826,
+            1815,
+            7,
+            87,
+            0,
+            1717,
+            1826,
+            11,
+            0,
+            0,
+            0,
+            0,
+            1826,
+            0,
+            0,
+            25075
+          ]
+        },
+        {
+          "cycle": 8000,
+          "values": [
+            1870,
+            1850,
+            9,
+            107,
+            0,
+            1724,
+            1870,
+            19,
+            0,
+            0,
+            0,
+            0,
+            1870,
+            0,
+            0,
+            35095
+          ]
+        },
+        {
+          "cycle": 9000,
+          "values": [
+            1870,
+            1846,
+            6,
+            97,
+            0,
+            1735,
+            1870,
+            14,
+            0,
+            0,
+            0,
+            0,
+            1870,
+            0,
+            0,
+            46554
+          ]
+        },
+        {
+          "cycle": 10000,
+          "values": [
+            1870,
+            1844,
+            11,
+            109,
+            0,
+            1712,
+            1870,
+            23,
+            0,
+            0,
+            0,
+            0,
+            1870,
+            0,
+            2,
+            58138
+          ]
+        }
+      ],
+      "cycle_sum_fields": [
+        8941222,
+        8820704,
+        58201,
+        586651,
+        0,
+        8117609,
+        8941222,
+        116444,
+        0,
+        0,
+        0,
+        0,
+        8941222,
+        1110,
+        0,
+        0
+      ],
+      "terminal": "PREFIX_ONLY limit=10000 elapsed=10000 requests=117373 hits=117373 misses=0 fills=0 native=320",
+      "raw_sha256": "768f73e7e0a641449ddca7ebca1eee9d2a18d453ae1871a5dde9cf001cb4ace7"
+    },
+    "candidate_small": {
+      "snapshots": [
+        {
+          "cycle": 1000,
+          "values": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "cycle": 2000,
+          "values": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "cycle": 3000,
+          "values": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "cycle": 4000,
+          "values": [
+            12,
+            120,
+            0,
+            52,
+            68,
+            34,
+            48,
+            48,
+            48,
+            0,
+            0,
+            4320,
+            12,
+            0,
+            0,
+            192
+          ]
+        },
+        {
+          "cycle": 5000,
+          "values": [
+            12,
+            48,
+            0,
+            24,
+            24,
+            9,
+            48,
+            48,
+            48,
+            0,
+            0,
+            9456,
+            12,
+            0,
+            0,
+            576
+          ]
+        },
+        {
+          "cycle": 6000,
+          "values": [
+            12,
+            0,
+            0,
+            0,
+            0,
+            0,
+            48,
+            48,
+            48,
+            0,
+            0,
+            11244,
+            12,
+            0,
+            12,
+            768
+          ]
+        },
+        {
+          "cycle": 7000,
+          "values": [
+            12,
+            0,
+            0,
+            0,
+            0,
+            0,
+            48,
+            48,
+            48,
+            0,
+            0,
+            16524,
+            12,
+            0,
+            12,
+            1152
+          ]
+        },
+        {
+          "cycle": 8000,
+          "values": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            20832,
+            0,
+            12,
+            24,
+            1536
+          ]
+        },
+        {
+          "cycle": 9000,
+          "values": [
+            12,
+            192,
+            0,
+            0,
+            192,
+            0,
+            48,
+            0,
+            0,
+            48,
+            0,
+            23952,
+            12,
+            0,
+            24,
+            1536
+          ]
+        },
+        {
+          "cycle": 10000,
+          "values": [
+            12,
+            176,
+            2,
+            0,
+            174,
+            0,
+            48,
+            0,
+            0,
+            48,
+            0,
+            28864,
+            12,
+            0,
+            24,
+            1934
+          ]
+        }
+      ],
+      "cycle_sum_fields": [
+        66264,
+        713687,
+        1936,
+        28905,
+        682844,
+        16059,
+        264816,
+        107352,
+        107352,
+        157464,
+        0,
+        100919569,
+        66264,
+        13320,
+        0,
+        0
+      ],
+      "terminal": "PREFIX_ONLY limit=10000 elapsed=10000 requests=4224 hits=4224 misses=0 fills=0 native=3840",
+      "raw_sha256": "5b82710b322954fd2dd49c327a0c765e81973f4b7c0bc2299d58be194638c7e2"
+    },
+    "candidate_dense": {
+      "snapshots": [
+        {
+          "cycle": 1000,
+          "values": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "cycle": 2000,
+          "values": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "cycle": 3000,
+          "values": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "cycle": 4000,
+          "values": [
+            326,
+            2800,
+            5,
+            2151,
+            645,
+            2141,
+            1304,
+            716,
+            716,
+            588,
+            0,
+            68536,
+            326,
+            0,
+            0,
+            725
+          ]
+        },
+        {
+          "cycle": 5000,
+          "values": [
+            826,
+            4958,
+            7,
+            4894,
+            54,
+            4849,
+            3304,
+            2201,
+            1184,
+            1103,
+            0,
+            213706,
+            826,
+            0,
+            0,
+            6030
+          ]
+        },
+        {
+          "cycle": 6000,
+          "values": [
+            1326,
+            4888,
+            12,
+            4555,
+            325,
+            4494,
+            5304,
+            4591,
+            2697,
+            713,
+            0,
+            364589,
+            1326,
+            0,
+            0,
+            12914
+          ]
+        },
+        {
+          "cycle": 7000,
+          "values": [
+            1826,
+            4627,
+            10,
+            3841,
+            772,
+            3770,
+            7301,
+            7016,
+            5533,
+            285,
+            0,
+            529034,
+            1826,
+            0,
+            0,
+            21336
+          ]
+        },
+        {
+          "cycle": 8000,
+          "values": [
+            1852,
+            4735,
+            12,
+            3947,
+            779,
+            3883,
+            7298,
+            7099,
+            5903,
+            199,
+            0,
+            695276,
+            1852,
+            18,
+            18,
+            31906
+          ]
+        },
+        {
+          "cycle": 9000,
+          "values": [
+            1840,
+            5324,
+            13,
+            4796,
+            518,
+            4732,
+            7270,
+            6754,
+            4060,
+            516,
+            0,
+            855820,
+            1840,
+            30,
+            74,
+            44523
+          ]
+        },
+        {
+          "cycle": 10000,
+          "values": [
+            1841,
+            5139,
+            19,
+            4834,
+            299,
+            4776,
+            7166,
+            6600,
+            3777,
+            566,
+            0,
+            1016463,
+            1841,
+            29,
+            117,
+            57251
+          ]
+        }
+      ],
+      "cycle_sum_fields": [
+        8887156,
+        30221156,
+        60402,
+        26987218,
+        3174422,
+        26662117,
+        35260352,
+        31508813,
+        21900994,
+        3751539,
+        0,
+        3219001250,
+        8887156,
+        54774,
+        0,
+        0
+      ],
+      "terminal": "PREFIX_ONLY limit=10000 elapsed=10000 requests=119848 hits=119848 misses=0 fills=0 native=16596",
+      "raw_sha256": "c462cba7d0d8044061ababb4d41d56432d68e26181dff026dec4e0bea4f7c3c8"
+    }
+  },
+  "commands": {
+    "baseline_small": "/private/tmp/stage_trace_base 128 96 12288 1 170 48 11 10000 1 1024 1 1 32",
+    "baseline_dense": "/private/tmp/stage_trace_base 1920 1920 1536 1 170 48 11 10000 1 1024 1 1 32",
+    "candidate_small": "/private/tmp/stage_trace_candidate 128 96 12288 1 170 48 11 10000 1 1024 1 1 32",
+    "candidate_dense": "/private/tmp/stage_trace_candidate 1920 1920 1536 1 170 48 11 10000 1 1024 1 1 32"
+  },
+  "limitations": [
+    "Snapshots and sums do not establish steady-state full-run attribution.",
+    "Baseline has no instruction readiness state; zero columns denote absent representation rather than zero physical cost.",
+    "Eligible warp totals count multiple competing warps, not distinct issue cycles."
+  ],
+  "source_hashes": {
+    "baseline/backing.hpp": "140d6929416127251dc8fb66a415e19ae418c43cc2657ec08a6776b5e6d37a55",
+    "baseline/grid_metadata.hpp": "b7cb619ec1b756c34af947fada415b53bddc49e35627154ff213e2a08d900105",
+    "baseline/generation_metadata.hpp": "32b8aff44983f29e0623611070202226c13d3029bc24b8a98131f81caf86c7b4",
+    "baseline/output_metadata.hpp": "02d09768df2f636b350b9502d4a3d3fdf655b51ca8d29057444b818accc0e729",
+    "baseline/sm_pool.hpp": "ecb082831652d9d9ad116364c6156ae3a0cec32512678ec57ef4e09cafdfe2b4",
+    "baseline/l2_slice.hpp": "a2394a00b41d75d6b6fce924844a6a1c722d4fe98d429f37abb7c0760dec3ccd",
+    "baseline/native_stage_event.hpp": "e5d0f71be713774009020c869b71a64491fac6f1ff47f02824f158ec2d90dd98",
+    "baseline/sm_event.hpp": "de22154806acc7a5ec34599f03da10f146946f99543addcd04a14d116c6f10cf",
+    "baseline/full_gpu_parallel.cpp": "061ab7234e292175076466d5004871a328437a0c08751dcca2e3cb74d17d0914",
+    "baseline/shared_hub_event.hpp": "593b961d10f8b8e929a148cb6aadadde4f32866fdfae9206b21d011a5fea182d",
+    "baseline/units.hpp": "6f92d6ed06913bd4622a43f29ad6cec4f5ad9ac02b7c20e2510b78890f4bffbe",
+    "baseline/resident_metadata.hpp": "e80f43ba854c0621f50b671a5de37fd8d7f85a6574ae362e9c89e03a1a07a3fa",
+    "baseline/staging_event.hpp": "59f876d1919928caee210f6d869af60ebf0af4b5febd4259c3b68b2ac2d0f887",
+    "baseline/native_schedule.hpp": "cc903710a14275ca26ea56ad2d5b804e37cd6ee3e3f41873665ba2a5242114ea",
+    "baseline/native_engine_event.hpp": "56ae7321d29552199d043f466c9b1ddab0604fc54da5a907c075ea75c0c77216",
+    "candidate/backing.hpp": "140d6929416127251dc8fb66a415e19ae418c43cc2657ec08a6776b5e6d37a55",
+    "candidate/grid_metadata.hpp": "b7cb619ec1b756c34af947fada415b53bddc49e35627154ff213e2a08d900105",
+    "candidate/producer_path.hpp": "0798182f916ede07205dd85c02646a9c60ef5e1c519f51270d3942439c126151",
+    "candidate/generation_metadata.hpp": "32b8aff44983f29e0623611070202226c13d3029bc24b8a98131f81caf86c7b4",
+    "candidate/output_metadata.hpp": "02d09768df2f636b350b9502d4a3d3fdf655b51ca8d29057444b818accc0e729",
+    "candidate/sm_pool.hpp": "ecb082831652d9d9ad116364c6156ae3a0cec32512678ec57ef4e09cafdfe2b4",
+    "candidate/l2_slice.hpp": "a2394a00b41d75d6b6fce924844a6a1c722d4fe98d429f37abb7c0760dec3ccd",
+    "candidate/native_stage_event.hpp": "e5d0f71be713774009020c869b71a64491fac6f1ff47f02824f158ec2d90dd98",
+    "candidate/sm_event.hpp": "d4e644b4931ce9d1fd0df8e5650600545ebd2f7a4b2e831acd910c4ce698e8d7",
+    "candidate/full_gpu_parallel.cpp": "061ab7234e292175076466d5004871a328437a0c08751dcca2e3cb74d17d0914",
+    "candidate/shared_hub_event.hpp": "593b961d10f8b8e929a148cb6aadadde4f32866fdfae9206b21d011a5fea182d",
+    "candidate/units.hpp": "6f92d6ed06913bd4622a43f29ad6cec4f5ad9ac02b7c20e2510b78890f4bffbe",
+    "candidate/resident_metadata.hpp": "e80f43ba854c0621f50b671a5de37fd8d7f85a6574ae362e9c89e03a1a07a3fa",
+    "candidate/staging_event.hpp": "bf65591724dea8c513d2c2278b0079c9bc7f6699ab5a4a88e6c3e286065197eb",
+    "candidate/native_schedule.hpp": "cc903710a14275ca26ea56ad2d5b804e37cd6ee3e3f41873665ba2a5242114ea",
+    "candidate/native_engine_event.hpp": "56ae7321d29552199d043f466c9b1ddab0604fc54da5a907c075ea75c0c77216"
+  },
+  "dense_instruction_floor": {
+    "blocks": 3600,
+    "maximum_blocks_per_SM": 22,
+    "stages_per_block": 48,
+    "producer_instructions_per_stage": 868,
+    "one_issue_port_cycles": 916608,
+    "candidate_full_cycles": 945861,
+    "floor_fraction": 0.9690726227215204,
+    "interpretation": "Necessary issue-count floor under candidate single staging issue port; not hardware lower bound. Does not include native-compute issue contention."
+  },
+  "uninstrumented_prefix_checks": {
+    "baseline_small": {
+      "instrumented": "PREFIX_ONLY limit=10000 elapsed=10000 requests=6144 hits=6144 misses=0 fills=0 native=7113",
+      "preserved_binary": "PREFIX_ONLY limit=10000 elapsed=10000 requests=6144 hits=6144 misses=0 fills=0 native=7113",
+      "exact_match": true
+    },
+    "baseline_dense": {
+      "instrumented": "PREFIX_ONLY limit=10000 elapsed=10000 requests=117373 hits=117373 misses=0 fills=0 native=320",
+      "preserved_binary": "PREFIX_ONLY limit=10000 elapsed=10000 requests=117373 hits=117373 misses=0 fills=0 native=320",
+      "exact_match": true
+    },
+    "candidate_small": {
+      "instrumented": "PREFIX_ONLY limit=10000 elapsed=10000 requests=4224 hits=4224 misses=0 fills=0 native=3840",
+      "preserved_binary": "PREFIX_ONLY limit=10000 elapsed=10000 requests=4224 hits=4224 misses=0 fills=0 native=3840",
+      "exact_match": true
+    },
+    "candidate_dense": {
+      "instrumented": "PREFIX_ONLY limit=10000 elapsed=10000 requests=119848 hits=119848 misses=0 fills=0 native=16596",
+      "preserved_binary": "PREFIX_ONLY limit=10000 elapsed=10000 requests=119848 hits=119848 misses=0 fills=0 native=16596",
+      "exact_match": true
+    }
+  },
+  "dense_endpoint_returned_floor_fraction": 0.05818252578322631
+}

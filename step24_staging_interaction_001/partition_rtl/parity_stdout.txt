@@ -1,0 +1,5 @@
+SCENARIO_PASS scenario=0 cycles=4249 fields=208250
+SCENARIO_PASS scenario=1 cycles=6223 fields=513226
+SCENARIO_PASS scenario=2 cycles=4257 fields=721868
+SCENARIO_PASS scenario=3 cycles=4532 fields=943985
+PARITY_PASS fields=943985 completed_frames=24 checked_halfwords=49152 matrix_checksum=1.6875

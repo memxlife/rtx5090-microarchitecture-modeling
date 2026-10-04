@@ -30,6 +30,12 @@ For the recorded full-chip configuration, run:
 
 The C++ executor tracks timing and addresses without storing matrix values. Its output-address checks do not establish numerical matrix correctness. Separate numerical Verilog tests check matrix values. A quick component check can be run with `python3 rtl/cpp/build_and_verify.py` after installing Verilator. Verilator, a C++ compiler, and Python 3 are needed for those tests; the [integration chapter](rtl/manual/integration_and_verification.md) links their source recipes. Historical adapters in `rtl/cpp` drive Verilator-generated models; the independent executor is in `rtl/calibration_large_001/event_cpp`.
 
+## Focused scheduling diagnosis and exploratory MIP
+
+The [four-partition diagnosis](step24_staging_interaction_001/result_report.md) identifies a modeled instruction-issue bottleneck. Correcting it lowers dense-case error from +31.57% to +10.41%, while the small case remains −27.54%. The [matching Verilog component](step24_staging_interaction_001/partition_rtl/README.md) passes 943,985 protocol/address/counter comparisons and 49,152 operand-value checks. Hardware accuracy still exceeds the 5% target; neither experimental candidate is promoted.
+
+A separate [exploratory MIP](cublas_mip_001/result_report.md) expresses tile dimensions, split-K, shared buffering, resource limits and reduction workspace through component-demand constraints. It solves a 100-configuration domain to zero gap in about 0.04 seconds; enumeration independently matches. The proxy chooses 64×64×32 tiles and split-K 4, with buffer counts 2/3/4/6 tied, predicting 13.566 microseconds. This is neither a compiled CUDA candidate nor a hardware-optimal result. The captured library uses split-K 8; its measured runtime was not a solver input.
+
 ## Recorded results and limits
 
 The latest [staging experiment](step23_hlm_connected_gpu_reproduction_001/staging_cpp_repair/result_report.md) adds the compiled global-load → register → shared-store dependency path. Its separate C++ and Verilog components agree in the tested traffic scenarios, but the candidate is **not promoted**: improving the small workload comes with a large timing regression on the dense workload.

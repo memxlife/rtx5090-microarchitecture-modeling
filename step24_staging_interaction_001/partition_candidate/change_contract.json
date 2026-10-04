@@ -1,0 +1,16 @@
+{
+  "changes": [
+    "four scheduler partitions rather than one staging issuer per SM",
+    "reserve native-issued warp partition before staging edge"
+  ],
+  "unchanged": [
+    "340-cycle readiness prior",
+    "sector service/cache/globalcredits",
+    "queue limits",
+    "native compute/sharedhub",
+    "grid residency",
+    "all GPU references"
+  ],
+  "provisional": "warp modulo four assignment; native engine still one issue across partitions; producer and native issue ordering is fixed native-first, not recovered hardware arbitration",
+  "criterion": "same small/dense regressions; no promotion from component checks alone"
+}

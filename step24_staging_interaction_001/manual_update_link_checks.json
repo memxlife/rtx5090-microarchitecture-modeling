@@ -1,0 +1,351 @@
+{
+  "checked": 69,
+  "all_exist": true,
+  "checks": [
+    {
+      "source": "studies/rtx5090_gemm_milp/rtl/manual/components/03_scheduling_and_instruction_issue.md",
+      "target": "rtl/rtl_microarchitecture_spec.md",
+      "exists": true
+    },
+    {
+      "source": "studies/rtx5090_gemm_milp/rtl/manual/components/03_scheduling_and_instruction_issue.md",
+      "target": "rtl/hardware_manual_structure.md",
+      "exists": true
+    },
+    {
+      "source": "studies/rtx5090_gemm_milp/rtl/manual/components/03_scheduling_and_instruction_issue.md",
+      "target": "rtl/parameter_master_table.md",
+      "exists": true
+    },
+    {
+      "source": "studies/rtx5090_gemm_milp/rtl/manual/components/03_scheduling_and_instruction_issue.md",
+      "target": "rtl/components/library/warp_scheduler.sv",
+      "exists": true
+    },
+    {
+      "source": "studies/rtx5090_gemm_milp/rtl/manual/components/03_scheduling_and_instruction_issue.md",
+      "target": "rtl/components/decoded_native_issue_gate.sv",
+      "exists": true
+    },
+    {
+      "source": "studies/rtx5090_gemm_milp/rtl/manual/components/03_scheduling_and_instruction_issue.md",
+      "target": "rtl/discovery_rounds/native_barrier_015/producer_barrier_tracker.sv",
+      "exists": true
+    },
+    {
+      "source": "studies/rtx5090_gemm_milp/rtl/manual/components/03_scheduling_and_instruction_issue.md",
+      "target": "rtl/components/decoded_native_issue_gate.sv",
+      "exists": true
+    },
+    {
+      "source": "studies/rtx5090_gemm_milp/rtl/manual/components/03_scheduling_and_instruction_issue.md",
+      "target": "rtl/components/decoded_native_issue_gate_verification.json",
+      "exists": true
+    },
+    {
+      "source": "studies/rtx5090_gemm_milp/rtl/manual/components/03_scheduling_and_instruction_issue.md",
+      "target": "rtl/cpp/warp_scheduler.hpp",
+      "exists": true
+    },
+    {
+      "source": "studies/rtx5090_gemm_milp/rtl/manual/components/03_scheduling_and_instruction_issue.md",
+      "target": "rtl/components/library/warp_scheduler.sv",
+      "exists": true
+    },
+    {
+      "source": "studies/rtx5090_gemm_milp/rtl/manual/components/03_scheduling_and_instruction_issue.md",
+      "target": "rtl/cpp/decoded_native_issue_gate.hpp",
+      "exists": true
+    },
+    {
+      "source": "studies/rtx5090_gemm_milp/rtl/manual/components/03_scheduling_and_instruction_issue.md",
+      "target": "rtl/components/decoded_native_issue_gate.sv",
+      "exists": true
+    },
+    {
+      "source": "studies/rtx5090_gemm_milp/rtl/manual/components/03_scheduling_and_instruction_issue.md",
+      "target": "rtl/manual/integration_and_verification.md",
+      "exists": true
+    },
+    {
+      "source": "studies/rtx5090_gemm_milp/rtl/manual/components/03_scheduling_and_instruction_issue.md",
+      "target": "../../../step24_staging_interaction_001/partition_candidate/staging_event.hpp",
+      "exists": true
+    },
+    {
+      "source": "studies/rtx5090_gemm_milp/rtl/manual/components/03_scheduling_and_instruction_issue.md",
+      "target": "../../../step24_staging_interaction_001/partition_candidate/sm_event.hpp",
+      "exists": true
+    },
+    {
+      "source": "studies/rtx5090_gemm_milp/rtl/manual/components/03_scheduling_and_instruction_issue.md",
+      "target": "../../../step24_staging_interaction_001/producer_control_audit.json",
+      "exists": true
+    },
+    {
+      "source": "studies/rtx5090_gemm_milp/rtl/manual/components/03_scheduling_and_instruction_issue.md",
+      "target": "../../../step24_staging_interaction_001/partition_rtl/repaired_staging.sv",
+      "exists": true
+    },
+    {
+      "source": "studies/rtx5090_gemm_milp/rtl/manual/components/03_scheduling_and_instruction_issue.md",
+      "target": "../../../step24_staging_interaction_001/partition_rtl/parity_receipt.json",
+      "exists": true
+    },
+    {
+      "source": "studies/rtx5090_gemm_milp/rtl/manual/components/03_scheduling_and_instruction_issue.md",
+      "target": "../../../step24_staging_interaction_001/partition_small.json",
+      "exists": true
+    },
+    {
+      "source": "studies/rtx5090_gemm_milp/rtl/manual/components/03_scheduling_and_instruction_issue.md",
+      "target": "../../../step24_staging_interaction_001/partition_dense.json",
+      "exists": true
+    },
+    {
+      "source": "studies/rtx5090_gemm_milp/rtl/manual/components/03_scheduling_and_instruction_issue.md",
+      "target": "../../../step24_staging_interaction_001/result_report.md",
+      "exists": true
+    },
+    {
+      "source": "studies/rtx5090_gemm_milp/rtl/manual/integration_and_verification.md",
+      "target": "rtl/rtl_microarchitecture_spec.md",
+      "exists": true
+    },
+    {
+      "source": "studies/rtx5090_gemm_milp/rtl/manual/integration_and_verification.md",
+      "target": "rtl/manual/00_gpu_overview.md",
+      "exists": true
+    },
+    {
+      "source": "studies/rtx5090_gemm_milp/rtl/manual/integration_and_verification.md",
+      "target": "rtl/numerical/resident_gemm_multi_sm_nb_l2.sv",
+      "exists": true
+    },
+    {
+      "source": "studies/rtx5090_gemm_milp/rtl/manual/integration_and_verification.md",
+      "target": "rtl/numerical/resident_multi_sm_nb_l2_verification.json",
+      "exists": true
+    },
+    {
+      "source": "studies/rtx5090_gemm_milp/rtl/manual/integration_and_verification.md",
+      "target": "rtl/numerical/verify_resident_gemm_multi_sm_nb_l2.py",
+      "exists": true
+    },
+    {
+      "source": "studies/rtx5090_gemm_milp/rtl/manual/integration_and_verification.md",
+      "target": "rtl/components/hardware_blocks.sv",
+      "exists": true
+    },
+    {
+      "source": "studies/rtx5090_gemm_milp/rtl/manual/integration_and_verification.md",
+      "target": "rtl/cpp/component_model.hpp",
+      "exists": true
+    },
+    {
+      "source": "studies/rtx5090_gemm_milp/rtl/manual/integration_and_verification.md",
+      "target": "rtl/cpp/queue_smoke.cpp",
+      "exists": true
+    },
+    {
+      "source": "studies/rtx5090_gemm_milp/rtl/manual/integration_and_verification.md",
+      "target": "rtl/cpp/shared_smoke.cpp",
+      "exists": true
+    },
+    {
+      "source": "studies/rtx5090_gemm_milp/rtl/manual/integration_and_verification.md",
+      "target": "rtl/cpp/verification.json",
+      "exists": true
+    },
+    {
+      "source": "studies/rtx5090_gemm_milp/rtl/manual/integration_and_verification.md",
+      "target": "../calibration_large_001/README.md",
+      "exists": true
+    },
+    {
+      "source": "studies/rtx5090_gemm_milp/rtl/manual/integration_and_verification.md",
+      "target": "../calibration_large_001/event_cpp/full_1536_result.json",
+      "exists": true
+    },
+    {
+      "source": "studies/rtx5090_gemm_milp/rtl/manual/integration_and_verification.md",
+      "target": "../calibration_large_001/event_cpp/full_3072_result.json",
+      "exists": true
+    },
+    {
+      "source": "studies/rtx5090_gemm_milp/rtl/manual/integration_and_verification.md",
+      "target": "../../step23_hlm_connected_gpu_reproduction_001/regression_suite/root_verified_replay.json",
+      "exists": true
+    },
+    {
+      "source": "studies/rtx5090_gemm_milp/rtl/manual/integration_and_verification.md",
+      "target": "../calibration_large_001/event_cpp/full_completed_comparison.json",
+      "exists": true
+    },
+    {
+      "source": "studies/rtx5090_gemm_milp/rtl/manual/integration_and_verification.md",
+      "target": "../../step23_hlm_connected_gpu_reproduction_001/staging_cpp_repair/staging_event.hpp",
+      "exists": true
+    },
+    {
+      "source": "studies/rtx5090_gemm_milp/rtl/manual/integration_and_verification.md",
+      "target": "../../step23_hlm_connected_gpu_reproduction_001/staging_cpp_repair/producer_path.json",
+      "exists": true
+    },
+    {
+      "source": "studies/rtx5090_gemm_milp/rtl/manual/integration_and_verification.md",
+      "target": "../../step23_hlm_connected_gpu_reproduction_001/staging_cpp_repair/sm_event.hpp",
+      "exists": true
+    },
+    {
+      "source": "studies/rtx5090_gemm_milp/rtl/manual/integration_and_verification.md",
+      "target": "../../step23_hlm_connected_gpu_reproduction_001/staging_cpp_repair/full_gpu_parallel.cpp",
+      "exists": true
+    },
+    {
+      "source": "studies/rtx5090_gemm_milp/rtl/manual/integration_and_verification.md",
+      "target": "components/04_registers_readiness_and_operand_collection.md#11-candidate-staging-register-ownership",
+      "exists": true
+    },
+    {
+      "source": "studies/rtx5090_gemm_milp/rtl/manual/integration_and_verification.md",
+      "target": "components/07_load_store_execution.md#11-candidate-compiled-staging-path",
+      "exists": true
+    },
+    {
+      "source": "studies/rtx5090_gemm_milp/rtl/manual/integration_and_verification.md",
+      "target": "components/13_barriers_and_retirement.md#11-staging-barrier-and-context-reuse-contract",
+      "exists": true
+    },
+    {
+      "source": "studies/rtx5090_gemm_milp/rtl/manual/integration_and_verification.md",
+      "target": "../../step23_hlm_connected_gpu_reproduction_001/staging_rtl_repair/repaired_staging.sv",
+      "exists": true
+    },
+    {
+      "source": "studies/rtx5090_gemm_milp/rtl/manual/integration_and_verification.md",
+      "target": "../../step23_hlm_connected_gpu_reproduction_001/staging_rtl_repair/producer_tables.svh",
+      "exists": true
+    },
+    {
+      "source": "studies/rtx5090_gemm_milp/rtl/manual/integration_and_verification.md",
+      "target": "../../step23_hlm_connected_gpu_reproduction_001/staging_rtl_repair/parity.cpp",
+      "exists": true
+    },
+    {
+      "source": "studies/rtx5090_gemm_milp/rtl/manual/integration_and_verification.md",
+      "target": "../../step23_hlm_connected_gpu_reproduction_001/staging_cpp_repair/unit_receipt.json",
+      "exists": true
+    },
+    {
+      "source": "studies/rtx5090_gemm_milp/rtl/manual/integration_and_verification.md",
+      "target": "../../step23_hlm_connected_gpu_reproduction_001/staging_cpp_repair/focused_result.json",
+      "exists": true
+    },
+    {
+      "source": "studies/rtx5090_gemm_milp/rtl/manual/integration_and_verification.md",
+      "target": "../../step23_three_way_original_workloads_001/GPU/small_receipt.json",
+      "exists": true
+    },
+    {
+      "source": "studies/rtx5090_gemm_milp/rtl/manual/integration_and_verification.md",
+      "target": "../../step23_hlm_connected_gpu_reproduction_001/regression_suite/candidate_summary.json",
+      "exists": true
+    },
+    {
+      "source": "studies/rtx5090_gemm_milp/rtl/manual/integration_and_verification.md",
+      "target": "../../step23_hlm_connected_gpu_reproduction_001/staging_rtl_repair/parity_receipt.json",
+      "exists": true
+    },
+    {
+      "source": "studies/rtx5090_gemm_milp/rtl/manual/integration_and_verification.md",
+      "target": "../../step23_hlm_connected_gpu_reproduction_001/regression_suite/candidate_dense.json",
+      "exists": true
+    },
+    {
+      "source": "studies/rtx5090_gemm_milp/rtl/manual/integration_and_verification.md",
+      "target": "components/03_scheduling_and_instruction_issue.md#11-experimental-four-partition-staging-issue",
+      "exists": true
+    },
+    {
+      "source": "studies/rtx5090_gemm_milp/rtl/manual/integration_and_verification.md",
+      "target": "../../step24_staging_interaction_001/result_report.md",
+      "exists": true
+    },
+    {
+      "source": "studies/rtx5090_gemm_milp/rtl/manual/integration_and_verification.md",
+      "target": "../../step24_staging_interaction_001/partition_rtl/parity_receipt.json",
+      "exists": true
+    },
+    {
+      "source": "studies/rtx5090_gemm_milp/rtl/manual/evidence_history.md",
+      "target": "rtl/rtl_microarchitecture_spec.md",
+      "exists": true
+    },
+    {
+      "source": "studies/rtx5090_gemm_milp/rtl/manual/evidence_history.md",
+      "target": "rtl/parameter_sweep/initial_validation_20261003_222837/summary.md",
+      "exists": true
+    },
+    {
+      "source": "studies/rtx5090_gemm_milp/rtl/manual/evidence_history.md",
+      "target": "rtl/parameter_sweep/initial_validation_20261003_222837/consolidated_checks.md",
+      "exists": true
+    },
+    {
+      "source": "studies/rtx5090_gemm_milp/rtl/manual/evidence_history.md",
+      "target": "../../step22_original_validation_reproduction_001/highlevel_oct3_chronology.json",
+      "exists": true
+    },
+    {
+      "source": "studies/rtx5090_gemm_milp/rtl/manual/evidence_history.md",
+      "target": "../../step23_three_way_original_workloads_001/GPU/small_receipt.json",
+      "exists": true
+    },
+    {
+      "source": "studies/rtx5090_gemm_milp/rtl/manual/evidence_history.md",
+      "target": "../../step23_three_way_original_workloads_001/GPU/large_receipt.json",
+      "exists": true
+    },
+    {
+      "source": "studies/rtx5090_gemm_milp/rtl/manual/evidence_history.md",
+      "target": "../../step22_original_validation_reproduction_001/numeric_scope_correction.json",
+      "exists": true
+    },
+    {
+      "source": "studies/rtx5090_gemm_milp/rtl/manual/evidence_history.md",
+      "target": "../../step23_hlm_connected_gpu_reproduction_001/staging_cpp_repair/focused_result.json",
+      "exists": true
+    },
+    {
+      "source": "studies/rtx5090_gemm_milp/rtl/manual/evidence_history.md",
+      "target": "integration_and_verification.md#compiled-staging-repair-candidate",
+      "exists": true
+    },
+    {
+      "source": "studies/rtx5090_gemm_milp/rtl/manual/evidence_history.md",
+      "target": "../../step23_hlm_connected_gpu_reproduction_001/regression_suite/candidate_dense.json",
+      "exists": true
+    },
+    {
+      "source": "studies/rtx5090_gemm_milp/rtl/manual/evidence_history.md",
+      "target": "../../step23_hlm_connected_gpu_reproduction_001/staging_rtl_repair/repaired_staging.sv",
+      "exists": true
+    },
+    {
+      "source": "studies/rtx5090_gemm_milp/rtl/manual/evidence_history.md",
+      "target": "../../step23_hlm_connected_gpu_reproduction_001/staging_rtl_repair/parity_receipt.json",
+      "exists": true
+    },
+    {
+      "source": "studies/rtx5090_gemm_milp/rtl/manual/evidence_history.md",
+      "target": "../../step24_staging_interaction_001/result_report.md",
+      "exists": true
+    },
+    {
+      "source": "studies/rtx5090_gemm_milp/rtl/manual/evidence_history.md",
+      "target": "../../step24_staging_interaction_001/partition_rtl/parity_receipt.json",
+      "exists": true
+    }
+  ]
+}

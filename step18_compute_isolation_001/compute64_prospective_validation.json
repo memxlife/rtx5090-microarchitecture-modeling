@@ -1,0 +1,103 @@
+{
+  "status": "prospectivecomponent prior passes register; complete global/sharedmodel not validated",
+  "source_receipt": "../step18_compute_shared_isolation_001/prospective48/receipt.json",
+  "cases": [
+    {
+      "case": "register48_w1",
+      "prediction": 6165,
+      "measurement": 6281,
+      "signed_error_percent": -1.846839675210954
+    },
+    {
+      "case": "register48_w2_0",
+      "prediction": 6182,
+      "measurement": 6299,
+      "signed_error_percent": -1.85743768852199
+    },
+    {
+      "case": "register48_w2_1",
+      "prediction": 6189,
+      "measurement": 6278,
+      "signed_error_percent": -1.417648932781146
+    },
+    {
+      "case": "register48_w4_0",
+      "prediction": 6216,
+      "measurement": 6281,
+      "signed_error_percent": -1.034867059385447
+    },
+    {
+      "case": "register48_w4_1",
+      "prediction": 6223,
+      "measurement": 6284,
+      "signed_error_percent": -0.9707192870782921
+    },
+    {
+      "case": "register48_w4_2",
+      "prediction": 6230,
+      "measurement": 6281,
+      "signed_error_percent": -0.811972615825507
+    },
+    {
+      "case": "register48_w4_3",
+      "prediction": 6237,
+      "measurement": 6284,
+      "signed_error_percent": -0.7479312539783622
+    },
+    {
+      "case": "shared48_w4_0",
+      "prediction": 13009,
+      "measurement": 18218,
+      "signed_error_percent": -28.592600724558125
+    },
+    {
+      "case": "shared48_w4_1",
+      "prediction": 13075,
+      "measurement": 18360,
+      "signed_error_percent": -28.785403050108936
+    },
+    {
+      "case": "shared48_w4_2",
+      "prediction": 13146,
+      "measurement": 18471,
+      "signed_error_percent": -28.828975150235504
+    },
+    {
+      "case": "shared48_w4_3",
+      "prediction": 13170,
+      "measurement": 18363,
+      "signed_error_percent": -28.279692860643692
+    },
+    {
+      "case": "original1536_isolated",
+      "prediction": 16.2982993197,
+      "measurement": 20.7017574,
+      "signed_error_percent": -21.270938477426082
+    },
+    {
+      "case": "original1536_full144",
+      "prediction": 16.2982993197,
+      "measurement": 22.2417603,
+      "signed_error_percent": -26.722079997867798
+    },
+    {
+      "case": "pairedcached1536",
+      "prediction": 15.1605442177,
+      "measurement": 15.1270399,
+      "signed_error_percent": 0.22148627835640866
+    },
+    {
+      "case": "pairedcg1536",
+      "prediction": 15.906462585,
+      "measurement": 21.7508793,
+      "signed_error_percent": -26.86979516731538
+    }
+  ],
+  "promotion_decision": {
+    "allowed_scope": "64cycleeffectiveHMMAresult-use,II8,pending8 as provisional composite register-phase surrogate; independently predicts previouslyunrun48iteration1/2/4warps within2%.",
+    "not_identified": "IntrinsicHMMApipeline latency,actualhardwarependingcapacity, encodedcontrol contribution.",
+    "not_promoted": "No newsharedor.cg delay; no fullGPUtiming5%claim.",
+    "default_action": "Preserve baseline files; candidate implementation separate pendingparent integration decision."
+  },
+  "causal_limit": "Register-phase generalization doesnot explain sharedoperand delivery/globalcompound readiness. .cg requests correct but timings fail. Original direct remains underpredicted despite arithmeticcorrection."
+}

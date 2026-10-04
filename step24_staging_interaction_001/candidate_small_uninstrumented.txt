@@ -1,0 +1,2 @@
+PROGRESS cycles=10000 elapsed=10000 dispatched=12 completed=0 checked=0 native=3840 host_seconds=2.34675 cycles_per_second=4261.21
+PREFIX_ONLY limit=10000 elapsed=10000 requests=4224 hits=4224 misses=0 fills=0 native=3840

@@ -1,0 +1,4 @@
+#include "partition_candidate/staging_event.hpp"
+#include <iostream>
+#include <stdexcept>
+int main(){staging_event::Staging s(1,32,32,32);staging_event::Input i;i.request={true,0,7,0,0x2000000,0,0,0};i.blocked_partitions=15;s.edge(i,0);if(s.instruction_issues()!=0)throw std::runtime_error("reserved native partitions must block producer");i.request.valid=false;i.blocked_partitions=0;s.edge(i,1);if(s.instruction_issues()!=4)throw std::runtime_error("one issue per each of four partitions");i.blocked_partitions=9;s.edge(i,2);if(s.instruction_issues()!=6)throw std::runtime_error("reserved partition counted twice");i.blocked_partitions=15;s.edge(i,3);if(s.instruction_issues()!=6)throw std::runtime_error("all partition reservation");std::cout<<"PARTITION_ISSUE_PASS issue_counts=0,4,6,6 unchanged_ready_floor=340\n";}
