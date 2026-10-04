@@ -1,0 +1,84 @@
+{
+  "all_passed": true,
+  "descriptors": [
+    {
+      "low": 50624571,
+      "high": 4048401813471232,
+      "width": 1,
+      "transpose": 0,
+      "destination": 4,
+      "address": 3
+    },
+    {
+      "low": 50624571,
+      "high": 4048401813471488,
+      "width": 2,
+      "transpose": 0,
+      "destination": 4,
+      "address": 3
+    },
+    {
+      "low": 50624571,
+      "high": 4048401813471744,
+      "width": 4,
+      "transpose": 0,
+      "destination": 4,
+      "address": 3
+    },
+    {
+      "low": 50624571,
+      "high": 4048401813487616,
+      "width": 1,
+      "transpose": 1,
+      "destination": 4,
+      "address": 3
+    },
+    {
+      "low": 50624571,
+      "high": 4048401813487872,
+      "width": 2,
+      "transpose": 1,
+      "destination": 4,
+      "address": 3
+    },
+    {
+      "low": 50624571,
+      "high": 4048401813488128,
+      "width": 4,
+      "transpose": 1,
+      "destination": 4,
+      "address": 3
+    },
+    {
+      "low": 269514811,
+      "high": 4193537348338176,
+      "width": 4,
+      "transpose": 0,
+      "destination": 16,
+      "address": 16
+    },
+    {
+      "low": 202143803,
+      "high": 4329876790198784,
+      "width": 4,
+      "transpose": 1,
+      "destination": 12,
+      "address": 12
+    }
+  ],
+  "source_sha256": {
+    "native_ldsm_decode.sv": "50df94f39e9685306311e4fba2d295ea2e478dc94e4fdb5a6340f3c19fea505b",
+    "native_ldsm_decode_tb.sv": "89d3a7d77c7672311577dbb3b916a9a0574036a88258f02f9eaff72a9365c5d0"
+  },
+  "output": "PASS:8 native descriptors and5 unsupported forms\n- rtl/components/native_ldsm_decode_tb.sv:21: Verilog $finish\n- S i m u l a t i o n   R e p o r t: Verilator 5.050 2026-07-01\n- Verilator: $finish at 13ps; walltime 0.000 s; speed 109.244 ns/s\n- Verilator: cpu 0.000 s on 1 threads; allocated 2 MB\n",
+  "scope": "Six observed sm120 unpredicated register-direct LDSM16 forms and two separate mapping-kernel instances; partial descriptor only",
+  "unsupported": [
+    "predicated forms",
+    "address offsets",
+    "other opcodes",
+    "reserved format/width bits",
+    "scheduling controls"
+  ],
+  "hardware_timing_identified": false,
+  "full_decoder_implemented": false
+}

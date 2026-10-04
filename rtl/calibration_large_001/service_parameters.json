@@ -1,0 +1,18 @@
+{
+  "reference_GHz": 2.94,
+  "reference_clock_status": "Conversion reference, not a measured active clock for these runs",
+  "cache_effective_read_GBps": 3443.59945,
+  "cache_effective_write_GBps": 2853.26799,
+  "cache_effective_mixed_GBps": 4510.0044,
+  "dram_effective_read_GBps": 1568.25725,
+  "dram_effective_write_GBps": 1667.8811,
+  "dram_effective_mixed_GBps": 1363.75187,
+  "physical_port_count": "not identified",
+  "scope": "CUDA-event requested throughput; scalar cg loads and wb stores; 256 threads/block; warm launches; selected concurrency up to680blocks; mixed traffic counts both read and write bytes. Effective service priors, not intrinsic cache-port capacities.",
+  "cache_effective_read_sectors_per_reference_cycle": 36.602885310374155,
+  "cache_effective_write_sectors_per_reference_cycle": 30.32810363520408,
+  "cache_effective_mixed_sectors_per_reference_cycle": 47.93797193877551,
+  "dram_effective_read_sectors_per_reference_cycle": 16.669401041666667,
+  "dram_effective_write_sectors_per_reference_cycle": 17.728328018707483,
+  "dram_effective_mixed_sectors_per_reference_cycle": 14.495661883503402
+}

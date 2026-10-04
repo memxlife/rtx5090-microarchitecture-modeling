@@ -1,0 +1,19 @@
+{
+  "accepted": true,
+  "reviewer": "root independent cold read and exact source audit",
+  "sections": [
+    "4.54",
+    "4.55"
+  ],
+  "human_first_review": "Read the cache position, geometry, functional hit/refill behavior and counter boundary before interpreting tests. Added explicit edge semantics for the currently uncalibrated hit and refill response.",
+  "undergraduate_reader_review": "Confirmed64sets*8ways*128B=65536B; unit40words are five32Bpacket reads with onehit and fourmisses. Full24576outputs are four launches of six1024word blocks. Cumulative counters are not mislabeled per-launch. Scope excludes physicalL2 capacity, timing, associativity, writecoherence and concurrentmisses.",
+  "inline_source_parity": {
+    "numerical/multi_sm_l2_gateway.sv": true,
+    "numerical/resident_gemm_multi_sm_l2.sv": true
+  },
+  "current_receipt_hashes": true,
+  "no_latch_circular_or_error_diagnostics": true,
+  "document_sha256": "43424140a0b9816b8a9fcf96aa981ce6f9ce75d2fda94b497cd0b3d861b04821",
+  "physical_parameters_closed": 0,
+  "timing_validated": false
+}

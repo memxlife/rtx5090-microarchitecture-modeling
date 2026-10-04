@@ -1,0 +1,11 @@
+{
+  "reason": "Full numerical runs passed but source-freeze rejected concurrent edit; these are post-run current hashes, not the unrecovered prebuild hashes.",
+  "postrun_sha256": {
+    "resident_gemm_multi_sm_nb_l2_tb.sv": "d622deebfe69b1e485b19b2f7bf371bede65db2ed4caaf4587e6cb3f6d7873fe",
+    "verify_resident_gemm_multi_sm_nb_l2.py": "50a8e4412d4c7f7cc3cad2498fd3d83d9e22eaae7dd8e74d1c1aadd1a9af2b3c",
+    "resident_gemm_multi_sm_nb_l2.sv": "79dd6b1604f9b9b77a87aa2258fcdb0efcb2a898ff2225476c724a86b95d5726",
+    "multi_sm_nonblocking_l2.sv": "c1f7af9e3fa80274fd23372c9e2ff337498ca6224615fb880b890b6ad33e93b9",
+    "resident_multi_sm_nb_l2_run_64.log": "9bd932cb850c560ab80b8162f00957fb5667ecfbfa1b754545093d61fe060727",
+    "resident_multi_sm_nb_l2_run_1536.log": "36730d7bbeda682ac516118da84a4f9c66cc619fc630e0b7844aa82b27a6c619"
+  }
+}

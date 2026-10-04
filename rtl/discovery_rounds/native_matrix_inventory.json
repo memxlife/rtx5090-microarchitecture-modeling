@@ -1,0 +1,220 @@
+{
+  "scope": "Static HMMA PCs in four saved SM120 GEMM binaries; not dynamic execution counts",
+  "source_path": "diagnostic_042/gemm_checked.cu",
+  "source_sha256": "5cb93d38c5647fbb6652c719bc7bd394487e46e441246d1b73933a296c2c6313",
+  "records": [
+    {
+      "path": "diagnostic_042/gemm_32_32_p0.gemm.sass",
+      "sha256": "2ffdbe8fdca78c9d42c1fbd9ad16f9c7143e42fffcf974a7e7a95b594c5cd0c6",
+      "tile": "32_32",
+      "variant": "p0",
+      "static_instruction_counts": {
+        "HMMA.16816.F32.BF16": 4
+      },
+      "instructions": [
+        {
+          "pc": "1220",
+          "opcode": "HMMA.16816.F32.BF16",
+          "operands": "R20, R12, R28, R20"
+        },
+        {
+          "pc": "1240",
+          "opcode": "HMMA.16816.F32.BF16",
+          "operands": "R16, R12, R24, R16"
+        },
+        {
+          "pc": "1290",
+          "opcode": "HMMA.16816.F32.BF16",
+          "operands": "R20, R8, R12, R20"
+        },
+        {
+          "pc": "12b0",
+          "opcode": "HMMA.16816.F32.BF16",
+          "operands": "R16, R8, R14, R16"
+        }
+      ]
+    },
+    {
+      "path": "diagnostic_042/gemm_32_32_p2.gemm.sass",
+      "sha256": "ec7a947c4a52f8392356dc3aea20a77a31aec9497326ff866c4a0cb3de51bcca",
+      "tile": "32_32",
+      "variant": "p2",
+      "static_instruction_counts": {
+        "HMMA.16816.F32.BF16": 4
+      },
+      "instructions": [
+        {
+          "pc": "1230",
+          "opcode": "HMMA.16816.F32.BF16",
+          "operands": "R8, R16, R32, R8"
+        },
+        {
+          "pc": "1250",
+          "opcode": "HMMA.16816.F32.BF16",
+          "operands": "R12, R16, R22, R12"
+        },
+        {
+          "pc": "12a0",
+          "opcode": "HMMA.16816.F32.BF16",
+          "operands": "R8, R4, R16, R8"
+        },
+        {
+          "pc": "12c0",
+          "opcode": "HMMA.16816.F32.BF16",
+          "operands": "R12, R4, R18, R12"
+        }
+      ]
+    },
+    {
+      "path": "diagnostic_042/gemm_64_48_p0.gemm.sass",
+      "sha256": "fc59309622abec1fd509c0f286f56661b6dabea8587367d7f04ec60bd01fce1e",
+      "tile": "64_48",
+      "variant": "p0",
+      "static_instruction_counts": {
+        "HMMA.16816.F32.BF16": 12
+      },
+      "instructions": [
+        {
+          "pc": "19e0",
+          "opcode": "HMMA.16816.F32.BF16",
+          "operands": "R24, R36, R48, R24"
+        },
+        {
+          "pc": "1a00",
+          "opcode": "HMMA.16816.F32.BF16",
+          "operands": "R20, R36, R46, R20"
+        },
+        {
+          "pc": "1a30",
+          "opcode": "HMMA.16816.F32.BF16",
+          "operands": "R24, R32, R52, R24"
+        },
+        {
+          "pc": "1a50",
+          "opcode": "HMMA.16816.F32.BF16",
+          "operands": "R20, R32, R36, R20"
+        },
+        {
+          "pc": "1c80",
+          "opcode": "HMMA.16816.F32.BF16",
+          "operands": "R8, R36, R50, R8"
+        },
+        {
+          "pc": "1ca0",
+          "opcode": "HMMA.16816.F32.BF16",
+          "operands": "R28, R36, R48, R28"
+        },
+        {
+          "pc": "1cf0",
+          "opcode": "HMMA.16816.F32.BF16",
+          "operands": "R8, R32, R36, R8"
+        },
+        {
+          "pc": "1d10",
+          "opcode": "HMMA.16816.F32.BF16",
+          "operands": "R28, R32, R38, R28"
+        },
+        {
+          "pc": "1f40",
+          "opcode": "HMMA.16816.F32.BF16",
+          "operands": "R16, R36, R50, R16"
+        },
+        {
+          "pc": "1f60",
+          "opcode": "HMMA.16816.F32.BF16",
+          "operands": "R12, R36, R48, R12"
+        },
+        {
+          "pc": "1fb0",
+          "opcode": "HMMA.16816.F32.BF16",
+          "operands": "R16, R32, R36, R16"
+        },
+        {
+          "pc": "1fd0",
+          "opcode": "HMMA.16816.F32.BF16",
+          "operands": "R12, R32, R38, R12"
+        }
+      ]
+    },
+    {
+      "path": "diagnostic_042/gemm_64_48_p2.gemm.sass",
+      "sha256": "c55de0dc5286414a045deb1dc68b7c419415a3f17309369adfe12ff9dac5a0ee",
+      "tile": "64_48",
+      "variant": "p2",
+      "static_instruction_counts": {
+        "HMMA.16816.F32.BF16": 12
+      },
+      "instructions": [
+        {
+          "pc": "18e0",
+          "opcode": "HMMA.16816.F32.BF16",
+          "operands": "R24, R36, R48, R24"
+        },
+        {
+          "pc": "1900",
+          "opcode": "HMMA.16816.F32.BF16",
+          "operands": "R20, R36, R46, R20"
+        },
+        {
+          "pc": "1950",
+          "opcode": "HMMA.16816.F32.BF16",
+          "operands": "R24, R32, R38, R24"
+        },
+        {
+          "pc": "1970",
+          "opcode": "HMMA.16816.F32.BF16",
+          "operands": "R20, R32, R36, R20"
+        },
+        {
+          "pc": "1c80",
+          "opcode": "HMMA.16816.F32.BF16",
+          "operands": "R8, R36, R48, R8"
+        },
+        {
+          "pc": "1ca0",
+          "opcode": "HMMA.16816.F32.BF16",
+          "operands": "R28, R36, R46, R28"
+        },
+        {
+          "pc": "1cf0",
+          "opcode": "HMMA.16816.F32.BF16",
+          "operands": "R8, R32, R38, R8"
+        },
+        {
+          "pc": "1d10",
+          "opcode": "HMMA.16816.F32.BF16",
+          "operands": "R28, R32, R36, R28"
+        },
+        {
+          "pc": "2020",
+          "opcode": "HMMA.16816.F32.BF16",
+          "operands": "R16, R36, R50, R16"
+        },
+        {
+          "pc": "2040",
+          "opcode": "HMMA.16816.F32.BF16",
+          "operands": "R12, R36, R46, R12"
+        },
+        {
+          "pc": "2090",
+          "opcode": "HMMA.16816.F32.BF16",
+          "operands": "R16, R32, R36, R16"
+        },
+        {
+          "pc": "20b0",
+          "opcode": "HMMA.16816.F32.BF16",
+          "operands": "R12, R32, R38, R12"
+        }
+      ]
+    }
+  ],
+  "unresolved": [
+    "lane/value mapping",
+    "instruction latency",
+    "issue interval",
+    "predicated dynamic counts",
+    "internal matrix decomposition"
+  ],
+  "hardware_benchmark_run": false,
+  "physical_timing_identified": false
+}

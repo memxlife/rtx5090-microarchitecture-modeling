@@ -1,0 +1,898 @@
+{
+  "revision": 15,
+  "active_candidate": "actual_path_v3",
+  "records": [
+    {
+      "experiment": "diagnostic_004",
+      "decision": "requires_reconciliation",
+      "model_effect": "Historical evidence retained; not yet admitted to current runtime version",
+      "component": null,
+      "evidence": [
+        {
+          "path": "diagnostic_004/contract.json",
+          "sha256": "db33f982a8a4feba982b1d232f9006f6094b955e26452b06f953d3a140c056e7"
+        },
+        {
+          "path": "diagnostic_004/measurements.json",
+          "sha256": "e21a65d2244b898cc72e28191fcd16459224b7640bd2a42b8d95cebfac915cfe"
+        }
+      ],
+      "full_gemm_runtime_validated": false
+    },
+    {
+      "experiment": "diagnostic_006",
+      "decision": "requires_reconciliation",
+      "model_effect": "Historical evidence retained; not yet admitted to current runtime version",
+      "component": null,
+      "evidence": [
+        {
+          "path": "diagnostic_006/results.md",
+          "sha256": "cc81feb3a05e5e6ddac02130d2e3d7d3db6bea38dbc710959da8d3be25055ac7"
+        },
+        {
+          "path": "diagnostic_006/measurements.json",
+          "sha256": "8d2afa9cbc8a9531f49f52af26e6c68654a32182b5ee12cf9d228a64d5616c04"
+        }
+      ],
+      "full_gemm_runtime_validated": false
+    },
+    {
+      "experiment": "diagnostic_007",
+      "decision": "requires_reconciliation",
+      "model_effect": "Historical evidence retained; not yet admitted to current runtime version",
+      "component": null,
+      "evidence": [
+        {
+          "path": "diagnostic_007/results.md",
+          "sha256": "791f8ba5894ef7a508452519111fc4f2de52bd8971d36706d2e602319dbdd5c8"
+        },
+        {
+          "path": "diagnostic_007/measurements.json",
+          "sha256": "4c78a8f8e1cc489a4e3929256789996ffec3f21a7ee76e1c727c5f1aac668147"
+        }
+      ],
+      "full_gemm_runtime_validated": false
+    },
+    {
+      "experiment": "diagnostic_008",
+      "decision": "requires_reconciliation",
+      "model_effect": "Historical evidence retained; not yet admitted to current runtime version",
+      "component": null,
+      "evidence": [
+        {
+          "path": "diagnostic_008/results.md",
+          "sha256": "89c95db5eca97f3c1c434a8b0f1a2ebf6dc51fd0be266d52abde5543c3a453ed"
+        },
+        {
+          "path": "diagnostic_008/measurements.json",
+          "sha256": "af7ab1021712bb9350c283ca0835a87eca6c3b1bd94345ca28716f0006df21fc"
+        }
+      ],
+      "full_gemm_runtime_validated": false
+    },
+    {
+      "experiment": "diagnostic_010",
+      "decision": "requires_reconciliation",
+      "model_effect": "Historical evidence retained; not yet admitted to current runtime version",
+      "component": null,
+      "evidence": [
+        {
+          "path": "diagnostic_010/results.md",
+          "sha256": "34f888d08717435cc640549382a8aed052b8d652e8772f71c04360127d90ff43"
+        }
+      ],
+      "full_gemm_runtime_validated": false
+    },
+    {
+      "experiment": "diagnostic_011",
+      "decision": "requires_reconciliation",
+      "model_effect": "Historical evidence retained; not yet admitted to current runtime version",
+      "component": null,
+      "evidence": [
+        {
+          "path": "diagnostic_011/results.md",
+          "sha256": "3d22283c0fdd4dab48bb9ba716193e02c41f5f31511ccff5e5d0b1f3b49d32fc"
+        }
+      ],
+      "full_gemm_runtime_validated": false
+    },
+    {
+      "experiment": "diagnostic_012",
+      "decision": "requires_reconciliation",
+      "model_effect": "Historical evidence retained; not yet admitted to current runtime version",
+      "component": null,
+      "evidence": [
+        {
+          "path": "diagnostic_012/results.md",
+          "sha256": "ce3d976af2541cefe718cedd642d405673c28dea9f9ab7ad210a3bdb94d20849"
+        }
+      ],
+      "full_gemm_runtime_validated": false
+    },
+    {
+      "experiment": "diagnostic_013",
+      "decision": "requires_reconciliation",
+      "model_effect": "Historical evidence retained; not yet admitted to current runtime version",
+      "component": null,
+      "evidence": [
+        {
+          "path": "diagnostic_013/results.md",
+          "sha256": "d2751b9b3a276aece2458bab59826c561284ca1502a5f951ba649f028e9b5888"
+        },
+        {
+          "path": "diagnostic_013/contract.json",
+          "sha256": "ae86dc9d8205672a370a32ee4417c9a0bc0078a73c95f231fa8ec99fd821fa54"
+        }
+      ],
+      "full_gemm_runtime_validated": false
+    },
+    {
+      "experiment": "diagnostic_014",
+      "decision": "bounded_service",
+      "model_effect": "Shared bank demand and scalar/vector work lower bounds; not total runtime",
+      "component": "shared_memory.py",
+      "evidence": [
+        {
+          "path": "diagnostic_014/results.md",
+          "sha256": "519d6b48fbf19c828e5ac1390a6f4216ea1470885d429cf612d2ca5d8437de7c"
+        },
+        {
+          "path": "diagnostic_014/measurements.json",
+          "sha256": "7583455a66f5e377ec0ec1d62fc74f522054d4876ac5940e35068b1b6b6f764b"
+        }
+      ],
+      "full_gemm_runtime_validated": false
+    },
+    {
+      "experiment": "diagnostic_015",
+      "decision": "structure",
+      "model_effect": "Global response groups depend on compiled load/store dependencies",
+      "component": "matrix_operand_graph.py",
+      "evidence": [
+        {
+          "path": "diagnostic_015/results.md",
+          "sha256": "58a204cbf3d11c5509a8b250a167eb1ad652419dbacb03e0961c957fd56d7d81"
+        },
+        {
+          "path": "diagnostic_015/measurements.json",
+          "sha256": "8ce6415ffb8ed799cc0297db983ebe0007c4bc4f30f5bf3e89bc11d58e52c015"
+        }
+      ],
+      "full_gemm_runtime_validated": false
+    },
+    {
+      "experiment": "diagnostic_016",
+      "decision": "bounded_service",
+      "model_effect": "Native instruction form determines service demand",
+      "component": "shared_memory.py",
+      "evidence": [
+        {
+          "path": "diagnostic_016/results.md",
+          "sha256": "287b1413663a122dbe8309bc0d44c830093af8183dd68fae9179dfdf76da6360"
+        },
+        {
+          "path": "diagnostic_016/measurements.json",
+          "sha256": "6fce0918ba8bf37371bf3c6455e477e8d9cc65643463f6fd34fde440ebe1b43d"
+        }
+      ],
+      "full_gemm_runtime_validated": false
+    },
+    {
+      "experiment": "diagnostic_017",
+      "decision": "reject_universal_timing",
+      "model_effect": "Max resource work remains a lower bound; low-bank control fails",
+      "component": "shared_memory.py",
+      "evidence": [
+        {
+          "path": "diagnostic_017/results.md",
+          "sha256": "ce82d3579c0d34e53a4cc511c90942e7b36f0b0276c55c83eeaf55c00218168a"
+        },
+        {
+          "path": "diagnostic_017/measurements.json",
+          "sha256": "8b83cd22df1b094236f863bb4029380e21c3d5f881b64f9def206b193af68651"
+        }
+      ],
+      "full_gemm_runtime_validated": false
+    },
+    {
+      "experiment": "diagnostic_018",
+      "decision": "reject_preparation",
+      "model_effect": "Cold preparation does not ensure cold outcomes; superseded by fresh-region controls",
+      "component": "global_response.py",
+      "evidence": [
+        {
+          "path": "diagnostic_018/verification.json",
+          "sha256": "f4873512b58b5a985a072872755acec13c6cb7096923c5b49e13f83366c60e2d"
+        },
+        {
+          "path": "diagnostic_018/results.md",
+          "sha256": "6f66b63901b653692dd780d1518a22c8470c3f2da0d44cbc1531d806a96e8985"
+        }
+      ],
+      "full_gemm_runtime_validated": false
+    },
+    {
+      "experiment": "diagnostic_019",
+      "decision": "bounded_timing",
+      "model_effect": "Calibrated compound response costs; independent group-two checks",
+      "component": "global_response.py",
+      "evidence": [
+        {
+          "path": "diagnostic_019/verification.json",
+          "sha256": "58b3fdac34b0e4a7a84731839fe3fed2239ca8f3e74593599e3504166afe6ac2"
+        },
+        {
+          "path": "diagnostic_019/results.md",
+          "sha256": "d51c8c8719755e562f2d7dbcb94252d1f4b29ba7dfcd6e268c2d97b0f9354684"
+        }
+      ],
+      "full_gemm_runtime_validated": false
+    },
+    {
+      "experiment": "diagnostic_020",
+      "decision": "bounded_timing",
+      "model_effect": "Mixed-cache critical requests require ordering, not average hit fraction",
+      "component": "global_response.py",
+      "evidence": [
+        {
+          "path": "diagnostic_020/verification.json",
+          "sha256": "ea73159a51ec774ac6444a3f8091e72a2560d73667c6ce4a9ea5dcac7b26b83a"
+        },
+        {
+          "path": "diagnostic_020/results.md",
+          "sha256": "ef59e63de5b1360486d35d18185fcb192ab7c3c74db4892a2d0e0c680831b681"
+        }
+      ],
+      "full_gemm_runtime_validated": false
+    },
+    {
+      "experiment": "diagnostic_021",
+      "decision": "bounded_readiness",
+      "model_effect": "Presence and data availability must be distinguished",
+      "component": "readiness.py",
+      "evidence": [
+        {
+          "path": "diagnostic_021/verification.json",
+          "sha256": "6826e12858b0d9970a26c2b6f34fce24445218f920aecc6cf9908769b4508468"
+        },
+        {
+          "path": "diagnostic_021/results.md",
+          "sha256": "4573439c69586ee65843c31cf56de4dd669ba8f815bd64f11d53737f4359cbda"
+        }
+      ],
+      "full_gemm_runtime_validated": false
+    },
+    {
+      "experiment": "diagnostic_022",
+      "decision": "reject_composition",
+      "model_effect": "Independent component sum misses actual stage time by 17\u201331%",
+      "component": "stage_composition_evidence.json",
+      "evidence": [
+        {
+          "path": "diagnostic_022/verification.json",
+          "sha256": "1ec6a2d30c077dc325d8c2e344223cfabedc4ad720a7da9849c8e4ef65db5411"
+        },
+        {
+          "path": "diagnostic_022/results.md",
+          "sha256": "f3ec8386790e89d7a1159f1b8709389247b5f62120a5a14e49d98f2ef8d094ca"
+        }
+      ],
+      "full_gemm_runtime_validated": false
+    },
+    {
+      "experiment": "diagnostic_023",
+      "decision": "compound_measurement",
+      "model_effect": "Shared operand, MOVM, HMMA and synchronization path replaces separate lower-bound sum",
+      "component": "runtime_v2.py",
+      "evidence": [
+        {
+          "path": "diagnostic_023/verification.json",
+          "sha256": "d692d424843498aa88b7de3d3260f107e508d77773c85d61025771de5bfc0c72"
+        },
+        {
+          "path": "diagnostic_023/contract.json",
+          "sha256": "5731be42ca50314bb75c1e6917b2bfa944c00345b26e53bc6d5b3e158022ee7c"
+        }
+      ],
+      "full_gemm_runtime_validated": false
+    },
+    {
+      "experiment": "diagnostic_024",
+      "decision": "measured_not_intrinsic",
+      "model_effect": "MOVM dependency and capacity evidence; no universal instruction price",
+      "component": "instruction_schedule.py",
+      "evidence": [
+        {
+          "path": "diagnostic_024/verification.json",
+          "sha256": "ae179dfbac355f24ede8dd7311a7c110627e4f2851de5537f0ac36c75291a3f7"
+        },
+        {
+          "path": "diagnostic_024/results.md",
+          "sha256": "e218bd86fc24d452184a3df08baec00a29b799b9ffacf30e3c6ef68fca8db393"
+        }
+      ],
+      "full_gemm_runtime_validated": false
+    },
+    {
+      "experiment": "diagnostic_025",
+      "decision": "reject_simple_overlap",
+      "model_effect": "Neither sum nor max alone models independent matrix/transpose mix",
+      "component": "instruction_schedule.py",
+      "evidence": [
+        {
+          "path": "diagnostic_025/verification.json",
+          "sha256": "eed85a5f3dc38f144c230a14fb3fc7fb7ed43dd7419fb4d53e1a5e4309cb6eb8"
+        },
+        {
+          "path": "diagnostic_025/results.md",
+          "sha256": "5c155489a01cc0e2fdcf12456b783f73ded728a62c8d192b2558c752c592ae7c"
+        }
+      ],
+      "full_gemm_runtime_validated": false
+    },
+    {
+      "experiment": "diagnostic_026",
+      "decision": "structure",
+      "model_effect": "Actual operand dependence increases time at equal operation counts",
+      "component": "matrix_operand_graph.py",
+      "evidence": [
+        {
+          "path": "diagnostic_026/verification.json",
+          "sha256": "1abb65801cb0f750a49192d4368feb25559cede43e8d61757ad75fbad3ab1d14"
+        },
+        {
+          "path": "diagnostic_026/results.md",
+          "sha256": "175e1faf1b02ba22b515c0e262c8bde2154636326d567752763fde0087fe4c67"
+        }
+      ],
+      "full_gemm_runtime_validated": false
+    },
+    {
+      "experiment": "diagnostic_027",
+      "decision": "reject_simple_scheduler",
+      "model_effect": "One shared resource misses four-warps/eight-chains case",
+      "component": "instruction_schedule.py",
+      "evidence": [
+        {
+          "path": "diagnostic_027/verification.json",
+          "sha256": "dfd25e69c90d05cb5b55c05663a4e122905e55ff9929208b2fa0ebe70af089d7"
+        },
+        {
+          "path": "diagnostic_027/results.md",
+          "sha256": "30ebcfbaebbbf433bc1967639f6a36a213de3706d23cf16f7047c7e8e1fd08ee"
+        }
+      ],
+      "full_gemm_runtime_validated": false
+    },
+    {
+      "experiment": "diagnostic_028",
+      "decision": "bounded_empirical_rule",
+      "model_effect": "Compiled-loop overhead predicts new unroll sizes; mechanism still unresolved",
+      "component": "native_dependency_controls.py",
+      "evidence": [
+        {
+          "path": "diagnostic_028/verification.json",
+          "sha256": "3950df1cf46ebfe16c072c95d565d612eacb4f9ce7479a07629349e337dc0275"
+        },
+        {
+          "path": "diagnostic_028/results.md",
+          "sha256": "d3bc3168aa87ffeeccf6b1c37856af591b898a702b141c62b85c295864b92557"
+        }
+      ],
+      "full_gemm_runtime_validated": false
+    },
+    {
+      "experiment": "diagnostic_029",
+      "decision": "structure",
+      "model_effect": "Preserve cross-loop completion controls; samples are not elapsed costs",
+      "component": "native_dependency_controls.py",
+      "evidence": [
+        {
+          "path": "diagnostic_029/verification.json",
+          "sha256": "e785058f39013547c2c8f1911fc9ba8335ed9a4d34ce106670850cbdb7d6b9e2"
+        },
+        {
+          "path": "diagnostic_029/results.md",
+          "sha256": "f51393900e0d5fdb6eb77c43dfcc578a962c4c1911689b6cb9eef1851c9a7e6d"
+        }
+      ],
+      "full_gemm_runtime_validated": false
+    },
+    {
+      "experiment": "diagnostic_030",
+      "decision": "reject_control",
+      "model_effect": "Compiler collapses intended extra arithmetic",
+      "component": "compiled_control_admission.py",
+      "evidence": [
+        {
+          "path": "diagnostic_030/verification.json",
+          "sha256": "0c216ee78869806a50d349fe877206a6513e4388dffed7220dc7975159310b3d"
+        },
+        {
+          "path": "diagnostic_030/rejection.json",
+          "sha256": "f6c9023dd2c462cfac086e14b669c01945b4b3eadeef308b1f359cf61e6dd135"
+        }
+      ],
+      "full_gemm_runtime_validated": false
+    },
+    {
+      "experiment": "diagnostic_031",
+      "decision": "reject_order_control",
+      "model_effect": "Source ordering erased; native contrast gate required",
+      "component": "compiled_control_admission.py",
+      "evidence": [
+        {
+          "path": "diagnostic_031/verification.json",
+          "sha256": "6e4e7483dd9acc0fad54e7d8c337669708b2577c907b8515d029b42a55c51fb7"
+        },
+        {
+          "path": "diagnostic_031/results.md",
+          "sha256": "a3064789ed1db39b0fe7eb923e538ae0e52f7d94ff1203d302c4e9226bd5995b"
+        }
+      ],
+      "full_gemm_runtime_validated": false
+    },
+    {
+      "experiment": "diagnostic_032",
+      "decision": "structure",
+      "model_effect": "Address pairs and predicate register dependencies are explicit",
+      "component": "native_register_footprints.py",
+      "evidence": [
+        {
+          "path": "diagnostic_032/verification.json",
+          "sha256": "676fc490a46f9a2a994252456acb6b6f7f7c9602e7cb5c6305260664c72c468c"
+        },
+        {
+          "path": "diagnostic_032/results.md",
+          "sha256": "b63f5a60011b2fb33abbbe0981f1ed09962e80534d4fb31cd0e6b4d218d58790"
+        }
+      ],
+      "full_gemm_runtime_validated": false
+    },
+    {
+      "experiment": "diagnostic_033",
+      "decision": "bounded_overlap",
+      "model_effect": "Integer-dominated mixture overlaps; low-work case still fails",
+      "component": "instruction_schedule.py",
+      "evidence": [
+        {
+          "path": "diagnostic_033/verification.json",
+          "sha256": "e6357e4134983acc8583784b582ad1f40e29742b39781d48ea436a2c5cc178c6"
+        },
+        {
+          "path": "diagnostic_033/results.md",
+          "sha256": "04e08c5a8fecf354d85ccf744a58865cf78462e1f18fc0b00bc24969a2a16a49"
+        }
+      ],
+      "full_gemm_runtime_validated": false
+    },
+    {
+      "experiment": "diagnostic_034",
+      "decision": "structure",
+      "model_effect": "Corrected nested-loop inventory: 268/617 warp instructions and 24/38 constant loads per stage; full control timing unresolved",
+      "component": "native_register_footprints.py",
+      "evidence": [
+        {
+          "path": "diagnostic_034/full_inventory_verification.json",
+          "sha256": "5a0ae5e4d64dcbb54a8c6748be993218da27273326e52ee6952bb3975a041729"
+        }
+      ],
+      "full_gemm_runtime_validated": false
+    },
+    {
+      "experiment": "diagnostic_035",
+      "decision": "measured_not_transferred",
+      "model_effect": "Constant-table sequence differs from fixed kernel-parameter loads",
+      "component": "native_register_footprints.py",
+      "evidence": [
+        {
+          "path": "diagnostic_035/verification.json",
+          "sha256": "c9c696d75701456f48604fb304e8988a5a7c965d7b1a4e36418423ee2449e0b5"
+        },
+        {
+          "path": "diagnostic_035/contract.json",
+          "sha256": "40eaf7ef6a1593690d455ada5a3d7adbd0b1c292220f19240966169bd04ef5e2"
+        }
+      ],
+      "full_gemm_runtime_validated": false
+    },
+    {
+      "experiment": "diagnostic_036",
+      "decision": "measured_not_transferred",
+      "model_effect": "Parameter-space sequence cost is not a single LDC/LDCU latency",
+      "component": "native_register_footprints.py",
+      "evidence": [
+        {
+          "path": "diagnostic_036/verification.json",
+          "sha256": "55c4bfa794f731efa20b3cb07eba31379481278c56111cb28d4ec657ff4fc061"
+        },
+        {
+          "path": "diagnostic_036/results.md",
+          "sha256": "8714e41c16d027fcef26262cfcb19383ba0285a9ffefd4becbd3494730e8f9af"
+        }
+      ],
+      "full_gemm_runtime_validated": false
+    },
+    {
+      "experiment": "diagnostic_037",
+      "decision": "partial_control_no_speedup",
+      "model_effect": "Scalar/uniform constant loads removed; repeated 64-bit pointer loads remain. Do not rule out pointer-load cost.",
+      "component": "runtime_v2.py",
+      "evidence": [
+        {
+          "path": "diagnostic_037/verification.json",
+          "sha256": "3e0e5a47b0b8c5adaa5476c3f4d91af5457dfc285d4f7519c61afe48434eceff"
+        }
+      ],
+      "full_gemm_runtime_validated": false
+    },
+    {
+      "experiment": "diagnostic_038",
+      "decision": "reject_as_accurate",
+      "model_effect": "Compound operand cost improves old sum but still underpredicts fresh runtime increments by 25.3% and 17.8%; retain explicit missing control/resource interactions",
+      "component": "runtime_v2.py",
+      "evidence": [
+        {
+          "path": "diagnostic_038/verification.json",
+          "sha256": "0f5e2a791a405a728ab0b6dc82e3b23a16894dbc08a8c70b9936fbb9b49b4db0"
+        }
+      ],
+      "full_gemm_runtime_validated": false
+    },
+    {
+      "experiment": "diagnostic_039",
+      "decision": "bounded_layout_domain",
+      "model_effect": "Existing response predicts small spacings within gate; widen only warm group4 W4 scope, reject wider layouts",
+      "component": "global_response.py",
+      "evidence": [
+        {
+          "path": "diagnostic_039/verification.json",
+          "sha256": "9cba6b60c8530016cdb6c48d6c7268f1142355ff7dbb345f6c47ebc59fc5c677"
+        }
+      ],
+      "full_gemm_runtime_validated": false
+    },
+    {
+      "experiment": "diagnostic_040",
+      "decision": "validated_addresses_counts",
+      "model_effect": "Exact GEMM lane addresses and group/sector counts verified; cache-resource mapping and timing still unknown",
+      "component": "global_request_layout.py",
+      "evidence": [
+        {
+          "path": "diagnostic_040/verification.json",
+          "sha256": "841c2181bf73282e7d68ba426c32ad30ebf6035e08f4d93833e052394eb061ac"
+        }
+      ],
+      "full_gemm_runtime_validated": false
+    },
+    {
+      "experiment": "diagnostic_041",
+      "decision": "bounded_row_domain",
+      "model_effect": "First A/B32 group contexts predicted within5%; admit only measured contexts; whole-stage transfer remains unresolved",
+      "component": "global_response.py",
+      "evidence": [
+        {
+          "path": "diagnostic_041/verification.json",
+          "sha256": "e0fbcccdc56c11e498f792cf74088b2d10fe2539346bfc44c33fdfd3311de6b1"
+        }
+      ],
+      "full_gemm_runtime_validated": false
+    },
+    {
+      "experiment": "diagnostic_042",
+      "decision": "reject_isolated_pointer_latency_control",
+      "model_effect": "Repeated pointer parameter loads removed but global group width changes4to1 and load instruction forms differ. Runtime control admission now refuses intrinsic pointer latency; preserve actual compiled grouping rather than assuming tile-only groups.",
+      "component": "compiled_control_admission.py",
+      "evidence": [
+        {
+          "path": "diagnostic_042/verification.json",
+          "sha256": "0be8fa70cbcfd71c7690e305d1019d6846ea017ef8c6ce0de782a25baa4e1076"
+        },
+        {
+          "path": "diagnostic_042/profile_analysis.json",
+          "sha256": "e00f4b7239d534a0bd833e5c30e79bc9ae365be943f6e44e21e9427b443a5982"
+        },
+        {
+          "path": "diagnostic_042/compiled_admission.json",
+          "sha256": "606f24ae2ac8d31acc458c59d0e9126ad278253208ca5cb6e75ee0ff650324fe"
+        }
+      ],
+      "full_gemm_runtime_validated": false
+    },
+    {
+      "experiment": "diagnostic_043",
+      "decision": "bounded_net_pointer_control",
+      "model_effect": "Explicit global form and group4 preserved; pointer64reloads removed; net3.25/0.86percent speedup. Address instructions change; no intrinsic parameter latency admitted. Composition now takes compiled group counts and refuses uncalibrated input forms.",
+      "component": "runtime_v2.py",
+      "evidence": [
+        {
+          "path": "diagnostic_043/verification.json",
+          "sha256": "3969aeb66c8f305e69de19e6ac40911fac93aef59e872253c1fd3939b26ec9e8"
+        },
+        {
+          "path": "diagnostic_043/profile_analysis.json",
+          "sha256": "4cc9afa198f63000b00a1befd1e2a83c8fd2a247a08b7dac570e3782c5afb4b5"
+        },
+        {
+          "path": "diagnostic_043/contract.json",
+          "sha256": "aff5f9495b68508a336b0b8bb988d05bc1545a764ae7452478cf619c5ac792fb"
+        }
+      ],
+      "full_gemm_runtime_validated": false
+    },
+    {
+      "experiment": "diagnostic_045",
+      "decision": "largest_error_reproduced_one_block",
+      "model_effect": "Largest error reproduced within a single unchanged block; prioritize within-block staging/operand schedule, not concurrency coefficients.",
+      "component": "runtime_v2.py",
+      "evidence": [
+        {
+          "path": "diagnostic_045/verification.json",
+          "sha256": "7fb6c78d0cdd71ea463ab0a5a3e001af1ecf796fb9cb42e2e38a746733d4f1c9"
+        }
+      ],
+      "full_gemm_runtime_validated": false
+    },
+    {
+      "experiment": "diagnostic_044",
+      "decision": "admit_actual_path_composition_bounded",
+      "model_effect": "Independent staged path calibration reduces small-tile error22percent to0.035percent oneblock increment and4.36percent12block increment; absolute fresh cases within4.20percent. Replace synthetic staging transfer with actual compiled path, no fullGEMM coefficients.",
+      "component": "runtime_v3.py",
+      "evidence": [
+        {
+          "path": "diagnostic_044/frozen_predictions.json",
+          "sha256": "ec11a08bb58ad1132b5a3aa7f7637bdb53c1fe892b6b0eee34f0b7b915c41a94"
+        },
+        {
+          "path": "diagnostic_044/verification.json",
+          "sha256": "a62344b8d651c3f66323d4fc248245b8ef0ff70972e4ae179c4c9a3d59411af7"
+        },
+        {
+          "path": "diagnostic_044/absolute_multi_verification.json",
+          "sha256": "239cd62b94cb646cc4b6b469ef2e7fee27cff90ce3d2b01c13d9d4762520847f"
+        }
+      ],
+      "full_gemm_runtime_validated": true,
+      "validated_scope": "warm32x32 one/originalgrid; fullphysicalmodelunfinished"
+    },
+    {
+      "experiment": "diagnostic_046",
+      "decision": "admit_larger_actual_path",
+      "model_effect": "Independent stage calibration reduces larger warm original-grid increment error17.8percent to0.44percent; original absolute predictions within2.51percent acrossone/fourblocks.",
+      "component": "runtime_v3.py",
+      "evidence": [
+        {
+          "path": "diagnostic_046/verification.json",
+          "sha256": "6063999ff7123b2828d6b792179eb3b958c993e9a52fa8ab3a6b06f930be4452"
+        }
+      ],
+      "full_gemm_runtime_validated": true,
+      "validated_scope": "warmM128N96,64x48tile,one/fourblocks;fullmodelunfinished"
+    },
+    {
+      "experiment": "diagnostic_047",
+      "decision": "independent_cache_penalty_transfers",
+      "component": "runtime_v3.py",
+      "validated_scope": "cold32x32 oneblock",
+      "evidence": [
+        {
+          "path": "diagnostic_047/verification.json",
+          "sha256": "29546a72a797cab082899db0e78269dfa93671d1a74b62458db0c0a7f89922e7"
+        }
+      ],
+      "full_gemm_runtime_validated": true,
+      "full_microarchitecture_explanation": false
+    },
+    {
+      "experiment": "diagnostic_048",
+      "decision": "admit_bounded_cold_cache_penalty",
+      "component": "runtime_v3.py",
+      "validated_scope": "coldboth tiles one/originalgrid",
+      "evidence": [
+        {
+          "path": "diagnostic_048/verification.json",
+          "sha256": "eac29b5648864c2eaa9309569758c2e7166f56e6cd63358d14ac96bffbd06b78"
+        }
+      ],
+      "full_gemm_runtime_validated": true,
+      "full_microarchitecture_explanation": false
+    },
+    {
+      "experiment": "diagnostic_050",
+      "decision": "admit_measured_latency_and_service_limits",
+      "component": "dense_runtime.py",
+      "validated_scope": "dense32x32 testedshapes",
+      "evidence": [
+        {
+          "path": "diagnostic_050/verification.json",
+          "sha256": "38b951a77f6187f1347d643b8b8d9b66e383866470ad766713c49cbad5908c26"
+        }
+      ],
+      "full_gemm_runtime_validated": true,
+      "full_microarchitecture_explanation": false
+    },
+    {
+      "experiment": "diagnostic_051",
+      "decision": "admit_larger_tile_service_limits",
+      "component": "dense_runtime.py",
+      "validated_scope": "dense64x48 testedshapes",
+      "evidence": [
+        {
+          "path": "diagnostic_051/verification.json",
+          "sha256": "43f335bc6778a529379aca304ce348f689eb4004af2296eb431775499f87bc5f"
+        }
+      ],
+      "full_gemm_runtime_validated": true,
+      "full_microarchitecture_explanation": false
+    },
+    {
+      "experiment": "diagnostic_052",
+      "decision": "reject_control_overhead_as_main_cause",
+      "component": "dense_runtime.py",
+      "validated_scope": "dense32x32 remainingcompositiongap",
+      "evidence": [
+        {
+          "path": "diagnostic_052/verification.json",
+          "sha256": "71f8f50fbbfb0d6101538bcee358361bee45ed79ada130950618f61a81b63cc9"
+        }
+      ],
+      "full_gemm_runtime_validated": false,
+      "full_microarchitecture_explanation": false
+    },
+    {
+      "experiment": "diagnostic_049",
+      "decision": "reject_perfect_occupancy_wave_scaling",
+      "component": "dense_runtime.py",
+      "evidence": [
+        {
+          "path": "diagnostic_049/verification.json"
+        }
+      ],
+      "full_gemm_runtime_validated": false
+    },
+    {
+      "experiment": "diagnostic_053",
+      "decision": "reject_compiler_erased_static_paths",
+      "component": "dense_runtime.py",
+      "model_effect": "No coefficient update; preserve6percent known error",
+      "evidence": [
+        {
+          "path": "diagnostic_053/native_admission.json"
+        },
+        {
+          "path": "diagnostic_053/verification.json"
+        }
+      ]
+    },
+    {
+      "experiment": "diagnostic_054",
+      "decision": "admit_tested_preheated_capacity_transfer; coldphysicalexplanationpending",
+      "component": "dense_runtime.py",
+      "model_effect": "Extend only1920x1920,K16384preheated both tiles; cold penaltyobservedaround1.2percent; no total-footprint miss assumption",
+      "evidence": [
+        {
+          "path": "diagnostic_054/verification.json"
+        }
+      ]
+    },
+    {
+      "experiment": "diagnostic_055",
+      "decision": "confirm_small_initial_cache_penalty_under_strict_flush; no fitted correction",
+      "component": "dense_runtime.py",
+      "model_effect": "Strict cold-start evidence preserved; no all-miss total-footprint rule; densecoldmechanismnotcomplete",
+      "evidence": [
+        {
+          "path": "diagnostic_055/verification.json",
+          "sha256": "fd2e85b88d247fd8c752fb8683508c2c1c090faf0edbd4773e9f32fb8034cba2"
+        }
+      ]
+    },
+    {
+      "experiment": "diagnostic_056",
+      "decision": "reject_aggregate_instruction_ratio_as_physical_correction",
+      "component": "dense_runtime.py",
+      "model_effect": "Keep opcode service and dependency explanation unresolved; do not scale whole runtime by counts",
+      "evidence": [
+        {
+          "path": "diagnostic_056/verification.json"
+        }
+      ]
+    },
+    {
+      "experiment": "diagnostic_057",
+      "decision": "admit_bounded_occupancy_prediction; intrinsicresourceownershipunresolved",
+      "component": "dense_runtime.py",
+      "model_effect": "Allow1,4,11resident blocks for32x32tile1920x1920,K1536/4608 without coefficient fit; preserve clock/context uncertainty",
+      "evidence": [
+        {
+          "path": "diagnostic_057/verification.json"
+        },
+        {
+          "path": "diagnostic_057/profile_analysis.json"
+        }
+      ],
+      "physical_observation": "Same native instructions and dynamic counts;100percent L2hits; errorsgrowfrom~1percent atR1 to~5percent atR11",
+      "full_microarchitecture_model_complete": false
+    },
+    {
+      "experiment": "diagnostic_058",
+      "decision": "record_measured_clock_context; reject_blind_clock_scaling",
+      "component": "clock_context.py; dense_runtime.py uncertainty",
+      "model_effect": "Explicit sensitivity hypothesis only; no active runtime coefficients changed; host snapshots not average in-kernel rate",
+      "evidence": [
+        {
+          "path": "diagnostic_058/ordinary_analysis.json"
+        },
+        {
+          "path": "diagnostic_058/minimal_analysis.json"
+        },
+        {
+          "path": "diagnostic_058/clock_hypothesis.json"
+        }
+      ],
+      "checks": 360,
+      "largest_current_error_unchanged": true
+    }
+  ],
+  "all_historical_evidence_reconciled": false,
+  "full_model_complete": false,
+  "rule": "A validated primitive does not validate full GEMM. Failed controls cannot supply timing parameters.",
+  "candidate_status": "bounded_warm_and_cold_low_grid; dense_warm_both_tiles; largest_error5.97percent",
+  "latest_accuracy_receipt": "diagnostic_050/verification.json",
+  "cold_cache_validation": {
+    "experiments": [
+      "047",
+      "048"
+    ],
+    "accepted": true,
+    "scope": "128x96; tiles32x32/64x48; one block or original grid; cold cache preparation",
+    "coefficient_source": "019 independent response difference",
+    "largest_validation_error": 0.03388964303732667,
+    "intrinsic_cache_mechanism_complete": false
+  },
+  "dense_wave_extrapolation": {
+    "experiment": "049",
+    "status": "rejected",
+    "reason": "Two perfect occupancy waves underpredict unchanged dense GEMM by about60%; independent phase controls050running",
+    "model_action": "runtime_v3 continues to reject broader geometry"
+  },
+  "dense_resource_validation": {
+    "experiment": "050",
+    "integrated_component": "dense_runtime.py",
+    "largest_error": 0.05966342215429554,
+    "full_gemm_coefficients": false,
+    "scope": "32x32 tile; warmed1920x1920 and2048x2112; K1536/4608",
+    "remaining": "phase interactions and exact saturated hardware resource"
+  },
+  "dense_resource_validation_large": {
+    "experiment": "051",
+    "integrated_component": "dense_runtime.py",
+    "largest_error": 0.02458566937768869,
+    "full_gemm_coefficients": false,
+    "scope": "64x48 tile warmed1920x1920 and2048x2112,K1536/4608"
+  },
+  "dense_control_accounting": {
+    "experiment": "052",
+    "model_effect": "Keep6percent error explicit; proposed count correction not admitted; static probes053 test branch elimination",
+    "full_control_variant_overhead_below": 0.005,
+    "composed_extra_instruction_fraction": 0.0409711292861012,
+    "profile_timing_admitted": false,
+    "root_cause_proven": false
+  },
+  "cache_capacity_observation": {
+    "experiment": "054",
+    "l2_hit_fraction_without_preheat_first_profile": 0.982431445272729,
+    "dram_bytes_read": 132170496,
+    "input_bytes": 134217728,
+    "no_preheat_ordinary_region_overlap": true,
+    "strict_cold_control": "055",
+    "model_effect": "No all-miss assumption based on total footprint; densecold remains unresolved",
+    "counter_timing_used_for_fit": false
+  },
+  "largest_error_location": {
+    "source": "diagnostic_056/gap_decomposition.json",
+    "decision": "Startup-only error rejected; repeated-stage costs dominate",
+    "model_effect": "Do not tune fixed startup term to remove dense residual; stage interaction unresolved",
+    "runtime_fit_admitted": false
+  }
+}

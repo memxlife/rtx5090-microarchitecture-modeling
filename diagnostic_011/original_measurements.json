@@ -1,0 +1,898 @@
+[
+  {
+    "tile": [
+      32,
+      32,
+      32
+    ],
+    "shape": [
+      64,
+      96,
+      512
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 4096,
+    "resident_ctas": 11,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.0344128005,
+      0.0348224007,
+      0.0335936002,
+      0.0348224007,
+      0.0344064005,
+      0.0344128005,
+      0.0348288007,
+      0.0339968003,
+      0.0348160006
+    ],
+    "experiment": "stage_length"
+  },
+  {
+    "tile": [
+      64,
+      48,
+      32
+    ],
+    "shape": [
+      64,
+      96,
+      512
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 7168,
+    "resident_ctas": 8,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.0557056002,
+      0.0553024001,
+      0.0556992002,
+      0.0552960001,
+      0.0552960001,
+      0.0552960001,
+      0.0552960001,
+      0.0552960001,
+      0.0552960001
+    ],
+    "experiment": "stage_length"
+  },
+  {
+    "tile": [
+      32,
+      32,
+      32
+    ],
+    "shape": [
+      64,
+      96,
+      2048
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 4096,
+    "resident_ctas": 11,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.1220608,
+      0.1220608,
+      0.122470398,
+      0.1220544,
+      0.122470398,
+      0.122470398,
+      0.1220544,
+      0.122879997,
+      0.122073598
+    ],
+    "experiment": "stage_length"
+  },
+  {
+    "tile": [
+      64,
+      48,
+      32
+    ],
+    "shape": [
+      64,
+      96,
+      2048
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 7168,
+    "resident_ctas": 8,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.213004801,
+      0.212166399,
+      0.212166399,
+      0.211353597,
+      0.212166399,
+      0.211359999,
+      0.212588799,
+      0.211769599,
+      0.212179199
+    ],
+    "experiment": "stage_length"
+  },
+  {
+    "tile": [
+      32,
+      32,
+      32
+    ],
+    "shape": [
+      64,
+      96,
+      8192
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 4096,
+    "resident_ctas": 11,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.478816003,
+      0.477177602,
+      0.475961602,
+      0.474323201,
+      0.475539207,
+      0.477177608,
+      0.475545603,
+      0.475955206,
+      0.4755584
+    ],
+    "experiment": "stage_length"
+  },
+  {
+    "tile": [
+      64,
+      48,
+      32
+    ],
+    "shape": [
+      64,
+      96,
+      8192
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 7168,
+    "resident_ctas": 8,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.839680004,
+      0.835174406,
+      0.836812794,
+      0.836812794,
+      0.836806393,
+      0.836403203,
+      0.835980785,
+      0.835987186,
+      0.837222397
+    ],
+    "experiment": "stage_length"
+  },
+  {
+    "tile": [
+      32,
+      32,
+      32
+    ],
+    "shape": [
+      64,
+      96,
+      32768
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 4096,
+    "resident_ctas": 11,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      1.88272641,
+      1.8798656,
+      1.88088319,
+      1.88088961,
+      1.8811008,
+      1.88170881,
+      1.88088322,
+      1.88068478,
+      1.88006401
+    ],
+    "experiment": "stage_length"
+  },
+  {
+    "tile": [
+      64,
+      48,
+      32
+    ],
+    "shape": [
+      64,
+      96,
+      32768
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 7168,
+    "resident_ctas": 8,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      3.30833273,
+      3.30936313,
+      3.30650234,
+      3.30874233,
+      3.30853753,
+      3.30607996,
+      3.30894713,
+      3.30915833,
+      3.30773115
+    ],
+    "experiment": "stage_length"
+  },
+  {
+    "tile": [
+      32,
+      32,
+      32
+    ],
+    "shape": [
+      64,
+      96,
+      131072
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 4096,
+    "resident_ctas": 11,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      7.66074877,
+      7.66259203,
+      7.65971842,
+      7.6597311,
+      7.65644798,
+      7.65727348,
+      7.6605504,
+      7.66423044,
+      7.65850239
+    ],
+    "experiment": "stage_length"
+  },
+  {
+    "tile": [
+      64,
+      48,
+      32
+    ],
+    "shape": [
+      64,
+      96,
+      131072
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 7168,
+    "resident_ctas": 8,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      13.390029,
+      13.3855103,
+      13.3883904,
+      13.3855232,
+      13.3865538,
+      13.3834753,
+      13.3842945,
+      13.3818367,
+      13.3855169
+    ],
+    "experiment": "stage_length"
+  },
+  {
+    "tile": [
+      32,
+      32,
+      32
+    ],
+    "shape": [
+      64,
+      96,
+      327680
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 4096,
+    "resident_ctas": 11,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      18.865971,
+      18.8721153,
+      18.8628994,
+      18.8665928,
+      18.8565437,
+      18.8702785,
+      18.8696575,
+      18.8631039,
+      18.871706
+    ],
+    "experiment": "stage_length"
+  },
+  {
+    "tile": [
+      64,
+      48,
+      32
+    ],
+    "shape": [
+      64,
+      96,
+      327680
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 7168,
+    "resident_ctas": 8,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      32.9863106,
+      32.9861115,
+      32.9926727,
+      32.9869377,
+      32.9893959,
+      32.9885628,
+      32.9887741,
+      32.9828354,
+      32.9924667
+    ],
+    "experiment": "stage_length"
+  },
+  {
+    "tile": [
+      32,
+      32,
+      32
+    ],
+    "shape": [
+      64,
+      96,
+      2048
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 4096,
+    "resident_ctas": 11,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.123699197,
+      0.123289597,
+      0.123705597,
+      0.124102397,
+      0.124102397,
+      0.124102397,
+      0.123692797,
+      0.123699197,
+      0.124108797
+    ],
+    "experiment": "concurrency"
+  },
+  {
+    "tile": [
+      64,
+      48,
+      32
+    ],
+    "shape": [
+      64,
+      96,
+      2048
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 7168,
+    "resident_ctas": 8,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.212166399,
+      0.210943997,
+      0.211353597,
+      0.2113536,
+      0.211359999,
+      0.211763197,
+      0.210943997,
+      0.2113536,
+      0.211763197
+    ],
+    "experiment": "concurrency"
+  },
+  {
+    "tile": [
+      32,
+      32,
+      32
+    ],
+    "shape": [
+      64,
+      96,
+      8192
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 4096,
+    "resident_ctas": 11,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.480876797,
+      0.477600002,
+      0.478816003,
+      0.478412807,
+      0.478009605,
+      0.476761603,
+      0.477606404,
+      0.477593607,
+      0.478412801
+    ],
+    "experiment": "concurrency"
+  },
+  {
+    "tile": [
+      64,
+      48,
+      32
+    ],
+    "shape": [
+      64,
+      96,
+      8192
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 7168,
+    "resident_ctas": 8,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.838047993,
+      0.834758401,
+      0.835993588,
+      0.837228811,
+      0.835577583,
+      0.836403191,
+      0.835590386,
+      0.83559041,
+      0.834764814
+    ],
+    "experiment": "concurrency"
+  },
+  {
+    "tile": [
+      32,
+      32,
+      32
+    ],
+    "shape": [
+      256,
+      96,
+      2048
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 4096,
+    "resident_ctas": 11,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.120416003,
+      0.120409603,
+      0.120422402,
+      0.120019202,
+      0.120428802,
+      0.120006403,
+      0.120000003,
+      0.120422404,
+      0.119187203
+    ],
+    "experiment": "concurrency"
+  },
+  {
+    "tile": [
+      64,
+      48,
+      32
+    ],
+    "shape": [
+      256,
+      96,
+      2048
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 7168,
+    "resident_ctas": 8,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.209708798,
+      0.208889598,
+      0.210118398,
+      0.209715196,
+      0.208895999,
+      0.209715196,
+      0.209715196,
+      0.208889598,
+      0.210118398
+    ],
+    "experiment": "concurrency"
+  },
+  {
+    "tile": [
+      32,
+      32,
+      32
+    ],
+    "shape": [
+      256,
+      96,
+      8192
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 4096,
+    "resident_ctas": 11,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.472275203,
+      0.472678399,
+      0.471872002,
+      0.470643198,
+      0.471027201,
+      0.472268802,
+      0.4718656,
+      0.471046406,
+      0.471449608
+    ],
+    "experiment": "concurrency"
+  },
+  {
+    "tile": [
+      64,
+      48,
+      32
+    ],
+    "shape": [
+      256,
+      96,
+      8192
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 7168,
+    "resident_ctas": 8,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.833542418,
+      0.831481612,
+      0.831897616,
+      0.83107841,
+      0.83107841,
+      0.831897616,
+      0.831891215,
+      0.831891215,
+      0.831897616
+    ],
+    "experiment": "concurrency"
+  },
+  {
+    "tile": [
+      32,
+      32,
+      32
+    ],
+    "shape": [
+      1024,
+      96,
+      2048
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 4096,
+    "resident_ctas": 11,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.119603203,
+      0.119603203,
+      0.119187203,
+      0.119193603,
+      0.118784003,
+      0.118790403,
+      0.118796803,
+      0.118784003,
+      0.118784003
+    ],
+    "experiment": "concurrency"
+  },
+  {
+    "tile": [
+      64,
+      48,
+      32
+    ],
+    "shape": [
+      1024,
+      96,
+      2048
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 7168,
+    "resident_ctas": 8,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.211353597,
+      0.210943997,
+      0.210944,
+      0.2105216,
+      0.210534397,
+      0.210534397,
+      0.210534397,
+      0.210131198,
+      0.210943997
+    ],
+    "experiment": "concurrency"
+  },
+  {
+    "tile": [
+      32,
+      32,
+      32
+    ],
+    "shape": [
+      1024,
+      96,
+      8192
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 4096,
+    "resident_ctas": 11,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.463251203,
+      0.4628416,
+      0.464889604,
+      0.464076799,
+      0.462854397,
+      0.4636608,
+      0.464070398,
+      0.463251203,
+      0.462854397
+    ],
+    "experiment": "concurrency"
+  },
+  {
+    "tile": [
+      64,
+      48,
+      32
+    ],
+    "shape": [
+      1024,
+      96,
+      8192
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 7168,
+    "resident_ctas": 8,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.827385581,
+      0.826975989,
+      0.826982391,
+      0.826988804,
+      0.827385592,
+      0.827807987,
+      0.8265728,
+      0.826163197,
+      0.826579189
+    ],
+    "experiment": "concurrency"
+  },
+  {
+    "tile": [
+      32,
+      32,
+      32
+    ],
+    "shape": [
+      4096,
+      96,
+      2048
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 4096,
+    "resident_ctas": 11,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.117945603,
+      0.117548802,
+      0.117958403,
+      0.117536002,
+      0.117952003,
+      0.118361603,
+      0.117945603,
+      0.117958403,
+      0.117548802
+    ],
+    "experiment": "concurrency"
+  },
+  {
+    "tile": [
+      64,
+      48,
+      32
+    ],
+    "shape": [
+      4096,
+      96,
+      2048
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 7168,
+    "resident_ctas": 8,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.206431997,
+      0.207257596,
+      0.2060352,
+      0.206022397,
+      0.206739199,
+      0.206438395,
+      0.206438395,
+      0.206841597,
+      0.205625597
+    ],
+    "experiment": "concurrency"
+  },
+  {
+    "tile": [
+      32,
+      32,
+      32
+    ],
+    "shape": [
+      4096,
+      96,
+      8192
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 4096,
+    "resident_ctas": 11,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.453824002,
+      0.4529984,
+      0.454246408,
+      0.453408003,
+      0.453824002,
+      0.452992004,
+      0.453414398,
+      0.454643208,
+      0.455456007
+    ],
+    "experiment": "concurrency"
+  },
+  {
+    "tile": [
+      64,
+      48,
+      32
+    ],
+    "shape": [
+      4096,
+      96,
+      8192
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 7168,
+    "resident_ctas": 8,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.810995197,
+      0.811411214,
+      0.810176003,
+      0.810988796,
+      0.810579205,
+      0.811808002,
+      0.810988808,
+      0.809759998,
+      0.810169625
+    ],
+    "experiment": "concurrency"
+  }
+]

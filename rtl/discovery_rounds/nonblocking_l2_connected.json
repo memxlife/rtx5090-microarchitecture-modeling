@@ -1,0 +1,95 @@
+{
+  "previous_goal_turn": "verified wait: polled the exact full-grid verification process, which completed successfully; current source hashes match both receipts",
+  "model_change": "Replace the shared single-request cache path with saved request owners and multiple pending sector fetches. Requests to the same pending sector share its actual returned data. Different fetches can return out of order, while each stalled client retains its own result.",
+  "verification": [
+    "numerical/multi_sm_nonblocking_l2_verification.json",
+    "numerical/resident_multi_sm_nb_l2_verification.json"
+  ],
+  "unit_checked_words": 56,
+  "full_grid_checked_outputs": 24576,
+  "unit_read_counts": {
+    "hits": 1,
+    "logical_misses": 6,
+    "merged_misses": 2,
+    "physical_fills": 4
+  },
+  "hardware_parameters_closed": 0,
+  "physical_counts": {
+    "identified": 8,
+    "partial": 32,
+    "unknown": 94
+  },
+  "timing_calibrated": false,
+  "case_metrics": [
+    {
+      "K": 64,
+      "checked_words": 12288,
+      "launch_metrics": [
+        {
+          "id": 20,
+          "words": 6144,
+          "blocks": 6,
+          "peak_resident": 4,
+          "modeled_elapsed_cycles": 26731,
+          "l2_requests": 1024,
+          "l2_hits": 264,
+          "l2_misses": 760,
+          "l2_merges": 120,
+          "l2_fills": 640
+        },
+        {
+          "id": 21,
+          "words": 6144,
+          "blocks": 6,
+          "peak_resident": 4,
+          "modeled_elapsed_cycles": 16154,
+          "l2_requests": 1280,
+          "l2_hits": 520,
+          "l2_misses": 760,
+          "l2_merges": 120,
+          "l2_fills": 640
+        }
+      ],
+      "passed": true
+    },
+    {
+      "K": 1536,
+      "checked_words": 12288,
+      "launch_metrics": [
+        {
+          "id": 20,
+          "words": 6144,
+          "blocks": 6,
+          "peak_resident": 4,
+          "modeled_elapsed_cycles": 582963,
+          "l2_requests": 33792,
+          "l2_hits": 5140,
+          "l2_misses": 28652,
+          "l2_merges": 4076,
+          "l2_fills": 24576
+        },
+        {
+          "id": 21,
+          "words": 6144,
+          "blocks": 6,
+          "peak_resident": 4,
+          "modeled_elapsed_cycles": 583000,
+          "l2_requests": 67584,
+          "l2_hits": 10283,
+          "l2_misses": 57301,
+          "l2_merges": 8149,
+          "l2_fills": 49152
+        }
+      ],
+      "passed": true
+    }
+  ],
+  "scope_limits": [
+    "Cache geometry, outstanding capacity, arbitration and service timing remain reconstruction assumptions.",
+    "Inputs remain immutable and output writes disjoint; no dirty cache, writeback or coherence.",
+    "Two modeled SMs with two resident contexts each; native32x32 tile and small six-block grids only.",
+    "The unchanged largest saved hardware prediction error is5.966342percent in a separate phase-composition model; these functional tests do not reduce that error."
+  ],
+  "next": "Bind defensible hardware parameters to the executable and support the saved largest-error workload before making integrated timing claims.",
+  "independent_root_review": "numerical/nonblocking_l2_root_review.json"
+}

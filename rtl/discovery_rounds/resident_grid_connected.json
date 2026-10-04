@@ -1,0 +1,28 @@
+{
+  "previous_goal_turn": "progress: implemented common-service resident complete path, repaired barrier lifecycle bug, verified12288outputs and synchronized manual",
+  "current_model_change": "Whole-grid launch now captures input/output allocations, dispatches disjoint tile coordinates into available resident contexts and checks exactly-once completion. Grid retires only with all acknowledged child output stores and zero resident blocks. Runtime is counted from accepted launch to registered COMPLETE, including a RUN drain-check edge, and frozen under completion backpressure.",
+  "verification": "numerical/resident_grid_verification.json",
+  "checked_output_words": 24576,
+  "launches_per_K": 2,
+  "K": [
+    64,
+    1536
+  ],
+  "blocks_per_launch": 6,
+  "modeled_sms": 1,
+  "physical_parameters_closed": 0,
+  "counts": {
+    "identified": 8,
+    "partial": 32,
+    "unknown": 94
+  },
+  "timing_calibrated": false,
+  "limitations": [
+    "Single SM model and two resident contexts; full-chip scheduling/higher-level contention absent.",
+    "Only native32x32tile supported, with private scratch and conservative serial output actor.",
+    "Cycle values depend on synthetic delays, hypothetical cache and backing-provider timing.",
+    "No output-phase reset in current grid test."
+  ],
+  "next": "Integrate multiple SMs sharing memory service and replay the largest-error physical geometry; independently calibrate and validate with renewed remote authority.",
+  "independent_root_review": "numerical/resident_grid_root_review.json"
+}

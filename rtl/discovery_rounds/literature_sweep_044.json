@@ -1,0 +1,43 @@
+{
+  "question": "Does CTA bar.sync require all pending matrix register results to retire?",
+  "search": {
+    "engine": "Google",
+    "browser": "Chrome",
+    "query": "site:docs.nvidia.com/cuda/parallel-thread-execution bar.sync memory accesses performed prior barrier"
+  },
+  "source": {
+    "url": "https://docs.nvidia.com/cuda/parallel-thread-execution/index.html#parallel-synchronization-and-communication-instructions-bar",
+    "version": "PTX9.4",
+    "section": "9.7.15.1",
+    "support_lines": [
+      15099,
+      15114
+    ]
+  },
+  "documented": [
+    "Barrier ID is0..15; explicit thread count is a multiple of warp size; absent count includesCTAparticipants.",
+    "Barrier signalswarp arrival, withsync waitingotherparticipatingwarps. Completion ordersprior memoryaccessesrelativeparticipants andblocksnew memoryaccessesuntilcompletion forsync/red.",
+    "Readperformed means itsvalue hasbeen transmittedfrommemory andcannotbechangedbyanotherparticipant. Writeperformed meansvaluevisibletootherparticipants.",
+    "bar.sync is equivalent to barrier.sync.aligned."
+  ],
+  "not_documented": [
+    "A CTAbarrier universally drains everyprior independent register-onlyoperation orHMMAresult.",
+    "Exactnativearrival timing versusmemorycompletion, scoreboardpolicy orbarrierlatency.",
+    "AfixedSMcycle delay forrestartingwarps; ISA wording withoutdelay is not a calibratedphysicalpipeline timing."
+  ],
+  "model_implications": {
+    "safe_memory_reuse": "A laterproducer mayoverwrite sharedoperands after relevantprior sharedreads havecompleted inbarrierperformed sense.",
+    "producer_visibility": "Relevant sharedstores mustbevisiblebeforeconsumers passbarrier.",
+    "conservative_current_policy": "Requiringallread/MOVM/HMMAserviceretirements beforewarp arrival is a conservativeimplementation boundary, notanidentifiedRTX5090barrier rule.",
+    "required_separation": "Keep memoryreuse safety, warp arrival/release, and registerresult readiness asdifferentconditions. Accumulatordependentoperations mustwaitactualresultreadiness evenifbarrier memoryrequirements alreadyhold.",
+    "future_falsification": "Do not claim a speedup orpredictedhardwarebarrier timing bylooseningthepolicy withoutnativecontrol evidence ormeasurement."
+  },
+  "count_impact": {
+    "new_functional_closures": 0,
+    "new_timing_identifications": 0
+  },
+  "review": {
+    "human_first_technical_writing": true,
+    "undergraduate_reader_review": true
+  }
+}

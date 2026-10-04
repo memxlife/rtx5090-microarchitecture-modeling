@@ -1,0 +1,310 @@
+[
+  {
+    "DRAM Frequency": {
+      "value": "13785070943.86",
+      "unit": "hz"
+    },
+    "SM Frequency": {
+      "value": "2010566919.97",
+      "unit": "hz"
+    },
+    "Elapsed Cycles": {
+      "value": "522889",
+      "unit": "cycle"
+    },
+    "Memory Throughput": {
+      "value": "15734484885.87",
+      "unit": "byte/s"
+    },
+    "DRAM Throughput": {
+      "value": "0.89",
+      "unit": "%"
+    },
+    "Duration": {
+      "value": "259360",
+      "unit": "ns"
+    },
+    "L1/TEX Cache Throughput": {
+      "value": "16.02",
+      "unit": "%"
+    },
+    "L2 Cache Throughput": {
+      "value": "6.94",
+      "unit": "%"
+    },
+    "SM Active Cycles": {
+      "value": "513519.44",
+      "unit": "cycle"
+    },
+    "Compute (SM) Throughput": {
+      "value": "12.11",
+      "unit": "%"
+    },
+    "Mem Busy": {
+      "value": "15.73",
+      "unit": "%"
+    },
+    "Max Bandwidth": {
+      "value": "12.11",
+      "unit": "%"
+    },
+    "L1/TEX Hit Rate": {
+      "value": "4.16",
+      "unit": "%"
+    },
+    "L2 Compression Ratio": {
+      "value": "0",
+      "unit": ""
+    },
+    "L2 Hit Rate": {
+      "value": "88.75",
+      "unit": "%"
+    },
+    "Mem Pipes Busy": {
+      "value": "12.11",
+      "unit": "%"
+    },
+    "One or More Eligible": {
+      "value": "7.25",
+      "unit": "%"
+    },
+    "Issued Warp Per Scheduler": {
+      "value": "0.07",
+      "unit": ""
+    },
+    "No Eligible": {
+      "value": "92.75",
+      "unit": "%"
+    },
+    "Active Warps Per Scheduler": {
+      "value": "1.22",
+      "unit": "warp"
+    },
+    "Eligible Warps Per Scheduler": {
+      "value": "0.07",
+      "unit": "warp"
+    },
+    "Warp Cycles Per Issued Instruction": {
+      "value": "16.83",
+      "unit": "cycle"
+    },
+    "Warp Cycles Per Executed Instruction": {
+      "value": "16.83",
+      "unit": "cycle"
+    },
+    "Avg. Active Threads Per Warp": {
+      "value": "32",
+      "unit": ""
+    },
+    "Avg. Not Predicated Off Threads Per Warp": {
+      "value": "29.86",
+      "unit": ""
+    },
+    "Max Active Clusters": {
+      "value": "0",
+      "unit": "cluster"
+    },
+    "Max Cluster Size": {
+      "value": "8",
+      "unit": "block"
+    },
+    "Overall GPU Occupancy": {
+      "value": "0",
+      "unit": "%"
+    },
+    "Cluster Occupancy": {
+      "value": "0",
+      "unit": "%"
+    },
+    "Block Limit Barriers": {
+      "value": "24",
+      "unit": "block"
+    },
+    "Block Limit SM": {
+      "value": "24",
+      "unit": "block"
+    },
+    "Block Limit Registers": {
+      "value": "8",
+      "unit": "block"
+    },
+    "Block Limit Shared Mem": {
+      "value": "10",
+      "unit": "block"
+    },
+    "Block Limit Warps": {
+      "value": "12",
+      "unit": "block"
+    },
+    "Theoretical Active Warps per SM": {
+      "value": "32",
+      "unit": "warp"
+    },
+    "Theoretical Occupancy": {
+      "value": "66.67",
+      "unit": "%"
+    },
+    "Achieved Occupancy": {
+      "value": "10.15",
+      "unit": "%"
+    },
+    "Achieved Active Warps Per SM": {
+      "value": "4.87",
+      "unit": "warp"
+    }
+  },
+  {
+    "DRAM Frequency": {
+      "value": "13775927327.78",
+      "unit": "hz"
+    },
+    "SM Frequency": {
+      "value": "1876388195.93",
+      "unit": "hz"
+    },
+    "Elapsed Cycles": {
+      "value": "162039",
+      "unit": "cycle"
+    },
+    "Memory Throughput": {
+      "value": "48169568508.71",
+      "unit": "byte/s"
+    },
+    "DRAM Throughput": {
+      "value": "2.73",
+      "unit": "%"
+    },
+    "Duration": {
+      "value": "84544",
+      "unit": "ns"
+    },
+    "L1/TEX Cache Throughput": {
+      "value": "58.47",
+      "unit": "%"
+    },
+    "L2 Cache Throughput": {
+      "value": "35.66",
+      "unit": "%"
+    },
+    "SM Active Cycles": {
+      "value": "152128.49",
+      "unit": "cycle"
+    },
+    "Compute (SM) Throughput": {
+      "value": "55.59",
+      "unit": "%"
+    },
+    "Mem Busy": {
+      "value": "51.95",
+      "unit": "%"
+    },
+    "Max Bandwidth": {
+      "value": "55.59",
+      "unit": "%"
+    },
+    "L1/TEX Hit Rate": {
+      "value": "0.74",
+      "unit": "%"
+    },
+    "L2 Compression Ratio": {
+      "value": "0",
+      "unit": ""
+    },
+    "L2 Hit Rate": {
+      "value": "95.13",
+      "unit": "%"
+    },
+    "Mem Pipes Busy": {
+      "value": "55.59",
+      "unit": "%"
+    },
+    "One or More Eligible": {
+      "value": "34.57",
+      "unit": "%"
+    },
+    "Issued Warp Per Scheduler": {
+      "value": "0.35",
+      "unit": ""
+    },
+    "No Eligible": {
+      "value": "65.43",
+      "unit": "%"
+    },
+    "Active Warps Per Scheduler": {
+      "value": "5.96",
+      "unit": "warp"
+    },
+    "Eligible Warps Per Scheduler": {
+      "value": "0.55",
+      "unit": "warp"
+    },
+    "Warp Cycles Per Issued Instruction": {
+      "value": "17.24",
+      "unit": "cycle"
+    },
+    "Warp Cycles Per Executed Instruction": {
+      "value": "17.24",
+      "unit": "cycle"
+    },
+    "Avg. Active Threads Per Warp": {
+      "value": "32",
+      "unit": ""
+    },
+    "Avg. Not Predicated Off Threads Per Warp": {
+      "value": "29.38",
+      "unit": ""
+    },
+    "Max Active Clusters": {
+      "value": "0",
+      "unit": "cluster"
+    },
+    "Max Cluster Size": {
+      "value": "8",
+      "unit": "block"
+    },
+    "Overall GPU Occupancy": {
+      "value": "0",
+      "unit": "%"
+    },
+    "Cluster Occupancy": {
+      "value": "0",
+      "unit": "%"
+    },
+    "Block Limit Barriers": {
+      "value": "24",
+      "unit": "block"
+    },
+    "Block Limit SM": {
+      "value": "24",
+      "unit": "block"
+    },
+    "Block Limit Registers": {
+      "value": "12",
+      "unit": "block"
+    },
+    "Block Limit Shared Mem": {
+      "value": "11",
+      "unit": "block"
+    },
+    "Block Limit Warps": {
+      "value": "12",
+      "unit": "block"
+    },
+    "Theoretical Active Warps per SM": {
+      "value": "44",
+      "unit": "warp"
+    },
+    "Theoretical Occupancy": {
+      "value": "91.67",
+      "unit": "%"
+    },
+    "Achieved Occupancy": {
+      "value": "48.98",
+      "unit": "%"
+    },
+    "Achieved Active Warps Per SM": {
+      "value": "23.51",
+      "unit": "warp"
+    }
+  }
+]

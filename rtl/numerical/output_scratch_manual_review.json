@@ -1,0 +1,48 @@
+{
+  "accepted": true,
+  "changed_sections": [
+    "4.31",
+    "4.34",
+    "4.41"
+  ],
+  "documents": [
+    "rtl_microarchitecture_spec.md",
+    "README.md"
+  ],
+  "inline_source_parity": {
+    "components/warp_shared_read_service.sv": true,
+    "numerical/studied_gemm_cta_controller.sv": true,
+    "numerical/studied_output_scratch_pipeline.sv": true
+  },
+  "reviewed_current_receipts": [
+    "numerical/studied_output_scratch_verification.json",
+    "numerical/studied_gemm_cta_output_scratch_verification.json"
+  ],
+  "receipt_source_hashes_current": true,
+  "human_first_review": "Explains why global output must use actual committed scratch values, then defines pair groups, phase visibility and read-return ownership.",
+  "reader_review": "Defines quantitative storage, counts, state transitions, ports and cycle boundary; distinguishes one-word-per-bank assumptions from measured read work and preserves stronger-fence/separate-service limitations.",
+  "reader_language_lint": "passed",
+  "quantitative_review": {
+    "unit_words": 4096,
+    "connected_words": 5120,
+    "store_groups": 16,
+    "committed_scratch_words": 1024,
+    "actual_scratch_reads_and_completions": 32,
+    "output_sector_packets_and_acks": 128,
+    "full_K_model_completion_cycles": 67617,
+    "logical_operand_and_scratch_array_bytes": 8192,
+    "write_packages_per_group_under_model_rule": 4,
+    "new_physical_parameter_closures": 0
+  },
+  "timing_calibrated": false,
+  "boundary": "Serial phases, stronger-than-native whole-phase fence, separate nonconcurrent shared services and unmeasured write package/return delays. Original shared allocation/reuse and occupancy are not implemented.",
+  "document_sha256": {
+    "rtl_microarchitecture_spec.md": "e208bd8a85f3e8383fbe8c2f2fcadc148be620f65c8df945460f7c75578ec5e8",
+    "README.md": "53f1551a9551df9c9b5d2c0fb38050576a7c1ae60439e55a1fd96ce58190e917"
+  },
+  "source_sha256": {
+    "components/warp_shared_read_service.sv": "82df6598d987c0df1c5be4db8ec504951f2d958783390d7b458cbde6b904500b",
+    "numerical/studied_gemm_cta_controller.sv": "3131184758dd779a55e2aabf833e0a3bcea3082c215e641840f1ad4aac422f70",
+    "numerical/studied_output_scratch_pipeline.sv": "73b253eea79f3011b936157a7790ca0f4c413dc6f3e601e2934832470f41c988"
+  }
+}

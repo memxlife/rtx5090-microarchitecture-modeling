@@ -1,0 +1,33 @@
+{
+  "all_passed": true,
+  "checked_words": 256,
+  "checks": [
+    {
+      "slots_synthetic": 1,
+      "checked_words": 128,
+      "passed": true
+    },
+    {
+      "slots_synthetic": 2,
+      "checked_words": 128,
+      "passed": true
+    }
+  ],
+  "negative_duplicate_rejected": true,
+  "scope": "Two clients share one synthetic scalar shared service; arbitration and queue settings are model choices, not measured GPU capacities.",
+  "contracts": [
+    "grant means actual acceptance",
+    "ungranted previews may change",
+    "same IDs across clients retain ownership",
+    "accepted data snapshot",
+    "held response stability",
+    "per-client/global conservation",
+    "reset cancellation"
+  ],
+  "timing_calibrated": false,
+  "source_sha256": {
+    "components/warp_shared_read_service.sv": "82df6598d987c0df1c5be4db8ec504951f2d958783390d7b458cbde6b904500b",
+    "components/shared_read_candidate_hub.sv": "0fd8fb98e497e7a5579da79db3835c73cc5769b011b2025c9a50b952b0c6b5d8",
+    "numerical/shared_read_candidate_hub_tb.sv": "5fbcad09e27980bcd8d6087d425f4bfc27d09626a58a1edaea488b892c6f6069"
+  }
+}

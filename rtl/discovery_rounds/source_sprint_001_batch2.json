@@ -1,0 +1,652 @@
+{
+  "receipt": "source_sprint_001_batch2",
+  "retrieval_method": "Google search in Chrome, followed by visible GitHub directory navigation and rendered source read",
+  "source_gpu": "RTX3070 / SM86; different-GPU simulator prior",
+  "source_file_last_commit": "360d856 (Fix cache string description in config files #96)",
+  "physical_parameter_identifications_added": 0,
+  "unique_rows_with_scoped_prior": 53,
+  "rows": [
+    {
+      "id": "F006",
+      "evidence_check": "supported_analogy_prior",
+      "candidate": 64,
+      "unit": "sets",
+      "source_url": "https://github.com/gpgpu-sim/gpgpu-sim_distribution/blob/dev/configs/tested-cfgs/SM86_RTX3070/gpgpusim.config",
+      "source_locator": "-gpgpu_cache:il1 N:64:128:16,L:R:f:N:L,S:2:48,4",
+      "scope": "Different-GPU simulator prior. These are configured RTX3070/SM86 model values, not measurements or facts about RTX5090.",
+      "identified_change": false
+    },
+    {
+      "id": "F007",
+      "evidence_check": "supported_analogy_prior",
+      "candidate": 16,
+      "unit": "ways",
+      "source_url": "https://github.com/gpgpu-sim/gpgpu-sim_distribution/blob/dev/configs/tested-cfgs/SM86_RTX3070/gpgpusim.config",
+      "source_locator": "-gpgpu_cache:il1 N:64:128:16,L:R:f:N:L,S:2:48,4",
+      "scope": "Different-GPU simulator prior. These are configured RTX3070/SM86 model values, not measurements or facts about RTX5090.",
+      "identified_change": false
+    },
+    {
+      "id": "F005",
+      "evidence_check": "supported_analogy_prior",
+      "candidate": 131072,
+      "unit": "bytes",
+      "source_url": "https://github.com/gpgpu-sim/gpgpu-sim_distribution/blob/dev/configs/tested-cfgs/SM86_RTX3070/gpgpusim.config",
+      "source_locator": "-gpgpu_cache:il1 N:64:128:16; comment 128 KB Inst.",
+      "scope": "Different-GPU simulator prior. These are configured RTX3070/SM86 model values, not measurements or facts about RTX5090.",
+      "identified_change": false
+    },
+    {
+      "id": "F009",
+      "evidence_check": "supported_analogy_prior",
+      "candidate": "LRU model policy",
+      "unit": null,
+      "source_url": "https://github.com/gpgpu-sim/gpgpu-sim_distribution/blob/dev/configs/tested-cfgs/SM86_RTX3070/gpgpusim.config",
+      "source_locator": "cache replacement field L",
+      "scope": "Different-GPU simulator prior. These are configured RTX3070/SM86 model values, not measurements or facts about RTX5090.",
+      "identified_change": false
+    },
+    {
+      "id": "F058",
+      "evidence_check": "supported_analogy_prior",
+      "candidate": "LRU model policy",
+      "unit": null,
+      "source_url": "https://github.com/gpgpu-sim/gpgpu-sim_distribution/blob/dev/configs/tested-cfgs/SM86_RTX3070/gpgpusim.config",
+      "source_locator": "cache replacement field L",
+      "scope": "Different-GPU simulator prior. These are configured RTX3070/SM86 model values, not measurements or facts about RTX5090.",
+      "identified_change": false
+    },
+    {
+      "id": "F069",
+      "evidence_check": "supported_analogy_prior",
+      "candidate": "LRU model policy",
+      "unit": null,
+      "source_url": "https://github.com/gpgpu-sim/gpgpu-sim_distribution/blob/dev/configs/tested-cfgs/SM86_RTX3070/gpgpusim.config",
+      "source_locator": "cache replacement field L",
+      "scope": "Different-GPU simulator prior. These are configured RTX3070/SM86 model values, not measurements or facts about RTX5090.",
+      "identified_change": false
+    },
+    {
+      "id": "F014",
+      "evidence_check": "supported_analogy_prior",
+      "candidate": "Scheduler-isolated subcore register files and execution units",
+      "unit": null,
+      "source_url": "https://github.com/gpgpu-sim/gpgpu-sim_distribution/blob/dev/configs/tested-cfgs/SM86_RTX3070/gpgpusim.config",
+      "source_locator": "-gpgpu_sub_core_model 1; accompanying comment",
+      "scope": "Different-GPU simulator prior. These are configured RTX3070/SM86 model values, not measurements or facts about RTX5090.",
+      "identified_change": false
+    },
+    {
+      "id": "F031",
+      "evidence_check": "supported_analogy_prior",
+      "candidate": "Scheduler-isolated subcore register files and execution units",
+      "unit": null,
+      "source_url": "https://github.com/gpgpu-sim/gpgpu-sim_distribution/blob/dev/configs/tested-cfgs/SM86_RTX3070/gpgpusim.config",
+      "source_locator": "-gpgpu_sub_core_model 1; accompanying comment",
+      "scope": "Different-GPU simulator prior. These are configured RTX3070/SM86 model values, not measurements or facts about RTX5090.",
+      "identified_change": false
+    },
+    {
+      "id": "F016",
+      "evidence_check": "supported_analogy_prior",
+      "candidate": {
+        "max_issue_per_warp": 1,
+        "dual_issue_different_execution_units": true
+      },
+      "unit": null,
+      "source_url": "https://github.com/gpgpu-sim/gpgpu-sim_distribution/blob/dev/configs/tested-cfgs/SM86_RTX3070/gpgpusim.config",
+      "source_locator": "-gpgpu_max_insn_issue_per_warp 1; -gpgpu_dual_issue_diff_exec_units 1",
+      "scope": "Different-GPU simulator prior. These are configured RTX3070/SM86 model values, not measurements or facts about RTX5090.",
+      "identified_change": false
+    },
+    {
+      "id": "F018",
+      "evidence_check": "supported_analogy_prior",
+      "candidate": "Loose round robin",
+      "unit": null,
+      "source_url": "https://github.com/gpgpu-sim/gpgpu-sim_distribution/blob/dev/configs/tested-cfgs/SM86_RTX3070/gpgpusim.config",
+      "source_locator": "-gpgpu_scheduler lrr",
+      "scope": "Different-GPU simulator prior. These are configured RTX3070/SM86 model values, not measurements or facts about RTX5090.",
+      "identified_change": false
+    },
+    {
+      "id": "F019",
+      "evidence_check": "supported_analogy_prior",
+      "candidate": 8,
+      "unit": "model register banks",
+      "source_url": "https://github.com/gpgpu-sim/gpgpu-sim_distribution/blob/dev/configs/tested-cfgs/SM86_RTX3070/gpgpusim.config",
+      "source_locator": "-gpgpu_num_reg_banks 8",
+      "scope": "Different-GPU simulator prior. These are configured RTX3070/SM86 model values, not measurements or facts about RTX5090.",
+      "identified_change": false
+    },
+    {
+      "id": "F021",
+      "evidence_check": "supported_analogy_prior",
+      "candidate": 2,
+      "unit": "model bank throughput multiplier",
+      "source_url": "https://github.com/gpgpu-sim/gpgpu-sim_distribution/blob/dev/configs/tested-cfgs/SM86_RTX3070/gpgpusim.config",
+      "source_locator": "-gpgpu_reg_file_port_throughput 2",
+      "scope": "Different-GPU simulator bank throughput prior, not proof of two physical read ports.",
+      "identified_change": false
+    },
+    {
+      "id": "F023",
+      "evidence_check": "supported_analogy_prior",
+      "candidate": 8,
+      "unit": "generic collector units",
+      "source_url": "https://github.com/gpgpu-sim/gpgpu-sim_distribution/blob/dev/configs/tested-cfgs/SM86_RTX3070/gpgpusim.config",
+      "source_locator": "-gpgpu_operand_collector_num_units_gen 8",
+      "scope": "Different-GPU simulator prior. These are configured RTX3070/SM86 model values, not measurements or facts about RTX5090.",
+      "identified_change": false
+    },
+    {
+      "id": "F024",
+      "evidence_check": "supported_analogy_prior",
+      "candidate": {
+        "specialized_collectors": false,
+        "generic_input_ports": 8,
+        "generic_output_ports": 8
+      },
+      "unit": null,
+      "source_url": "https://github.com/gpgpu-sim/gpgpu-sim_distribution/blob/dev/configs/tested-cfgs/SM86_RTX3070/gpgpusim.config",
+      "source_locator": "-gpgpu_enable_specialized_operand_collector 0; -gpgpu_operand_collector_num_in_ports_gen 8; -gpgpu_operand_collector_num_out_ports_gen 8",
+      "scope": "Different-GPU simulator prior. These are configured RTX3070/SM86 model values, not measurements or facts about RTX5090.",
+      "identified_change": false
+    },
+    {
+      "id": "F025",
+      "evidence_check": "supported_analogy_prior",
+      "candidate": 8,
+      "unit": "pipeline slots",
+      "source_url": "https://github.com/gpgpu-sim/gpgpu-sim_distribution/blob/dev/configs/tested-cfgs/SM86_RTX3070/gpgpusim.config",
+      "source_locator": "-gpgpu_pipeline_widths ... EX_WB=8 ...",
+      "scope": "Different-GPU simulator EX_WB pipeline-register width prior. Width is not necessarily a separately implemented queue capacity.",
+      "identified_change": false
+    },
+    {
+      "id": "F027",
+      "evidence_check": "supported_analogy_prior",
+      "candidate": {
+        "SP": 4,
+        "SFU": 4,
+        "DP": 4,
+        "INT": 4,
+        "Tensor": 4
+      },
+      "unit": null,
+      "source_url": "https://github.com/gpgpu-sim/gpgpu-sim_distribution/blob/dev/configs/tested-cfgs/SM86_RTX3070/gpgpusim.config",
+      "source_locator": "-gpgpu_num_*_units 4",
+      "scope": "Simulator logical execution units per core, not physical CUDA/Tensor arithmetic lane counts.",
+      "identified_change": false
+    },
+    {
+      "id": "F055",
+      "evidence_check": "supported_analogy_prior",
+      "candidate": 4,
+      "unit": "model sets",
+      "source_url": "https://github.com/gpgpu-sim/gpgpu-sim_distribution/blob/dev/configs/tested-cfgs/SM86_RTX3070/gpgpusim.config",
+      "source_locator": "-gpgpu_cache:dl1 S:4:128:256,...",
+      "scope": "Different-GPU simulator prior. These are configured RTX3070/SM86 model values, not measurements or facts about RTX5090.",
+      "identified_change": false
+    },
+    {
+      "id": "F056",
+      "evidence_check": "supported_analogy_prior",
+      "candidate": 256,
+      "unit": "maximum adaptive model ways",
+      "source_url": "https://github.com/gpgpu-sim/gpgpu-sim_distribution/blob/dev/configs/tested-cfgs/SM86_RTX3070/gpgpusim.config",
+      "source_locator": "-gpgpu_cache:dl1 S:4:128:256,...",
+      "scope": "Different-GPU simulator prior. These are configured RTX3070/SM86 model values, not measurements or facts about RTX5090.",
+      "identified_change": false
+    },
+    {
+      "id": "F060",
+      "evidence_check": "supported_analogy_prior",
+      "candidate": 384,
+      "unit": "model L1 MSHR entries",
+      "source_url": "https://github.com/gpgpu-sim/gpgpu-sim_distribution/blob/dev/configs/tested-cfgs/SM86_RTX3070/gpgpusim.config",
+      "source_locator": "-gpgpu_cache:dl1 ...,A:384:48,16:0,32",
+      "scope": "Different-GPU simulator prior. These are configured RTX3070/SM86 model values, not measurements or facts about RTX5090.",
+      "identified_change": false
+    },
+    {
+      "id": "F061",
+      "evidence_check": "supported_analogy_prior",
+      "candidate": 48,
+      "unit": "merged requests per MSHR",
+      "source_url": "https://github.com/gpgpu-sim/gpgpu-sim_distribution/blob/dev/configs/tested-cfgs/SM86_RTX3070/gpgpusim.config",
+      "source_locator": "-gpgpu_cache:dl1 ...,A:384:48,...",
+      "scope": "Model maximum merged requests per L1 MSHR, not a physical hardware consumer capacity.",
+      "identified_change": false
+    },
+    {
+      "id": "F062",
+      "evidence_check": "supported_analogy_prior",
+      "candidate": {
+        "miss_queue_entries": 16,
+        "cluster_ejection_entries": 32
+      },
+      "unit": null,
+      "source_url": "https://github.com/gpgpu-sim/gpgpu-sim_distribution/blob/dev/configs/tested-cfgs/SM86_RTX3070/gpgpusim.config",
+      "source_locator": "-gpgpu_cache:dl1 ...16:0,32; -gpgpu_n_cluster_ejection_buffer_size 32",
+      "scope": "Different-GPU simulator miss/ejection queue priors; exact separate fill/return queues not resolved.",
+      "identified_change": false
+    },
+    {
+      "id": "F063",
+      "evidence_check": "supported_analogy_prior",
+      "candidate": 64,
+      "unit": "sets per model subpartition",
+      "source_url": "https://github.com/gpgpu-sim/gpgpu-sim_distribution/blob/dev/configs/tested-cfgs/SM86_RTX3070/gpgpusim.config",
+      "source_locator": "-gpgpu_cache:dl2 S:64:128:16,...",
+      "scope": "Different-GPU simulator prior. These are configured RTX3070/SM86 model values, not measurements or facts about RTX5090.",
+      "identified_change": false
+    },
+    {
+      "id": "F064",
+      "evidence_check": "supported_analogy_prior",
+      "candidate": 16,
+      "unit": "ways",
+      "source_url": "https://github.com/gpgpu-sim/gpgpu-sim_distribution/blob/dev/configs/tested-cfgs/SM86_RTX3070/gpgpusim.config",
+      "source_locator": "-gpgpu_cache:dl2 S:64:128:16,...",
+      "scope": "Different-GPU simulator prior. These are configured RTX3070/SM86 model values, not measurements or facts about RTX5090.",
+      "identified_change": false
+    },
+    {
+      "id": "F065",
+      "evidence_check": "supported_analogy_prior",
+      "candidate": {
+        "memory_channels": 16,
+        "subpartitions_per_channel": 2,
+        "total_model_subpartitions": 32
+      },
+      "unit": null,
+      "source_url": "https://github.com/gpgpu-sim/gpgpu-sim_distribution/blob/dev/configs/tested-cfgs/SM86_RTX3070/gpgpusim.config",
+      "source_locator": "-gpgpu_n_mem 16; -gpgpu_n_sub_partition_per_mchannel 2",
+      "scope": "Different-GPU simulator prior. These are configured RTX3070/SM86 model values, not measurements or facts about RTX5090.",
+      "identified_change": false
+    },
+    {
+      "id": "F068",
+      "evidence_check": "supported_analogy_prior",
+      "candidate": 32,
+      "unit": "bytes per model data-port service",
+      "source_url": "https://github.com/gpgpu-sim/gpgpu-sim_distribution/blob/dev/configs/tested-cfgs/SM86_RTX3070/gpgpusim.config",
+      "source_locator": "-gpgpu_cache:dl2 ...32:0,32",
+      "scope": "Configured model cache data-port width, not physical lookup port count.",
+      "identified_change": false
+    },
+    {
+      "id": "F071",
+      "evidence_check": "supported_analogy_prior",
+      "candidate": 192,
+      "unit": "model L2 MSHR entries per subpartition",
+      "source_url": "https://github.com/gpgpu-sim/gpgpu-sim_distribution/blob/dev/configs/tested-cfgs/SM86_RTX3070/gpgpusim.config",
+      "source_locator": "-gpgpu_cache:dl2 ...,A:192:4,32:0,32",
+      "scope": "Different-GPU simulator prior. These are configured RTX3070/SM86 model values, not measurements or facts about RTX5090.",
+      "identified_change": false
+    },
+    {
+      "id": "F072",
+      "evidence_check": "supported_analogy_prior",
+      "candidate": 4,
+      "unit": "merged requests per model MSHR",
+      "source_url": "https://github.com/gpgpu-sim/gpgpu-sim_distribution/blob/dev/configs/tested-cfgs/SM86_RTX3070/gpgpusim.config",
+      "source_locator": "-gpgpu_cache:dl2 ...,A:192:4,...",
+      "scope": "Different-GPU simulator prior. These are configured RTX3070/SM86 model values, not measurements or facts about RTX5090.",
+      "identified_change": false
+    },
+    {
+      "id": "F073",
+      "evidence_check": "supported_analogy_prior",
+      "candidate": {
+        "miss_queue_entries": 32,
+        "dram_partition_queues": [
+          64,
+          64,
+          64,
+          64
+        ]
+      },
+      "unit": null,
+      "source_url": "https://github.com/gpgpu-sim/gpgpu-sim_distribution/blob/dev/configs/tested-cfgs/SM86_RTX3070/gpgpusim.config",
+      "source_locator": "-gpgpu_cache:dl2 ...32:0,32; -gpgpu_dram_partition_queues 64:64:64:64",
+      "scope": "Configured queue sizes at model L2/DRAM partition boundaries. Exact RTX5090 request/fill/return capacities remain untested.",
+      "identified_change": false
+    },
+    {
+      "id": "F074",
+      "evidence_check": "supported_analogy_prior",
+      "candidate": {
+        "miss_queue_entries": 32,
+        "dram_partition_queues": [
+          64,
+          64,
+          64,
+          64
+        ]
+      },
+      "unit": null,
+      "source_url": "https://github.com/gpgpu-sim/gpgpu-sim_distribution/blob/dev/configs/tested-cfgs/SM86_RTX3070/gpgpusim.config",
+      "source_locator": "-gpgpu_cache:dl2 ...32:0,32; -gpgpu_dram_partition_queues 64:64:64:64",
+      "scope": "Configured queue sizes at model L2/DRAM partition boundaries. Exact RTX5090 request/fill/return capacities remain untested.",
+      "identified_change": false
+    },
+    {
+      "id": "F075",
+      "evidence_check": "supported_analogy_prior",
+      "candidate": {
+        "controllers": 16,
+        "banks_per_controller": 16,
+        "bank_groups": 4,
+        "memory_units_per_controller": 1
+      },
+      "unit": null,
+      "source_url": "https://github.com/gpgpu-sim/gpgpu-sim_distribution/blob/dev/configs/tested-cfgs/SM86_RTX3070/gpgpusim.config",
+      "source_locator": "-gpgpu_n_mem 16; -gpgpu_n_mem_per_ctrlr 1; timing nbk=16:nbkgrp=4",
+      "scope": "Different-GPU simulator prior. These are configured RTX3070/SM86 model values, not measurements or facts about RTX5090.",
+      "identified_change": false
+    },
+    {
+      "id": "F076",
+      "evidence_check": "supported_analogy_prior",
+      "candidate": "dramid@8;00000000.00000000.00000000.00000000.0000RRRR.RRRRRRRR.RBBBCCCC.BCCSSSSS",
+      "unit": null,
+      "source_url": "https://github.com/gpgpu-sim/gpgpu-sim_distribution/blob/dev/configs/tested-cfgs/SM86_RTX3070/gpgpusim.config",
+      "source_locator": "-gpgpu_mem_addr_mapping",
+      "scope": "Exact configurable RTX3070 simulator mapping string; not a reverse-engineered RTX5090 address hash.",
+      "identified_change": false
+    },
+    {
+      "id": "F077",
+      "evidence_check": "supported_analogy_prior",
+      "candidate": {
+        "scheduler_queue": 64,
+        "return_queue": 192
+      },
+      "unit": "entries",
+      "source_url": "https://github.com/gpgpu-sim/gpgpu-sim_distribution/blob/dev/configs/tested-cfgs/SM86_RTX3070/gpgpusim.config",
+      "source_locator": "-gpgpu_frfcfs_dram_sched_queue_size 64; -gpgpu_dram_return_queue_size 192",
+      "scope": "Different-GPU simulator prior. These are configured RTX3070/SM86 model values, not measurements or facts about RTX5090.",
+      "identified_change": false
+    },
+    {
+      "id": "F078",
+      "evidence_check": "supported_analogy_prior",
+      "candidate": "FR-FCFS model scheduling",
+      "unit": null,
+      "source_url": "https://github.com/gpgpu-sim/gpgpu-sim_distribution/blob/dev/configs/tested-cfgs/SM86_RTX3070/gpgpusim.config",
+      "source_locator": "-gpgpu_dram_scheduler 1; -gpgpu_frfcfs_dram_sched_queue_size 64",
+      "scope": "Different-GPU simulator prior. These are configured RTX3070/SM86 model values, not measurements or facts about RTX5090.",
+      "identified_change": false
+    },
+    {
+      "id": "F079",
+      "evidence_check": "supported_analogy_prior",
+      "candidate": {
+        "banks": 16,
+        "bank_groups": 4,
+        "burst_length": 16,
+        "data_command_frequency_ratio": 4
+      },
+      "unit": null,
+      "source_url": "https://github.com/gpgpu-sim/gpgpu-sim_distribution/blob/dev/configs/tested-cfgs/SM86_RTX3070/gpgpusim.config",
+      "source_locator": "-gpgpu_dram_timing_opt nbk=16...nbkgrp=4; -gpgpu_dram_burst_length 16; -dram_data_command_freq_ratio 4",
+      "scope": "Different-GPU simulator prior. These are configured RTX3070/SM86 model values, not measurements or facts about RTX5090.",
+      "identified_change": false
+    },
+    {
+      "id": "F086",
+      "evidence_check": "supported_analogy_prior",
+      "candidate": {
+        "core": 1132,
+        "interconnect": 1132,
+        "L2": 1132,
+        "DRAM": 3500.5
+      },
+      "unit": "MHz, model clock domains",
+      "source_url": "https://github.com/gpgpu-sim/gpgpu-sim_distribution/blob/dev/configs/tested-cfgs/SM86_RTX3070/gpgpusim.config",
+      "source_locator": "-gpgpu_clock_domains 1132:1132:1132:3500.5",
+      "scope": "Different-GPU simulator prior. These are configured RTX3070/SM86 model values, not measurements or facts about RTX5090.",
+      "identified_change": false
+    },
+    {
+      "id": "T001",
+      "evidence_check": "supported_analogy_prior",
+      "candidate": 0,
+      "unit": "model core cycles",
+      "source_url": "https://github.com/gpgpu-sim/gpgpu-sim_distribution/blob/dev/configs/tested-cfgs/SM86_RTX3070/gpgpusim.config",
+      "source_locator": "-gpgpu_TB_launch_latency 0",
+      "scope": "Simulator thread-block launch latency prior; not separately measured admission and dispatch delays.",
+      "identified_change": false
+    },
+    {
+      "id": "T002",
+      "evidence_check": "supported_analogy_prior",
+      "candidate": 0,
+      "unit": "model core cycles",
+      "source_url": "https://github.com/gpgpu-sim/gpgpu-sim_distribution/blob/dev/configs/tested-cfgs/SM86_RTX3070/gpgpusim.config",
+      "source_locator": "-gpgpu_TB_launch_latency 0",
+      "scope": "Simulator thread-block launch latency prior; not separately measured admission and dispatch delays.",
+      "identified_change": false
+    },
+    {
+      "id": "T005",
+      "evidence_check": "supported_analogy_prior",
+      "candidate": 4,
+      "unit": "model instruction fetch throughput setting",
+      "source_url": "https://github.com/gpgpu-sim/gpgpu-sim_distribution/blob/dev/configs/tested-cfgs/SM86_RTX3070/gpgpusim.config",
+      "source_locator": "-gpgpu_inst_fetch_throughput 4",
+      "scope": "Different-GPU simulator prior. These are configured RTX3070/SM86 model values, not measurements or facts about RTX5090.",
+      "identified_change": false
+    },
+    {
+      "id": "T007",
+      "evidence_check": "supported_analogy_prior",
+      "candidate": {
+        "INT_ADD_MAX_MUL_MAD_DIV": [
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "FP_ADD_MAX_MUL_MAD_DIV": [
+          1,
+          1,
+          1,
+          1,
+          2
+        ],
+        "SFU": 8,
+        "Tensor": 64
+      },
+      "unit": "model core cycles",
+      "source_url": "https://github.com/gpgpu-sim/gpgpu-sim_distribution/blob/dev/configs/tested-cfgs/SM86_RTX3070/gpgpusim.config",
+      "source_locator": "-ptx_opcode_initiation_int/fp/sfu/tensor",
+      "scope": "Different-GPU simulator prior. These are configured RTX3070/SM86 model values, not measurements or facts about RTX5090.",
+      "identified_change": false
+    },
+    {
+      "id": "T013",
+      "evidence_check": "supported_analogy_prior",
+      "candidate": 8,
+      "unit": "model slots per cycle",
+      "source_url": "https://github.com/gpgpu-sim/gpgpu-sim_distribution/blob/dev/configs/tested-cfgs/SM86_RTX3070/gpgpusim.config",
+      "source_locator": "-gpgpu_pipeline_widths ...EX_WB=8...",
+      "scope": "Simulator writeback pipeline width prior, not an intrinsic physical bandwidth measurement.",
+      "identified_change": false
+    },
+    {
+      "id": "T014",
+      "evidence_check": "supported_analogy_prior",
+      "candidate": {
+        "INT_ADD_MAX_MUL_MAD_DIV": [
+          4,
+          4,
+          4,
+          4,
+          21
+        ],
+        "FP_ADD_MAX_MUL_MAD_DIV": [
+          4,
+          4,
+          4,
+          4,
+          39
+        ],
+        "DP_ADD_MAX_MUL_MAD_DIV": [
+          64,
+          64,
+          64,
+          64,
+          330
+        ],
+        "SFU": 21
+      },
+      "unit": "model cycles",
+      "source_url": "https://github.com/gpgpu-sim/gpgpu-sim_distribution/blob/dev/configs/tested-cfgs/SM86_RTX3070/gpgpusim.config",
+      "source_locator": "-ptx_opcode_latency_int/fp/dp/sfu",
+      "scope": "Different-GPU simulator prior. These are configured RTX3070/SM86 model values, not measurements or facts about RTX5090.",
+      "identified_change": false
+    },
+    {
+      "id": "T017",
+      "evidence_check": "supported_analogy_prior",
+      "candidate": 64,
+      "unit": "model cycles",
+      "source_url": "https://github.com/gpgpu-sim/gpgpu-sim_distribution/blob/dev/configs/tested-cfgs/SM86_RTX3070/gpgpusim.config",
+      "source_locator": "-ptx_opcode_latency_tesnor 64; -ptx_opcode_initiation_tensor 64",
+      "scope": "Model aggregate tensor instruction prior. This is not the native RTX5090 HMMA shape latency or interval.",
+      "identified_change": false
+    },
+    {
+      "id": "T018",
+      "evidence_check": "supported_analogy_prior",
+      "candidate": 64,
+      "unit": "model cycles",
+      "source_url": "https://github.com/gpgpu-sim/gpgpu-sim_distribution/blob/dev/configs/tested-cfgs/SM86_RTX3070/gpgpusim.config",
+      "source_locator": "-ptx_opcode_latency_tesnor 64; -ptx_opcode_initiation_tensor 64",
+      "scope": "Model aggregate tensor instruction prior. This is not the native RTX5090 HMMA shape latency or interval.",
+      "identified_change": false
+    },
+    {
+      "id": "T027",
+      "evidence_check": "supported_analogy_prior",
+      "candidate": 29,
+      "unit": "model cycles",
+      "source_url": "https://github.com/gpgpu-sim/gpgpu-sim_distribution/blob/dev/configs/tested-cfgs/SM86_RTX3070/gpgpusim.config",
+      "source_locator": "-gpgpu_smem_latency 29",
+      "scope": "Configured shared-memory model delay; this is not independently separated bank/read/wakeup timing.",
+      "identified_change": false
+    },
+    {
+      "id": "T031",
+      "evidence_check": "supported_analogy_prior",
+      "candidate": 39,
+      "unit": "model core cycles",
+      "source_url": "https://github.com/gpgpu-sim/gpgpu-sim_distribution/blob/dev/configs/tested-cfgs/SM86_RTX3070/gpgpusim.config",
+      "source_locator": "-gpgpu_l1_latency 39",
+      "scope": "Different-GPU simulator prior. These are configured RTX3070/SM86 model values, not measurements or facts about RTX5090.",
+      "identified_change": false
+    },
+    {
+      "id": "T033",
+      "evidence_check": "supported_analogy_prior",
+      "candidate": 32,
+      "unit": "bytes per model data-port service",
+      "source_url": "https://github.com/gpgpu-sim/gpgpu-sim_distribution/blob/dev/configs/tested-cfgs/SM86_RTX3070/gpgpusim.config",
+      "source_locator": "L1/L2 cache data_port_width=32",
+      "scope": "Simulator data-port width prior; source does not establish RTX5090 physical bandwidth.",
+      "identified_change": false
+    },
+    {
+      "id": "T037",
+      "evidence_check": "supported_analogy_prior",
+      "candidate": 32,
+      "unit": "bytes per model data-port service",
+      "source_url": "https://github.com/gpgpu-sim/gpgpu-sim_distribution/blob/dev/configs/tested-cfgs/SM86_RTX3070/gpgpusim.config",
+      "source_locator": "L1/L2 cache data_port_width=32",
+      "scope": "Simulator data-port width prior; source does not establish RTX5090 physical bandwidth.",
+      "identified_change": false
+    },
+    {
+      "id": "T035",
+      "evidence_check": "supported_analogy_prior",
+      "candidate": 187,
+      "unit": "model timing cycles",
+      "source_url": "https://github.com/gpgpu-sim/gpgpu-sim_distribution/blob/dev/configs/tested-cfgs/SM86_RTX3070/gpgpusim.config",
+      "source_locator": "-gpgpu_l2_rop_latency 187",
+      "scope": "Simulator memory-partition fixed ROP/L2 delay, not isolated RTX5090 L2 hit latency.",
+      "identified_change": false
+    },
+    {
+      "id": "T039",
+      "evidence_check": "supported_analogy_prior",
+      "candidate": {
+        "fixed_dram_latency": 254,
+        "RCD": 24,
+        "RAS": 55,
+        "RP": 24,
+        "RC": 78,
+        "CL": 24
+      },
+      "unit": "model cycles",
+      "source_url": "https://github.com/gpgpu-sim/gpgpu-sim_distribution/blob/dev/configs/tested-cfgs/SM86_RTX3070/gpgpusim.config",
+      "source_locator": "-dram_latency 254; -gpgpu_dram_timing_opt",
+      "scope": "RTX3070 simulator fixed delay and DRAM command timings, in model domains. Do not sum without following model code or label full dependent-chain latency.",
+      "identified_change": false
+    },
+    {
+      "id": "T040",
+      "evidence_check": "supported_analogy_prior",
+      "candidate": {
+        "WL": 8,
+        "WR": 24
+      },
+      "unit": "model DRAM cycles",
+      "source_url": "https://github.com/gpgpu-sim/gpgpu-sim_distribution/blob/dev/configs/tested-cfgs/SM86_RTX3070/gpgpusim.config",
+      "source_locator": "-gpgpu_dram_timing_opt ...WL=8:...WR=24...",
+      "scope": "Different-GPU simulator prior. These are configured RTX3070/SM86 model values, not measurements or facts about RTX5090.",
+      "identified_change": false
+    },
+    {
+      "id": "T041",
+      "evidence_check": "supported_analogy_prior",
+      "candidate": {
+        "CDLR": 10,
+        "RTPL": 4
+      },
+      "unit": "model DRAM cycles",
+      "source_url": "https://github.com/gpgpu-sim/gpgpu-sim_distribution/blob/dev/configs/tested-cfgs/SM86_RTX3070/gpgpusim.config",
+      "source_locator": "-gpgpu_dram_timing_opt ...CDLR=10...RTPL=4",
+      "scope": "Different-GPU simulator prior. These are configured RTX3070/SM86 model values, not measurements or facts about RTX5090.",
+      "identified_change": false
+    },
+    {
+      "id": "T042",
+      "evidence_check": "supported_analogy_prior",
+      "candidate": {
+        "CCD": 4,
+        "CCDL": 6,
+        "RRD": 12
+      },
+      "unit": "model DRAM cycles",
+      "source_url": "https://github.com/gpgpu-sim/gpgpu-sim_distribution/blob/dev/configs/tested-cfgs/SM86_RTX3070/gpgpusim.config",
+      "source_locator": "-gpgpu_dram_timing_opt ...CCD=4:RRD=12...CCDL=6",
+      "scope": "Different-GPU simulator prior. These are configured RTX3070/SM86 model values, not measurements or facts about RTX5090.",
+      "identified_change": false
+    },
+    {
+      "id": "T046",
+      "evidence_check": "supported_analogy_prior",
+      "candidate": 3500.5,
+      "unit": "model MHz",
+      "source_url": "https://github.com/gpgpu-sim/gpgpu-sim_distribution/blob/dev/configs/tested-cfgs/SM86_RTX3070/gpgpusim.config",
+      "source_locator": "-gpgpu_clock_domains ...:3500.5",
+      "scope": "RTX3070 simulator DRAM clock domain. Not GDDR7 management-clock or physical command clock evidence.",
+      "identified_change": false
+    }
+  ],
+  "review": "Each candidate names the model boundary and does not claim hidden RTX5090 hardware was identified."
+}

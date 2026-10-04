@@ -1,0 +1,43 @@
+{
+  "physical_sms": 170,
+  "contexts_per_sm": 11,
+  "l2_slices": 48,
+  "sets_per_slice": 1024,
+  "ways": 16,
+  "line_bytes": 128,
+  "l2_bytes": 100663296,
+  "slice_mapping": "(line XOR (line>>7) XOR (line>>13))%48, line=byte_address/128",
+  "mapping_status": "provisional",
+  "per_slice_admissions_per_cycle": 1,
+  "owner_slots_per_slice": 8,
+  "mshrs_per_slice": 4,
+  "target_shapes": [
+    [
+      2048,
+      2112,
+      1536
+    ],
+    [
+      2048,
+      2112,
+      3072
+    ]
+  ],
+  "acceptance": "Timing-only mode: every output address written exactly once, complete block retirement, integer cycle counts and counters. Numerical correctness remains separately checked on small cases. Compare saved large hardware event times with explicit active-clock qualification; do not fit target runtimes.",
+  "state": "both_full_large_timing_cases_completed",
+  "measured_service_parameters": "service_parameters.json",
+  "service_units": "32-byte sectors per reference SM cycle; fixed-point cache admission credits, Q10",
+  "clock_conversion": "2.94GHz reference only; no matched large-case active clock yet",
+  "write_backing_semantics": "Write-around functional provider acknowledges stores with provisional17cycle delay; not a recovered write-back cache. Measured cache-write aggregate admission limit is imposed at gateway.",
+  "dram_return_delay_cycles": 31,
+  "dram_return_delay_status": "provisional, not established by throughput sweep",
+  "cpp_path": "event_cpp/full_gpu_parallel.cpp independent C++ microarchitecture executor; host.cpp retained as Verilator reference",
+  "read_write_overlap": "Separate quota pools with measured combined quota; per-slice RR arbitration and held-response routing",
+  "initial_generator": "prepare_initial_unlimited.py preserves the initial construction and must not overwrite the current service-limited sources",
+  "execution_mode": "payload-free independent C++ event-aware timing executor; small/component RTL equivalence checked, full-chip large RTL equivalence not tested",
+  "operand_cache_policy": "cg bypasses L1; per-context outstanding sector metadata, no persistent per-SM input cache",
+  "baseline_slice_mapping": "(byte_address/128)%48",
+  "shared_read_slots": 32,
+  "initial_cache_condition": "warm input data resident; both completed large cases report all read requests hitting",
+  "completed_comparison": "event_cpp/full_completed_comparison.json"
+}

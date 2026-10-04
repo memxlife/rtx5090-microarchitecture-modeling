@@ -1,0 +1,376 @@
+{
+  "question": "Does the134field unresolved-parameter table specify every required property of the connected GEMM model without duplicate meanings?",
+  "conclusion": "No. It is an unresolved-field inventory, not a complete hardware configuration. Already-known capacities were intentionally excluded; connected simulation knobs and broad vector fields need explicit mappings. No new hardware facts or identification statuses are introduced.",
+  "evidence_sha256": {
+    "parameter_master_table.json": "865dd3d8a9e982f9eb10c5b28c24f0200607095d543331a23a102a2b31fdd6de",
+    "quantitative_microarchitecture.md": "4557a21fba6704124c02c860d2d55a97a4a53bbaa711b6bd70b9e59a337f91db",
+    "numerical/resident_gemm_multi_sm_nb_l2.sv": "79dd6b1604f9b9b77a87aa2258fcdb0efcb2a898ff2225476c724a86b95d5726",
+    "numerical/resident_gemm_complete.sv": "6a1f526f8a5732cbdfc85de17ec783f671522bef11fdf0ef9242a34cd6041d1c",
+    "numerical/multi_sm_nonblocking_l2.sv": "c1f7af9e3fa80274fd23372c9e2ff337498ca6224615fb880b890b6ad33e93b9",
+    "components/allocation_demands.sv": "9225576fee76bd34f3c55262b2cacd5c21f43a2ced88ce375221d8519b6bd760"
+  },
+  "known_required_facts_missing_from_master_table": [
+    {
+      "key": "active_sms",
+      "value": 170,
+      "unit": "SMs",
+      "why_required": "Device-wide replication/dispatch capacity; the top defaults to2 modeled SMs.",
+      "source": "quantitative_microarchitecture.md or stated connected allocation declarations"
+    },
+    {
+      "key": "register_words_per_sm",
+      "value": 65536,
+      "unit": "32-bit words",
+      "why_required": "Aggregate register budget used by quantized admission.",
+      "source": "quantitative_microarchitecture.md or stated connected allocation declarations"
+    },
+    {
+      "key": "resident_warps_per_sm",
+      "value": 48,
+      "unit": "warps",
+      "why_required": "Warp budget used by admission.",
+      "source": "quantitative_microarchitecture.md or stated connected allocation declarations"
+    },
+    {
+      "key": "warp_width",
+      "value": 32,
+      "unit": "threads",
+      "why_required": "Lane width assumed by every native adapter and coalescing module.",
+      "source": "quantitative_microarchitecture.md or stated connected allocation declarations"
+    },
+    {
+      "key": "shared_allocation_per_sm",
+      "value": 102400,
+      "unit": "bytes",
+      "why_required": "Saved runtime allocation budget; do not replace with published128KiB.",
+      "source": "quantitative_microarchitecture.md or stated connected allocation declarations"
+    },
+    {
+      "key": "opt_in_shared_per_block",
+      "value": 101376,
+      "unit": "bytes",
+      "why_required": "Saved maximum user shared allocation per block.",
+      "source": "quantitative_microarchitecture.md or stated connected allocation declarations"
+    },
+    {
+      "key": "shared_bank_count",
+      "value": 32,
+      "unit": "banks",
+      "why_required": "Bank mapping/resource service dimension.",
+      "source": "quantitative_microarchitecture.md or stated connected allocation declarations"
+    },
+    {
+      "key": "shared_bank_word_bytes",
+      "value": 4,
+      "unit": "bytes",
+      "why_required": "Bank index uses four-byte word address modulo32.",
+      "source": "quantitative_microarchitecture.md or stated connected allocation declarations"
+    },
+    {
+      "key": "l2_capacity",
+      "value": 100663296,
+      "unit": "bytes",
+      "why_required": "Actual saved96MiB device capacity; connected64KiB test geometry differs.",
+      "source": "quantitative_microarchitecture.md or stated connected allocation declarations"
+    },
+    {
+      "key": "cache_line_bytes",
+      "value": 128,
+      "unit": "bytes",
+      "why_required": "Four sector-valid entries per cache line.",
+      "source": "quantitative_microarchitecture.md or stated connected allocation declarations"
+    },
+    {
+      "key": "sector_bytes",
+      "value": 32,
+      "unit": "bytes",
+      "why_required": "Packet size for L1/L2 and backing provider.",
+      "source": "quantitative_microarchitecture.md or stated connected allocation declarations"
+    },
+    {
+      "key": "allocation_reserved_shared",
+      "value": 1024,
+      "unit": "bytes per block",
+      "why_required": "Added to8192user shared in current CTA-shaped allocation.",
+      "source": "quantitative_microarchitecture.md or stated connected allocation declarations"
+    },
+    {
+      "key": "max_threads_per_block",
+      "value": 1024,
+      "unit": "threads",
+      "why_required": "allocation_demands MAX_THREADS guard.",
+      "source": "quantitative_microarchitecture.md or stated connected allocation declarations"
+    },
+    {
+      "key": "max_registers_per_thread",
+      "value": 255,
+      "unit": "words",
+      "why_required": "allocation_demands MAX_REGS_PER_THREAD guard.",
+      "source": "quantitative_microarchitecture.md or stated connected allocation declarations"
+    }
+  ],
+  "connected_knob_mapping": [
+    {
+      "knob": "SMS",
+      "current_value": 2,
+      "category": "known device capacity/scaling",
+      "mapping_or_gap": "No134field covers SM count; actual known170 differs from test2."
+    },
+    {
+      "knob": "CONTEXTS",
+      "current_value": 2,
+      "category": "simulation capacity",
+      "mapping_or_gap": "Not synonymous with F003 placement or physical residency; small-tile saved occupancy11."
+    },
+    {
+      "knob": "M,N,K",
+      "current_value": "64,96,64",
+      "category": "workload",
+      "mapping_or_gap": "Matrix dimensions and block-grid size; not microarchitecture parameters."
+    },
+    {
+      "knob": "SETS,WAYS",
+      "current_value": "64,8",
+      "category": "physical hypothesis",
+      "mapping_or_gap": "Private L1 geometry relates to F055/F056; shared line128B implies64KiB."
+    },
+    {
+      "knob": "L2_SETS,L2_WAYS",
+      "current_value": "64,8",
+      "category": "physical hypothesis",
+      "mapping_or_gap": "F063/F064, but unsliced64KiB vs saved96MiB; no F065/F066 slicing implemented."
+    },
+    {
+      "knob": "OWNER_SLOTS",
+      "current_value": 8,
+      "category": "simulation queue capacity",
+      "mapping_or_gap": "Combined ownership queue spans read and write; map explicitly to F073/F074 or a new ownership field, not MSHR count."
+    },
+    {
+      "knob": "MSHRS",
+      "current_value": 4,
+      "category": "physical hypothesis",
+      "mapping_or_gap": "F071; sectors, not full lines, consume these records."
+    },
+    {
+      "knob": "READ_SLOTS",
+      "current_value": 2,
+      "category": "simulation queue capacity",
+      "mapping_or_gap": "Common native/scratch shared read owner capacity; relates F051; not total LSU queue."
+    },
+    {
+      "knob": "RETURN_DELAY",
+      "current_value": 9,
+      "category": "timing hypothesis",
+      "mapping_or_gap": "Shared service response delay relates T027; no timing calibration transfer proved."
+    },
+    {
+      "knob": "SERVICE_INTERVAL",
+      "current_value": 1,
+      "category": "timing hypothesis",
+      "mapping_or_gap": "Shared bank package pacing; table lacks a separately named shared-bank service interval."
+    },
+    {
+      "knob": "MOVM_LATENCY",
+      "current_value": 19,
+      "category": "timing hypothesis",
+      "mapping_or_gap": "T016 effective/native timing distinction; this19 is synthetic verification setting, not measured29 recurrence."
+    },
+    {
+      "knob": "MOVM_INTERVAL",
+      "current_value": 1,
+      "category": "timing hypothesis",
+      "mapping_or_gap": "Rearrangement admission interval is separate from result delay; no distinct MOVM initiation field."
+    },
+    {
+      "knob": "HMMA_LATENCY",
+      "current_value": 73,
+      "category": "timing hypothesis",
+      "mapping_or_gap": "T017; synthetic delayed verification, not hardware value."
+    },
+    {
+      "knob": "HMMA_INTERVAL",
+      "current_value": 4,
+      "category": "timing hypothesis",
+      "mapping_or_gap": "T018, potentially overlaps T007/T015 class vector; charge once."
+    },
+    {
+      "knob": "ARITHMETIC_MODE",
+      "current_value": 1,
+      "category": "numerical approximation choice",
+      "mapping_or_gap": "F028/F034/F035 candidate arithmetic policy, not independently established native rounding."
+    },
+    {
+      "knob": "STORE_INTERVAL",
+      "current_value": 1,
+      "category": "timing hypothesis",
+      "mapping_or_gap": "Output scratch bank-package pacing, distinct from global store issueT021."
+    },
+    {
+      "knob": "STORE_RETURN_DELAY",
+      "current_value": 1,
+      "category": "timing hypothesis",
+      "mapping_or_gap": "Shared write completionT028, not external global-store acknowledgmentT023."
+    },
+    {
+      "knob": "BARRIER_RELEASE_DELAY",
+      "current_value": 1,
+      "category": "timing hypothesis",
+      "mapping_or_gap": "T044; warp-granularity barrier release, not full thread/barrier topology."
+    },
+    {
+      "knob": "BM,BN,BK,WARPS",
+      "current_value": "32,32,32,4 fixed",
+      "category": "workload/native-family scope",
+      "mapping_or_gap": "Hardcoded supported kernel geometry in address math; not GPU tensor shape or physical warp partition count."
+    }
+  ],
+  "broad_fields_needing_expansion": [
+    {
+      "ids": [
+        "F010"
+      ],
+      "needed": "Separate supported opcode/operand decoding, predicates, native control bits and semantic data dependencies; current bounded decoders do not define a full ISA."
+    },
+    {
+      "ids": [
+        "F027",
+        "F028",
+        "F029",
+        "T007",
+        "T014",
+        "T015"
+      ],
+      "needed": "Index by instruction class and format, then state resource sharing and mutually exclusive effective/decomposed timing."
+    },
+    {
+      "ids": [
+        "F032",
+        "F033",
+        "F034",
+        "F035"
+      ],
+      "needed": "Index matrix shape/type/layout and split functional mappings from private pipeline organization and arithmetic candidates."
+    },
+    {
+      "ids": [
+        "F036",
+        "F037",
+        "F038",
+        "F039",
+        "F051",
+        "F060",
+        "F062",
+        "F071",
+        "F073",
+        "F074"
+      ],
+      "needed": "Define queue entry unit, scope, admission, release, ownership and merging; counts of operations/sectors/lines/consumers are not interchangeable."
+    },
+    {
+      "ids": [
+        "F048",
+        "F054"
+      ],
+      "needed": "List legal carveout, selected runtime carveout, usable capacity and reserved overhead; published128KiB and queried100KiB are different facts."
+    },
+    {
+      "ids": [
+        "F063",
+        "F064",
+        "F065",
+        "F066",
+        "F067"
+      ],
+      "needed": "Specify set count per slice versus global count and enforce total set*way*line*slices capacity; unsliced test cache omits actual topology."
+    },
+    {
+      "ids": [
+        "F081",
+        "F082",
+        "F083",
+        "T043",
+        "T044",
+        "T045"
+      ],
+      "needed": "Identify barrier family, participant granularity, arrival bandwidth, generation lifetime, drain conditions and resume behavior."
+    }
+  ],
+  "redundancy_and_doublecount_risks": [
+    {
+      "ids": [
+        "T007",
+        "T015",
+        "T018"
+      ],
+      "issue": "T007 andT015 have the same name; T018 is a tensor-specific member. Give class/scope keys and alias relationship, never add all three as separate waits."
+    },
+    {
+      "ids": [
+        "T014",
+        "T016",
+        "T017"
+      ],
+      "issue": "Class result latency can already include MOVM/matrix result latency; effective recurrence also includes issue/wakeup. Choose one timing contract per opcode."
+    },
+    {
+      "ids": [
+        "T027",
+        "T029",
+        "T030",
+        "T008",
+        "T009",
+        "T011"
+      ],
+      "issue": "The measured28cycle direct LDS recurrence includes return/wakeup/issue; adding all decomposed path terms to28 double-counts."
+    },
+    {
+      "ids": [
+        "F048",
+        "F054",
+        "F055",
+        "F056"
+      ],
+      "issue": "Partition configuration, usable L1 capacity and sets/ways are linked constraints; preserve separate definitions but derive one from the others where justified."
+    },
+    {
+      "ids": [
+        "F040",
+        "F052",
+        "F053",
+        "F042"
+      ],
+      "issue": "Coalescing, service splitting, broadcasts and returned-value assembly are different stages; avoid charging sector/package work twice."
+    }
+  ],
+  "conditional_details_not_required_at_fixed_operating_point": [
+    {
+      "detail": "Detailed voltage/temperature/boost governor policy",
+      "condition": "Clocks and thermal operating point are controlled and measured; retain observed drift bounds."
+    },
+    {
+      "detail": "Complete page-walk and translation hierarchy",
+      "condition": "Supported allocation/address footprint shows no consequential translation error; otherwise F043\u201347/T024\u201326 become necessary."
+    },
+    {
+      "detail": "Every CUDA/PTX numerical opcode and SFU",
+      "condition": "Fixed BF16-GEMM path executes only recovered native instruction families; exclude unsupported workloads."
+    },
+    {
+      "detail": "Private exact replacement policy",
+      "condition": "Working-set/reuse regime does not induce consequential evictions; a sensitivity-tested bounded policy may suffice, but cannot claim physical identification."
+    }
+  ],
+  "complete_gemm_scope_gaps": [
+    "Configured2SMs and2contexts do not reproduce170SMs and saved11resident-small-CTAs; scaling/resource placement must be validated.",
+    "No executable native instruction fetch/decode cache or full register-bank/collector routing despite parameters present.",
+    "Global address, staging and output scheduling are simplified; not complete original native hotloop timing.",
+    "Memory backend delays/overlap and slice/channel mapping remain hypotheses, preventing current full-hardware timing claim.",
+    "FullGPU instruction/format families, special-function units, texture/surface machinery, atomic/reduction protocols, device communication and graphics are excluded; this audit does not certify a completeGPU."
+  ],
+  "status_counts_unchanged": true,
+  "review": {
+    "human_first_technical_writing": "Concrete code-derived quantities and scopes reviewed; avoided treating provisional knobs as discoveries.",
+    "undergraduate_reader_review": "Explained workload/configuration versus physical properties and why alias/double-count distinctions matter."
+  }
+}

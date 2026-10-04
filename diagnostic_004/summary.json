@@ -1,0 +1,899 @@
+{
+  "measurements": 80,
+  "all_correct": true,
+  "all_spill_free": true,
+  "groups": [
+    {
+      "kind": "grid",
+      "tile": [
+        32,
+        32,
+        32
+      ],
+      "shape": [
+        1280,
+        1280,
+        1920
+      ],
+      "padding": 0,
+      "reservation": 0,
+      "median_ms": 0.155647993,
+      "min_ms": 0.155647993,
+      "max_ms": 0.155647993,
+      "resident_ctas": 11,
+      "registers_thread": 40,
+      "grid_blocks": 1600,
+      "repeats": 2
+    },
+    {
+      "kind": "grid",
+      "tile": [
+        64,
+        48,
+        32
+      ],
+      "shape": [
+        1280,
+        1280,
+        1920
+      ],
+      "padding": 0,
+      "reservation": 0,
+      "median_ms": 0.206831999,
+      "min_ms": 0.2068288,
+      "max_ms": 0.206835198,
+      "resident_ctas": 8,
+      "registers_thread": 64,
+      "grid_blocks": 540,
+      "repeats": 2
+    },
+    {
+      "kind": "grid",
+      "tile": [
+        32,
+        32,
+        32
+      ],
+      "shape": [
+        1344,
+        1344,
+        1920
+      ],
+      "padding": 0,
+      "reservation": 0,
+      "median_ms": 0.1699871985,
+      "min_ms": 0.169983998,
+      "max_ms": 0.169990399,
+      "resident_ctas": 11,
+      "registers_thread": 40,
+      "grid_blocks": 1764,
+      "repeats": 2
+    },
+    {
+      "kind": "grid",
+      "tile": [
+        64,
+        48,
+        32
+      ],
+      "shape": [
+        1344,
+        1344,
+        1920
+      ],
+      "padding": 0,
+      "reservation": 0,
+      "median_ms": 0.207235202,
+      "min_ms": 0.207232001,
+      "max_ms": 0.207238403,
+      "resident_ctas": 8,
+      "registers_thread": 64,
+      "grid_blocks": 588,
+      "repeats": 2
+    },
+    {
+      "kind": "grid",
+      "tile": [
+        32,
+        32,
+        32
+      ],
+      "shape": [
+        1376,
+        1376,
+        1920
+      ],
+      "padding": 0,
+      "reservation": 0,
+      "median_ms": 0.169993603,
+      "min_ms": 0.169990402,
+      "max_ms": 0.169996804,
+      "resident_ctas": 11,
+      "registers_thread": 40,
+      "grid_blocks": 1849,
+      "repeats": 2
+    },
+    {
+      "kind": "grid",
+      "tile": [
+        64,
+        48,
+        32
+      ],
+      "shape": [
+        1376,
+        1376,
+        1920
+      ],
+      "padding": 0,
+      "reservation": 0,
+      "median_ms": 0.206015998,
+      "min_ms": 0.205599999,
+      "max_ms": 0.206431997,
+      "resident_ctas": 8,
+      "registers_thread": 64,
+      "grid_blocks": 638,
+      "repeats": 2
+    },
+    {
+      "kind": "grid",
+      "tile": [
+        32,
+        32,
+        32
+      ],
+      "shape": [
+        1408,
+        1408,
+        1920
+      ],
+      "padding": 0,
+      "reservation": 0,
+      "median_ms": 0.21339200149999998,
+      "min_ms": 0.213388804,
+      "max_ms": 0.213395199,
+      "resident_ctas": 11,
+      "registers_thread": 40,
+      "grid_blocks": 1936,
+      "repeats": 2
+    },
+    {
+      "kind": "grid",
+      "tile": [
+        64,
+        48,
+        32
+      ],
+      "shape": [
+        1408,
+        1408,
+        1920
+      ],
+      "padding": 0,
+      "reservation": 0,
+      "median_ms": 0.2084767985,
+      "min_ms": 0.208473599,
+      "max_ms": 0.208479998,
+      "resident_ctas": 8,
+      "registers_thread": 64,
+      "grid_blocks": 660,
+      "repeats": 2
+    },
+    {
+      "kind": "grid",
+      "tile": [
+        32,
+        32,
+        32
+      ],
+      "shape": [
+        1440,
+        1440,
+        1920
+      ],
+      "padding": 0,
+      "reservation": 0,
+      "median_ms": 0.21565120100000001,
+      "min_ms": 0.2154432,
+      "max_ms": 0.215859202,
+      "resident_ctas": 11,
+      "registers_thread": 40,
+      "grid_blocks": 2025,
+      "repeats": 2
+    },
+    {
+      "kind": "grid",
+      "tile": [
+        64,
+        48,
+        32
+      ],
+      "shape": [
+        1440,
+        1440,
+        1920
+      ],
+      "padding": 0,
+      "reservation": 0,
+      "median_ms": 0.20540159800000002,
+      "min_ms": 0.205196798,
+      "max_ms": 0.205606398,
+      "resident_ctas": 8,
+      "registers_thread": 64,
+      "grid_blocks": 690,
+      "repeats": 2
+    },
+    {
+      "kind": "grid",
+      "tile": [
+        32,
+        32,
+        32
+      ],
+      "shape": [
+        1472,
+        1472,
+        1920
+      ],
+      "padding": 0,
+      "reservation": 0,
+      "median_ms": 0.217488001,
+      "min_ms": 0.2170816,
+      "max_ms": 0.217894402,
+      "resident_ctas": 11,
+      "registers_thread": 40,
+      "grid_blocks": 2116,
+      "repeats": 2
+    },
+    {
+      "kind": "grid",
+      "tile": [
+        64,
+        48,
+        32
+      ],
+      "shape": [
+        1472,
+        1472,
+        1920
+      ],
+      "padding": 0,
+      "reservation": 0,
+      "median_ms": 0.21153280149999998,
+      "min_ms": 0.211328003,
+      "max_ms": 0.2117376,
+      "resident_ctas": 8,
+      "registers_thread": 64,
+      "grid_blocks": 713,
+      "repeats": 2
+    },
+    {
+      "kind": "grid",
+      "tile": [
+        32,
+        32,
+        32
+      ],
+      "shape": [
+        1536,
+        1536,
+        1920
+      ],
+      "padding": 0,
+      "reservation": 0,
+      "median_ms": 0.220771198,
+      "min_ms": 0.220767996,
+      "max_ms": 0.2207744,
+      "resident_ctas": 11,
+      "registers_thread": 40,
+      "grid_blocks": 2304,
+      "repeats": 2
+    },
+    {
+      "kind": "grid",
+      "tile": [
+        64,
+        48,
+        32
+      ],
+      "shape": [
+        1536,
+        1536,
+        1920
+      ],
+      "padding": 0,
+      "reservation": 0,
+      "median_ms": 0.2111328005,
+      "min_ms": 0.210924801,
+      "max_ms": 0.2113408,
+      "resident_ctas": 8,
+      "registers_thread": 64,
+      "grid_blocks": 768,
+      "repeats": 2
+    },
+    {
+      "kind": "grid",
+      "tile": [
+        32,
+        32,
+        32
+      ],
+      "shape": [
+        1792,
+        1792,
+        1920
+      ],
+      "padding": 0,
+      "reservation": 0,
+      "median_ms": 0.27913920000000003,
+      "min_ms": 0.278937602,
+      "max_ms": 0.279340798,
+      "resident_ctas": 11,
+      "registers_thread": 40,
+      "grid_blocks": 3136,
+      "repeats": 2
+    },
+    {
+      "kind": "grid",
+      "tile": [
+        64,
+        48,
+        32
+      ],
+      "shape": [
+        1792,
+        1792,
+        1920
+      ],
+      "padding": 0,
+      "reservation": 0,
+      "median_ms": 0.2304032015,
+      "min_ms": 0.230208001,
+      "max_ms": 0.230598402,
+      "resident_ctas": 8,
+      "registers_thread": 64,
+      "grid_blocks": 1064,
+      "repeats": 2
+    },
+    {
+      "kind": "grid",
+      "tile": [
+        32,
+        32,
+        32
+      ],
+      "shape": [
+        1920,
+        1920,
+        1920
+      ],
+      "padding": 0,
+      "reservation": 0,
+      "median_ms": 0.31498239299999997,
+      "min_ms": 0.31498239,
+      "max_ms": 0.314982396,
+      "resident_ctas": 11,
+      "registers_thread": 40,
+      "grid_blocks": 3600,
+      "repeats": 2
+    },
+    {
+      "kind": "grid",
+      "tile": [
+        64,
+        48,
+        32
+      ],
+      "shape": [
+        1920,
+        1920,
+        1920
+      ],
+      "padding": 0,
+      "reservation": 0,
+      "median_ms": 0.25374079299999996,
+      "min_ms": 0.253542393,
+      "max_ms": 0.253939193,
+      "resident_ctas": 8,
+      "registers_thread": 64,
+      "grid_blocks": 1200,
+      "repeats": 2
+    },
+    {
+      "kind": "grid",
+      "tile": [
+        32,
+        32,
+        32
+      ],
+      "shape": [
+        2048,
+        2048,
+        1920
+      ],
+      "padding": 0,
+      "reservation": 0,
+      "median_ms": 0.36230399599999996,
+      "min_ms": 0.362105596,
+      "max_ms": 0.362502396,
+      "resident_ctas": 11,
+      "registers_thread": 40,
+      "grid_blocks": 4096,
+      "repeats": 2
+    },
+    {
+      "kind": "grid",
+      "tile": [
+        64,
+        48,
+        32
+      ],
+      "shape": [
+        2048,
+        2048,
+        1920
+      ],
+      "padding": 0,
+      "reservation": 0,
+      "median_ms": 0.340784001,
+      "min_ms": 0.340371197,
+      "max_ms": 0.341196805,
+      "resident_ctas": 8,
+      "registers_thread": 64,
+      "grid_blocks": 1376,
+      "repeats": 2
+    },
+    {
+      "kind": "depth",
+      "tile": [
+        32,
+        32,
+        32
+      ],
+      "shape": [
+        1920,
+        1920,
+        256
+      ],
+      "padding": 0,
+      "reservation": 0,
+      "median_ms": 0.047104001,
+      "min_ms": 0.047104001,
+      "max_ms": 0.047104001,
+      "resident_ctas": 11,
+      "registers_thread": 40,
+      "grid_blocks": 3600,
+      "repeats": 2
+    },
+    {
+      "kind": "depth",
+      "tile": [
+        64,
+        48,
+        32
+      ],
+      "shape": [
+        1920,
+        1920,
+        256
+      ],
+      "padding": 0,
+      "reservation": 0,
+      "median_ms": 0.038915198299999995,
+      "min_ms": 0.0389119983,
+      "max_ms": 0.0389183983,
+      "resident_ctas": 8,
+      "registers_thread": 64,
+      "grid_blocks": 1200,
+      "repeats": 2
+    },
+    {
+      "kind": "depth",
+      "tile": [
+        32,
+        32,
+        32
+      ],
+      "shape": [
+        1920,
+        1920,
+        512
+      ],
+      "padding": 0,
+      "reservation": 0,
+      "median_ms": 0.0913408011,
+      "min_ms": 0.0913408011,
+      "max_ms": 0.0913408011,
+      "resident_ctas": 11,
+      "registers_thread": 40,
+      "grid_blocks": 3600,
+      "repeats": 2
+    },
+    {
+      "kind": "depth",
+      "tile": [
+        64,
+        48,
+        32
+      ],
+      "shape": [
+        1920,
+        1920,
+        512
+      ],
+      "padding": 0,
+      "reservation": 0,
+      "median_ms": 0.0737376027,
+      "min_ms": 0.0737344027,
+      "max_ms": 0.0737408027,
+      "resident_ctas": 8,
+      "registers_thread": 64,
+      "grid_blocks": 1200,
+      "repeats": 2
+    },
+    {
+      "kind": "depth",
+      "tile": [
+        32,
+        32,
+        32
+      ],
+      "shape": [
+        1920,
+        1920,
+        1024
+      ],
+      "padding": 0,
+      "reservation": 0,
+      "median_ms": 0.174284799,
+      "min_ms": 0.174079999,
+      "max_ms": 0.174489599,
+      "resident_ctas": 11,
+      "registers_thread": 40,
+      "grid_blocks": 3600,
+      "repeats": 2
+    },
+    {
+      "kind": "depth",
+      "tile": [
+        64,
+        48,
+        32
+      ],
+      "shape": [
+        1920,
+        1920,
+        1024
+      ],
+      "padding": 0,
+      "reservation": 0,
+      "median_ms": 0.1400896015,
+      "min_ms": 0.139673603,
+      "max_ms": 0.1405056,
+      "resident_ctas": 8,
+      "registers_thread": 64,
+      "grid_blocks": 1200,
+      "repeats": 2
+    },
+    {
+      "kind": "depth",
+      "tile": [
+        32,
+        32,
+        32
+      ],
+      "shape": [
+        1920,
+        1920,
+        1920
+      ],
+      "padding": 0,
+      "reservation": 0,
+      "median_ms": 0.31518399399999997,
+      "min_ms": 0.31498239,
+      "max_ms": 0.315385598,
+      "resident_ctas": 11,
+      "registers_thread": 40,
+      "grid_blocks": 3600,
+      "repeats": 2
+    },
+    {
+      "kind": "depth",
+      "tile": [
+        64,
+        48,
+        32
+      ],
+      "shape": [
+        1920,
+        1920,
+        1920
+      ],
+      "padding": 0,
+      "reservation": 0,
+      "median_ms": 0.253139201,
+      "min_ms": 0.253139198,
+      "max_ms": 0.253139204,
+      "resident_ctas": 8,
+      "registers_thread": 64,
+      "grid_blocks": 1200,
+      "repeats": 2
+    },
+    {
+      "kind": "depth",
+      "tile": [
+        32,
+        32,
+        32
+      ],
+      "shape": [
+        1920,
+        1920,
+        3072
+      ],
+      "padding": 0,
+      "reservation": 0,
+      "median_ms": 0.49766720249999996,
+      "min_ms": 0.497260803,
+      "max_ms": 0.498073602,
+      "resident_ctas": 11,
+      "registers_thread": 40,
+      "grid_blocks": 3600,
+      "repeats": 2
+    },
+    {
+      "kind": "depth",
+      "tile": [
+        64,
+        48,
+        32
+      ],
+      "shape": [
+        1920,
+        1920,
+        3072
+      ],
+      "padding": 0,
+      "reservation": 0,
+      "median_ms": 0.3981343955,
+      "min_ms": 0.398131198,
+      "max_ms": 0.398137593,
+      "resident_ctas": 8,
+      "registers_thread": 64,
+      "grid_blocks": 1200,
+      "repeats": 2
+    },
+    {
+      "kind": "residency",
+      "tile": [
+        32,
+        32,
+        32
+      ],
+      "shape": [
+        1920,
+        1920,
+        1920
+      ],
+      "padding": 0,
+      "reservation": 24576,
+      "median_ms": 0.679315197,
+      "min_ms": 0.679116797,
+      "max_ms": 0.679513597,
+      "resident_ctas": 3,
+      "registers_thread": 40,
+      "grid_blocks": 3600,
+      "repeats": 2
+    },
+    {
+      "kind": "residency",
+      "tile": [
+        64,
+        48,
+        32
+      ],
+      "shape": [
+        1920,
+        1920,
+        1920
+      ],
+      "padding": 0,
+      "reservation": 24576,
+      "median_ms": 0.522851187,
+      "min_ms": 0.522649586,
+      "max_ms": 0.523052788,
+      "resident_ctas": 3,
+      "registers_thread": 64,
+      "grid_blocks": 1200,
+      "repeats": 2
+    },
+    {
+      "kind": "residency",
+      "tile": [
+        32,
+        32,
+        32
+      ],
+      "shape": [
+        1920,
+        1920,
+        1920
+      ],
+      "padding": 0,
+      "reservation": 45056,
+      "median_ms": 0.9644096075,
+      "min_ms": 0.963795209,
+      "max_ms": 0.965024006,
+      "resident_ctas": 2,
+      "registers_thread": 40,
+      "grid_blocks": 3600,
+      "repeats": 2
+    },
+    {
+      "kind": "residency",
+      "tile": [
+        64,
+        48,
+        32
+      ],
+      "shape": [
+        1920,
+        1920,
+        1920
+      ],
+      "padding": 0,
+      "reservation": 45056,
+      "median_ms": 0.672550392,
+      "min_ms": 0.672140789,
+      "max_ms": 0.672959995,
+      "resident_ctas": 2,
+      "registers_thread": 64,
+      "grid_blocks": 1200,
+      "repeats": 2
+    },
+    {
+      "kind": "layout",
+      "tile": [
+        32,
+        32,
+        32
+      ],
+      "shape": [
+        1920,
+        1920,
+        1920
+      ],
+      "padding": 8,
+      "reservation": 0,
+      "median_ms": 0.323376,
+      "min_ms": 0.323174399,
+      "max_ms": 0.323577601,
+      "resident_ctas": 10,
+      "registers_thread": 48,
+      "grid_blocks": 3600,
+      "repeats": 2
+    },
+    {
+      "kind": "layout",
+      "tile": [
+        64,
+        48,
+        32
+      ],
+      "shape": [
+        1920,
+        1920,
+        1920
+      ],
+      "padding": 8,
+      "reservation": 0,
+      "median_ms": 0.3330047995,
+      "min_ms": 0.332595199,
+      "max_ms": 0.3334144,
+      "resident_ctas": 7,
+      "registers_thread": 64,
+      "grid_blocks": 1200,
+      "repeats": 2
+    },
+    {
+      "kind": "layout",
+      "tile": [
+        32,
+        32,
+        32
+      ],
+      "shape": [
+        1920,
+        1920,
+        1920
+      ],
+      "padding": 16,
+      "reservation": 0,
+      "median_ms": 0.3258399995,
+      "min_ms": 0.325632,
+      "max_ms": 0.326047999,
+      "resident_ctas": 9,
+      "registers_thread": 48,
+      "grid_blocks": 3600,
+      "repeats": 2
+    },
+    {
+      "kind": "layout",
+      "tile": [
+        64,
+        48,
+        32
+      ],
+      "shape": [
+        1920,
+        1920,
+        1920
+      ],
+      "padding": 16,
+      "reservation": 0,
+      "median_ms": 0.398940796,
+      "min_ms": 0.397721601,
+      "max_ms": 0.400159991,
+      "resident_ctas": 6,
+      "registers_thread": 64,
+      "grid_blocks": 1200,
+      "repeats": 2
+    },
+    {
+      "kind": "recompiled_baseline",
+      "tile": [
+        32,
+        32,
+        32
+      ],
+      "shape": [
+        1920,
+        1920,
+        1920
+      ],
+      "padding": 0,
+      "reservation": 0,
+      "median_ms": 0.3174336015,
+      "min_ms": 0.3174272,
+      "max_ms": 0.317440003,
+      "resident_ctas": 11,
+      "registers_thread": 40,
+      "grid_blocks": 3600,
+      "repeats": 2
+    },
+    {
+      "kind": "recompiled_baseline",
+      "tile": [
+        64,
+        48,
+        32
+      ],
+      "shape": [
+        1920,
+        1920,
+        1920
+      ],
+      "padding": 0,
+      "reservation": 0,
+      "median_ms": 0.25968320349999996,
+      "min_ms": 0.259276801,
+      "max_ms": 0.260089606,
+      "resident_ctas": 8,
+      "registers_thread": 64,
+      "grid_blocks": 1200,
+      "repeats": 2
+    }
+  ],
+  "depth_fits": {
+    "(32, 32, 32)": {
+      "ms_per_stage": 0.005100917321967821,
+      "intercept_ms": 0.008837265068564448,
+      "max_fit_residual_ms": 0.0025406026443070204
+    },
+    "(64, 48, 32)": {
+      "ms_per_stage": 0.004071195495823021,
+      "intercept_ms": 0.008184510777104038,
+      "max_fit_residual_ms": 0.0018388764436882143
+    }
+  }
+}

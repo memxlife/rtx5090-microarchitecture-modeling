@@ -1,0 +1,71 @@
+{
+  "scope": "fully connected payload-free single SM, 2 resident contexts, M64 N96 K64, six CTAs including context reuse",
+  "rtl_comparison": {
+    "passed": true,
+    "cycles": 51535,
+    "read_sector_requests": 1536,
+    "write_sector_requests": 768,
+    "native_issues": 1920,
+    "checks": "every preedge launch, done, read request, write request, native issue, residency; tags/addresses/masks/PCs when valid",
+    "backing": "read31/write17 integer cycles; periodic7/11/13 cycle read/write/done readiness backpressure"
+  },
+  "event_vs_step": {
+    "passed": true,
+    "cycles": 51535,
+    "ordered_accepted_events": 6540,
+    "cycle_edges": 51535,
+    "event_edges": 12932,
+    "cycle_seconds": 0.133925,
+    "event_seconds": 0.0580575,
+    "speedup": 2.306764845196572
+  },
+  "staging_11_context_rtl": {
+    "passed": true,
+    "cycles": 3305,
+    "reads": 1408,
+    "warp_commits": 704
+  },
+  "hub_rtl": {
+    "passed": true,
+    "cycles": 5000,
+    "grants": 320,
+    "returns": 318
+  },
+  "not_claimed": [
+    "physical RTX5090 runtime accuracy",
+    "complete full-chip validation",
+    "numerical GEMM correctness in this payload-free model"
+  ],
+  "sources": {
+    "backing.hpp": "140d6929416127251dc8fb66a415e19ae418c43cc2657ec08a6776b5e6d37a55",
+    "grid_metadata.hpp": "b7cb619ec1b756c34af947fada415b53bddc49e35627154ff213e2a08d900105",
+    "generation_metadata.hpp": "32b8aff44983f29e0623611070202226c13d3029bc24b8a98131f81caf86c7b4",
+    "output_metadata.hpp": "86e07a8c18f0da075ec88bae56069ff805fd211961e985f83c789397787c55d2",
+    "l2_slice.hpp": "a2394a00b41d75d6b6fce924844a6a1c722d4fe98d429f37abb7c0760dec3ccd",
+    "native_stage_event.hpp": "e5d0f71be713774009020c869b71a64491fac6f1ff47f02824f158ec2d90dd98",
+    "sm_event.hpp": "2dee945736f6617997299ab8b183466160316f650a1cee38591c2eaf4eb75e3e",
+    "shared_hub_event.hpp": "593b961d10f8b8e929a148cb6aadadde4f32866fdfae9206b21d011a5fea182d",
+    "units.hpp": "6f92d6ed06913bd4622a43f29ad6cec4f5ad9ac02b7c20e2510b78890f4bffbe",
+    "resident_metadata.hpp": "e80f43ba854c0621f50b671a5de37fd8d7f85a6574ae362e9c89e03a1a07a3fa",
+    "staging_event.hpp": "f8a39e4c0c7637c66f449a3dfb291ed54fd8c38f37634880abd71a290a2a1f1b",
+    "native_schedule.hpp": "cc903710a14275ca26ea56ad2d5b804e37cd6ee3e3f41873665ba2a5242114ea",
+    "native_engine_event.hpp": "56ae7321d29552199d043f466c9b1ddab0604fc54da5a907c075ea75c0c77216"
+  },
+  "rtl_11_context_comparison": {
+    "passed": true,
+    "cycles": 99852,
+    "CTAs": 22,
+    "read_sector_requests": 5632,
+    "write_sector_requests": 2816,
+    "native_issues": 7040
+  },
+  "event_11_context_comparison": {
+    "passed": true,
+    "cycles": 99852,
+    "ordered_events": 23980,
+    "tick_edges": 99852,
+    "event_edges": 39959,
+    "tick_seconds": 0.341048,
+    "event_seconds": 0.222594
+  }
+}

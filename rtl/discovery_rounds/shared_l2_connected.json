@@ -1,0 +1,31 @@
+{
+  "previous_goal_turn": "progress: twoSMgrid and common backing gateway connected and24576outputs verified",
+  "model_change": "One read-only sector cache now sits between shared owner gateway and backing memory. Actual sector hits return stored values across SMs; misses wait matching backing packets, refill selected sector and return actual values. Masked output writes bypass this cache.",
+  "verification": [
+    "numerical/multi_sm_l2_gateway_verification.json",
+    "numerical/resident_multi_sm_l2_verification.json"
+  ],
+  "unit_reads": 5,
+  "unit_checked_words": 40,
+  "unit_hits": 1,
+  "unit_misses": 4,
+  "unit_backing_reads": 4,
+  "full_grid_checked_outputs": 24576,
+  "hardware_parameters_closed": 0,
+  "physical_counts": {
+    "identified": 8,
+    "partial": 32,
+    "unknown": 94
+  },
+  "timing_calibrated": false,
+  "counter_boundary": "Requests counted at ownership-to-cache acceptance; hits/misses counted at cache-to-ownership response acceptance, before a possibly heldSMclient response. Counts are cumulative until reset.",
+  "scope_limits": [
+    "Default64sets8ways128Bline64KiB is synthetic test geometry, not actualRTX5090L2 geometry.",
+    "One shared read-only cache, no multiple outstanding misses, dirty/writeback/invalidation/coherence or physicalslice mapping.",
+    "Inputs immutable untilreset; outputwrites disjoint from anycachedinput.",
+    "TwoSMtworesidentcontexts each,32x32tile only, no validation of original large workload or tile ranking.",
+    "All service delays/memoryturnaround remainmodel choices, no physicalruntimeclaim."
+  ],
+  "next": "Implement pending-memory concurrency and parameter binding; reproduce saved large-error workload and independently validate timing with renewed remote authorization.",
+  "independent_root_review": "numerical/shared_l2_root_review.json"
+}

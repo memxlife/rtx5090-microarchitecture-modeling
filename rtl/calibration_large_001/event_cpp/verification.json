@@ -1,0 +1,24 @@
+{
+  "arbitrary_stimulus_rtl_match": true,
+  "cycles": 4000,
+  "fields_per_cycle": 20,
+  "matched_fields": 80000,
+  "rtl_reference": [
+    "large_timing_matrix_pipeline.sv",
+    "large_warp_shared_read_service.sv",
+    "large_producer_barrier_tracker.sv"
+  ],
+  "trace_sha256": "6a945a6dca07e1044cd9b7ef0504471cb960f784f2edbbd6ea92c5f0d17f42f9",
+  "event_skip_comparison": "exact_events=85307 cycle_edges=1000000 event_edges=95438 cycle_seconds=0.00636129 event_seconds=0.00213167",
+  "scope": "Three component metadata primitives only; no integrated GEMM, numeric math, GPU timing validation or trace replay",
+  "sources": {
+    "tb.sv": "07ceebd961e6383311f5cf3a205e703b130fd9a3f7e878179cfaed94c83b4d36",
+    "native_stage_test.cpp": "d6ea44826aa0f10a0288a3be3788ce87ec70a1b333df8e7ea9d2a181befc7b76",
+    "test.cpp": "0f80d6f6acac5d0d6ec42a36e166af47f403c219cebbaf8bfc996ba8c79b0cf6",
+    "benchmark.cpp": "0b2a731e3088c77c1572e4579ce71d09dbd40c86083b040bad631ba4c10157df",
+    "native_stage_event.hpp": "eadad3afe3ebddd5be65e16ba34528749728984041251d23f1f679061fcfcf08",
+    "units.hpp": "6f92d6ed06913bd4622a43f29ad6cec4f5ad9ac02b7c20e2510b78890f4bffbe",
+    "native_schedule.hpp": "cc903710a14275ca26ea56ad2d5b804e37cd6ee3e3f41873665ba2a5242114ea"
+  },
+  "tracker_tags": 64
+}

@@ -1,0 +1,22 @@
+{
+  "component": "cached_shared_matrix_pipeline",
+  "source_sha256": "da5a9f2a440c631262600eb0f428bb13703fa2ea1df5df38b7c0db3654793c42",
+  "manual_section": "4.26",
+  "inline_source_parity": true,
+  "reviewed_protocols": [
+    "staging ready/valid and alignment",
+    "backing response identity",
+    "cache response held through two accepted halfword writes",
+    "stage completion only after final shared write",
+    "stage priority over same-edge matrix admission",
+    "matrix inputs captured before later staging",
+    "child reset connections",
+    "external pre-reset request/return cancellation obligation"
+  ],
+  "functional_review_defects": [],
+  "connected_test_status": "passed 14336 numerical words and completion-delay propagation; source hashes matched",
+  "human_first_review": "Purpose, scoped setup, numeric defaults, interface table, state transitions, reset and verification boundary reviewed in order.",
+  "undergraduate_review": "Defined transferred word/sector/halfword sizes, acceptance edges and dependency order; no physical timing or complete-GPU claim.",
+  "language_lint": "passed",
+  "connected_receipt": "cached_shared_matrix_verification.json"
+}

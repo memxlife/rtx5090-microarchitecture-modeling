@@ -1,0 +1,63 @@
+{
+  "accepted": true,
+  "documents": [
+    "rtl_microarchitecture_spec.md",
+    "README.md"
+  ],
+  "changed_sections": [
+    "4.25",
+    "4.34",
+    "4.37",
+    "4.38",
+    "4.39"
+  ],
+  "inline_source_parity": {
+    "components/sector_read_cache.sv": true,
+    "numerical/native_studied_stage_pipeline.sv": true,
+    "numerical/studied_gemm_cta_controller.sv": true,
+    "numerical/coalesced_u16_warp_load.sv": true,
+    "numerical/coalesced_fp32_warp_store.sv": true
+  },
+  "receipt_source_hashes_current": true,
+  "reviewed_current_receipts": [
+    "numerical/native_studied_stage_verification.json",
+    "numerical/native_studied_stage_warp_write_verification.json",
+    "numerical/coalesced_u16_warp_load_verification.json",
+    "numerical/coalesced_fp32_warp_store_verification.json",
+    "numerical/studied_gemm_cta_coalesced_output_verification.json",
+    "numerical/studied_gemm_cta_native_quick_verification.json"
+  ],
+  "historical_receipt": "numerical/studied_gemm_cta_coalesced_verification.json preserves earlier input-only controller version; not claimed current.",
+  "human_first_review": "Actual returned sectors supply multiple lane values. Masked output packets preserve untouched words. Acceptance/completion, snapshots, memory stability and reset contracts are explicit.",
+  "reader_review": "Request-count differs from halfword-count; both cycle boundaries are defined. Original row-major scratch values are preserved while scratch service is bypassed. Serial sector service and physical throughput are distinct.",
+  "reader_language_lint": "passed",
+  "quantitative_review": {
+    "stage_halfwords": 2048,
+    "warp_groups_per_stage": 64,
+    "stages": 48,
+    "full_K_warp_requests_and_shared_commits": 3072,
+    "full_K_sector_returns_and_cold_backing_requests": 6144,
+    "full_K_native_windows": 192,
+    "full_K_HMMA_operations": 768,
+    "output_warp_requests": 32,
+    "output_sector_packets_and_acknowledgments": 128,
+    "connected_output_checks": 5120,
+    "current_native_scalar_regression_checks": 4096,
+    "standalone_load_lane_checks": 224,
+    "standalone_store_memory_checks_including_unchanged": 20480,
+    "new_physical_parameter_closures": 0
+  },
+  "timing_calibrated": false,
+  "boundary": "Serial unique-sector service and one-edge vector writes are development hypotheses. Scratch values are gathered without scratch service or synchronization replay.",
+  "document_sha256": {
+    "rtl_microarchitecture_spec.md": "7ce7fe987a89806fde5105c8184cd356bf88f03fb905ba37f4671782f77c26ec",
+    "README.md": "9df2b1d0866ec200b69881615735fcfb854eb6e6f79c6471a8fd5ee9bd132331"
+  },
+  "source_sha256": {
+    "components/sector_read_cache.sv": "45c49166f1cf330b3c2ae4b41f5af0d96655d3a6d8cbeb5f09452e21c3592298",
+    "numerical/native_studied_stage_pipeline.sv": "f9086bee4fbace2e499e10ca8bb536622737c41b8185b233d27fa9af6e8b2081",
+    "numerical/studied_gemm_cta_controller.sv": "549ef9376a1ec6acd451ccb49591d156d90f976d7969b313bd1f093d8030bcc0",
+    "numerical/coalesced_u16_warp_load.sv": "473859bae9e27d6bdaec22c6d24189f7494e027e318a9cab1a745541b72b0d43",
+    "numerical/coalesced_fp32_warp_store.sv": "5c5da8187bef4824d1aa8cf17707a522e6d64062d2b44997fd3502dcde2393b8"
+  }
+}

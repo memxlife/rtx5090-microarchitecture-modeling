@@ -1,0 +1,27 @@
+{
+  "round": "literature_sweep_030",
+  "question": "Does a profiler cycle mean the same clock cycle for every hardware unit?",
+  "search": {
+    "engine": "Google",
+    "browser": "Chrome",
+    "query": "site:docs.nvidia.com/nsight-compute cycles clock domain per_second",
+    "visible_results_verified": true
+  },
+  "source": "https://docs.nvidia.com/nsight-compute/ProfilingGuide/index.html#cycle-metrics",
+  "section": "2.3.2 Cycle Metrics",
+  "documented_contract": "Cycle metrics count cycles in the named unit clock domain. Active and elapsed denominators also belong to that unit.",
+  "new_measurement_contracts": 1,
+  "full_hardware_field_closures": 0,
+  "unresolved_baseline": 127,
+  "test_recommendation": "Collect l1tex__cycles_elapsed.avg.per_second alongside sm__cycles_elapsed.avg.per_second or gpc__cycles_elapsed.avg.per_second in one compatible collection pass. Preserve raw units and check whether rates agree.",
+  "competing_explanations": [
+    "An extra shared package takes twoSMcycles because its unit processes at a lower clock rate.",
+    "An extra package costs twoSMcycles from service scheduling or dependency interactions even when unit clocks agree."
+  ],
+  "scope": "The documented domain rule does not prove either explanation or expose internal pipeline stages.",
+  "review": {
+    "sentence_review": true,
+    "cold_read": true,
+    "scope_review": true
+  }
+}

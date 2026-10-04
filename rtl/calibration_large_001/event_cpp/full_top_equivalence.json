@@ -1,0 +1,49 @@
+{
+  "cold_retained_cpp_parallel_exact": true,
+  "complete_cases": [
+    {
+      "launch": 0,
+      "M": 64,
+      "N": 96,
+      "K": 64,
+      "hashed": 0,
+      "warm": 0,
+      "cycles": 34493,
+      "checked": 6144,
+      "peak": 4,
+      "requests": 1536,
+      "hits": 324,
+      "misses": 1212,
+      "merges": 476,
+      "fills": 736
+    },
+    {
+      "launch": 1,
+      "M": 64,
+      "N": 96,
+      "K": 64,
+      "hashed": 0,
+      "warm": 0,
+      "cycles": 28251,
+      "checked": 6144,
+      "peak": 4,
+      "requests": 3072,
+      "hits": 1157,
+      "misses": 1915,
+      "merges": 655,
+      "fills": 1260
+    }
+  ],
+  "native_issues_each": 1920,
+  "full_chip_warm_reference_prefix": {
+    "elapsed": 9995,
+    "requests": 10567,
+    "hits": 10567,
+    "misses": 0,
+    "fills": 0,
+    "native": 0,
+    "source": "parallel_prefix_cpp_1536.log"
+  },
+  "global_credit_initial_nonreset_edges": 2,
+  "scope": "Actual complete tinyRTLcomparison and fullchipwarm boundedprefix; fullGPU hardware comparisons still running"
+}

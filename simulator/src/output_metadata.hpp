@@ -1,0 +1,38 @@
+#pragma once
+#include <array>
+#include <vector>
+#include <cstdint>
+#include <stdexcept>
+#include <limits>
+namespace output_event {
+using Cycle=uint64_t; constexpr Cycle never=std::numeric_limits<Cycle>::max();
+inline void require(bool ok,const char*why){if(!ok)throw std::runtime_error(why);}
+struct WarpStore {
+ enum State{IDLE,SEND,WAIT_ACK,RESPONSE}; State state=IDLE;
+ struct Sector{uint32_t address=0;uint8_t mask=0;};std::array<Sector,32> sectors{};uint32_t id=0;int count=0,current=0;
+ struct Inputs{bool reset=false,valid=false,response_ready=false,backing_ready=false,ack_valid=false;uint32_t request_id=0,active=~0u,ack_id=0;std::array<uint32_t,32>addresses{};};
+ struct Signals{bool ready=false,response=false,backing_valid=false,ack_ready=false;uint32_t response_id=0,backing_id=0,address=0;uint8_t mask=0;int sector_count=0;};
+ static std::pair<std::vector<Sector>,bool> coalesce(const Inputs&i){std::vector<Sector>r;bool legal=true;for(int lane=0;lane<32;lane++)if((i.active>>lane)&1){auto a=i.addresses[lane];if(a&3)legal=false;for(int e=0;e<lane;e++)if((i.active>>e)&1)if(a==i.addresses[e])legal=false;auto base=a&~31u;int n=0;while(n<int(r.size())&&r[n].address!=base)n++;if(n==int(r.size()))r.push_back({base,0});r[n].mask|=uint8_t(1u<<((a>>2)&7));}return{r,legal};}
+ Signals signals(const Inputs&i)const{auto p=coalesce(i);return{!i.reset&&state==IDLE&&p.second,!i.reset&&state==RESPONSE,!i.reset&&state==SEND,!i.reset&&state==WAIT_ACK,id,id^uint32_t(current),sectors[current].address,sectors[current].mask,count};}
+ void edge(const Inputs&i){if(i.reset){*this=WarpStore{};return;}auto p=coalesce(i);if(i.valid&&state==IDLE)require(p.second,"illegal or duplicate warp store address");switch(state){case IDLE:if(i.valid&&p.second){id=i.request_id;count=p.first.size();current=0;sectors={};for(int n=0;n<count;n++)sectors[n]=p.first[n];state=count?SEND:RESPONSE;}break;case SEND:if(i.backing_ready)state=WAIT_ACK;break;case WAIT_ACK:if(i.ack_valid){require(i.ack_id==(id^uint32_t(current)),"warp store acknowledgement identity");if(current==count-1)state=RESPONSE;else{current++;state=SEND;}}break;case RESPONSE:if(i.response_ready)state=IDLE;break;}}
+ Cycle wake(Cycle)const{return never;} // all transitions depend on external acceptance/arrival
+};
+struct Scratch {
+ enum State{IDLE,STORE_PREP,STORE_SERVICE,STORE_RETURN,READ_SEND,READ_WAIT,RESPONSE};State state=IDLE;int interval=1,delay=1,warp=0,group=0,remaining=0,pacing=0,return_delay=0,ordinal=0;uint32_t id=0;std::array<bool,64>pending{};std::array<int,64>address{};std::array<bool,1024>initialized{};int stores=0,commits=0,reads=0,completions=0;
+ struct Inputs{bool reset=false,valid=false,response_ready=false,store_grant=false,read_grant=false,read_response=false;uint32_t request_id=0,read_response_id=0;};
+ struct Signals{bool ready=false,response=false,store_candidate=false,read_candidate=false,read_response_ready=false;uint32_t response_id=0,read_id=0;std::array<uint32_t,32>read_addresses{};int outstanding=0,selected=0;};
+ static int index(int lane,int element){return (lane/4+8*((element/2)%2))*16+2*(lane%4)+element%2+8*(element/4);}
+ std::array<int,32>selection()const{std::array<int,32>s;s.fill(-1);for(int e=0;e<64;e++)if(pending[e]&&s[address[e]%32]<0)s[address[e]%32]=e;return s;}
+ Signals signals(bool reset=false)const{Signals s;s.ready=!reset&&state==IDLE;s.response=!reset&&state==RESPONSE;s.store_candidate=!reset&&state==STORE_SERVICE&&pacing==0;s.read_candidate=!reset&&state==READ_SEND;s.read_response_ready=!reset&&state==READ_WAIT;s.response_id=id;s.read_id=ordinal;s.outstanding=state!=IDLE;for(int l=0;l<32;l++)s.read_addresses[l]=1024*(ordinal/8)+4*(l+32*(ordinal%8));for(int e:selection())s.selected+=e>=0;return s;}
+ void edge(const Inputs&i){require(interval>=1&&delay>=1,"scratch timing");if(i.reset){int a=interval,b=delay;*this=Scratch{};interval=a;delay=b;return;}auto s=signals();require(!i.store_grant||s.store_candidate,"scratch store grant without candidate");require(!i.read_grant||s.read_candidate,"scratch read grant without candidate");require(!i.read_response||state==READ_WAIT,"scratch unowned read response");switch(state){case IDLE:if(i.valid){id=i.request_id;warp=group=ordinal=0;stores=commits=reads=completions=0;initialized.fill(false);state=STORE_PREP;}break;case STORE_PREP:for(int l=0;l<32;l++)for(int h=0;h<2;h++){int e=2*l+h;pending[e]=true;address[e]=256*warp+index(l,2*group+h);}remaining=64;pacing=0;stores++;state=STORE_SERVICE;break;case STORE_SERVICE:if(pacing>0)pacing--;else if(i.store_grant){require(s.selected>=1&&s.selected<=remaining,"scratch bank work");for(int e:selection())if(e>=0){initialized[address[e]]=true;pending[e]=false;}commits+=s.selected;remaining-=s.selected;pacing=interval-1;if(remaining==0){return_delay=delay-1;state=STORE_RETURN;}}break;case STORE_RETURN:if(return_delay>0)return_delay--;else if(group<3){group++;state=STORE_PREP;}else if(warp<3){warp++;group=0;state=STORE_PREP;}else{require(commits==1024&&stores==16,"scratch visibility fence");ordinal=0;state=READ_SEND;}break;case READ_SEND:if(i.read_grant){for(int l=0;l<32;l++)require(initialized[256*(ordinal/8)+l+32*(ordinal%8)],"scratch read before visibility");reads++;state=READ_WAIT;}break;case READ_WAIT:if(i.read_response){require(i.read_response_id==uint32_t(ordinal),"scratch read completion identity");completions++;if(ordinal==31)state=RESPONSE;else{ordinal++;state=READ_SEND;}}break;case RESPONSE:if(i.response_ready)state=IDLE;break;}}
+ Cycle wake(Cycle now)const{if(state==STORE_PREP||state==STORE_RETURN||state==STORE_SERVICE&&pacing>0)return now+1;return never;}
+ // A caller may jump a STORE_RETURN/STORE_SERVICE countdown only if no external event precedes it.
+ void skip_idle(Cycle edges){if(state==STORE_RETURN){require(edges<=uint64_t(return_delay),"scratch skip crosses return transition");return_delay-=edges;}else if(state==STORE_SERVICE){require(edges<=uint64_t(pacing),"scratch skip crosses store opportunity");pacing-=edges;}else require(edges==0,"scratch unsupported skipped state");}
+};
+struct Admission {
+ int slots=11,reg_capacity=65536,shared_capacity=102400,max_warps=48;std::vector<bool>busy;std::vector<int>regs,shared,warps;Admission(int n=11):slots(n),busy(n),regs(n),shared(n),warps(n){}
+ struct Demand{int threads=128,registers=40,user_shared=8192,reserved_shared=1024;};struct Signals{bool ready=false;int slot=-1,resident=0,resident_warps=0,allocated_regs=0,allocated_shared=0;};
+ Signals signals(Demand d)const{Signals s;bool valid=d.threads>0&&d.threads<=1024&&d.registers>=0&&d.registers<=255&&d.user_shared>=0&&d.reserved_shared>=0;int rw=0,ww=0,launch=0;if(valid){ww=(d.threads+31)/32;rw=((d.registers*32+255)/256)*256;s.allocated_regs=rw*ww;launch=rw*((ww+3)/4)*4;s.allocated_shared=((d.user_shared+d.reserved_shared+127)/128)*128;}int fr=reg_capacity,fs=shared_capacity;for(int n=0;n<slots;n++)if(busy[n]){s.resident++;s.resident_warps+=warps[n];fr-=regs[n];fs-=shared[n];}else if(s.slot<0)s.slot=n;s.ready=s.slot>=0&&s.allocated_regs<=fr&&s.allocated_shared<=fs&&valid&&d.user_shared<=101376&&launch<=reg_capacity&&s.resident_warps+ww<=max_warps;return s;}
+ void edge(bool reset,bool admit,bool retire,int retire_slot,Demand d){if(reset){std::fill(busy.begin(),busy.end(),false);std::fill(regs.begin(),regs.end(),0);std::fill(shared.begin(),shared.end(),0);std::fill(warps.begin(),warps.end(),0);return;}auto s=signals(d);if(retire){require(retire_slot>=0&&retire_slot<slots&&busy[retire_slot],"admission invalid retirement");busy[retire_slot]=false;warps[retire_slot]=0;}if(admit&&s.ready){busy[s.slot]=true;regs[s.slot]=s.allocated_regs;shared[s.slot]=s.allocated_shared;warps[s.slot]=(d.threads+31)/32;}}
+};
+}

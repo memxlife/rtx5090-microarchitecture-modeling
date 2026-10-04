@@ -1,0 +1,31 @@
+{
+  "all_passed": true,
+  "checks": 13,
+  "issued_operations": 10,
+  "original_fixture_PCs": [
+    "0x1350",
+    "0x14c0",
+    "0x1370",
+    "0x1380",
+    "0x14e0"
+  ],
+  "fixture_source": "../diagnostic_050/gemm.sass",
+  "control_semantics": "Issue-delay floor1 and all outstanding producers per requested barrier; reconstruction hypothesis, not complete native scoreboard semantics.",
+  "completion_contract": "Separate actual operands-consumed read event and result-ready write event; no predicted timestamps; clients complete only allocated barrier namespaces.",
+  "same_edge_rule": "Pre-edge readiness; completion unblocks following cycle; no same-edge ID reuse.",
+  "tag_rule": "Operation IDs cannot be reused while either allocated read/write tracker is active. No-barrier operations have no completion tracking.",
+  "unsupported": [
+    "Opcode-specific implicit dependencies and results without assigned barriers",
+    "group_continue scheduling semantics",
+    "Branch execution and register scoreboard",
+    "Physical hardware queue capacity or timing"
+  ],
+  "new_identified_registry_fields": 0,
+  "source_sha256": {
+    "discovery_rounds/native_barrier_015/native_control_decode.sv": "8c50509b7a80eeed376e83a2078ec8f1b7da30f7cea64d48c8f5248569315cdb",
+    "discovery_rounds/native_barrier_015/producer_barrier_tracker.sv": "a07e60e6d6596cd2aec665367a308b358e2bad05196096c6d68ef636e57d42ad",
+    "components/decoded_native_issue_gate.sv": "9b3f3e8c82c40af5d73839b64dfc1279778f53fc95044cfe55cf0ce09625b427",
+    "components/decoded_native_issue_gate_tb.sv": "dc2c1a54c45aabdbbe40050f9c759ab20c3b47df54828b39211858d0bac4b40c"
+  },
+  "stdout": "DECODED_ISSUE_GATE_PASS checks=13 issued=10\n- rtl/components/decoded_native_issue_gate_tb.sv:78: Verilog $finish\n- S i m u l a t i o n   R e p o r t: Verilator 5.050 2026-07-01\n- Verilator: $finish at 506ps; walltime 0.000 s; speed 5.816 us/s\n- Verilator: cpu 0.000 s on 1 threads; allocated 2 MB\n"
+}

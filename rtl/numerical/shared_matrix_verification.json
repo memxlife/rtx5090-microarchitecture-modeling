@@ -1,0 +1,169 @@
+{
+  "all_passed": true,
+  "checked_output_words": 18432,
+  "cases": [
+    {
+      "base_pattern": "identity_right",
+      "row_mode": 0
+    },
+    {
+      "base_pattern": "identity_right",
+      "row_mode": 1
+    },
+    {
+      "base_pattern": "identity_right",
+      "row_mode": 2
+    },
+    {
+      "base_pattern": "identity_right",
+      "row_mode": 3
+    },
+    {
+      "base_pattern": "zero_product_nonzero_accumulator",
+      "row_mode": 0
+    },
+    {
+      "base_pattern": "zero_product_nonzero_accumulator",
+      "row_mode": 1
+    },
+    {
+      "base_pattern": "zero_product_nonzero_accumulator",
+      "row_mode": 2
+    },
+    {
+      "base_pattern": "zero_product_nonzero_accumulator",
+      "row_mode": 3
+    },
+    {
+      "base_pattern": "signed_integer",
+      "row_mode": 0
+    },
+    {
+      "base_pattern": "signed_integer",
+      "row_mode": 1
+    },
+    {
+      "base_pattern": "signed_integer",
+      "row_mode": 2
+    },
+    {
+      "base_pattern": "signed_integer",
+      "row_mode": 3
+    },
+    {
+      "base_pattern": "fractional_rounding",
+      "row_mode": 0
+    },
+    {
+      "base_pattern": "fractional_rounding",
+      "row_mode": 1
+    },
+    {
+      "base_pattern": "fractional_rounding",
+      "row_mode": 2
+    },
+    {
+      "base_pattern": "fractional_rounding",
+      "row_mode": 3
+    },
+    {
+      "base_pattern": "cancellation",
+      "row_mode": 0
+    },
+    {
+      "base_pattern": "cancellation",
+      "row_mode": 1
+    },
+    {
+      "base_pattern": "cancellation",
+      "row_mode": 2
+    },
+    {
+      "base_pattern": "cancellation",
+      "row_mode": 3
+    },
+    {
+      "base_pattern": "varied_exponents",
+      "row_mode": 0
+    },
+    {
+      "base_pattern": "varied_exponents",
+      "row_mode": 1
+    },
+    {
+      "base_pattern": "varied_exponents",
+      "row_mode": 2
+    },
+    {
+      "base_pattern": "varied_exponents",
+      "row_mode": 3
+    }
+  ],
+  "checks": [
+    {
+      "latency_synthetic": 2,
+      "interval_synthetic": 1,
+      "storage_capacity_bytes": 1024,
+      "output": "SHARED_MATRIX_PASS operations=24 checked_words=6144 readiness snapshot stall reset\n- rtl/numerical/shared_matrix_tb.sv:71: Verilog $finish\n- S i m u l a t i o n   R e p o r t: Verilator 5.050 2026-07-01\n- Verilator: $finish at 25us; walltime 0.025 s; speed 1.001 ms/s\n- Verilator: cpu 0.025 s on 1 threads; allocated 2 MB\n",
+      "passed": true
+    },
+    {
+      "latency_synthetic": 17,
+      "interval_synthetic": 3,
+      "storage_capacity_bytes": 1024,
+      "output": "SHARED_MATRIX_PASS operations=24 checked_words=6144 readiness snapshot stall reset\n- rtl/numerical/shared_matrix_tb.sv:71: Verilog $finish\n- S i m u l a t i o n   R e p o r t: Verilator 5.050 2026-07-01\n- Verilator: $finish at 26us; walltime 0.027 s; speed 947.574 us/s\n- Verilator: cpu 0.027 s on 1 threads; allocated 2 MB\n",
+      "passed": true
+    },
+    {
+      "invalid_input_rejected": "writeodd",
+      "passed": true
+    },
+    {
+      "invalid_input_rejected": "unaligned",
+      "passed": true
+    },
+    {
+      "invalid_input_rejected": "outofbounds",
+      "passed": true
+    },
+    {
+      "latency_synthetic": 17,
+      "interval_synthetic": 3,
+      "storage_capacity_bytes": 102400,
+      "output": "SHARED_MATRIX_PASS operations=24 checked_words=6144 readiness snapshot stall reset\n- rtl/numerical/shared_matrix_tb.sv:71: Verilog $finish\n- S i m u l a t i o n   R e p o r t: Verilator 5.050 2026-07-01\n- Verilator: $finish at 26us; walltime 0.033 s; speed 772.696 us/s\n- Verilator: cpu 0.033 s on 1 threads; allocated 4 MB\n",
+      "passed": true
+    }
+  ],
+  "source_sha256": {
+    "discovery_rounds/ldsm_mapping_003/ldsm_x4_layout.sv": "23a1d35298e0bdac49b0d8f9a65e313032affca08f4a0eaaf9483b4c3b2bf47c",
+    "discovery_rounds/functional_mapping_002/native_bf16_layout.sv": "63658e6b59f2d124cab3a73159d3219c3d350616cec99bf72fab58afc42df76b",
+    "numerical/numerical_matrix_pipeline.sv": "20d64fa7c297f0a4cf83a68f899a199330cc7907f136f031d1f5b030d4a010b4",
+    "numerical/native_bf16_adapter.sv": "ca05d62325e04c3ab0d982a6d0755355903f331799f83a396d512b866de58d6d",
+    "numerical/shared_matrix_pipeline.sv": "535f3405d1d2b27ff0c3cb0b789283565f2e7dd5d9ff9376e40f3fcdb677a62e",
+    "numerical/shared_matrix_tb.sv": "c26e857b7f72b7b732721af4e6b1fc691aa36a419da8240d3492eafc6f80e0d5",
+    "numerical/bf16_reference.cpp": "0da9f3da8194c8d832b60ef29028a456397c76f9b0edc2b6e45c1ef69e14e1d3"
+  },
+  "vector_sha256": {
+    "expected.hex": "c85ebfd6995d8286e6a3b7794f33e71bbcf264596e7c3b2a919c3c5d436fc00e",
+    "c.hex": "e31727b4713f245e33b247ab1398187b003c8694d182b2aaa2f7581f37d33521",
+    "storage.hex": "e473482a3fd48f85b2e71e163c8ebf7a45237b31fc20abc83bc2eb6577c9decb"
+  },
+  "modelled_storage_bytes_test": [
+    1024,
+    102400
+  ],
+  "buffers_at_upper_capacity_boundary": true,
+  "model_default_storage_bytes": 102400,
+  "physical_timing_calibrated": false,
+  "native_accumulation_order_identified": false,
+  "full_gpu_integrated": false,
+  "protocol_checks": [
+    "no issue before final shared write becomes visible",
+    "input snapshot survives subsequent shared overwrite",
+    "operation identity",
+    "stalled result stability",
+    "completion retirement",
+    "reset invalidates shared operands"
+  ],
+  "arithmetic_oracle": "Exact rational sequential FP32 fused-multiply-add convention; not identified NVIDIA accumulation order"
+}

@@ -1,0 +1,85 @@
+{
+  "all_passed": true,
+  "directed_positive_checks": 20,
+  "rejection_cases": 9,
+  "checks": [
+    {
+      "name": "normal",
+      "release_delay": 1,
+      "passed": true,
+      "stdout": "CTA_GENERATION_BARRIER_PASS checks=10 delay=1\n- rtl/components/cta_generation_barrier_tb.sv:49: Verilog $finish\n- S i m u l a t i o n   R e p o r t: Verilator 5.050 2026-07-01\n- Verilator: $finish at 351ps; walltime 0.000 s; speed 6.052 us/s\n- Verilator: cpu 0.000 s on 1 threads; allocated 2 MB\n",
+      "directed_checks": 10
+    },
+    {
+      "name": "early",
+      "release_delay": 1,
+      "passed": true,
+      "stdout": "[15] %Fatal: cta_generation_barrier.sv:30: Assertion failed in cta_generation_barrier_tb.dut: CTA arrival before generation arm\n%Error: rtl/components/cta_generation_barrier.sv:30: Verilog $stop\nAborting...\n"
+    },
+    {
+      "name": "same_edge",
+      "release_delay": 1,
+      "passed": true,
+      "stdout": "[15] %Fatal: cta_generation_barrier.sv:30: Assertion failed in cta_generation_barrier_tb.dut: CTA arrival before generation arm\n%Error: rtl/components/cta_generation_barrier.sv:30: Verilog $stop\nAborting...\n"
+    },
+    {
+      "name": "empty_arm",
+      "release_delay": 1,
+      "passed": true,
+      "stdout": "[15] %Fatal: cta_generation_barrier.sv:40: Assertion failed in cta_generation_barrier_tb.dut: Empty CTA expected mask\n%Error: rtl/components/cta_generation_barrier.sv:40: Verilog $stop\nAborting...\n"
+    },
+    {
+      "name": "bad_arm",
+      "release_delay": 1,
+      "passed": true,
+      "stdout": "[15] %Fatal: cta_generation_barrier.sv:39: Assertion failed in cta_generation_barrier_tb.dut: CTA arm generation out of sequence\n%Error: rtl/components/cta_generation_barrier.sv:39: Verilog $stop\nAborting...\n"
+    },
+    {
+      "name": "future",
+      "release_delay": 1,
+      "passed": true,
+      "stdout": "[35] %Fatal: cta_generation_barrier.sv:31: Assertion failed in cta_generation_barrier_tb.dut: CTA arrival generation mismatch\n%Error: rtl/components/cta_generation_barrier.sv:31: Verilog $stop\nAborting...\n"
+    },
+    {
+      "name": "wrongmask",
+      "release_delay": 1,
+      "passed": true,
+      "stdout": "[35] %Fatal: cta_generation_barrier.sv:33: Assertion failed in cta_generation_barrier_tb.dut: Unexpected CTA arrival warp\n%Error: rtl/components/cta_generation_barrier.sv:33: Verilog $stop\nAborting...\n"
+    },
+    {
+      "name": "empty_arrival",
+      "release_delay": 1,
+      "passed": true,
+      "stdout": "[35] %Fatal: cta_generation_barrier.sv:32: Assertion failed in cta_generation_barrier_tb.dut: Empty CTA arrival mask\n%Error: rtl/components/cta_generation_barrier.sv:32: Verilog $stop\nAborting...\n"
+    },
+    {
+      "name": "duplicate",
+      "release_delay": 1,
+      "passed": true,
+      "stdout": "[55] %Fatal: cta_generation_barrier.sv:34: Assertion failed in cta_generation_barrier_tb.dut: Duplicate CTA generation arrival\n%Error: rtl/components/cta_generation_barrier.sv:34: Verilog $stop\nAborting...\n"
+    },
+    {
+      "name": "stale",
+      "release_delay": 1,
+      "passed": true,
+      "stdout": "[145] %Fatal: cta_generation_barrier.sv:31: Assertion failed in cta_generation_barrier_tb.dut: CTA arrival generation mismatch\n%Error: rtl/components/cta_generation_barrier.sv:31: Verilog $stop\nAborting...\n"
+    },
+    {
+      "name": "normal",
+      "release_delay": 5,
+      "passed": true,
+      "stdout": "CTA_GENERATION_BARRIER_PASS checks=10 delay=5\n- rtl/components/cta_generation_barrier_tb.sv:49: Verilog $finish\n- S i m u l a t i o n   R e p o r t: Verilator 5.050 2026-07-01\n- Verilator: $finish at 471ps; walltime 0.000 s; speed 6.365 us/s\n- Verilator: cpu 0.000 s on 1 threads; allocated 2 MB\n",
+      "directed_checks": 10
+    }
+  ],
+  "generation_sequence": "Starts0; one armed generation; next increment only after release acknowledgement; no wrap supported.",
+  "arrival_rule": "Nonempty expected subset with no duplicate warp arrivals; same-edge idle arm+arrival rejected.",
+  "backpressure": "Release identity/mask stable until ack; next arm cannot accept on release-ack edge. Held arm allowed while busy.",
+  "reset": "Cancels active collection/delayed or held release; next generation resets0.",
+  "timing_scope": "Release delay and warp-level arrivals are simulation choices, not measured CTA barrier implementation.",
+  "new_identified_registry_fields": 0,
+  "source_sha256": {
+    "cta_generation_barrier.sv": "383b1639ec746b4024a652cf9f11e225716ce871f8c2140781a361dbdb17857f",
+    "cta_generation_barrier_tb.sv": "94f34dfa758c6ecb1e604fccc4ccf511bfbed26571da8523622fdf48f0313858"
+  }
+}

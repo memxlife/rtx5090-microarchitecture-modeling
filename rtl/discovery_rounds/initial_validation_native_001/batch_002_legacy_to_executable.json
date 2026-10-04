@@ -1,0 +1,1802 @@
+{
+  "track": "Native/library initialvalidation batch2 legacy baseline to actual implementation mapping",
+  "rows_checked": 97,
+  "check_performed_not_evidence_supported": true,
+  "counts": {
+    "checked_not_exercised": 46,
+    "mapped_executable_subcase_not_exact_baseline": 50,
+    "scoped_contract_observed": 1
+  },
+  "rows": [
+    {
+      "id": "F004",
+      "name": "Dispatch arbitration policy",
+      "legacy_baseline": "oldest ready CTA first",
+      "baseline_unit": "policy",
+      "actual_implementation": "No connected implementation of this exact field: nativeinstruction frontend/registercollector, translation, memorycontroller or clock-domain machinery is absent or abstracted.",
+      "source": "numerical/resident_gemm_multi_sm_nb_l2.sv",
+      "result": "checked_not_exercised",
+      "suggested_action": "Retain the supplied engineering sensitivity domain; omit cost when the mechanism is conditionally absent, or implement one named stage before evaluating it.",
+      "useful_model_range_or_alternatives": [
+        "round robin"
+      ],
+      "range_interpretation": "Existing engineering sensitivity domain; not measured confidence interval or new hardware fact.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F005",
+      "name": "Instruction-cache capacity",
+      "legacy_baseline": 16384,
+      "baseline_unit": "bytes per partition",
+      "actual_implementation": "No connected implementation of this exact field: nativeinstruction frontend/registercollector, translation, memorycontroller or clock-domain machinery is absent or abstracted.",
+      "source": "numerical/resident_gemm_multi_sm_nb_l2.sv",
+      "result": "checked_not_exercised",
+      "suggested_action": "Retain the supplied engineering sensitivity domain; omit cost when the mechanism is conditionally absent, or implement one named stage before evaluating it.",
+      "useful_model_range_or_alternatives": [
+        8192,
+        65536
+      ],
+      "range_interpretation": "Existing engineering sensitivity domain; not measured confidence interval or new hardware fact.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F006",
+      "name": "Instruction-cache sets",
+      "legacy_baseline": 64,
+      "baseline_unit": "sets per partition",
+      "actual_implementation": "No connected implementation of this exact field: nativeinstruction frontend/registercollector, translation, memorycontroller or clock-domain machinery is absent or abstracted.",
+      "source": "numerical/resident_gemm_multi_sm_nb_l2.sv",
+      "result": "checked_not_exercised",
+      "suggested_action": "Retain the supplied engineering sensitivity domain; omit cost when the mechanism is conditionally absent, or implement one named stage before evaluating it.",
+      "useful_model_range_or_alternatives": [
+        32,
+        128
+      ],
+      "range_interpretation": "Existing engineering sensitivity domain; not measured confidence interval or new hardware fact.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F007",
+      "name": "Instruction-cache associativity",
+      "legacy_baseline": 4,
+      "baseline_unit": "ways",
+      "actual_implementation": "No connected implementation of this exact field: nativeinstruction frontend/registercollector, translation, memorycontroller or clock-domain machinery is absent or abstracted.",
+      "source": "numerical/resident_gemm_multi_sm_nb_l2.sv",
+      "result": "checked_not_exercised",
+      "suggested_action": "Retain the supplied engineering sensitivity domain; omit cost when the mechanism is conditionally absent, or implement one named stage before evaluating it.",
+      "useful_model_range_or_alternatives": [
+        2,
+        8
+      ],
+      "range_interpretation": "Existing engineering sensitivity domain; not measured confidence interval or new hardware fact.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F008",
+      "name": "Instruction-cache mapping",
+      "legacy_baseline": "set=(instruction_byte_address//64)%64; partition-private",
+      "baseline_unit": "policy",
+      "actual_implementation": "No connected implementation of this exact field: nativeinstruction frontend/registercollector, translation, memorycontroller or clock-domain machinery is absent or abstracted.",
+      "source": "numerical/resident_gemm_multi_sm_nb_l2.sv",
+      "result": "checked_not_exercised",
+      "suggested_action": "Retain the supplied engineering sensitivity domain; omit cost when the mechanism is conditionally absent, or implement one named stage before evaluating it.",
+      "useful_model_range_or_alternatives": [
+        "SM-shared instruction cache"
+      ],
+      "range_interpretation": "Existing engineering sensitivity domain; not measured confidence interval or new hardware fact.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F009",
+      "name": "Instruction-cache replacement policy",
+      "legacy_baseline": "LRU",
+      "baseline_unit": "replacement policy",
+      "actual_implementation": "No connected implementation of this exact field: nativeinstruction frontend/registercollector, translation, memorycontroller or clock-domain machinery is absent or abstracted.",
+      "source": "numerical/resident_gemm_multi_sm_nb_l2.sv",
+      "result": "checked_not_exercised",
+      "suggested_action": "Retain the supplied engineering sensitivity domain; omit cost when the mechanism is conditionally absent, or implement one named stage before evaluating it.",
+      "useful_model_range_or_alternatives": [
+        "pseudo-LRU",
+        "random"
+      ],
+      "range_interpretation": "Existing engineering sensitivity domain; not measured confidence interval or new hardware fact.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F011",
+      "name": "Divergence handling",
+      "legacy_baseline": "active-lane mask with per-thread program counter; only enabled lanes execute",
+      "baseline_unit": "policy",
+      "actual_implementation": "No connected implementation of this exact field: nativeinstruction frontend/registercollector, translation, memorycontroller or clock-domain machinery is absent or abstracted.",
+      "source": "numerical/resident_gemm_multi_sm_nb_l2.sv",
+      "result": "checked_not_exercised",
+      "suggested_action": "Retain the supplied engineering sensitivity domain; omit cost when the mechanism is conditionally absent, or implement one named stage before evaluating it.",
+      "useful_model_range_or_alternatives": [
+        "warp-stack approximation"
+      ],
+      "range_interpretation": "Existing engineering sensitivity domain; not measured confidence interval or new hardware fact.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F012",
+      "name": "Reconvergence handling",
+      "legacy_baseline": "explicit convergence tokens and active-mask restoration at annotated merge PCs",
+      "baseline_unit": "policy",
+      "actual_implementation": "No connected implementation of this exact field: nativeinstruction frontend/registercollector, translation, memorycontroller or clock-domain machinery is absent or abstracted.",
+      "source": "numerical/resident_gemm_multi_sm_nb_l2.sv",
+      "result": "checked_not_exercised",
+      "suggested_action": "Retain the supplied engineering sensitivity domain; omit cost when the mechanism is conditionally absent, or implement one named stage before evaluating it.",
+      "useful_model_range_or_alternatives": [
+        "immediate-postdominator warp stack"
+      ],
+      "range_interpretation": "Existing engineering sensitivity domain; not measured confidence interval or new hardware fact.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F014",
+      "name": "Warp-to-partition assignment",
+      "legacy_baseline": "warp_id modulo 4",
+      "baseline_unit": "partition assignment",
+      "actual_implementation": "Per-context warp identities flatten into global RR candidates; no warp-to-four-partition assignment exists.",
+      "source": "numerical/resident_native_stage_shared.sv",
+      "result": "mapped_executable_subcase_not_exact_baseline",
+      "suggested_action": "Keep warp_id%4 as optional routing hypothesis, not claim it is exercised.",
+      "useful_model_range_or_alternatives": [
+        "round-robin at admission"
+      ],
+      "range_interpretation": "Existing engineering sensitivity domain; not measured confidence interval or new hardware fact.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F016",
+      "name": "Multiple-issue compatibility rules",
+      "legacy_baseline": "one issue per partition per cycle; mixed classes allowed across partitions subject to resource readiness",
+      "baseline_unit": "policy",
+      "actual_implementation": "One global selected instruction per engine edge, not one per each of four partitions.",
+      "source": "numerical/resident_native_stage_shared.sv",
+      "result": "mapped_executable_subcase_not_exact_baseline",
+      "suggested_action": "Expose partition count and per-partition grants before testing mixed-class compatibility.",
+      "useful_model_range_or_alternatives": [
+        "serialize shared execution classes"
+      ],
+      "range_interpretation": "Existing engineering sensitivity domain; not measured confidence interval or new hardware fact.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F017",
+      "name": "Instruction-class routing",
+      "legacy_baseline": "route by native opcode and generic pointer address window; shared-window LD.E uses shared path",
+      "baseline_unit": "policy",
+      "actual_implementation": "Generic shared/global narrow-load operands return448 checked words; fixed native stage shared addresses route explicitly to shared service.",
+      "source": "parameter_sweep/load_assembly/analysis.json",
+      "result": "scoped_contract_observed",
+      "suggested_action": "Retain supported generic pointer/address-space routing rule; other native classes remain provisional.",
+      "useful_model_range_or_alternatives": [
+        "trace-specified routing"
+      ],
+      "range_interpretation": "Existing engineering sensitivity domain; not measured confidence interval or new hardware fact.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F019",
+      "name": "Register bank count",
+      "legacy_baseline": 4,
+      "baseline_unit": "register banks per partition",
+      "actual_implementation": "No connected implementation of this exact field: nativeinstruction frontend/registercollector, translation, memorycontroller or clock-domain machinery is absent or abstracted.",
+      "source": "numerical/resident_gemm_multi_sm_nb_l2.sv",
+      "result": "checked_not_exercised",
+      "suggested_action": "Retain the supplied engineering sensitivity domain; omit cost when the mechanism is conditionally absent, or implement one named stage before evaluating it.",
+      "useful_model_range_or_alternatives": [
+        2,
+        8
+      ],
+      "range_interpretation": "Existing engineering sensitivity domain; not measured confidence interval or new hardware fact.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F020",
+      "name": "Register bank mapping",
+      "legacy_baseline": "register index modulo 4",
+      "baseline_unit": "bank mapping",
+      "actual_implementation": "No connected implementation of this exact field: nativeinstruction frontend/registercollector, translation, memorycontroller or clock-domain machinery is absent or abstracted.",
+      "source": "numerical/resident_gemm_multi_sm_nb_l2.sv",
+      "result": "checked_not_exercised",
+      "suggested_action": "Retain the supplied engineering sensitivity domain; omit cost when the mechanism is conditionally absent, or implement one named stage before evaluating it.",
+      "useful_model_range_or_alternatives": [
+        "XOR register index with warp ID"
+      ],
+      "range_interpretation": "Existing engineering sensitivity domain; not measured confidence interval or new hardware fact.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F021",
+      "name": "Read ports per register bank",
+      "legacy_baseline": 2,
+      "baseline_unit": "32-bit operand words per bank per cycle per lane",
+      "actual_implementation": "No connected implementation of this exact field: nativeinstruction frontend/registercollector, translation, memorycontroller or clock-domain machinery is absent or abstracted.",
+      "source": "numerical/resident_gemm_multi_sm_nb_l2.sv",
+      "result": "checked_not_exercised",
+      "suggested_action": "Retain the supplied engineering sensitivity domain; omit cost when the mechanism is conditionally absent, or implement one named stage before evaluating it.",
+      "useful_model_range_or_alternatives": [
+        1,
+        4
+      ],
+      "range_interpretation": "Existing engineering sensitivity domain; not measured confidence interval or new hardware fact.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F022",
+      "name": "Write ports per register bank",
+      "legacy_baseline": 1,
+      "baseline_unit": "32-bit write words per bank per cycle per lane",
+      "actual_implementation": "No connected implementation of this exact field: nativeinstruction frontend/registercollector, translation, memorycontroller or clock-domain machinery is absent or abstracted.",
+      "source": "numerical/resident_gemm_multi_sm_nb_l2.sv",
+      "result": "checked_not_exercised",
+      "suggested_action": "Retain the supplied engineering sensitivity domain; omit cost when the mechanism is conditionally absent, or implement one named stage before evaluating it.",
+      "useful_model_range_or_alternatives": [
+        1,
+        2
+      ],
+      "range_interpretation": "Existing engineering sensitivity domain; not measured confidence interval or new hardware fact.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F023",
+      "name": "Operand collector capacity",
+      "legacy_baseline": 8,
+      "baseline_unit": "collector entries per partition",
+      "actual_implementation": "No connected implementation of this exact field: nativeinstruction frontend/registercollector, translation, memorycontroller or clock-domain machinery is absent or abstracted.",
+      "source": "numerical/resident_gemm_multi_sm_nb_l2.sv",
+      "result": "checked_not_exercised",
+      "suggested_action": "Retain the supplied engineering sensitivity domain; omit cost when the mechanism is conditionally absent, or implement one named stage before evaluating it.",
+      "useful_model_range_or_alternatives": [
+        4,
+        32
+      ],
+      "range_interpretation": "Existing engineering sensitivity domain; not measured confidence interval or new hardware fact.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F024",
+      "name": "Collector routing",
+      "legacy_baseline": "allocate any free collector in opcode class; bank conflicts serialize reads",
+      "baseline_unit": "policy",
+      "actual_implementation": "No connected implementation of this exact field: nativeinstruction frontend/registercollector, translation, memorycontroller or clock-domain machinery is absent or abstracted.",
+      "source": "numerical/resident_gemm_multi_sm_nb_l2.sv",
+      "result": "checked_not_exercised",
+      "suggested_action": "Retain the supplied engineering sensitivity domain; omit cost when the mechanism is conditionally absent, or implement one named stage before evaluating it.",
+      "useful_model_range_or_alternatives": [
+        "dedicated collectors per class"
+      ],
+      "range_interpretation": "Existing engineering sensitivity domain; not measured confidence interval or new hardware fact.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F025",
+      "name": "Writeback queue capacity",
+      "legacy_baseline": 8,
+      "baseline_unit": "writeback entries per partition",
+      "actual_implementation": "No connected implementation of this exact field: nativeinstruction frontend/registercollector, translation, memorycontroller or clock-domain machinery is absent or abstracted.",
+      "source": "numerical/resident_gemm_multi_sm_nb_l2.sv",
+      "result": "checked_not_exercised",
+      "suggested_action": "Retain the supplied engineering sensitivity domain; omit cost when the mechanism is conditionally absent, or implement one named stage before evaluating it.",
+      "useful_model_range_or_alternatives": [
+        4,
+        32
+      ],
+      "range_interpretation": "Existing engineering sensitivity domain; not measured confidence interval or new hardware fact.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F026",
+      "name": "Writeback arbitration policy",
+      "legacy_baseline": "oldest completed instruction first; tensor and scalar share final arbitration",
+      "baseline_unit": "policy",
+      "actual_implementation": "No connected implementation of this exact field: nativeinstruction frontend/registercollector, translation, memorycontroller or clock-domain machinery is absent or abstracted.",
+      "source": "numerical/resident_gemm_multi_sm_nb_l2.sv",
+      "result": "checked_not_exercised",
+      "suggested_action": "Retain the supplied engineering sensitivity domain; omit cost when the mechanism is conditionally absent, or implement one named stage before evaluating it.",
+      "useful_model_range_or_alternatives": [
+        "round-robin class arbitration"
+      ],
+      "range_interpretation": "Existing engineering sensitivity domain; not measured confidence interval or new hardware fact.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F027",
+      "name": "Execution pipeline counts by class",
+      "legacy_baseline": {
+        "FP32_INT32": 32,
+        "tensor_blocks": 1,
+        "SFU": 4,
+        "LSU": 4
+      },
+      "baseline_unit": "logical lanes or blocks per partition",
+      "actual_implementation": "One logical MOVM and HMMA numerical service; no scalar/SFU/LSU physical pipeline replication matching32/1/4/4.",
+      "source": "numerical/resident_native_stage_shared.sv",
+      "result": "mapped_executable_subcase_not_exact_baseline",
+      "suggested_action": "Treat these as sensitivity resources until actual class throughput constrains them.",
+      "useful_model_range_or_alternatives": {
+        "FP32_INT32": [
+          16,
+          32
+        ],
+        "tensor_blocks": [
+          1,
+          1
+        ],
+        "SFU": [
+          4,
+          8
+        ],
+        "LSU": [
+          4,
+          8
+        ]
+      },
+      "range_interpretation": "Existing engineering sensitivity domain; not measured confidence interval or new hardware fact.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F029",
+      "name": "Pipeline sharing rules",
+      "legacy_baseline": "FP32 and INT32 share unified execution capacity; tensor and LSU are independently scheduled logical paths",
+      "baseline_unit": "policy",
+      "actual_implementation": "Read/MOVM/HMMA paths have independent readiness and shared issue arbitration; integer address ops are control-only.",
+      "source": "numerical/resident_native_stage_shared.sv",
+      "result": "mapped_executable_subcase_not_exact_baseline",
+      "suggested_action": "Use separate logical tensor/read paths; do not claim FP32/INT32 sharing is tested.",
+      "useful_model_range_or_alternatives": [
+        "additional collector contention"
+      ],
+      "range_interpretation": "Existing engineering sensitivity domain; not measured confidence interval or new hardware fact.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F031",
+      "name": "Execution partition routing",
+      "legacy_baseline": "issuing scheduler routes to its partition; shared services arbitrate SM-wide",
+      "baseline_unit": "policy",
+      "actual_implementation": "Common shared-read hub arbitrates across all modeled warp/context IDs; scheduler partitions are absent.",
+      "source": "numerical/resident_native_stage_shared.sv",
+      "result": "mapped_executable_subcase_not_exact_baseline",
+      "suggested_action": "Label SM-wide sharing modeled; partition-local routing remains unexercised.",
+      "useful_model_range_or_alternatives": [
+        "cross-partition execution stealing"
+      ],
+      "range_interpretation": "Existing engineering sensitivity domain; not measured confidence interval or new hardware fact.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F036",
+      "name": "Load queue capacity",
+      "legacy_baseline": 16,
+      "baseline_unit": "load entries per partition",
+      "actual_implementation": "READ_SLOTS2 common owner records represent shared warp reads; not16load entries per partition.",
+      "source": "components/shared_read_candidate_hub.sv",
+      "result": "mapped_executable_subcase_not_exact_baseline",
+      "suggested_action": "Separate generic/global load admission queue from shared-read service capacity.",
+      "useful_model_range_or_alternatives": [
+        8,
+        64
+      ],
+      "range_interpretation": "Existing engineering sensitivity domain; not measured confidence interval or new hardware fact.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F037",
+      "name": "Store queue capacity",
+      "legacy_baseline": 8,
+      "baseline_unit": "store entries per partition",
+      "actual_implementation": "One warp store outstanding, sectors serialized; not8store instructions per partition.",
+      "source": "numerical/coalesced_fp32_warp_store.sv",
+      "result": "mapped_executable_subcase_not_exact_baseline",
+      "suggested_action": "Retain conservative one-outstanding store model or add finite store queue before fitting8.",
+      "useful_model_range_or_alternatives": [
+        4,
+        32
+      ],
+      "range_interpretation": "Existing engineering sensitivity domain; not measured confidence interval or new hardware fact.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F038",
+      "name": "Outstanding transaction limit per warp",
+      "legacy_baseline": 8,
+      "baseline_unit": "outstanding memory instructions per warp",
+      "actual_implementation": "Read credits bounded globally byREAD_SLOTS; MOVM/HMMA have separate pools.",
+      "source": "numerical/resident_native_stage_shared.sv",
+      "result": "mapped_executable_subcase_not_exact_baseline",
+      "suggested_action": "Do not equate service records with8memory transactions per warp.",
+      "useful_model_range_or_alternatives": [
+        4,
+        32
+      ],
+      "range_interpretation": "Existing engineering sensitivity domain; not measured confidence interval or new hardware fact.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F039",
+      "name": "Outstanding transaction limit per SM",
+      "legacy_baseline": 64,
+      "baseline_unit": "outstanding requests per SM",
+      "actual_implementation": "Private blocking input cache plus two shared-read records; no64global LSU transaction pool.",
+      "source": "numerical/resident_gemm_complete.sv",
+      "result": "mapped_executable_subcase_not_exact_baseline",
+      "suggested_action": "Use separate read-path queue domains and record each live-token unit.",
+      "useful_model_range_or_alternatives": [
+        32,
+        256
+      ],
+      "range_interpretation": "Existing engineering sensitivity domain; not measured confidence interval or new hardware fact.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F041",
+      "name": "Memory ordering rules",
+      "legacy_baseline": "preserve program dependencies and explicit scoped fences; permit independent request completion out of order",
+      "baseline_unit": "policy",
+      "actual_implementation": "No connected implementation of this exact field: nativeinstruction frontend/registercollector, translation, memorycontroller or clock-domain machinery is absent or abstracted.",
+      "source": "numerical/resident_gemm_multi_sm_nb_l2.sv",
+      "result": "checked_not_exercised",
+      "suggested_action": "Retain the supplied engineering sensitivity domain; omit cost when the mechanism is conditionally absent, or implement one named stage before evaluating it.",
+      "useful_model_range_or_alternatives": [
+        "fully ordered conservative memory model"
+      ],
+      "range_interpretation": "Existing engineering sensitivity domain; not measured confidence interval or new hardware fact.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F043",
+      "name": "Supported page sizes",
+      "legacy_baseline": [
+        4096,
+        65536,
+        2097152
+      ],
+      "baseline_unit": "bytes/page",
+      "actual_implementation": "No connected implementation of this exact field: nativeinstruction frontend/registercollector, translation, memorycontroller or clock-domain machinery is absent or abstracted.",
+      "source": "numerical/resident_gemm_multi_sm_nb_l2.sv",
+      "result": "checked_not_exercised",
+      "suggested_action": "Retain the supplied engineering sensitivity domain; omit cost when the mechanism is conditionally absent, or implement one named stage before evaluating it.",
+      "useful_model_range_or_alternatives": [
+        4096,
+        65536,
+        2097152
+      ],
+      "range_interpretation": "Existing engineering sensitivity domain; not measured confidence interval or new hardware fact.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F044",
+      "name": "Translation-cache organization",
+      "legacy_baseline": {
+        "L1_entries": 128,
+        "L1_ways": 4,
+        "L2_entries": 2048,
+        "L2_ways": 8
+      },
+      "baseline_unit": "entries and ways",
+      "actual_implementation": "No connected implementation of this exact field: nativeinstruction frontend/registercollector, translation, memorycontroller or clock-domain machinery is absent or abstracted.",
+      "source": "numerical/resident_gemm_multi_sm_nb_l2.sv",
+      "result": "checked_not_exercised",
+      "suggested_action": "Retain the supplied engineering sensitivity domain; omit cost when the mechanism is conditionally absent, or implement one named stage before evaluating it.",
+      "useful_model_range_or_alternatives": {
+        "L1_entries": [
+          32,
+          512
+        ],
+        "L2_entries": [
+          512,
+          8192
+        ],
+        "ways": [
+          2,
+          16
+        ]
+      },
+      "range_interpretation": "Existing engineering sensitivity domain; not measured confidence interval or new hardware fact.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F045",
+      "name": "Translation mapping/replacement rules",
+      "legacy_baseline": "VPN modulo set count; LRU within set",
+      "baseline_unit": "policy",
+      "actual_implementation": "No connected implementation of this exact field: nativeinstruction frontend/registercollector, translation, memorycontroller or clock-domain machinery is absent or abstracted.",
+      "source": "numerical/resident_gemm_multi_sm_nb_l2.sv",
+      "result": "checked_not_exercised",
+      "suggested_action": "Retain the supplied engineering sensitivity domain; omit cost when the mechanism is conditionally absent, or implement one named stage before evaluating it.",
+      "useful_model_range_or_alternatives": [
+        "modulo",
+        "XOR-hashed indexing",
+        "LRU",
+        "pseudo-LRU",
+        "random"
+      ],
+      "range_interpretation": "Existing engineering sensitivity domain; not measured confidence interval or new hardware fact.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F046",
+      "name": "Translation request capacity",
+      "legacy_baseline": 32,
+      "baseline_unit": "outstanding translation requests/SM",
+      "actual_implementation": "No connected implementation of this exact field: nativeinstruction frontend/registercollector, translation, memorycontroller or clock-domain machinery is absent or abstracted.",
+      "source": "numerical/resident_gemm_multi_sm_nb_l2.sv",
+      "result": "checked_not_exercised",
+      "suggested_action": "Retain the supplied engineering sensitivity domain; omit cost when the mechanism is conditionally absent, or implement one named stage before evaluating it.",
+      "useful_model_range_or_alternatives": [
+        8,
+        128
+      ],
+      "range_interpretation": "Existing engineering sensitivity domain; not measured confidence interval or new hardware fact.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F047",
+      "name": "Page-walk organization",
+      "legacy_baseline": {
+        "levels": 4,
+        "walkers": 4,
+        "walk_cache_entries": 32
+      },
+      "baseline_unit": "levels; walkers; entries",
+      "actual_implementation": "No connected implementation of this exact field: nativeinstruction frontend/registercollector, translation, memorycontroller or clock-domain machinery is absent or abstracted.",
+      "source": "numerical/resident_gemm_multi_sm_nb_l2.sv",
+      "result": "checked_not_exercised",
+      "suggested_action": "Retain the supplied engineering sensitivity domain; omit cost when the mechanism is conditionally absent, or implement one named stage before evaluating it.",
+      "useful_model_range_or_alternatives": {
+        "levels": [
+          3,
+          5
+        ],
+        "walkers": [
+          1,
+          16
+        ],
+        "walk_cache_entries": [
+          0,
+          256
+        ]
+      },
+      "range_interpretation": "Existing engineering sensitivity domain; not measured confidence interval or new hardware fact.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F048",
+      "name": "L1/shared partition configuration",
+      "legacy_baseline": {
+        "shared_KiB": 32,
+        "unified_KiB": 128,
+        "L1_usable_KiB": 64
+      },
+      "baseline_unit": "KiB/SM",
+      "actual_implementation": "Native operand frames4096B/context, separate scratch4096B, private64KiB cache; aggregate allocation budget100KiB.",
+      "source": "numerical/resident_gemm_complete.sv",
+      "result": "mapped_executable_subcase_not_exact_baseline",
+      "suggested_action": "A selected32KiB shared/64KiB L1 carveout is not wired or enforced as unified SRAM.",
+      "useful_model_range_or_alternatives": {
+        "shared_KiB": [
+          0,
+          8,
+          16,
+          32,
+          64,
+          100
+        ],
+        "L1_usable_KiB": [
+          16,
+          128
+        ]
+      },
+      "range_interpretation": "Existing engineering sensitivity domain; not measured confidence interval or new hardware fact.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F051",
+      "name": "Shared request queue capacity",
+      "legacy_baseline": 32,
+      "baseline_unit": "warp shared requests/SM",
+      "actual_implementation": "ConnectedREAD_SLOTS2, while baseline32shared queue entries is not exercised.",
+      "source": "components/shared_read_candidate_hub.sv",
+      "result": "mapped_executable_subcase_not_exact_baseline",
+      "suggested_action": "Parameterize/sweep common queue depth; retain2as tested correctness configuration only.",
+      "useful_model_range_or_alternatives": [
+        8,
+        128
+      ],
+      "range_interpretation": "Existing engineering sensitivity domain; not measured confidence interval or new hardware fact.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F060",
+      "name": "L1 pending-miss capacity",
+      "legacy_baseline": 64,
+      "baseline_unit": "pending distinct L1 misses/SM",
+      "actual_implementation": "PrivateL1 is blocking, at mostone refill; baseline64pending misses absent.",
+      "source": "components/sector_read_cache.sv",
+      "result": "mapped_executable_subcase_not_exact_baseline",
+      "suggested_action": "A separate nonblocking L1 layer would be required to exercise64.",
+      "useful_model_range_or_alternatives": [
+        16,
+        256
+      ],
+      "range_interpretation": "Existing engineering sensitivity domain; not measured confidence interval or new hardware fact.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F061",
+      "name": "L1 pending-consumer merging rules",
+      "legacy_baseline": "Merge identical 32-byte sectors into one pending fetch; retain all consumers",
+      "baseline_unit": "merge policy",
+      "actual_implementation": "PrivateL1 serializes a second request until first returns; sharedL2 has genuine pending-sector join.",
+      "source": "components/sector_read_cache.sv",
+      "result": "mapped_executable_subcase_not_exact_baseline",
+      "suggested_action": "Do not credit L2merge behavior as L1 pending-consumer merging.",
+      "useful_model_range_or_alternatives": [
+        "sector merge",
+        "128-byte line merge",
+        "no merge"
+      ],
+      "range_interpretation": "Existing engineering sensitivity domain; not measured confidence interval or new hardware fact.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F062",
+      "name": "L1 fill/return queue capacities",
+      "legacy_baseline": {
+        "fill_entries": 32,
+        "return_entries": 64
+      },
+      "baseline_unit": "queue entries/SM",
+      "actual_implementation": "One held private-cache response; no32fill/64return queues.",
+      "source": "components/sector_read_cache.sv",
+      "result": "mapped_executable_subcase_not_exact_baseline",
+      "suggested_action": "Add queue entry/ownership semantics before claiming these numbers.",
+      "useful_model_range_or_alternatives": {
+        "fill_entries": [
+          8,
+          128
+        ],
+        "return_entries": [
+          16,
+          256
+        ]
+      },
+      "range_interpretation": "Existing engineering sensitivity domain; not measured confidence interval or new hardware fact.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F063",
+      "name": "L2 set count",
+      "legacy_baseline": 1024,
+      "baseline_unit": "sets/L2 slice",
+      "actual_implementation": "Unsliced64sets in passing top, not1024sets per each48slices.",
+      "source": "numerical/multi_sm_nonblocking_l2.sv",
+      "result": "mapped_executable_subcase_not_exact_baseline",
+      "suggested_action": "Separate testgeometry from96MiB target; preserve aggregate capacity constraint.",
+      "useful_model_range_or_alternatives": [
+        256,
+        2048
+      ],
+      "range_interpretation": "Existing engineering sensitivity domain; not measured confidence interval or new hardware fact.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F064",
+      "name": "L2 associativity",
+      "legacy_baseline": 16,
+      "baseline_unit": "ways/set",
+      "actual_implementation": "L2_WAYS8 in top, not16ways.",
+      "source": "numerical/multi_sm_nonblocking_l2.sv",
+      "result": "mapped_executable_subcase_not_exact_baseline",
+      "suggested_action": "Run8/16 only as modeled sensitivity; no hardware associativity claim.",
+      "useful_model_range_or_alternatives": [
+        8,
+        32
+      ],
+      "range_interpretation": "Existing engineering sensitivity domain; not measured confidence interval or new hardware fact.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F065",
+      "name": "L2 slice organization/count",
+      "legacy_baseline": {
+        "active_model_slices": 48,
+        "nominal_reported_slices": 64,
+        "FBPs": 8,
+        "nominal_slices_per_FBP": 8
+      },
+      "baseline_unit": "slices; FBPs",
+      "actual_implementation": "One unsliced cache; saved metadata64slices vs profiler inference48 remains unresolved.",
+      "source": "numerical/multi_sm_nonblocking_l2.sv",
+      "result": "mapped_executable_subcase_not_exact_baseline",
+      "suggested_action": "Use48/64 alternatives with capacity-preserving sets; do not pick physical organization from opcodecounts.",
+      "useful_model_range_or_alternatives": {
+        "active_model_slices": [
+          48,
+          64
+        ]
+      },
+      "range_interpretation": "Existing engineering sensitivity domain; not measured confidence interval or new hardware fact.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F066",
+      "name": "L2 slice address mapping",
+      "legacy_baseline": "slice=(byte_address//128)%active_model_slices",
+      "baseline_unit": "mapping rule",
+      "actual_implementation": "No slice-routing function; index is address/128 modulo L2_SETS.",
+      "source": "numerical/multi_sm_nonblocking_l2.sv",
+      "result": "mapped_executable_subcase_not_exact_baseline",
+      "suggested_action": "Keep slice hash as sensitivity alternative, currently unexercised.",
+      "useful_model_range_or_alternatives": [
+        "modulo stripe",
+        "XOR-hashed stripe"
+      ],
+      "range_interpretation": "Existing engineering sensitivity domain; not measured confidence interval or new hardware fact.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F067",
+      "name": "L2 set address mapping",
+      "legacy_baseline": "set=(byte_address//(128*active_model_slices))%sets_per_slice",
+      "baseline_unit": "mapping rule",
+      "actual_implementation": "Unsliced address/128 modulo64 lookup, unlike profile address/(128*slices) modulo sets.",
+      "source": "numerical/multi_sm_nonblocking_l2.sv",
+      "result": "mapped_executable_subcase_not_exact_baseline",
+      "suggested_action": "Apply set mapping only together with explicit slice organization.",
+      "useful_model_range_or_alternatives": [
+        "modulo",
+        "XOR-hashed"
+      ],
+      "range_interpretation": "Existing engineering sensitivity domain; not measured confidence interval or new hardware fact.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F068",
+      "name": "L2 lookup ports",
+      "legacy_baseline": 1,
+      "baseline_unit": "logical lookup requests/slice/reference cycle",
+      "actual_implementation": "At mostone logical read/write owner accepted per edge; several backing operations may remain live.",
+      "source": "numerical/multi_sm_nonblocking_l2.sv",
+      "result": "mapped_executable_subcase_not_exact_baseline",
+      "suggested_action": "This is common admission bandwidth, not identified L2lookup-port count.",
+      "useful_model_range_or_alternatives": [
+        1,
+        4
+      ],
+      "range_interpretation": "Existing engineering sensitivity domain; not measured confidence interval or new hardware fact.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F069",
+      "name": "L2 replacement policy",
+      "legacy_baseline": "pseudo-LRU with persisting-line priority when policy enabled",
+      "baseline_unit": "replacement policy",
+      "actual_implementation": "Round-robin victim cursor and pinned-refill exclusion; no pseudoLRU/persisting-line policy.",
+      "source": "numerical/multi_sm_nonblocking_l2.sv",
+      "result": "mapped_executable_subcase_not_exact_baseline",
+      "suggested_action": "Document roundrobin model baseline; alternatives remain sensitivity hypotheses.",
+      "useful_model_range_or_alternatives": [
+        "LRU",
+        "pseudo-LRU",
+        "random"
+      ],
+      "range_interpretation": "Existing engineering sensitivity domain; not measured confidence interval or new hardware fact.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F070",
+      "name": "L2 write policy",
+      "legacy_baseline": "Write-back/write-allocate; dirty eviction issues DRAM write",
+      "baseline_unit": "write policy",
+      "actual_implementation": "Output writes bypass cached immutable inputs; no dirty-data/writeallocate or eviction writebacks.",
+      "source": "numerical/multi_sm_nonblocking_l2.sv",
+      "result": "mapped_executable_subcase_not_exact_baseline",
+      "suggested_action": "Write-around policy is sufficient for disjoint C; fullwriteback behavior conditionally excluded.",
+      "useful_model_range_or_alternatives": [
+        "write-back/write-allocate",
+        "write-back/no-write-allocate",
+        "write-through"
+      ],
+      "range_interpretation": "Existing engineering sensitivity domain; not measured confidence interval or new hardware fact.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F071",
+      "name": "L2 pending-miss capacity",
+      "legacy_baseline": 128,
+      "baseline_unit": "pending distinct misses/L2 slice",
+      "actual_implementation": "MSHRS4 tracks missing32B sectors, not128misses of unspecified granularity.",
+      "source": "numerical/multi_sm_nonblocking_l2.sv",
+      "result": "mapped_executable_subcase_not_exact_baseline",
+      "suggested_action": "Use4as verified numerical capacity; baseline128needs same entry definition plus sensitivity sweep.",
+      "useful_model_range_or_alternatives": [
+        32,
+        512
+      ],
+      "range_interpretation": "Existing engineering sensitivity domain; not measured confidence interval or new hardware fact.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F073",
+      "name": "L2 request queue capacity",
+      "legacy_baseline": 64,
+      "baseline_unit": "request queue entries/L2 slice",
+      "actual_implementation": "OWNER_SLOTS8 combines read consumers and writes; baseline64incoming-request queue absent.",
+      "source": "numerical/multi_sm_nonblocking_l2.sv",
+      "result": "mapped_executable_subcase_not_exact_baseline",
+      "suggested_action": "Disambiguate owner slots versus request queues and keep exact lifetime.",
+      "useful_model_range_or_alternatives": [
+        16,
+        256
+      ],
+      "range_interpretation": "Existing engineering sensitivity domain; not measured confidence interval or new hardware fact.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F074",
+      "name": "L2 fill/return queue capacities",
+      "legacy_baseline": {
+        "fill_entries": 64,
+        "return_entries": 64
+      },
+      "baseline_unit": "entries/L2 slice",
+      "actual_implementation": "Completed return packets remain in same8owner records; no distinct64fill/64return pools.",
+      "source": "numerical/multi_sm_nonblocking_l2.sv",
+      "result": "mapped_executable_subcase_not_exact_baseline",
+      "suggested_action": "Avoid independent64queue values until separate stages exist.",
+      "useful_model_range_or_alternatives": {
+        "fill_entries": [
+          16,
+          256
+        ],
+        "return_entries": [
+          16,
+          256
+        ]
+      },
+      "range_interpretation": "Existing engineering sensitivity domain; not measured confidence interval or new hardware fact.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F075",
+      "name": "Channel/bank organization",
+      "legacy_baseline": {
+        "controllers": 16,
+        "bits_per_controller": 32,
+        "banks_per_controller": 16
+      },
+      "baseline_unit": "controllers; bits; banks",
+      "actual_implementation": "No connected implementation of this exact field: nativeinstruction frontend/registercollector, translation, memorycontroller or clock-domain machinery is absent or abstracted.",
+      "source": "numerical/resident_gemm_multi_sm_nb_l2.sv",
+      "result": "checked_not_exercised",
+      "suggested_action": "Retain the supplied engineering sensitivity domain; omit cost when the mechanism is conditionally absent, or implement one named stage before evaluating it.",
+      "useful_model_range_or_alternatives": {
+        "controllers": [
+          16
+        ],
+        "banks_per_controller": [
+          8,
+          16,
+          32
+        ]
+      },
+      "range_interpretation": "Existing engineering sensitivity domain; not measured confidence interval or new hardware fact.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F076",
+      "name": "Address-to-channel/bank mapping",
+      "legacy_baseline": {
+        "channel": "(address//256)%16",
+        "bank": "(address//32768)%16",
+        "row": "address//524288",
+        "column": "(address%256)+256*((address//4096)%8)"
+      },
+      "baseline_unit": "address mapping",
+      "actual_implementation": "No connected implementation of this exact field: nativeinstruction frontend/registercollector, translation, memorycontroller or clock-domain machinery is absent or abstracted.",
+      "source": "numerical/resident_gemm_multi_sm_nb_l2.sv",
+      "result": "checked_not_exercised",
+      "suggested_action": "Retain the supplied engineering sensitivity domain; omit cost when the mechanism is conditionally absent, or implement one named stage before evaluating it.",
+      "useful_model_range_or_alternatives": [
+        "256B interleave",
+        "128B interleave",
+        "XOR-hashed channel/bank"
+      ],
+      "range_interpretation": "Existing engineering sensitivity domain; not measured confidence interval or new hardware fact.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F077",
+      "name": "Controller queue capacities",
+      "legacy_baseline": {
+        "read_entries": 64,
+        "write_entries": 64
+      },
+      "baseline_unit": "queue entries/controller",
+      "actual_implementation": "No connected implementation of this exact field: nativeinstruction frontend/registercollector, translation, memorycontroller or clock-domain machinery is absent or abstracted.",
+      "source": "numerical/resident_gemm_multi_sm_nb_l2.sv",
+      "result": "checked_not_exercised",
+      "suggested_action": "Retain the supplied engineering sensitivity domain; omit cost when the mechanism is conditionally absent, or implement one named stage before evaluating it.",
+      "useful_model_range_or_alternatives": {
+        "read_entries": [
+          16,
+          256
+        ],
+        "write_entries": [
+          16,
+          256
+        ]
+      },
+      "range_interpretation": "Existing engineering sensitivity domain; not measured confidence interval or new hardware fact.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F078",
+      "name": "Controller arbitration policy",
+      "legacy_baseline": "FR-FCFS: ready row hits first, then oldest; fairness after64 selections",
+      "baseline_unit": "arbitration policy",
+      "actual_implementation": "No connected implementation of this exact field: nativeinstruction frontend/registercollector, translation, memorycontroller or clock-domain machinery is absent or abstracted.",
+      "source": "numerical/resident_gemm_multi_sm_nb_l2.sv",
+      "result": "checked_not_exercised",
+      "suggested_action": "Retain the supplied engineering sensitivity domain; omit cost when the mechanism is conditionally absent, or implement one named stage before evaluating it.",
+      "useful_model_range_or_alternatives": [
+        "FIFO",
+        "FR-FCFS",
+        "round-robin"
+      ],
+      "range_interpretation": "Existing engineering sensitivity domain; not measured confidence interval or new hardware fact.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F079",
+      "name": "Row-state/command rules",
+      "legacy_baseline": {
+        "row_bytes": 2048,
+        "open_page": true,
+        "one_open_row_per_bank": true
+      },
+      "baseline_unit": "bytes/row; state rules",
+      "actual_implementation": "No connected implementation of this exact field: nativeinstruction frontend/registercollector, translation, memorycontroller or clock-domain machinery is absent or abstracted.",
+      "source": "numerical/resident_gemm_multi_sm_nb_l2.sv",
+      "result": "checked_not_exercised",
+      "suggested_action": "Retain the supplied engineering sensitivity domain; omit cost when the mechanism is conditionally absent, or implement one named stage before evaluating it.",
+      "useful_model_range_or_alternatives": {
+        "row_bytes": [
+          1024,
+          4096
+        ],
+        "page_policy": [
+          "open",
+          "closed",
+          "adaptive"
+        ]
+      },
+      "range_interpretation": "Existing engineering sensitivity domain; not measured confidence interval or new hardware fact.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F080",
+      "name": "Write handling policy",
+      "legacy_baseline": {
+        "write_buffer_entries": 64,
+        "drain_high_watermark": 48,
+        "drain_low_watermark": 16,
+        "merge_same_sector": true
+      },
+      "baseline_unit": "entries; controller write policy",
+      "actual_implementation": "No connected implementation of this exact field: nativeinstruction frontend/registercollector, translation, memorycontroller or clock-domain machinery is absent or abstracted.",
+      "source": "numerical/resident_gemm_multi_sm_nb_l2.sv",
+      "result": "checked_not_exercised",
+      "suggested_action": "Retain the supplied engineering sensitivity domain; omit cost when the mechanism is conditionally absent, or implement one named stage before evaluating it.",
+      "useful_model_range_or_alternatives": {
+        "write_buffer_entries": [
+          16,
+          256
+        ],
+        "high_fraction": [
+          0.5,
+          0.9
+        ],
+        "low_fraction": [
+          0.1,
+          0.5
+        ]
+      },
+      "range_interpretation": "Existing engineering sensitivity domain; not measured confidence interval or new hardware fact.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F087",
+      "name": "Cross-domain transfer protocol",
+      "legacy_baseline": {
+        "protocol": "dual-clock ready/valid FIFO",
+        "depth": 4,
+        "synchronizer_stages": 2,
+        "ordering": "FIFO; no loss/duplication"
+      },
+      "baseline_unit": "entries; clock edges",
+      "actual_implementation": "No connected implementation of this exact field: nativeinstruction frontend/registercollector, translation, memorycontroller or clock-domain machinery is absent or abstracted.",
+      "source": "numerical/resident_gemm_multi_sm_nb_l2.sv",
+      "result": "checked_not_exercised",
+      "suggested_action": "Retain the supplied engineering sensitivity domain; omit cost when the mechanism is conditionally absent, or implement one named stage before evaluating it.",
+      "useful_model_range_or_alternatives": {
+        "depth": [
+          2,
+          16
+        ],
+        "synchronizer_stages": [
+          2,
+          3
+        ]
+      },
+      "range_interpretation": "Existing engineering sensitivity domain; not measured confidence interval or new hardware fact.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "T001",
+      "name": "Block admission delay",
+      "legacy_baseline": 32,
+      "baseline_unit": "SM cycles",
+      "actual_implementation": "Allocation occurs actual launch acceptance edge; no32cycle admission latency.",
+      "source": "numerical/resident_gemm_complete.sv",
+      "result": "mapped_executable_subcase_not_exact_baseline",
+      "suggested_action": "Zero extra allocation delay is implemented;32remains unused sensitivity prior.",
+      "useful_model_range_or_alternatives": [
+        8,
+        256
+      ],
+      "range_interpretation": "Existing engineering sensitivity domain; not measured confidence interval or new hardware fact.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "T002",
+      "name": "Dispatch delay",
+      "legacy_baseline": 4,
+      "baseline_unit": "SM cycles",
+      "actual_implementation": "Registered launch owner then actual childacceptance, no fixed4cycle dispatch delay.",
+      "source": "numerical/resident_gemm_multi_sm_nb_l2.sv",
+      "result": "mapped_executable_subcase_not_exact_baseline",
+      "suggested_action": "Measure actual offer/accept edge distance; do not charge another4without stage.",
+      "useful_model_range_or_alternatives": [
+        1,
+        32
+      ],
+      "range_interpretation": "Existing engineering sensitivity domain; not measured confidence interval or new hardware fact.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "T003",
+      "name": "Allocation release delay",
+      "legacy_baseline": 8,
+      "baseline_unit": "SM cycles",
+      "actual_implementation": "Allocation released at finaldone acknowledgment edge; no8cycle delayed free.",
+      "source": "numerical/resident_gemm_complete.sv",
+      "result": "mapped_executable_subcase_not_exact_baseline",
+      "suggested_action": "Keep actualack retirement; optional release-delay stage needed for8.",
+      "useful_model_range_or_alternatives": [
+        1,
+        64
+      ],
+      "range_interpretation": "Existing engineering sensitivity domain; not measured confidence interval or new hardware fact.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "T004",
+      "name": "Instruction fetch latency",
+      "legacy_baseline": 4,
+      "baseline_unit": "SM cycles for instruction-cache hit",
+      "actual_implementation": "No connected implementation of this exact field: nativeinstruction frontend/registercollector, translation, memorycontroller or clock-domain machinery is absent or abstracted.",
+      "source": "numerical/resident_gemm_multi_sm_nb_l2.sv",
+      "result": "checked_not_exercised",
+      "suggested_action": "Retain the supplied engineering sensitivity domain; omit cost when the mechanism is conditionally absent, or implement one named stage before evaluating it.",
+      "useful_model_range_or_alternatives": [
+        1,
+        16
+      ],
+      "range_interpretation": "Existing engineering sensitivity domain; not measured confidence interval or new hardware fact.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "T005",
+      "name": "Instruction fetch bandwidth",
+      "legacy_baseline": 1,
+      "baseline_unit": "16-byte native instructions per partition per SM cycle",
+      "actual_implementation": "No connected implementation of this exact field: nativeinstruction frontend/registercollector, translation, memorycontroller or clock-domain machinery is absent or abstracted.",
+      "source": "numerical/resident_gemm_multi_sm_nb_l2.sv",
+      "result": "checked_not_exercised",
+      "suggested_action": "Retain the supplied engineering sensitivity domain; omit cost when the mechanism is conditionally absent, or implement one named stage before evaluating it.",
+      "useful_model_range_or_alternatives": [
+        1,
+        2
+      ],
+      "range_interpretation": "Existing engineering sensitivity domain; not measured confidence interval or new hardware fact.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "T006",
+      "name": "Decode delay",
+      "legacy_baseline": 1,
+      "baseline_unit": "SM cycles",
+      "actual_implementation": "No connected implementation of this exact field: nativeinstruction frontend/registercollector, translation, memorycontroller or clock-domain machinery is absent or abstracted.",
+      "source": "numerical/resident_gemm_multi_sm_nb_l2.sv",
+      "result": "checked_not_exercised",
+      "suggested_action": "Retain the supplied engineering sensitivity domain; omit cost when the mechanism is conditionally absent, or implement one named stage before evaluating it.",
+      "useful_model_range_or_alternatives": [
+        1,
+        4
+      ],
+      "range_interpretation": "Existing engineering sensitivity domain; not measured confidence interval or new hardware fact.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "T007",
+      "name": "Instruction-class initiation intervals",
+      "legacy_baseline": {
+        "fp32_and_int32_add": 1,
+        "int32_mul_mad_and_shift": 2,
+        "tensor": 4,
+        "load": 1,
+        "store": 1,
+        "shuffle": 4,
+        "MOVM": "decoded issue controls and completion-dependent native barrier replay; no added4.8cycle throttle"
+      },
+      "baseline_unit": "SM cycles per warp instruction per partition",
+      "actual_implementation": "Native decoded controls plus single globalissue; HMMA_INTERVAL4 only tensor subcase matches; scalar/SFU throughput not replayed.",
+      "source": "numerical/resident_native_stage_shared.sv",
+      "result": "mapped_executable_subcase_not_exact_baseline",
+      "suggested_action": "Enforce tensor interval once withT018; retain remaining classes as priors.",
+      "useful_model_range_or_alternatives": {
+        "scalar": [
+          1,
+          2
+        ],
+        "tensor": [
+          2,
+          16
+        ],
+        "load": [
+          1,
+          4
+        ],
+        "store": [
+          1,
+          4
+        ],
+        "shuffle": [
+          4,
+          8
+        ],
+        "MOVM_effective": [
+          4,
+          8
+        ]
+      },
+      "range_interpretation": "Existing engineering sensitivity domain; not measured confidence interval or new hardware fact.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "T008",
+      "name": "Dependency wakeup delay",
+      "legacy_baseline": 1,
+      "baseline_unit": "SM cycles after result ready",
+      "actual_implementation": "No connected implementation of this exact field: nativeinstruction frontend/registercollector, translation, memorycontroller or clock-domain machinery is absent or abstracted.",
+      "source": "numerical/resident_gemm_multi_sm_nb_l2.sv",
+      "result": "checked_not_exercised",
+      "suggested_action": "Retain the supplied engineering sensitivity domain; omit cost when the mechanism is conditionally absent, or implement one named stage before evaluating it.",
+      "useful_model_range_or_alternatives": [
+        0,
+        2
+      ],
+      "range_interpretation": "Existing engineering sensitivity domain; not measured confidence interval or new hardware fact.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "T009",
+      "name": "Register read latency",
+      "legacy_baseline": 1,
+      "baseline_unit": "SM cycles",
+      "actual_implementation": "No connected implementation of this exact field: nativeinstruction frontend/registercollector, translation, memorycontroller or clock-domain machinery is absent or abstracted.",
+      "source": "numerical/resident_gemm_multi_sm_nb_l2.sv",
+      "result": "checked_not_exercised",
+      "suggested_action": "Retain the supplied engineering sensitivity domain; omit cost when the mechanism is conditionally absent, or implement one named stage before evaluating it.",
+      "useful_model_range_or_alternatives": [
+        1,
+        3
+      ],
+      "range_interpretation": "Existing engineering sensitivity domain; not measured confidence interval or new hardware fact.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "T010",
+      "name": "Register write latency",
+      "legacy_baseline": 1,
+      "baseline_unit": "SM cycles",
+      "actual_implementation": "No connected implementation of this exact field: nativeinstruction frontend/registercollector, translation, memorycontroller or clock-domain machinery is absent or abstracted.",
+      "source": "numerical/resident_gemm_multi_sm_nb_l2.sv",
+      "result": "checked_not_exercised",
+      "suggested_action": "Retain the supplied engineering sensitivity domain; omit cost when the mechanism is conditionally absent, or implement one named stage before evaluating it.",
+      "useful_model_range_or_alternatives": [
+        1,
+        3
+      ],
+      "range_interpretation": "Existing engineering sensitivity domain; not measured confidence interval or new hardware fact.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "T011",
+      "name": "Operand collection delay",
+      "legacy_baseline": 1,
+      "baseline_unit": "SM cycles plus serialized bank conflicts",
+      "actual_implementation": "No connected implementation of this exact field: nativeinstruction frontend/registercollector, translation, memorycontroller or clock-domain machinery is absent or abstracted.",
+      "source": "numerical/resident_gemm_multi_sm_nb_l2.sv",
+      "result": "checked_not_exercised",
+      "suggested_action": "Retain the supplied engineering sensitivity domain; omit cost when the mechanism is conditionally absent, or implement one named stage before evaluating it.",
+      "useful_model_range_or_alternatives": [
+        0,
+        4
+      ],
+      "range_interpretation": "Existing engineering sensitivity domain; not measured confidence interval or new hardware fact.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "T012",
+      "name": "Bypass delay",
+      "legacy_baseline": 0,
+      "baseline_unit": "additional SM cycles for supported bypass",
+      "actual_implementation": "No connected implementation of this exact field: nativeinstruction frontend/registercollector, translation, memorycontroller or clock-domain machinery is absent or abstracted.",
+      "source": "numerical/resident_gemm_multi_sm_nb_l2.sv",
+      "result": "checked_not_exercised",
+      "suggested_action": "Retain the supplied engineering sensitivity domain; omit cost when the mechanism is conditionally absent, or implement one named stage before evaluating it.",
+      "useful_model_range_or_alternatives": [
+        0,
+        2
+      ],
+      "range_interpretation": "Existing engineering sensitivity domain; not measured confidence interval or new hardware fact.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "T013",
+      "name": "Writeback service rate",
+      "legacy_baseline": 1,
+      "baseline_unit": "warp destination register vectors per partition per SM cycle",
+      "actual_implementation": "No connected implementation of this exact field: nativeinstruction frontend/registercollector, translation, memorycontroller or clock-domain machinery is absent or abstracted.",
+      "source": "numerical/resident_gemm_multi_sm_nb_l2.sv",
+      "result": "checked_not_exercised",
+      "suggested_action": "Retain the supplied engineering sensitivity domain; omit cost when the mechanism is conditionally absent, or implement one named stage before evaluating it.",
+      "useful_model_range_or_alternatives": [
+        1,
+        2
+      ],
+      "range_interpretation": "Existing engineering sensitivity domain; not measured confidence interval or new hardware fact.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "T017",
+      "name": "Native matrix result latency",
+      "legacy_baseline": 16,
+      "baseline_unit": "SM cycles for supported HMMA result",
+      "actual_implementation": "HMMA_LATENCY73 in passingfullgrid, not profile16. Nativeadapter default16 not a measured16latency.",
+      "source": "numerical/resident_gemm_complete.sv",
+      "result": "mapped_executable_subcase_not_exact_baseline",
+      "suggested_action": "Sweep8..32for model sensitivity; scope finalresult/wakeup separately.",
+      "useful_model_range_or_alternatives": [
+        8,
+        32
+      ],
+      "range_interpretation": "Existing engineering sensitivity domain; not measured confidence interval or new hardware fact.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "T019",
+      "name": "Matrix result delivery bandwidth",
+      "legacy_baseline": 4,
+      "baseline_unit": "32-bit result words per lane per partition per SM cycle",
+      "actual_implementation": "A32lane\u00d74word result becomes available as one packet; no4word-per-cycle delivery throttle.",
+      "source": "numerical/native_hmma16816_adapter.sv",
+      "result": "mapped_executable_subcase_not_exact_baseline",
+      "suggested_action": "Add explicit result delivery service only if consequential hardware evidence demands it.",
+      "useful_model_range_or_alternatives": [
+        1,
+        8
+      ],
+      "range_interpretation": "Existing engineering sensitivity domain; not measured confidence interval or new hardware fact.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "T020",
+      "name": "Load issue service rate",
+      "legacy_baseline": 1,
+      "baseline_unit": "warp load instructions per partition per SM cycle",
+      "actual_implementation": "One common accepted shared-read candidate per edge, not1load per each scheduler partition.",
+      "source": "components/shared_read_candidate_hub.sv",
+      "result": "mapped_executable_subcase_not_exact_baseline",
+      "suggested_action": "Use1SM-wide modeled acceptance and do not multiply by4unmodeledpartitions.",
+      "useful_model_range_or_alternatives": [
+        0.25,
+        1
+      ],
+      "range_interpretation": "Existing engineering sensitivity domain; not measured confidence interval or new hardware fact.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "T021",
+      "name": "Store issue service rate",
+      "legacy_baseline": 1,
+      "baseline_unit": "warp store instructions per partition per SM cycle",
+      "actual_implementation": "One staging vector OR one scratch bank package per edge; outputglobalwarps/sectors use actualacks.",
+      "source": "numerical/resident_gemm_complete.sv",
+      "result": "mapped_executable_subcase_not_exact_baseline",
+      "suggested_action": "Differentiate globalissue, sharedcommit and bankservice units.",
+      "useful_model_range_or_alternatives": [
+        0.25,
+        1
+      ],
+      "range_interpretation": "Existing engineering sensitivity domain; not measured confidence interval or new hardware fact.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "T022",
+      "name": "Return bandwidth",
+      "legacy_baseline": 128,
+      "baseline_unit": "return bytes per partition per SM cycle",
+      "actual_implementation": "128B scalarwarp reply delivered as32words at one responseedge; variable delay, no physicalbandwidth separation.",
+      "source": "components/shared_read_candidate_hub.sv",
+      "result": "mapped_executable_subcase_not_exact_baseline",
+      "suggested_action": "Packet width128B does not identify128B/partition/cycle sustained returnrate.",
+      "useful_model_range_or_alternatives": [
+        32,
+        256
+      ],
+      "range_interpretation": "Existing engineering sensitivity domain; not measured confidence interval or new hardware fact.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "T023",
+      "name": "Store visibility/completion delay",
+      "legacy_baseline": 32,
+      "baseline_unit": "SM cycles to shared-store visibility; global modeled by memory service completion",
+      "actual_implementation": "Actual external provider acknowledgment controls visibility/completion, not fixed32cycles.",
+      "source": "numerical/coalesced_fp32_warp_store.sv",
+      "result": "mapped_executable_subcase_not_exact_baseline",
+      "suggested_action": "Keep callback-owned completion; choose providerdelay separately from issue/packetization.",
+      "useful_model_range_or_alternatives": [
+        4,
+        128
+      ],
+      "range_interpretation": "Existing engineering sensitivity domain; not measured confidence interval or new hardware fact.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "T024",
+      "name": "Translation hit delay",
+      "legacy_baseline": 4,
+      "baseline_unit": "SM-reference cycles",
+      "actual_implementation": "No connected implementation of this exact field: nativeinstruction frontend/registercollector, translation, memorycontroller or clock-domain machinery is absent or abstracted.",
+      "source": "numerical/resident_gemm_multi_sm_nb_l2.sv",
+      "result": "checked_not_exercised",
+      "suggested_action": "Retain the supplied engineering sensitivity domain; omit cost when the mechanism is conditionally absent, or implement one named stage before evaluating it.",
+      "useful_model_range_or_alternatives": [
+        1,
+        20
+      ],
+      "range_interpretation": "Existing engineering sensitivity domain; not measured confidence interval or new hardware fact.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "T025",
+      "name": "Translation miss processing delay",
+      "legacy_baseline": 40,
+      "baseline_unit": "SM-reference cycles",
+      "actual_implementation": "No connected implementation of this exact field: nativeinstruction frontend/registercollector, translation, memorycontroller or clock-domain machinery is absent or abstracted.",
+      "source": "numerical/resident_gemm_multi_sm_nb_l2.sv",
+      "result": "checked_not_exercised",
+      "suggested_action": "Retain the supplied engineering sensitivity domain; omit cost when the mechanism is conditionally absent, or implement one named stage before evaluating it.",
+      "useful_model_range_or_alternatives": [
+        10,
+        200
+      ],
+      "range_interpretation": "Existing engineering sensitivity domain; not measured confidence interval or new hardware fact.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "T026",
+      "name": "Page-walk delay",
+      "legacy_baseline": 600,
+      "baseline_unit": "SM-reference cycles",
+      "actual_implementation": "No connected implementation of this exact field: nativeinstruction frontend/registercollector, translation, memorycontroller or clock-domain machinery is absent or abstracted.",
+      "source": "numerical/resident_gemm_multi_sm_nb_l2.sv",
+      "result": "checked_not_exercised",
+      "suggested_action": "Retain the supplied engineering sensitivity domain; omit cost when the mechanism is conditionally absent, or implement one named stage before evaluating it.",
+      "useful_model_range_or_alternatives": [
+        100,
+        3000
+      ],
+      "range_interpretation": "Existing engineering sensitivity domain; not measured confidence interval or new hardware fact.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "T027",
+      "name": "Shared read response latency",
+      "legacy_baseline": 24,
+      "baseline_unit": "SM-reference cycles",
+      "actual_implementation": "RETURN_DELAY9 in numerical tests, not intrinsic24cycles; current freshdependentmeasurement includes28cycle path.",
+      "source": "numerical/resident_gemm_complete.sv",
+      "result": "mapped_executable_subcase_not_exact_baseline",
+      "suggested_action": "Use either28effective dependentcontract or separate response/wakeup model, never sum both.",
+      "useful_model_range_or_alternatives": [
+        16,
+        28
+      ],
+      "range_interpretation": "Existing engineering sensitivity domain; not measured confidence interval or new hardware fact.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "T028",
+      "name": "Shared write response latency",
+      "legacy_baseline": 12,
+      "baseline_unit": "SM-reference cycles",
+      "actual_implementation": "STORE_RETURN_DELAY1 in tests, not12cycles; scratchbankcommit independent fromglobalack.",
+      "source": "numerical/studied_output_scratch_shared.sv",
+      "result": "mapped_executable_subcase_not_exact_baseline",
+      "suggested_action": "Keep synthetic1or sweep8..16as provisionalresponse hypothesis.",
+      "useful_model_range_or_alternatives": [
+        4,
+        32
+      ],
+      "range_interpretation": "Existing engineering sensitivity domain; not measured confidence interval or new hardware fact.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "T029",
+      "name": "Broadcast delay",
+      "legacy_baseline": 0,
+      "baseline_unit": "SM-reference cycles",
+      "actual_implementation": "Same-address broadcast reduces distinct bankword servicework; no extra broadcastdelay component.",
+      "source": "components/warp_shared_read_service.sv",
+      "result": "mapped_executable_subcase_not_exact_baseline",
+      "suggested_action": "Freshbroadcast28matchesbase28scopedchain, supports zero extra delay only thatpath.",
+      "useful_model_range_or_alternatives": [
+        0,
+        4
+      ],
+      "range_interpretation": "Existing engineering sensitivity domain; not measured confidence interval or new hardware fact.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "T030",
+      "name": "Shared-to-operand transfer delay",
+      "legacy_baseline": 4,
+      "baseline_unit": "SM-reference cycles",
+      "actual_implementation": "Actualreadresponse updates operandflags; next issue is controlled bynativegate, not fixed4cycle transfer.",
+      "source": "numerical/resident_native_stage_shared.sv",
+      "result": "mapped_executable_subcase_not_exact_baseline",
+      "suggested_action": "Do not append4to measured28LDSrecurrence without identifying separatetransfer.",
+      "useful_model_range_or_alternatives": [
+        1,
+        16
+      ],
+      "range_interpretation": "Existing engineering sensitivity domain; not measured confidence interval or new hardware fact.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "T031",
+      "name": "L1 read-hit latency",
+      "legacy_baseline": 32,
+      "baseline_unit": "SM-reference cycles",
+      "actual_implementation": "Cachehit result registers immediately onrequestacceptance thenheldresponse; no32cycle L1delay.",
+      "source": "components/sector_read_cache.sv",
+      "result": "mapped_executable_subcase_not_exact_baseline",
+      "suggested_action": "Add parametrized hit stage before declaring profile32exercised.",
+      "useful_model_range_or_alternatives": [
+        20,
+        43
+      ],
+      "range_interpretation": "Existing engineering sensitivity domain; not measured confidence interval or new hardware fact.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "T032",
+      "name": "L1 write service latency",
+      "legacy_baseline": 4,
+      "baseline_unit": "SM-reference cycles",
+      "actual_implementation": "PrivateL1 inputcache bypassed for outputstores, so4cycle writeservice unused.",
+      "source": "numerical/resident_gemm_complete.sv",
+      "result": "mapped_executable_subcase_not_exact_baseline",
+      "suggested_action": "Conditionallyexclude under immutableinputs/disjointoutputs.",
+      "useful_model_range_or_alternatives": [
+        1,
+        20
+      ],
+      "range_interpretation": "Existing engineering sensitivity domain; not measured confidence interval or new hardware fact.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "T033",
+      "name": "L1 service bandwidth",
+      "legacy_baseline": 128,
+      "baseline_unit": "bytes/SM-reference cycle",
+      "actual_implementation": "Blocking32B sector replies and ownershipserialization; no explicit128B/cycle servicebandwidth.",
+      "source": "components/sector_read_cache.sv",
+      "result": "mapped_executable_subcase_not_exact_baseline",
+      "suggested_action": "Use actualrequest/returnedge pacing; keep bandwidthprior separate.",
+      "useful_model_range_or_alternatives": [
+        32,
+        256
+      ],
+      "range_interpretation": "Existing engineering sensitivity domain; not measured confidence interval or new hardware fact.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "T034",
+      "name": "L1 refill transfer delay",
+      "legacy_baseline": 40,
+      "baseline_unit": "SM-reference cycles",
+      "actual_implementation": "Fill becomes ready only after externalpacket return, no added40cycle transfer.",
+      "source": "components/sector_read_cache.sv",
+      "result": "mapped_executable_subcase_not_exact_baseline",
+      "suggested_action": "Providerdelay and cachecompletion edges determine actualmodelpath.",
+      "useful_model_range_or_alternatives": [
+        10,
+        160
+      ],
+      "range_interpretation": "Existing engineering sensitivity domain; not measured confidence interval or new hardware fact.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "T035",
+      "name": "L2 read-hit latency",
+      "legacy_baseline": 300,
+      "baseline_unit": "SM-reference cycles",
+      "actual_implementation": "L2hit capturessector atacceptance and replies afterregisteredowner selection; no300cycle hitdelay.",
+      "source": "numerical/multi_sm_nonblocking_l2.sv",
+      "result": "mapped_executable_subcase_not_exact_baseline",
+      "suggested_action": "Compound356.48cgdependency measurement constrains wholepath, notintrinsic300.",
+      "useful_model_range_or_alternatives": [
+        150,
+        356
+      ],
+      "range_interpretation": "Existing engineering sensitivity domain; not measured confidence interval or new hardware fact.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "T036",
+      "name": "L2 write service latency",
+      "legacy_baseline": 40,
+      "baseline_unit": "SM-reference cycles",
+      "actual_implementation": "Writearound bypass; no40cycle L2writeservice.",
+      "source": "numerical/multi_sm_nonblocking_l2.sv",
+      "result": "mapped_executable_subcase_not_exact_baseline",
+      "suggested_action": "Exclude underdisjointC or implement policy beforetimingit.",
+      "useful_model_range_or_alternatives": [
+        10,
+        160
+      ],
+      "range_interpretation": "Existing engineering sensitivity domain; not measured confidence interval or new hardware fact.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "T037",
+      "name": "L2 service bandwidth per slice",
+      "legacy_baseline": 16,
+      "baseline_unit": "bytes/SM-reference cycle",
+      "actual_implementation": "One combined logicalowner admission peredge, unsliced; no16B/slice/cycle limiter.",
+      "source": "numerical/multi_sm_nonblocking_l2.sv",
+      "result": "mapped_executable_subcase_not_exact_baseline",
+      "suggested_action": "Keep arbitration modeled; actualslices/byteservice requireseparatecomponent.",
+      "useful_model_range_or_alternatives": [
+        8,
+        64
+      ],
+      "range_interpretation": "Existing engineering sensitivity domain; not measured confidence interval or new hardware fact.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "T038",
+      "name": "L2 return bandwidth",
+      "legacy_baseline": 768,
+      "baseline_unit": "bytes/SM-reference cycle",
+      "actual_implementation": "Independentperclient32B reply packets can returntogether; no global768B/cycle throttle.",
+      "source": "numerical/multi_sm_nonblocking_l2.sv",
+      "result": "mapped_executable_subcase_not_exact_baseline",
+      "suggested_action": "Add commonreturnrate constraint onlywithnamedtopologyscope.",
+      "useful_model_range_or_alternatives": [
+        256,
+        2048
+      ],
+      "range_interpretation": "Existing engineering sensitivity domain; not measured confidence interval or new hardware fact.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "T039",
+      "name": "Read command/response timing",
+      "legacy_baseline": 200,
+      "baseline_unit": "SM-reference cycles",
+      "actual_implementation": "No connected implementation of this exact field: nativeinstruction frontend/registercollector, translation, memorycontroller or clock-domain machinery is absent or abstracted.",
+      "source": "numerical/resident_gemm_multi_sm_nb_l2.sv",
+      "result": "checked_not_exercised",
+      "suggested_action": "Retain the supplied engineering sensitivity domain; omit cost when the mechanism is conditionally absent, or implement one named stage before evaluating it.",
+      "useful_model_range_or_alternatives": [
+        80,
+        600
+      ],
+      "range_interpretation": "Existing engineering sensitivity domain; not measured confidence interval or new hardware fact.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "T040",
+      "name": "Write command/response timing",
+      "legacy_baseline": 100,
+      "baseline_unit": "SM-reference cycles",
+      "actual_implementation": "No connected implementation of this exact field: nativeinstruction frontend/registercollector, translation, memorycontroller or clock-domain machinery is absent or abstracted.",
+      "source": "numerical/resident_gemm_multi_sm_nb_l2.sv",
+      "result": "checked_not_exercised",
+      "suggested_action": "Retain the supplied engineering sensitivity domain; omit cost when the mechanism is conditionally absent, or implement one named stage before evaluating it.",
+      "useful_model_range_or_alternatives": [
+        40,
+        300
+      ],
+      "range_interpretation": "Existing engineering sensitivity domain; not measured confidence interval or new hardware fact.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "T041",
+      "name": "Read/write turnaround",
+      "legacy_baseline": 24,
+      "baseline_unit": "SM-reference cycles",
+      "actual_implementation": "No connected implementation of this exact field: nativeinstruction frontend/registercollector, translation, memorycontroller or clock-domain machinery is absent or abstracted.",
+      "source": "numerical/resident_gemm_multi_sm_nb_l2.sv",
+      "result": "checked_not_exercised",
+      "suggested_action": "Retain the supplied engineering sensitivity domain; omit cost when the mechanism is conditionally absent, or implement one named stage before evaluating it.",
+      "useful_model_range_or_alternatives": [
+        8,
+        80
+      ],
+      "range_interpretation": "Existing engineering sensitivity domain; not measured confidence interval or new hardware fact.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "T042",
+      "name": "Transfer service interval",
+      "legacy_baseline": 0.0525,
+      "baseline_unit": "SM-reference cycles/32-byte sector, aggregate bus",
+      "actual_implementation": "No connected implementation of this exact field: nativeinstruction frontend/registercollector, translation, memorycontroller or clock-domain machinery is absent or abstracted.",
+      "source": "numerical/resident_gemm_multi_sm_nb_l2.sv",
+      "result": "checked_not_exercised",
+      "suggested_action": "Retain the supplied engineering sensitivity domain; omit cost when the mechanism is conditionally absent, or implement one named stage before evaluating it.",
+      "useful_model_range_or_alternatives": [
+        0.0525,
+        0.21
+      ],
+      "range_interpretation": "Existing engineering sensitivity domain; not measured confidence interval or new hardware fact.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "T043",
+      "name": "Barrier arrival service rate",
+      "legacy_baseline": 1,
+      "baseline_unit": "warp arrivals per SM reference cycle",
+      "actual_implementation": "Onearrival event can carrymultiplewarpbits; notoneindividualwarp percycle.",
+      "source": "components/cta_generation_barrier.sv",
+      "result": "mapped_executable_subcase_not_exact_baseline",
+      "suggested_action": "State eventversuswarpcount units; coalescedmask arrivals are model granularity.",
+      "useful_model_range_or_alternatives": [
+        0.25,
+        4
+      ],
+      "range_interpretation": "Existing engineering sensitivity domain; not measured confidence interval or new hardware fact.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "T044",
+      "name": "Barrier release delay",
+      "legacy_baseline": 2,
+      "baseline_unit": "SM reference cycles after final accepted arrival",
+      "actual_implementation": "BARRIER_RELEASE_DELAY1, whileprofile2is not thisrunconfiguration.",
+      "source": "numerical/resident_gemm_complete.sv",
+      "result": "mapped_executable_subcase_not_exact_baseline",
+      "suggested_action": "Parameter allows2; numericaltests do not measurehardware2.",
+      "useful_model_range_or_alternatives": [
+        1,
+        32
+      ],
+      "range_interpretation": "Existing engineering sensitivity domain; not measured confidence interval or new hardware fact.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "T045",
+      "name": "Warp resume delay",
+      "legacy_baseline": 1,
+      "baseline_unit": "SM reference cycles from release to scheduler eligibility",
+      "actual_implementation": "Releaseflags latch before nextstage request; actualstate transitions governresume, no separate1cycle object.",
+      "source": "numerical/resident_gemm_complete.sv",
+      "result": "mapped_executable_subcase_not_exact_baseline",
+      "suggested_action": "Count edges once and avoid addedresume delay ifexistingregisteredge includesit.",
+      "useful_model_range_or_alternatives": [
+        0,
+        16
+      ],
+      "range_interpretation": "Existing engineering sensitivity domain; not measured confidence interval or new hardware fact.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "T047",
+      "name": "Cross-domain transfer delay",
+      "legacy_baseline": {
+        "minimum_forward_latency": 2,
+        "minimum_return_latency": 2
+      },
+      "baseline_unit": "destination clock edges",
+      "actual_implementation": "No connected implementation of this exact field: nativeinstruction frontend/registercollector, translation, memorycontroller or clock-domain machinery is absent or abstracted.",
+      "source": "numerical/resident_gemm_multi_sm_nb_l2.sv",
+      "result": "checked_not_exercised",
+      "suggested_action": "Retain the supplied engineering sensitivity domain; omit cost when the mechanism is conditionally absent, or implement one named stage before evaluating it.",
+      "useful_model_range_or_alternatives": {
+        "forward": [
+          2,
+          8
+        ],
+        "return": [
+          2,
+          8
+        ]
+      },
+      "range_interpretation": "Existing engineering sensitivity domain; not measured confidence interval or new hardware fact.",
+      "physical_status_unchanged": true
+    }
+  ],
+  "profile_mapping_fix_suggestions": [
+    {
+      "id": "F018",
+      "legacy": "oldest-ready warp per partition with round-robin ties",
+      "actual": "global round-robin among eligible flattened warp/context candidates",
+      "recommendation": "Use actualglobalRR as current simulatorprofile; retain oldest-ready/perpartition as untested alternative. Never reinterpret numericalpass asRTXpolicy proof.",
+      "source": "numerical/resident_native_stage_shared.sv"
+    },
+    {
+      "id": "F058",
+      "legacy": "pseudo-LRU per set",
+      "actual": "advancing victim cursor in blockingprivate cache",
+      "recommendation": "Label current model round-robin replacement; retain pseudoLRU/LRU/random for sensitivity. Miss/eviction adversarialtests needed before choosing hardwarepolicy.",
+      "source": "components/sector_read_cache.sv"
+    }
+  ],
+  "fresh_wholekernel_support": {
+    "measurement": {
+      "all_45_outputs_correct": true,
+      "output_checks": 45,
+      "median_us": 277.2672,
+      "frozen_prediction_us": 293.382651592,
+      "relative_overestimate_percent": 5.812245946148686,
+      "native_signature_matches": true,
+      "resources_match": true,
+      "scope": "One unchanged exactkernel process, ninefiveeventmeans. Plannedsecond/thirdprocess didnotlaunch because idlecheck saw7%residualutilizationfrompreviousrun. Nojobs terminated.",
+      "new_parameter_fit": false
+    },
+    "source": "parameter_sweep/initial_validation_20261003_222837/largest_error_result.json",
+    "interpretation": "Unchanged original40register376instructionkernel confirms numericalworkloadidentity and5.812%combined frozenprediction error withoutrefit. It supports that aggregate model at this one operatingpoint, not the separate118 assumednumbers or newRTLtiming.",
+    "distinct_optimized_library_family": "SavedcuBLASLt selectedkernel96regs37376Bshared is different algorithm/BK128 from original40regs8192Buser shared/BK32; do not mix their resourcefootprints."
+  },
+  "source_sha256": {
+    "parameter_sweep/initial_validation_20261003_222837/largest_error_result.json": "ba14977d3a348da2ceebb916b2aef1638d24413fc1b8df80c4799be34c9f1a25",
+    "numerical/resident_gemm_complete.sv": "6a1f526f8a5732cbdfc85de17ec783f671522bef11fdf0ef9242a34cd6041d1c",
+    "numerical/native_hmma16816_adapter.sv": "b7b24dc0c6ea8e2acd4dd48b309f5b23804b167f3d4aa7a35af6abd5d6dce18d",
+    "numerical/coalesced_fp32_warp_store.sv": "5c5da8187bef4824d1aa8cf17707a522e6d64062d2b44997fd3502dcde2393b8",
+    "components/sector_read_cache.sv": "45c49166f1cf330b3c2ae4b41f5af0d96655d3a6d8cbeb5f09452e21c3592298",
+    "numerical/resident_gemm_multi_sm_nb_l2.sv": "79dd6b1604f9b9b77a87aa2258fcdb0efcb2a898ff2225476c724a86b95d5726",
+    "parameter_sweep/load_assembly/analysis.json": "375df3573f5df41a0eeec8242c13a4e8c04520962d57032966d08ecfb58e74f5",
+    "numerical/multi_sm_nonblocking_l2.sv": "c1f7af9e3fa80274fd23372c9e2ff337498ca6224615fb880b890b6ad33e93b9",
+    "numerical/studied_output_scratch_shared.sv": "3adf1d8b72b115c2fd499958d116375311dcc26d8aeae5969f49f0ee5047cab3",
+    "components/warp_shared_read_service.sv": "82df6598d987c0df1c5be4db8ec504951f2d958783390d7b458cbde6b904500b",
+    "numerical/resident_native_stage_shared.sv": "f23e493e6013fd95beb3ea50f6bc84a6a81d1adde0f21e76e6645d78998a07d3",
+    "components/cta_generation_barrier.sv": "383b1639ec746b4024a652cf9f11e225716ce871f8c2140781a361dbdb17857f",
+    "parameter_sweep/initial_validation_20261003_222837/build/preflight.json": "1a6743de23835b5958b0b96dd034d72e3654af6e25574a3a03ed4df03fcd03a2",
+    "components/shared_read_candidate_hub.sv": "0fd8fb98e497e7a5579da79db3835c73cc5769b011b2025c9a50b952b0c6b5d8"
+  },
+  "master_table_unchanged": true,
+  "new_remote_commands": 0,
+  "new_gpu_launches_by_this_agent": 0
+}

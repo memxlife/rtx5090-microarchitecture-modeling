@@ -1,0 +1,196 @@
+{
+  "shape": [
+    1920,
+    1920,
+    1920
+  ],
+  "status": 0,
+  "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+  "solve_seconds": 0.051520542008802295,
+  "mip_gap": 0.0,
+  "variables": 333,
+  "constraints": 596,
+  "model_sha256": "cc250d5bc180ac7db654b6a07d2c6efdd40f608ff975d9401be70917a20a796a",
+  "tile": [
+    16,
+    48,
+    64
+  ],
+  "milp_predicted_ms": 0.4904311662869816,
+  "predicted_ms": 0.4904311662869821,
+  "serial_ms": 0.14555845110489532,
+  "aggregate_ms": 0.4904311662869821,
+  "resident_ctas": 7,
+  "grid_ctas": 4800,
+  "waves": 5,
+  "slots": 1,
+  "productive_warps": 3,
+  "independent_optimum": {
+    "tile": [
+      32,
+      32,
+      32
+    ],
+    "predicted_ms": 0.32103430448650033,
+    "serial_ms": 0.119543965995521,
+    "aggregate_ms": 0.32103430448650033,
+    "resident_ctas": 11,
+    "grid_ctas": 3600,
+    "waves": 2,
+    "slots": 1,
+    "productive_warps": 4
+  },
+  "agrees_with_independent_enumeration": false,
+  "top_predictions": [
+    {
+      "tile": [
+        32,
+        32,
+        32
+      ],
+      "predicted_ms": 0.32103430448650033,
+      "serial_ms": 0.119543965995521,
+      "aggregate_ms": 0.32103430448650033,
+      "resident_ctas": 11,
+      "grid_ctas": 3600,
+      "waves": 2,
+      "slots": 1,
+      "productive_warps": 4
+    },
+    {
+      "tile": [
+        64,
+        48,
+        32
+      ],
+      "predicted_ms": 0.333804899607916,
+      "serial_ms": 0.20178175443574362,
+      "aggregate_ms": 0.333804899607916,
+      "resident_ctas": 8,
+      "grid_ctas": 1200,
+      "waves": 1,
+      "slots": 3,
+      "productive_warps": 4
+    },
+    {
+      "tile": [
+        48,
+        64,
+        32
+      ],
+      "predicted_ms": 0.33481530518526575,
+      "serial_ms": 0.21063842247555328,
+      "aggregate_ms": 0.33481530518526575,
+      "resident_ctas": 8,
+      "grid_ctas": 1200,
+      "waves": 1,
+      "slots": 3,
+      "productive_warps": 4
+    },
+    {
+      "tile": [
+        64,
+        32,
+        32
+      ],
+      "predicted_ms": 0.36201267438674706,
+      "serial_ms": 0.16846471292912962,
+      "aggregate_ms": 0.36201267438674706,
+      "resident_ctas": 9,
+      "grid_ctas": 1800,
+      "waves": 2,
+      "slots": 2,
+      "productive_warps": 4
+    },
+    {
+      "tile": [
+        32,
+        64,
+        32
+      ],
+      "predicted_ms": 0.3650438911187964,
+      "serial_ms": 0.18617804900874899,
+      "aggregate_ms": 0.3650438911187964,
+      "resident_ctas": 9,
+      "grid_ctas": 1800,
+      "waves": 2,
+      "slots": 2,
+      "productive_warps": 4
+    },
+    {
+      "tile": [
+        80,
+        64,
+        32
+      ],
+      "predicted_ms": 0.3720999873025535,
+      "serial_ms": 0.2595591694091619,
+      "aggregate_ms": 0.3720999873025535,
+      "resident_ctas": 7,
+      "grid_ctas": 720,
+      "waves": 1,
+      "slots": 5,
+      "productive_warps": 4
+    },
+    {
+      "tile": [
+        64,
+        64,
+        32
+      ],
+      "predicted_ms": 0.3727062306489634,
+      "serial_ms": 0.2350987959423576,
+      "aggregate_ms": 0.3727062306489634,
+      "resident_ctas": 7,
+      "grid_ctas": 900,
+      "waves": 1,
+      "slots": 4,
+      "productive_warps": 4
+    },
+    {
+      "tile": [
+        64,
+        80,
+        32
+      ],
+      "predicted_ms": 0.3727062306489634,
+      "serial_ms": 0.2684158374489716,
+      "aggregate_ms": 0.3727062306489634,
+      "resident_ctas": 7,
+      "grid_ctas": 720,
+      "waves": 1,
+      "slots": 5,
+      "productive_warps": 4
+    },
+    {
+      "tile": [
+        32,
+        32,
+        48
+      ],
+      "predicted_ms": 0.3828136144501462,
+      "serial_ms": 0.119543965995521,
+      "aggregate_ms": 0.3828136144501462,
+      "resident_ctas": 9,
+      "grid_ctas": 3600,
+      "waves": 3,
+      "slots": 1,
+      "productive_warps": 4
+    },
+    {
+      "tile": [
+        80,
+        48,
+        32
+      ],
+      "predicted_ms": 0.3928473638577788,
+      "serial_ms": 0.2262421279025479,
+      "aggregate_ms": 0.3928473638577788,
+      "resident_ctas": 7,
+      "grid_ctas": 960,
+      "waves": 1,
+      "slots": 4,
+      "productive_warps": 4
+    }
+  ]
+}

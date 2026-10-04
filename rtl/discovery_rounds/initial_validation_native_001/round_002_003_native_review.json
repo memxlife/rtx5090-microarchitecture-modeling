@@ -1,0 +1,32 @@
+{
+  "receipt": "Independent native review of hardware rounds2/3",
+  "reviewed_fields": [
+    "T043",
+    "T044",
+    "T045",
+    "F050",
+    "T021",
+    "T023",
+    "T017",
+    "T018",
+    "T019",
+    "F029",
+    "T042"
+  ],
+  "dynamic_denominator": "count*CHAINS native HMMA operations per warp; each source mma.sync m16n8k16 corresponds to one HMMA16816. Static peeled/unrolled paths are not the dynamic denominator.",
+  "static_counts": {
+    "_Z5probeILi4EEvPfPyi": 896,
+    "_Z5probeILi1EEvPfPyi": 160
+  },
+  "static_total": 1056,
+  "control_boundary": "HMMA followed by NOP and WAIT15_END_GROUP native controls. Independent chains retain this scheduling. Measured32cycles/op includes these controls; no bare latency/initiation identified.",
+  "aggregate_boundary": "Four-warp32cycles/warp/op implies approximately8SMcycles per aggregate native operation for this compiled microprobe. No extrapolation to arbitrary kernel scheduling or hardware port count.",
+  "barrier_store_boundary": "Compiled predicated branching and CTA synchronization are included in two-length loop slopes; arrivals/release/wakeup/store visibility are not separately identifiable.",
+  "assessment": "No material numerical denominator defect. Retain compound/path labels.",
+  "physical_closures": 0,
+  "hashes": {
+    "parameter_sweep/initial_validation_20261003_222837/round3/hmma.sass": "5358d8ed28ea66756f13a9e1e61fb76a50ea74fb7aaef74b7e16dd568b2771b7",
+    "parameter_sweep/initial_validation_20261003_222837/round3/hmma.cu": "a96643befe1c7984100d25cbfe1b2660f95a1e03ef87155b852d936dc097de9d",
+    "parameter_sweep/initial_validation_20261003_222837/round_002_003_evidence.json": "c683227494cf4a2be67d77d8397020352eea27aca0e0229795a148693872a626"
+  }
+}

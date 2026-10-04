@@ -1,0 +1,13 @@
+#include "Vgrid_component_top.h"
+#include "grid_metadata.hpp"
+#include <deque>
+#include <iostream>
+#ifndef TEST_SMS
+#define TEST_SMS 11
+#endif
+using namespace grid_event;
+int main(){Vgrid_component_top v;Grid g(TEST_SMS,96,288);struct Job{uint32_t id;int due;};std::vector<std::deque<Job>> jobs(TEST_SMS);uint64_t checks=0;int launches=0,completions=0,grids=0;for(int t=0;t<4000;t++){Grid::Inputs i;i.reset=t==0||t==2100;i.launch=g.state==Grid::IDLE&&t%7==0;i.done_ready=t%4!=0;i.setup=grids%2?0:17;i.id=123+grids;i.ready.resize(TEST_SMS);i.done.resize(TEST_SMS);i.done_id.resize(TEST_SMS);for(int sm=0;sm<TEST_SMS;sm++){i.resident+=jobs[sm].size();i.ready[sm]=jobs[sm].size()<3&&(t+sm)%5!=0;i.done[sm]=!jobs[sm].empty()&&jobs[sm].front().due<=t;i.done_id[sm]=jobs[sm].empty()?0:jobs[sm].front().id;v.child_launch_ready[sm]=i.ready[sm];v.child_done_valid[sm]=i.done[sm];v.child_done_id[sm]=i.done_id[sm];}auto s=g.signals(i);v.clk=0;v.rst=i.reset;v.launch_valid=i.launch;v.done_ready=i.done_ready;v.kernel_setup_cycles=i.setup;v.resident_blocks=i.resident;v.launch_id=i.id;v.a_base=i.a;v.b_base=i.b;v.c_base=i.c;v.eval();if(!i.reset){auto eq=[&](int64_t a,int64_t b,const char*n){checks++;if(a!=b){std::cerr<<t<<" "<<n<<" rtl="<<a<<" cpp="<<b<<"\n";std::exit(1);}};
+#define EQ(x,y) eq(int32_t(v.x),int32_t(y),#x)
+EQ(launch_ready,s.launch_ready);EQ(done_valid,s.done);EQ(done_id,g.id);EQ(block_launch_valid,s.block_launch);EQ(block_done_valid,s.block_done);EQ(block_launch_ordinal,s.launch_id);EQ(block_launch_row,s.row);EQ(block_launch_col,s.col);EQ(block_launch_sm,g.owner>=0?g.owner:0);EQ(block_done_ordinal,s.completion_id);EQ(block_done_sm,s.done_sm>=0?s.done_sm:0);EQ(block_done_row,s.completion_row);EQ(block_done_col,s.completion_col);EQ(launch_owner,g.owner);EQ(launch_cursor,g.cursor);EQ(completion_owner,s.done_sm);EQ(completion_cursor,g.completion_cursor);EQ(dispatched_blocks,g.dispatched);EQ(completed_blocks,g.completed);EQ(setup_left,g.setup_left);eq(v.elapsed_cycles,g.elapsed,"elapsed");EQ(state_out,g.state);for(int sm=0;sm<TEST_SMS;sm++){eq(v.child_launch_valid[sm],s.launch_sm==sm,"childlaunch");eq(v.child_done_ready[sm],s.done_sm==sm,"childdone");}}
+v.clk=1;v.eval();g.edge(i);if(i.reset){for(auto&q:jobs)q.clear();}else{if(s.block_launch){jobs[s.launch_sm].push_back({s.launch_id,t+3+int((s.launch_id*13)%61)});launches++;}if(s.block_done){jobs[s.done_sm].pop_front();completions++;}if(s.done&&i.done_ready)grids++;}}
+std::cout<<"GRID_METADATA_PASS sms="<<TEST_SMS<<" cycles=4000 checks="<<checks<<" launches="<<launches<<" completions="<<completions<<" grids="<<grids<<"\n";return grids>10?0:2;}

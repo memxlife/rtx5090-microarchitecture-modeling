@@ -1,0 +1,33 @@
+{
+  "all_passed": true,
+  "checks": [
+    {
+      "case": "normal",
+      "passed": true
+    },
+    {
+      "case": "wrong_id",
+      "passed": true
+    }
+  ],
+  "checked_read_words": 56,
+  "shared_l2_hits": 1,
+  "shared_l2_misses": 6,
+  "merged_misses": 2,
+  "actual_fills": 4,
+  "checks_scope": [
+    "equal IDs across SMs/read-write",
+    "accepted write payload snapshot",
+    "delayed actual backing returns",
+    "held client responses",
+    "at most one combined backing request acceptance per edge; multiple requests may remain outstanding",
+    "reset provider flush",
+    "wrong return identity rejection"
+  ],
+  "timing_calibrated": false,
+  "source_sha256": {
+    "numerical/multi_sm_nonblocking_l2.sv": "c1f7af9e3fa80274fd23372c9e2ff337498ca6224615fb880b890b6ad33e93b9",
+    "numerical/multi_sm_nonblocking_l2_tb.sv": "920b9174a39fdb7fad0fa67487358796d9b02e404a475c6fc1178c63fdb4005d"
+  },
+  "metadata_correction": "Corrected scope wording after independent source audit; tested SV sources and raw simulation results unchanged."
+}

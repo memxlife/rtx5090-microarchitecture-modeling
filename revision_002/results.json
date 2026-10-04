@@ -1,0 +1,136 @@
+[
+  {
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "tested_tiles": 144,
+    "correct_tiles": 144,
+    "best_tile": [
+      16,
+      16,
+      64
+    ],
+    "best_ms": 0.0294976,
+    "new_tile": [
+      32,
+      32,
+      64
+    ],
+    "new_ms": 0.0409535989,
+    "old_tile": [
+      80,
+      80,
+      16
+    ],
+    "old_ms": 0.175705603,
+    "new_predicted_ms": 0.06755784264356565,
+    "solve_seconds": 0.26182216708548367,
+    "new_spearman": 0.7600637598880194,
+    "old_spearman": -0.5975530325023041,
+    "new_median_relative_error": 0.17173497743745655,
+    "old_median_relative_error": 0.7865989370396298,
+    "new_regret": 0.3883705420101975,
+    "old_regret": 4.956606740887394,
+    "ablations": [
+      {
+        "removed_term": "remove_serial_path",
+        "tile": [
+          32,
+          32,
+          64
+        ],
+        "measured_ms": 0.0409535989,
+        "regret": 0.3883705420101975
+      },
+      {
+        "removed_term": "remove_wave_stage",
+        "tile": [
+          32,
+          32,
+          32
+        ],
+        "measured_ms": 0.0409407988,
+        "regret": 0.38793660501193306
+      },
+      {
+        "removed_term": "remove_resident_tensor_latency",
+        "tile": [
+          32,
+          32,
+          64
+        ],
+        "measured_ms": 0.0409535989,
+        "regret": 0.3883705420101975
+      }
+    ]
+  },
+  {
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "tested_tiles": 144,
+    "correct_tiles": 144,
+    "best_tile": [
+      64,
+      32,
+      32
+    ],
+    "best_ms": 0.154009604,
+    "new_tile": [
+      32,
+      64,
+      32
+    ],
+    "new_ms": 0.181862399,
+    "old_tile": [
+      96,
+      96,
+      32
+    ],
+    "old_ms": 0.289574397,
+    "new_predicted_ms": 0.18836443060128516,
+    "solve_seconds": 0.24482995795551687,
+    "new_spearman": 0.5644880479287235,
+    "old_spearman": 0.30317079400424407,
+    "new_median_relative_error": 0.17085060657752488,
+    "old_median_relative_error": 0.329754988351186,
+    "new_regret": 0.18085102666714215,
+    "old_regret": 0.8802359689204837,
+    "ablations": [
+      {
+        "removed_term": "remove_serial_path",
+        "tile": [
+          32,
+          64,
+          32
+        ],
+        "measured_ms": 0.181862399,
+        "regret": 0.18085102666714215
+      },
+      {
+        "removed_term": "remove_wave_stage",
+        "tile": [
+          32,
+          32,
+          32
+        ],
+        "measured_ms": 0.178176001,
+        "regret": 0.15691487006225935
+      },
+      {
+        "removed_term": "remove_resident_tensor_latency",
+        "tile": [
+          32,
+          32,
+          64
+        ],
+        "measured_ms": 0.216678399,
+        "regret": 0.4069148505829545
+      }
+    ]
+  }
+]

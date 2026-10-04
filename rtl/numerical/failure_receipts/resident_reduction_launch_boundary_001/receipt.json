@@ -1,0 +1,5 @@
+{
+  "observation": "Independent review found the parent could reserve a context before the child rejected an odd base or overflowing input allocation. Valid-input numerical tests passed.",
+  "resolution": "Reject invalid geometry and input allocation at launch before reservation.",
+  "numerical_tests_failed": false
+}

@@ -1,0 +1,5 @@
+{
+  "failure": "Reset control tested combinational req_ready in same scheduling delta as rst deassertion",
+  "observed": "Reset failed to clear pending state at182ns",
+  "repair": "Wait0.1ns for combinational outputs after deasserting reset; component state machine unchanged"
+}

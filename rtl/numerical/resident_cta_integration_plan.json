@@ -1,0 +1,120 @@
+{
+  "objective": "Execute multiple resident CTA contexts sharing one SM service set, first2contexts thenresourcebounded residentcount; never duplicate read/MOVM/HMMA execution services per CTA.",
+  "evidence_boundary": "All issue arbitration, context scheduling and service delays remain configurable hypotheses. Allocation arithmetic is CUDA-toolkit-derived, not private partition placement. No multi-SM runtime prediction follows from this refactor.",
+  "source_sha256": {
+    "components/quantized_block_admission.sv": "048f8fc9dfaa3d807c5b5bbe5b9a7d1c5eeb4ec33150ef3058a2b0f8769bcacd",
+    "components/allocation_demands.sv": "9225576fee76bd34f3c55262b2cacd5c21f43a2ced88ce375221d8519b6bd760",
+    "components/hardware_blocks.sv": "5f440c3e53abf5f907a2300c47798d7df41d81a39e1666d1c2ebfcb8a6add97a",
+    "numerical/native_multiwarp_stage_pipeline.sv": "8d1bd9816753be3a05923013933a1d87aa89edc23a5b3062b0f50f5a2bb70753",
+    "numerical/studied_gemm_cta_controller.sv": "fb696aca2dbc7898651ddf820a6323b2357b9b5ba810ce715fc562043c6cc4ab",
+    "numerical/studied_gemm_grid_controller.sv": "b6513e2aa54f3b44005728d34bad9a021a3ea623018541ccd8e3a18b6135c65b",
+    "numerical/studied_output_scratch_pipeline.sv": "73b253eea79f3011b936157a7790ca0f4c413dc6f3e601e2934832470f41c988"
+  },
+  "existing_contracts": {
+    "allocation": "quantized_block_admission gates resource reservation and names an admitted slot; no pre-edge retirement bypass.",
+    "register_quantum_words_per_warp": 256,
+    "shared_quantum_bytes": 128,
+    "SM_register_words": 65536,
+    "SM_shared_bytes": 102400,
+    "SM_max_warps": 48,
+    "SM_block_slots": 24,
+    "original_small_CTA": {
+      "threads": 128,
+      "registers_per_thread": 40,
+      "user_shared_bytes": 8192,
+      "reserved_shared_bytes": 1024,
+      "allocated_register_words": 5120,
+      "allocated_shared_bytes": 9216,
+      "observed_allocator_limit": 11,
+      "scope": "Saved quantized admission fixture; hardware resource receipt must be bound to exact kernel/compiler before promotion."
+    },
+    "existing_engine": "native_multiwarp_stage_pipeline owns4warps and exactlyone read/MOVM/HMMA instance but onlyone batch/context and4096B operand shared storage."
+  },
+  "minimal_new_modules": [
+    {
+      "name": "resident_native_stage_engine.sv",
+      "derive_from": "native_multiwarp_stage_pipeline.sv",
+      "edits": [
+        "Add CONTEXTS=2 and context index to scalar/vector shared writes, request admission, response and traces.",
+        "Lift pc/control/barriers/A/B/MOVM/C/readiness/live-operation arrays from [warp] to [context][warp]; shared operand memory becomes [context][2048halfwords].",
+        "Replace single state/saved_id/round_robin with context_state[CONTEXTS], saved_id[CONTEXTS], and one round-robin cursor across CONTEXTS*WARPS eligible candidates.",
+        "KEEP exactlyone warp_shared_read_service, one native_movm_word_pipeline and one native_hmma16816_adapter. All contexts compete for these exact same capacities, intervals and return ports.",
+        "Choose candidate by decoded gate eligibility and actual resource capacity; dispatch_ready stays actual service readiness. Maintain one accepted instruction globally per edge initially, labeled a schedule assumption.",
+        "Route every actual service response to owning context/warp/PC; per-context service-live and barrier counts must drain independently. Response for one context must not require all other contexts idle.",
+        "Arbitrate buffered context responses round-robin and hold selected context/id/data stable until acknowledgement."
+      ]
+    },
+    {
+      "name": "resident_cta_grid_controller.sv",
+      "derive_from": "studied_gemm_grid_controller.sv + per-context CTA lifecycle",
+      "edits": [
+        "Instantiate one quantized_block_admission with BLOCK_SLOTS=CONTEXTS; admit_valid only when a grid block and a free context are available.",
+        "Latch block ordinal, row/column, immutable bases and kernel resource receipt into admitted_slot on exactly the same accepted admission edge.",
+        "Maintain per-context global-staging/reduction/output/CTA-barrier state; do not instantiate a complete studied_gemm_cta_controller per slot because that would duplicate native services and caches.",
+        "Send each prepared stage through shared resident_native_stage_engine using allocated context index. Barrier generations belong to context and cannot be globally reset by another context going idle.",
+        "Retire admission slot only after final output acknowledgements, no live stage/read/move/matrix/store token, no pending scratch work and all context barrier releases acknowledged.",
+        "Grid done requires all block ordinals admitted/completed exactly once and resident_blocks==0; scheduler must keep admitting new blocks while earlier contexts execute."
+      ]
+    }
+  ],
+  "context_identity": {
+    "preferred_encoding": "Let LOCAL_BITS=ceil(log2(CONTEXTS*WARPS*40)); linear=context*WARPS*40+warp*40+pc; service_id=(context_epoch<<(LOCAL_BITS))|linear.",
+    "epoch": "Increment a per-context epoch at each stage acceptance; compare completion epoch with its recorded active operation. Reject wrap rather than aliasing old events.",
+    "decoding": "Extract low LOCAL_BITS to derive context/warp/pc; high bits are epoch. Gate operation tag remains local PC within its context/warp.",
+    "why": "Simple context*160+warp*40+pc repeats across stages/slot reuse and can misroute stale completions; epoch ownership is required.",
+    "provider_reset": "External memory providers flush old transactions; internal context epoch/reset rules alone cannot revoke already committed external writes."
+  },
+  "shared_storage": {
+    "operand_bytes_per_context": 4096,
+    "scratch_bytes_per_context": 4096,
+    "physical_budget_accounting": "Reserve8192 user bytes plus1024 reserved bytes per admitted saved small CTA, rounded128. Do not reserve only4096 because current operand engine omits the output scratch allocation.",
+    "model_arrays": "Separate context arrays are address isolation, not independent bank bandwidth. Encode bank-local byte address from context offset while retaining32bank mapping of each CTA-aligned region.",
+    "scratch_refactor": "Move scratch arrays and pending STS/LDS state into per-context storage; output scratch LDS must use same shared read service as operand loads. Bank writes also need one shared service arbiter, not a private write port per context."
+  },
+  "global_memory_gap": {
+    "current_problem": "Each studied CTA embeds its own coalesced warp loader/cache; blindly instantiating multiple controllers creates independent caches/backing capacities.",
+    "minimum_resolution": "Separate coalesced_u16 request grouping from cache ownership; one SM-level sector cache/packet service arbitrates tagged context requests and returns packets to per-context grouping state.",
+    "output": "One coalesced_fp32 sector-store queue/arbiter carries context+operation identity and actual masked-store acknowledgements.",
+    "defer_boundary": "A first numerical resident-stage test may use preloaded per-context shared values, but cannot claim whole-grid resident integration or hardware runtime."
+  },
+  "directed_acceptance_tests": [
+    "Two contexts contain distinct input words at same local shared addresses; neither context may read the other.",
+    "READ_SLOTS=1 and long MOVM/HMMA delays force contexts to contend for the same actual service queues.",
+    "Interleaved issue trace must show both contexts progress before either completes; total service instances remain exactlyone per class.",
+    "Holding one context result does not block independent completion unless actual shared response/storage capacity is exhausted.",
+    "Retirement of contextA while contextB active preserves B resource allocations, pending barrier counts and service tokens.",
+    "Stale epoch completion after slot/stage reuse must be rejected.",
+    "Resource accounting reaches saved11CTA limit with exact8192+1024byte demands; contextcapacity2 tests must not pretend2 is physical residentlimit.",
+    "Shared scratch reads contend with operand reads through samebank service; no ideal-bypass numerical output.",
+    "Reset cancels all contexts and child services; provider flush required; verify no old token routes into new admission."
+  ],
+  "implementation_order": [
+    {
+      "step": 1,
+      "deliverable": "Shared2-context native stage engine with tagged completions and independent numerical oracle",
+      "expected_scope": "Numerical resident-stage sharing, preloadedshared inputs only"
+    },
+    {
+      "step": 2,
+      "deliverable": "Admission/context lifecycle wrapper with immutable block metadata and correct retirement",
+      "expected_scope": "Resource-limited residency plus stage execution"
+    },
+    {
+      "step": 3,
+      "deliverable": "Shared global packet/cache/output/scratch arbitration, per-context CTA barriers",
+      "expected_scope": "Connected multi-resident fullgrid numerical execution"
+    },
+    {
+      "step": 4,
+      "deliverable": "Frozen timing predictions and held-out GPU comparisons for original largest-error workload",
+      "expected_scope": "Only then assess predictive hardware runtime accuracy"
+    }
+  ],
+  "not_in_this_task": [
+    "No code refactor executed",
+    "No GPU experiments",
+    "No master manual edits",
+    "No new identified hardware parameter fields"
+  ],
+  "new_identified_registry_fields": 0
+}

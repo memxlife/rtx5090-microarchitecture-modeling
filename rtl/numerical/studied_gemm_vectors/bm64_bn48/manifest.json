@@ -1,0 +1,28 @@
+{
+  "tile": [
+    64,
+    48,
+    32
+  ],
+  "global_shape": [
+    2048,
+    2112,
+    1536
+  ],
+  "scope": "First CTA rowbase0,colbase0; original mode3, alpha1, initial Czero. No GPU timing claim.",
+  "stages": 48,
+  "tiles": 12,
+  "ksteps_per_stage": 2,
+  "frame_halfwords": 3584,
+  "frame_bytes": 7168,
+  "input_order": "stage, A row-major BMx32, B row-major32xBN",
+  "expected_order": "stage, tile, kstep, lane, element",
+  "expected_word_offset": "((stage*tiles+tile)*2+kstep)*256+lane*8+element",
+  "tile_to_warp": "warp=tile%4; accumulator slot=tile//4; original per-warp order j outer then kk",
+  "expected_words": 294912,
+  "full_K_products_checked": 3072,
+  "BF16_input_definition": "A=((row*K+k)%17-8)/16; B=((k*N+col)%13-6)/16",
+  "oracle": "Integer dot products divided by256, exactly representable FP32. No consumer address functions used.",
+  "source_sha256": "8eb6b86a70158d9091f4cc939bf50b5be43ccc0a64a4fdc0002e78b854331b66",
+  "c_mapping_sha256": "b1931c41f72db43219a0c6bf1c6daf970dd0d4fb321005f4bcee35e581e7781b"
+}

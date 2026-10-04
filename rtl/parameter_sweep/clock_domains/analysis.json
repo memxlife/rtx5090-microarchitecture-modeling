@@ -1,0 +1,53 @@
+{
+  "valid_samples": [
+    {
+      "kind": 1,
+      "correct": true,
+      "sm_cycles": 4260004,
+      "globaltimer_ticks": 1444256,
+      "sm_cycles_per_timer_tick": 2.94961835
+    },
+    {
+      "kind": 2,
+      "correct": true,
+      "sm_cycles": 365873074,
+      "globaltimer_ticks": 123874304,
+      "sm_cycles_per_timer_tick": 2.953583287
+    },
+    {
+      "kind": 0,
+      "correct": true,
+      "sm_cycles": 8765592,
+      "globaltimer_ticks": 2968160,
+      "sm_cycles_per_timer_tick": 2.953207374
+    }
+  ],
+  "valid_kernel_launches": 3,
+  "rejected_initial_clock_only": "Loop removed;1cycle/0globaltimer ticks. Preserved raw record, repaired with consumedtimer checksum.",
+  "reported_supported_memory_MHz": [
+    405,
+    810,
+    7001,
+    13801,
+    14001
+  ],
+  "reported_supported_graphics_MHz_range": [
+    180,
+    3090
+  ],
+  "reported_graphics_memory_pair_count": 1651,
+  "reported_current_and_max_graphics_SM_memory_before": {
+    "returncode": 0,
+    "stdout": "22 MHz, 22 MHz, 405 MHz, 3090 MHz, 3090 MHz, 14001 MHz\n",
+    "stderr": ""
+  },
+  "reported_SM_before_after": {
+    "before": "2, 2, 0, 22, 29, 21.85",
+    "after": "2, 2, 1, 2437, 31, 25.33"
+  },
+  "clock_semantics_evidence": "discovery_rounds/literature_sweep_023.json",
+  "interpretation": "About2.95GHz effectiveSMfrequency during these singlewarp probes; %globaltimer documentednanosecond counter has target-specific behavior. MemoryMHz reportedvalues are not proven physical command/data clocks.",
+  "sample_variability_measured": false,
+  "private_domain_topology_identified": false,
+  "GEMM_timing_validated": false
+}

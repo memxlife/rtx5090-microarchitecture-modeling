@@ -1,0 +1,190 @@
+{
+  "direct_points": [
+    {
+      "unroll": 1,
+      "steps": 256,
+      "median_cycles": 7591,
+      "min_cycles": 7591,
+      "max_cycles": 7591,
+      "registers": 21
+    },
+    {
+      "unroll": 1,
+      "steps": 1024,
+      "median_cycles": 29863,
+      "min_cycles": 29863,
+      "max_cycles": 29863,
+      "registers": 21
+    },
+    {
+      "unroll": 1,
+      "steps": 4096,
+      "median_cycles": 118951,
+      "min_cycles": 118951,
+      "max_cycles": 118951,
+      "registers": 21
+    },
+    {
+      "unroll": 8,
+      "steps": 256,
+      "median_cycles": 7330,
+      "min_cycles": 7330,
+      "max_cycles": 7330,
+      "registers": 21
+    },
+    {
+      "unroll": 8,
+      "steps": 1024,
+      "median_cycles": 28834,
+      "min_cycles": 28834,
+      "max_cycles": 28834,
+      "registers": 21
+    },
+    {
+      "unroll": 8,
+      "steps": 4096,
+      "median_cycles": 114850,
+      "min_cycles": 114850,
+      "max_cycles": 114850,
+      "registers": 21
+    },
+    {
+      "unroll": 32,
+      "steps": 256,
+      "median_cycles": 7330,
+      "min_cycles": 7330,
+      "max_cycles": 7330,
+      "registers": 21
+    },
+    {
+      "unroll": 32,
+      "steps": 1024,
+      "median_cycles": 28834,
+      "min_cycles": 28834,
+      "max_cycles": 28834,
+      "registers": 21
+    },
+    {
+      "unroll": 32,
+      "steps": 4096,
+      "median_cycles": 114850,
+      "min_cycles": 114850,
+      "max_cycles": 114850,
+      "registers": 21
+    }
+  ],
+  "direct_slopes": [
+    {
+      "unroll": 1,
+      "pairwise_cycles_per_load": [
+        29.0,
+        29.0
+      ]
+    },
+    {
+      "unroll": 8,
+      "pairwise_cycles_per_load": [
+        28.0,
+        28.0
+      ]
+    },
+    {
+      "unroll": 32,
+      "pairwise_cycles_per_load": [
+        28.0,
+        28.0
+      ]
+    }
+  ],
+  "native_checks": [
+    {
+      "name": "direct1",
+      "unrolled_dependent_lds_count": 1,
+      "instructions": [
+        "/*06c0*/                   LDS R8, [R8]                                &req={3} &wr=0x3   ?trans1;           /* 0x0000000008087984 */"
+      ]
+    },
+    {
+      "name": "direct8",
+      "unrolled_dependent_lds_count": 8,
+      "instructions": [
+        "/*06f0*/                   LDS R3, [R8]                                &req={4,3} &wr=0x3       ?trans1;           /* 0x0000000008037984 */",
+        "/*0720*/                   LDS R3, [R3]                                &req={3} &wr=0x3         ?trans4;           /* 0x0000000003037984 */",
+        "/*0730*/                   LDS R4, [R3]                                &req={3,2,1} &wr=0x1     ?trans4;           /* 0x0000000003047984 */",
+        "/*0740*/                   LDS R4, [R4]                                &req={1} &wr=0x1         ?trans4;           /* 0x0000000004047984 */",
+        "/*0750*/                   LDS R5, [R4]                                &req={1} &wr=0x1         ?trans4;           /* 0x0000000004057984 */",
+        "/*0760*/                   LDS R5, [R5]                                &req={1} &wr=0x1         ?trans4;           /* 0x0000000005057984 */",
+        "/*0770*/                   LDS R6, [R5]                                &req={1} &wr=0x1         ?trans4;           /* 0x0000000005067984 */",
+        "/*0780*/                   LDS R8, [R6]                                &req={1} &rd=0x3 &wr=0x4 ?trans1;           /* 0x0000000006087984 */"
+      ]
+    },
+    {
+      "name": "direct32",
+      "unrolled_dependent_lds_count": 32,
+      "instructions": [
+        "/*06f0*/                   LDS R8, [R8]                                &req={4,3} &wr=0x3       ?trans1;           /* 0x0000000008087984 */",
+        "/*0720*/                   LDS R3, [R8]                                &req={3} &wr=0x3         ?trans4;           /* 0x0000000008037984 */",
+        "/*0730*/                   LDS R3, [R3]                                &req={3} &wr=0x3         ?trans4;           /* 0x0000000003037984 */",
+        "/*0740*/                   LDS R4, [R3]                                &req={3,2,1} &wr=0x1     ?trans4;           /* 0x0000000003047984 */",
+        "/*0750*/                   LDS R4, [R4]                                &req={1} &wr=0x1         ?trans4;           /* 0x0000000004047984 */",
+        "/*0760*/                   LDS R5, [R4]                                &req={1} &wr=0x1         ?trans4;           /* 0x0000000004057984 */",
+        "/*0770*/                   LDS R5, [R5]                                &req={1} &wr=0x1         ?trans4;           /* 0x0000000005057984 */",
+        "/*0780*/                   LDS R6, [R5]                                &req={1} &wr=0x1         ?trans4;           /* 0x0000000005067984 */",
+        "/*0790*/                   LDS R6, [R6]                                &req={1} &wr=0x1         ?trans4;           /* 0x0000000006067984 */",
+        "/*07a0*/                   LDS R7, [R6]                                &req={1} &wr=0x1         ?trans4;           /* 0x0000000006077984 */",
+        "/*07b0*/                   LDS R7, [R7]                                &req={1} &wr=0x1         ?trans4;           /* 0x0000000007077984 */",
+        "/*07c0*/                   LDS R9, [R7]                                &req={1} &wr=0x1         ?trans4;           /* 0x0000000007097984 */",
+        "/*07d0*/                   LDS R9, [R9]                                &req={1} &wr=0x1         ?trans4;           /* 0x0000000009097984 */",
+        "/*07e0*/                   LDS R8, [R9]                                &req={1} &wr=0x1         ?trans4;           /* 0x0000000009087984 */",
+        "/*07f0*/                   LDS R8, [R8]                                &req={1} &wr=0x1         ?trans4;           /* 0x0000000008087984 */",
+        "/*0800*/                   LDS R3, [R8]                                &req={1} &wr=0x1         ?trans4;           /* 0x0000000008037984 */",
+        "/*0810*/                   LDS R3, [R3]                                &req={1} &wr=0x1         ?trans4;           /* 0x0000000003037984 */",
+        "/*0820*/                   LDS R4, [R3]                                &req={1} &wr=0x1         ?trans4;           /* 0x0000000003047984 */",
+        "/*0830*/                   LDS R4, [R4]                                &req={1} &wr=0x1         ?trans4;           /* 0x0000000004047984 */",
+        "/*0840*/                   LDS R5, [R4]                                &req={1} &wr=0x1         ?trans4;           /* 0x0000000004057984 */",
+        "/*0850*/                   LDS R5, [R5]                                &req={1} &wr=0x1         ?trans4;           /* 0x0000000005057984 */",
+        "/*0860*/                   LDS R6, [R5]                                &req={1} &wr=0x1         ?trans4;           /* 0x0000000005067984 */",
+        "/*0870*/                   LDS R6, [R6]                                &req={1} &wr=0x1         ?trans4;           /* 0x0000000006067984 */",
+        "/*0880*/                   LDS R7, [R6]                                &req={1} &wr=0x1         ?trans4;           /* 0x0000000006077984 */",
+        "/*0890*/                   LDS R7, [R7]                                &req={1} &wr=0x1         ?trans4;           /* 0x0000000007077984 */",
+        "/*08a0*/                   LDS R9, [R7]                                &req={1} &wr=0x1         ?trans4;           /* 0x0000000007097984 */",
+        "/*08b0*/                   LDS R9, [R9]                                &req={1} &wr=0x1         ?trans4;           /* 0x0000000009097984 */",
+        "/*08c0*/                   LDS R10, [R9]                               &req={1} &wr=0x1         ?trans4;           /* 0x00000000090a7984 */",
+        "/*08d0*/                   LDS R10, [R10]                              &req={1} &wr=0x1         ?trans4;           /* 0x000000000a0a7984 */",
+        "/*08e0*/                   LDS R3, [R10]                               &req={1} &wr=0x1         ?trans4;           /* 0x000000000a037984 */",
+        "/*08f0*/                   LDS R3, [R3]                                &req={1} &wr=0x1         ?trans4;           /* 0x0000000003037984 */",
+        "/*0900*/                   LDS R8, [R3]                                &req={1} &rd=0x3 &wr=0x4 ?trans1;           /* 0x0000000003087984 */"
+      ]
+    }
+  ],
+  "bank_checks": [
+    {
+      "row_words": 8,
+      "packages_per_read": 2,
+      "measured_wavefronts": 16384,
+      "predicted_wavefronts": 16384
+    },
+    {
+      "row_words": 40,
+      "packages_per_read": 2,
+      "measured_wavefronts": 16384,
+      "predicted_wavefronts": 16384
+    },
+    {
+      "row_words": 48,
+      "packages_per_read": 4,
+      "measured_wavefronts": 32768,
+      "predicted_wavefronts": 32768
+    },
+    {
+      "row_words": 56,
+      "packages_per_read": 2,
+      "measured_wavefronts": 16384,
+      "predicted_wavefronts": 16384
+    }
+  ],
+  "correct_unprofiled_launches": 81,
+  "profiles": 4,
+  "scope": "Two independent devices; no cross-device timing subtraction",
+  "intrinsic_timing_parameters_identified": 0
+}

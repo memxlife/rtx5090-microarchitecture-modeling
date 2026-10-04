@@ -1,0 +1,41 @@
+{
+  "accepted": true,
+  "changed_sections": [
+    "4.50"
+  ],
+  "human_first_review": "Explains question, shared capacity, lifecycle, discovered duplicate-arrival bug, independent output oracle and limitations in order.",
+  "reader_review": "Defines candidate/grant and acknowledgment boundaries; distinguishes intermediate reduction retirement from complete bounded block lifetime.",
+  "reader_language_lint": true,
+  "checked_global_words": 12288,
+  "receipt": "numerical/resident_complete_verification.json",
+  "receipt_source_hashes_current": true,
+  "inline_source_parity": {
+    "numerical/studied_output_scratch_shared.sv": true,
+    "numerical/resident_gemm_complete.sv": true
+  },
+  "source_sha256": {
+    "numerical/studied_output_scratch_shared.sv": "3adf1d8b72b115c2fd499958d116375311dcc26d8aeae5969f49f0ee5047cab3",
+    "numerical/resident_gemm_complete.sv": "6a1f526f8a5732cbdfc85de17ec783f671522bef11fdf0ef9242a34cd6041d1c"
+  },
+  "document_sha256": {
+    "rtl_microarchitecture_spec.md": "20808e4cb601db6d870a5002f98445b9044efc883532960fc2b340834dd78091",
+    "README.md": "fccacb93f452f3fecdbece7adc5c6d8305c33d04da8b428f8f7cd1c3d6665315"
+  },
+  "timing_calibrated": false,
+  "hardware_parameters_closed": 0,
+  "coverage_gaps": [
+    "reset is tested only at the first pending input read, not during output stores",
+    "held completion stability is checked, but another-context progress during that exact held interval is not required"
+  ],
+  "contention_coverage": {
+    "complete_top_read_contention_events": 0,
+    "complete_top_write_contention_events": 1,
+    "real_read_competition_directly_tested": false,
+    "scratch_isolated_test": false
+  },
+  "warning_clean_builds": [
+    64,
+    1536
+  ],
+  "connected_progress_receipt": "discovery_rounds/resident_complete_connected.json"
+}

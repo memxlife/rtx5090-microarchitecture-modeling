@@ -1,0 +1,27 @@
+{
+  "accepted": true,
+  "changed_sections": [
+    "4.51"
+  ],
+  "human_first_review": "Explains resident dispatch and real completion before quantities and cycle comparisons.",
+  "reader_review": "Defines all counters, out-of-order ID bookkeeping, completion/cycle boundary, independent oracle and unsupported coverage.",
+  "reader_language_lint": true,
+  "receipt": "numerical/resident_grid_verification.json",
+  "receipt_source_hashes_current": true,
+  "inline_source_parity": {
+    "numerical/resident_gemm_grid.sv": true
+  },
+  "source_sha256": {
+    "numerical/resident_gemm_grid.sv": "581c58d56c154b96f39b62fdf3a67b915fb136a97ca4fee9f030e4ab85dcd903"
+  },
+  "document_sha256": {
+    "rtl_microarchitecture_spec.md": "88854bcaf3c476e1acd4566ac97b1fcf1b3a64e192f353d0e2681ef4edac547c",
+    "README.md": "867ccbb27b5333d804350cb667cd77b1108bc95470d2514c7d39c4e811e67eb9"
+  },
+  "checked_words": 24576,
+  "timing_calibrated": false,
+  "hardware_parameters_closed": 0,
+  "coverage_gaps": [
+    "reset is tested only at the first pending input read, not during output stores"
+  ]
+}

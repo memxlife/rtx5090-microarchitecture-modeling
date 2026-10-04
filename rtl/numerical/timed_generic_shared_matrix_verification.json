@@ -1,0 +1,25 @@
+{
+  "all_passed": true,
+  "checked_words": 256,
+  "oracle": "A identity times B with each column equal col+1; direct expected FP32 values independent of native operand permutation",
+  "checks": [
+    "eight actual warp-read responses feed matrix operands",
+    "accepted values survive shared writes/address/C changes",
+    "response backpressure",
+    "uninitialized operand rejection",
+    "reset clears initialized state and output"
+  ],
+  "timing_calibrated": false,
+  "source_sha256": {
+    "discovery_rounds/functional_mapping_002/native_bf16_layout.sv": "63658e6b59f2d124cab3a73159d3219c3d350616cec99bf72fab58afc42df76b",
+    "numerical/library_movm_permutation.sv": "eb6d60b41d421751b14a0bff080d079bf0f0be82b185adbedbf2ad1b2df0e17e",
+    "components/warp_shared_read_service.sv": "82df6598d987c0df1c5be4db8ec504951f2d958783390d7b458cbde6b904500b",
+    "numerical/numerical_matrix_pipeline.sv": "20d64fa7c297f0a4cf83a68f899a199330cc7907f136f031d1f5b030d4a010b4",
+    "numerical/native_bf16_adapter.sv": "ca05d62325e04c3ab0d982a6d0755355903f331799f83a396d512b866de58d6d",
+    "numerical/timed_generic_shared_matrix_pipeline.sv": "dc174e58303f169397d9baffb6cf5a1461c32904402d45fa2b21f73a29c8d7c4",
+    "numerical/timed_generic_shared_matrix_tb.sv": "b6eaaad9cfdc357703eb15084df0163d3c9292c15ff5338e690f7f296e517709",
+    "numerical/bf16_reference.cpp": "0da9f3da8194c8d832b60ef29028a456397c76f9b0edc2b6e45c1ef69e14e1d3"
+  },
+  "stdout": "TIMED_GENERIC_PASS checked_words=256 snapshots=1 reset=1 backpressure=1\n- rtl/numerical/timed_generic_shared_matrix_tb.sv:80: Verilog $finish\n- S i m u l a t i o n   R e p o r t: Verilator 5.050 2026-07-01\n- Verilator: $finish at 6ns; walltime 0.002 s; speed 3.226 us/s\n- Verilator: cpu 0.002 s on 1 threads; allocated 2 MB\n",
+  "snapshot_scope": "All eight read payloads snapshot at external matrix acceptance, an isolation choice distinct from native per-instruction sampling."
+}

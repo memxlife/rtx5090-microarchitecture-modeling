@@ -1,0 +1,142 @@
+{
+  "cases": [
+    {
+      "pattern": 7,
+      "name": "three_rows_per_quartet",
+      "predicted_packages": 12,
+      "predicted_cycles": 89.00146484375,
+      "transpose": 1,
+      "measured_packages": 12.0,
+      "measured_cycles": 89.00146484375,
+      "cycle_error": 0.0,
+      "package_prediction_matches": true,
+      "timing_prediction_matches": true,
+      "raw_cycle_ranges": {
+        "0": [
+          97,
+          97
+        ],
+        "2048": [
+          182372,
+          182372
+        ]
+      }
+    },
+    {
+      "pattern": 8,
+      "name": "five_rows_same_quartet",
+      "predicted_packages": 20,
+      "predicted_cycles": 105.00146484375,
+      "transpose": 1,
+      "measured_packages": 20.0,
+      "measured_cycles": 105.00146484375,
+      "cycle_error": 0.0,
+      "package_prediction_matches": true,
+      "timing_prediction_matches": true,
+      "raw_cycle_ranges": {
+        "0": [
+          97,
+          97
+        ],
+        "2048": [
+          215140,
+          215140
+        ]
+      }
+    },
+    {
+      "pattern": 9,
+      "name": "six_rows_same_quartet",
+      "predicted_packages": 24,
+      "predicted_cycles": 113.00146484375,
+      "transpose": 1,
+      "measured_packages": 24.0,
+      "measured_cycles": 113.00146484375,
+      "cycle_error": 0.0,
+      "package_prediction_matches": true,
+      "timing_prediction_matches": true,
+      "raw_cycle_ranges": {
+        "0": [
+          97,
+          97
+        ],
+        "2048": [
+          231524,
+          231524
+        ]
+      }
+    },
+    {
+      "pattern": 7,
+      "name": "three_rows_per_quartet",
+      "predicted_packages": 12,
+      "predicted_cycles": 89.00146484375,
+      "transpose": 0,
+      "measured_packages": 12.0,
+      "measured_cycles": 89.00146484375,
+      "cycle_error": 0.0,
+      "package_prediction_matches": true,
+      "timing_prediction_matches": true,
+      "raw_cycle_ranges": {
+        "0": [
+          97,
+          97
+        ],
+        "2048": [
+          182372,
+          182372
+        ]
+      }
+    },
+    {
+      "pattern": 8,
+      "name": "five_rows_same_quartet",
+      "predicted_packages": 20,
+      "predicted_cycles": 105.00146484375,
+      "transpose": 0,
+      "measured_packages": 20.0,
+      "measured_cycles": 105.00146484375,
+      "cycle_error": 0.0,
+      "package_prediction_matches": true,
+      "timing_prediction_matches": true,
+      "raw_cycle_ranges": {
+        "0": [
+          97,
+          97
+        ],
+        "2048": [
+          215140,
+          215140
+        ]
+      }
+    },
+    {
+      "pattern": 9,
+      "name": "six_rows_same_quartet",
+      "predicted_packages": 24,
+      "predicted_cycles": 113.00146484375,
+      "transpose": 0,
+      "measured_packages": 24.0,
+      "measured_cycles": 113.00146484375,
+      "cycle_error": 0.0,
+      "package_prediction_matches": true,
+      "timing_prediction_matches": true,
+      "raw_cycle_ranges": {
+        "0": [
+          97,
+          97
+        ],
+        "2048": [
+          231524,
+          231524
+        ]
+      }
+    }
+  ],
+  "all_package_predictions_match": true,
+  "all_timing_predictions_match": true,
+  "correct_unprofiled_launches": 72,
+  "profiles": 12,
+  "elapsed_seconds": 44.352407256141305,
+  "scope": "Exact singlewarp x4 LDSM dependency+sum loop, two transpose variants; not pureinstruction latency or fullkernel timing"
+}

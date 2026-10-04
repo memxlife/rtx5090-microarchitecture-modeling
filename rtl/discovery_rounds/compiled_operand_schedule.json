@@ -1,0 +1,5130 @@
+{
+  "scope": "Actual executed cuBLASLt kernel0 nn, bounded static operand region; not complete dynamic schedule or hardware timing model",
+  "kernel": "cutlass_80_wmma_tensorop_s161616gemm_bf16_32x32_128x2_nn_align8",
+  "provenance": {
+    "sass_path": "studies/rtx5090_gemm_milp/rtl/discovery_rounds/executed_library_008/kernel_0.sass",
+    "sass_sha256": "4d3741ce2466a270bafe5673108b3d048f3051db7ea0a6ba1e079bd5c2f10e18",
+    "layout_path": "studies/rtx5090_gemm_milp/rtl/discovery_rounds/executed_layout_009/layout_binding.py",
+    "layout_sha256": "2c342a5e86a81d362e10a314436370664ebe59c87a72f707bc5829c8012d270e"
+  },
+  "static_region": {
+    "start_absolute": "0x7fcfa3b57820",
+    "end_exclusive_absolute": "0x7fcfa3b58cf0",
+    "instruction_count": 333,
+    "opcode_counts": {
+      "BAR.SYNC.DEFER_BLOCKING": 1,
+      "BRA": 2,
+      "CS2R": 20,
+      "HMMA.16816.F32.BF16": 16,
+      "IADD.64": 21,
+      "IADD3": 9,
+      "IMAD": 2,
+      "IMAD.SHL.U32": 2,
+      "IMAD.WIDE": 1,
+      "IMAD.WIDE.U32": 7,
+      "LD.E": 72,
+      "LDC.64": 2,
+      "LDCU.64": 5,
+      "LDG.E.LTC128B.128": 8,
+      "LEA": 8,
+      "LEA.HI.X": 8,
+      "LOP3.LUT": 3,
+      "MOV": 10,
+      "MOV.64": 1,
+      "MOVM.16.MT88": 36,
+      "P2R": 1,
+      "PLOP3.LUT": 9,
+      "PRMT": 3,
+      "R2P": 2,
+      "R2UR": 2,
+      "S2R": 2,
+      "SEL": 4,
+      "SHF.L.U64.HI": 2,
+      "SHF.R.U32.HI": 2,
+      "STS.128": 8,
+      "UIADD3": 10,
+      "UIADD3.64": 17,
+      "UIMAD": 3,
+      "UIMAD.WIDE.U32": 1,
+      "UISETP.GE.AND": 1,
+      "UISETP.GT.AND": 3,
+      "UISETP.NE.AND": 1,
+      "ULEA.HI": 1,
+      "ULOP3.LUT": 2,
+      "UMOV": 10,
+      "USHF.L.U32": 1,
+      "USHF.R.S32.HI": 14
+    },
+    "dynamic_iteration_count": "requires loop predicates/branch replay; not assigned here"
+  },
+  "instructions": [
+    {
+      "pc_absolute": "0x7fcfa3b57820",
+      "opcode": "LD.E",
+      "predicate": null,
+      "operands": "R42, desc[UR24][R40.64+0x4200]",
+      "register_tokens": [
+        "R42",
+        "UR24",
+        "R40"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0xd20",
+      "generic_load_descriptor": {
+        "destination_register": 42,
+        "address_descriptor_uniform_register": 24,
+        "pointer_pair_first_register": 40,
+        "byte_offset": 16896,
+        "word_bytes": 4,
+        "pointer_binding_status": "64-bit register value/runtime shared-window base not reconstructed here"
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b57830",
+      "opcode": "LD.E",
+      "predicate": null,
+      "operands": "R3, desc[UR24][R40.64+0x4480]",
+      "register_tokens": [
+        "R3",
+        "UR24",
+        "R40"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0xd30",
+      "generic_load_descriptor": {
+        "destination_register": 3,
+        "address_descriptor_uniform_register": 24,
+        "pointer_pair_first_register": 40,
+        "byte_offset": 17536,
+        "word_bytes": 4,
+        "pointer_binding_status": "64-bit register value/runtime shared-window base not reconstructed here"
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b57840",
+      "opcode": "LD.E",
+      "predicate": null,
+      "operands": "R32, desc[UR24][R40.64+0x4210]",
+      "register_tokens": [
+        "R32",
+        "UR24",
+        "R40"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0xd40",
+      "generic_load_descriptor": {
+        "destination_register": 32,
+        "address_descriptor_uniform_register": 24,
+        "pointer_pair_first_register": 40,
+        "byte_offset": 16912,
+        "word_bytes": 4,
+        "pointer_binding_status": "64-bit register value/runtime shared-window base not reconstructed here"
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b57850",
+      "opcode": "LD.E",
+      "predicate": null,
+      "operands": "R28, desc[UR24][R40.64+0x4490]",
+      "register_tokens": [
+        "R28",
+        "UR24",
+        "R40"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0xd50",
+      "generic_load_descriptor": {
+        "destination_register": 28,
+        "address_descriptor_uniform_register": 24,
+        "pointer_pair_first_register": 40,
+        "byte_offset": 17552,
+        "word_bytes": 4,
+        "pointer_binding_status": "64-bit register value/runtime shared-window base not reconstructed here"
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b57860",
+      "opcode": "ULOP3.LUT",
+      "predicate": null,
+      "operands": "UR17, UR17, 0xfe, URZ, 0xc0, !UPT",
+      "register_tokens": [
+        "UR17",
+        "UR17"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0xd60"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b57870",
+      "opcode": "IADD3",
+      "predicate": null,
+      "operands": "R20, RZ, -UR17, RZ",
+      "register_tokens": [
+        "R20",
+        "UR17"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0xd70"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b57880",
+      "opcode": "PRMT",
+      "predicate": null,
+      "operands": "R20, R20, 0x7710, RZ",
+      "register_tokens": [
+        "R20",
+        "R20"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0xd80"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b57890",
+      "opcode": "R2UR",
+      "predicate": null,
+      "operands": "UR4, R20",
+      "register_tokens": [
+        "UR4",
+        "R20"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0xd90"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b578a0",
+      "opcode": "MOV",
+      "predicate": null,
+      "operands": "R4, UR4",
+      "register_tokens": [
+        "R4",
+        "UR4"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0xda0"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b578b0",
+      "opcode": "PRMT",
+      "predicate": null,
+      "operands": "R4, R4, 0x7710, RZ",
+      "register_tokens": [
+        "R4",
+        "R4"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0xdb0"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b578c0",
+      "opcode": "IADD3",
+      "predicate": null,
+      "operands": "R4, R4, UR15, RZ",
+      "register_tokens": [
+        "R4",
+        "R4",
+        "UR15"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0xdc0"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b578d0",
+      "opcode": "LOP3.LUT",
+      "predicate": null,
+      "operands": "R4, R4, 0xffff, RZ, 0xc0, !PT",
+      "register_tokens": [
+        "R4",
+        "R4"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0xdd0"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b578e0",
+      "opcode": "PRMT",
+      "predicate": null,
+      "operands": "R4, R4, 0x8880, RZ",
+      "register_tokens": [
+        "R4",
+        "R4"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0xde0"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b578f0",
+      "opcode": "R2UR",
+      "predicate": null,
+      "operands": "UR19, R4",
+      "register_tokens": [
+        "UR19",
+        "R4"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0xdf0"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b57900",
+      "opcode": "USHF.R.S32.HI",
+      "predicate": null,
+      "operands": "UR4, URZ, 0x1f, UR8",
+      "register_tokens": [
+        "UR4",
+        "UR8"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0xe00"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b57910",
+      "opcode": "IMAD.WIDE.U32",
+      "predicate": null,
+      "operands": "R48, R2, 0x84, R48",
+      "register_tokens": [
+        "R48",
+        "R2",
+        "R48"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0xe10"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b57920",
+      "opcode": "UIMAD",
+      "predicate": null,
+      "operands": "UR4, UR4, UR6, URZ",
+      "register_tokens": [
+        "UR4",
+        "UR4",
+        "UR6"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0xe20"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b57930",
+      "opcode": "UIMAD.WIDE.U32",
+      "predicate": null,
+      "operands": "UR34, UR8, UR6, URZ",
+      "register_tokens": [
+        "UR34",
+        "UR8",
+        "UR6"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0xe30"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b57940",
+      "opcode": "MOV",
+      "predicate": null,
+      "operands": "R2, UR8",
+      "register_tokens": [
+        "R2",
+        "UR8"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0xe40"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b57950",
+      "opcode": "UIMAD",
+      "predicate": null,
+      "operands": "UR4, UR8, UR7, UR4",
+      "register_tokens": [
+        "UR4",
+        "UR8",
+        "UR7",
+        "UR4"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0xe50"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b57960",
+      "opcode": "UIMAD",
+      "predicate": null,
+      "operands": "UR8, UR19, 0x21, UR16",
+      "register_tokens": [
+        "UR8",
+        "UR19",
+        "UR16"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0xe60"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b57970",
+      "opcode": "USHF.L.U32",
+      "predicate": null,
+      "operands": "UR8, UR8, 0x8, URZ",
+      "register_tokens": [
+        "UR8",
+        "UR8"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0xe70"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b57980",
+      "opcode": "IADD.64",
+      "predicate": null,
+      "operands": "R38, R38, UR22",
+      "register_tokens": [
+        "R38",
+        "R38",
+        "UR22"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0xe80"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b57990",
+      "opcode": "IADD.64",
+      "predicate": null,
+      "operands": "R36, R36, UR20",
+      "register_tokens": [
+        "R36",
+        "R36",
+        "UR20"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0xe90"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b579a0",
+      "opcode": "USHF.R.S32.HI",
+      "predicate": null,
+      "operands": "UR7, URZ, 0x1f, UR8",
+      "register_tokens": [
+        "UR7",
+        "UR8"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0xea0"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b579b0",
+      "opcode": "UISETP.GE.AND",
+      "predicate": null,
+      "operands": "UP0, UPT, UR9, 0x1, UPT",
+      "register_tokens": [
+        "UR9"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0xeb0"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b579c0",
+      "opcode": "UMOV",
+      "predicate": null,
+      "operands": "UR6, UR8",
+      "register_tokens": [
+        "UR6",
+        "UR8"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0xec0"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b579d0",
+      "opcode": "IADD.64",
+      "predicate": null,
+      "operands": "R38, R38, UR22",
+      "register_tokens": [
+        "R38",
+        "R38",
+        "UR22"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0xed0"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b579e0",
+      "opcode": "IADD.64",
+      "predicate": null,
+      "operands": "R36, R36, UR20",
+      "register_tokens": [
+        "R36",
+        "R36",
+        "UR20"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0xee0"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b579f0",
+      "opcode": "UIADD3.64",
+      "predicate": null,
+      "operands": "UR6, UR6, UR10, URZ",
+      "register_tokens": [
+        "UR6",
+        "UR6",
+        "UR10"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0xef0"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b57a00",
+      "opcode": "UIADD3.64",
+      "predicate": null,
+      "operands": "UR26, UR28, -UR26, URZ",
+      "register_tokens": [
+        "UR26",
+        "UR28",
+        "UR26"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0xf00"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b57a10",
+      "opcode": "UIADD3.64",
+      "predicate": null,
+      "operands": "UR30, UR32, -UR30, URZ",
+      "register_tokens": [
+        "UR30",
+        "UR32",
+        "UR30"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0xf10"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b57a20",
+      "opcode": "UIADD3",
+      "predicate": null,
+      "operands": "UR5, UR35, UR4, URZ",
+      "register_tokens": [
+        "UR5",
+        "UR35",
+        "UR4"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0xf20"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b57a30",
+      "opcode": "IADD.64",
+      "predicate": null,
+      "operands": "R38, R38, UR22",
+      "register_tokens": [
+        "R38",
+        "R38",
+        "UR22"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0xf30"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b57a40",
+      "opcode": "UMOV",
+      "predicate": null,
+      "operands": "UR4, UR34",
+      "register_tokens": [
+        "UR4",
+        "UR34"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0xf40"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b57a50",
+      "opcode": "IADD.64",
+      "predicate": null,
+      "operands": "R36, R36, UR20",
+      "register_tokens": [
+        "R36",
+        "R36",
+        "UR20"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0xf50"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b57a60",
+      "opcode": "UIADD3.64",
+      "predicate": null,
+      "operands": "UR4, UR4, UR4, URZ",
+      "register_tokens": [
+        "UR4",
+        "UR4",
+        "UR4"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0xf60"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b57a70",
+      "opcode": "PLOP3.LUT",
+      "predicate": null,
+      "operands": "P5, PT, PT, PT, UP0, 0x80, 0x8",
+      "register_tokens": [
+        "P5"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0xf70"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b57a80",
+      "opcode": "LEA",
+      "predicate": null,
+      "operands": "R18, P0, R48, UR6, 0x2",
+      "register_tokens": [
+        "R18",
+        "P0",
+        "R48",
+        "UR6"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0xf80"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b57a90",
+      "opcode": "IADD.64",
+      "predicate": null,
+      "operands": "R4, R38, UR26",
+      "register_tokens": [
+        "R4",
+        "R38",
+        "UR26"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0xf90"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b57aa0",
+      "opcode": "IADD.64",
+      "predicate": null,
+      "operands": "R36, R36, UR30",
+      "register_tokens": [
+        "R36",
+        "R36",
+        "UR30"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0xfa0"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b57ab0",
+      "opcode": "UIADD3",
+      "predicate": null,
+      "operands": "UR18, UR9, 0x7f, URZ",
+      "register_tokens": [
+        "UR18",
+        "UR9"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0xfb0"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b57ac0",
+      "opcode": "UISETP.GT.AND",
+      "predicate": null,
+      "operands": "UP1, UPT, UR9, 0x80, UPT",
+      "register_tokens": [
+        "UR9"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0xfc0"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b57ad0",
+      "opcode": "LEA.HI.X",
+      "predicate": null,
+      "operands": "R19, R48, UR7, R49, 0x2, P0",
+      "register_tokens": [
+        "R19",
+        "R48",
+        "UR7",
+        "R49",
+        "P0"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0xfd0"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b57ae0",
+      "opcode": "IADD.64",
+      "predicate": null,
+      "operands": "R90, R36, UR4",
+      "register_tokens": [
+        "R90",
+        "R36",
+        "UR4"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0xfe0"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b57af0",
+      "opcode": "PLOP3.LUT",
+      "predicate": null,
+      "operands": "P0, PT, P4, PT, PT, 0x8, 0x80",
+      "register_tokens": [
+        "P0",
+        "P4"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0xff0"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b57b00",
+      "opcode": "PLOP3.LUT",
+      "predicate": null,
+      "operands": "P1, PT, P4, PT, PT, 0x8, 0x80",
+      "register_tokens": [
+        "P1",
+        "P4"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1000"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b57b10",
+      "opcode": "PLOP3.LUT",
+      "predicate": null,
+      "operands": "P2, PT, P4, PT, PT, 0x8, 0x80",
+      "register_tokens": [
+        "P2",
+        "P4"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1010"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b57b20",
+      "opcode": "PLOP3.LUT",
+      "predicate": null,
+      "operands": "P3, PT, P4, PT, PT, 0x8, 0x80",
+      "register_tokens": [
+        "P3",
+        "P4"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1020"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b57b30",
+      "opcode": "USHF.R.S32.HI",
+      "predicate": null,
+      "operands": "UR4, URZ, 0x1f, UR18",
+      "register_tokens": [
+        "UR4",
+        "UR18"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1030"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b57b40",
+      "opcode": "IMAD.WIDE",
+      "predicate": null,
+      "operands": "R4, R2, 0x2, R4",
+      "register_tokens": [
+        "R4",
+        "R2",
+        "R4"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1040"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b57b50",
+      "opcode": "PLOP3.LUT",
+      "predicate": null,
+      "operands": "P4, PT, PT, PT, UP1, 0x80, 0x8",
+      "register_tokens": [
+        "P4"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1050"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b57b60",
+      "opcode": "P2R",
+      "predicate": null,
+      "operands": "R70, PR, RZ, 0xf",
+      "register_tokens": [
+        "R70"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1060"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b57b70",
+      "opcode": "ULEA.HI",
+      "predicate": null,
+      "operands": "UR18, UR4, UR18, URZ, 0x7",
+      "register_tokens": [
+        "UR18",
+        "UR4",
+        "UR18"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1070"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b57b80",
+      "opcode": "IADD.64",
+      "predicate": null,
+      "operands": "R90, R90, R44",
+      "register_tokens": [
+        "R90",
+        "R90",
+        "R44"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1080"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b57b90",
+      "opcode": "IADD.64",
+      "predicate": null,
+      "operands": "R46, R4, R46",
+      "register_tokens": [
+        "R46",
+        "R4",
+        "R46"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1090"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b57ba0",
+      "opcode": "CS2R",
+      "predicate": null,
+      "operands": "R10, SRZ",
+      "register_tokens": [
+        "R10"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x10a0"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b57bb0",
+      "opcode": "CS2R",
+      "predicate": null,
+      "operands": "R8, SRZ",
+      "register_tokens": [
+        "R8"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x10b0"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b57bc0",
+      "opcode": "CS2R",
+      "predicate": null,
+      "operands": "R6, SRZ",
+      "register_tokens": [
+        "R6"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x10c0"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b57bd0",
+      "opcode": "CS2R",
+      "predicate": null,
+      "operands": "R4, SRZ",
+      "register_tokens": [
+        "R4"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x10d0"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b57be0",
+      "opcode": "SEL",
+      "predicate": null,
+      "operands": "R72, R0, RZ, P4",
+      "register_tokens": [
+        "R72",
+        "R0",
+        "P4"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x10e0"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b57bf0",
+      "opcode": "SEL",
+      "predicate": null,
+      "operands": "R70, R70, RZ, P4",
+      "register_tokens": [
+        "R70",
+        "R70",
+        "P4"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x10f0"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b57c00",
+      "opcode": "MOVM.16.MT88",
+      "predicate": null,
+      "operands": "R2, R42",
+      "register_tokens": [
+        "R2",
+        "R42"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1100",
+      "matrix_transpose_registers": {
+        "destination": 2,
+        "source": 42,
+        "mapping_receipt": "functional_mapping_002/analysis.json:movm_post_to_pre_halfword_permutation"
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b57c10",
+      "opcode": "MOVM.16.MT88",
+      "predicate": null,
+      "operands": "R3, R3",
+      "register_tokens": [
+        "R3",
+        "R3"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1110",
+      "matrix_transpose_registers": {
+        "destination": 3,
+        "source": 3,
+        "mapping_receipt": "functional_mapping_002/analysis.json:movm_post_to_pre_halfword_permutation"
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b57c20",
+      "opcode": "MOVM.16.MT88",
+      "predicate": null,
+      "operands": "R16, R32",
+      "register_tokens": [
+        "R16",
+        "R32"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1120",
+      "matrix_transpose_registers": {
+        "destination": 16,
+        "source": 32,
+        "mapping_receipt": "functional_mapping_002/analysis.json:movm_post_to_pre_halfword_permutation"
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b57c30",
+      "opcode": "MOVM.16.MT88",
+      "predicate": null,
+      "operands": "R17, R28",
+      "register_tokens": [
+        "R17",
+        "R28"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1130",
+      "matrix_transpose_registers": {
+        "destination": 17,
+        "source": 28,
+        "mapping_receipt": "functional_mapping_002/analysis.json:movm_post_to_pre_halfword_permutation"
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b57c40",
+      "opcode": "BRA",
+      "predicate": "@!P5",
+      "operands": "0x7fcfa3b58cf0",
+      "register_tokens": [],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1140"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b57c50",
+      "opcode": "LD.E",
+      "predicate": null,
+      "operands": "R12, desc[UR24][R18.64]",
+      "register_tokens": [
+        "R12",
+        "UR24",
+        "R18"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1150",
+      "generic_load_descriptor": {
+        "destination_register": 12,
+        "address_descriptor_uniform_register": 24,
+        "pointer_pair_first_register": 18,
+        "byte_offset": 0,
+        "word_bytes": 4,
+        "pointer_binding_status": "64-bit register value/runtime shared-window base not reconstructed here"
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b57c60",
+      "opcode": "LDCU.64",
+      "predicate": null,
+      "operands": "UR28, c[0x0][0x3c0]",
+      "register_tokens": [
+        "UR28"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1160"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b57c70",
+      "opcode": "LD.E",
+      "predicate": null,
+      "operands": "R13, desc[UR24][R18.64+0x1080]",
+      "register_tokens": [
+        "R13",
+        "UR24",
+        "R18"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1170",
+      "generic_load_descriptor": {
+        "destination_register": 13,
+        "address_descriptor_uniform_register": 24,
+        "pointer_pair_first_register": 18,
+        "byte_offset": 4224,
+        "word_bytes": 4,
+        "pointer_binding_status": "64-bit register value/runtime shared-window base not reconstructed here"
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b57c80",
+      "opcode": "LDCU.64",
+      "predicate": null,
+      "operands": "UR26, c[0x0][0x3e0]",
+      "register_tokens": [
+        "UR26"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1180"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b57c90",
+      "opcode": "LD.E",
+      "predicate": null,
+      "operands": "R14, desc[UR24][R18.64+0x10]",
+      "register_tokens": [
+        "R14",
+        "UR24",
+        "R18"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1190",
+      "generic_load_descriptor": {
+        "destination_register": 14,
+        "address_descriptor_uniform_register": 24,
+        "pointer_pair_first_register": 18,
+        "byte_offset": 16,
+        "word_bytes": 4,
+        "pointer_binding_status": "64-bit register value/runtime shared-window base not reconstructed here"
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b57ca0",
+      "opcode": "LD.E",
+      "predicate": null,
+      "operands": "R15, desc[UR24][R18.64+0x1090]",
+      "register_tokens": [
+        "R15",
+        "UR24",
+        "R18"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x11a0",
+      "generic_load_descriptor": {
+        "destination_register": 15,
+        "address_descriptor_uniform_register": 24,
+        "pointer_pair_first_register": 18,
+        "byte_offset": 4240,
+        "word_bytes": 4,
+        "pointer_binding_status": "64-bit register value/runtime shared-window base not reconstructed here"
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b57cb0",
+      "opcode": "MOV.64",
+      "predicate": null,
+      "operands": "R44, R46",
+      "register_tokens": [
+        "R44",
+        "R46"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x11b0"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b57cc0",
+      "opcode": "IADD3",
+      "predicate": null,
+      "operands": "R75, R75, 0x100, RZ",
+      "register_tokens": [
+        "R75",
+        "R75"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x11c0"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b57cd0",
+      "opcode": "IADD3",
+      "predicate": null,
+      "operands": "R74, R74, 0x6a00, RZ",
+      "register_tokens": [
+        "R74",
+        "R74"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x11d0"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b57ce0",
+      "opcode": "MOV",
+      "predicate": null,
+      "operands": "R11, RZ",
+      "register_tokens": [
+        "R11"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x11e0"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b57cf0",
+      "opcode": "USHF.R.S32.HI",
+      "predicate": null,
+      "operands": "UR18, URZ, 0x7, UR18",
+      "register_tokens": [
+        "UR18",
+        "UR18"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x11f0"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b57d00",
+      "opcode": "LDCU.64",
+      "predicate": null,
+      "operands": "UR22, c[0x0][0x3e8]",
+      "register_tokens": [
+        "UR22"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1200"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b57d10",
+      "opcode": "LDCU.64",
+      "predicate": null,
+      "operands": "UR20, c[0x0][0x3c8]",
+      "register_tokens": [
+        "UR20"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1210"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b57d20",
+      "opcode": "LDCU.64",
+      "predicate": null,
+      "operands": "UR4, c[0x0][0x358]",
+      "register_tokens": [
+        "UR4"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1220"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b57d30",
+      "opcode": "UIADD3.64",
+      "predicate": null,
+      "operands": "UR32, UR28, UR28, URZ",
+      "register_tokens": [
+        "UR32",
+        "UR28",
+        "UR28"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1230"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b57d40",
+      "opcode": "UIADD3.64",
+      "predicate": null,
+      "operands": "UR30, UR26, UR26, URZ",
+      "register_tokens": [
+        "UR30",
+        "UR26",
+        "UR26"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1240"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b57d50",
+      "opcode": "UMOV",
+      "predicate": null,
+      "operands": "UR17, 0x1",
+      "register_tokens": [
+        "UR17"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1250"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b57d60",
+      "opcode": "S2R",
+      "predicate": null,
+      "operands": "R18, SR_LANEID",
+      "register_tokens": [
+        "R18"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1260"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b57d70",
+      "opcode": "LDC.64",
+      "predicate": null,
+      "operands": "R68, c[0x0][0x3c0]",
+      "register_tokens": [
+        "R68"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1270"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b57d80",
+      "opcode": "MOV",
+      "predicate": null,
+      "operands": "R25, RZ",
+      "register_tokens": [
+        "R25"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1280"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b57d90",
+      "opcode": "MOV",
+      "predicate": null,
+      "operands": "R23, RZ",
+      "register_tokens": [
+        "R23"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1290"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b57da0",
+      "opcode": "S2R",
+      "predicate": null,
+      "operands": "R78, SR_LANEID",
+      "register_tokens": [
+        "R78"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x12a0"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b57db0",
+      "opcode": "LDC.64",
+      "predicate": null,
+      "operands": "R34, c[0x0][0x3e0]",
+      "register_tokens": [
+        "R34"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x12b0"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b57dc0",
+      "opcode": "IMAD",
+      "predicate": null,
+      "operands": "R69, R69, 0x3, RZ",
+      "register_tokens": [
+        "R69",
+        "R69"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x12c0"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b57dd0",
+      "opcode": "LOP3.LUT",
+      "predicate": null,
+      "operands": "R24, R18, 0x3, RZ, 0xc0, !PT",
+      "register_tokens": [
+        "R24",
+        "R18"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x12d0"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b57de0",
+      "opcode": "IMAD",
+      "predicate": null,
+      "operands": "R76, R35, 0x3, RZ",
+      "register_tokens": [
+        "R76",
+        "R35"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x12e0"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b57df0",
+      "opcode": "SHF.R.U32.HI",
+      "predicate": null,
+      "operands": "R18, RZ, 0x2, R18",
+      "register_tokens": [
+        "R18",
+        "R18"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x12f0"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b57e00",
+      "opcode": "LOP3.LUT",
+      "predicate": null,
+      "operands": "R22, R78, 0x3, RZ, 0xc0, !PT",
+      "register_tokens": [
+        "R22",
+        "R78"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1300"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b57e10",
+      "opcode": "SHF.R.U32.HI",
+      "predicate": null,
+      "operands": "R78, RZ, 0x2, R78",
+      "register_tokens": [
+        "R78",
+        "R78"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1310"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b57e20",
+      "opcode": "IMAD.WIDE.U32",
+      "predicate": null,
+      "operands": "R20, R18, 0x84, R24",
+      "register_tokens": [
+        "R20",
+        "R18",
+        "R24"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1320"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b57e30",
+      "opcode": "IMAD.WIDE.U32",
+      "predicate": null,
+      "operands": "R18, R18, 0x14, R24",
+      "register_tokens": [
+        "R18",
+        "R18",
+        "R24"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1330"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b57e40",
+      "opcode": "SHF.L.U64.HI",
+      "predicate": null,
+      "operands": "R29, R20, 0x2, R21",
+      "register_tokens": [
+        "R29",
+        "R20",
+        "R21"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1340"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b57e50",
+      "opcode": "IMAD.SHL.U32",
+      "predicate": null,
+      "operands": "R28, R20, 0x4, RZ",
+      "register_tokens": [
+        "R28",
+        "R20"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1350"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b57e60",
+      "opcode": "SHF.L.U64.HI",
+      "predicate": null,
+      "operands": "R27, R18, 0x2, R19",
+      "register_tokens": [
+        "R27",
+        "R18",
+        "R19"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1360"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b57e70",
+      "opcode": "IMAD.SHL.U32",
+      "predicate": null,
+      "operands": "R26, R18, 0x4, RZ",
+      "register_tokens": [
+        "R26",
+        "R18"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1370"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b57e80",
+      "opcode": "MOV",
+      "predicate": null,
+      "operands": "R85, R29",
+      "register_tokens": [
+        "R85",
+        "R29"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1380"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b57e90",
+      "opcode": "IMAD.WIDE.U32",
+      "predicate": null,
+      "operands": "R80, R78, 0x84, R22",
+      "register_tokens": [
+        "R80",
+        "R78",
+        "R22"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1390"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b57ea0",
+      "opcode": "MOV",
+      "predicate": null,
+      "operands": "R84, R28",
+      "register_tokens": [
+        "R84",
+        "R28"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x13a0"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b57eb0",
+      "opcode": "MOV",
+      "predicate": null,
+      "operands": "R83, R27",
+      "register_tokens": [
+        "R83",
+        "R27"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x13b0"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b57ec0",
+      "opcode": "MOV",
+      "predicate": null,
+      "operands": "R82, R26",
+      "register_tokens": [
+        "R82",
+        "R26"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x13c0"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b57ed0",
+      "opcode": "IMAD.WIDE.U32",
+      "predicate": null,
+      "operands": "R78, R78, 0x14, R22",
+      "register_tokens": [
+        "R78",
+        "R78",
+        "R22"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x13d0"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b57ee0",
+      "opcode": "R2P",
+      "predicate": null,
+      "operands": "PR, R72, 0xf",
+      "register_tokens": [
+        "R72"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x13e0"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b57ef0",
+      "opcode": "USHF.R.S32.HI",
+      "predicate": null,
+      "operands": "UR7, URZ, 0x1f, UR14",
+      "register_tokens": [
+        "UR7",
+        "UR14"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x13f0"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b57f00",
+      "opcode": "UMOV",
+      "predicate": null,
+      "operands": "UR6, UR14",
+      "register_tokens": [
+        "UR6",
+        "UR14"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1400"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b57f10",
+      "opcode": "IADD.64",
+      "predicate": null,
+      "operands": "R50, R44, UR32",
+      "register_tokens": [
+        "R50",
+        "R44",
+        "UR32"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1410"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b57f20",
+      "opcode": "CS2R",
+      "predicate": null,
+      "operands": "R56, SRZ",
+      "register_tokens": [
+        "R56"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1420"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b57f30",
+      "opcode": "CS2R",
+      "predicate": null,
+      "operands": "R58, SRZ",
+      "register_tokens": [
+        "R58"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1430"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b57f40",
+      "opcode": "UIADD3.64",
+      "predicate": null,
+      "operands": "UR6, UR10, UR6, URZ",
+      "register_tokens": [
+        "UR6",
+        "UR10",
+        "UR6"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1440"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b57f50",
+      "opcode": "IMAD.WIDE.U32",
+      "predicate": null,
+      "operands": "R88, R68, 0x3, R44",
+      "register_tokens": [
+        "R88",
+        "R68",
+        "R44"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1450"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b57f60",
+      "opcode": "CS2R",
+      "predicate": null,
+      "operands": "R36, SRZ",
+      "register_tokens": [
+        "R36"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1460"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b57f70",
+      "opcode": "CS2R",
+      "predicate": null,
+      "operands": "R38, SRZ",
+      "register_tokens": [
+        "R38"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1470"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b57f80",
+      "opcode": "CS2R",
+      "predicate": null,
+      "operands": "R40, SRZ",
+      "register_tokens": [
+        "R40"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1480"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b57f90",
+      "opcode": "IADD.64",
+      "predicate": null,
+      "operands": "R46, R44, UR28",
+      "register_tokens": [
+        "R46",
+        "R44",
+        "UR28"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1490"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b57fa0",
+      "opcode": "LDG.E.LTC128B.128",
+      "predicate": "@P2",
+      "operands": "R56, desc[UR4][R50.64]",
+      "register_tokens": [
+        "R56",
+        "UR4",
+        "R50"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x14a0"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b57fb0",
+      "opcode": "IADD.64",
+      "predicate": null,
+      "operands": "R32, R26, UR6",
+      "register_tokens": [
+        "R32",
+        "R26",
+        "UR6"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x14b0"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b57fc0",
+      "opcode": "CS2R",
+      "predicate": null,
+      "operands": "R42, SRZ",
+      "register_tokens": [
+        "R42"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x14c0"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b57fd0",
+      "opcode": "LDG.E.LTC128B.128",
+      "predicate": "@P1",
+      "operands": "R36, desc[UR4][R46.64]",
+      "register_tokens": [
+        "R36",
+        "UR4",
+        "R46"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x14d0"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b57fe0",
+      "opcode": "CS2R",
+      "predicate": null,
+      "operands": "R52, SRZ",
+      "register_tokens": [
+        "R52"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x14e0"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b57ff0",
+      "opcode": "CS2R",
+      "predicate": null,
+      "operands": "R54, SRZ",
+      "register_tokens": [
+        "R54"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x14f0"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58000",
+      "opcode": "IADD3",
+      "predicate": null,
+      "operands": "R89, R89, R69, RZ",
+      "register_tokens": [
+        "R89",
+        "R89",
+        "R69"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1500"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58010",
+      "opcode": "LD.E",
+      "predicate": null,
+      "operands": "R18, desc[UR4][R32.64+0x4700]",
+      "register_tokens": [
+        "R18",
+        "UR4",
+        "R32"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1510",
+      "generic_load_descriptor": {
+        "destination_register": 18,
+        "address_descriptor_uniform_register": 4,
+        "pointer_pair_first_register": 32,
+        "byte_offset": 18176,
+        "word_bytes": 4,
+        "pointer_binding_status": "64-bit register value/runtime shared-window base not reconstructed here"
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58020",
+      "opcode": "CS2R",
+      "predicate": null,
+      "operands": "R48, SRZ",
+      "register_tokens": [
+        "R48"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1520"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58030",
+      "opcode": "HMMA.16816.F32.BF16",
+      "predicate": null,
+      "operands": "R4, R12, R2, R4",
+      "register_tokens": [
+        "R4",
+        "R12",
+        "R2",
+        "R4"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1530",
+      "matrix_operand_register_bases": {
+        "destination_C": 4,
+        "A": 12,
+        "B": 2,
+        "input_C": 4
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58040",
+      "opcode": "CS2R",
+      "predicate": null,
+      "operands": "R64, SRZ",
+      "register_tokens": [
+        "R64"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1540"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58050",
+      "opcode": "LD.E",
+      "predicate": null,
+      "operands": "R19, desc[UR4][R32.64+0x4980]",
+      "register_tokens": [
+        "R19",
+        "UR4",
+        "R32"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1550",
+      "generic_load_descriptor": {
+        "destination_register": 19,
+        "address_descriptor_uniform_register": 4,
+        "pointer_pair_first_register": 32,
+        "byte_offset": 18816,
+        "word_bytes": 4,
+        "pointer_binding_status": "64-bit register value/runtime shared-window base not reconstructed here"
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58060",
+      "opcode": "CS2R",
+      "predicate": null,
+      "operands": "R66, SRZ",
+      "register_tokens": [
+        "R66"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1560"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58070",
+      "opcode": "CS2R",
+      "predicate": null,
+      "operands": "R60, SRZ",
+      "register_tokens": [
+        "R60"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1570"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58080",
+      "opcode": "IADD.64",
+      "predicate": null,
+      "operands": "R62, R90, UR26",
+      "register_tokens": [
+        "R62",
+        "R90",
+        "UR26"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1580"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58090",
+      "opcode": "LD.E",
+      "predicate": null,
+      "operands": "R24, desc[UR4][R32.64+0x4710]",
+      "register_tokens": [
+        "R24",
+        "UR4",
+        "R32"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1590",
+      "generic_load_descriptor": {
+        "destination_register": 24,
+        "address_descriptor_uniform_register": 4,
+        "pointer_pair_first_register": 32,
+        "byte_offset": 18192,
+        "word_bytes": 4,
+        "pointer_binding_status": "64-bit register value/runtime shared-window base not reconstructed here"
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b580a0",
+      "opcode": "IMAD.WIDE.U32",
+      "predicate": null,
+      "operands": "R86, R34, 0x3, R90",
+      "register_tokens": [
+        "R86",
+        "R34",
+        "R90"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x15a0"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b580b0",
+      "opcode": "IADD.64",
+      "predicate": null,
+      "operands": "R92, R90, UR30",
+      "register_tokens": [
+        "R92",
+        "R90",
+        "UR30"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x15b0"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b580c0",
+      "opcode": "LD.E",
+      "predicate": null,
+      "operands": "R25, desc[UR4][R32.64+0x4990]",
+      "register_tokens": [
+        "R25",
+        "UR4",
+        "R32"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x15c0",
+      "generic_load_descriptor": {
+        "destination_register": 25,
+        "address_descriptor_uniform_register": 4,
+        "pointer_pair_first_register": 32,
+        "byte_offset": 18832,
+        "word_bytes": 4,
+        "pointer_binding_status": "64-bit register value/runtime shared-window base not reconstructed here"
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b580d0",
+      "opcode": "MOV",
+      "predicate": null,
+      "operands": "R35, R75",
+      "register_tokens": [
+        "R35",
+        "R75"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x15d0"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b580e0",
+      "opcode": "IADD3",
+      "predicate": null,
+      "operands": "R87, R87, R76, RZ",
+      "register_tokens": [
+        "R87",
+        "R87",
+        "R76"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x15e0"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b580f0",
+      "opcode": "USHF.R.S32.HI",
+      "predicate": null,
+      "operands": "UR15, URZ, 0x1f, UR14",
+      "register_tokens": [
+        "UR15",
+        "UR14"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x15f0"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58100",
+      "opcode": "LDG.E.LTC128B.128",
+      "predicate": "@P0",
+      "operands": "R40, desc[UR4][R44.64]",
+      "register_tokens": [
+        "R40",
+        "UR4",
+        "R44"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1600"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58110",
+      "opcode": "CS2R",
+      "predicate": null,
+      "operands": "R50, SRZ",
+      "register_tokens": [
+        "R50"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1610"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58120",
+      "opcode": "HMMA.16816.F32.BF16",
+      "predicate": null,
+      "operands": "R8, R12, R16, R8",
+      "register_tokens": [
+        "R8",
+        "R12",
+        "R16",
+        "R8"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1620",
+      "matrix_operand_register_bases": {
+        "destination_C": 8,
+        "A": 12,
+        "B": 16,
+        "input_C": 8
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58130",
+      "opcode": "UIADD3.64",
+      "predicate": null,
+      "operands": "UR34, UR10, UR14, URZ",
+      "register_tokens": [
+        "UR34",
+        "UR10",
+        "UR14"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1630"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58140",
+      "opcode": "LDG.E.LTC128B.128",
+      "predicate": "@P3",
+      "operands": "R52, desc[UR4][R88.64]",
+      "register_tokens": [
+        "R52",
+        "UR4",
+        "R88"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1640"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58150",
+      "opcode": "R2P",
+      "predicate": null,
+      "operands": "PR, R70, 0xf",
+      "register_tokens": [
+        "R70"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1650"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58160",
+      "opcode": "CS2R",
+      "predicate": null,
+      "operands": "R46, SRZ",
+      "register_tokens": [
+        "R46"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1660"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58170",
+      "opcode": "USHF.R.S32.HI",
+      "predicate": null,
+      "operands": "UR9, URZ, 0x1f, UR8",
+      "register_tokens": [
+        "UR9",
+        "UR8"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1670"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58180",
+      "opcode": "UISETP.NE.AND",
+      "predicate": null,
+      "operands": "UP0, UPT, UR17, 0x1, UPT",
+      "register_tokens": [
+        "UR17"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1680"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58190",
+      "opcode": "UISETP.GT.AND",
+      "predicate": null,
+      "operands": "UP1, UPT, UR18, 0x2, UPT",
+      "register_tokens": [
+        "UR18"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1690"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b581a0",
+      "opcode": "ULOP3.LUT",
+      "predicate": null,
+      "operands": "UR17, UR17, 0x1, URZ, 0x3c, !UPT",
+      "register_tokens": [
+        "UR17",
+        "UR17"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x16a0"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b581b0",
+      "opcode": "UIADD3.64",
+      "predicate": null,
+      "operands": "UR6, UR10, UR8, URZ",
+      "register_tokens": [
+        "UR6",
+        "UR10",
+        "UR8"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x16b0"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b581c0",
+      "opcode": "UIADD3.64",
+      "predicate": null,
+      "operands": "UR24, UR10, UR8, URZ",
+      "register_tokens": [
+        "UR24",
+        "UR10",
+        "UR8"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x16c0"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b581d0",
+      "opcode": "LDG.E.LTC128B.128",
+      "predicate": "@P0",
+      "operands": "R48, desc[UR4][R90.64]",
+      "register_tokens": [
+        "R48",
+        "UR4",
+        "R90"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x16d0"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b581e0",
+      "opcode": "IADD.64",
+      "predicate": null,
+      "operands": "R30, R28, UR6",
+      "register_tokens": [
+        "R30",
+        "R28",
+        "UR6"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x16e0"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b581f0",
+      "opcode": "UMOV",
+      "predicate": "@UP0",
+      "operands": "UR15, 0xfffffee0",
+      "register_tokens": [
+        "UR15"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x16f0"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58200",
+      "opcode": "LDG.E.LTC128B.128",
+      "predicate": "@P2",
+      "operands": "R64, desc[UR4][R92.64]",
+      "register_tokens": [
+        "R64",
+        "UR4",
+        "R92"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1700"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58210",
+      "opcode": "LEA",
+      "predicate": null,
+      "operands": "R32, P0, R78, UR34, 0x2",
+      "register_tokens": [
+        "R32",
+        "P0",
+        "R78",
+        "UR34"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1710"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58220",
+      "opcode": "UMOV",
+      "predicate": "@!UP0",
+      "operands": "UR15, 0xe0",
+      "register_tokens": [
+        "UR15"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1720"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58230",
+      "opcode": "CS2R",
+      "predicate": null,
+      "operands": "R44, SRZ",
+      "register_tokens": [
+        "R44"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1730"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58240",
+      "opcode": "LD.E",
+      "predicate": null,
+      "operands": "R20, desc[UR4][R30.64+0x20]",
+      "register_tokens": [
+        "R20",
+        "UR4",
+        "R30"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1740",
+      "generic_load_descriptor": {
+        "destination_register": 20,
+        "address_descriptor_uniform_register": 4,
+        "pointer_pair_first_register": 30,
+        "byte_offset": 32,
+        "word_bytes": 4,
+        "pointer_binding_status": "64-bit register value/runtime shared-window base not reconstructed here"
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58250",
+      "opcode": "LEA.HI.X",
+      "predicate": null,
+      "operands": "R33, R78, UR35, R79, 0x2, P0",
+      "register_tokens": [
+        "R33",
+        "R78",
+        "UR35",
+        "R79",
+        "P0"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1750"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58260",
+      "opcode": "UIADD3",
+      "predicate": null,
+      "operands": "UR8, UR8, 0x20, UR15",
+      "register_tokens": [
+        "UR8",
+        "UR8",
+        "UR15"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1760"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58270",
+      "opcode": "LD.E",
+      "predicate": null,
+      "operands": "R21, desc[UR4][R30.64+0x10a0]",
+      "register_tokens": [
+        "R21",
+        "UR4",
+        "R30"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1770",
+      "generic_load_descriptor": {
+        "destination_register": 21,
+        "address_descriptor_uniform_register": 4,
+        "pointer_pair_first_register": 30,
+        "byte_offset": 4256,
+        "word_bytes": 4,
+        "pointer_binding_status": "64-bit register value/runtime shared-window base not reconstructed here"
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58280",
+      "opcode": "UMOV",
+      "predicate": "@UP0",
+      "operands": "UR15, 0x2800",
+      "register_tokens": [
+        "UR15"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1780"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58290",
+      "opcode": "USHF.R.S32.HI",
+      "predicate": null,
+      "operands": "UR9, URZ, 0x1f, UR8",
+      "register_tokens": [
+        "UR9",
+        "UR8"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1790"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b582a0",
+      "opcode": "UMOV",
+      "predicate": "@!UP0",
+      "operands": "UR15, 0xffffd800",
+      "register_tokens": [
+        "UR15"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x17a0"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b582b0",
+      "opcode": "LD.E",
+      "predicate": null,
+      "operands": "R0, desc[UR4][R32.64+0x4e90]",
+      "register_tokens": [
+        "R0",
+        "UR4",
+        "R32"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x17b0",
+      "generic_load_descriptor": {
+        "destination_register": 0,
+        "address_descriptor_uniform_register": 4,
+        "pointer_pair_first_register": 32,
+        "byte_offset": 20112,
+        "word_bytes": 4,
+        "pointer_binding_status": "64-bit register value/runtime shared-window base not reconstructed here"
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b582c0",
+      "opcode": "LD.E",
+      "predicate": null,
+      "operands": "R22, desc[UR4][R30.64+0x30]",
+      "register_tokens": [
+        "R22",
+        "UR4",
+        "R30"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x17c0",
+      "generic_load_descriptor": {
+        "destination_register": 22,
+        "address_descriptor_uniform_register": 4,
+        "pointer_pair_first_register": 30,
+        "byte_offset": 48,
+        "word_bytes": 4,
+        "pointer_binding_status": "64-bit register value/runtime shared-window base not reconstructed here"
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b582d0",
+      "opcode": "LD.E",
+      "predicate": null,
+      "operands": "R23, desc[UR4][R30.64+0x10b0]",
+      "register_tokens": [
+        "R23",
+        "UR4",
+        "R30"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x17d0",
+      "generic_load_descriptor": {
+        "destination_register": 23,
+        "address_descriptor_uniform_register": 4,
+        "pointer_pair_first_register": 30,
+        "byte_offset": 4272,
+        "word_bytes": 4,
+        "pointer_binding_status": "64-bit register value/runtime shared-window base not reconstructed here"
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b582e0",
+      "opcode": "IADD.64",
+      "predicate": null,
+      "operands": "R90, R86, UR22",
+      "register_tokens": [
+        "R90",
+        "R86",
+        "UR22"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x17e0"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b582f0",
+      "opcode": "LD.E",
+      "predicate": null,
+      "operands": "R2, desc[UR4][R32.64+0x4c00]",
+      "register_tokens": [
+        "R2",
+        "UR4",
+        "R32"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x17f0",
+      "generic_load_descriptor": {
+        "destination_register": 2,
+        "address_descriptor_uniform_register": 4,
+        "pointer_pair_first_register": 32,
+        "byte_offset": 19456,
+        "word_bytes": 4,
+        "pointer_binding_status": "64-bit register value/runtime shared-window base not reconstructed here"
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58300",
+      "opcode": "LD.E",
+      "predicate": null,
+      "operands": "R3, desc[UR4][R32.64+0x4e80]",
+      "register_tokens": [
+        "R3",
+        "UR4",
+        "R32"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1800",
+      "generic_load_descriptor": {
+        "destination_register": 3,
+        "address_descriptor_uniform_register": 4,
+        "pointer_pair_first_register": 32,
+        "byte_offset": 20096,
+        "word_bytes": 4,
+        "pointer_binding_status": "64-bit register value/runtime shared-window base not reconstructed here"
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58310",
+      "opcode": "LD.E",
+      "predicate": null,
+      "operands": "R16, desc[UR4][R32.64+0x4c10]",
+      "register_tokens": [
+        "R16",
+        "UR4",
+        "R32"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1810",
+      "generic_load_descriptor": {
+        "destination_register": 16,
+        "address_descriptor_uniform_register": 4,
+        "pointer_pair_first_register": 32,
+        "byte_offset": 19472,
+        "word_bytes": 4,
+        "pointer_binding_status": "64-bit register value/runtime shared-window base not reconstructed here"
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58320",
+      "opcode": "LDG.E.LTC128B.128",
+      "predicate": "@P1",
+      "operands": "R44, desc[UR4][R62.64]",
+      "register_tokens": [
+        "R44",
+        "UR4",
+        "R62"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1820"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58330",
+      "opcode": "LEA",
+      "predicate": null,
+      "operands": "R30, P0, R80, UR24, 0x2",
+      "register_tokens": [
+        "R30",
+        "P0",
+        "R80",
+        "UR24"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1830"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58340",
+      "opcode": "UIADD3",
+      "predicate": null,
+      "operands": "UR24, UR14, 0xf00, URZ",
+      "register_tokens": [
+        "UR24",
+        "UR14"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1840"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58350",
+      "opcode": "LEA.HI.X",
+      "predicate": null,
+      "operands": "R31, R80, UR25, R81, 0x2, P0",
+      "register_tokens": [
+        "R31",
+        "R80",
+        "UR25",
+        "R81",
+        "P0"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1850"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58360",
+      "opcode": "USHF.R.S32.HI",
+      "predicate": null,
+      "operands": "UR25, URZ, 0x1f, UR24",
+      "register_tokens": [
+        "UR25",
+        "UR24"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1860"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58370",
+      "opcode": "LD.E",
+      "predicate": null,
+      "operands": "R12, desc[UR4][R30.64+0x40]",
+      "register_tokens": [
+        "R12",
+        "UR4",
+        "R30"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1870",
+      "generic_load_descriptor": {
+        "destination_register": 12,
+        "address_descriptor_uniform_register": 4,
+        "pointer_pair_first_register": 30,
+        "byte_offset": 64,
+        "word_bytes": 4,
+        "pointer_binding_status": "64-bit register value/runtime shared-window base not reconstructed here"
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58380",
+      "opcode": "UIADD3.64",
+      "predicate": null,
+      "operands": "UR24, UR10, UR24, URZ",
+      "register_tokens": [
+        "UR24",
+        "UR10",
+        "UR24"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1880"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58390",
+      "opcode": "LD.E",
+      "predicate": null,
+      "operands": "R13, desc[UR4][R30.64+0x10c0]",
+      "register_tokens": [
+        "R13",
+        "UR4",
+        "R30"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1890",
+      "generic_load_descriptor": {
+        "destination_register": 13,
+        "address_descriptor_uniform_register": 4,
+        "pointer_pair_first_register": 30,
+        "byte_offset": 4288,
+        "word_bytes": 4,
+        "pointer_binding_status": "64-bit register value/runtime shared-window base not reconstructed here"
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b583a0",
+      "opcode": "LEA",
+      "predicate": null,
+      "operands": "R32, P0, R78, UR24, 0x2",
+      "register_tokens": [
+        "R32",
+        "P0",
+        "R78",
+        "UR24"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x18a0"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b583b0",
+      "opcode": "LD.E",
+      "predicate": null,
+      "operands": "R14, desc[UR4][R30.64+0x50]",
+      "register_tokens": [
+        "R14",
+        "UR4",
+        "R30"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x18b0",
+      "generic_load_descriptor": {
+        "destination_register": 14,
+        "address_descriptor_uniform_register": 4,
+        "pointer_pair_first_register": 30,
+        "byte_offset": 80,
+        "word_bytes": 4,
+        "pointer_binding_status": "64-bit register value/runtime shared-window base not reconstructed here"
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b583c0",
+      "opcode": "CS2R",
+      "predicate": null,
+      "operands": "R62, SRZ",
+      "register_tokens": [
+        "R62"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x18c0"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b583d0",
+      "opcode": "UIADD3",
+      "predicate": null,
+      "operands": "UR24, UR14, 0x1400, URZ",
+      "register_tokens": [
+        "UR24",
+        "UR14"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x18d0"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b583e0",
+      "opcode": "LEA.HI.X",
+      "predicate": null,
+      "operands": "R33, R78, UR25, R79, 0x2, P0",
+      "register_tokens": [
+        "R33",
+        "R78",
+        "UR25",
+        "R79",
+        "P0"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x18e0"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b583f0",
+      "opcode": "LD.E",
+      "predicate": null,
+      "operands": "R15, desc[UR4][R30.64+0x10d0]",
+      "register_tokens": [
+        "R15",
+        "UR4",
+        "R30"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x18f0",
+      "generic_load_descriptor": {
+        "destination_register": 15,
+        "address_descriptor_uniform_register": 4,
+        "pointer_pair_first_register": 30,
+        "byte_offset": 4304,
+        "word_bytes": 4,
+        "pointer_binding_status": "64-bit register value/runtime shared-window base not reconstructed here"
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58400",
+      "opcode": "USHF.R.S32.HI",
+      "predicate": null,
+      "operands": "UR25, URZ, 0x1f, UR24",
+      "register_tokens": [
+        "UR25",
+        "UR24"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1900"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58410",
+      "opcode": "LDG.E.LTC128B.128",
+      "predicate": "@P3",
+      "operands": "R60, desc[UR4][R86.64]",
+      "register_tokens": [
+        "R60",
+        "UR4",
+        "R86"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1910"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58420",
+      "opcode": "UIADD3.64",
+      "predicate": null,
+      "operands": "UR24, UR10, UR24, URZ",
+      "register_tokens": [
+        "UR24",
+        "UR10",
+        "UR24"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1920"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58430",
+      "opcode": "MOVM.16.MT88",
+      "predicate": null,
+      "operands": "R18, R18",
+      "register_tokens": [
+        "R18",
+        "R18"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1930",
+      "matrix_transpose_registers": {
+        "destination": 18,
+        "source": 18,
+        "mapping_receipt": "functional_mapping_002/analysis.json:movm_post_to_pre_halfword_permutation"
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58440",
+      "opcode": "MOVM.16.MT88",
+      "predicate": null,
+      "operands": "R19, R19",
+      "register_tokens": [
+        "R19",
+        "R19"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1940",
+      "matrix_transpose_registers": {
+        "destination": 19,
+        "source": 19,
+        "mapping_receipt": "functional_mapping_002/analysis.json:movm_post_to_pre_halfword_permutation"
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58450",
+      "opcode": "MOVM.16.MT88",
+      "predicate": null,
+      "operands": "R24, R24",
+      "register_tokens": [
+        "R24",
+        "R24"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1950",
+      "matrix_transpose_registers": {
+        "destination": 24,
+        "source": 24,
+        "mapping_receipt": "functional_mapping_002/analysis.json:movm_post_to_pre_halfword_permutation"
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58460",
+      "opcode": "MOVM.16.MT88",
+      "predicate": null,
+      "operands": "R25, R25",
+      "register_tokens": [
+        "R25",
+        "R25"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1960",
+      "matrix_transpose_registers": {
+        "destination": 25,
+        "source": 25,
+        "mapping_receipt": "functional_mapping_002/analysis.json:movm_post_to_pre_halfword_permutation"
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58470",
+      "opcode": "MOVM.16.MT88",
+      "predicate": null,
+      "operands": "R17, R0",
+      "register_tokens": [
+        "R17",
+        "R0"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1970",
+      "matrix_transpose_registers": {
+        "destination": 17,
+        "source": 0,
+        "mapping_receipt": "functional_mapping_002/analysis.json:movm_post_to_pre_halfword_permutation"
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58480",
+      "opcode": "MOVM.16.MT88",
+      "predicate": null,
+      "operands": "R2, R2",
+      "register_tokens": [
+        "R2",
+        "R2"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1980",
+      "matrix_transpose_registers": {
+        "destination": 2,
+        "source": 2,
+        "mapping_receipt": "functional_mapping_002/analysis.json:movm_post_to_pre_halfword_permutation"
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58490",
+      "opcode": "MOVM.16.MT88",
+      "predicate": null,
+      "operands": "R3, R3",
+      "register_tokens": [
+        "R3",
+        "R3"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1990",
+      "matrix_transpose_registers": {
+        "destination": 3,
+        "source": 3,
+        "mapping_receipt": "functional_mapping_002/analysis.json:movm_post_to_pre_halfword_permutation"
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b584a0",
+      "opcode": "MOVM.16.MT88",
+      "predicate": null,
+      "operands": "R16, R16",
+      "register_tokens": [
+        "R16",
+        "R16"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x19a0",
+      "matrix_transpose_registers": {
+        "destination": 16,
+        "source": 16,
+        "mapping_receipt": "functional_mapping_002/analysis.json:movm_post_to_pre_halfword_permutation"
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b584b0",
+      "opcode": "LD.E",
+      "predicate": null,
+      "operands": "R0, desc[UR4][R32.64+0x4490]",
+      "register_tokens": [
+        "R0",
+        "UR4",
+        "R32"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x19b0",
+      "generic_load_descriptor": {
+        "destination_register": 0,
+        "address_descriptor_uniform_register": 4,
+        "pointer_pair_first_register": 32,
+        "byte_offset": 17552,
+        "word_bytes": 4,
+        "pointer_binding_status": "64-bit register value/runtime shared-window base not reconstructed here"
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b584c0",
+      "opcode": "HMMA.16816.F32.BF16",
+      "predicate": null,
+      "operands": "R4, R20, R18, R4",
+      "register_tokens": [
+        "R4",
+        "R20",
+        "R18",
+        "R4"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x19c0",
+      "matrix_operand_register_bases": {
+        "destination_C": 4,
+        "A": 20,
+        "B": 18,
+        "input_C": 4
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b584d0",
+      "opcode": "LD.E",
+      "predicate": null,
+      "operands": "R18, desc[UR4][R32.64+0x4200]",
+      "register_tokens": [
+        "R18",
+        "UR4",
+        "R32"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x19d0",
+      "generic_load_descriptor": {
+        "destination_register": 18,
+        "address_descriptor_uniform_register": 4,
+        "pointer_pair_first_register": 32,
+        "byte_offset": 16896,
+        "word_bytes": 4,
+        "pointer_binding_status": "64-bit register value/runtime shared-window base not reconstructed here"
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b584e0",
+      "opcode": "LD.E",
+      "predicate": null,
+      "operands": "R19, desc[UR4][R32.64+0x4480]",
+      "register_tokens": [
+        "R19",
+        "UR4",
+        "R32"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x19e0",
+      "generic_load_descriptor": {
+        "destination_register": 19,
+        "address_descriptor_uniform_register": 4,
+        "pointer_pair_first_register": 32,
+        "byte_offset": 17536,
+        "word_bytes": 4,
+        "pointer_binding_status": "64-bit register value/runtime shared-window base not reconstructed here"
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b584f0",
+      "opcode": "HMMA.16816.F32.BF16",
+      "predicate": null,
+      "operands": "R8, R20, R24, R8",
+      "register_tokens": [
+        "R8",
+        "R20",
+        "R24",
+        "R8"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x19f0",
+      "matrix_operand_register_bases": {
+        "destination_C": 8,
+        "A": 20,
+        "B": 24,
+        "input_C": 8
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58500",
+      "opcode": "LD.E",
+      "predicate": null,
+      "operands": "R24, desc[UR4][R32.64+0x4210]",
+      "register_tokens": [
+        "R24",
+        "UR4",
+        "R32"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1a00",
+      "generic_load_descriptor": {
+        "destination_register": 24,
+        "address_descriptor_uniform_register": 4,
+        "pointer_pair_first_register": 32,
+        "byte_offset": 16912,
+        "word_bytes": 4,
+        "pointer_binding_status": "64-bit register value/runtime shared-window base not reconstructed here"
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58510",
+      "opcode": "LD.E",
+      "predicate": null,
+      "operands": "R20, desc[UR4][R30.64+0x60]",
+      "register_tokens": [
+        "R20",
+        "UR4",
+        "R30"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1a10",
+      "generic_load_descriptor": {
+        "destination_register": 20,
+        "address_descriptor_uniform_register": 4,
+        "pointer_pair_first_register": 30,
+        "byte_offset": 96,
+        "word_bytes": 4,
+        "pointer_binding_status": "64-bit register value/runtime shared-window base not reconstructed here"
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58520",
+      "opcode": "LD.E",
+      "predicate": null,
+      "operands": "R21, desc[UR4][R30.64+0x10e0]",
+      "register_tokens": [
+        "R21",
+        "UR4",
+        "R30"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1a20",
+      "generic_load_descriptor": {
+        "destination_register": 21,
+        "address_descriptor_uniform_register": 4,
+        "pointer_pair_first_register": 30,
+        "byte_offset": 4320,
+        "word_bytes": 4,
+        "pointer_binding_status": "64-bit register value/runtime shared-window base not reconstructed here"
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58530",
+      "opcode": "LD.E",
+      "predicate": null,
+      "operands": "R22, desc[UR4][R30.64+0x70]",
+      "register_tokens": [
+        "R22",
+        "UR4",
+        "R30"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1a30",
+      "generic_load_descriptor": {
+        "destination_register": 22,
+        "address_descriptor_uniform_register": 4,
+        "pointer_pair_first_register": 30,
+        "byte_offset": 112,
+        "word_bytes": 4,
+        "pointer_binding_status": "64-bit register value/runtime shared-window base not reconstructed here"
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58540",
+      "opcode": "LD.E",
+      "predicate": null,
+      "operands": "R23, desc[UR4][R30.64+0x10f0]",
+      "register_tokens": [
+        "R23",
+        "UR4",
+        "R30"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1a40",
+      "generic_load_descriptor": {
+        "destination_register": 23,
+        "address_descriptor_uniform_register": 4,
+        "pointer_pair_first_register": 30,
+        "byte_offset": 4336,
+        "word_bytes": 4,
+        "pointer_binding_status": "64-bit register value/runtime shared-window base not reconstructed here"
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58550",
+      "opcode": "LEA",
+      "predicate": null,
+      "operands": "R32, P0, R78, UR24, 0x2",
+      "register_tokens": [
+        "R32",
+        "P0",
+        "R78",
+        "UR24"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1a50"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58560",
+      "opcode": "UIADD3",
+      "predicate": null,
+      "operands": "UR24, UR14, 0x1900, URZ",
+      "register_tokens": [
+        "UR24",
+        "UR14"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1a60"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58570",
+      "opcode": "LEA.HI.X",
+      "predicate": null,
+      "operands": "R33, R78, UR25, R79, 0x2, P0",
+      "register_tokens": [
+        "R33",
+        "R78",
+        "UR25",
+        "R79",
+        "P0"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1a70"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58580",
+      "opcode": "USHF.R.S32.HI",
+      "predicate": null,
+      "operands": "UR25, URZ, 0x1f, UR24",
+      "register_tokens": [
+        "UR25",
+        "UR24"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1a80"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58590",
+      "opcode": "UIADD3.64",
+      "predicate": null,
+      "operands": "UR24, UR10, UR24, URZ",
+      "register_tokens": [
+        "UR24",
+        "UR10",
+        "UR24"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1a90"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b585a0",
+      "opcode": "MOVM.16.MT88",
+      "predicate": null,
+      "operands": "R25, R0",
+      "register_tokens": [
+        "R25",
+        "R0"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1aa0",
+      "matrix_transpose_registers": {
+        "destination": 25,
+        "source": 0,
+        "mapping_receipt": "functional_mapping_002/analysis.json:movm_post_to_pre_halfword_permutation"
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b585b0",
+      "opcode": "MOVM.16.MT88",
+      "predicate": null,
+      "operands": "R18, R18",
+      "register_tokens": [
+        "R18",
+        "R18"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1ab0",
+      "matrix_transpose_registers": {
+        "destination": 18,
+        "source": 18,
+        "mapping_receipt": "functional_mapping_002/analysis.json:movm_post_to_pre_halfword_permutation"
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b585c0",
+      "opcode": "MOVM.16.MT88",
+      "predicate": null,
+      "operands": "R19, R19",
+      "register_tokens": [
+        "R19",
+        "R19"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1ac0",
+      "matrix_transpose_registers": {
+        "destination": 19,
+        "source": 19,
+        "mapping_receipt": "functional_mapping_002/analysis.json:movm_post_to_pre_halfword_permutation"
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b585d0",
+      "opcode": "MOVM.16.MT88",
+      "predicate": null,
+      "operands": "R24, R24",
+      "register_tokens": [
+        "R24",
+        "R24"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1ad0",
+      "matrix_transpose_registers": {
+        "destination": 24,
+        "source": 24,
+        "mapping_receipt": "functional_mapping_002/analysis.json:movm_post_to_pre_halfword_permutation"
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b585e0",
+      "opcode": "LD.E",
+      "predicate": null,
+      "operands": "R0, desc[UR4][R32.64+0x4490]",
+      "register_tokens": [
+        "R0",
+        "UR4",
+        "R32"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1ae0",
+      "generic_load_descriptor": {
+        "destination_register": 0,
+        "address_descriptor_uniform_register": 4,
+        "pointer_pair_first_register": 32,
+        "byte_offset": 17552,
+        "word_bytes": 4,
+        "pointer_binding_status": "64-bit register value/runtime shared-window base not reconstructed here"
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b585f0",
+      "opcode": "HMMA.16816.F32.BF16",
+      "predicate": null,
+      "operands": "R4, R12, R2, R4",
+      "register_tokens": [
+        "R4",
+        "R12",
+        "R2",
+        "R4"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1af0",
+      "matrix_operand_register_bases": {
+        "destination_C": 4,
+        "A": 12,
+        "B": 2,
+        "input_C": 4
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58600",
+      "opcode": "LD.E",
+      "predicate": null,
+      "operands": "R2, desc[UR4][R32.64+0x4200]",
+      "register_tokens": [
+        "R2",
+        "UR4",
+        "R32"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1b00",
+      "generic_load_descriptor": {
+        "destination_register": 2,
+        "address_descriptor_uniform_register": 4,
+        "pointer_pair_first_register": 32,
+        "byte_offset": 16896,
+        "word_bytes": 4,
+        "pointer_binding_status": "64-bit register value/runtime shared-window base not reconstructed here"
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58610",
+      "opcode": "LD.E",
+      "predicate": null,
+      "operands": "R3, desc[UR4][R32.64+0x4480]",
+      "register_tokens": [
+        "R3",
+        "UR4",
+        "R32"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1b10",
+      "generic_load_descriptor": {
+        "destination_register": 3,
+        "address_descriptor_uniform_register": 4,
+        "pointer_pair_first_register": 32,
+        "byte_offset": 17536,
+        "word_bytes": 4,
+        "pointer_binding_status": "64-bit register value/runtime shared-window base not reconstructed here"
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58620",
+      "opcode": "HMMA.16816.F32.BF16",
+      "predicate": null,
+      "operands": "R8, R12, R16, R8",
+      "register_tokens": [
+        "R8",
+        "R12",
+        "R16",
+        "R8"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1b20",
+      "matrix_operand_register_bases": {
+        "destination_C": 8,
+        "A": 12,
+        "B": 16,
+        "input_C": 8
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58630",
+      "opcode": "LD.E",
+      "predicate": null,
+      "operands": "R16, desc[UR4][R32.64+0x4210]",
+      "register_tokens": [
+        "R16",
+        "UR4",
+        "R32"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1b30",
+      "generic_load_descriptor": {
+        "destination_register": 16,
+        "address_descriptor_uniform_register": 4,
+        "pointer_pair_first_register": 32,
+        "byte_offset": 16912,
+        "word_bytes": 4,
+        "pointer_binding_status": "64-bit register value/runtime shared-window base not reconstructed here"
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58640",
+      "opcode": "LD.E",
+      "predicate": null,
+      "operands": "R12, desc[UR4][R30.64+0x80]",
+      "register_tokens": [
+        "R12",
+        "UR4",
+        "R30"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1b40",
+      "generic_load_descriptor": {
+        "destination_register": 12,
+        "address_descriptor_uniform_register": 4,
+        "pointer_pair_first_register": 30,
+        "byte_offset": 128,
+        "word_bytes": 4,
+        "pointer_binding_status": "64-bit register value/runtime shared-window base not reconstructed here"
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58650",
+      "opcode": "LD.E",
+      "predicate": null,
+      "operands": "R13, desc[UR4][R30.64+0x1100]",
+      "register_tokens": [
+        "R13",
+        "UR4",
+        "R30"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1b50",
+      "generic_load_descriptor": {
+        "destination_register": 13,
+        "address_descriptor_uniform_register": 4,
+        "pointer_pair_first_register": 30,
+        "byte_offset": 4352,
+        "word_bytes": 4,
+        "pointer_binding_status": "64-bit register value/runtime shared-window base not reconstructed here"
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58660",
+      "opcode": "LD.E",
+      "predicate": null,
+      "operands": "R14, desc[UR4][R30.64+0x90]",
+      "register_tokens": [
+        "R14",
+        "UR4",
+        "R30"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1b60",
+      "generic_load_descriptor": {
+        "destination_register": 14,
+        "address_descriptor_uniform_register": 4,
+        "pointer_pair_first_register": 30,
+        "byte_offset": 144,
+        "word_bytes": 4,
+        "pointer_binding_status": "64-bit register value/runtime shared-window base not reconstructed here"
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58670",
+      "opcode": "LD.E",
+      "predicate": null,
+      "operands": "R15, desc[UR4][R30.64+0x1110]",
+      "register_tokens": [
+        "R15",
+        "UR4",
+        "R30"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1b70",
+      "generic_load_descriptor": {
+        "destination_register": 15,
+        "address_descriptor_uniform_register": 4,
+        "pointer_pair_first_register": 30,
+        "byte_offset": 4368,
+        "word_bytes": 4,
+        "pointer_binding_status": "64-bit register value/runtime shared-window base not reconstructed here"
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58680",
+      "opcode": "LEA",
+      "predicate": null,
+      "operands": "R32, P0, R78, UR24, 0x2",
+      "register_tokens": [
+        "R32",
+        "P0",
+        "R78",
+        "UR24"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1b80"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58690",
+      "opcode": "UIADD3",
+      "predicate": null,
+      "operands": "UR24, UR14, 0x1e00, URZ",
+      "register_tokens": [
+        "UR24",
+        "UR14"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1b90"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b586a0",
+      "opcode": "LEA.HI.X",
+      "predicate": null,
+      "operands": "R33, R78, UR25, R79, 0x2, P0",
+      "register_tokens": [
+        "R33",
+        "R78",
+        "UR25",
+        "R79",
+        "P0"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1ba0"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b586b0",
+      "opcode": "USHF.R.S32.HI",
+      "predicate": null,
+      "operands": "UR25, URZ, 0x1f, UR24",
+      "register_tokens": [
+        "UR25",
+        "UR24"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1bb0"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b586c0",
+      "opcode": "UIADD3.64",
+      "predicate": null,
+      "operands": "UR24, UR10, UR24, URZ",
+      "register_tokens": [
+        "UR24",
+        "UR10",
+        "UR24"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1bc0"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b586d0",
+      "opcode": "MOVM.16.MT88",
+      "predicate": null,
+      "operands": "R17, R0",
+      "register_tokens": [
+        "R17",
+        "R0"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1bd0",
+      "matrix_transpose_registers": {
+        "destination": 17,
+        "source": 0,
+        "mapping_receipt": "functional_mapping_002/analysis.json:movm_post_to_pre_halfword_permutation"
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b586e0",
+      "opcode": "MOVM.16.MT88",
+      "predicate": null,
+      "operands": "R2, R2",
+      "register_tokens": [
+        "R2",
+        "R2"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1be0",
+      "matrix_transpose_registers": {
+        "destination": 2,
+        "source": 2,
+        "mapping_receipt": "functional_mapping_002/analysis.json:movm_post_to_pre_halfword_permutation"
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b586f0",
+      "opcode": "MOVM.16.MT88",
+      "predicate": null,
+      "operands": "R3, R3",
+      "register_tokens": [
+        "R3",
+        "R3"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1bf0",
+      "matrix_transpose_registers": {
+        "destination": 3,
+        "source": 3,
+        "mapping_receipt": "functional_mapping_002/analysis.json:movm_post_to_pre_halfword_permutation"
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58700",
+      "opcode": "MOVM.16.MT88",
+      "predicate": null,
+      "operands": "R16, R16",
+      "register_tokens": [
+        "R16",
+        "R16"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1c00",
+      "matrix_transpose_registers": {
+        "destination": 16,
+        "source": 16,
+        "mapping_receipt": "functional_mapping_002/analysis.json:movm_post_to_pre_halfword_permutation"
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58710",
+      "opcode": "LD.E",
+      "predicate": null,
+      "operands": "R0, desc[UR4][R32.64+0x4490]",
+      "register_tokens": [
+        "R0",
+        "UR4",
+        "R32"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1c10",
+      "generic_load_descriptor": {
+        "destination_register": 0,
+        "address_descriptor_uniform_register": 4,
+        "pointer_pair_first_register": 32,
+        "byte_offset": 17552,
+        "word_bytes": 4,
+        "pointer_binding_status": "64-bit register value/runtime shared-window base not reconstructed here"
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58720",
+      "opcode": "HMMA.16816.F32.BF16",
+      "predicate": null,
+      "operands": "R4, R20, R18, R4",
+      "register_tokens": [
+        "R4",
+        "R20",
+        "R18",
+        "R4"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1c20",
+      "matrix_operand_register_bases": {
+        "destination_C": 4,
+        "A": 20,
+        "B": 18,
+        "input_C": 4
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58730",
+      "opcode": "LD.E",
+      "predicate": null,
+      "operands": "R18, desc[UR4][R32.64+0x4200]",
+      "register_tokens": [
+        "R18",
+        "UR4",
+        "R32"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1c30",
+      "generic_load_descriptor": {
+        "destination_register": 18,
+        "address_descriptor_uniform_register": 4,
+        "pointer_pair_first_register": 32,
+        "byte_offset": 16896,
+        "word_bytes": 4,
+        "pointer_binding_status": "64-bit register value/runtime shared-window base not reconstructed here"
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58740",
+      "opcode": "LD.E",
+      "predicate": null,
+      "operands": "R19, desc[UR4][R32.64+0x4480]",
+      "register_tokens": [
+        "R19",
+        "UR4",
+        "R32"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1c40",
+      "generic_load_descriptor": {
+        "destination_register": 19,
+        "address_descriptor_uniform_register": 4,
+        "pointer_pair_first_register": 32,
+        "byte_offset": 17536,
+        "word_bytes": 4,
+        "pointer_binding_status": "64-bit register value/runtime shared-window base not reconstructed here"
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58750",
+      "opcode": "HMMA.16816.F32.BF16",
+      "predicate": null,
+      "operands": "R8, R20, R24, R8",
+      "register_tokens": [
+        "R8",
+        "R20",
+        "R24",
+        "R8"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1c50",
+      "matrix_operand_register_bases": {
+        "destination_C": 8,
+        "A": 20,
+        "B": 24,
+        "input_C": 8
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58760",
+      "opcode": "LD.E",
+      "predicate": null,
+      "operands": "R24, desc[UR4][R32.64+0x4210]",
+      "register_tokens": [
+        "R24",
+        "UR4",
+        "R32"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1c60",
+      "generic_load_descriptor": {
+        "destination_register": 24,
+        "address_descriptor_uniform_register": 4,
+        "pointer_pair_first_register": 32,
+        "byte_offset": 16912,
+        "word_bytes": 4,
+        "pointer_binding_status": "64-bit register value/runtime shared-window base not reconstructed here"
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58770",
+      "opcode": "LD.E",
+      "predicate": null,
+      "operands": "R20, desc[UR4][R30.64+0xa0]",
+      "register_tokens": [
+        "R20",
+        "UR4",
+        "R30"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1c70",
+      "generic_load_descriptor": {
+        "destination_register": 20,
+        "address_descriptor_uniform_register": 4,
+        "pointer_pair_first_register": 30,
+        "byte_offset": 160,
+        "word_bytes": 4,
+        "pointer_binding_status": "64-bit register value/runtime shared-window base not reconstructed here"
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58780",
+      "opcode": "LD.E",
+      "predicate": null,
+      "operands": "R21, desc[UR4][R30.64+0x1120]",
+      "register_tokens": [
+        "R21",
+        "UR4",
+        "R30"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1c80",
+      "generic_load_descriptor": {
+        "destination_register": 21,
+        "address_descriptor_uniform_register": 4,
+        "pointer_pair_first_register": 30,
+        "byte_offset": 4384,
+        "word_bytes": 4,
+        "pointer_binding_status": "64-bit register value/runtime shared-window base not reconstructed here"
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58790",
+      "opcode": "LD.E",
+      "predicate": null,
+      "operands": "R22, desc[UR4][R30.64+0xb0]",
+      "register_tokens": [
+        "R22",
+        "UR4",
+        "R30"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1c90",
+      "generic_load_descriptor": {
+        "destination_register": 22,
+        "address_descriptor_uniform_register": 4,
+        "pointer_pair_first_register": 30,
+        "byte_offset": 176,
+        "word_bytes": 4,
+        "pointer_binding_status": "64-bit register value/runtime shared-window base not reconstructed here"
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b587a0",
+      "opcode": "HMMA.16816.F32.BF16",
+      "predicate": null,
+      "operands": "R4, R12, R2, R4",
+      "register_tokens": [
+        "R4",
+        "R12",
+        "R2",
+        "R4"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1ca0",
+      "matrix_operand_register_bases": {
+        "destination_C": 4,
+        "A": 12,
+        "B": 2,
+        "input_C": 4
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b587b0",
+      "opcode": "LD.E",
+      "predicate": null,
+      "operands": "R23, desc[UR4][R30.64+0x1130]",
+      "register_tokens": [
+        "R23",
+        "UR4",
+        "R30"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1cb0",
+      "generic_load_descriptor": {
+        "destination_register": 23,
+        "address_descriptor_uniform_register": 4,
+        "pointer_pair_first_register": 30,
+        "byte_offset": 4400,
+        "word_bytes": 4,
+        "pointer_binding_status": "64-bit register value/runtime shared-window base not reconstructed here"
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b587c0",
+      "opcode": "LEA",
+      "predicate": null,
+      "operands": "R32, P0, R78, UR24, 0x2",
+      "register_tokens": [
+        "R32",
+        "P0",
+        "R78",
+        "UR24"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1cc0"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b587d0",
+      "opcode": "UIADD3",
+      "predicate": null,
+      "operands": "UR24, UR14, 0x2300, URZ",
+      "register_tokens": [
+        "UR24",
+        "UR14"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1cd0"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b587e0",
+      "opcode": "LEA.HI.X",
+      "predicate": null,
+      "operands": "R33, R78, UR25, R79, 0x2, P0",
+      "register_tokens": [
+        "R33",
+        "R78",
+        "UR25",
+        "R79",
+        "P0"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1ce0"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b587f0",
+      "opcode": "USHF.R.S32.HI",
+      "predicate": null,
+      "operands": "UR25, URZ, 0x1f, UR24",
+      "register_tokens": [
+        "UR25",
+        "UR24"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1cf0"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58800",
+      "opcode": "HMMA.16816.F32.BF16",
+      "predicate": null,
+      "operands": "R8, R12, R16, R8",
+      "register_tokens": [
+        "R8",
+        "R12",
+        "R16",
+        "R8"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1d00",
+      "matrix_operand_register_bases": {
+        "destination_C": 8,
+        "A": 12,
+        "B": 16,
+        "input_C": 8
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58810",
+      "opcode": "LD.E",
+      "predicate": null,
+      "operands": "R12, desc[UR4][R30.64+0xc0]",
+      "register_tokens": [
+        "R12",
+        "UR4",
+        "R30"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1d10",
+      "generic_load_descriptor": {
+        "destination_register": 12,
+        "address_descriptor_uniform_register": 4,
+        "pointer_pair_first_register": 30,
+        "byte_offset": 192,
+        "word_bytes": 4,
+        "pointer_binding_status": "64-bit register value/runtime shared-window base not reconstructed here"
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58820",
+      "opcode": "UIADD3.64",
+      "predicate": null,
+      "operands": "UR24, UR10, UR24, URZ",
+      "register_tokens": [
+        "UR24",
+        "UR10",
+        "UR24"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1d20"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58830",
+      "opcode": "LD.E",
+      "predicate": null,
+      "operands": "R2, desc[UR4][R32.64+0x4200]",
+      "register_tokens": [
+        "R2",
+        "UR4",
+        "R32"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1d30",
+      "generic_load_descriptor": {
+        "destination_register": 2,
+        "address_descriptor_uniform_register": 4,
+        "pointer_pair_first_register": 32,
+        "byte_offset": 16896,
+        "word_bytes": 4,
+        "pointer_binding_status": "64-bit register value/runtime shared-window base not reconstructed here"
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58840",
+      "opcode": "LD.E",
+      "predicate": null,
+      "operands": "R3, desc[UR4][R32.64+0x4480]",
+      "register_tokens": [
+        "R3",
+        "UR4",
+        "R32"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1d40",
+      "generic_load_descriptor": {
+        "destination_register": 3,
+        "address_descriptor_uniform_register": 4,
+        "pointer_pair_first_register": 32,
+        "byte_offset": 17536,
+        "word_bytes": 4,
+        "pointer_binding_status": "64-bit register value/runtime shared-window base not reconstructed here"
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58850",
+      "opcode": "LD.E",
+      "predicate": null,
+      "operands": "R16, desc[UR4][R32.64+0x4210]",
+      "register_tokens": [
+        "R16",
+        "UR4",
+        "R32"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1d50",
+      "generic_load_descriptor": {
+        "destination_register": 16,
+        "address_descriptor_uniform_register": 4,
+        "pointer_pair_first_register": 32,
+        "byte_offset": 16912,
+        "word_bytes": 4,
+        "pointer_binding_status": "64-bit register value/runtime shared-window base not reconstructed here"
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58860",
+      "opcode": "LD.E",
+      "predicate": null,
+      "operands": "R13, desc[UR4][R30.64+0x1140]",
+      "register_tokens": [
+        "R13",
+        "UR4",
+        "R30"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1d60",
+      "generic_load_descriptor": {
+        "destination_register": 13,
+        "address_descriptor_uniform_register": 4,
+        "pointer_pair_first_register": 30,
+        "byte_offset": 4416,
+        "word_bytes": 4,
+        "pointer_binding_status": "64-bit register value/runtime shared-window base not reconstructed here"
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58870",
+      "opcode": "LD.E",
+      "predicate": null,
+      "operands": "R14, desc[UR4][R30.64+0xd0]",
+      "register_tokens": [
+        "R14",
+        "UR4",
+        "R30"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1d70",
+      "generic_load_descriptor": {
+        "destination_register": 14,
+        "address_descriptor_uniform_register": 4,
+        "pointer_pair_first_register": 30,
+        "byte_offset": 208,
+        "word_bytes": 4,
+        "pointer_binding_status": "64-bit register value/runtime shared-window base not reconstructed here"
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58880",
+      "opcode": "LD.E",
+      "predicate": null,
+      "operands": "R15, desc[UR4][R30.64+0x1150]",
+      "register_tokens": [
+        "R15",
+        "UR4",
+        "R30"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1d80",
+      "generic_load_descriptor": {
+        "destination_register": 15,
+        "address_descriptor_uniform_register": 4,
+        "pointer_pair_first_register": 30,
+        "byte_offset": 4432,
+        "word_bytes": 4,
+        "pointer_binding_status": "64-bit register value/runtime shared-window base not reconstructed here"
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58890",
+      "opcode": "MOVM.16.MT88",
+      "predicate": null,
+      "operands": "R25, R0",
+      "register_tokens": [
+        "R25",
+        "R0"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1d90",
+      "matrix_transpose_registers": {
+        "destination": 25,
+        "source": 0,
+        "mapping_receipt": "functional_mapping_002/analysis.json:movm_post_to_pre_halfword_permutation"
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b588a0",
+      "opcode": "MOVM.16.MT88",
+      "predicate": null,
+      "operands": "R18, R18",
+      "register_tokens": [
+        "R18",
+        "R18"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1da0",
+      "matrix_transpose_registers": {
+        "destination": 18,
+        "source": 18,
+        "mapping_receipt": "functional_mapping_002/analysis.json:movm_post_to_pre_halfword_permutation"
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b588b0",
+      "opcode": "MOVM.16.MT88",
+      "predicate": null,
+      "operands": "R19, R19",
+      "register_tokens": [
+        "R19",
+        "R19"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1db0",
+      "matrix_transpose_registers": {
+        "destination": 19,
+        "source": 19,
+        "mapping_receipt": "functional_mapping_002/analysis.json:movm_post_to_pre_halfword_permutation"
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b588c0",
+      "opcode": "MOVM.16.MT88",
+      "predicate": null,
+      "operands": "R24, R24",
+      "register_tokens": [
+        "R24",
+        "R24"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1dc0",
+      "matrix_transpose_registers": {
+        "destination": 24,
+        "source": 24,
+        "mapping_receipt": "functional_mapping_002/analysis.json:movm_post_to_pre_halfword_permutation"
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b588d0",
+      "opcode": "LD.E",
+      "predicate": null,
+      "operands": "R0, desc[UR4][R32.64+0x4490]",
+      "register_tokens": [
+        "R0",
+        "UR4",
+        "R32"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1dd0",
+      "generic_load_descriptor": {
+        "destination_register": 0,
+        "address_descriptor_uniform_register": 4,
+        "pointer_pair_first_register": 32,
+        "byte_offset": 17552,
+        "word_bytes": 4,
+        "pointer_binding_status": "64-bit register value/runtime shared-window base not reconstructed here"
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b588e0",
+      "opcode": "LEA",
+      "predicate": null,
+      "operands": "R32, P0, R78, UR24, 0x2",
+      "register_tokens": [
+        "R32",
+        "P0",
+        "R78",
+        "UR24"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1de0"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b588f0",
+      "opcode": "HMMA.16816.F32.BF16",
+      "predicate": null,
+      "operands": "R4, R20, R18, R4",
+      "register_tokens": [
+        "R4",
+        "R20",
+        "R18",
+        "R4"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1df0",
+      "matrix_operand_register_bases": {
+        "destination_C": 4,
+        "A": 20,
+        "B": 18,
+        "input_C": 4
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58900",
+      "opcode": "UMOV",
+      "predicate": "@UP0",
+      "operands": "UR24, 0xffffd300",
+      "register_tokens": [
+        "UR24"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1e00"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58910",
+      "opcode": "UMOV",
+      "predicate": "@!UP0",
+      "operands": "UR24, 0x2300",
+      "register_tokens": [
+        "UR24"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1e10"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58920",
+      "opcode": "UIADD3",
+      "predicate": null,
+      "operands": "UR14, UR14, 0x500, UR24",
+      "register_tokens": [
+        "UR14",
+        "UR14",
+        "UR24"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1e20"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58930",
+      "opcode": "MOVM.16.MT88",
+      "predicate": null,
+      "operands": "R2, R2",
+      "register_tokens": [
+        "R2",
+        "R2"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1e30",
+      "matrix_transpose_registers": {
+        "destination": 2,
+        "source": 2,
+        "mapping_receipt": "functional_mapping_002/analysis.json:movm_post_to_pre_halfword_permutation"
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58940",
+      "opcode": "LEA.HI.X",
+      "predicate": null,
+      "operands": "R33, R78, UR25, R79, 0x2, P0",
+      "register_tokens": [
+        "R33",
+        "R78",
+        "UR25",
+        "R79",
+        "P0"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1e40"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58950",
+      "opcode": "PLOP3.LUT",
+      "predicate": null,
+      "operands": "P0, PT, PT, PT, UP0, 0x80, 0x8",
+      "register_tokens": [
+        "P0"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1e50"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58960",
+      "opcode": "MOVM.16.MT88",
+      "predicate": null,
+      "operands": "R3, R3",
+      "register_tokens": [
+        "R3",
+        "R3"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1e60",
+      "matrix_transpose_registers": {
+        "destination": 3,
+        "source": 3,
+        "mapping_receipt": "functional_mapping_002/analysis.json:movm_post_to_pre_halfword_permutation"
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58970",
+      "opcode": "UISETP.GT.AND",
+      "predicate": null,
+      "operands": "UP0, UPT, UR18, 0x1, UPT",
+      "register_tokens": [
+        "UR18"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1e70"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58980",
+      "opcode": "UIADD3",
+      "predicate": null,
+      "operands": "UR18, UR18, -0x1, URZ",
+      "register_tokens": [
+        "UR18",
+        "UR18"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1e80"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58990",
+      "opcode": "LD.E",
+      "predicate": null,
+      "operands": "R18, desc[UR4][R32.64+0x4200]",
+      "register_tokens": [
+        "R18",
+        "UR4",
+        "R32"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1e90",
+      "generic_load_descriptor": {
+        "destination_register": 18,
+        "address_descriptor_uniform_register": 4,
+        "pointer_pair_first_register": 32,
+        "byte_offset": 16896,
+        "word_bytes": 4,
+        "pointer_binding_status": "64-bit register value/runtime shared-window base not reconstructed here"
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b589a0",
+      "opcode": "HMMA.16816.F32.BF16",
+      "predicate": null,
+      "operands": "R8, R20, R24, R8",
+      "register_tokens": [
+        "R8",
+        "R20",
+        "R24",
+        "R8"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1ea0",
+      "matrix_operand_register_bases": {
+        "destination_C": 8,
+        "A": 20,
+        "B": 24,
+        "input_C": 8
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b589b0",
+      "opcode": "LD.E",
+      "predicate": null,
+      "operands": "R19, desc[UR4][R32.64+0x4480]",
+      "register_tokens": [
+        "R19",
+        "UR4",
+        "R32"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1eb0",
+      "generic_load_descriptor": {
+        "destination_register": 19,
+        "address_descriptor_uniform_register": 4,
+        "pointer_pair_first_register": 32,
+        "byte_offset": 17536,
+        "word_bytes": 4,
+        "pointer_binding_status": "64-bit register value/runtime shared-window base not reconstructed here"
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b589c0",
+      "opcode": "PLOP3.LUT",
+      "predicate": null,
+      "operands": "P1, PT, PT, PT, UP0, 0x80, 0x8",
+      "register_tokens": [
+        "P1"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1ec0"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b589d0",
+      "opcode": "LD.E",
+      "predicate": null,
+      "operands": "R24, desc[UR4][R32.64+0x4210]",
+      "register_tokens": [
+        "R24",
+        "UR4",
+        "R32"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1ed0",
+      "generic_load_descriptor": {
+        "destination_register": 24,
+        "address_descriptor_uniform_register": 4,
+        "pointer_pair_first_register": 32,
+        "byte_offset": 16912,
+        "word_bytes": 4,
+        "pointer_binding_status": "64-bit register value/runtime shared-window base not reconstructed here"
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b589e0",
+      "opcode": "LD.E",
+      "predicate": null,
+      "operands": "R20, desc[UR4][R30.64+0xe0]",
+      "register_tokens": [
+        "R20",
+        "UR4",
+        "R30"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1ee0",
+      "generic_load_descriptor": {
+        "destination_register": 20,
+        "address_descriptor_uniform_register": 4,
+        "pointer_pair_first_register": 30,
+        "byte_offset": 224,
+        "word_bytes": 4,
+        "pointer_binding_status": "64-bit register value/runtime shared-window base not reconstructed here"
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b589f0",
+      "opcode": "LD.E",
+      "predicate": null,
+      "operands": "R21, desc[UR4][R30.64+0x1160]",
+      "register_tokens": [
+        "R21",
+        "UR4",
+        "R30"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1ef0",
+      "generic_load_descriptor": {
+        "destination_register": 21,
+        "address_descriptor_uniform_register": 4,
+        "pointer_pair_first_register": 30,
+        "byte_offset": 4448,
+        "word_bytes": 4,
+        "pointer_binding_status": "64-bit register value/runtime shared-window base not reconstructed here"
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58a00",
+      "opcode": "LD.E",
+      "predicate": null,
+      "operands": "R22, desc[UR4][R30.64+0xf0]",
+      "register_tokens": [
+        "R22",
+        "UR4",
+        "R30"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1f00",
+      "generic_load_descriptor": {
+        "destination_register": 22,
+        "address_descriptor_uniform_register": 4,
+        "pointer_pair_first_register": 30,
+        "byte_offset": 240,
+        "word_bytes": 4,
+        "pointer_binding_status": "64-bit register value/runtime shared-window base not reconstructed here"
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58a10",
+      "opcode": "HMMA.16816.F32.BF16",
+      "predicate": null,
+      "operands": "R4, R12, R2, R4",
+      "register_tokens": [
+        "R4",
+        "R12",
+        "R2",
+        "R4"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1f10",
+      "matrix_operand_register_bases": {
+        "destination_C": 4,
+        "A": 12,
+        "B": 2,
+        "input_C": 4
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58a20",
+      "opcode": "LD.E",
+      "predicate": null,
+      "operands": "R23, desc[UR4][R30.64+0x1170]",
+      "register_tokens": [
+        "R23",
+        "UR4",
+        "R30"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1f20",
+      "generic_load_descriptor": {
+        "destination_register": 23,
+        "address_descriptor_uniform_register": 4,
+        "pointer_pair_first_register": 30,
+        "byte_offset": 4464,
+        "word_bytes": 4,
+        "pointer_binding_status": "64-bit register value/runtime shared-window base not reconstructed here"
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58a30",
+      "opcode": "MOVM.16.MT88",
+      "predicate": null,
+      "operands": "R16, R16",
+      "register_tokens": [
+        "R16",
+        "R16"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1f30",
+      "matrix_transpose_registers": {
+        "destination": 16,
+        "source": 16,
+        "mapping_receipt": "functional_mapping_002/analysis.json:movm_post_to_pre_halfword_permutation"
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58a40",
+      "opcode": "MOVM.16.MT88",
+      "predicate": null,
+      "operands": "R17, R0",
+      "register_tokens": [
+        "R17",
+        "R0"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1f40",
+      "matrix_transpose_registers": {
+        "destination": 17,
+        "source": 0,
+        "mapping_receipt": "functional_mapping_002/analysis.json:movm_post_to_pre_halfword_permutation"
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58a50",
+      "opcode": "LD.E",
+      "predicate": null,
+      "operands": "R0, desc[UR4][R32.64+0x4490]",
+      "register_tokens": [
+        "R0",
+        "UR4",
+        "R32"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1f50",
+      "generic_load_descriptor": {
+        "destination_register": 0,
+        "address_descriptor_uniform_register": 4,
+        "pointer_pair_first_register": 32,
+        "byte_offset": 17552,
+        "word_bytes": 4,
+        "pointer_binding_status": "64-bit register value/runtime shared-window base not reconstructed here"
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58a60",
+      "opcode": "HMMA.16816.F32.BF16",
+      "predicate": null,
+      "operands": "R8, R12, R16, R8",
+      "register_tokens": [
+        "R8",
+        "R12",
+        "R16",
+        "R8"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1f60",
+      "matrix_operand_register_bases": {
+        "destination_C": 8,
+        "A": 12,
+        "B": 16,
+        "input_C": 8
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58a70",
+      "opcode": "STS.128",
+      "predicate": null,
+      "operands": "[R75], R40",
+      "register_tokens": [
+        "R75",
+        "R40"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1f70"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58a80",
+      "opcode": "STS.128",
+      "predicate": null,
+      "operands": "[R75+0x1080], R36",
+      "register_tokens": [
+        "R75",
+        "R36"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1f80"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58a90",
+      "opcode": "STS.128",
+      "predicate": null,
+      "operands": "[R75+0x2100], R56",
+      "register_tokens": [
+        "R75",
+        "R56"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1f90"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58aa0",
+      "opcode": "STS.128",
+      "predicate": null,
+      "operands": "[R75+0x3180], R52",
+      "register_tokens": [
+        "R75",
+        "R52"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1fa0"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58ab0",
+      "opcode": "STS.128",
+      "predicate": null,
+      "operands": "[R74], R48",
+      "register_tokens": [
+        "R74",
+        "R48"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1fb0"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58ac0",
+      "opcode": "STS.128",
+      "predicate": null,
+      "operands": "[R74+0xa00], R44",
+      "register_tokens": [
+        "R74",
+        "R44"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1fc0"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58ad0",
+      "opcode": "STS.128",
+      "predicate": null,
+      "operands": "[R74+0x1400], R64",
+      "register_tokens": [
+        "R74",
+        "R64"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1fd0"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58ae0",
+      "opcode": "STS.128",
+      "predicate": null,
+      "operands": "[R74+0x1e00], R60",
+      "register_tokens": [
+        "R74",
+        "R60"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1fe0"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58af0",
+      "opcode": "BAR.SYNC.DEFER_BLOCKING",
+      "predicate": null,
+      "operands": "0x0",
+      "register_tokens": [],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x1ff0"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58b00",
+      "opcode": "MOVM.16.MT88",
+      "predicate": null,
+      "operands": "R18, R18",
+      "register_tokens": [
+        "R18",
+        "R18"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x2000",
+      "matrix_transpose_registers": {
+        "destination": 18,
+        "source": 18,
+        "mapping_receipt": "functional_mapping_002/analysis.json:movm_post_to_pre_halfword_permutation"
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58b10",
+      "opcode": "IADD3",
+      "predicate": "@P0",
+      "operands": "R75, R75, 0x100, RZ",
+      "register_tokens": [
+        "R75",
+        "R75"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x2010"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58b20",
+      "opcode": "MOVM.16.MT88",
+      "predicate": null,
+      "operands": "R19, R19",
+      "register_tokens": [
+        "R19",
+        "R19"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x2020",
+      "matrix_transpose_registers": {
+        "destination": 19,
+        "source": 19,
+        "mapping_receipt": "functional_mapping_002/analysis.json:movm_post_to_pre_halfword_permutation"
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58b30",
+      "opcode": "IADD3",
+      "predicate": "@!P0",
+      "operands": "R75, R35, -0x100, RZ",
+      "register_tokens": [
+        "R75",
+        "R35"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x2030"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58b40",
+      "opcode": "PLOP3.LUT",
+      "predicate": null,
+      "operands": "P0, PT, PT, PT, UP1, 0x80, 0x8",
+      "register_tokens": [
+        "P0"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x2040"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58b50",
+      "opcode": "MOVM.16.MT88",
+      "predicate": null,
+      "operands": "R24, R24",
+      "register_tokens": [
+        "R24",
+        "R24"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x2050",
+      "matrix_transpose_registers": {
+        "destination": 24,
+        "source": 24,
+        "mapping_receipt": "functional_mapping_002/analysis.json:movm_post_to_pre_halfword_permutation"
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58b60",
+      "opcode": "SEL",
+      "predicate": null,
+      "operands": "R70, R70, RZ, P0",
+      "register_tokens": [
+        "R70",
+        "R70",
+        "P0"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x2060"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58b70",
+      "opcode": "SEL",
+      "predicate": null,
+      "operands": "R72, R72, RZ, P0",
+      "register_tokens": [
+        "R72",
+        "R72",
+        "P0"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x2070"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58b80",
+      "opcode": "IADD3",
+      "predicate": null,
+      "operands": "R74, R74, UR15, RZ",
+      "register_tokens": [
+        "R74",
+        "R74",
+        "UR15"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x2080"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58b90",
+      "opcode": "USHF.R.S32.HI",
+      "predicate": null,
+      "operands": "UR15, URZ, 0x1f, UR14",
+      "register_tokens": [
+        "UR15",
+        "UR14"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x2090"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58ba0",
+      "opcode": "UIADD3.64",
+      "predicate": null,
+      "operands": "UR24, UR10, UR14, URZ",
+      "register_tokens": [
+        "UR24",
+        "UR10",
+        "UR14"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x20a0"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58bb0",
+      "opcode": "IADD.64",
+      "predicate": null,
+      "operands": "R42, R82, UR24",
+      "register_tokens": [
+        "R42",
+        "R82",
+        "UR24"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x20b0"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58bc0",
+      "opcode": "UIADD3.64",
+      "predicate": null,
+      "operands": "UR24, UR10, UR8, URZ",
+      "register_tokens": [
+        "UR24",
+        "UR10",
+        "UR8"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x20c0"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58bd0",
+      "opcode": "LD.E",
+      "predicate": null,
+      "operands": "R38, desc[UR4][R42.64+0x4200]",
+      "register_tokens": [
+        "R38",
+        "UR4",
+        "R42"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x20d0",
+      "generic_load_descriptor": {
+        "destination_register": 38,
+        "address_descriptor_uniform_register": 4,
+        "pointer_pair_first_register": 42,
+        "byte_offset": 16896,
+        "word_bytes": 4,
+        "pointer_binding_status": "64-bit register value/runtime shared-window base not reconstructed here"
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58be0",
+      "opcode": "IADD.64",
+      "predicate": null,
+      "operands": "R40, R84, UR24",
+      "register_tokens": [
+        "R40",
+        "R84",
+        "UR24"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x20e0"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58bf0",
+      "opcode": "LD.E",
+      "predicate": null,
+      "operands": "R37, desc[UR4][R42.64+0x4480]",
+      "register_tokens": [
+        "R37",
+        "UR4",
+        "R42"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x20f0",
+      "generic_load_descriptor": {
+        "destination_register": 37,
+        "address_descriptor_uniform_register": 4,
+        "pointer_pair_first_register": 42,
+        "byte_offset": 17536,
+        "word_bytes": 4,
+        "pointer_binding_status": "64-bit register value/runtime shared-window base not reconstructed here"
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58c00",
+      "opcode": "LD.E",
+      "predicate": null,
+      "operands": "R36, desc[UR4][R42.64+0x4210]",
+      "register_tokens": [
+        "R36",
+        "UR4",
+        "R42"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x2100",
+      "generic_load_descriptor": {
+        "destination_register": 36,
+        "address_descriptor_uniform_register": 4,
+        "pointer_pair_first_register": 42,
+        "byte_offset": 16912,
+        "word_bytes": 4,
+        "pointer_binding_status": "64-bit register value/runtime shared-window base not reconstructed here"
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58c10",
+      "opcode": "LD.E",
+      "predicate": null,
+      "operands": "R35, desc[UR4][R42.64+0x4490]",
+      "register_tokens": [
+        "R35",
+        "UR4",
+        "R42"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x2110",
+      "generic_load_descriptor": {
+        "destination_register": 35,
+        "address_descriptor_uniform_register": 4,
+        "pointer_pair_first_register": 42,
+        "byte_offset": 17552,
+        "word_bytes": 4,
+        "pointer_binding_status": "64-bit register value/runtime shared-window base not reconstructed here"
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58c20",
+      "opcode": "LD.E",
+      "predicate": null,
+      "operands": "R12, desc[UR4][R40.64]",
+      "register_tokens": [
+        "R12",
+        "UR4",
+        "R40"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x2120",
+      "generic_load_descriptor": {
+        "destination_register": 12,
+        "address_descriptor_uniform_register": 4,
+        "pointer_pair_first_register": 40,
+        "byte_offset": 0,
+        "word_bytes": 4,
+        "pointer_binding_status": "64-bit register value/runtime shared-window base not reconstructed here"
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58c30",
+      "opcode": "HMMA.16816.F32.BF16",
+      "predicate": null,
+      "operands": "R4, R20, R18, R4",
+      "register_tokens": [
+        "R4",
+        "R20",
+        "R18",
+        "R4"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x2130",
+      "matrix_operand_register_bases": {
+        "destination_C": 4,
+        "A": 20,
+        "B": 18,
+        "input_C": 4
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58c40",
+      "opcode": "LD.E",
+      "predicate": null,
+      "operands": "R13, desc[UR4][R40.64+0x1080]",
+      "register_tokens": [
+        "R13",
+        "UR4",
+        "R40"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x2140",
+      "generic_load_descriptor": {
+        "destination_register": 13,
+        "address_descriptor_uniform_register": 4,
+        "pointer_pair_first_register": 40,
+        "byte_offset": 4224,
+        "word_bytes": 4,
+        "pointer_binding_status": "64-bit register value/runtime shared-window base not reconstructed here"
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58c50",
+      "opcode": "IADD.64",
+      "predicate": null,
+      "operands": "R44, R88, UR20",
+      "register_tokens": [
+        "R44",
+        "R88",
+        "UR20"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x2150"
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58c60",
+      "opcode": "LD.E",
+      "predicate": null,
+      "operands": "R14, desc[UR4][R40.64+0x10]",
+      "register_tokens": [
+        "R14",
+        "UR4",
+        "R40"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x2160",
+      "generic_load_descriptor": {
+        "destination_register": 14,
+        "address_descriptor_uniform_register": 4,
+        "pointer_pair_first_register": 40,
+        "byte_offset": 16,
+        "word_bytes": 4,
+        "pointer_binding_status": "64-bit register value/runtime shared-window base not reconstructed here"
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58c70",
+      "opcode": "LD.E",
+      "predicate": null,
+      "operands": "R15, desc[UR4][R40.64+0x1090]",
+      "register_tokens": [
+        "R15",
+        "UR4",
+        "R40"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x2170",
+      "generic_load_descriptor": {
+        "destination_register": 15,
+        "address_descriptor_uniform_register": 4,
+        "pointer_pair_first_register": 40,
+        "byte_offset": 4240,
+        "word_bytes": 4,
+        "pointer_binding_status": "64-bit register value/runtime shared-window base not reconstructed here"
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58c80",
+      "opcode": "MOVM.16.MT88",
+      "predicate": null,
+      "operands": "R25, R0",
+      "register_tokens": [
+        "R25",
+        "R0"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x2180",
+      "matrix_transpose_registers": {
+        "destination": 25,
+        "source": 0,
+        "mapping_receipt": "functional_mapping_002/analysis.json:movm_post_to_pre_halfword_permutation"
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58c90",
+      "opcode": "HMMA.16816.F32.BF16",
+      "predicate": null,
+      "operands": "R8, R20, R24, R8",
+      "register_tokens": [
+        "R8",
+        "R20",
+        "R24",
+        "R8"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x2190",
+      "matrix_operand_register_bases": {
+        "destination_C": 8,
+        "A": 20,
+        "B": 24,
+        "input_C": 8
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58ca0",
+      "opcode": "MOVM.16.MT88",
+      "predicate": null,
+      "operands": "R2, R38",
+      "register_tokens": [
+        "R2",
+        "R38"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x21a0",
+      "matrix_transpose_registers": {
+        "destination": 2,
+        "source": 38,
+        "mapping_receipt": "functional_mapping_002/analysis.json:movm_post_to_pre_halfword_permutation"
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58cb0",
+      "opcode": "MOVM.16.MT88",
+      "predicate": null,
+      "operands": "R3, R37",
+      "register_tokens": [
+        "R3",
+        "R37"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x21b0",
+      "matrix_transpose_registers": {
+        "destination": 3,
+        "source": 37,
+        "mapping_receipt": "functional_mapping_002/analysis.json:movm_post_to_pre_halfword_permutation"
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58cc0",
+      "opcode": "MOVM.16.MT88",
+      "predicate": null,
+      "operands": "R16, R36",
+      "register_tokens": [
+        "R16",
+        "R36"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x21c0",
+      "matrix_transpose_registers": {
+        "destination": 16,
+        "source": 36,
+        "mapping_receipt": "functional_mapping_002/analysis.json:movm_post_to_pre_halfword_permutation"
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58cd0",
+      "opcode": "MOVM.16.MT88",
+      "predicate": null,
+      "operands": "R17, R35",
+      "register_tokens": [
+        "R17",
+        "R35"
+      ],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x21d0",
+      "matrix_transpose_registers": {
+        "destination": 17,
+        "source": 35,
+        "mapping_receipt": "functional_mapping_002/analysis.json:movm_post_to_pre_halfword_permutation"
+      }
+    },
+    {
+      "pc_absolute": "0x7fcfa3b58ce0",
+      "opcode": "BRA",
+      "predicate": "@P1",
+      "operands": "0x7fcfa3b57ee0",
+      "register_tokens": [],
+      "control_status": "not available in runtime source-page SASS; raw binary/control recovery required",
+      "pc_offset": "0x21e0"
+    }
+  ],
+  "layout_bindings": {
+    "scope": "Constructive shared-byte coordinates verified32768 coordinate checks; generic pointer-pair binding to these coordinates still needs replay",
+    "definitions": {
+      "warp": "0..3",
+      "lane": "0..31",
+      "slot": "0..1",
+      "k_step": "0..7",
+      "thread": "32*warp+lane"
+    },
+    "A_consumer_base": "8448*(warp%2)+256*slot+32*k_step+528*(lane//4)+4*(lane%4)",
+    "A_word_offsets": [
+      0,
+      4224,
+      16,
+      4240
+    ],
+    "B_consumer_base": "32*(warp//2)+10240*slot+1280*k_step+16896+80*(lane//4)+4*(lane%4)",
+    "B_word_offsets": [
+      0,
+      640,
+      16,
+      656
+    ],
+    "A_producer_base": "528*(thread//16)+16*(thread%16)+256*slot",
+    "A_producer_vector_offsets": [
+      0,
+      4224,
+      8448,
+      12672
+    ],
+    "B_producer_base": "16896+80*(thread//4)+16*(thread%4)+10240*slot",
+    "B_producer_vector_offsets": [
+      0,
+      2560,
+      5120,
+      7680
+    ],
+    "vector_bytes": 16,
+    "shared_footprint_bytes": 37376,
+    "sample_consumer_warp0_lane0_slot0_step0": {
+      "A": [
+        0,
+        4224,
+        16,
+        4240
+      ],
+      "B": [
+        16896,
+        17536,
+        16912,
+        17552
+      ]
+    }
+  },
+  "missing_before_native_execution": [
+    "Recover exact runtime UR descriptor/address-window semantics and 64-bit pointer-pair values at entry to region.",
+    "Replay address-producing IADD3/LEA/ULEA and branch predicates, binding slot and k_step recurrence to dynamic PCs.",
+    "Obtain native binary words/control annotations; source-page SASS lacks producer/read barriers, wait masks and issue delays.",
+    "Connect plain generic shared-window LD.E return behavior to measured shared-service model; do not substitute LDSM path.",
+    "Determine HMMA completion timing independently; provisional16cycles is not measured hardware latency.",
+    "Validate integrated dynamic operands and output against actual selected kernel on held-out inputs."
+  ],
+  "hardware_parameter_closures": 0,
+  "timing_claims": false
+}

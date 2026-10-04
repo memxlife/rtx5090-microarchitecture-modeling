@@ -1,0 +1,45 @@
+{
+  "prediction_sha256": "28a94927f1be4c83db97abf624e8491c4e377c46c179b17e51fa9bb3e121fedb",
+  "frozen_predictions_unchanged": true,
+  "coefficient_calibration_cases": 1,
+  "held_out_shapes": 2,
+  "scope": "Effective interaction approximation; not an independently identified physical overlap mechanism.",
+  "cases": [
+    {
+      "shape": [
+        1920,
+        1920,
+        3072
+      ],
+      "measured_median_us": 472.24319599999995,
+      "old_prediction_us": 493.0026669,
+      "candidate_prediction_us": 450.4550742624543,
+      "old_signed_error_percent": 4.3959280040108935,
+      "candidate_signed_error_percent": -4.613750271490557,
+      "all_outputs_correct": true,
+      "correctness_checks": 45,
+      "sample_semantics": "Nine averages of five CUDA event timings; not 45 independent raw latency samples.",
+      "raw_path": "studies/rtx5090_gemm_milp/rtl/parameter_sweep/initial_validation_20261003_222837/interaction_confirmation/case_1920_1920.json"
+    },
+    {
+      "shape": [
+        2048,
+        2112,
+        3072
+      ],
+      "measured_median_us": 532.4671979999999,
+      "old_prediction_us": 561.040836592,
+      "candidate_prediction_us": 512.6685795489481,
+      "old_signed_error_percent": 5.366272081984676,
+      "candidate_signed_error_percent": -3.718279459357773,
+      "all_outputs_correct": true,
+      "correctness_checks": 45,
+      "sample_semantics": "Nine averages of five CUDA event timings; not 45 independent raw latency samples.",
+      "raw_path": "studies/rtx5090_gemm_milp/rtl/parameter_sweep/initial_validation_20261003_222837/interaction_confirmation/case_2048_2112.json"
+    }
+  ],
+  "all_passed_numerical": true,
+  "both_candidate_absolute_error_at_most_5_percent": true,
+  "no_refit_after_results": true,
+  "physical_parameter_closures": 0
+}

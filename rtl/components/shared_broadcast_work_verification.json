@@ -1,0 +1,60 @@
+{
+  "all_passed": true,
+  "source_sha256": {
+    "shared_broadcast_work.sv": "94ed30c251d9a1d642f543584d0335170ad3a70e0cb7ab937dd0330a2dcc732b",
+    "shared_broadcast_work_tb.sv": "d518c51180e78037634830c16cd502b49b1cb59842841c71e2219af4a14eea21"
+  },
+  "python_source_sha256": "7aef48f2d5aedb837b83242909c39e225aee8af608217b4464d3493bad297b7c",
+  "measured_development_masks": 5,
+  "measured_confirmation_masks": 5,
+  "cases": [
+    {
+      "mask": "0xff",
+      "measured_packages": 1
+    },
+    {
+      "mask": "0x11111111",
+      "measured_packages": 2
+    },
+    {
+      "mask": "0xffff",
+      "measured_packages": 1
+    },
+    {
+      "mask": "0x55555555",
+      "measured_packages": 2
+    },
+    {
+      "mask": "0xffffffff",
+      "measured_packages": 2
+    },
+    {
+      "mask": "0xff000000",
+      "measured_packages": 1
+    },
+    {
+      "mask": "0xffff0000",
+      "measured_packages": 1
+    },
+    {
+      "mask": "0xffff00",
+      "measured_packages": 2
+    },
+    {
+      "mask": "0x80000001",
+      "measured_packages": 2
+    },
+    {
+      "mask": "0x80000000",
+      "measured_packages": 1
+    }
+  ],
+  "boundary_checks": [
+    "zero active lanes",
+    "invalid common address alignment"
+  ],
+  "output": "PASS:10 measured masks, empty mask and invalid alignment\n- rtl/components/shared_broadcast_work_tb.sv:16: Verilog $finish\n- S i m u l a t i o n   R e p o r t: Verilator 5.050 2026-07-01\n- Verilator: $finish at 12ps; walltime 0.000 s; speed 300.001 ns/s\n- Verilator: cpu 0.000 s on 1 threads; allocated 2 MB\n",
+  "scope": "Naturally aligned same-vector LDS128 read service work only",
+  "intrinsic_timing_parameters_identified": 0,
+  "full_gpu_integrated": false
+}

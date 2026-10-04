@@ -1,0 +1,31 @@
+{
+  "source_sha256": "fe3df71c844c01989960f71503714786419d7d5902dd70b5a43f38103cdb33f2",
+  "receipt": "gemm_tile_verification.json",
+  "receipt_source_hashes_match": true,
+  "inline_source_parity": true,
+  "functional_review_defects": [],
+  "reviewed": [
+    "actual staging completion before matrix",
+    "actual C recurrence before next stage",
+    "one store outstanding and matching ack before next store",
+    "final ack precedes launch completion",
+    "reset/provider cancellation",
+    "nonoverlapping address spans and replay input stability"
+  ],
+  "human_first_review": "Purpose, concrete packed layout, units, interfaces, transitions and bounded verification reviewed in order.",
+  "undergraduate_review": "Defined STAGES,K,r,c,s and byte offsets; explicit formula gives physical layout; no hardware timing or broad numerical claim.",
+  "verification_receipt_sha256": "0ecde89222bd3cc7ed4c0783e36ec65838893ff09d2ee24f128f5eb7856c4801",
+  "verified_source_sha256": {
+    "discovery_rounds/ldsm_mapping_003/ldsm_x4_layout.sv": "23a1d35298e0bdac49b0d8f9a65e313032affca08f4a0eaaf9483b4c3b2bf47c",
+    "discovery_rounds/functional_mapping_002/native_bf16_layout.sv": "63658e6b59f2d124cab3a73159d3219c3d350616cec99bf72fab58afc42df76b",
+    "components/sector_read_cache.sv": "f27a1623b4a5691fc34db16bf277938a658a799af0b15d79ac5036c559060d05",
+    "numerical/numerical_matrix_pipeline.sv": "20d64fa7c297f0a4cf83a68f899a199330cc7907f136f031d1f5b030d4a010b4",
+    "numerical/native_bf16_adapter.sv": "ca05d62325e04c3ab0d982a6d0755355903f331799f83a396d512b866de58d6d",
+    "numerical/shared_matrix_pipeline.sv": "535f3405d1d2b27ff0c3cb0b789283565f2e7dd5d9ff9376e40f3fcdb677a62e",
+    "numerical/cached_shared_matrix_pipeline.sv": "da5a9f2a440c631262600eb0f428bb13703fa2ea1df5df38b7c0db3654793c42",
+    "numerical/gemm_tile_controller.sv": "fe3df71c844c01989960f71503714786419d7d5902dd70b5a43f38103cdb33f2",
+    "numerical/gemm_tile_tb.sv": "d960788cddb208df6ab800aefef3a5fb4827a5858d4feb2c3bb45cca860d4c8c",
+    "numerical/bf16_reference.cpp": "0da9f3da8194c8d832b60ef29028a456397c76f9b0edc2b6e45c1ef69e14e1d3"
+  },
+  "per_launch_cycle_boundary": "accepted launch to first done edge; excludes testbench hold"
+}

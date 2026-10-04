@@ -1,0 +1,57 @@
+{
+  "all135phaseoutputs_correct": true,
+  "shape": [
+    2048,
+    2112,
+    1536
+  ],
+  "warm": 1,
+  "full_grid": true,
+  "tile": [
+    32,
+    32,
+    32
+  ],
+  "native_resources_matched": true,
+  "phase_results": [
+    {
+      "mode": 0,
+      "median_us": 15.1424,
+      "registers": 40,
+      "resident_ctas": 11,
+      "local_bytes": 0,
+      "correct": true,
+      "output_checks": 45
+    },
+    {
+      "mode": 1,
+      "median_us": 177.74079700000001,
+      "registers": 40,
+      "resident_ctas": 11,
+      "local_bytes": 0,
+      "correct": true,
+      "output_checks": 45
+    },
+    {
+      "mode": 2,
+      "median_us": 139.238396,
+      "registers": 40,
+      "resident_ctas": 11,
+      "local_bytes": 0,
+      "correct": true,
+      "output_checks": 45
+    }
+  ],
+  "measured_phase_composition_us": 301.836793,
+  "measured_full_kernel_us": 277.2672,
+  "measured_composition_relative_overestimate_percent": 8.861341334279714,
+  "frozen_predicted_us": 293.382651592,
+  "frozen_prediction_relative_overestimate_percent": 5.812245946148686,
+  "frozen_vs_measured_composition_relative_percent": -2.800898235093563,
+  "combined_execution_difference_us": 24.569592999999998,
+  "combined_difference_per48stage_us": 0.5118665208333333,
+  "interpretation": "Phasecomposition itself overestimates fullkernel evenwithmatchedoccupancy. Replacing coefficients alone cannotresolve. Combinedexecution/pathdifferences mustbemodeled orbounded. Overlap/scheduling/extraphaseinstructions arecompetingcauses, notseparatelyproved.",
+  "no_new_fit": true,
+  "source_sha256": "8eb6b86a70158d9091f4cc939bf50b5be43ccc0a64a4fdc0002e78b854331b66",
+  "telemetry_limit": "Postrunqueryfoundidle35MHz/810MHz,notanexecutionfrequency; nofrequencycausalclaim"
+}

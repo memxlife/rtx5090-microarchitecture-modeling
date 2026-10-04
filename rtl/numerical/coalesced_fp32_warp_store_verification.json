@@ -1,0 +1,45 @@
+{
+  "all_passed": true,
+  "checked_memory_words": 20480,
+  "warp_cases": 5,
+  "unique_sector_counts": [
+    4,
+    8,
+    32,
+    1,
+    0
+  ],
+  "oracle": "Direct active-lane updates to a separate global word array using original addresses and payloads, independent of sector grouping, masks and packet extraction; untouched words checked too.",
+  "checks": [
+    {
+      "name": "normal",
+      "passed": true,
+      "stdout": "COALESCED_FP32_STORE_PASS checked_words=20480 cases=5 reset=1\n- rtl/numerical/coalesced_fp32_warp_store_tb.sv:60: Verilog $finish\n- S i m u l a t i o n   R e p o r t: Verilator 5.050 2026-07-01\n- Verilator: $finish at 4ns; walltime 0.001 s; speed 4.553 us/s\n- Verilator: cpu 0.001 s on 1 threads; allocated 2 MB\n"
+    },
+    {
+      "name": "alignment",
+      "passed": true,
+      "stdout": "[15] %Fatal: coalesced_fp32_warp_store.sv:50: Assertion failed in coalesced_fp32_warp_store_tb.dut: Unaligned active FP32 store address\n%Error: rtl/numerical/coalesced_fp32_warp_store.sv:50: Verilog $stop\nAborting...\n"
+    },
+    {
+      "name": "duplicate_policy",
+      "passed": true,
+      "stdout": "[15] %Fatal: coalesced_fp32_warp_store.sv:51: Assertion failed in coalesced_fp32_warp_store_tb.dut: Duplicate active FP32 store address\n%Error: rtl/numerical/coalesced_fp32_warp_store.sv:51: Verilog $stop\nAborting...\n"
+    },
+    {
+      "name": "completion_identity",
+      "passed": true,
+      "stdout": "[125] %Fatal: coalesced_fp32_warp_store.sv:60: Assertion failed in coalesced_fp32_warp_store_tb.dut: Warp store acknowledgement identity mismatch\n%Error: rtl/numerical/coalesced_fp32_warp_store.sv:60: Verilog $stop\nAborting...\n"
+    }
+  ],
+  "scope": "Functional grouping into aligned32B masked word writes; serial sector requests and one outstanding acknowledgement are explicit simulation choices.",
+  "duplicate_policy": "Any duplicate active byte address rejected, including equal values; no-race policy, not a GPU hardware restriction.",
+  "reset_contract": "Provider flushes pre-reset requests/acks; already committed words are not rolled back.",
+  "identity": "External full32bit ID preserved; internal ID=external XOR sector ordinal, injective within one inflight warp.",
+  "new_identified_registry_fields": 0,
+  "timing_calibrated": false,
+  "source_sha256": {
+    "coalesced_fp32_warp_store.sv": "5c5da8187bef4824d1aa8cf17707a522e6d64062d2b44997fd3502dcde2393b8",
+    "coalesced_fp32_warp_store_tb.sv": "3e07e0305060272b2caa97fbc70f70dbf39d04144e25f7295ca6999ec4585e39"
+  }
+}

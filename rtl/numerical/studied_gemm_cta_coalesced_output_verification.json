@@ -1,0 +1,181 @@
+{
+  "all_passed": true,
+  "checked_output_words": 5120,
+  "checks": [
+    {
+      "BM": 32,
+      "BN": 32,
+      "K": 64,
+      "backing_delay_synthetic": 2,
+      "launches": 2,
+      "launch_metrics": [
+        {
+          "launch_id": 101,
+          "completion_cycles": 4425,
+          "logical_loads": 128,
+          "shared_commits": 128,
+          "returned_sectors": 256
+        },
+        {
+          "launch_id": 102,
+          "completion_cycles": 3392,
+          "logical_loads": 128,
+          "shared_commits": 128,
+          "returned_sectors": 256
+        }
+      ],
+      "output_metrics": [
+        {
+          "launch_id": 101,
+          "packets": 128,
+          "packet_acks": 128
+        },
+        {
+          "launch_id": 102,
+          "packets": 128,
+          "packet_acks": 128
+        }
+      ],
+      "checked_words": 2048,
+      "committed_stores": 2048,
+      "acknowledged_stores": 2048,
+      "backing_sector_requests": 256,
+      "expected_cold_unique_sectors": 256,
+      "testbench_total_cycles": 7838,
+      "passed": true,
+      "stdout": "CTA_LAUNCH_METRICS id=101 completion_cycles=4425 logical_loads=128 shared_commits=128 returned_sectors=256\nCTA_OUTPUT_METRICS id=101 packets=128 packet_acks=128\nCTA_LAUNCH_METRICS id=102 completion_cycles=3392 logical_loads=128 shared_commits=128 returned_sectors=256\nCTA_OUTPUT_METRICS id=102 packets=128 packet_acks=128\nSTUDIED_CTA_PASS BM=32 BN=32 K=64 checked_words=2048 launches=2 stores=2048 acks=2048 backing_requests=256 cycles=7838 read_delay=2\n- rtl/numerical/studied_gemm_cta_tb.sv:189: Verilog $finish\n- S i m u l a t i o n   R e p o r t: Verilator 5.050 2026-07-01\n- Verilator: $finish at 784ns; walltime 0.048 s; speed 16.500 us/s\n- Verilator: cpu 0.047 s on 1 threads; allocated 3 MB\n"
+    },
+    {
+      "rejected": "wrongbacking",
+      "passed": true,
+      "stdout": "[2000] %Fatal: sector_read_cache.sv:59: Assertion failed in studied_gemm_cta_tb.dut.warp_load_path.cache.cache: Cache backing completion identity mismatch\n%Error: rtl/components/sector_read_cache.sv:59: Verilog $stop\nAborting...\n"
+    },
+    {
+      "rejected": "wrongstore",
+      "passed": true,
+      "stdout": "[329000] %Fatal: coalesced_fp32_warp_store.sv:60: Assertion failed in studied_gemm_cta_tb.dut.warp_store_path.output_path: Warp store acknowledgement identity mismatch\n%Error: rtl/numerical/coalesced_fp32_warp_store.sv:60: Verilog $stop\nAborting...\n"
+    },
+    {
+      "BM": 32,
+      "BN": 32,
+      "K": 64,
+      "backing_delay_synthetic": 13,
+      "launches": 2,
+      "launch_metrics": [
+        {
+          "launch_id": 101,
+          "completion_cycles": 7485,
+          "logical_loads": 128,
+          "shared_commits": 128,
+          "returned_sectors": 256
+        },
+        {
+          "launch_id": 102,
+          "completion_cycles": 3392,
+          "logical_loads": 128,
+          "shared_commits": 128,
+          "returned_sectors": 256
+        }
+      ],
+      "output_metrics": [
+        {
+          "launch_id": 101,
+          "packets": 128,
+          "packet_acks": 128
+        },
+        {
+          "launch_id": 102,
+          "packets": 128,
+          "packet_acks": 128
+        }
+      ],
+      "checked_words": 2048,
+      "committed_stores": 2048,
+      "acknowledged_stores": 2048,
+      "backing_sector_requests": 256,
+      "expected_cold_unique_sectors": 256,
+      "testbench_total_cycles": 10898,
+      "passed": true,
+      "stdout": "CTA_LAUNCH_METRICS id=101 completion_cycles=7485 logical_loads=128 shared_commits=128 returned_sectors=256\nCTA_OUTPUT_METRICS id=101 packets=128 packet_acks=128\nCTA_LAUNCH_METRICS id=102 completion_cycles=3392 logical_loads=128 shared_commits=128 returned_sectors=256\nCTA_OUTPUT_METRICS id=102 packets=128 packet_acks=128\nSTUDIED_CTA_PASS BM=32 BN=32 K=64 checked_words=2048 launches=2 stores=2048 acks=2048 backing_requests=256 cycles=10898 read_delay=13\n- rtl/numerical/studied_gemm_cta_tb.sv:189: Verilog $finish\n- S i m u l a t i o n   R e p o r t: Verilator 5.050 2026-07-01\n- Verilator: $finish at 1us; walltime 0.060 s; speed 18.222 us/s\n- Verilator: cpu 0.060 s on 1 threads; allocated 3 MB\n"
+    },
+    {
+      "BM": 32,
+      "BN": 32,
+      "K": 1536,
+      "backing_delay_synthetic": 2,
+      "launches": 1,
+      "launch_metrics": [
+        {
+          "launch_id": 101,
+          "completion_cycles": 79701,
+          "logical_loads": 3072,
+          "shared_commits": 3072,
+          "returned_sectors": 6144
+        }
+      ],
+      "output_metrics": [
+        {
+          "launch_id": 101,
+          "packets": 128,
+          "packet_acks": 128
+        }
+      ],
+      "checked_words": 1024,
+      "committed_stores": 1024,
+      "acknowledged_stores": 1024,
+      "backing_sector_requests": 6144,
+      "expected_cold_unique_sectors": 6144,
+      "testbench_total_cycles": 79718,
+      "passed": true,
+      "stdout": "CTA_LAUNCH_METRICS id=101 completion_cycles=79701 logical_loads=3072 shared_commits=3072 returned_sectors=6144\nCTA_OUTPUT_METRICS id=101 packets=128 packet_acks=128\nSTUDIED_CTA_PASS BM=32 BN=32 K=1536 checked_words=1024 launches=1 stores=1024 acks=1024 backing_requests=6144 cycles=79718 read_delay=2\n- rtl/numerical/studied_gemm_cta_tb.sv:189: Verilog $finish\n- S i m u l a t i o n   R e p o r t: Verilator 5.050 2026-07-01\n- Verilator: $finish at 8us; walltime 0.336 s; speed 23.744 us/s\n- Verilator: cpu 0.335 s on 1 threads; allocated 3 MB\n"
+    }
+  ],
+  "source_sha256": {
+    "discovery_rounds/functional_mapping_002/native_bf16_layout.sv": "63658e6b59f2d124cab3a73159d3219c3d350616cec99bf72fab58afc42df76b",
+    "numerical/library_movm_permutation.sv": "eb6d60b41d421751b14a0bff080d079bf0f0be82b185adbedbf2ad1b2df0e17e",
+    "numerical/numerical_matrix_pipeline.sv": "20d64fa7c297f0a4cf83a68f899a199330cc7907f136f031d1f5b030d4a010b4",
+    "numerical/native_bf16_adapter.sv": "ca05d62325e04c3ab0d982a6d0755355903f331799f83a396d512b866de58d6d",
+    "components/warp_shared_read_service.sv": "82df6598d987c0df1c5be4db8ec504951f2d958783390d7b458cbde6b904500b",
+    "numerical/generic_shared_matrix_pipeline.sv": "79dec191479c459e0c5c35e825e7e283b7642bc1873487da1758b33ba9d9331d",
+    "numerical/timed_generic_shared_matrix_pipeline.sv": "dc174e58303f169397d9baffb6cf5a1461c32904402d45fa2b21f73a29c8d7c4",
+    "numerical/studied_gemm_matrix_pipeline.sv": "71fca0fe0793ad133f18cd9c6c4887dbaaa538aba951284bb9ab68c678ce87c6",
+    "components/sector_read_cache.sv": "45c49166f1cf330b3c2ae4b41f5af0d96655d3a6d8cbeb5f09452e21c3592298",
+    "discovery_rounds/native_barrier_015/native_control_decode.sv": "8c50509b7a80eeed376e83a2078ec8f1b7da30f7cea64d48c8f5248569315cdb",
+    "discovery_rounds/native_barrier_015/producer_barrier_tracker.sv": "a07e60e6d6596cd2aec665367a308b358e2bad05196096c6d68ef636e57d42ad",
+    "components/decoded_native_issue_gate.sv": "9b3f3e8c82c40af5d73839b64dfc1279778f53fc95044cfe55cf0ce09625b427",
+    "numerical/native_studied_stage_schedule.sv": "c5a8c42153dd967e71096ea0f6312927f35e89f1fb41b682b61f45d898a1f56c",
+    "numerical/native_movm_word_pipeline.sv": "3ef390ba095583072d92165d812f129a83e4c30d90bd431b2b702221dec66108",
+    "numerical/native_hmma16816_adapter.sv": "b7b24dc0c6ea8e2acd4dd48b309f5b23804b167f3d4aa7a35af6abd5d6dce18d",
+    "numerical/native_studied_stage_pipeline.sv": "f9086bee4fbace2e499e10ca8bb536622737c41b8185b233d27fa9af6e8b2081",
+    "numerical/coalesced_u16_warp_load.sv": "473859bae9e27d6bdaec22c6d24189f7494e027e318a9cab1a745541b72b0d43",
+    "numerical/studied_gemm_cta_controller.sv": "549ef9376a1ec6acd451ccb49591d156d90f976d7969b313bd1f093d8030bcc0",
+    "numerical/studied_gemm_cta_tb.sv": "dc6914ed481abef7d832f5591b7c05aaa228438807677302539d303cc0654412",
+    "numerical/bf16_reference.cpp": "0da9f3da8194c8d832b60ef29028a456397c76f9b0edc2b6e45c1ef69e14e1d3",
+    "numerical/coalesced_fp32_warp_store.sv": "5c5da8187bef4824d1aa8cf17707a522e6d64062d2b44997fd3502dcde2393b8"
+  },
+  "oracle": "Independent full dot product: original A17/B13 integer patterns with global row-major strides, divide integer sum by256 to exact FP32 bits.",
+  "scope": "First CTA; coalesced 32-lane U16 global requests, actual sector returns, atomic masked shared writes, native operand window and acknowledged FP32 stores. Output stores are masked32-byte packets, individually checked and acknowledged before done.",
+  "protocol_checks": [
+    "initial outstanding read canceled by reset and provider flush",
+    "read acceptance backpressure",
+    "variable backing response delays",
+    "store request backpressure and stable payload",
+    "store completion delay",
+    "all distinct output coordinates verified",
+    "all store acknowledgments precede held launch completion",
+    "launch replay"
+  ],
+  "traffic_count_contract": "For these aligned row-major first-CTA fixtures each input element is loaded once; cold unique sectors=2*K*(BM+BN)/32. The K64 replay fits the declared cache and its combined requests equal the cold count. No native warp-coalescing/concurrency claim. Coalesced mode groups lanes by unique sectors; sectors serviced serially and vector shared commits idealized, without a physical throughput claim.",
+  "launch_cycle_boundary": "completion_cycles counts rising edges from accepted launch to first observed done, after all output acknowledgments. Excludes reset and held-done overhead; synthetic provider delays and scheduling remain included. Not calibrated hardware runtime.",
+  "cycle_metric_boundary": "testbench_total_cycles includes initial canceled launch/reset, launch handshakes and held done; not kernel execution time or hardware runtime.",
+  "runner_sha256": "e6cb80f8d09626896ea99093036ddb439448ad81905093a9209e7aa6b4eec2ec",
+  "timing_calibrated": false,
+  "full_gpu_integrated": false,
+  "native_schedule_implemented": false,
+  "native_operand_window_enabled": true,
+  "coalesced_staging_enabled": true,
+  "coalesced_output_enabled": true,
+  "native_operand_window_scope": "OnlyBM32BN32BK32;40originalPCs with decodedcontrols,16sharedloads,8MOVM,4HMMA per fragment/stage. Address ALU instructions are precomputed control-only operations; notfullnative kernel replay.",
+  "proof_registry_fields_closed": 0,
+  "remaining": "Serialized staging and service assumptions; no full-grid/multiSM scheduling, physical latency calibration or hardware timing validation."
+}

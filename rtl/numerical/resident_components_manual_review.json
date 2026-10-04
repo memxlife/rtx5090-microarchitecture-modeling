@@ -1,0 +1,47 @@
+{
+  "accepted": true,
+  "changed_sections": [
+    "4.44",
+    "4.45"
+  ],
+  "documents": [
+    "rtl_microarchitecture_spec.md",
+    "README.md"
+  ],
+  "inline_source_parity": {
+    "numerical/resident_native_stage_engine.sv": true,
+    "numerical/resident_stage_admission.sv": true,
+    "numerical/resident_u16_warp_load.sv": true
+  },
+  "reviewed_current_receipts": [
+    "numerical/resident_native_stage_verification.json",
+    "numerical/resident_u16_verification.json"
+  ],
+  "receipt_source_hashes_current": true,
+  "human_first_review": "Explains independent contexts and common finite services, then atomic reservation, held completion, epoch ownership and stage-lifetime limitation.",
+  "reader_review": "Defines request demand separately from live totals. Ready-qualified internal strobe requires valid-independent engine readiness. Compute stage and loader are explicitly not connected fullCTAs.",
+  "reader_language_lint": "passed",
+  "quantitative_review": {
+    "stage_output_words": 8192,
+    "loader_lane_values": 128,
+    "request_register_word_demand": 5120,
+    "request_shared_byte_demand": 9216,
+    "contexts": 2,
+    "shared_read_instances": 1,
+    "shared_MOVM_instances": 1,
+    "shared_HMMA_instances": 1,
+    "loader_cache_instances": 1,
+    "new_physical_parameter_closures": 0
+  },
+  "timing_calibrated": false,
+  "boundary": "Partial preloaded stage lifetimes only. FullCTA may not retire at intermediate stage acknowledgment; loader remains a separate component.",
+  "document_sha256": {
+    "rtl_microarchitecture_spec.md": "b8587abdbe92c1ae7c165db62acb3321fe83c7c9e4e698692da0321e4c5547cf",
+    "README.md": "d5cf97901c29d439deba0e8b824b5086f3285408ed63be783d73e7d860e09a91"
+  },
+  "source_sha256": {
+    "numerical/resident_native_stage_engine.sv": "dd696ad6776a16b8591f011d51a53c90b816b6b0c7cdbefb5ae3e90a2bf3c641",
+    "numerical/resident_stage_admission.sv": "bfc76513d2415c16ec38064f12f9d3d00a15ea7958e61a899b534dac10065935",
+    "numerical/resident_u16_warp_load.sv": "0cbf01fb3926115579cbbc82e9104beceae21261586eadd44de6c215d3b7e318"
+  }
+}

@@ -1,0 +1,1329 @@
+{
+  "counting_convention": "One distinct unresolved specification field per entry; per-instruction-class or per-queue-family vectors count as one field. Capacity/mapping/policy/functional behavior are functional; latency/frequency/service rate are timing. Implementation-only gaps and already established capacities are excluded.",
+  "scope": "Current GEMM-path hardware specification; not all possible RTX internals. Counts may increase when broad fields are decomposed or new mechanisms are discovered.",
+  "sources": [
+    "rtl_microarchitecture_spec.md",
+    "quantitative_microarchitecture.md",
+    "component_specification.md"
+  ],
+  "groups": [
+    {
+      "component": "Block allocation and dispatch",
+      "functional": [
+        {
+          "id": "F001",
+          "name": "Register allocation granularity",
+          "status": "identified",
+          "value": {
+            "unit": "32-bit register words per warp allocation quantum",
+            "quantum": 256,
+            "formula": "round_up(registers_per_thread * warp_size, 256) per warp"
+          },
+          "scope": "NVIDIA CUDA12.8.93 occupancy allocator for computeMajor12, ordinary CTA allocation; not register-bank geometry",
+          "evidence": {
+            "path": "parameter_sweep/cuda_occupancy_header.txt",
+            "sha256": "d076afacc2165c6c48ba36aaef6897df5fbbdd9a6bc7458161d8a59f764d3f6c",
+            "lines": [
+              671,
+              683,
+              1484,
+              1485,
+              1494
+            ],
+            "round": "source_sweep_005",
+            "kind": "official_toolkit_source"
+          }
+        },
+        {
+          "id": "F002",
+          "name": "Shared allocation granularity",
+          "status": "identified",
+          "value": {
+            "unit": "bytes per CTA allocation quantum",
+            "quantum": 128,
+            "formula": "round_up(static_shared + reserved_shared_per_block + dynamic_shared, 128)"
+          },
+          "scope": "NVIDIA CUDA12.8.93 occupancy allocator for computeMajor12; not physical SRAM row size",
+          "evidence": {
+            "path": "parameter_sweep/cuda_occupancy_header.txt",
+            "sha256": "d076afacc2165c6c48ba36aaef6897df5fbbdd9a6bc7458161d8a59f764d3f6c",
+            "lines": [
+              613,
+              627,
+              1368,
+              1370
+            ],
+            "round": "source_sweep_005",
+            "kind": "official_toolkit_source"
+          }
+        },
+        {
+          "id": "F003",
+          "name": "Block placement policy",
+          "status": "unidentified"
+        },
+        {
+          "id": "F004",
+          "name": "Dispatch arbitration policy",
+          "status": "unidentified"
+        }
+      ],
+      "timing": [
+        {
+          "id": "T001",
+          "name": "Block admission delay",
+          "status": "unidentified"
+        },
+        {
+          "id": "T002",
+          "name": "Dispatch delay",
+          "status": "unidentified"
+        },
+        {
+          "id": "T003",
+          "name": "Allocation release delay",
+          "status": "unidentified"
+        }
+      ]
+    },
+    {
+      "component": "Instruction fetch and control",
+      "functional": [
+        {
+          "id": "F005",
+          "name": "Instruction-cache capacity",
+          "status": "unidentified"
+        },
+        {
+          "id": "F006",
+          "name": "Instruction-cache sets",
+          "status": "unidentified"
+        },
+        {
+          "id": "F007",
+          "name": "Instruction-cache associativity",
+          "status": "unidentified"
+        },
+        {
+          "id": "F008",
+          "name": "Instruction-cache mapping",
+          "status": "unidentified"
+        },
+        {
+          "id": "F009",
+          "name": "Instruction-cache replacement policy",
+          "status": "unidentified"
+        },
+        {
+          "id": "F010",
+          "name": "Native decoding rules",
+          "status": "partially_identified",
+          "value": {
+            "signature_low_bits_15_0": "0x783b",
+            "destination_low_bits": "23:16",
+            "address_low_bits": "31:24",
+            "width_high_bits": "9:8: 0/1/2 encode 1/2/4 words",
+            "transpose_high_bit": 14
+          },
+          "scope": "Eight observed sm120 direct-register, unpredicated LDSM descriptors; no general native decoder",
+          "evidence": {
+            "path": "components/native_ldsm_decode_verification.json",
+            "round": "hardware_sweep_005",
+            "kind": "native_encoding_and_executable_decoder"
+          },
+          "remaining": "Predicates, address offsets, scheduling controls, other native instructions and unobserved descriptor combinations.",
+          "sprint_decoder_receipts": [
+            "discovery_rounds/shared_decoder_010/analysis.json",
+            "discovery_rounds/generic_decoder_011/analysis.json"
+          ]
+        },
+        {
+          "id": "F011",
+          "name": "Divergence handling",
+          "status": "partially_identified",
+          "value": "Warp paths execute with nonparticipating lanes disabled; cc7.0+ maintains thread-level execution state and allows subwarp scheduling.",
+          "scope": "Documented contract; Private selection, divergent issue and scheduling rules remain unknown.",
+          "evidence": {
+            "url": "https://docs.nvidia.com/cuda/cuda-programming-guide/03-advanced/advanced-kernel-programming.html#independent-thread-scheduling",
+            "round": "source_sweep_005",
+            "kind": "official_documentation"
+          },
+          "remaining": "Private selection, divergent issue and scheduling rules remain unknown."
+        },
+        {
+          "id": "F012",
+          "name": "Reconvergence handling",
+          "status": "partially_identified",
+          "value": "cc7.0+ permits subwarp reconvergence; the schedule optimizer groups active threads from a warp.",
+          "scope": "Documented contract; No published optimizer algorithm, control-state capacity or native reconvergence implementation.",
+          "evidence": {
+            "url": "https://docs.nvidia.com/cuda/cuda-programming-guide/03-advanced/advanced-kernel-programming.html#independent-thread-scheduling",
+            "round": "source_sweep_005",
+            "kind": "official_documentation"
+          },
+          "remaining": "No published optimizer algorithm, control-state capacity or native reconvergence implementation."
+        }
+      ],
+      "timing": [
+        {
+          "id": "T004",
+          "name": "Instruction fetch latency",
+          "status": "unidentified"
+        },
+        {
+          "id": "T005",
+          "name": "Instruction fetch bandwidth",
+          "status": "unidentified"
+        },
+        {
+          "id": "T006",
+          "name": "Decode delay",
+          "status": "unidentified"
+        }
+      ]
+    },
+    {
+      "component": "Warp scheduler",
+      "functional": [
+        {
+          "id": "F013",
+          "name": "Scheduler partitions per SM",
+          "status": "identified",
+          "value": 4,
+          "scope": "RTX SM architectural scheduler partitions",
+          "evidence": {
+            "round": "source_sweep_001",
+            "kind": "official_documentation",
+            "url": "https://images.nvidia.com/aem-dam/Solutions/geforce/blackwell/nvidia-rtx-blackwell-gpu-architecture.pdf#page=11"
+          }
+        },
+        {
+          "id": "F014",
+          "name": "Warp-to-partition assignment",
+          "status": "unidentified"
+        },
+        {
+          "id": "F015",
+          "name": "Issue slot count",
+          "status": "identified",
+          "value": {
+            "max_instructions_per_scheduler_per_cycle": 1,
+            "schedulers_per_SM": 4,
+            "max_instructions_per_SM_per_cycle": 4
+          },
+          "scope": "RTX5090 Nsight device attributes, CUDA12.8/Nsight reports: advertised native-instruction issue capacity perwarp-scheduler; private micro-op dispatch ports/latencies are separate fields.",
+          "evidence": {
+            "path": "discovery_rounds/literature_sweep_036.json",
+            "kind": "official_docs_and_three_queried_reports"
+          }
+        },
+        {
+          "id": "F016",
+          "name": "Multiple-issue compatibility rules",
+          "status": "partially_identified",
+          "value": "Same scheduler admits atmostone nativeinstruction perclock; no two-instruction same-scheduler issuepair. Cross-scheduler mixedclass resourceinteraction remainsunknown.",
+          "scope": "Direct maxIPC=1 issueconstraint; broader simultaneous mixedpipeline compatibility notclosed.",
+          "evidence": {
+            "path": "discovery_rounds/literature_sweep_036.json",
+            "kind": "official_docs_and_queried_reports"
+          }
+        },
+        {
+          "id": "F017",
+          "name": "Instruction-class routing",
+          "status": "partially_identified",
+          "value": {
+            "native_generic_scalar_shared_routing": "Both plain LD.E and LD.E.STRONG.SYS shared-window pointers use shared service, not global sectors"
+          },
+          "scope": "CUDA12.8.93 sm120 scalar full-warp aligned dependent read, strides1..32; other instruction classes and private address tagging unknown",
+          "evidence": {
+            "path": "parameter_sweep/generic_shared/analysis.json",
+            "round": "hardware_sweep_006",
+            "kind": "hardware"
+          },
+          "additional_evidence": [
+            {
+              "path": "parameter_sweep/generic_shared_banks/analysis.json",
+              "confirmation": "parameter_sweep/generic_shared_plain/analysis.json",
+              "finding": "Plain and volatile generic shared LD and explicitLDS use scalar bankwork;2SMcycles per extra package. Compoundbasecost notintrinsic."
+            }
+          ]
+        },
+        {
+          "id": "F018",
+          "name": "Arbitration policy",
+          "status": "unidentified"
+        }
+      ],
+      "timing": [
+        {
+          "id": "T007",
+          "name": "Instruction-class initiation intervals",
+          "status": "unidentified"
+        },
+        {
+          "id": "T008",
+          "name": "Dependency wakeup delay",
+          "status": "unidentified"
+        }
+      ]
+    },
+    {
+      "component": "Registers and operand collection",
+      "functional": [
+        {
+          "id": "F019",
+          "name": "Register bank count",
+          "status": "unidentified"
+        },
+        {
+          "id": "F020",
+          "name": "Register bank mapping",
+          "status": "unidentified"
+        },
+        {
+          "id": "F021",
+          "name": "Read ports per register bank",
+          "status": "unidentified"
+        },
+        {
+          "id": "F022",
+          "name": "Write ports per register bank",
+          "status": "unidentified"
+        },
+        {
+          "id": "F023",
+          "name": "Operand collector capacity",
+          "status": "unidentified"
+        },
+        {
+          "id": "F024",
+          "name": "Collector routing",
+          "status": "unidentified"
+        },
+        {
+          "id": "F025",
+          "name": "Writeback queue capacity",
+          "status": "unidentified"
+        },
+        {
+          "id": "F026",
+          "name": "Writeback arbitration policy",
+          "status": "unidentified"
+        }
+      ],
+      "timing": [
+        {
+          "id": "T009",
+          "name": "Register read latency",
+          "status": "unidentified"
+        },
+        {
+          "id": "T010",
+          "name": "Register write latency",
+          "status": "unidentified"
+        },
+        {
+          "id": "T011",
+          "name": "Operand collection delay",
+          "status": "unidentified"
+        },
+        {
+          "id": "T012",
+          "name": "Bypass delay",
+          "status": "unidentified"
+        },
+        {
+          "id": "T013",
+          "name": "Writeback service rate",
+          "status": "unidentified"
+        }
+      ]
+    },
+    {
+      "component": "CUDA/operand execution",
+      "functional": [
+        {
+          "id": "F027",
+          "name": "Execution pipeline counts by class",
+          "status": "unidentified"
+        },
+        {
+          "id": "F028",
+          "name": "Supported numerical operation semantics",
+          "status": "partially_identified",
+          "value": "PTX fma.rn.f32 computes product plus accumulator before one nearest-even FP32 rounding; .ftz changes subnormal handling.",
+          "scope": "Documented contract; Full compiled instruction vocabulary and native arithmetic behavior are not established; this rule must not be transferred to Tensor Core accumulation.",
+          "evidence": {
+            "url": "https://docs.nvidia.com/cuda/parallel-thread-execution/index.html#floating-point-instructions-fma",
+            "round": "source_sweep_005",
+            "kind": "official_documentation"
+          },
+          "remaining": "Full compiled instruction vocabulary and native arithmetic behavior are not established; this rule must not be transferred to Tensor Core accumulation."
+        },
+        {
+          "id": "F029",
+          "name": "Pipeline sharing rules",
+          "status": "partially_identified",
+          "value": "FP32 and INT32 share unified execution resources",
+          "scope": "Other instruction-class sharing remains unidentified",
+          "evidence": {
+            "round": "source_sweep_001",
+            "kind": "official_documentation",
+            "url": "https://images.nvidia.com/aem-dam/Solutions/geforce/blackwell/nvidia-rtx-blackwell-gpu-architecture.pdf#page=12"
+          }
+        }
+      ],
+      "timing": [
+        {
+          "id": "T014",
+          "name": "Instruction-class result latencies",
+          "status": "partially_identified",
+          "value": {
+            "FADD_dependent_asymptotic_cycles": 4.001139322916667,
+            "FFMA_dependent_asymptotic_cycles": 4.000651041666667,
+            "SHF_dependent_asymptotic_cycles": 4.00048828125,
+            "SHFL_dependent_asymptotic_cycles": 29.000162760416668
+          },
+          "scope": "Singlewarp compiled dependency-chain slopes after two-unroll extrapolation; includes dependency wakeup/compiler scheduling, not separately identified intrinsic pipeline latency",
+          "evidence": {
+            "path": "parameter_sweep/scalar_execution/parameter_updates.json",
+            "kind": "hardware"
+          }
+        },
+        {
+          "id": "T015",
+          "name": "Instruction-class initiation intervals",
+          "status": "partially_identified",
+          "value": {
+            "unit": "maximum scalar results per SM clock cycle",
+            "cc": "12.0/12.1",
+            "fp32_add_mul_fma": 128,
+            "int32_add_sub": 128,
+            "int32_mul_mad": 64,
+            "int32_shift": 64,
+            "warp_shuffle_converged": 32
+          },
+          "scope": "Documented contract; Aggregate theoretical peaks constrain service demand, but do not identify per-pipeline initiation intervals, mixed-class sharing, or result latencies.",
+          "evidence": {
+            "url": "https://docs.nvidia.com/cuda/cuda-c-best-practices-guide/index.html#arithmetic-instructions-throughput-native-arithmetic-instructions",
+            "round": "source_sweep_005",
+            "kind": "official_documentation"
+          },
+          "remaining": "Aggregate theoretical peaks constrain service demand, but do not identify per-pipeline initiation intervals, mixed-class sharing, or result latencies.",
+          "sprint_supported_subparameters": [
+            {
+              "id": "T015",
+              "status": "partially_identified",
+              "value": {
+                "FADD_four_chain_cycles_per_op": 1.0001627604166667,
+                "FFMA_four_chain_cycles_per_op": 0.9994032118055557,
+                "SHF_four_chain_cycles_per_op": 2.0,
+                "IMAD_four_chain_cycles_per_op": 2.0005425347222228
+              },
+              "scope": "Singlewarp four-independent-chain compiled service slopes, not wholeSM peak or mixedinstruction sharing"
+            }
+          ]
+        },
+        {
+          "id": "T016",
+          "name": "Register rearrangement delay",
+          "status": "partially_identified",
+          "scope": "Singlewarp MOVM.16.MT88 compiled even-transpose loop: effective recurrence includes wait/scheduling andloop; not barepipeline latency or fullyidentifiedinitiation interval",
+          "value": {
+            "dependent_compound_cycles_per_op": 28.98828125,
+            "four_chain_achieved_average_cycles_per_op": 7.25244140625,
+            "eight_chain_achieved_average_cycles_per_op": 4.823486328125,
+            "not_intrinsic_latency": true
+          },
+          "evidence": {
+            "path": "discovery_rounds/movm_timing_012/model_update.json",
+            "kind": "hardware_and_nativeinspection"
+          }
+        }
+      ]
+    },
+    {
+      "component": "Matrix execution",
+      "functional": [
+        {
+          "id": "F030",
+          "name": "Tensor pipeline organization/count",
+          "status": "partially_identified",
+          "value": "Four architectural Tensor Core blocks per SM, one depicted per partition",
+          "scope": "Internal execution pipelines and routing restrictions remain unidentified",
+          "evidence": {
+            "round": "source_sweep_001",
+            "kind": "official_documentation",
+            "url": "https://images.nvidia.com/aem-dam/Solutions/geforce/blackwell/nvidia-rtx-blackwell-gpu-architecture.pdf#page=11"
+          }
+        },
+        {
+          "id": "F031",
+          "name": "Execution partition routing",
+          "status": "unidentified"
+        },
+        {
+          "id": "F032",
+          "name": "Native lane/register layout",
+          "status": "partially_identified",
+          "value": "For CUDA12.8 sm120 row-major BF16 WMMA m16n16k16, all256 A,256 B and256 C positions are measured across32 lanes; each lane holds4 packed32-bit A/B words and8 FP32 C words. See executable native_bf16_layout package.",
+          "scope": "Supported BF16 row-major m16n16k16 instruction family; other shapes/formats/layouts and physical bank routing remain unresolved.",
+          "evidence": {
+            "url": "https://docs.nvidia.com/cuda/parallel-thread-execution/index.html#matrix-fragments-for-wmma",
+            "round": "source_sweep_005",
+            "kind": "official_documentation"
+          },
+          "remaining": "Other instruction families and physical register/collector routing; private bank mapping and delivery timing.",
+          "native_mapping_evidence": {
+            "path": "discovery_rounds/functional_mapping_002/analysis.json",
+            "kind": "measured_register_contents_and_basis_tests",
+            "round": "functional_mapping_002"
+          },
+          "official_corroboration": {
+            "path": "discovery_rounds/literature_sweep_009.json",
+            "matching_positions": 768
+          },
+          "executable_integration": {
+            "path": "numerical/native_matrix_verification.json",
+            "checked_output_words": 3072,
+            "timing_calibrated": false
+          },
+          "native_shared_load_evidence": {
+            "path": "discovery_rounds/ldsm_mapping_003/analysis.json",
+            "supported_contracts": [
+              "Alignedx4b16 normal shared row-address to native packed-register values",
+              "Alignedx4b16 transposed shared row-address to native packed-register values"
+            ],
+            "hardware_cases": 518,
+            "broad_field_closed": false,
+            "timing_identified": false,
+            "clocked_shared_storage_integration": "pending"
+          }
+        },
+        {
+          "id": "F033",
+          "name": "Native instruction-to-operation decomposition",
+          "status": "partially_identified",
+          "value": "Saved SM120 loop bodies contain 4 HMMA.16816.F32.BF16 PCs for tile 32x32 and 12 for tile 64x48 in both p0/p2 variants",
+          "scope": "Saved diagnostic kernels plus sm120 BF16 WMMA m16n16k16 operation family; private internal execution decomposition and other families remain unresolved.",
+          "evidence": {
+            "round": "source_sweep_003",
+            "kind": "saved_native_instruction_audit",
+            "path": "discovery_rounds/native_matrix_inventory.json"
+          },
+          "additional_evidence": {
+            "round": "source_sweep_004",
+            "path": "discovery_rounds/dynamic_matrix_inventory.json",
+            "finding": "Source-derived total equals 49152 executed warp HMMA instructions in each saved launch"
+          },
+          "native_mapping_evidence": {
+            "path": "discovery_rounds/functional_mapping_002/analysis.json",
+            "finding": "Two HMMA.16816.F32.BF16 operations produce separate16x8 output halves; actual operand/result register contents measured."
+          }
+        },
+        {
+          "id": "F034",
+          "name": "Accumulation order",
+          "status": "partially_identified",
+          "value": "Magnitude-aligned truncation before summation predicts tested cancellation family, independent of measured term placement/order",
+          "scope": "Single BF16 WMMA m16n16k16 row-major A/B with two opposite power-of-two terms, one or two small products, or a small FP32 accumulator",
+          "evidence": {
+            "path": "parameter_sweep/bf16_exceptions/parameter_updates.json",
+            "kind": "hardware"
+          }
+        },
+        {
+          "id": "F035",
+          "name": "Exceptional numerical behavior",
+          "status": "partially_identified",
+          "value": "Tested BF16 subnormal identity products and FP32 subnormal C are retained; overflow positive infinity and NaN/0\u00d7inf behavior recorded exactly",
+          "scope": "Single BF16 WMMA m16n16k16, tested subnormal identity products, subnormal accumulator preservation, overflow and NaN inputs; complete exception behavior unknown",
+          "evidence": {
+            "path": "parameter_sweep/bf16_exceptions/parameter_updates.json",
+            "kind": "hardware"
+          }
+        }
+      ],
+      "timing": [
+        {
+          "id": "T017",
+          "name": "Native matrix result latency",
+          "status": "unidentified"
+        },
+        {
+          "id": "T018",
+          "name": "Native matrix initiation interval",
+          "status": "unidentified"
+        },
+        {
+          "id": "T019",
+          "name": "Matrix result delivery bandwidth",
+          "status": "unidentified"
+        }
+      ]
+    },
+    {
+      "component": "Load/store path",
+      "functional": [
+        {
+          "id": "F036",
+          "name": "Load queue capacity",
+          "status": "unidentified"
+        },
+        {
+          "id": "F037",
+          "name": "Store queue capacity",
+          "status": "unidentified"
+        },
+        {
+          "id": "F038",
+          "name": "Outstanding transaction limit per warp",
+          "status": "unidentified"
+        },
+        {
+          "id": "F039",
+          "name": "Outstanding transaction limit per SM",
+          "status": "unidentified"
+        },
+        {
+          "id": "F040",
+          "name": "Native instruction coalescing rules",
+          "status": "partially_identified",
+          "value": "For cc6.0+ ordinary global warp accesses, service transaction count follows required 32-byte segments, including duplicate and inactive-lane cases.",
+          "scope": "Documented contract; Native wider instructions, issue splitting, return assembly and private request grouping are not fully specified.",
+          "evidence": {
+            "url": "https://docs.nvidia.com/cuda/cuda-c-best-practices-guide/index.html#coalesced-access-to-global-memory",
+            "round": "source_sweep_005",
+            "kind": "official_documentation"
+          },
+          "remaining": "Native wider instructions, issue splitting, return assembly and private request grouping are not fully specified.",
+          "additional_evidence": [
+            {
+              "path": "parameter_sweep/generic_shared/analysis.json",
+              "finding": "generic shared scalar contiguous32lane load:1sharedpackage; generic global aligned128bytewarp load:4global sectors"
+            }
+          ]
+        },
+        {
+          "id": "F041",
+          "name": "Memory ordering rules",
+          "status": "partially_identified",
+          "value": "PTX specifies scope-dependent memory consistency; cache hints do not strengthen ordering. Actual request issue, completion and return ordering are not identified.",
+          "scope": "PTX ISA contract only; actual RTX 5090 compiled memory path requires hardware evidence",
+          "evidence": {
+            "round": "source_sweep_002",
+            "kind": "official_documentation",
+            "url": "https://docs.nvidia.com/cuda/parallel-thread-execution/index.html#memory-consistency-model"
+          }
+        },
+        {
+          "id": "F042",
+          "name": "Return assembly rules",
+          "status": "partially_identified",
+          "scope": "Documented narrow generic PTX loads: signed extension, zero extension and little-endian packedword representation. Hardware transaction fragmentation/assembly and return ordering remainunknown",
+          "value": {
+            "signed_load": "sign extend s8/s16 into32bit destination",
+            "unsigned_bit_load": "zero extend u8/b8/u16/b16 into32bit destination",
+            "packed_b32": "bit preservation",
+            "byte_order": "little endian"
+          },
+          "evidence": {
+            "path": "discovery_rounds/literature_sweep_017.json",
+            "kind": "official_docs"
+          },
+          "hardware_evidence": {
+            "path": "parameter_sweep/load_assembly/analysis.json",
+            "model": "components/scalar_load_result.sv",
+            "RTL_checks": 48,
+            "hardware_launches": 2
+          }
+        }
+      ],
+      "timing": [
+        {
+          "id": "T020",
+          "name": "Load issue service rate",
+          "status": "partially_identified",
+          "value": {
+            "additional_conflict_cycles_per_extra_package": 2,
+            "clock_domain": "SM cycles"
+          },
+          "scope": "Additional delay in the measured single-warp dependent x4 LDSM-plus-sum loop, normal/transposed, aligned rows; not independent request issue interval or intrinsic load latency",
+          "evidence": {
+            "path": "parameter_sweep/ldsm_service/timing_validation_analysis.json",
+            "round": "hardware_sweep_005",
+            "kind": "six_fresh_frozen_timing_predictions"
+          },
+          "remaining": "Base result latency, issue interval under independent loads, cross-warp sharing, return bandwidth and transferability to GEMM.",
+          "additional_evidence": [
+            {
+              "path": "parameter_sweep/generic_shared_banks/analysis.json",
+              "confirmation": "parameter_sweep/generic_shared_plain/analysis.json",
+              "finding": "Plain and volatile generic shared LD and explicitLDS use scalar bankwork;2SMcycles per extra package. Compoundbasecost notintrinsic."
+            }
+          ]
+        },
+        {
+          "id": "T021",
+          "name": "Store issue service rate",
+          "status": "unidentified"
+        },
+        {
+          "id": "T022",
+          "name": "Return bandwidth",
+          "status": "unidentified"
+        },
+        {
+          "id": "T023",
+          "name": "Store visibility/completion delay",
+          "status": "unidentified"
+        }
+      ]
+    },
+    {
+      "component": "Address translation",
+      "functional": [
+        {
+          "id": "F043",
+          "name": "Supported page sizes",
+          "status": "unidentified"
+        },
+        {
+          "id": "F044",
+          "name": "Translation-cache organization",
+          "status": "unidentified"
+        },
+        {
+          "id": "F045",
+          "name": "Translation mapping/replacement rules",
+          "status": "unidentified"
+        },
+        {
+          "id": "F046",
+          "name": "Translation request capacity",
+          "status": "unidentified"
+        },
+        {
+          "id": "F047",
+          "name": "Page-walk organization",
+          "status": "unidentified"
+        }
+      ],
+      "timing": [
+        {
+          "id": "T024",
+          "name": "Translation hit delay",
+          "status": "unidentified"
+        },
+        {
+          "id": "T025",
+          "name": "Translation miss processing delay",
+          "status": "unidentified"
+        },
+        {
+          "id": "T026",
+          "name": "Page-walk delay",
+          "status": "unidentified"
+        }
+      ]
+    },
+    {
+      "component": "Shared memory",
+      "functional": [
+        {
+          "id": "F048",
+          "name": "L1/shared partition configuration",
+          "status": "partially_identified",
+          "value": {
+            "supported_shared_config_KiB": [
+              0,
+              8,
+              16,
+              32,
+              64,
+              100
+            ],
+            "scope": "CUDA occupancy model, cc12.0",
+            "rounding": "Smallest supported shared configuration greater than or equal to byte request; reject above102400bytes"
+          },
+          "scope": "CUDA occupancy shared configuration; actual L1 partition remains unknown",
+          "remaining": "Otherlaunchconfigurationselectionpolicy, effectiveL1capacity andphysicalpartitionmetadata/services remainunknown.",
+          "evidence": {
+            "path": "parameter_sweep/cuda_occupancy_header.txt",
+            "function": "cudaOccAlignUpShmemSizeVoltaPlus",
+            "lines": [
+              967,
+              991
+            ],
+            "sha256": "d076afacc2165c6c48ba36aaef6897df5fbbdd9a6bc7458161d8a59f764d3f6c",
+            "local_check": "parameter_sweep/shared_configs.json",
+            "round": "source_sweep_006",
+            "kind": "official_documentation_or_toolkit_source"
+          },
+          "runtime_observations": {
+            "preferred100_selectedbytes": 102400,
+            "preferred0_selectedbytes": 32768,
+            "driver_reserved_per_block": 1024,
+            "evidence": "parameter_sweep/cache_capacity_fast/remote_stdout.txt"
+          }
+        },
+        {
+          "id": "F049",
+          "name": "Read ports per shared bank",
+          "status": "unidentified"
+        },
+        {
+          "id": "F050",
+          "name": "Write ports per shared bank",
+          "status": "unidentified"
+        },
+        {
+          "id": "F051",
+          "name": "Shared request queue capacity",
+          "status": "unidentified"
+        },
+        {
+          "id": "F052",
+          "name": "Warp transaction splitting rules",
+          "status": "partially_identified",
+          "value": "Scalar generic warp reads: measured 4/2/8 shared wavefront packages for tested row strides 16/24/32, matching maximum distinct words per bank",
+          "scope": "Measured scalar generic bank patterns, bounded full-warp32/64/128-bit read/store patterns and LDS128 same-vector reads with ten active-lane masks; other accesses and cross-warp arbitration unresolved.",
+          "evidence": {
+            "round": "hardware_sweep_001",
+            "kind": "measured_profile_counts",
+            "path": "parameter_sweep/shared_work_verification.json"
+          },
+          "additional_evidence": {
+            "round": "hardware_sweep_002",
+            "path": "parameter_sweep/round_002_analysis.json",
+            "finding": "Four extra scalar bank patterns exactly match package predictions; seven measured patterns total"
+          },
+          "wide_access_evidence": {
+            "round": "hardware_sweep_003",
+            "path": "parameter_sweep/wide_shared/analysis.json",
+            "finding": "Full-warp LDS128 samevectorneeds2wavefronts, disprovingwholewarpscalarbankrule; bounded32/64/128patterns verified"
+          },
+          "masked_broadcast_evidence": {
+            "round": "hardware_sweep_004",
+            "path": "parameter_sweep/masked_shared/confirmation_analysis.json",
+            "finding": "Naturally aligned same-vector LDS128 packages equal occupied16-lane halves in five development and five frozen-prediction confirmation masks",
+            "model": "components/shared_broadcast_work.sv",
+            "verification": "components/shared_broadcast_work_verification.json"
+          }
+        },
+        {
+          "id": "F053",
+          "name": "Broadcast rules",
+          "status": "identified",
+          "value": "Same-location shared reads broadcast; separate-bank broadcasts may multicast",
+          "scope": "Ordinary warp shared-memory reads; physical broadcast delay remains separate",
+          "evidence": {
+            "round": "source_sweep_001",
+            "kind": "official_documentation",
+            "url": "https://docs.nvidia.com/cuda/cuda-c-best-practices-guide/index.html#shared-memory-and-memory-banks"
+          }
+        }
+      ],
+      "timing": [
+        {
+          "id": "T027",
+          "name": "Shared read response latency",
+          "status": "partially_identified",
+          "value": "Conflict-free LDS dependent loop slope is 34 SM cycles per iteration at both measured length intervals; includes LEA and loop/control scheduling",
+          "scope": "One warp scalar dependent shared read path; intrinsic response latency not separated",
+          "evidence": {
+            "round": "hardware_sweep_001",
+            "kind": "measured_compound_path",
+            "path": "parameter_sweep/analysis.json"
+          },
+          "additional_evidence": [
+            {
+              "round": "hardware_sweep_002",
+              "path": "parameter_sweep/round_002_analysis.json",
+              "finding": "Direct native LDS dependency chain has stable28cycle/load slope for unroll8and32; combines response and wakeup"
+            },
+            {
+              "path": "parameter_sweep/generic_shared_banks/analysis.json",
+              "confirmation": "parameter_sweep/generic_shared_plain/analysis.json",
+              "finding": "Plain and volatile generic shared LD and explicitLDS use scalar bankwork;2SMcycles per extra package. Compoundbasecost notintrinsic."
+            }
+          ]
+        },
+        {
+          "id": "T028",
+          "name": "Shared write response latency",
+          "status": "unidentified"
+        },
+        {
+          "id": "T029",
+          "name": "Broadcast delay",
+          "status": "unidentified"
+        },
+        {
+          "id": "T030",
+          "name": "Shared-to-operand transfer delay",
+          "status": "unidentified"
+        }
+      ]
+    },
+    {
+      "component": "L1 cache",
+      "functional": [
+        {
+          "id": "F054",
+          "name": "L1 capacity in selected partition",
+          "status": "partially_identified",
+          "value": "128 KiB unified L1/shared physical pool per SM",
+          "scope": "Actual selected cache capacity and partition overhead remain unidentified",
+          "evidence": {
+            "round": "source_sweep_001",
+            "kind": "official_documentation",
+            "url": "https://images.nvidia.com/aem-dam/Solutions/geforce/blackwell/nvidia-rtx-blackwell-gpu-architecture.pdf#page=10"
+          },
+          "capacity_observations": {
+            "selected_shared100KiB": {
+              "working24KiB_L1hit_percent": 70.42,
+              "working28KiB_L1hit_percent": 46.5,
+              "working32KiB_L1hit_percent": 28.39
+            },
+            "selected_shared32KiB": {
+              "working120KiB_L1hit_percent": 16.43,
+              "working128KiB_L1hit_percent": 0,
+              "working136KiB_L1hit_percent": 0
+            },
+            "interpretation": "Noexactcapacityinference fromthesehitcurves; tagmapping/replacement/partitionmetadata mayconfound; requestedcarveout notselected",
+            "evidence": "parameter_sweep/cache_capacity_fast/remote_stdout.txt"
+          }
+        },
+        {
+          "id": "F055",
+          "name": "L1 set count",
+          "status": "unidentified"
+        },
+        {
+          "id": "F056",
+          "name": "L1 associativity",
+          "status": "unidentified"
+        },
+        {
+          "id": "F057",
+          "name": "L1 address mapping",
+          "status": "unidentified"
+        },
+        {
+          "id": "F058",
+          "name": "L1 replacement policy",
+          "status": "unidentified"
+        },
+        {
+          "id": "F059",
+          "name": "L1 write policy",
+          "status": "partially_identified",
+          "value": "PTX .cg bypasses L1; global L1 caches are not mutually coherent. Native store allocation and write buffering remain unidentified.",
+          "scope": "PTX ISA contract only; actual RTX 5090 compiled memory path requires hardware evidence",
+          "evidence": {
+            "round": "source_sweep_002",
+            "kind": "official_documentation",
+            "url": "https://docs.nvidia.com/cuda/parallel-thread-execution/index.html#cache-operators"
+          }
+        },
+        {
+          "id": "F060",
+          "name": "L1 pending-miss capacity",
+          "status": "unidentified"
+        },
+        {
+          "id": "F061",
+          "name": "L1 pending-consumer merging rules",
+          "status": "unidentified"
+        },
+        {
+          "id": "F062",
+          "name": "L1 fill/return queue capacities",
+          "status": "unidentified"
+        }
+      ],
+      "timing": [
+        {
+          "id": "T031",
+          "name": "L1 read-hit latency",
+          "status": "partially_identified",
+          "value": {
+            "compound_dependency_cycles": 43.194661458333336,
+            "clock_domain": "SMclock64",
+            "not_intrinsic_cache_latency": true
+          },
+          "scope": "Single-warp8KiBdependent32-bitglobalread ring; address arithmetic, wakeup and loop included. Not intrinsic cache-array latency. Two-length difference removes roughly fixed initial cache-fill cost. ca:98.34%L1sectorhits.",
+          "evidence": {
+            "path": "parameter_sweep/cache_hit_fast/analysis.json",
+            "kind": "hardware"
+          }
+        },
+        {
+          "id": "T032",
+          "name": "L1 write service latency",
+          "status": "unidentified"
+        },
+        {
+          "id": "T033",
+          "name": "L1 service bandwidth",
+          "status": "unidentified"
+        },
+        {
+          "id": "T034",
+          "name": "L1 refill transfer delay",
+          "status": "unidentified"
+        }
+      ]
+    },
+    {
+      "component": "L2 cache",
+      "functional": [
+        {
+          "id": "F063",
+          "name": "L2 set count",
+          "status": "unidentified"
+        },
+        {
+          "id": "F064",
+          "name": "L2 associativity",
+          "status": "unidentified"
+        },
+        {
+          "id": "F065",
+          "name": "L2 slice organization/count",
+          "status": "partially_identified",
+          "value": {
+            "organization": "LTS is L2subpartition with tag/miss/data stages; LRC readcoalescing upstream",
+            "queried_l2s_count": 64,
+            "queried_fbp_count": 8,
+            "queried_l2s_per_fbp": 8,
+            "inferred_profiler_LTS_instances": 48,
+            "conflict_unresolved": true
+          },
+          "scope": "Documented LTS pipeline and queried nominaltopology; counteraggregate denominator48 conflicts with64metadata. Enabled/nominal distinction andphysicalmapping notidentified.",
+          "evidence": {
+            "path": "discovery_rounds/literature_sweep_036.json",
+            "kind": "official_docs_and_queried_reports"
+          },
+          "remaining": "Reconcile64nominalvs48profiledLTS; exactenabled topology/capacity distribution remainsunknown."
+        },
+        {
+          "id": "F066",
+          "name": "L2 slice address mapping",
+          "status": "unidentified"
+        },
+        {
+          "id": "F067",
+          "name": "L2 set address mapping",
+          "status": "unidentified"
+        },
+        {
+          "id": "F068",
+          "name": "L2 lookup ports",
+          "status": "unidentified"
+        },
+        {
+          "id": "F069",
+          "name": "L2 replacement policy",
+          "status": "unidentified"
+        },
+        {
+          "id": "F070",
+          "name": "L2 write policy",
+          "status": "partially_identified",
+          "value": "Default st.wb requests write-back at coherent levels; st.wt has documented system-memory scope. These are performance hints, not identification of physical allocation, eviction or acknowledgement rules.",
+          "scope": "PTX ISA contract only; actual RTX 5090 compiled memory path requires hardware evidence",
+          "evidence": {
+            "round": "source_sweep_002",
+            "kind": "official_documentation",
+            "url": "https://docs.nvidia.com/cuda/parallel-thread-execution/index.html#cache-operators"
+          }
+        },
+        {
+          "id": "F071",
+          "name": "L2 pending-miss capacity",
+          "status": "unidentified"
+        },
+        {
+          "id": "F072",
+          "name": "L2 pending-consumer merging rules",
+          "status": "unidentified"
+        },
+        {
+          "id": "F073",
+          "name": "L2 request queue capacity",
+          "status": "unidentified"
+        },
+        {
+          "id": "F074",
+          "name": "L2 fill/return queue capacities",
+          "status": "unidentified"
+        }
+      ],
+      "timing": [
+        {
+          "id": "T035",
+          "name": "L2 read-hit latency",
+          "status": "partially_identified",
+          "value": {
+            "compound_dependency_cycles": 356.47998046875,
+            "clock_domain": "SMclock64",
+            "not_intrinsic_cache_latency": true
+          },
+          "scope": "Single-warp8KiBdependent32-bitglobalread ring; address arithmetic, wakeup and loop included. Not intrinsic cache-array latency. Two-length difference removes roughly fixed initial cache-fill cost. cg:L1bypassed;16384L2datarequests,392totalDRAMreadsectors including background. ExactL2hitderivedmetric rejected.",
+          "evidence": {
+            "path": "parameter_sweep/cache_hit_fast/analysis.json",
+            "kind": "hardware"
+          }
+        },
+        {
+          "id": "T036",
+          "name": "L2 write service latency",
+          "status": "unidentified"
+        },
+        {
+          "id": "T037",
+          "name": "L2 service bandwidth per slice",
+          "status": "unidentified"
+        },
+        {
+          "id": "T038",
+          "name": "L2 return bandwidth",
+          "status": "unidentified"
+        }
+      ]
+    },
+    {
+      "component": "GDDR7/controller",
+      "functional": [
+        {
+          "id": "F075",
+          "name": "Channel/bank organization",
+          "status": "partially_identified",
+          "value": "Sixteen 32-bit memory controllers, 512-bit interface",
+          "scope": "Bank organization and channel/bank mapping remain unidentified",
+          "evidence": {
+            "round": "source_sweep_001",
+            "kind": "official_documentation",
+            "url": "https://images.nvidia.com/aem-dam/Solutions/geforce/blackwell/nvidia-rtx-blackwell-gpu-architecture.pdf#page=46"
+          }
+        },
+        {
+          "id": "F076",
+          "name": "Address-to-channel/bank mapping",
+          "status": "unidentified"
+        },
+        {
+          "id": "F077",
+          "name": "Controller queue capacities",
+          "status": "unidentified"
+        },
+        {
+          "id": "F078",
+          "name": "Controller arbitration policy",
+          "status": "unidentified"
+        },
+        {
+          "id": "F079",
+          "name": "Row-state/command rules",
+          "status": "unidentified"
+        },
+        {
+          "id": "F080",
+          "name": "Write handling policy",
+          "status": "unidentified"
+        }
+      ],
+      "timing": [
+        {
+          "id": "T039",
+          "name": "Read command/response timing",
+          "status": "unidentified"
+        },
+        {
+          "id": "T040",
+          "name": "Write command/response timing",
+          "status": "unidentified"
+        },
+        {
+          "id": "T041",
+          "name": "Read/write turnaround",
+          "status": "unidentified"
+        },
+        {
+          "id": "T042",
+          "name": "Transfer service interval",
+          "status": "unidentified"
+        }
+      ]
+    },
+    {
+      "component": "Synchronization and completion",
+      "functional": [
+        {
+          "id": "F081",
+          "name": "Barrier participant rules",
+          "status": "identified",
+          "value": "CTA barrier supports full-block participation or explicit warp-multiple count",
+          "scope": "Ordinary bar.cta.sync; async and cluster barriers excluded",
+          "evidence": {
+            "round": "source_sweep_001",
+            "kind": "official_documentation",
+            "url": "https://docs.nvidia.com/cuda/parallel-thread-execution/index.html#parallel-synchronization-and-communication-instructions-bar"
+          }
+        },
+        {
+          "id": "F082",
+          "name": "Barrier generation rules",
+          "status": "identified",
+          "value": "Barrier reinitializes on completion and may be reused",
+          "scope": "Ordinary named CTA barrier; overlapping misuse remains invalid",
+          "evidence": {
+            "round": "source_sweep_001",
+            "kind": "official_documentation",
+            "url": "https://docs.nvidia.com/cuda/parallel-thread-execution/index.html#parallel-synchronization-and-communication-instructions-bar"
+          }
+        },
+        {
+          "id": "F083",
+          "name": "Barrier drain obligations",
+          "status": "identified",
+          "value": "Prior accesses must be performed relative to participants; sync prevents later memory requests until completion",
+          "scope": "Participant-relative visibility; does not require universal DRAM writeback",
+          "evidence": {
+            "round": "source_sweep_001",
+            "kind": "official_documentation",
+            "url": "https://docs.nvidia.com/cuda/parallel-thread-execution/index.html#parallel-synchronization-and-communication-instructions-bar"
+          }
+        },
+        {
+          "id": "F084",
+          "name": "Output-store acknowledgment semantics",
+          "status": "unidentified"
+        },
+        {
+          "id": "F085",
+          "name": "Whole-grid completion rules",
+          "status": "partially_identified",
+          "value": "Successful stream/event synchronization establishes completion of preceding ordinary kernels. A dependent CUDA device thread cannot begin before its dependencies complete. PTX exit terminates the executing thread and releases barriers waiting exclusively for exited-thread arrivals.",
+          "scope": "Ordinary kernel execution and external completion contract; no dynamicparallelism/programmaticdependentlaunch orclusters",
+          "remaining": "Physical perSMterminationcollection, pending-store tracking, cachevisibilityackpoint and completionnotification delay remainunknown.",
+          "evidence": {
+            "url": "https://docs.nvidia.com/cuda/cuda-programming-guide/02-basics/asynchronous-execution.html#explicit-synchronization",
+            "section": "2.5.7 and2.5.3events",
+            "round": "source_sweep_006",
+            "kind": "official_documentation_or_toolkit_source"
+          },
+          "additional_sources": [
+            {
+              "url": "https://docs.nvidia.com/cuda/cuda-programming-guide/05-appendices/cuda-cpp-execution-model.html#dependencies",
+              "section": "5.8.3.1"
+            },
+            {
+              "url": "https://docs.nvidia.com/cuda/parallel-thread-execution/index.html#control-flow-instructions-exit",
+              "section": "9.7.14.7"
+            }
+          ]
+        }
+      ],
+      "timing": [
+        {
+          "id": "T043",
+          "name": "Barrier arrival service rate",
+          "status": "unidentified"
+        },
+        {
+          "id": "T044",
+          "name": "Barrier release delay",
+          "status": "unidentified"
+        },
+        {
+          "id": "T045",
+          "name": "Warp resume delay",
+          "status": "unidentified"
+        }
+      ]
+    },
+    {
+      "component": "Clock domains",
+      "functional": [
+        {
+          "id": "F086",
+          "name": "Clock-domain organization",
+          "status": "partially_identified",
+          "value": "Accessible perSM cyclecounter and separate global nanosecondtimer reference documented; samples\u22482.95SMcycles/ns",
+          "scope": "Observed counterdomains only, not private execution/memoryclocktopology",
+          "remaining": "Componentclockownership, cross-domain interfaces, timerimplementation and true memoryPHYdomains",
+          "evidence": {
+            "path": "parameter_sweep/clock_domains/parameter_updates.json",
+            "kind": "hardware_and_officialcounterdocs"
+          }
+        },
+        {
+          "id": "F087",
+          "name": "Cross-domain transfer protocol",
+          "status": "unidentified"
+        }
+      ],
+      "timing": [
+        {
+          "id": "T046",
+          "name": "Memory-domain frequencies",
+          "status": "partially_identified",
+          "value": {
+            "reported_supported_memory_MHz": [
+              405,
+              810,
+              7001,
+              13801,
+              14001
+            ],
+            "reported_max_SM_MHz": 3090
+          },
+          "scope": "NVIDIAmanagement reportedclockvalues, not calibrated memorycommand/data timing",
+          "remaining": "Physicalmemorydomain interpretation and effective command/data clocks underworkload",
+          "evidence": {
+            "path": "parameter_sweep/clock_domains/parameter_updates.json",
+            "kind": "hardware_and_officialcounterdocs"
+          }
+        },
+        {
+          "id": "T047",
+          "name": "Cross-domain transfer delay",
+          "status": "unidentified"
+        }
+      ]
+    }
+  ],
+  "counts": {
+    "functional": 87,
+    "timing": 47,
+    "total": 134
+  },
+  "baseline_counts": {
+    "functional": 87,
+    "timing": 47,
+    "total": 134
+  },
+  "status_definition": {
+    "identified": "Specified in the declared supported domain with linked evidence; not necessarily implemented or timing-validated",
+    "partially_identified": "Some structure constrained; still counted as remaining",
+    "unidentified": "No admitted full value/rule in supported domain"
+  },
+  "progress": {
+    "functional": {
+      "total": 87,
+      "identified": 7,
+      "partially_identified": 16,
+      "remaining": 80
+    },
+    "timing": {
+      "total": 47,
+      "identified": 0,
+      "partially_identified": 2,
+      "remaining": 47
+    }
+  }
+}

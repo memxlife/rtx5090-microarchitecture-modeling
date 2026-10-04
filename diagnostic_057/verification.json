@@ -1,0 +1,84 @@
+{
+  "rows": [
+    {
+      "allowed_resident_blocks": 1,
+      "k": 1536,
+      "predicted_us": 1015.3002983499997,
+      "observed_us": 1003.0912199999999,
+      "relative_error": 0.012171453708865965,
+      "sample_min_us": 1002.1760200000001,
+      "sample_max_us": 1004.31359
+    },
+    {
+      "allowed_resident_blocks": 1,
+      "k": 4608,
+      "predicted_us": 3002.0523724499994,
+      "observed_us": 2980.864,
+      "relative_error": 0.00710813121631837,
+      "sample_min_us": 2976.97282,
+      "sample_max_us": 2982.6944399999998
+    },
+    {
+      "allowed_resident_blocks": 4,
+      "k": 1536,
+      "predicted_us": 347.22987459090905,
+      "observed_us": 332.153594,
+      "relative_error": 0.04538948505524543,
+      "sample_min_us": 331.33439999999996,
+      "sample_max_us": 333.785599
+    },
+    {
+      "allowed_resident_blocks": 4,
+      "k": 4608,
+      "predicted_us": 997.8411011727271,
+      "observed_us": 965.017617,
+      "relative_error": 0.03401335228963709,
+      "sample_min_us": 964.601612,
+      "sample_max_us": 966.649616
+    },
+    {
+      "allowed_resident_blocks": 11,
+      "k": 1536,
+      "predicted_us": 257.4634641,
+      "observed_us": 245.318401,
+      "relative_error": 0.04950734657690847,
+      "sample_min_us": 243.270397,
+      "sample_max_us": 246.13760100000002
+    },
+    {
+      "allowed_resident_blocks": 11,
+      "k": 4608,
+      "predicted_us": 728.5418696999999,
+      "observed_us": 693.4463979999999,
+      "relative_error": 0.050610215585833895,
+      "sample_min_us": 692.217612,
+      "sample_max_us": 694.26558
+    }
+  ],
+  "increments": [
+    {
+      "allowed_resident_blocks": 1,
+      "predicted_increment_us": 1986.7520740999998,
+      "observed_increment_us": 1977.7727800000002
+    },
+    {
+      "allowed_resident_blocks": 4,
+      "predicted_increment_us": 650.6112265818181,
+      "observed_increment_us": 632.864023
+    },
+    {
+      "allowed_resident_blocks": 11,
+      "predicted_increment_us": 471.0784055999999,
+      "observed_increment_us": 448.12799699999994
+    }
+  ],
+  "counts_checked": 270,
+  "runtime_coefficients_fitted": false,
+  "native_path_unchanged": true,
+  "causal_admission_pending": [
+    "cache outcome comparison",
+    "clock/context comparison",
+    "resident limit is capacity, not measured average active blocks"
+  ],
+  "decision": "Timing contrast alone does not identify a hardware resource"
+}

@@ -1,0 +1,92 @@
+{
+  "checks": [
+    {
+      "kind": "read",
+      "width_words": 1,
+      "pattern": 0,
+      "predicted_packages": 1,
+      "observed_packages": 1.0
+    },
+    {
+      "kind": "read",
+      "width_words": 1,
+      "pattern": 1,
+      "predicted_packages": 1,
+      "observed_packages": 1.0
+    },
+    {
+      "kind": "read",
+      "width_words": 2,
+      "pattern": 0,
+      "predicted_packages": 2,
+      "observed_packages": 2.0
+    },
+    {
+      "kind": "read",
+      "width_words": 2,
+      "pattern": 1,
+      "predicted_packages": 1,
+      "observed_packages": 1.0
+    },
+    {
+      "kind": "read",
+      "width_words": 4,
+      "pattern": 0,
+      "predicted_packages": 4,
+      "observed_packages": 4.0
+    },
+    {
+      "kind": "read",
+      "width_words": 4,
+      "pattern": 1,
+      "predicted_packages": 2,
+      "observed_packages": 2.0
+    },
+    {
+      "kind": "write",
+      "width_words": 1,
+      "pattern": 0,
+      "predicted_packages": 1,
+      "observed_packages": 1.0
+    },
+    {
+      "kind": "write",
+      "width_words": 1,
+      "pattern": 1,
+      "predicted_packages": 32,
+      "observed_packages": 32.0
+    },
+    {
+      "kind": "write",
+      "width_words": 2,
+      "pattern": 0,
+      "predicted_packages": 2,
+      "observed_packages": 2.0
+    },
+    {
+      "kind": "write",
+      "width_words": 2,
+      "pattern": 1,
+      "predicted_packages": 32,
+      "observed_packages": 32.0
+    },
+    {
+      "kind": "write",
+      "width_words": 4,
+      "pattern": 0,
+      "predicted_packages": 4,
+      "observed_packages": 4.0
+    },
+    {
+      "kind": "write",
+      "width_words": 4,
+      "pattern": 1,
+      "predicted_packages": 32,
+      "observed_packages": 32.0
+    }
+  ],
+  "unsupported_pattern_rejected": true,
+  "rule_fitted_to_this_round": true,
+  "independent_validation": false,
+  "intrinsic_latency_identified": false
+}

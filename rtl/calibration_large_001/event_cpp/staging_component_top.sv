@@ -1,0 +1,5 @@
+module staging_component_top #(parameter int CONTEXTS=2)(input logic clk,rst,req_valid,input logic[31:0]req_context,input logic backing_ready,write_ready,done_ready,response_valid,input logic[31:0]response_id,output logic req_ready,backing_valid,write_valid,done_valid,output logic[31:0]backing_id,backing_address,write_context,write_base,done_context,done_id);
+ logic[31:0]wa[32];logic[15:0]wd[32];logic rr;
+ large_operand_staging #(.CONTEXTS(CONTEXTS),.M(2048),.N(2112),.K(1536)) staging(.clk,.rst,.req_valid,.req_ready,.req_context,.req_id(req_context),.a_base(32'd4096),.b_base(32'd6299648),.cta_row(req_context),.cta_col(req_context),.stage_index(0),.write_warp_valid(write_valid),.write_warp_ready(write_ready),.write_context,.write_warp_byte_addresses(wa),.write_warp_halfwords(wd),.done_valid,.done_ready,.done_context,.done_id,.backing_req_valid(backing_valid),.backing_req_ready(backing_ready),.backing_req_id(backing_id),.backing_req_byte_address(backing_address),.backing_rsp_valid(response_valid),.backing_rsp_ready(rr),.backing_rsp_id(response_id),.backing_rsp_data(256'b0));
+ assign write_base=wa[0];
+endmodule

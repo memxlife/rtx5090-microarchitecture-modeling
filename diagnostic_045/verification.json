@@ -1,0 +1,22 @@
+{
+  "rows": [
+    {
+      "single_block": true,
+      "observed_increment_us": 723.8464,
+      "prediction_us": 563.4076530612244,
+      "relative_error": 0.22164750275579953
+    },
+    {
+      "single_block": false,
+      "observed_increment_us": 753.2480459999999,
+      "prediction_us": 563.4076530612244,
+      "relative_error": 0.25202905463464753
+    }
+  ],
+  "all_correct": true,
+  "checks": 180,
+  "all_spill_free": true,
+  "native_identical": true,
+  "cross_block_interaction_required_for_major_error": false,
+  "model_effect": "Largest error reproduced within a single unchanged block; prioritize within-block staging/operand schedule, not concurrency coefficients."
+}

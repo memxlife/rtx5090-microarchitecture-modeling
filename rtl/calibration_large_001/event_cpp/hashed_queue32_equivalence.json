@@ -1,0 +1,112 @@
+{
+  "passed": true,
+  "scope": "two complete cold then retained-cache M64N96K64 launches,2SMs/2contexts/2slices/4sets/16ways/32sharedreadslots",
+  "provisional_hypotheses": [
+    "XOR slice routing, full-line tag",
+    "32shared slots is effective capacity prior; not claimed identified physical queue"
+  ],
+  "rtl_results": [
+    {
+      "launch": "0",
+      "M": "64",
+      "N": "96",
+      "K": "64",
+      "checked": "6144",
+      "cycles": "29592",
+      "host_seconds": "0",
+      "host_cycles_per_second": "190950",
+      "peak_blocks": "4",
+      "l2_requests": "1536",
+      "hits": "324",
+      "misses": "1212",
+      "merges": "476",
+      "fills": "736"
+    },
+    {
+      "launch": "1",
+      "M": "64",
+      "N": "96",
+      "K": "64",
+      "checked": "6144",
+      "cycles": "25031",
+      "host_seconds": "0",
+      "host_cycles_per_second": "183010",
+      "peak_blocks": "4",
+      "l2_requests": "3072",
+      "hits": "1125",
+      "misses": "1947",
+      "merges": "655",
+      "fills": "1292"
+    }
+  ],
+  "cpp_results": [
+    {
+      "launch": "0",
+      "M": "64",
+      "N": "96",
+      "K": "64",
+      "shared_slots": "32",
+      "hashed": "1",
+      "warm": "0",
+      "cycles": "29592",
+      "checked": "6144",
+      "peak": "4",
+      "requests": "1536",
+      "hits": "324",
+      "misses": "1212",
+      "merges": "476",
+      "fills": "736"
+    },
+    {
+      "launch": "1",
+      "M": "64",
+      "N": "96",
+      "K": "64",
+      "shared_slots": "32",
+      "hashed": "1",
+      "warm": "0",
+      "cycles": "25031",
+      "checked": "6144",
+      "peak": "4",
+      "requests": "3072",
+      "hits": "1125",
+      "misses": "1947",
+      "merges": "655",
+      "fills": "1292"
+    }
+  ],
+  "fields": {
+    "launch": "launch",
+    "cycles": "cycles",
+    "checked": "checked",
+    "peak_blocks": "peak",
+    "l2_requests": "requests",
+    "hits": "hits",
+    "misses": "misses",
+    "merges": "merges",
+    "fills": "fills"
+  },
+  "source_sha256": {
+    "hashed_rtl_slots32/hashed_connected_top.sv": "f8601c1730a45a9c53ab8a3173b6461d774cd0b7e3643c3d2487ad1838e7ed9c",
+    "hashed_rtl_slots32/hashed_slice_l2.sv": "19f386537ba31eae2d19803b1f76c2cae1a97bcfd830643f1fd28d30b78af15e",
+    "backing.hpp": "140d6929416127251dc8fb66a415e19ae418c43cc2657ec08a6776b5e6d37a55",
+    "grid_metadata.hpp": "b7cb619ec1b756c34af947fada415b53bddc49e35627154ff213e2a08d900105",
+    "generation_metadata.hpp": "32b8aff44983f29e0623611070202226c13d3029bc24b8a98131f81caf86c7b4",
+    "output_metadata.hpp": "86e07a8c18f0da075ec88bae56069ff805fd211961e985f83c789397787c55d2",
+    "sm_pool.hpp": "ecb082831652d9d9ad116364c6156ae3a0cec32512678ec57ef4e09cafdfe2b4",
+    "l2_slice.hpp": "a2394a00b41d75d6b6fce924844a6a1c722d4fe98d429f37abb7c0760dec3ccd",
+    "native_stage_event.hpp": "e5d0f71be713774009020c869b71a64491fac6f1ff47f02824f158ec2d90dd98",
+    "sm_event.hpp": "165acd89eff389a0f60c038c60f41181facf5a9be574be2d4fbbbd64809368ec",
+    "shared_hub_event.hpp": "593b961d10f8b8e929a148cb6aadadde4f32866fdfae9206b21d011a5fea182d",
+    "units.hpp": "6f92d6ed06913bd4622a43f29ad6cec4f5ad9ac02b7c20e2510b78890f4bffbe",
+    "resident_metadata.hpp": "e80f43ba854c0621f50b671a5de37fd8d7f85a6574ae362e9c89e03a1a07a3fa",
+    "staging_event.hpp": "f8a39e4c0c7637c66f449a3dfb291ed54fd8c38f37634880abd71a290a2a1f1b",
+    "native_schedule.hpp": "cc903710a14275ca26ea56ad2d5b804e37cd6ee3e3f41873665ba2a5242114ea",
+    "native_engine_event.hpp": "56ae7321d29552199d043f466c9b1ddab0604fc54da5a907c075ea75c0c77216",
+    "optimized/sm_event.hpp": "29d54741e16cc0d7516b86a9cbb95f312d833ed5c68afb304a93de586aebef50",
+    "optimized/shared_hub_event.hpp": "209ad2f24e13c49b7eeed454992b0f65e422f93603136c80efe02f2df10d8ff7",
+    "optimized/resident_metadata.hpp": "e364b4d58c980e8de6a927f6f7e4570f803897eb5fe4b5732b189b0f55517cae",
+    "optimized/staging_event.hpp": "89456e645abf13cf3d6cd72b81e9c4d60e58a11f95f24ed9a2cdede91ae9bd73",
+    "optimized/native_engine_event.hpp": "3d6e0e96db2b0adf5bf61c30a424c6d3fb6c34e1035c3133f1f24c0d0e943f5c"
+  }
+}

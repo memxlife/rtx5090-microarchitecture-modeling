@@ -1,0 +1,23 @@
+{
+  "result": "passed",
+  "sources": {
+    "hardware_blocks.sv": "5f440c3e53abf5f907a2300c47798d7df41d81a39e1666d1c2ebfcb8a6add97a",
+    "allocation_demands.sv": "9225576fee76bd34f3c55262b2cacd5c21f43a2ced88ce375221d8519b6bd760",
+    "quantized_block_admission.sv": "048f8fc9dfaa3d807c5b5bbe5b9a7d1c5eeb4ec33150ef3058a2b0f8769bcacd",
+    "quantized_admission_tb.sv": "9790e94ab1dc41225661a20eee7d015f52f6437ed18342f584378410f717be97"
+  },
+  "checks": [
+    "saved smallGEMM11blocks44warps",
+    "saved largeGEMM8blocks32warps",
+    "no pre-edge retire bypass",
+    "retire releases capacity",
+    "warp48limit",
+    "block24limit",
+    "perblocksharedlimit",
+    "invalid zero-thread request"
+  ],
+  "output": "QUANTIZED_ADMISSION_PASS\n- rtl/components/quantized_admission_tb.sv:31: Verilog $finish\n- S i m u l a t i o n   R e p o r t: Verilator 5.050 2026-07-01\n- Verilator: $finish at 1ns; walltime 0.000 s; speed 22.733 us/s\n- Verilator: cpu 0.000 s on 1 threads; allocated 2 MB\n",
+  "timing_validated": false,
+  "private_partition_placement_modeled": false,
+  "full_GPU_integrated": false
+}

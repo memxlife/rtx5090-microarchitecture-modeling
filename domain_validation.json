@@ -1,0 +1,7202 @@
+[
+  {
+    "tile": [
+      80,
+      64,
+      16
+    ],
+    "executable": "cold_80_64_16",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=80",
+      "-DBN=64",
+      "-DBK=16",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_80_64_16"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 4608,
+    "resident_ctas": 8,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.206048,
+      0.205606398,
+      0.206425598,
+      0.205203199,
+      0.205625597,
+      0.206035197,
+      0.206022397,
+      0.205222398,
+      0.205215997
+    ],
+    "latency_ms_median": 0.205625597,
+    "elapsed_seconds": 2.8206350803375244
+  },
+  {
+    "tile": [
+      16,
+      16,
+      16
+    ],
+    "executable": "cold_16_16_16",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=16",
+      "-DBN=16",
+      "-DBK=16",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_16_16_16"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 26,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 1024,
+    "resident_ctas": 12,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.187084803,
+      0.1859584,
+      0.185542402,
+      0.185548803,
+      0.186771202,
+      0.184294397,
+      0.186784002,
+      0.185145602,
+      0.1859456
+    ],
+    "latency_ms_median": 0.1859456,
+    "elapsed_seconds": 3.440040111541748
+  },
+  {
+    "tile": [
+      16,
+      16,
+      32
+    ],
+    "executable": "cold_16_16_32",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=16",
+      "-DBN=16",
+      "-DBK=32",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_16_16_32"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 36,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 2048,
+    "resident_ctas": 12,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.185119998,
+      0.185523197,
+      0.186348799,
+      0.185523197,
+      0.1859456,
+      0.185939199,
+      0.186764801,
+      0.187174401,
+      0.186758399
+    ],
+    "latency_ms_median": 0.1859456,
+    "elapsed_seconds": 4.081732749938965
+  },
+  {
+    "tile": [
+      16,
+      16,
+      48
+    ],
+    "executable": "cold_16_16_48",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=16",
+      "-DBN=16",
+      "-DBK=48",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_16_16_48"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 39,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 3072,
+    "resident_ctas": 12,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.201100796,
+      0.201939198,
+      0.201913598,
+      0.202342394,
+      0.201523197,
+      0.201932794,
+      0.201523194,
+      0.203155199,
+      0.202751994
+    ],
+    "latency_ms_median": 0.201932794,
+    "elapsed_seconds": 4.6818952560424805
+  },
+  {
+    "tile": [
+      16,
+      16,
+      64
+    ],
+    "executable": "cold_16_16_64",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=16",
+      "-DBN=16",
+      "-DBK=64",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_16_16_64"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 42,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 4096,
+    "resident_ctas": 10,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.105676799,
+      0.105267198,
+      0.104857598,
+      0.105279998,
+      0.105260798,
+      0.105273598,
+      0.105267198,
+      0.105273598,
+      0.104857598
+    ],
+    "latency_ms_median": 0.105267198,
+    "elapsed_seconds": 5.266026973724365
+  },
+  {
+    "tile": [
+      16,
+      32,
+      16
+    ],
+    "executable": "cold_16_32_16",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=16",
+      "-DBN=32",
+      "-DBK=16",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_16_32_16"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 32,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 1536,
+    "resident_ctas": 12,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.153190407,
+      0.152364802,
+      0.153593606,
+      0.153587204,
+      0.152768004,
+      0.152768004,
+      0.152358404,
+      0.153184003,
+      0.152761602
+    ],
+    "latency_ms_median": 0.152768004,
+    "elapsed_seconds": 5.937166452407837
+  },
+  {
+    "tile": [
+      16,
+      32,
+      32
+    ],
+    "executable": "cold_16_32_32",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=16",
+      "-DBN=32",
+      "-DBK=32",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_16_32_32"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 3072,
+    "resident_ctas": 12,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.0811007977,
+      0.0819199979,
+      0.0819199979,
+      0.0815039977,
+      0.0815167978,
+      0.081932798,
+      0.081926398,
+      0.0819199979,
+      0.0815167978
+    ],
+    "latency_ms_median": 0.0819199979,
+    "elapsed_seconds": 6.5258448123931885
+  },
+  {
+    "tile": [
+      16,
+      32,
+      48
+    ],
+    "executable": "cold_16_32_48",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=16",
+      "-DBN=32",
+      "-DBK=48",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_16_32_48"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 4608,
+    "resident_ctas": 10,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.144582403,
+      0.144179204,
+      0.144576001,
+      0.144992003,
+      0.144582403,
+      0.144992003,
+      0.144192001,
+      0.144595203,
+      0.144172803
+    ],
+    "latency_ms_median": 0.144582403,
+    "elapsed_seconds": 7.120500564575195
+  },
+  {
+    "tile": [
+      16,
+      32,
+      64
+    ],
+    "executable": "cold_16_32_64",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=16",
+      "-DBN=32",
+      "-DBK=64",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_16_32_64"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 6144,
+    "resident_ctas": 9,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.0860159993,
+      0.0860159993,
+      0.0856063992,
+      0.0843775988,
+      0.085196799,
+      0.085196799,
+      0.0843775988,
+      0.0860159993,
+      0.0852031991
+    ],
+    "latency_ms_median": 0.0852031991,
+    "elapsed_seconds": 7.709315538406372
+  },
+  {
+    "tile": [
+      16,
+      48,
+      16
+    ],
+    "executable": "cold_16_48_16",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=16",
+      "-DBN=48",
+      "-DBK=16",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_16_48_16"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 32,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 2048,
+    "resident_ctas": 12,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.232249603,
+      0.233056003,
+      0.231417602,
+      0.232646403,
+      0.231840003,
+      0.231417602,
+      0.233056003,
+      0.233472005,
+      0.233062404
+    ],
+    "latency_ms_median": 0.232646403,
+    "elapsed_seconds": 8.321668863296509
+  },
+  {
+    "tile": [
+      16,
+      48,
+      32
+    ],
+    "executable": "cold_16_48_32",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=16",
+      "-DBN=48",
+      "-DBK=32",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_16_48_32"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 4096,
+    "resident_ctas": 11,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.0974848032,
+      0.0970752031,
+      0.0974848032,
+      0.0983104035,
+      0.0974848032,
+      0.0983104035,
+      0.0979008034,
+      0.0974912032,
+      0.0974784032
+    ],
+    "latency_ms_median": 0.0974848032,
+    "elapsed_seconds": 8.906757831573486
+  },
+  {
+    "tile": [
+      16,
+      48,
+      48
+    ],
+    "executable": "cold_16_48_48",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=16",
+      "-DBN=48",
+      "-DBK=48",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_16_48_48"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 6144,
+    "resident_ctas": 9,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.119584002,
+      0.120825602,
+      0.120006403,
+      0.120000003,
+      0.120422404,
+      0.120006403,
+      0.119187203,
+      0.119987203,
+      0.119174401
+    ],
+    "latency_ms_median": 0.120000003,
+    "elapsed_seconds": 9.5081627368927
+  },
+  {
+    "tile": [
+      16,
+      48,
+      64
+    ],
+    "executable": "cold_16_48_64",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=16",
+      "-DBN=48",
+      "-DBK=64",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_16_48_64"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 8192,
+    "resident_ctas": 7,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.112224001,
+      0.112236801,
+      0.111827201,
+      0.112633601,
+      0.112230401,
+      0.112224001,
+      0.112640001,
+      0.112224001,
+      0.112640001
+    ],
+    "latency_ms_median": 0.112230401,
+    "elapsed_seconds": 10.16008973121643
+  },
+  {
+    "tile": [
+      16,
+      64,
+      16
+    ],
+    "executable": "cold_16_64_16",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=16",
+      "-DBN=64",
+      "-DBK=16",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_16_64_16"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 2560,
+    "resident_ctas": 12,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.1093568,
+      0.1093568,
+      0.10896,
+      0.1093632,
+      0.1089408,
+      0.1093568,
+      0.1093568,
+      0.1093504,
+      0.1093568
+    ],
+    "latency_ms_median": 0.1093568,
+    "elapsed_seconds": 10.780038356781006
+  },
+  {
+    "tile": [
+      16,
+      64,
+      32
+    ],
+    "executable": "cold_16_64_32",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=16",
+      "-DBN=64",
+      "-DBK=32",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_16_64_32"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 5120,
+    "resident_ctas": 10,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.1093632,
+      0.1093568,
+      0.1097728,
+      0.1089472,
+      0.1093568,
+      0.10976,
+      0.108934399,
+      0.108537599,
+      0.1089472
+    ],
+    "latency_ms_median": 0.1093568,
+    "elapsed_seconds": 11.408186197280884
+  },
+  {
+    "tile": [
+      16,
+      64,
+      48
+    ],
+    "executable": "cold_16_64_48",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=16",
+      "-DBN=64",
+      "-DBK=48",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_16_64_48"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 7680,
+    "resident_ctas": 8,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.112224001,
+      0.111820801,
+      0.1109952,
+      0.113024001,
+      0.113856001,
+      0.112211201,
+      0.112640001,
+      0.113036801,
+      0.112211201
+    ],
+    "latency_ms_median": 0.112224001,
+    "elapsed_seconds": 12.0234055519104
+  },
+  {
+    "tile": [
+      16,
+      64,
+      64
+    ],
+    "executable": "cold_16_64_64",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=16",
+      "-DBN=64",
+      "-DBK=64",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_16_64_64"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 10240,
+    "resident_ctas": 6,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.0917504013,
+      0.0921600014,
+      0.0913344011,
+      0.0917504013,
+      0.0913408011,
+      0.0913472012,
+      0.0913472012,
+      0.090937601,
+      0.0917376012
+    ],
+    "latency_ms_median": 0.0913472012,
+    "elapsed_seconds": 12.667028188705444
+  },
+  {
+    "tile": [
+      16,
+      80,
+      16
+    ],
+    "executable": "cold_16_80_16",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=16",
+      "-DBN=80",
+      "-DBK=16",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_16_80_16"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 3072,
+    "resident_ctas": 12,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.190048,
+      0.188,
+      0.1888192,
+      0.188403201,
+      0.189644805,
+      0.189644805,
+      0.189241603,
+      0.188819203,
+      0.1896512
+    ],
+    "latency_ms_median": 0.189241603,
+    "elapsed_seconds": 13.529370784759521
+  },
+  {
+    "tile": [
+      16,
+      80,
+      32
+    ],
+    "executable": "cold_16_80_32",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=16",
+      "-DBN=80",
+      "-DBK=32",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_16_80_32"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 6144,
+    "resident_ctas": 9,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.130643204,
+      0.129830402,
+      0.130246404,
+      0.130662403,
+      0.132288,
+      0.129830402,
+      0.130656004,
+      0.131456003,
+      0.130233604
+    ],
+    "latency_ms_median": 0.130643204,
+    "elapsed_seconds": 14.150577783584595
+  },
+  {
+    "tile": [
+      16,
+      80,
+      48
+    ],
+    "executable": "cold_16_80_48",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=16",
+      "-DBN=80",
+      "-DBK=48",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_16_80_48"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 9216,
+    "resident_ctas": 7,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.161375996,
+      0.159340796,
+      0.160972795,
+      0.160972795,
+      0.160966396,
+      0.160556796,
+      0.161369598,
+      0.159743994,
+      0.160140797
+    ],
+    "latency_ms_median": 0.160966396,
+    "elapsed_seconds": 14.780076503753662
+  },
+  {
+    "tile": [
+      16,
+      80,
+      64
+    ],
+    "executable": "cold_16_80_64",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=16",
+      "-DBN=80",
+      "-DBK=64",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_16_80_64"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 48,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 12288,
+    "resident_ctas": 5,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.133535999,
+      0.1327104,
+      0.1318912,
+      0.133529601,
+      0.1318912,
+      0.13312,
+      0.1327104,
+      0.133113599,
+      0.131078401
+    ],
+    "latency_ms_median": 0.1327104,
+    "elapsed_seconds": 15.421612977981567
+  },
+  {
+    "tile": [
+      16,
+      96,
+      16
+    ],
+    "executable": "cold_16_96_16",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=16",
+      "-DBN=96",
+      "-DBK=16",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_16_96_16"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 3584,
+    "resident_ctas": 11,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.2195456,
+      0.2187264,
+      0.219552001,
+      0.221177602,
+      0.2203648,
+      0.220358402,
+      0.2195456,
+      0.2203648,
+      0.221587199
+    ],
+    "latency_ms_median": 0.220358402,
+    "elapsed_seconds": 16.028568267822266
+  },
+  {
+    "tile": [
+      16,
+      96,
+      32
+    ],
+    "executable": "cold_16_96_32",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=16",
+      "-DBN=96",
+      "-DBK=32",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_16_96_32"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 7168,
+    "resident_ctas": 8,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.159737596,
+      0.159334397,
+      0.159750399,
+      0.159327996,
+      0.160159996,
+      0.158099195,
+      0.160147196,
+      0.158924794,
+      0.158924797
+    ],
+    "latency_ms_median": 0.159334397,
+    "elapsed_seconds": 16.760234832763672
+  },
+  {
+    "tile": [
+      16,
+      96,
+      48
+    ],
+    "executable": "cold_16_96_48",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=16",
+      "-DBN=96",
+      "-DBK=48",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_16_96_48"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 10752,
+    "resident_ctas": 6,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.1576832,
+      0.156857598,
+      0.1576704,
+      0.157260799,
+      0.157254401,
+      0.156038398,
+      0.158496001,
+      0.157683197,
+      0.156844801
+    ],
+    "latency_ms_median": 0.157260799,
+    "elapsed_seconds": 17.500338077545166
+  },
+  {
+    "tile": [
+      16,
+      96,
+      64
+    ],
+    "executable": "cold_16_96_64",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=16",
+      "-DBN=96",
+      "-DBK=64",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_16_96_64"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 48,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 14336,
+    "resident_ctas": 5,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.151961604,
+      0.1544,
+      0.155238399,
+      0.153177601,
+      0.153184003,
+      0.155219197,
+      0.153600001,
+      0.155641598,
+      0.155238396
+    ],
+    "latency_ms_median": 0.1544,
+    "elapsed_seconds": 18.10031270980835
+  },
+  {
+    "tile": [
+      32,
+      16,
+      16
+    ],
+    "executable": "cold_32_16_16",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=32",
+      "-DBN=16",
+      "-DBK=16",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_32_16_16"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 28,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 1536,
+    "resident_ctas": 12,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.181875199,
+      0.181030399,
+      0.180627197,
+      0.180211198,
+      0.181862402,
+      0.181043202,
+      0.181036797,
+      0.181023997,
+      0.180223995
+    ],
+    "latency_ms_median": 0.181030399,
+    "elapsed_seconds": 18.68737530708313
+  },
+  {
+    "tile": [
+      32,
+      16,
+      32
+    ],
+    "executable": "cold_32_16_32",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=32",
+      "-DBN=16",
+      "-DBK=32",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_32_16_32"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 3072,
+    "resident_ctas": 12,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.0860223994,
+      0.0864319995,
+      0.0860159993,
+      0.0864319995,
+      0.0860159993,
+      0.0856063992,
+      0.0864255995,
+      0.0864255995,
+      0.0860159993
+    ],
+    "latency_ms_median": 0.0860223994,
+    "elapsed_seconds": 19.377620935440063
+  },
+  {
+    "tile": [
+      32,
+      16,
+      48
+    ],
+    "executable": "cold_32_16_48",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=32",
+      "-DBN=16",
+      "-DBK=48",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_32_16_48"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 4608,
+    "resident_ctas": 10,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.184723201,
+      0.185132802,
+      0.185145602,
+      0.185548803,
+      0.185145599,
+      0.18432,
+      0.185958403,
+      0.185132802,
+      0.184320003
+    ],
+    "latency_ms_median": 0.185132802,
+    "elapsed_seconds": 20.024070501327515
+  },
+  {
+    "tile": [
+      32,
+      16,
+      64
+    ],
+    "executable": "cold_32_16_64",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=32",
+      "-DBN=16",
+      "-DBK=64",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_32_16_64"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 6144,
+    "resident_ctas": 9,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.110176,
+      0.1089536,
+      0.108934399,
+      0.1101696,
+      0.1089408,
+      0.1089408,
+      0.1097536,
+      0.1097536,
+      0.1097472
+    ],
+    "latency_ms_median": 0.1097472,
+    "elapsed_seconds": 20.628705739974976
+  },
+  {
+    "tile": [
+      32,
+      32,
+      16
+    ],
+    "executable": "cold_32_32_16",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=32",
+      "-DBN=32",
+      "-DBK=16",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_32_32_16"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 31,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 2048,
+    "resident_ctas": 12,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.147859204,
+      0.147436801,
+      0.147859204,
+      0.148665601,
+      0.148275203,
+      0.147462401,
+      0.147443202,
+      0.147846401,
+      0.147430399
+    ],
+    "latency_ms_median": 0.147846401,
+    "elapsed_seconds": 21.220537185668945
+  },
+  {
+    "tile": [
+      32,
+      32,
+      32
+    ],
+    "executable": "cold_32_32_32",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=32",
+      "-DBN=32",
+      "-DBK=32",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_32_32_32"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 4096,
+    "resident_ctas": 11,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.0655359998,
+      0.0655423999,
+      0.0655359998,
+      0.0651327997,
+      0.0655423999,
+      0.0655359998,
+      0.0655423999,
+      0.0655359998,
+      0.0655423999
+    ],
+    "latency_ms_median": 0.0655359998,
+    "elapsed_seconds": 21.949557304382324
+  },
+  {
+    "tile": [
+      32,
+      32,
+      48
+    ],
+    "executable": "cold_32_32_48",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=32",
+      "-DBN=32",
+      "-DBK=48",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_32_32_48"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 6144,
+    "resident_ctas": 9,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.0696384013,
+      0.0696320012,
+      0.0696384013,
+      0.0696384013,
+      0.0692288011,
+      0.0696320012,
+      0.0692224011,
+      0.068819201,
+      0.0696384013
+    ],
+    "latency_ms_median": 0.0696320012,
+    "elapsed_seconds": 22.531091451644897
+  },
+  {
+    "tile": [
+      32,
+      32,
+      64
+    ],
+    "executable": "cold_32_32_64",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=32",
+      "-DBN=32",
+      "-DBK=64",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_32_32_64"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 8192,
+    "resident_ctas": 7,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.0716800019,
+      0.0724992022,
+      0.0720896021,
+      0.072083202,
+      0.0725056022,
+      0.0720896021,
+      0.0716800019,
+      0.0725120023,
+      0.071686402
+    ],
+    "latency_ms_median": 0.0720896021,
+    "elapsed_seconds": 23.119935512542725
+  },
+  {
+    "tile": [
+      32,
+      48,
+      16
+    ],
+    "executable": "cold_32_48_16",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=32",
+      "-DBN=48",
+      "-DBK=16",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_32_48_16"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 2560,
+    "resident_ctas": 12,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.208876801,
+      0.210112,
+      0.208787203,
+      0.209696001,
+      0.209286401,
+      0.208870402,
+      0.209286401,
+      0.209311998,
+      0.210124797
+    ],
+    "latency_ms_median": 0.209286401,
+    "elapsed_seconds": 23.72044086456299
+  },
+  {
+    "tile": [
+      32,
+      48,
+      32
+    ],
+    "executable": "cold_32_48_32",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=32",
+      "-DBN=48",
+      "-DBK=32",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_32_48_32"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 48,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 5120,
+    "resident_ctas": 10,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.0798527971,
+      0.0798655972,
+      0.0802687973,
+      0.0798719972,
+      0.0802815974,
+      0.0798719972,
+      0.0802879974,
+      0.0806847975,
+      0.0802815974
+    ],
+    "latency_ms_median": 0.0802687973,
+    "elapsed_seconds": 24.340576887130737
+  },
+  {
+    "tile": [
+      32,
+      48,
+      48
+    ],
+    "executable": "cold_32_48_48",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=32",
+      "-DBN=48",
+      "-DBK=48",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_32_48_48"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 56,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 7680,
+    "resident_ctas": 8,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.101171197,
+      0.100358398,
+      0.100761597,
+      0.0999359995,
+      0.0999423996,
+      0.100332798,
+      0.101171197,
+      0.101587197,
+      0.100351997
+    ],
+    "latency_ms_median": 0.100358398,
+    "elapsed_seconds": 24.93765091896057
+  },
+  {
+    "tile": [
+      32,
+      48,
+      64
+    ],
+    "executable": "cold_32_48_64",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=32",
+      "-DBN=48",
+      "-DBK=64",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_32_48_64"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 56,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 10240,
+    "resident_ctas": 6,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.0860095993,
+      0.0860159993,
+      0.0860031992,
+      0.0860095993,
+      0.0860031992,
+      0.0864127994,
+      0.0860159993,
+      0.0860159993,
+      0.0855935991
+    ],
+    "latency_ms_median": 0.0860095993,
+    "elapsed_seconds": 25.546527862548828
+  },
+  {
+    "tile": [
+      32,
+      64,
+      16
+    ],
+    "executable": "cold_32_64_16",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=32",
+      "-DBN=64",
+      "-DBK=16",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_32_64_16"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 3072,
+    "resident_ctas": 12,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.137203196,
+      0.1372096,
+      0.137216002,
+      0.137100798,
+      0.137216002,
+      0.137215999,
+      0.1372096,
+      0.1372096,
+      0.137216002
+    ],
+    "latency_ms_median": 0.1372096,
+    "elapsed_seconds": 26.238081216812134
+  },
+  {
+    "tile": [
+      32,
+      64,
+      32
+    ],
+    "executable": "cold_32_64_32",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=32",
+      "-DBN=64",
+      "-DBK=32",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_32_64_32"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 48,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 6144,
+    "resident_ctas": 9,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.0974656031,
+      0.0962496027,
+      0.0978752032,
+      0.0966464028,
+      0.0962368026,
+      0.0966592029,
+      0.0962368026,
+      0.0970752031,
+      0.0965312019
+    ],
+    "latency_ms_median": 0.0966464028,
+    "elapsed_seconds": 26.870325088500977
+  },
+  {
+    "tile": [
+      32,
+      64,
+      48
+    ],
+    "executable": "cold_32_64_48",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=32",
+      "-DBN=64",
+      "-DBK=48",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_32_64_48"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 9216,
+    "resident_ctas": 7,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.117536002,
+      0.116704002,
+      0.117548802,
+      0.117542402,
+      0.117542402,
+      0.117120002,
+      0.116729602,
+      0.116716802,
+      0.117548802
+    ],
+    "latency_ms_median": 0.117536002,
+    "elapsed_seconds": 27.480458974838257
+  },
+  {
+    "tile": [
+      32,
+      64,
+      64
+    ],
+    "executable": "cold_32_64_64",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=32",
+      "-DBN=64",
+      "-DBK=64",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_32_64_64"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 48,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 12288,
+    "resident_ctas": 5,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.106079999,
+      0.106086399,
+      0.106892799,
+      0.106899199,
+      0.107737599,
+      0.107315199,
+      0.106099199,
+      0.106502399,
+      0.106911999
+    ],
+    "latency_ms_median": 0.106892799,
+    "elapsed_seconds": 28.124884843826294
+  },
+  {
+    "tile": [
+      32,
+      80,
+      16
+    ],
+    "executable": "cold_32_80_16",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=32",
+      "-DBN=80",
+      "-DBK=16",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_32_80_16"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 54,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 3584,
+    "resident_ctas": 9,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.172832003,
+      0.172416005,
+      0.172416005,
+      0.172428802,
+      0.172838402,
+      0.172416005,
+      0.172000006,
+      0.172012803,
+      0.171904001
+    ],
+    "latency_ms_median": 0.172416005,
+    "elapsed_seconds": 28.799181699752808
+  },
+  {
+    "tile": [
+      32,
+      80,
+      32
+    ],
+    "executable": "cold_32_80_32",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=32",
+      "-DBN=80",
+      "-DBK=32",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_32_80_32"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 7168,
+    "resident_ctas": 8,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.115078402,
+      0.116300802,
+      0.115481602,
+      0.115475202,
+      0.115488002,
+      0.115072002,
+      0.115091202,
+      0.115072002,
+      0.114681602
+    ],
+    "latency_ms_median": 0.115091202,
+    "elapsed_seconds": 29.558441638946533
+  },
+  {
+    "tile": [
+      32,
+      80,
+      48
+    ],
+    "executable": "cold_32_80_48",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=32",
+      "-DBN=80",
+      "-DBK=48",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_32_80_48"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 10752,
+    "resident_ctas": 6,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.125740799,
+      0.126156798,
+      0.126163203,
+      0.126976001,
+      0.124927998,
+      0.127379198,
+      0.126559998,
+      0.125324798,
+      0.1269696
+    ],
+    "latency_ms_median": 0.126163203,
+    "elapsed_seconds": 30.18688702583313
+  },
+  {
+    "tile": [
+      32,
+      80,
+      64
+    ],
+    "executable": "cold_32_80_64",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=32",
+      "-DBN=80",
+      "-DBK=64",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_32_80_64"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 14336,
+    "resident_ctas": 5,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.119193603,
+      0.117152002,
+      0.118771203,
+      0.117145602,
+      0.117939202,
+      0.117945603,
+      0.119603202,
+      0.117984001,
+      0.117139202
+    ],
+    "latency_ms_median": 0.117945603,
+    "elapsed_seconds": 30.796595335006714
+  },
+  {
+    "tile": [
+      32,
+      96,
+      16
+    ],
+    "executable": "cold_32_96_16",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=32",
+      "-DBN=96",
+      "-DBK=16",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_32_96_16"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 56,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 4096,
+    "resident_ctas": 9,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.160953599,
+      0.161766401,
+      0.161779198,
+      0.161779198,
+      0.161369598,
+      0.160953599,
+      0.161772799,
+      0.162188801,
+      0.162592
+    ],
+    "latency_ms_median": 0.161772799,
+    "elapsed_seconds": 31.428088903427124
+  },
+  {
+    "tile": [
+      32,
+      96,
+      32
+    ],
+    "executable": "cold_32_96_32",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=32",
+      "-DBN=96",
+      "-DBK=32",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_32_96_32"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 8192,
+    "resident_ctas": 7,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.135571197,
+      0.1359808,
+      0.136383998,
+      0.135168001,
+      0.1368,
+      0.1355712,
+      0.1363904,
+      0.135148796,
+      0.135961595
+    ],
+    "latency_ms_median": 0.135961595,
+    "elapsed_seconds": 32.03554940223694
+  },
+  {
+    "tile": [
+      32,
+      96,
+      48
+    ],
+    "executable": "cold_32_96_48",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=32",
+      "-DBN=96",
+      "-DBK=48",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_32_96_48"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 12288,
+    "resident_ctas": 5,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.127795202,
+      0.128204802,
+      0.1277888,
+      0.128192002,
+      0.1281984,
+      0.1290176,
+      0.1281984,
+      0.126976001,
+      0.127776003
+    ],
+    "latency_ms_median": 0.128192002,
+    "elapsed_seconds": 32.6353657245636
+  },
+  {
+    "tile": [
+      32,
+      96,
+      64
+    ],
+    "executable": "cold_32_96_64",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=32",
+      "-DBN=96",
+      "-DBK=64",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_32_96_64"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 16384,
+    "resident_ctas": 4,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.134348801,
+      0.136383998,
+      0.135584,
+      0.136396798,
+      0.135584,
+      0.135584,
+      0.135174403,
+      0.134751999,
+      0.135987198
+    ],
+    "latency_ms_median": 0.135584,
+    "elapsed_seconds": 33.380783796310425
+  },
+  {
+    "tile": [
+      48,
+      16,
+      16
+    ],
+    "executable": "cold_48_16_16",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=48",
+      "-DBN=16",
+      "-DBK=16",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_48_16_16"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 28,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 2048,
+    "resident_ctas": 12,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.246163195,
+      0.244940796,
+      0.246163195,
+      0.246988794,
+      0.246579197,
+      0.246579194,
+      0.246585596,
+      0.246169594,
+      0.246579194
+    ],
+    "latency_ms_median": 0.246579194,
+    "elapsed_seconds": 33.98383402824402
+  },
+  {
+    "tile": [
+      48,
+      16,
+      32
+    ],
+    "executable": "cold_48_16_32",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=48",
+      "-DBN=16",
+      "-DBK=32",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_48_16_32"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 4096,
+    "resident_ctas": 11,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.0999487981,
+      0.100761597,
+      0.100351997,
+      0.099935998,
+      0.100351997,
+      0.100767997,
+      0.100351997,
+      0.100345597,
+      0.100351997
+    ],
+    "latency_ms_median": 0.100351997,
+    "elapsed_seconds": 34.591042280197144
+  },
+  {
+    "tile": [
+      48,
+      16,
+      48
+    ],
+    "executable": "cold_48_16_48",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=48",
+      "-DBN=16",
+      "-DBK=48",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_48_16_48"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 6144,
+    "resident_ctas": 9,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.154815999,
+      0.1540032,
+      0.154815999,
+      0.154406402,
+      0.155232,
+      0.1544,
+      0.153171203,
+      0.1540032,
+      0.153587201
+    ],
+    "latency_ms_median": 0.1544,
+    "elapsed_seconds": 35.21134543418884
+  },
+  {
+    "tile": [
+      48,
+      16,
+      64
+    ],
+    "executable": "cold_48_16_64",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=48",
+      "-DBN=16",
+      "-DBK=64",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_48_16_64"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 8192,
+    "resident_ctas": 7,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.139270398,
+      0.140896001,
+      0.140486401,
+      0.140063998,
+      0.140492803,
+      0.140076801,
+      0.140499201,
+      0.140486401,
+      0.140076801
+    ],
+    "latency_ms_median": 0.140486401,
+    "elapsed_seconds": 35.806013345718384
+  },
+  {
+    "tile": [
+      48,
+      32,
+      16
+    ],
+    "executable": "cold_48_32_16",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=48",
+      "-DBN=32",
+      "-DBK=16",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_48_32_16"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 2560,
+    "resident_ctas": 12,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.231014404,
+      0.231430402,
+      0.231424001,
+      0.230585599,
+      0.230182397,
+      0.230592,
+      0.231014404,
+      0.231417602,
+      0.231398398
+    ],
+    "latency_ms_median": 0.231014404,
+    "elapsed_seconds": 36.39859342575073
+  },
+  {
+    "tile": [
+      48,
+      32,
+      32
+    ],
+    "executable": "cold_48_32_32",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=48",
+      "-DBN=32",
+      "-DBK=32",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_48_32_32"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 48,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 5120,
+    "resident_ctas": 10,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.0835519984,
+      0.0835455984,
+      0.0835583985,
+      0.0835519984,
+      0.0827263981,
+      0.0839743987,
+      0.0835519984,
+      0.0839551985,
+      0.0835519984
+    ],
+    "latency_ms_median": 0.0835519984,
+    "elapsed_seconds": 37.01622676849365
+  },
+  {
+    "tile": [
+      48,
+      32,
+      48
+    ],
+    "executable": "cold_48_32_48",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=48",
+      "-DBN=32",
+      "-DBK=48",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_48_32_48"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 48,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 7680,
+    "resident_ctas": 8,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.101977597,
+      0.102387197,
+      0.102809598,
+      0.101574397,
+      0.102809598,
+      0.102803198,
+      0.101158397,
+      0.101580797,
+      0.101996797
+    ],
+    "latency_ms_median": 0.101996797,
+    "elapsed_seconds": 37.59851670265198
+  },
+  {
+    "tile": [
+      48,
+      32,
+      64
+    ],
+    "executable": "cold_48_32_64",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=48",
+      "-DBN=32",
+      "-DBK=64",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_48_32_64"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 48,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 10240,
+    "resident_ctas": 6,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.093804802,
+      0.0933824018,
+      0.0929664016,
+      0.0937856019,
+      0.0937920019,
+      0.0933824018,
+      0.0940736011,
+      0.094201602,
+      0.0933952019
+    ],
+    "latency_ms_median": 0.0937856019,
+    "elapsed_seconds": 38.18309140205383
+  },
+  {
+    "tile": [
+      48,
+      48,
+      16
+    ],
+    "executable": "cold_48_48_16",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=48",
+      "-DBN=48",
+      "-DBK=16",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_48_48_16"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 48,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 3072,
+    "resident_ctas": 10,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.285081595,
+      0.284255999,
+      0.283436799,
+      0.284255999,
+      0.284262401,
+      0.283852798,
+      0.283846396,
+      0.283423996,
+      0.283852798
+    ],
+    "latency_ms_median": 0.283852798,
+    "elapsed_seconds": 38.77277636528015
+  },
+  {
+    "tile": [
+      48,
+      48,
+      32
+    ],
+    "executable": "cold_48_48_32",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=48",
+      "-DBN=48",
+      "-DBK=32",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_48_48_32"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 6144,
+    "resident_ctas": 8,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.0978944033,
+      0.0978880033,
+      0.0974720031,
+      0.0982912034,
+      0.0978944033,
+      0.0983040035,
+      0.0974656031,
+      0.0983040035,
+      0.0974784032
+    ],
+    "latency_ms_median": 0.0978944033,
+    "elapsed_seconds": 39.36630988121033
+  },
+  {
+    "tile": [
+      48,
+      48,
+      48
+    ],
+    "executable": "cold_48_48_48",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=48",
+      "-DBN=48",
+      "-DBK=48",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_48_48_48"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 9216,
+    "resident_ctas": 7,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.117132802,
+      0.116742402,
+      0.116307202,
+      0.116736002,
+      0.117139202,
+      0.116729602,
+      0.117132802,
+      0.115910402,
+      0.116332802
+    ],
+    "latency_ms_median": 0.116736002,
+    "elapsed_seconds": 39.951000690460205
+  },
+  {
+    "tile": [
+      48,
+      48,
+      64
+    ],
+    "executable": "cold_48_48_64",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=48",
+      "-DBN=48",
+      "-DBK=64",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_48_48_64"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 66,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 12288,
+    "resident_ctas": 5,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.100345597,
+      0.100351997,
+      0.0999231979,
+      0.0999231979,
+      0.0995135993,
+      0.100345597,
+      0.100345597,
+      0.100332797,
+      0.100339197
+    ],
+    "latency_ms_median": 0.100339197,
+    "elapsed_seconds": 40.55914902687073
+  },
+  {
+    "tile": [
+      48,
+      64,
+      16
+    ],
+    "executable": "cold_48_64_16",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=48",
+      "-DBN=64",
+      "-DBK=16",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_48_64_16"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 56,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 3584,
+    "resident_ctas": 9,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.2076608,
+      0.2068288,
+      0.207654399,
+      0.206822401,
+      0.206835198,
+      0.207244802,
+      0.2076608,
+      0.207232001,
+      0.2072384
+    ],
+    "latency_ms_median": 0.2072384,
+    "elapsed_seconds": 41.240259885787964
+  },
+  {
+    "tile": [
+      48,
+      64,
+      32
+    ],
+    "executable": "cold_48_64_32",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=48",
+      "-DBN=64",
+      "-DBK=32",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_48_64_32"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 56,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 7168,
+    "resident_ctas": 8,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.113452801,
+      0.112614401,
+      0.113856001,
+      0.113862401,
+      0.113433601,
+      0.112620801,
+      0.113849601,
+      0.113030401,
+      0.113446401
+    ],
+    "latency_ms_median": 0.113446401,
+    "elapsed_seconds": 41.866599559783936
+  },
+  {
+    "tile": [
+      48,
+      64,
+      48
+    ],
+    "executable": "cold_48_64_48",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=48",
+      "-DBN=64",
+      "-DBK=48",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_48_64_48"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 56,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 10752,
+    "resident_ctas": 6,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.119174403,
+      0.120006403,
+      0.119584003,
+      0.119584003,
+      0.118758403,
+      0.119584003,
+      0.119577603,
+      0.120409603,
+      0.119577603
+    ],
+    "latency_ms_median": 0.119584003,
+    "elapsed_seconds": 42.46276307106018
+  },
+  {
+    "tile": [
+      48,
+      64,
+      64
+    ],
+    "executable": "cold_48_64_64",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=48",
+      "-DBN=64",
+      "-DBK=64",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_48_64_64"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 56,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 14336,
+    "resident_ctas": 5,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.115500802,
+      0.113849601,
+      0.114688002,
+      0.113843201,
+      0.114272001,
+      0.114681602,
+      0.114681602,
+      0.114662401,
+      0.114272001
+    ],
+    "latency_ms_median": 0.114662401,
+    "elapsed_seconds": 43.066120624542236
+  },
+  {
+    "tile": [
+      48,
+      80,
+      16
+    ],
+    "executable": "cold_48_80_16",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=48",
+      "-DBN=80",
+      "-DBK=16",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_48_80_16"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 70,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 4096,
+    "resident_ctas": 7,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.249439996,
+      0.248198399,
+      0.249017599,
+      0.248607999,
+      0.248192,
+      0.248614398,
+      0.249446395,
+      0.2498624,
+      0.249023998
+    ],
+    "latency_ms_median": 0.249017599,
+    "elapsed_seconds": 43.66095447540283
+  },
+  {
+    "tile": [
+      48,
+      80,
+      32
+    ],
+    "executable": "cold_48_80_32",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=48",
+      "-DBN=80",
+      "-DBK=32",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_48_80_32"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 8192,
+    "resident_ctas": 7,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.124902397,
+      0.125311998,
+      0.124902397,
+      0.124895997,
+      0.125311998,
+      0.124902397,
+      0.124895997,
+      0.124895997,
+      0.124902397
+    ],
+    "latency_ms_median": 0.124902397,
+    "elapsed_seconds": 44.2811815738678
+  },
+  {
+    "tile": [
+      48,
+      80,
+      48
+    ],
+    "executable": "cold_48_80_48",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=48",
+      "-DBN=80",
+      "-DBK=48",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_48_80_48"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 79,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 12288,
+    "resident_ctas": 5,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.140473598,
+      0.14048,
+      0.139238396,
+      0.1400704,
+      0.140063998,
+      0.139641595,
+      0.140467197,
+      0.140076798,
+      0.139654398
+    ],
+    "latency_ms_median": 0.1400704,
+    "elapsed_seconds": 44.87620997428894
+  },
+  {
+    "tile": [
+      48,
+      80,
+      64
+    ],
+    "executable": "cold_48_80_64",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=48",
+      "-DBN=80",
+      "-DBK=64",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_48_80_64"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 72,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 16384,
+    "resident_ctas": 4,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.126963204,
+      0.126534404,
+      0.126956803,
+      0.1265536,
+      0.127366403,
+      0.126963204,
+      0.127366403,
+      0.126956803,
+      0.1273792
+    ],
+    "latency_ms_median": 0.126963204,
+    "elapsed_seconds": 45.490256547927856
+  },
+  {
+    "tile": [
+      48,
+      96,
+      16
+    ],
+    "executable": "cold_48_96_16",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=48",
+      "-DBN=96",
+      "-DBK=16",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_48_96_16"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 72,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 4608,
+    "resident_ctas": 7,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.243289596,
+      0.243711993,
+      0.243711993,
+      0.2428864,
+      0.2428992,
+      0.242886397,
+      0.243711996,
+      0.243705598,
+      0.243711993
+    ],
+    "latency_ms_median": 0.243705598,
+    "elapsed_seconds": 46.13125443458557
+  },
+  {
+    "tile": [
+      48,
+      96,
+      32
+    ],
+    "executable": "cold_48_96_32",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=48",
+      "-DBN=96",
+      "-DBK=32",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_48_96_32"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 9216,
+    "resident_ctas": 7,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.226912001,
+      0.226483196,
+      0.225254396,
+      0.226508799,
+      0.226495999,
+      0.226086399,
+      0.226495999,
+      0.226912001,
+      0.226918402
+    ],
+    "latency_ms_median": 0.226495999,
+    "elapsed_seconds": 46.76167869567871
+  },
+  {
+    "tile": [
+      48,
+      96,
+      48
+    ],
+    "executable": "cold_48_96_48",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=48",
+      "-DBN=96",
+      "-DBK=48",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_48_96_48"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 96,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 13824,
+    "resident_ctas": 5,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.147839999,
+      0.148256001,
+      0.147443199,
+      0.147046399,
+      0.147436801,
+      0.147436801,
+      0.147449601,
+      0.147033602,
+      0.147430399
+    ],
+    "latency_ms_median": 0.147436801,
+    "elapsed_seconds": 47.3411283493042
+  },
+  {
+    "tile": [
+      48,
+      96,
+      64
+    ],
+    "executable": "cold_48_96_64",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=48",
+      "-DBN=96",
+      "-DBK=64",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_48_96_64"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 94,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 18432,
+    "resident_ctas": 4,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.1453888,
+      0.144985601,
+      0.145401603,
+      0.1454016,
+      0.1453888,
+      0.145395201,
+      0.1453888,
+      0.1453888,
+      0.145401603
+    ],
+    "latency_ms_median": 0.1453888,
+    "elapsed_seconds": 47.92332196235657
+  },
+  {
+    "tile": [
+      64,
+      16,
+      16
+    ],
+    "executable": "cold_64_16_16",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=64",
+      "-DBN=16",
+      "-DBK=16",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_64_16_16"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 39,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 2560,
+    "resident_ctas": 12,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.113440001,
+      0.113049601,
+      0.113459201,
+      0.113036801,
+      0.113440001,
+      0.112620801,
+      0.112614401,
+      0.113024001,
+      0.113446401
+    ],
+    "latency_ms_median": 0.113049601,
+    "elapsed_seconds": 48.68103909492493
+  },
+  {
+    "tile": [
+      64,
+      16,
+      32
+    ],
+    "executable": "cold_64_16_32",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=64",
+      "-DBN=16",
+      "-DBK=32",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_64_16_32"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 5120,
+    "resident_ctas": 10,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.108127999,
+      0.108108799,
+      0.108127999,
+      0.108127999,
+      0.1089472,
+      0.108524799,
+      0.108531199,
+      0.108531199,
+      0.108537599
+    ],
+    "latency_ms_median": 0.108524799,
+    "elapsed_seconds": 49.25367021560669
+  },
+  {
+    "tile": [
+      64,
+      16,
+      48
+    ],
+    "executable": "cold_64_16_48",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=64",
+      "-DBN=16",
+      "-DBK=48",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_64_16_48"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 7680,
+    "resident_ctas": 8,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.175302401,
+      0.173241603,
+      0.175289604,
+      0.173651204,
+      0.173657602,
+      0.174899203,
+      0.174880001,
+      0.175712001,
+      0.174489602
+    ],
+    "latency_ms_median": 0.174880001,
+    "elapsed_seconds": 49.85106897354126
+  },
+  {
+    "tile": [
+      64,
+      16,
+      64
+    ],
+    "executable": "cold_64_16_64",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=64",
+      "-DBN=16",
+      "-DBK=64",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_64_16_64"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 10240,
+    "resident_ctas": 6,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.1114112,
+      0.1105856,
+      0.1093568,
+      0.1110144,
+      0.1093568,
+      0.1097728,
+      0.110176,
+      0.1101824,
+      0.1101824
+    ],
+    "latency_ms_median": 0.1101824,
+    "elapsed_seconds": 50.53376650810242
+  },
+  {
+    "tile": [
+      64,
+      32,
+      16
+    ],
+    "executable": "cold_64_32_16",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=64",
+      "-DBN=32",
+      "-DBK=16",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_64_32_16"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 48,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 3072,
+    "resident_ctas": 10,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.160140797,
+      0.1597184,
+      0.160140797,
+      0.160543999,
+      0.1601408,
+      0.1597184,
+      0.159724799,
+      0.160128,
+      0.160128
+    ],
+    "latency_ms_median": 0.160128,
+    "elapsed_seconds": 51.15139961242676
+  },
+  {
+    "tile": [
+      64,
+      32,
+      32
+    ],
+    "executable": "cold_64_32_32",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=64",
+      "-DBN=32",
+      "-DBK=32",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_64_32_32"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 48,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 6144,
+    "resident_ctas": 9,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.094195202,
+      0.0937920019,
+      0.0937728018,
+      0.0937792018,
+      0.094195202,
+      0.094201602,
+      0.0933696017,
+      0.093798402,
+      0.093804802
+    ],
+    "latency_ms_median": 0.093798402,
+    "elapsed_seconds": 51.73277831077576
+  },
+  {
+    "tile": [
+      64,
+      32,
+      48
+    ],
+    "executable": "cold_64_32_48",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=64",
+      "-DBN=32",
+      "-DBK=48",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_64_32_48"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 48,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 9216,
+    "resident_ctas": 7,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.101548797,
+      0.101971197,
+      0.101164797,
+      0.102399997,
+      0.101580797,
+      0.100742398,
+      0.102399997,
+      0.101567997,
+      0.101990397
+    ],
+    "latency_ms_median": 0.101580797,
+    "elapsed_seconds": 52.338101863861084
+  },
+  {
+    "tile": [
+      64,
+      32,
+      64
+    ],
+    "executable": "cold_64_32_64",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=64",
+      "-DBN=32",
+      "-DBK=64",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_64_32_64"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 48,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 12288,
+    "resident_ctas": 5,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.104031998,
+      0.104012798,
+      0.104019198,
+      0.104435198,
+      0.104422398,
+      0.104447998,
+      0.104435198,
+      0.104851198,
+      0.104428798
+    ],
+    "latency_ms_median": 0.104428798,
+    "elapsed_seconds": 52.92113780975342
+  },
+  {
+    "tile": [
+      64,
+      48,
+      16
+    ],
+    "executable": "cold_64_48_16",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=64",
+      "-DBN=48",
+      "-DBK=16",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_64_48_16"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 48,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 3584,
+    "resident_ctas": 10,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.2523072,
+      0.251494408,
+      0.252313596,
+      0.252294403,
+      0.252300805,
+      0.252307206,
+      0.251884806,
+      0.252716804,
+      0.252288002
+    ],
+    "latency_ms_median": 0.252300805,
+    "elapsed_seconds": 53.52114939689636
+  },
+  {
+    "tile": [
+      64,
+      48,
+      32
+    ],
+    "executable": "cold_64_48_32",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=64",
+      "-DBN=48",
+      "-DBK=32",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_64_48_32"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 7168,
+    "resident_ctas": 8,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.102809598,
+      0.102387197,
+      0.102393597,
+      0.102380797,
+      0.102393597,
+      0.102380797,
+      0.102374397,
+      0.102387197,
+      0.102380797
+    ],
+    "latency_ms_median": 0.102387197,
+    "elapsed_seconds": 54.10834741592407
+  },
+  {
+    "tile": [
+      64,
+      48,
+      48
+    ],
+    "executable": "cold_64_48_48",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=64",
+      "-DBN=48",
+      "-DBK=48",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_64_48_48"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 10752,
+    "resident_ctas": 6,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.113030401,
+      0.113030401,
+      0.112608001,
+      0.112620801,
+      0.112608001,
+      0.112620801,
+      0.112614401,
+      0.113036801,
+      0.112614401
+    ],
+    "latency_ms_median": 0.112620801,
+    "elapsed_seconds": 54.69715142250061
+  },
+  {
+    "tile": [
+      64,
+      48,
+      64
+    ],
+    "executable": "cold_64_48_64",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=64",
+      "-DBN=48",
+      "-DBK=64",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_64_48_64"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 56,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 14336,
+    "resident_ctas": 5,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.108543999,
+      0.108531199,
+      0.108531199,
+      0.108518399,
+      0.108518399,
+      0.108537599,
+      0.108531199,
+      0.108511999,
+      0.108524799
+    ],
+    "latency_ms_median": 0.108531199,
+    "elapsed_seconds": 55.28976130485535
+  },
+  {
+    "tile": [
+      64,
+      64,
+      16
+    ],
+    "executable": "cold_64_64_16",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=64",
+      "-DBN=64",
+      "-DBK=16",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_64_64_16"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 4096,
+    "resident_ctas": 8,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.135545594,
+      0.135148793,
+      0.135142395,
+      0.135142395,
+      0.135135993,
+      0.135155195,
+      0.135148796,
+      0.1351616,
+      0.135135993
+    ],
+    "latency_ms_median": 0.135148793,
+    "elapsed_seconds": 55.881211280822754
+  },
+  {
+    "tile": [
+      64,
+      64,
+      32
+    ],
+    "executable": "cold_64_64_32",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=64",
+      "-DBN=64",
+      "-DBK=32",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_64_64_32"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 8192,
+    "resident_ctas": 7,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.131052804,
+      0.130227205,
+      0.131059203,
+      0.130233604,
+      0.131078401,
+      0.131072,
+      0.130656001,
+      0.131059203,
+      0.130656001
+    ],
+    "latency_ms_median": 0.131052804,
+    "elapsed_seconds": 56.4688823223114
+  },
+  {
+    "tile": [
+      64,
+      64,
+      48
+    ],
+    "executable": "cold_64_64_48",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=64",
+      "-DBN=64",
+      "-DBK=48",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_64_64_48"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 12288,
+    "resident_ctas": 5,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.124915197,
+      0.124921598,
+      0.124511997,
+      0.124921598,
+      0.124505597,
+      0.124511997,
+      0.124511997,
+      0.124505597,
+      0.124499197
+    ],
+    "latency_ms_median": 0.124511997,
+    "elapsed_seconds": 57.08731460571289
+  },
+  {
+    "tile": [
+      64,
+      64,
+      64
+    ],
+    "executable": "cold_64_64_64",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=64",
+      "-DBN=64",
+      "-DBK=64",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_64_64_64"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 66,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 16384,
+    "resident_ctas": 4,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.131052804,
+      0.131046405,
+      0.131059203,
+      0.130636805,
+      0.131059203,
+      0.131046405,
+      0.131065604,
+      0.131052804,
+      0.131065604
+    ],
+    "latency_ms_median": 0.131052804,
+    "elapsed_seconds": 57.6983847618103
+  },
+  {
+    "tile": [
+      64,
+      80,
+      16
+    ],
+    "executable": "cold_64_80_16",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=64",
+      "-DBN=80",
+      "-DBK=16",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_64_80_16"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 72,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 4608,
+    "resident_ctas": 7,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.217088002,
+      0.216268802,
+      0.216659203,
+      0.2170816,
+      0.217075202,
+      0.216672,
+      0.216256002,
+      0.2170816,
+      0.216665602
+    ],
+    "latency_ms_median": 0.216672,
+    "elapsed_seconds": 58.321589946746826
+  },
+  {
+    "tile": [
+      64,
+      80,
+      32
+    ],
+    "executable": "cold_64_80_32",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=64",
+      "-DBN=80",
+      "-DBK=32",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_64_80_32"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 72,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 9216,
+    "resident_ctas": 7,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.143756798,
+      0.142950401,
+      0.142950404,
+      0.142944002,
+      0.142944002,
+      0.143360004,
+      0.143360004,
+      0.143366402,
+      0.143366402
+    ],
+    "latency_ms_median": 0.143360004,
+    "elapsed_seconds": 58.92975354194641
+  },
+  {
+    "tile": [
+      64,
+      80,
+      48
+    ],
+    "executable": "cold_64_80_48",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=64",
+      "-DBN=80",
+      "-DBK=48",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_64_80_48"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 96,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 13824,
+    "resident_ctas": 5,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.174464005,
+      0.174073604,
+      0.174054405,
+      0.174060804,
+      0.174476802,
+      0.174054405,
+      0.174054405,
+      0.174067202,
+      0.174886402
+    ],
+    "latency_ms_median": 0.174067202,
+    "elapsed_seconds": 59.54687142372131
+  },
+  {
+    "tile": [
+      64,
+      80,
+      64
+    ],
+    "executable": "cold_64_80_64",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=64",
+      "-DBN=80",
+      "-DBK=64",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_64_80_64"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 96,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 18432,
+    "resident_ctas": 4,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.141715199,
+      0.141305602,
+      0.141305602,
+      0.141305602,
+      0.141727999,
+      0.141721603,
+      0.141305599,
+      0.141312003,
+      0.141312
+    ],
+    "latency_ms_median": 0.141312,
+    "elapsed_seconds": 60.18455505371094
+  },
+  {
+    "tile": [
+      64,
+      96,
+      16
+    ],
+    "executable": "cold_64_96_16",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=64",
+      "-DBN=96",
+      "-DBK=16",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_64_96_16"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 96,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 5120,
+    "resident_ctas": 5,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.169561601,
+      0.168320003,
+      0.169164801,
+      0.169164801,
+      0.169152001,
+      0.168742403,
+      0.168748802,
+      0.169152001,
+      0.169977599
+    ],
+    "latency_ms_median": 0.169152001,
+    "elapsed_seconds": 60.7940137386322
+  },
+  {
+    "tile": [
+      64,
+      96,
+      32
+    ],
+    "executable": "cold_64_96_32",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=64",
+      "-DBN=96",
+      "-DBK=32",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_64_96_32"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 120,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 10240,
+    "resident_ctas": 4,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.151148805,
+      0.150739205,
+      0.150720003,
+      0.149907205,
+      0.150726405,
+      0.150732803,
+      0.151129603,
+      0.150726402,
+      0.150304002
+    ],
+    "latency_ms_median": 0.150726405,
+    "elapsed_seconds": 61.4089789390564
+  },
+  {
+    "tile": [
+      64,
+      96,
+      48
+    ],
+    "executable": "cold_64_96_48",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=64",
+      "-DBN=96",
+      "-DBK=48",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_64_96_48"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 126,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 15360,
+    "resident_ctas": 4,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.149504006,
+      0.148275203,
+      0.148256001,
+      0.149088004,
+      0.149510404,
+      0.149088004,
+      0.149088004,
+      0.149081603,
+      0.148672003
+    ],
+    "latency_ms_median": 0.149088004,
+    "elapsed_seconds": 62.0089590549469
+  },
+  {
+    "tile": [
+      64,
+      96,
+      64
+    ],
+    "executable": "cold_64_96_64",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=64",
+      "-DBN=96",
+      "-DBK=64",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_64_96_64"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 95,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 20480,
+    "resident_ctas": 4,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.157279995,
+      0.158099195,
+      0.156057593,
+      0.156863996,
+      0.155641595,
+      0.156870395,
+      0.156883195,
+      0.156460795,
+      0.157695997
+    ],
+    "latency_ms_median": 0.156870395,
+    "elapsed_seconds": 62.649335622787476
+  },
+  {
+    "tile": [
+      80,
+      16,
+      16
+    ],
+    "executable": "cold_80_16_16",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=80",
+      "-DBN=16",
+      "-DBK=16",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_80_16_16"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 3072,
+    "resident_ctas": 12,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.211340803,
+      0.2109312,
+      0.210112,
+      0.2117632,
+      0.2117504,
+      0.2105216,
+      0.210924801,
+      0.2113408,
+      0.2113536
+    ],
+    "latency_ms_median": 0.2113408,
+    "elapsed_seconds": 63.24202489852905
+  },
+  {
+    "tile": [
+      80,
+      16,
+      32
+    ],
+    "executable": "cold_80_16_32",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=80",
+      "-DBN=16",
+      "-DBK=32",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_80_16_32"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 6144,
+    "resident_ctas": 9,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.131884801,
+      0.132691199,
+      0.131072,
+      0.132703999,
+      0.134745598,
+      0.132294402,
+      0.131884801,
+      0.1322752,
+      0.132294402
+    ],
+    "latency_ms_median": 0.132294402,
+    "elapsed_seconds": 63.84164261817932
+  },
+  {
+    "tile": [
+      80,
+      16,
+      48
+    ],
+    "executable": "cold_80_16_48",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=80",
+      "-DBN=16",
+      "-DBK=48",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_80_16_48"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 48,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 9216,
+    "resident_ctas": 7,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.170374402,
+      0.1703872,
+      0.167500803,
+      0.170374402,
+      0.167104,
+      0.169145602,
+      0.169990399,
+      0.1707968,
+      0.167519999
+    ],
+    "latency_ms_median": 0.169990399,
+    "elapsed_seconds": 64.58751773834229
+  },
+  {
+    "tile": [
+      80,
+      16,
+      64
+    ],
+    "executable": "cold_80_16_64",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=80",
+      "-DBN=16",
+      "-DBK=64",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_80_16_64"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 48,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 12288,
+    "resident_ctas": 5,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.133926398,
+      0.134329599,
+      0.133523199,
+      0.135577598,
+      0.1351616,
+      0.133523199,
+      0.134348801,
+      0.135584,
+      0.133523199
+    ],
+    "latency_ms_median": 0.134329599,
+    "elapsed_seconds": 65.1738498210907
+  },
+  {
+    "tile": [
+      80,
+      32,
+      16
+    ],
+    "executable": "cold_80_32_16",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=80",
+      "-DBN=32",
+      "-DBK=16",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_80_32_16"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 48,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 3584,
+    "resident_ctas": 10,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.215027201,
+      0.214624,
+      0.214617601,
+      0.213804799,
+      0.2142272,
+      0.214208001,
+      0.214624,
+      0.2150336,
+      0.2150336
+    ],
+    "latency_ms_median": 0.214624,
+    "elapsed_seconds": 65.76677894592285
+  },
+  {
+    "tile": [
+      80,
+      32,
+      32
+    ],
+    "executable": "cold_80_32_32",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=80",
+      "-DBN=32",
+      "-DBK=32",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_80_32_32"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 56,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 7168,
+    "resident_ctas": 8,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.101977599,
+      0.101971197,
+      0.0999168009,
+      0.100736,
+      0.101977597,
+      0.101561598,
+      0.101567999,
+      0.100768,
+      0.1007616
+    ],
+    "latency_ms_median": 0.101561598,
+    "elapsed_seconds": 66.45211052894592
+  },
+  {
+    "tile": [
+      80,
+      32,
+      48
+    ],
+    "executable": "cold_80_32_48",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=80",
+      "-DBN=32",
+      "-DBK=48",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_80_32_48"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 56,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 10752,
+    "resident_ctas": 6,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.119577603,
+      0.120396803,
+      0.120000003,
+      0.119174403,
+      0.119577603,
+      0.119577603,
+      0.120416002,
+      0.118764803,
+      0.119993603
+    ],
+    "latency_ms_median": 0.119577603,
+    "elapsed_seconds": 67.03282380104065
+  },
+  {
+    "tile": [
+      80,
+      32,
+      64
+    ],
+    "executable": "cold_80_32_64",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=80",
+      "-DBN=32",
+      "-DBK=64",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_80_32_64"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 56,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 14336,
+    "resident_ctas": 5,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.118355203,
+      0.112620801,
+      0.117120002,
+      0.113017601,
+      0.117952003,
+      0.117958403,
+      0.115488002,
+      0.116307202,
+      0.118368003
+    ],
+    "latency_ms_median": 0.117120002,
+    "elapsed_seconds": 67.62206363677979
+  },
+  {
+    "tile": [
+      80,
+      48,
+      16
+    ],
+    "executable": "cold_80_48_16",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=80",
+      "-DBN=48",
+      "-DBK=16",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_80_48_16"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 63,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 4096,
+    "resident_ctas": 8,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.242879999,
+      0.242470399,
+      0.242463997,
+      0.242483202,
+      0.242886397,
+      0.243302399,
+      0.242060801,
+      0.242067203,
+      0.242879996
+    ],
+    "latency_ms_median": 0.242483202,
+    "elapsed_seconds": 68.25415873527527
+  },
+  {
+    "tile": [
+      80,
+      48,
+      32
+    ],
+    "executable": "cold_80_48_32",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=80",
+      "-DBN=48",
+      "-DBK=32",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_80_48_32"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 8192,
+    "resident_ctas": 7,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.111392,
+      0.1114048,
+      0.1109824,
+      0.1114112,
+      0.111392,
+      0.1113856,
+      0.110976,
+      0.1113856,
+      0.1105664
+    ],
+    "latency_ms_median": 0.1113856,
+    "elapsed_seconds": 68.8300552368164
+  },
+  {
+    "tile": [
+      80,
+      48,
+      48
+    ],
+    "executable": "cold_80_48_48",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=80",
+      "-DBN=48",
+      "-DBK=48",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_80_48_48"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 79,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 12288,
+    "resident_ctas": 5,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.131468803,
+      0.131052804,
+      0.131059203,
+      0.131059203,
+      0.131468803,
+      0.131059203,
+      0.131046405,
+      0.131456006,
+      0.131059203
+    ],
+    "latency_ms_median": 0.131059203,
+    "elapsed_seconds": 69.42465925216675
+  },
+  {
+    "tile": [
+      80,
+      48,
+      64
+    ],
+    "executable": "cold_80_48_64",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=80",
+      "-DBN=48",
+      "-DBK=64",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_80_48_64"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 72,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 16384,
+    "resident_ctas": 4,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.120819204,
+      0.120819202,
+      0.120819204,
+      0.120832004,
+      0.120819204,
+      0.120832001,
+      0.120825604,
+      0.120832002,
+      0.120819204
+    ],
+    "latency_ms_median": 0.120819204,
+    "elapsed_seconds": 70.00900268554688
+  },
+  {
+    "tile": [
+      80,
+      64,
+      32
+    ],
+    "executable": "cold_80_64_32",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=80",
+      "-DBN=64",
+      "-DBK=32",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_80_64_32"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 9216,
+    "resident_ctas": 7,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.2252736,
+      0.225267199,
+      0.225280002,
+      0.2256832,
+      0.225280002,
+      0.224857599,
+      0.225267199,
+      0.225279999,
+      0.225279996
+    ],
+    "latency_ms_median": 0.225279996,
+    "elapsed_seconds": 70.60718774795532
+  },
+  {
+    "tile": [
+      80,
+      64,
+      48
+    ],
+    "executable": "cold_80_64_48",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=80",
+      "-DBN=64",
+      "-DBK=48",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_80_64_48"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 13824,
+    "resident_ctas": 5,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.225702399,
+      0.225280002,
+      0.226105601,
+      0.2252864,
+      0.225689599,
+      0.225702399,
+      0.2252864,
+      0.226111999,
+      0.225696
+    ],
+    "latency_ms_median": 0.225696,
+    "elapsed_seconds": 71.26750111579895
+  },
+  {
+    "tile": [
+      80,
+      64,
+      64
+    ],
+    "executable": "cold_80_64_64",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=80",
+      "-DBN=64",
+      "-DBK=64",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_80_64_64"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 18432,
+    "resident_ctas": 4,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.186368001,
+      0.185152,
+      0.185548803,
+      0.185542402,
+      0.185548803,
+      0.185958403,
+      0.185145602,
+      0.185542402,
+      0.1863552
+    ],
+    "latency_ms_median": 0.185548803,
+    "elapsed_seconds": 71.86380624771118
+  },
+  {
+    "tile": [
+      80,
+      80,
+      16
+    ],
+    "executable": "cold_80_80_16",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=80",
+      "-DBN=80",
+      "-DBK=16",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_80_80_16"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 96,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 5120,
+    "resident_ctas": 5,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.231814399,
+      0.231404799,
+      0.231807998,
+      0.231417602,
+      0.231411201,
+      0.231833601,
+      0.231411201,
+      0.231820801,
+      0.231833601
+    ],
+    "latency_ms_median": 0.231807998,
+    "elapsed_seconds": 72.4677791595459
+  },
+  {
+    "tile": [
+      80,
+      80,
+      32
+    ],
+    "executable": "cold_80_80_32",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=80",
+      "-DBN=80",
+      "-DBK=32",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_80_80_32"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 128,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 10240,
+    "resident_ctas": 4,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.138867199,
+      0.138841599,
+      0.138015997,
+      0.138028798,
+      0.138015997,
+      0.138854402,
+      0.138848001,
+      0.138438401,
+      0.138438398
+    ],
+    "latency_ms_median": 0.138438401,
+    "elapsed_seconds": 73.11370706558228
+  },
+  {
+    "tile": [
+      80,
+      80,
+      48
+    ],
+    "executable": "cold_80_80_48",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=80",
+      "-DBN=80",
+      "-DBK=48",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_80_80_48"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 127,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 15360,
+    "resident_ctas": 4,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.153580803,
+      0.153574401,
+      0.153568,
+      0.153996801,
+      0.153580803,
+      0.154009598,
+      0.153606403,
+      0.154003203,
+      0.153587204
+    ],
+    "latency_ms_median": 0.153587204,
+    "elapsed_seconds": 73.73655295372009
+  },
+  {
+    "tile": [
+      80,
+      80,
+      64
+    ],
+    "executable": "cold_80_80_64",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=80",
+      "-DBN=80",
+      "-DBK=64",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_80_80_64"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 126,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 20480,
+    "resident_ctas": 4,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.142931199,
+      0.142944002,
+      0.142937601,
+      0.143353602,
+      0.143366399,
+      0.143353602,
+      0.143360001,
+      0.143360001,
+      0.143353602
+    ],
+    "latency_ms_median": 0.143353602,
+    "elapsed_seconds": 74.35240769386292
+  },
+  {
+    "tile": [
+      80,
+      96,
+      16
+    ],
+    "executable": "cold_80_96_16",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=80",
+      "-DBN=96",
+      "-DBK=16",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_80_96_16"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 127,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 5632,
+    "resident_ctas": 4,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.199059194,
+      0.198655993,
+      0.198649594,
+      0.198655999,
+      0.198636797,
+      0.197823998,
+      0.198233598,
+      0.198239994,
+      0.197407997
+    ],
+    "latency_ms_median": 0.198636797,
+    "elapsed_seconds": 74.98434567451477
+  },
+  {
+    "tile": [
+      80,
+      96,
+      32
+    ],
+    "executable": "cold_80_96_32",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=80",
+      "-DBN=96",
+      "-DBK=32",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_80_96_32"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 127,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 11264,
+    "resident_ctas": 4,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.162598398,
+      0.162188798,
+      0.162176001,
+      0.162611195,
+      0.1626048,
+      0.162611195,
+      0.1626048,
+      0.163020799,
+      0.162604797
+    ],
+    "latency_ms_median": 0.1626048,
+    "elapsed_seconds": 75.66478681564331
+  },
+  {
+    "tile": [
+      80,
+      96,
+      48
+    ],
+    "executable": "cold_80_96_48",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=80",
+      "-DBN=96",
+      "-DBK=48",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_80_96_48"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 127,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 16896,
+    "resident_ctas": 4,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.1638208,
+      0.163820803,
+      0.163839999,
+      0.163814402,
+      0.164243197,
+      0.1638208,
+      0.163814402,
+      0.1638208,
+      0.163827199
+    ],
+    "latency_ms_median": 0.1638208,
+    "elapsed_seconds": 76.30430364608765
+  },
+  {
+    "tile": [
+      80,
+      96,
+      64
+    ],
+    "executable": "cold_80_96_64",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=80",
+      "-DBN=96",
+      "-DBK=64",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_80_96_64"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 96,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 22528,
+    "resident_ctas": 3,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.167526397,
+      0.167519999,
+      0.166303998,
+      0.167110398,
+      0.1666944,
+      0.1671168,
+      0.1671168,
+      0.167519999,
+      0.167519999
+    ],
+    "latency_ms_median": 0.1671168,
+    "elapsed_seconds": 76.88053870201111
+  },
+  {
+    "tile": [
+      96,
+      16,
+      16
+    ],
+    "executable": "cold_96_16_16",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=96",
+      "-DBN=16",
+      "-DBK=16",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_96_16_16"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 3584,
+    "resident_ctas": 11,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.168755201,
+      0.166297597,
+      0.1671168,
+      0.1662976,
+      0.1675264,
+      0.168345597,
+      0.166700801,
+      0.1675136,
+      0.167532799
+    ],
+    "latency_ms_median": 0.1675136,
+    "elapsed_seconds": 77.50419402122498
+  },
+  {
+    "tile": [
+      96,
+      16,
+      32
+    ],
+    "executable": "cold_96_16_32",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=96",
+      "-DBN=16",
+      "-DBK=32",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_96_16_32"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 7168,
+    "resident_ctas": 8,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.340371197,
+      0.342009604,
+      0.342847997,
+      0.342835206,
+      0.343244803,
+      0.343654406,
+      0.343238401,
+      0.341184002,
+      0.341196805
+    ],
+    "latency_ms_median": 0.342835206,
+    "elapsed_seconds": 78.18047547340393
+  },
+  {
+    "tile": [
+      96,
+      16,
+      48
+    ],
+    "executable": "cold_96_16_48",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=96",
+      "-DBN=16",
+      "-DBK=48",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_96_16_48"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 48,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 10752,
+    "resident_ctas": 6,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.166291198,
+      0.165894401,
+      0.165478396,
+      0.165471998,
+      0.1662976,
+      0.165465602,
+      0.165881598,
+      0.167123199,
+      0.166707197
+    ],
+    "latency_ms_median": 0.165894401,
+    "elapsed_seconds": 78.76354265213013
+  },
+  {
+    "tile": [
+      96,
+      16,
+      64
+    ],
+    "executable": "cold_96_16_64",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=96",
+      "-DBN=16",
+      "-DBK=64",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_96_16_64"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 48,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 14336,
+    "resident_ctas": 5,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.155238399,
+      0.156057596,
+      0.154828799,
+      0.156876796,
+      0.154828802,
+      0.156870395,
+      0.155647996,
+      0.156876796,
+      0.155647996
+    ],
+    "latency_ms_median": 0.155647996,
+    "elapsed_seconds": 79.36843490600586
+  },
+  {
+    "tile": [
+      96,
+      32,
+      16
+    ],
+    "executable": "cold_96_32_16",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=96",
+      "-DBN=32",
+      "-DBK=16",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_96_32_16"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 56,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 4096,
+    "resident_ctas": 9,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.167929602,
+      0.1675136,
+      0.1675136,
+      0.167929599,
+      0.1679232,
+      0.167929599,
+      0.1679232,
+      0.1679488,
+      0.167929599
+    ],
+    "latency_ms_median": 0.167929599,
+    "elapsed_seconds": 79.98199725151062
+  },
+  {
+    "tile": [
+      96,
+      32,
+      32
+    ],
+    "executable": "cold_96_32_32",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=96",
+      "-DBN=32",
+      "-DBK=32",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_96_32_32"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 56,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 8192,
+    "resident_ctas": 7,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.111820801,
+      0.1109952,
+      0.1114048,
+      0.1105856,
+      0.1105856,
+      0.1109888,
+      0.1109824,
+      0.1109888,
+      0.1105728
+    ],
+    "latency_ms_median": 0.1109888,
+    "elapsed_seconds": 80.56440854072571
+  },
+  {
+    "tile": [
+      96,
+      32,
+      48
+    ],
+    "executable": "cold_96_32_48",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=96",
+      "-DBN=32",
+      "-DBK=48",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_96_32_48"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 56,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 12288,
+    "resident_ctas": 5,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.122463998,
+      0.122067198,
+      0.1220544,
+      0.121638401,
+      0.122457598,
+      0.122463998,
+      0.121625601,
+      0.122048,
+      0.121657601
+    ],
+    "latency_ms_median": 0.1220544,
+    "elapsed_seconds": 81.16175484657288
+  },
+  {
+    "tile": [
+      96,
+      32,
+      64
+    ],
+    "executable": "cold_96_32_64",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=96",
+      "-DBN=32",
+      "-DBK=64",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_96_32_64"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 63,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 16384,
+    "resident_ctas": 4,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.120812804,
+      0.120409603,
+      0.120403203,
+      0.119577603,
+      0.120403203,
+      0.120403203,
+      0.120409602,
+      0.120825604,
+      0.120416
+    ],
+    "latency_ms_median": 0.120409602,
+    "elapsed_seconds": 81.82511854171753
+  },
+  {
+    "tile": [
+      96,
+      48,
+      16
+    ],
+    "executable": "cold_96_48_16",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=96",
+      "-DBN=48",
+      "-DBK=16",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_96_48_16"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 4608,
+    "resident_ctas": 8,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.267052794,
+      0.267468792,
+      0.267878389,
+      0.266636795,
+      0.267878389,
+      0.267059195,
+      0.26703999,
+      0.267046398,
+      0.267443204
+    ],
+    "latency_ms_median": 0.267059195,
+    "elapsed_seconds": 82.41250681877136
+  },
+  {
+    "tile": [
+      96,
+      48,
+      32
+    ],
+    "executable": "cold_96_48_32",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=96",
+      "-DBN=48",
+      "-DBK=32",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_96_48_32"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 72,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 9216,
+    "resident_ctas": 7,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.1265536,
+      0.125324798,
+      0.125727999,
+      0.125721599,
+      0.125727998,
+      0.125318398,
+      0.125318398,
+      0.126143998,
+      0.124895997
+    ],
+    "latency_ms_median": 0.125721599,
+    "elapsed_seconds": 82.98018884658813
+  },
+  {
+    "tile": [
+      96,
+      48,
+      48
+    ],
+    "executable": "cold_96_48_48",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=96",
+      "-DBN=48",
+      "-DBK=48",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_96_48_48"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 96,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 13824,
+    "resident_ctas": 5,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.170374402,
+      0.1712064,
+      0.171200001,
+      0.170380801,
+      0.170380801,
+      0.170380804,
+      0.169984001,
+      0.170803201,
+      0.169977602
+    ],
+    "latency_ms_median": 0.170380801,
+    "elapsed_seconds": 83.72309517860413
+  },
+  {
+    "tile": [
+      96,
+      48,
+      64
+    ],
+    "executable": "cold_96_48_64",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=96",
+      "-DBN=48",
+      "-DBK=64",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_96_48_64"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 80,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 18432,
+    "resident_ctas": 4,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.307609606,
+      0.307200015,
+      0.307193613,
+      0.30720641,
+      0.30678401,
+      0.30720641,
+      0.306790406,
+      0.307212806,
+      0.307193613
+    ],
+    "latency_ms_median": 0.307200015,
+    "elapsed_seconds": 84.31585836410522
+  },
+  {
+    "tile": [
+      96,
+      64,
+      16
+    ],
+    "executable": "cold_96_64_16",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=96",
+      "-DBN=64",
+      "-DBK=16",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_96_64_16"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 72,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 5120,
+    "resident_ctas": 7,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.272383988,
+      0.273612797,
+      0.273196799,
+      0.273196799,
+      0.272793591,
+      0.272793597,
+      0.273209596,
+      0.272799993,
+      0.272377592
+    ],
+    "latency_ms_median": 0.272799993,
+    "elapsed_seconds": 84.88748145103455
+  },
+  {
+    "tile": [
+      96,
+      64,
+      32
+    ],
+    "executable": "cold_96_64_32",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=96",
+      "-DBN=64",
+      "-DBK=32",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_96_64_32"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 72,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 10240,
+    "resident_ctas": 6,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.323993599,
+      0.3248128,
+      0.323590398,
+      0.325222403,
+      0.323577595,
+      0.324396801,
+      0.323980796,
+      0.323987198,
+      0.324799997
+    ],
+    "latency_ms_median": 0.323993599,
+    "elapsed_seconds": 85.5101170539856
+  },
+  {
+    "tile": [
+      96,
+      64,
+      48
+    ],
+    "executable": "cold_96_64_48",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=96",
+      "-DBN=64",
+      "-DBK=48",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_96_64_48"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 94,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 15360,
+    "resident_ctas": 5,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.135980797,
+      0.135987201,
+      0.1364032,
+      0.1359808,
+      0.135577598,
+      0.136383998,
+      0.136396798,
+      0.136396801,
+      0.1363904
+    ],
+    "latency_ms_median": 0.136383998,
+    "elapsed_seconds": 86.11460995674133
+  },
+  {
+    "tile": [
+      96,
+      64,
+      64
+    ],
+    "executable": "cold_96_64_64",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=96",
+      "-DBN=64",
+      "-DBK=64",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_96_64_64"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 96,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 20480,
+    "resident_ctas": 4,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.147046405,
+      0.147456002,
+      0.147052801,
+      0.147462404,
+      0.147046405,
+      0.147046405,
+      0.147046402,
+      0.147052804,
+      0.147449604
+    ],
+    "latency_ms_median": 0.147052801,
+    "elapsed_seconds": 86.65072774887085
+  },
+  {
+    "tile": [
+      96,
+      80,
+      16
+    ],
+    "executable": "cold_96_80_16",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=96",
+      "-DBN=80",
+      "-DBK=16",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_96_80_16"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 127,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 5632,
+    "resident_ctas": 4,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.194540802,
+      0.194547203,
+      0.194419202,
+      0.194131202,
+      0.194137603,
+      0.194547203,
+      0.1941376,
+      0.194553602,
+      0.193728003
+    ],
+    "latency_ms_median": 0.194419202,
+    "elapsed_seconds": 87.27916550636292
+  },
+  {
+    "tile": [
+      96,
+      80,
+      32
+    ],
+    "executable": "cold_96_80_32",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=96",
+      "-DBN=80",
+      "-DBK=32",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_96_80_32"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 128,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 11264,
+    "resident_ctas": 4,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.148678401,
+      0.149107203,
+      0.148262402,
+      0.149100804,
+      0.149094403,
+      0.147436801,
+      0.147443202,
+      0.1482752,
+      0.149100804
+    ],
+    "latency_ms_median": 0.148678401,
+    "elapsed_seconds": 88.15977120399475
+  },
+  {
+    "tile": [
+      96,
+      80,
+      48
+    ],
+    "executable": "cold_96_80_48",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=96",
+      "-DBN=80",
+      "-DBK=48",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_96_80_48"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 128,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 16896,
+    "resident_ctas": 4,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.152364805,
+      0.151545602,
+      0.151539204,
+      0.151948804,
+      0.152384001,
+      0.152358404,
+      0.151539204,
+      0.1515264,
+      0.151942402
+    ],
+    "latency_ms_median": 0.151942402,
+    "elapsed_seconds": 88.72812962532043
+  },
+  {
+    "tile": [
+      96,
+      80,
+      64
+    ],
+    "executable": "cold_96_80_64",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=96",
+      "-DBN=80",
+      "-DBK=64",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_96_80_64"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 128,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 22528,
+    "resident_ctas": 3,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.152358404,
+      0.151955202,
+      0.151532802,
+      0.151532802,
+      0.151942402,
+      0.151552004,
+      0.151539204,
+      0.151545602,
+      0.151942402
+    ],
+    "latency_ms_median": 0.151552004,
+    "elapsed_seconds": 89.26351690292358
+  },
+  {
+    "tile": [
+      96,
+      96,
+      16
+    ],
+    "executable": "cold_96_96_16",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=96",
+      "-DBN=96",
+      "-DBK=16",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_96_96_16"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 128,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 6144,
+    "resident_ctas": 4,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.176928002,
+      0.177350402,
+      0.176524803,
+      0.176115203,
+      0.176512006,
+      0.176512006,
+      0.176115203,
+      0.176108804,
+      0.176512006
+    ],
+    "latency_ms_median": 0.176512006,
+    "elapsed_seconds": 89.82636618614197
+  },
+  {
+    "tile": [
+      96,
+      96,
+      32
+    ],
+    "executable": "cold_96_96_32",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=96",
+      "-DBN=96",
+      "-DBK=32",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_96_96_32"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 128,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 12288,
+    "resident_ctas": 4,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.165875199,
+      0.165894398,
+      0.165875199,
+      0.165881598,
+      0.165868801,
+      0.165881601,
+      0.165875199,
+      0.165887997,
+      0.165875199
+    ],
+    "latency_ms_median": 0.165875199,
+    "elapsed_seconds": 90.40956330299377
+  },
+  {
+    "tile": [
+      96,
+      96,
+      48
+    ],
+    "executable": "cold_96_96_48",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=96",
+      "-DBN=96",
+      "-DBK=48",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_96_96_48"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 128,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 18432,
+    "resident_ctas": 4,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.1617856,
+      0.161772802,
+      0.161760002,
+      0.161779198,
+      0.161779198,
+      0.162195197,
+      0.161363199,
+      0.162208,
+      0.161779201
+    ],
+    "latency_ms_median": 0.161779198,
+    "elapsed_seconds": 91.0878894329071
+  },
+  {
+    "tile": [
+      96,
+      96,
+      64
+    ],
+    "executable": "cold_96_96_64",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=96",
+      "-DBN=96",
+      "-DBK=64",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_96_96_64"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 168,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 24576,
+    "resident_ctas": 3,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.171200001,
+      0.170790401,
+      0.1707968,
+      0.170790404,
+      0.171200001,
+      0.1707968,
+      0.170784003,
+      0.170790404,
+      0.170771205
+    ],
+    "latency_ms_median": 0.170790404,
+    "elapsed_seconds": 91.65441036224365
+  }
+]

@@ -1,0 +1,482 @@
+{
+  "model": "independent phase composition, not integrated RTL",
+  "cases": [
+    {
+      "experiment": "050",
+      "tile": [
+        32,
+        32
+      ],
+      "shape": [
+        2048,
+        2112,
+        1536
+      ],
+      "predicted_us": 293.382651592,
+      "observed_us": 276.863998,
+      "absolute_relative_error": 0.05966342215429549
+    },
+    {
+      "experiment": "050",
+      "tile": [
+        32,
+        32
+      ],
+      "shape": [
+        2048,
+        2112,
+        4608
+      ],
+      "predicted_us": 828.699021592,
+      "observed_us": 784.377611,
+      "absolute_relative_error": 0.05650519592915816
+    },
+    {
+      "experiment": "057",
+      "tile": [
+        32,
+        32
+      ],
+      "shape": [
+        1920,
+        1920,
+        4608
+      ],
+      "resident_blocks": 11,
+      "predicted_us": 728.5418696999999,
+      "observed_us": 693.4463979999999,
+      "absolute_relative_error": 0.05061021558583388
+    },
+    {
+      "experiment": "057",
+      "tile": [
+        32,
+        32
+      ],
+      "shape": [
+        1920,
+        1920,
+        1536
+      ],
+      "resident_blocks": 11,
+      "predicted_us": 257.4634641,
+      "observed_us": 245.318401,
+      "absolute_relative_error": 0.049507346576908494
+    },
+    {
+      "experiment": "057",
+      "tile": [
+        32,
+        32
+      ],
+      "shape": [
+        1920,
+        1920,
+        1536
+      ],
+      "resident_blocks": 4,
+      "predicted_us": 347.22987459090905,
+      "observed_us": 332.153594,
+      "absolute_relative_error": 0.045389485055245406
+    },
+    {
+      "experiment": "050",
+      "tile": [
+        32,
+        32
+      ],
+      "shape": [
+        1920,
+        1920,
+        4608
+      ],
+      "predicted_us": 728.5418696999999,
+      "observed_us": 697.1328020000001,
+      "absolute_relative_error": 0.04505464039260601
+    },
+    {
+      "experiment": "050",
+      "tile": [
+        32,
+        32
+      ],
+      "shape": [
+        1920,
+        1920,
+        1536
+      ],
+      "predicted_us": 257.4634641,
+      "observed_us": 246.5408,
+      "absolute_relative_error": 0.044303677525180496
+    },
+    {
+      "experiment": "057",
+      "tile": [
+        32,
+        32
+      ],
+      "shape": [
+        1920,
+        1920,
+        4608
+      ],
+      "resident_blocks": 4,
+      "predicted_us": 997.8411011727271,
+      "observed_us": 965.017617,
+      "absolute_relative_error": 0.034013352289637165
+    },
+    {
+      "experiment": "054",
+      "tile": [
+        64,
+        48
+      ],
+      "shape": [
+        1920,
+        1920,
+        16384
+      ],
+      "predicted_us": 2102.8031588000003,
+      "observed_us": 2033.66399,
+      "absolute_relative_error": 0.033997341320873925
+    },
+    {
+      "experiment": "051",
+      "tile": [
+        64,
+        48
+      ],
+      "shape": [
+        2048,
+        2112,
+        4608
+      ],
+      "predicted_us": 712.5804663316666,
+      "observed_us": 695.481586,
+      "absolute_relative_error": 0.02458566937768871
+    },
+    {
+      "experiment": "051",
+      "tile": [
+        64,
+        48
+      ],
+      "shape": [
+        2048,
+        2112,
+        1536
+      ],
+      "predicted_us": 250.1708701816667,
+      "observed_us": 244.511998,
+      "absolute_relative_error": 0.023143535809914247
+    },
+    {
+      "experiment": "051",
+      "tile": [
+        64,
+        48
+      ],
+      "shape": [
+        1920,
+        1920,
+        4608
+      ],
+      "predicted_us": 603.0314546000001,
+      "observed_us": 594.316792,
+      "absolute_relative_error": 0.014663328913647978
+    },
+    {
+      "experiment": "057",
+      "tile": [
+        32,
+        32
+      ],
+      "shape": [
+        1920,
+        1920,
+        1536
+      ],
+      "resident_blocks": 1,
+      "predicted_us": 1015.3002983499997,
+      "observed_us": 1003.0912199999999,
+      "absolute_relative_error": 0.01217145370886588
+    },
+    {
+      "experiment": "054",
+      "tile": [
+        32,
+        32
+      ],
+      "shape": [
+        1920,
+        1920,
+        16384
+      ],
+      "predicted_us": 2534.3424245,
+      "observed_us": 2514.73927,
+      "absolute_relative_error": 0.007795302969917861
+    },
+    {
+      "experiment": "057",
+      "tile": [
+        32,
+        32
+      ],
+      "shape": [
+        1920,
+        1920,
+        4608
+      ],
+      "resident_blocks": 1,
+      "predicted_us": 3002.0523724499994,
+      "observed_us": 2980.864,
+      "absolute_relative_error": 0.007108131216318291
+    },
+    {
+      "experiment": "051",
+      "tile": [
+        64,
+        48
+      ],
+      "shape": [
+        1920,
+        1920,
+        1536
+      ],
+      "predicted_us": 211.7866622,
+      "observed_us": 210.502404,
+      "absolute_relative_error": 0.006100919398526119
+    }
+  ],
+  "largest_case": {
+    "experiment": "050",
+    "tile": [
+      32,
+      32
+    ],
+    "shape": [
+      2048,
+      2112,
+      1536
+    ],
+    "predicted_us": 293.382651592,
+    "observed_us": 276.863998,
+    "absolute_relative_error": 0.05966342215429549
+  },
+  "coefficients_changed": false,
+  "hardware_runs_started": false,
+  "full_goal_complete": false,
+  "next_functional_gap": "Physical timing/geometry bindings and original workload coverage: multiple pending shared-cache misses now execute correctly, but capacity, arbitration, private-cache behavior, native issue topology and service timing remain uncalibrated. The largest hardware error remains5.966342percent in the separate phase-composition model.",
+  "completion_register_update": "Added actual returned words and completion-driven readiness; 8 local checks passed; no RTX timing claim",
+  "numerical_matrix_update": "Defined BF16/FP32 operation, 3072 output words verified; no NVIDIA arithmetic-order/timing equivalence claim",
+  "complete_grid_update": {
+    "receipt": "numerical/studied_gemm_grid_verification.json",
+    "checked_outputs": 24576,
+    "schedule": "Serial reused CTA",
+    "hardware_timing_validated": false
+  },
+  "resident_stage_update": {
+    "receipt": "numerical/resident_native_stage_verification.json",
+    "checked_outputs": 8192,
+    "shared_service_classes": [
+      "read",
+      "MOVM",
+      "HMMA"
+    ],
+    "hardware_timing_validated": false
+  },
+  "resident_reduction_update": {
+    "receipt": "numerical/resident_reduction_verification.json",
+    "checked_outputs": 4096,
+    "supported_K": [
+      64,
+      1536
+    ],
+    "output_boundary": "register results",
+    "hardware_timing_validated": false
+  },
+  "resident_complete_update": {
+    "receipt": "numerical/resident_complete_verification.json",
+    "checked_outputs": 12288,
+    "output_boundary": "acknowledged masked global sector stores",
+    "hardware_timing_validated": false
+  },
+  "resident_grid_update": {
+    "receipt": "numerical/resident_grid_verification.json",
+    "checked_outputs": 24576,
+    "contexts": 2,
+    "modeled_sms": 1,
+    "hardware_timing_validated": false,
+    "model_cycles_per_K": {
+      "64": [
+        27499,
+        21692
+      ],
+      "1536": [
+        543444,
+        543447
+      ]
+    }
+  },
+  "multi_sm_update": {
+    "receipt": "numerical/resident_multi_sm_verification.json",
+    "checked_outputs": 24576,
+    "modeled_sms": 2,
+    "resident_contexts_per_sm": 2,
+    "backing_gateway": "one shared read-or-write transaction, no L2 cache",
+    "hardware_timing_validated": false,
+    "model_cycles_per_K": {
+      "64": [
+        28234,
+        17862
+      ],
+      "1536": [
+        424384,
+        424392
+      ]
+    }
+  },
+  "shared_l2_update": {
+    "receipt": "numerical/resident_multi_sm_l2_verification.json",
+    "checked_outputs": 24576,
+    "shared_cache_bytes": 65536,
+    "physical_geometry_calibrated": false,
+    "shared_read_only_cache": true,
+    "multiple_pending_misses": false,
+    "hardware_timing_validated": false,
+    "case_metrics": [
+      {
+        "K": 64,
+        "checked_words": 12288,
+        "launch_metrics": [
+          {
+            "id": 20,
+            "words": 6144,
+            "blocks": 6,
+            "peak_resident": 4,
+            "modeled_elapsed_cycles": 26283,
+            "l2_requests": 1280,
+            "l2_hits": 640,
+            "l2_misses": 640
+          },
+          {
+            "id": 21,
+            "words": 6144,
+            "blocks": 6,
+            "peak_resident": 4,
+            "modeled_elapsed_cycles": 17862,
+            "l2_requests": 1280,
+            "l2_hits": 640,
+            "l2_misses": 640
+          }
+        ],
+        "passed": true
+      },
+      {
+        "K": 1536,
+        "checked_words": 12288,
+        "launch_metrics": [
+          {
+            "id": 20,
+            "words": 6144,
+            "blocks": 6,
+            "peak_resident": 4,
+            "modeled_elapsed_cycles": 457918,
+            "l2_requests": 30720,
+            "l2_hits": 3938,
+            "l2_misses": 26782
+          },
+          {
+            "id": 21,
+            "words": 6144,
+            "blocks": 6,
+            "peak_resident": 4,
+            "modeled_elapsed_cycles": 457947,
+            "l2_requests": 61440,
+            "l2_hits": 7875,
+            "l2_misses": 53565
+          }
+        ],
+        "passed": true
+      }
+    ]
+  },
+  "nonblocking_shared_l2_functional_progress": {
+    "receipt": "numerical/resident_multi_sm_nb_l2_verification.json",
+    "checked_outputs": 24576,
+    "multiple_pending_misses": true,
+    "same_sector_fetch_merge": true,
+    "out_of_order_backing_returns": true,
+    "hardware_timing_validated": false,
+    "case_metrics": [
+      {
+        "K": 64,
+        "checked_words": 12288,
+        "launch_metrics": [
+          {
+            "id": 20,
+            "words": 6144,
+            "blocks": 6,
+            "peak_resident": 4,
+            "modeled_elapsed_cycles": 26731,
+            "l2_requests": 1024,
+            "l2_hits": 264,
+            "l2_misses": 760,
+            "l2_merges": 120,
+            "l2_fills": 640
+          },
+          {
+            "id": 21,
+            "words": 6144,
+            "blocks": 6,
+            "peak_resident": 4,
+            "modeled_elapsed_cycles": 16154,
+            "l2_requests": 1280,
+            "l2_hits": 520,
+            "l2_misses": 760,
+            "l2_merges": 120,
+            "l2_fills": 640
+          }
+        ],
+        "passed": true
+      },
+      {
+        "K": 1536,
+        "checked_words": 12288,
+        "launch_metrics": [
+          {
+            "id": 20,
+            "words": 6144,
+            "blocks": 6,
+            "peak_resident": 4,
+            "modeled_elapsed_cycles": 582963,
+            "l2_requests": 33792,
+            "l2_hits": 5140,
+            "l2_misses": 28652,
+            "l2_merges": 4076,
+            "l2_fills": 24576
+          },
+          {
+            "id": 21,
+            "words": 6144,
+            "blocks": 6,
+            "peak_resident": 4,
+            "modeled_elapsed_cycles": 583000,
+            "l2_requests": 67584,
+            "l2_hits": 10283,
+            "l2_misses": 57301,
+            "l2_merges": 8149,
+            "l2_fills": 49152
+          }
+        ],
+        "passed": true
+      }
+    ]
+  },
+  "effective_dependency_probe_progress": {
+    "receipt": "numerical/dependency_probe_verification.json",
+    "checked_words": 128,
+    "integrated_GEMM_timing_changed": false,
+    "hardware_timing_validated": false
+  }
+}

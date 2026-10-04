@@ -1,0 +1,60 @@
+{
+  "component": "isolated native 40-instruction stage; initialized contexts; single shared-read client",
+  "rtl_event_differential": [
+    {
+      "contexts": 1,
+      "ordered_events": 272,
+      "cpp_terminal_cycles": 1092,
+      "passed": true
+    },
+    {
+      "contexts": 2,
+      "ordered_events": 544,
+      "cpp_terminal_cycles": 2135,
+      "passed": true
+    },
+    {
+      "contexts": 11,
+      "ordered_events": 2992,
+      "cpp_terminal_cycles": 11518,
+      "passed": true
+    }
+  ],
+  "event_tick_trace_differential": {
+    "cases": 6,
+    "contexts": [
+      1,
+      2,
+      11
+    ],
+    "start_cycles": [
+      0,
+      10000
+    ],
+    "passed": true
+  },
+  "speed": {
+    "repetitions": 100,
+    "contexts": 11,
+    "idle_start_cycles": 10000,
+    "tick_seconds": 0.177536,
+    "event_seconds": 0.0807976,
+    "speedup": 2.1972929889006605,
+    "events_each_execution_mode": 299200
+  },
+  "not_validated": [
+    "full GEMM integration",
+    "hardware runtime accuracy",
+    "batch-response FSM timing",
+    "competing staging shared-read client"
+  ],
+  "source_sha256": {
+    "native_stage_event.hpp": "eadad3afe3ebddd5be65e16ba34528749728984041251d23f1f679061fcfcf08",
+    "native_schedule.hpp": "cc903710a14275ca26ea56ad2d5b804e37cd6ee3e3f41873665ba2a5242114ea",
+    "native_component_top.sv": "f58db86eeb99164f7e16190c964c5f1e3214345cda1d43b28ededc8b35f7f680",
+    "native_rtl_host.cpp": "1189c423245c369e2bd862a642a0e128f7c335f83bbf2c977da021c9e4b17d75",
+    "native_stage_test.cpp": "d6ea44826aa0f10a0288a3be3788ce87ec70a1b333df8e7ea9d2a181befc7b76",
+    "native_speed.cpp": "267160414a130c4b1011531760d2f9ee948e11f041cf9cfef0b2a138962de7e5",
+    "verify_native_rtl.py": "5950d0866d0134c007a15a15697a3efb6f0e8e7f17fcb84acfe1ce1eb8bac6b9"
+  }
+}

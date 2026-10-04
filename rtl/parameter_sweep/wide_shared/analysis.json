@@ -1,0 +1,117 @@
+{
+  "cases": [
+    {
+      "kind": "read",
+      "width_words": 1,
+      "pattern": 0,
+      "incremental_wavefronts": 2048,
+      "wavefronts_per_instruction": 1.0,
+      "whole_warp_distinct_word_prediction": 1,
+      "whole_warp_rule_matches": true
+    },
+    {
+      "kind": "read",
+      "width_words": 1,
+      "pattern": 1,
+      "incremental_wavefronts": 2048,
+      "wavefronts_per_instruction": 1.0,
+      "whole_warp_distinct_word_prediction": 1,
+      "whole_warp_rule_matches": true
+    },
+    {
+      "kind": "read",
+      "width_words": 2,
+      "pattern": 0,
+      "incremental_wavefronts": 4096,
+      "wavefronts_per_instruction": 2.0,
+      "whole_warp_distinct_word_prediction": 2,
+      "whole_warp_rule_matches": true
+    },
+    {
+      "kind": "read",
+      "width_words": 2,
+      "pattern": 1,
+      "incremental_wavefronts": 2048,
+      "wavefronts_per_instruction": 1.0,
+      "whole_warp_distinct_word_prediction": 1,
+      "whole_warp_rule_matches": true
+    },
+    {
+      "kind": "read",
+      "width_words": 4,
+      "pattern": 0,
+      "incremental_wavefronts": 8192,
+      "wavefronts_per_instruction": 4.0,
+      "whole_warp_distinct_word_prediction": 4,
+      "whole_warp_rule_matches": true
+    },
+    {
+      "kind": "read",
+      "width_words": 4,
+      "pattern": 1,
+      "incremental_wavefronts": 4096,
+      "wavefronts_per_instruction": 2.0,
+      "whole_warp_distinct_word_prediction": 1,
+      "whole_warp_rule_matches": false
+    },
+    {
+      "kind": "write",
+      "width_words": 1,
+      "pattern": 0,
+      "incremental_wavefronts": 2048,
+      "wavefronts_per_instruction": 1.0,
+      "whole_warp_distinct_word_prediction": 1,
+      "whole_warp_rule_matches": true
+    },
+    {
+      "kind": "write",
+      "width_words": 1,
+      "pattern": 1,
+      "incremental_wavefronts": 65536,
+      "wavefronts_per_instruction": 32.0,
+      "whole_warp_distinct_word_prediction": 32,
+      "whole_warp_rule_matches": true
+    },
+    {
+      "kind": "write",
+      "width_words": 2,
+      "pattern": 0,
+      "incremental_wavefronts": 4096,
+      "wavefronts_per_instruction": 2.0,
+      "whole_warp_distinct_word_prediction": 2,
+      "whole_warp_rule_matches": true
+    },
+    {
+      "kind": "write",
+      "width_words": 2,
+      "pattern": 1,
+      "incremental_wavefronts": 65536,
+      "wavefronts_per_instruction": 32.0,
+      "whole_warp_distinct_word_prediction": 32,
+      "whole_warp_rule_matches": true
+    },
+    {
+      "kind": "write",
+      "width_words": 4,
+      "pattern": 0,
+      "incremental_wavefronts": 8192,
+      "wavefronts_per_instruction": 4.0,
+      "whole_warp_distinct_word_prediction": 4,
+      "whole_warp_rule_matches": true
+    },
+    {
+      "kind": "write",
+      "width_words": 4,
+      "pattern": 1,
+      "incremental_wavefronts": 65536,
+      "wavefronts_per_instruction": 32.0,
+      "whole_warp_distinct_word_prediction": 32,
+      "whole_warp_rule_matches": true
+    }
+  ],
+  "correct_unprofiled_launches": 144,
+  "profiles": 24,
+  "new_intrinsic_timing_parameters": 0,
+  "failed_initial_read_controls_preserved": true,
+  "scope": "One fullwarp, scalar/vector naturallyaligned shared access patterns"
+}

@@ -1,0 +1,17 @@
+{
+  "source_sha256": "caf4f615c0c29d25558d721963f78172b22923d91fdb4258539d2994dbb8af5b",
+  "instructions": 40,
+  "opcodes": {
+    "HMMA.16816.F32.BF16": 4,
+    "IADD.64": 1,
+    "LD.E": 16,
+    "LEA": 1,
+    "LEA.HI.X": 1,
+    "MOVM.16.MT88": 8,
+    "NOP": 5,
+    "UMOV": 2,
+    "WARPSYNC.ALL": 2
+  },
+  "control_only_semantics": "UMOV/IADD/LEA addresses precomputed; WARPSYNC one collective warp; no full address-ALU or CTA barrier reconstruction",
+  "all_read_barriers_disabled": true
+}

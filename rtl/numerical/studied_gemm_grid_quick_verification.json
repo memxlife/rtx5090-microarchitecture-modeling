@@ -1,0 +1,80 @@
+{
+  "all_passed": true,
+  "checked_words": 12288,
+  "checks": [
+    {
+      "shape": [
+        64,
+        96,
+        64
+      ],
+      "launches": 2,
+      "checked_words": 12288,
+      "acknowledged_words": 12288,
+      "backing_requests": 640,
+      "synthetic_total_cycles": 60783,
+      "launch_metrics": [
+        {
+          "id": 101,
+          "completion_cycles": 31663,
+          "blocks": 6,
+          "packets": 768,
+          "packet_acks": 768
+        },
+        {
+          "id": 102,
+          "completion_cycles": 29096,
+          "blocks": 6,
+          "packets": 768,
+          "packet_acks": 768
+        }
+      ],
+      "passed": true
+    }
+  ],
+  "oracle": "Independent full integerdot A=((row*K+k)%17-8)/16, B=((k*N+col)%13-6)/16 with whole-grid coordinates, exact FP32dyadicoutputs.",
+  "protocol_checks": [
+    "all six distinct block coordinates",
+    "every grid output exactly once",
+    "all acknowledged words before grid completion",
+    "sector aligned input provider",
+    "output masks and stable packet under backpressure",
+    "delayed stores and backing responses",
+    "cancel first pending backing read withreset",
+    "held grid done",
+    "K64replay"
+  ],
+  "timing_calibrated": false,
+  "scope": "Complete smallgrid functional correctness through one serial reusableCTA; no multiSM placement/concurrency or hardware timingvalidation.",
+  "source_sha256": {
+    "discovery_rounds/functional_mapping_002/native_bf16_layout.sv": "63658e6b59f2d124cab3a73159d3219c3d350616cec99bf72fab58afc42df76b",
+    "numerical/library_movm_permutation.sv": "eb6d60b41d421751b14a0bff080d079bf0f0be82b185adbedbf2ad1b2df0e17e",
+    "numerical/numerical_matrix_pipeline.sv": "20d64fa7c297f0a4cf83a68f899a199330cc7907f136f031d1f5b030d4a010b4",
+    "numerical/native_bf16_adapter.sv": "ca05d62325e04c3ab0d982a6d0755355903f331799f83a396d512b866de58d6d",
+    "components/warp_shared_read_service.sv": "82df6598d987c0df1c5be4db8ec504951f2d958783390d7b458cbde6b904500b",
+    "numerical/generic_shared_matrix_pipeline.sv": "79dec191479c459e0c5c35e825e7e283b7642bc1873487da1758b33ba9d9331d",
+    "numerical/timed_generic_shared_matrix_pipeline.sv": "dc174e58303f169397d9baffb6cf5a1461c32904402d45fa2b21f73a29c8d7c4",
+    "numerical/studied_gemm_matrix_pipeline.sv": "71fca0fe0793ad133f18cd9c6c4887dbaaa538aba951284bb9ab68c678ce87c6",
+    "components/sector_read_cache.sv": "45c49166f1cf330b3c2ae4b41f5af0d96655d3a6d8cbeb5f09452e21c3592298",
+    "discovery_rounds/native_barrier_015/native_control_decode.sv": "8c50509b7a80eeed376e83a2078ec8f1b7da30f7cea64d48c8f5248569315cdb",
+    "discovery_rounds/native_barrier_015/producer_barrier_tracker.sv": "a07e60e6d6596cd2aec665367a308b358e2bad05196096c6d68ef636e57d42ad",
+    "components/decoded_native_issue_gate.sv": "9b3f3e8c82c40af5d73839b64dfc1279778f53fc95044cfe55cf0ce09625b427",
+    "numerical/native_studied_stage_schedule.sv": "c5a8c42153dd967e71096ea0f6312927f35e89f1fb41b682b61f45d898a1f56c",
+    "numerical/native_movm_word_pipeline.sv": "3ef390ba095583072d92165d812f129a83e4c30d90bd431b2b702221dec66108",
+    "numerical/native_hmma16816_adapter.sv": "b7b24dc0c6ea8e2acd4dd48b309f5b23804b167f3d4aa7a35af6abd5d6dce18d",
+    "numerical/native_studied_stage_pipeline.sv": "f9086bee4fbace2e499e10ca8bb536622737c41b8185b233d27fa9af6e8b2081",
+    "numerical/native_multiwarp_stage_pipeline.sv": "8d1bd9816753be3a05923013933a1d87aa89edc23a5b3062b0f50f5a2bb70753",
+    "components/cta_generation_barrier.sv": "383b1639ec746b4024a652cf9f11e225716ce871f8c2140781a361dbdb17857f",
+    "numerical/studied_output_scratch_pipeline.sv": "73b253eea79f3011b936157a7790ca0f4c413dc6f3e601e2934832470f41c988",
+    "numerical/coalesced_u16_warp_load.sv": "473859bae9e27d6bdaec22c6d24189f7494e027e318a9cab1a745541b72b0d43",
+    "numerical/studied_gemm_cta_controller.sv": "fb696aca2dbc7898651ddf820a6323b2357b9b5ba810ce715fc562043c6cc4ab",
+    "numerical/bf16_reference.cpp": "0da9f3da8194c8d832b60ef29028a456397c76f9b0edc2b6e45c1ef69e14e1d3",
+    "numerical/coalesced_fp32_warp_store.sv": "5c5da8187bef4824d1aa8cf17707a522e6d64062d2b44997fd3502dcde2393b8",
+    "numerical/studied_gemm_grid_controller.sv": "b6513e2aa54f3b44005728d34bad9a021a3ea623018541ccd8e3a18b6135c65b",
+    "numerical/studied_gemm_grid_tb.sv": "3718d090b4c2ec949ff4fe5daba03bbfd0fe1eb95780d28e927910c8a55f759a"
+  },
+  "review": {
+    "human_first_technical_writing": true,
+    "undergraduate_reader_review": true
+  }
+}

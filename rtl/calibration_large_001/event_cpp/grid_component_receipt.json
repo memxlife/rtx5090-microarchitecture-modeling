@@ -1,0 +1,20 @@
+{
+  "runs": [
+    {
+      "sms": 2,
+      "returncode": 0,
+      "result": "GRID_METADATA_PASS sms=2 cycles=4000 checks=103948 launches=480 completions=469 grids=17"
+    },
+    {
+      "sms": 11,
+      "returncode": 0,
+      "result": "GRID_METADATA_PASS sms=11 cycles=4000 checks=175912 launches=856 completions=838 grids=30"
+    }
+  ],
+  "scope": "Original grid_controller always_ff copied unchanged into harness with27blocks,2/11SMs,3queuecontexts/SM. Integercycle preedge fields compared for4000cycles/config; syntheticconservation-validcompletions,loadbackpressure,completionarbitration,zero/nonzerostartup,reset andmultiplelaunches.",
+  "hashes": {
+    "grid_metadata.hpp": "b7cb619ec1b756c34af947fada415b53bddc49e35627154ff213e2a08d900105",
+    "grid_component_top.sv": "6160f0ca0e2befd4e7ac381e00158b0a9174f7586c03ce5fe752606dd8ee0bbb",
+    "grid_component_test.cpp": "90bed0c6395cf266aa75f8fe13da383d1b0c48c6fce3be4d871cf4d98e447147"
+  }
+}

@@ -1,0 +1,199 @@
+{
+  "round": "initial_hardware_002_003",
+  "parameter_checks": [
+    {
+      "id": "T043",
+      "classification": "effective_path_checked_not_intrinsic",
+      "scope": "Barrier loops at1/4/16warps; registration/scheduling/arrival/release cannot be separated"
+    },
+    {
+      "id": "T044",
+      "classification": "effective_path_checked_not_intrinsic",
+      "scope": "Barrier loops at1/4/16warps; registration/scheduling/arrival/release cannot be separated"
+    },
+    {
+      "id": "T045",
+      "classification": "effective_path_checked_not_intrinsic",
+      "scope": "Barrier loops at1/4/16warps; registration/scheduling/arrival/release cannot be separated"
+    },
+    {
+      "id": "F050",
+      "classification": "supported_compound_scope",
+      "scope": "Storeloop correct and actual visibility after__syncthreads; no bankport or barelatency identification"
+    },
+    {
+      "id": "T021",
+      "classification": "supported_compound_scope",
+      "scope": "Storeloop correct and actual visibility after__syncthreads; no bankport or barelatency identification"
+    },
+    {
+      "id": "T023",
+      "classification": "supported_compound_scope",
+      "scope": "Storeloop correct and actual visibility after__syncthreads; no bankport or barelatency identification"
+    },
+    {
+      "id": "T017",
+      "classification": "effective_path_refined_not_intrinsic",
+      "scope": "NativeHMMA16816 BF16 loop,1/4chains\u00d71/4/8warps; valuearraysandcorrectoracle;~32cycles/op withfourchains,~8aggregateSMcycles/op atfourwarps"
+    },
+    {
+      "id": "T018",
+      "classification": "effective_path_refined_not_intrinsic",
+      "scope": "NativeHMMA16816 BF16 loop,1/4chains\u00d71/4/8warps; valuearraysandcorrectoracle;~32cycles/op withfourchains,~8aggregateSMcycles/op atfourwarps"
+    },
+    {
+      "id": "T019",
+      "classification": "effective_path_refined_not_intrinsic",
+      "scope": "NativeHMMA16816 BF16 loop,1/4chains\u00d71/4/8warps; valuearraysandcorrectoracle;~32cycles/op withfourchains,~8aggregateSMcycles/op atfourwarps"
+    },
+    {
+      "id": "F029",
+      "classification": "effective_path_refined_not_intrinsic",
+      "scope": "NativeHMMA16816 BF16 loop,1/4chains\u00d71/4/8warps; valuearraysandcorrectoracle;~32cycles/op withfourchains,~8aggregateSMcycles/op atfourwarps"
+    },
+    {
+      "id": "T042",
+      "classification": "aggregate_effective_value",
+      "value": 0.06394466943620242,
+      "unit": "SM-reference cycles per32B read+write sector",
+      "scope": "copytraffic2N counted,three eventbatches10copies,notindividualDRAMcommandservice"
+    }
+  ],
+  "fields_checked": 11,
+  "direct_physical_closures": 0,
+  "services": [
+    {
+      "mode": "CTA_barrier",
+      "warps": 1,
+      "effective_cycles_per_iteration": 37.75,
+      "scope": "compiledloop plus barrier/store, no isolatedrelease/issue/return latency"
+    },
+    {
+      "mode": "CTA_barrier",
+      "warps": 4,
+      "effective_cycles_per_iteration": 43.75,
+      "scope": "compiledloop plus barrier/store, no isolatedrelease/issue/return latency"
+    },
+    {
+      "mode": "CTA_barrier",
+      "warps": 16,
+      "effective_cycles_per_iteration": 68.6875,
+      "scope": "compiledloop plus barrier/store, no isolatedrelease/issue/return latency"
+    },
+    {
+      "mode": "warp_sync",
+      "warps": 1,
+      "effective_cycles_per_iteration": 36.2509765625,
+      "scope": "compiledloop plus barrier/store, no isolatedrelease/issue/return latency"
+    },
+    {
+      "mode": "warp_sync",
+      "warps": 4,
+      "effective_cycles_per_iteration": 36.2490234375,
+      "scope": "compiledloop plus barrier/store, no isolatedrelease/issue/return latency"
+    },
+    {
+      "mode": "warp_sync",
+      "warps": 16,
+      "effective_cycles_per_iteration": 40.4931640625,
+      "scope": "compiledloop plus barrier/store, no isolatedrelease/issue/return latency"
+    },
+    {
+      "mode": "shared_store_loop",
+      "warps": 1,
+      "effective_cycles_per_iteration": 49.75,
+      "scope": "compiledloop plus barrier/store, no isolatedrelease/issue/return latency"
+    },
+    {
+      "mode": "shared_store_loop",
+      "warps": 4,
+      "effective_cycles_per_iteration": 49.7490234375,
+      "scope": "compiledloop plus barrier/store, no isolatedrelease/issue/return latency"
+    },
+    {
+      "mode": "shared_store_loop",
+      "warps": 16,
+      "effective_cycles_per_iteration": 56.66015625,
+      "scope": "compiledloop plus barrier/store, no isolatedrelease/issue/return latency"
+    }
+  ],
+  "native_HMMA": [
+    {
+      "warps": 1,
+      "chains": 1,
+      "effective_cycles_per_native_HMMA": 34.5390625
+    },
+    {
+      "warps": 1,
+      "chains": 4,
+      "effective_cycles_per_native_HMMA": 32.0040283203125
+    },
+    {
+      "warps": 4,
+      "chains": 1,
+      "effective_cycles_per_native_HMMA": 34.53857421875
+    },
+    {
+      "warps": 4,
+      "chains": 4,
+      "effective_cycles_per_native_HMMA": 32.0372314453125
+    },
+    {
+      "warps": 8,
+      "chains": 1,
+      "effective_cycles_per_native_HMMA": 64.29833984375
+    },
+    {
+      "warps": 8,
+      "chains": 4,
+      "effective_cycles_per_native_HMMA": 64.01007080078125
+    }
+  ],
+  "heldout_LDS_rule": [
+    {
+      "stride": 3,
+      "frozen_expected": 28,
+      "actual": 28.0,
+      "all32lanes_correct": true
+    },
+    {
+      "stride": 6,
+      "frozen_expected": 30,
+      "actual": 30.0,
+      "all32lanes_correct": true
+    }
+  ],
+  "streaming_copy": {
+    "samples": [
+      {
+        "correct_sampled_words": 4,
+        "repeat": 0,
+        "event_ms_10copies": 7.27814388,
+        "read_plus_write_GBs": 1475.29623
+      },
+      {
+        "correct_sampled_words": 4,
+        "repeat": 1,
+        "event_ms_10copies": 7.26115179,
+        "read_plus_write_GBs": 1478.74863
+      },
+      {
+        "correct_sampled_words": 4,
+        "repeat": 2,
+        "event_ms_10copies": 7.27331209,
+        "read_plus_write_GBs": 1476.2763
+      }
+    ],
+    "median_read_plus_write_GBs": 1476.2763,
+    "effective_cycles_per32B_at2950MHz": 0.06394466943620242,
+    "nominal_profile": 0.0525,
+    "test_checked_words": 12,
+    "not_fullcopy_correctness_check": true
+  },
+  "SASS_audit": {
+    "native_HMMA_count_static": 1056,
+    "source": "round3/hmma.cu",
+    "nativefile": "round3/hmma.sass"
+  },
+  "no_registry_profile_modified": true
+}

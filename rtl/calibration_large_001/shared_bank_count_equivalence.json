@@ -1,0 +1,36 @@
+{
+  "pass": true,
+  "comparison": "pre-packed smoke versus packed flags plus timing-only shared service bank-count optimization",
+  "metrics": [
+    {
+      "launch": 0,
+      "M": 64,
+      "N": 96,
+      "K": 64,
+      "checked": 6144,
+      "cycles": 34493,
+      "peak_blocks": 4,
+      "l2_requests": 1536,
+      "hits": 324,
+      "misses": 1212,
+      "merges": 476,
+      "fills": 736
+    },
+    {
+      "launch": 1,
+      "M": 64,
+      "N": 96,
+      "K": 64,
+      "checked": 6144,
+      "cycles": 28251,
+      "peak_blocks": 4,
+      "l2_requests": 3072,
+      "hits": 1157,
+      "misses": 1915,
+      "merges": 655,
+      "fills": 1260
+    }
+  ],
+  "random_bank_address_vectors": 10000,
+  "scope": "Small timing-only output address coverage and exact cycle/counter comparison; no numerical result or real hardware timing claim"
+}

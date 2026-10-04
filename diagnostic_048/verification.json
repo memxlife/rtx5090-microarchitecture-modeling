@@ -1,0 +1,110 @@
+{
+  "rows": [
+    {
+      "tile": [
+        32,
+        32,
+        32
+      ],
+      "shape": [
+        128,
+        96,
+        12288
+      ],
+      "single_block": false,
+      "k": 12288,
+      "predicted_us": 688.5074263758504,
+      "observed_us": 712.6591920000001,
+      "relative_error": 0.03388964303732667
+    },
+    {
+      "tile": [
+        32,
+        32,
+        32
+      ],
+      "shape": [
+        128,
+        96,
+        49152
+      ],
+      "single_block": false,
+      "k": 49152,
+      "predicted_us": 2742.637714703402,
+      "observed_us": 2834.15036,
+      "relative_error": 0.0322892696831365
+    },
+    {
+      "tile": [
+        64,
+        48,
+        32
+      ],
+      "shape": [
+        128,
+        96,
+        12288
+      ],
+      "single_block": true,
+      "k": 12288,
+      "predicted_us": 1242.7346742452382,
+      "observed_us": 1246.4959900000001,
+      "relative_error": 0.00301751131566963
+    },
+    {
+      "tile": [
+        64,
+        48,
+        32
+      ],
+      "shape": [
+        128,
+        96,
+        49152
+      ],
+      "single_block": true,
+      "k": 49152,
+      "predicted_us": 4956.596349880952,
+      "observed_us": 5002.72636,
+      "relative_error": 0.009220974084828248
+    },
+    {
+      "tile": [
+        64,
+        48,
+        32
+      ],
+      "shape": [
+        128,
+        96,
+        12288
+      ],
+      "single_block": false,
+      "k": 12288,
+      "predicted_us": 1242.7346742452382,
+      "observed_us": 1251.3727900000001,
+      "relative_error": 0.006902911605391249
+    },
+    {
+      "tile": [
+        64,
+        48,
+        32
+      ],
+      "shape": [
+        128,
+        96,
+        49152
+      ],
+      "single_block": false,
+      "k": 49152,
+      "predicted_us": 4956.596349880952,
+      "observed_us": 4983.35361,
+      "relative_error": 0.005369328009426133
+    }
+  ],
+  "accepted": true,
+  "checks": 270,
+  "all_correct": true,
+  "coefficients_from_full_gemm": false
+}

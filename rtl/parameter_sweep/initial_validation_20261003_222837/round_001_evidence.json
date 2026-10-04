@@ -1,0 +1,238 @@
+{
+  "round": "initial_hardware_001",
+  "new_remote_authorization": "onehour22:28:37to23:28:37UTC",
+  "shared": [
+    {
+      "stride_words": 0,
+      "effective_SM_cycles_per_load": 28.0,
+      "registers": 20,
+      "spill_bytes": 0
+    },
+    {
+      "stride_words": 1,
+      "effective_SM_cycles_per_load": 28.0,
+      "registers": 19,
+      "spill_bytes": 0
+    },
+    {
+      "stride_words": 2,
+      "effective_SM_cycles_per_load": 30.0,
+      "registers": 19,
+      "spill_bytes": 0
+    },
+    {
+      "stride_words": 4,
+      "effective_SM_cycles_per_load": 34.0,
+      "registers": 19,
+      "spill_bytes": 0
+    },
+    {
+      "stride_words": 8,
+      "effective_SM_cycles_per_load": 42.0,
+      "registers": 19,
+      "spill_bytes": 0
+    },
+    {
+      "stride_words": 16,
+      "effective_SM_cycles_per_load": 58.0,
+      "registers": 19,
+      "spill_bytes": 0
+    },
+    {
+      "stride_words": 32,
+      "effective_SM_cycles_per_load": 90.0,
+      "registers": 19,
+      "spill_bytes": 0
+    }
+  ],
+  "cache_effective": {
+    "ca": 43.20947265625,
+    "cg": 357.0791015625
+  },
+  "capacity_controls": [
+    {
+      "KiB": 32,
+      "effective_cycles": 43.1763916015625
+    },
+    {
+      "KiB": 64,
+      "effective_cycles": 43.1939697265625
+    },
+    {
+      "KiB": 96,
+      "effective_cycles": 147.864501953125
+    },
+    {
+      "KiB": 128,
+      "effective_cycles": 361.83154296875
+    },
+    {
+      "KiB": 256,
+      "effective_cycles": 363.3162841796875
+    }
+  ],
+  "profiles": {
+    "64": {
+      "l1tex__t_sector_hit_rate.pct": 96.85,
+      "lts__t_sectors_srcunit_tex_op_read.sum": 2048.0
+    },
+    "96": {
+      "l1tex__t_sector_hit_rate.pct": 63.39,
+      "lts__t_sectors_srcunit_tex_op_read.sum": 23984.0
+    }
+  },
+  "device_query": [
+    {
+      "runtime": 12080,
+      "driver": 12080,
+      "cc": [
+        12,
+        0
+      ],
+      "SMs": 170,
+      "warp_size": 32,
+      "register_words_SM": 65536,
+      "shared_SM_bytes": 102400,
+      "shared_block_default_bytes": 49152,
+      "shared_block_optin_bytes": 101376,
+      "threads_SM": 1536,
+      "blocks_SM": 24,
+      "L2_bytes": 100663296,
+      "memory_bus_bits": 512,
+      "async_engines": 2,
+      "concurrent_kernels": 1
+    },
+    {
+      "carveout_percent": 0,
+      "accepted": true
+    },
+    {
+      "carveout_percent": 8,
+      "accepted": true
+    },
+    {
+      "carveout_percent": 16,
+      "accepted": true
+    },
+    {
+      "carveout_percent": 32,
+      "accepted": true
+    },
+    {
+      "carveout_percent": 64,
+      "accepted": true
+    },
+    {
+      "carveout_percent": 100,
+      "accepted": true
+    },
+    {
+      "carveout_percent": 132,
+      "accepted": false
+    }
+  ],
+  "parameter_checks": [
+    {
+      "id": "F052",
+      "outcome": "supported_scoped",
+      "value": "maximum distinct bank words predicts28+2*(packages\u22121) cycles in scalar LDS dependency path",
+      "basis": "MEASURED_COMPOUND",
+      "scope": "onewarp,explicitLDS,32KiBshared,unroll32,twolength1024/2048"
+    },
+    {
+      "id": "F053",
+      "outcome": "supported_scoped",
+      "value": "samewordbroadcast matchesconflictfree28cycles",
+      "basis": "MEASURED_COMPOUND",
+      "scope": "onewarp,all32lanes sameword,notmulticasttopology"
+    },
+    {
+      "id": "T027",
+      "outcome": "refined_effective_value",
+      "value": 28,
+      "unit": "compoundSMcycles/load",
+      "scope": "notisolatedresponse24cycleassumption; noadditivecharge"
+    },
+    {
+      "id": "T029",
+      "outcome": "supported_scoped",
+      "value": 0,
+      "unit": "additionalcompoundSMcycles for testedbroadcast",
+      "scope": "broadcastminusdistinctbankpath"
+    },
+    {
+      "id": "T020",
+      "outcome": "refined_effective_value",
+      "value": 2,
+      "unit": "additionalcompoundSMcycles perextrabankpackage",
+      "scope": "notindependentloadissueinterval"
+    },
+    {
+      "id": "F048",
+      "outcome": "supported_contract",
+      "value": "preferredsharedcarveout0..100 accepted;132rejects;sharedSM102400bytes",
+      "scope": "CUDAquery/preferences; preference32percentnot32KiBguarantee"
+    },
+    {
+      "id": "F054",
+      "outcome": "supported_range",
+      "value": {
+        "cachefriendly_footprint_KiB": 64,
+        "degraded_footprint_KiB": 96
+      },
+      "scope": "carveoutpreference32%,96.85vs63.39L1hits; notexactarraycapacity"
+    },
+    {
+      "id": "T031",
+      "outcome": "refined_effective_value",
+      "value": 43.20947265625,
+      "unit": "compoundSMcycles dependentca chain",
+      "scope": "8KiBworkingring; previousprofileconfirmedL1dominated; notintrinsichitlatency32"
+    },
+    {
+      "id": "T035",
+      "outcome": "refined_effective_value",
+      "value": 357.0791015625,
+      "unit": "compoundSMcycles dependentcg chain",
+      "scope": "L1bypassed8KiBring; notintrinsicL2arraylatency300"
+    },
+    {
+      "id": "F086",
+      "outcome": "supported_scoped",
+      "value": {
+        "compute_cycles_per_ns": 2.952693186,
+        "load_cycles_per_ns": 2.953457423
+      },
+      "scope": "compiledcompute/loadprobes; clock_only optimizedto1cycle0ticksanddiscarded"
+    },
+    {
+      "id": "T046",
+      "outcome": "supported_scoped",
+      "value": {
+        "compute_SM_MHz": 2952.693186,
+        "load_SM_MHz": 2953.457423
+      },
+      "scope": "SMcounter/globaltimer ratio; notallphysicalmemorydomains"
+    }
+  ],
+  "counts": {
+    "fields_checked": 11,
+    "supported_contract_or_scope": 7,
+    "effective_refinements": 4,
+    "direct_physical_field_closures": 0
+  },
+  "largest_error": {
+    "all_45_outputs_correct": true,
+    "output_checks": 45,
+    "median_us": 277.2672,
+    "frozen_prediction_us": 293.382651592,
+    "relative_overestimate_percent": 5.812245946148686,
+    "native_signature_matches": true,
+    "resources_match": true,
+    "scope": "One unchanged exactkernel process, ninefiveeventmeans. Plannedsecond/thirdprocess didnotlaunch because idlecheck saw7%residualutilizationfrompreviousrun. Nojobs terminated.",
+    "new_parameter_fit": false
+  },
+  "invalid_control": "clock_only1cycle0globalticks; excludedfromanyfrequencyclaim",
+  "timing_intrinsic": false,
+  "no_profile_registry_modified": true
+}

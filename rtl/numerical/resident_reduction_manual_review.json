@@ -1,0 +1,46 @@
+{
+  "accepted": true,
+  "changed_sections": [
+    "4.46",
+    "4.47"
+  ],
+  "documents": [
+    "rtl_microarchitecture_spec.md",
+    "README.md"
+  ],
+  "inline_source_parity": {
+    "numerical/resident_operand_staging.sv": true,
+    "numerical/resident_gemm_reduction.sv": true
+  },
+  "reviewed_current_receipts": [
+    "numerical/resident_operand_staging_verification.json",
+    "numerical/resident_reduction_verification.json"
+  ],
+  "receipt_source_hashes_current": true,
+  "human_first_review": "Explains actual cache-return/shared-write completion before compute and complete K accumulation before register response.",
+  "reader_review": "Separates frame/reduction completion from fullCTA lifetime, defines stage count/ownership and fixed finite service settings; absent output paths and barriers remain explicit.",
+  "reader_language_lint": "passed",
+  "quantitative_review": {
+    "staging_halfwords": 4096,
+    "frame_groups": 64,
+    "halfwords_per_frame": 2048,
+    "reduction_register_words": 4096,
+    "K64_stages_per_context": 2,
+    "K1536_stages_per_context": 48,
+    "new_physical_parameter_closures": 0
+  },
+  "timing_calibrated": false,
+  "boundary": "Register-result completion only; no output scratch/stores, explicit CTA barrier generations, full grid or hardware timing. Reduction held-result checks prove stability, not new issue growth; stage-engine receipt separately proves other-context completion.",
+  "document_sha256": {
+    "rtl_microarchitecture_spec.md": "0624fc93413e0ec4be38e6eb5963da0d46cae85e97180fb5c8c5ed83ad19e8b0",
+    "README.md": "8d4492b4f6f37817bc12845a27015dc7360792d79f15c54b05b898e1dbeec3ff"
+  },
+  "source_sha256": {
+    "numerical/resident_operand_staging.sv": "0ee192e43a0f95009659b7d01d07fb44239e4039248038f9aa8bb32133e60c37",
+    "numerical/resident_gemm_reduction.sv": "a4cb28c5c357483fcc9e8dab0469b751193042be470a68035f9a32617a8ea136"
+  },
+  "negative_launch_cases": [
+    "odd_base",
+    "allocation_overflow"
+  ]
+}

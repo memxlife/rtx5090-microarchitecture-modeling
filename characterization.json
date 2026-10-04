@@ -1,0 +1,1 @@
+{"name":"NVIDIA GeForce RTX 5090","sms":170,"shared_sm":102400,"shared_cta_optin":101376,"regs_sm":65536,"regs_block":65536,"threads_sm":1536,"runtime":12080,"driver_api":12080,"copy_bandwidth_gbs_samples":[1470.073711,1473.715186,1472.273240,1474.310902,1473.838168,1470.138112,1476.399707],"global_dependent_load_cycles":832.309160,"shared_dependent_load_cycles":34.000995}

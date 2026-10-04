@@ -1,0 +1,24 @@
+{
+  "rates_Hz": {
+    "sm__cycles_elapsed.avg.per_second": 2011504039.38,
+    "l1tex__cycles_elapsed.avg.per_second": 2011504039.38,
+    "gpc__cycles_elapsed.avg.per_second": 2011159285.99,
+    "lts__cycles_elapsed.avg.per_second": 1814560085.84
+  },
+  "clock_ratio_SM_over_L1TEX": 1.0,
+  "clock_ratio_SM_over_LTS": 1.1085353717834208,
+  "two_SM_cycles_in_L1TEX_cycles": 2.0,
+  "half_rate_L1_hypothesis_supported": false,
+  "same_profile": true,
+  "counter_set_profiles": 1,
+  "source_kernel": "generic_shared_plain/probe_k1_s32 existing verified binary",
+  "arguments": [
+    "0",
+    "4096"
+  ],
+  "numerical_checks": true,
+  "metric_semantics": "Each unit cyclecounter uses its own domain; comparisons only describe this recorded profile. No privateportcount follows.",
+  "conversion_rule": "destination cycles = source cycles \u00d7 destination measured unitrate/source measured unitrate",
+  "scope": "Observed explicitshared oneCTAonewarp,stride32,4096loads; deviceoperatingpoint notlocked",
+  "source_evidence": "OfficialNsight cyclemetrics; literature_sweep023 andcuda_ptx agent handoff"
+}

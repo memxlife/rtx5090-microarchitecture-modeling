@@ -1,0 +1,38 @@
+{
+  "32_32": {
+    "baseline": {
+      "pointer_parameter_loads_static": 15,
+      "input_load_forms": {
+        "LDG.E.U16": 14
+      }
+    },
+    "retained_pointer_variant": {
+      "pointer_parameter_loads_static": 2,
+      "input_load_forms": {
+        "LD.E.U16": 14
+      }
+    },
+    "input_instruction_form_changed": true,
+    "accepted_as_pointer_latency_control": false,
+    "reason": "Input load form changed; cannot isolate pointer-load latency",
+    "intrinsic_pointer_latency_cycles": null
+  },
+  "64_48": {
+    "baseline": {
+      "pointer_parameter_loads_static": 26,
+      "input_load_forms": {
+        "LDG.E.U16": 14
+      }
+    },
+    "retained_pointer_variant": {
+      "pointer_parameter_loads_static": 13,
+      "input_load_forms": {
+        "LD.E.U16": 14
+      }
+    },
+    "input_instruction_form_changed": true,
+    "accepted_as_pointer_latency_control": false,
+    "reason": "Input load form changed; cannot isolate pointer-load latency",
+    "intrinsic_pointer_latency_cycles": null
+  }
+}

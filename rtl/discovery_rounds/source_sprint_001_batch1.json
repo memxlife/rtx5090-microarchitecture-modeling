@@ -1,0 +1,237 @@
+{
+  "purpose": "First broad source-check batch for provisional assumptions. One supporting method is sufficient for a scoped check; this receipt does not relabel private hardware as identified.",
+  "google_chrome_used": true,
+  "master_sha256": "14b294e47596fca86d4b10cafc3a569a22465f6fc12ea3b201ca8311b28239cb",
+  "sources": {
+    "ncu": {
+      "url": "https://docs.nvidia.com/nsight-compute/ProfilingGuide/index.html",
+      "sections": [
+        "2.3.4 Units",
+        "2.3.6 Pipelines",
+        "2.3.7 Memory Access"
+      ],
+      "type": "official documentation",
+      "retrieval": "Google search in Chrome followed by direct document DOM reading"
+    },
+    "ptx": {
+      "url": "https://docs.nvidia.com/cuda/parallel-thread-execution/index.html",
+      "version": "9.4",
+      "sections": [
+        "3.2 Independent Thread Scheduling",
+        "9.7.10.1 Cache Operators",
+        "9.7.15.1 bar/barrier"
+      ],
+      "type": "official ISA contract",
+      "retrieval": "Google search in Chrome followed by exact section DOM reading"
+    },
+    "nuca": {
+      "url": "https://arxiv.org/html/2606.22588v1",
+      "version": "v1,21 June2026",
+      "sections": [
+        "2 Method",
+        "5 Cross-Architecture Generalization",
+        "12 Limitations"
+      ],
+      "type": "primary paper,one measured RTX5090",
+      "retrieval": "Google result followed by primary HTML"
+    },
+    "dgna": {
+      "url": "https://arxiv.org/html/2607.19922v1",
+      "version": "v1,22 July2026",
+      "sections": [
+        "4.1 Measuring Latency",
+        "5.2 RTX5090/Figure6"
+      ],
+      "type": "primary paper",
+      "retrieval": "Google result followed by primary HTML"
+    },
+    "gb203": {
+      "url": "https://arxiv.org/html/2507.10789v2",
+      "version": "v2,21 July2025",
+      "sections": [
+        "IV-B/TableIII",
+        "VI-B"
+      ],
+      "type": "primary paper RTX5080 GB203,notRTX5090",
+      "retrieval": "Google result followed by primary HTML"
+    }
+  },
+  "checks": [
+    {
+      "id": "F005",
+      "name": "Instruction-cache capacity",
+      "source": "ncu",
+      "check_result": "partially_supported",
+      "supported_observation": "ICC serves a TPC; GCC caches instructions at GPC level and fetches misses fromL2.",
+      "model_impact": "Add instruction-cache hierarchy scope to specification.",
+      "limit": "16KiB baselinecapacity is not established by this source.",
+      "physical_identification_changed": false
+    },
+    {
+      "id": "F011",
+      "name": "Divergence handling",
+      "source": "ptx",
+      "check_result": "supported_functional_subcontract",
+      "supported_observation": "Volta-and-later retain per-thread PC and call stack; active threads regroup into SIMT units.",
+      "model_impact": "Retain enabled-lane execution and per-thread state.",
+      "limit": "Private schedulingpolicy and transistor implementation not given.",
+      "physical_identification_changed": false
+    },
+    {
+      "id": "F012",
+      "name": "Reconvergence handling",
+      "source": "ptx",
+      "check_result": "partially_supported",
+      "supported_observation": "Sub-warp divergence/reconvergence is supported.",
+      "model_impact": "Annotate convergence-token model as implementation hypothesis.",
+      "limit": "Exact token/stack algorithm not specified.",
+      "physical_identification_changed": false
+    },
+    {
+      "id": "F017",
+      "name": "Instruction-class routing",
+      "source": "ncu",
+      "check_result": "partially_supported",
+      "supported_observation": "Some instructions dynamically select among pipelines; some consume both pipelines.",
+      "model_impact": "Routing must allow opcode-specific alternatives/shared demands.",
+      "limit": "Exact sm120 opcode routing not fully listed.",
+      "physical_identification_changed": false
+    },
+    {
+      "id": "F029",
+      "name": "Pipeline sharing rules",
+      "source": "ncu",
+      "check_result": "partially_supported",
+      "supported_observation": "Nsight pipeline names may be logical aggregations rather than individual physical units.",
+      "model_impact": "Do not turn metric pipeline names into independent physical resource counts.",
+      "limit": "Private sharing matrix unknown.",
+      "physical_identification_changed": false
+    },
+    {
+      "id": "F059",
+      "name": "L1 write policy",
+      "source": "ptx",
+      "check_result": "partially_supported",
+      "supported_observation": "st.cg explicitly bypassesL1; globalL1 is notcoherent.",
+      "model_impact": "Key modeled writepolicy by actual cacheoperator/nativepath.",
+      "limit": "Default st.wb does not establish universal L1 bypass/noallocation.",
+      "physical_identification_changed": false
+    },
+    {
+      "id": "F070",
+      "name": "L2 write policy",
+      "source": "ptx",
+      "check_result": "partially_supported",
+      "supported_observation": "Default st.wb uses writeback at coherent cachelevels.",
+      "model_impact": "Retain writeback contract; distinguish it from writeallocate assumption.",
+      "limit": "Writeallocation and controller acknowledgment details unestablished.",
+      "physical_identification_changed": false
+    },
+    {
+      "id": "F069",
+      "name": "L2 replacement policy",
+      "source": "ptx",
+      "check_result": "partially_supported",
+      "supported_observation": "Cache operators provide normal/evict-first hints; they do not alter memoryconsistency.",
+      "model_impact": "Policy hints constrain qualitative priority, not pseudoLRU selection.",
+      "limit": "Exact replacementalgorithm remains assumed.",
+      "physical_identification_changed": false
+    },
+    {
+      "id": "F081",
+      "name": "Barrier participant rules",
+      "source": "ptx",
+      "check_result": "supported_functional_subcontract",
+      "supported_observation": "CTA has16 numbered barriers; implicitcountallCTAthreads, explicitcountwarp multiple.",
+      "model_impact": "Represent participantcount and resourceIDs0..15.",
+      "limit": "No physical timing inferred.",
+      "physical_identification_changed": false
+    },
+    {
+      "id": "F082",
+      "name": "Barrier generation rules",
+      "source": "ptx",
+      "check_result": "supported_functional_subcontract",
+      "supported_observation": "Completed barrier reinitializes for reuse.",
+      "model_impact": "Require generation-safe reuse.",
+      "limit": "Generation encoding and internal counters unknown.",
+      "physical_identification_changed": false
+    },
+    {
+      "id": "F083",
+      "name": "Barrier drain obligations",
+      "source": "ptx",
+      "check_result": "supported_functional_subcontract",
+      "supported_observation": "Prior participant memory operations must be performed relative to participants at completion.",
+      "model_impact": "Gate release on returnedreads/visiblewrites.",
+      "limit": "Does not require all unrelated arithmetic results or globalDRAMpersistence.",
+      "physical_identification_changed": false
+    },
+    {
+      "id": "F065",
+      "name": "L2 slice organization/count",
+      "source": "nuca",
+      "check_result": "partially_supported",
+      "supported_observation": "RTX5090 has placement-dependent L2 path; primarypaper declines exact slice-to-controller mapping.",
+      "model_impact": "Allow topology-sensitive latency observation separately from assumed48/64slices.",
+      "limit": "One NUMAlatency group is not one physicalslice.",
+      "physical_identification_changed": false
+    },
+    {
+      "id": "F066",
+      "name": "L2 slice address mapping",
+      "source": "nuca",
+      "check_result": "partially_supported",
+      "supported_observation": "Measured RTX5090 latency-probe pattern has512-byte period.",
+      "model_impact": "Use periodicity as a testable prior for address-dependent path variation.",
+      "limit": "Period does not prove slicehashformula.",
+      "physical_identification_changed": false
+    },
+    {
+      "id": "T035",
+      "name": "L2 read-hit latency",
+      "source": "nuca",
+      "check_result": "external_measurement_prior",
+      "supported_observation": "RTX5090 dependent ld.global.cg measured288.2\u2013419.5cycles;119.7\u2013174.3ns.",
+      "model_impact": "Widen external effective-path sensitivity range beyond356cycles ifusingthis prior.",
+      "limit": "One device; isolated dependentchain; includes fabric/dependency effects, notintrinsicL2taglatency.",
+      "physical_identification_changed": false
+    },
+    {
+      "id": "T039",
+      "name": "Read command/response timing",
+      "source": "dgna",
+      "check_result": "external_measurement_prior",
+      "supported_observation": "RTX5090 DRAM-access distribution clusters at922cycles afteroutlierfiltering.",
+      "model_impact": "Add external end-to-end readpath comparison target.",
+      "limit": "Do not replace controller-only200cycle baseline directly; measurement includes load/sharedsink/timer path.",
+      "physical_identification_changed": false
+    },
+    {
+      "id": "T031",
+      "name": "L1 read-hit latency",
+      "source": "gb203",
+      "check_result": "cross_device_prior",
+      "supported_observation": "RTX5080GB203 pointerchainL1 region reported30\u201340cycles.",
+      "model_impact": "Supports rough32cycle baselineprior.",
+      "limit": "Differentdevice; notdirect5090identification.",
+      "physical_identification_changed": false
+    },
+    {
+      "id": "T014",
+      "name": "Instruction-class result latencies",
+      "source": "gb203",
+      "check_result": "cross_device_prior",
+      "supported_observation": "RTX5080GB203 dependent pureINT32/FP32 reported4cycles.",
+      "model_impact": "Supports4cycle arithmeticrecurrenceprior.",
+      "limit": "Notregister-read/collector/execution decomposition;paper has broaderarchitectural claims needingISAqualification.",
+      "physical_identification_changed": false
+    }
+  ],
+  "counts": {
+    "checked_fields": 17,
+    "physical_closures": 0
+  },
+  "search_summary_rejected": "Google AI summary conflated RTX5080 cachecapacity with5090 and merged methods; primarytext was used instead.",
+  "review": "Definitions, units, device identity and measurement boundaries reviewed in plain language."
+}

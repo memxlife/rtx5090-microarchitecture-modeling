@@ -1,0 +1,15 @@
+{
+  "legal_address_checks": 18432,
+  "mismatches": 0,
+  "invalid_index_rejected": true,
+  "shared_bytes": 37376,
+  "authoritative_source": "rtl/discovery_rounds/executed_layout_009/layout_binding.py",
+  "authoritative_sha256": "2c342a5e86a81d362e10a314436370664ebe59c87a72f707bc5829c8012d270e",
+  "SV_sha256": "1ee7ce36b6cee8ff6a17bd01fc0781ba04f7a434c6a5a9521ffdde7850a67d19",
+  "stdout": "PASS 18432 authoritative address checks\n- rtl/numerical/tb_library_shared_layout.sv:25: Verilog $finish\n- S i m u l a t i o n   R e p o r t: Verilator 5.050 2026-07-01\n- Verilator: $finish at 0s; walltime 0.039 s; speed 0.000 s/s\n- Verilator: cpu 0.039 s on 1 threads; allocated 2 MB",
+  "scope": "Selected library software shared-address layout only; no private hardware capacity or timing identification.",
+  "review": {
+    "human_first_technical_writing": true,
+    "undergraduate_reader_review": true
+  }
+}

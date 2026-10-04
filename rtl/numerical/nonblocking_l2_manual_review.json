@@ -1,0 +1,32 @@
+{
+  "accepted": true,
+  "changed_sections": [
+    "4.56",
+    "4.57"
+  ],
+  "human_first_review": "Explains capacity and actual acceptance before join/refill/completion behavior and quantitative observations.",
+  "reader_review": "Defines MSHRs, exact counters and II2 boundary; separates client ownership from MSHR lifetime and local tests from physical inference.",
+  "reader_language_lint": true,
+  "receipts": [
+    "numerical/multi_sm_nonblocking_l2_verification.json",
+    "numerical/resident_multi_sm_nb_l2_verification.json"
+  ],
+  "receipt_source_hashes_current": true,
+  "inline_source_parity": {
+    "numerical/multi_sm_nonblocking_l2.sv": true,
+    "numerical/resident_gemm_multi_sm_nb_l2.sv": true
+  },
+  "source_sha256": {
+    "numerical/multi_sm_nonblocking_l2.sv": "c1f7af9e3fa80274fd23372c9e2ff337498ca6224615fb880b890b6ad33e93b9",
+    "numerical/resident_gemm_multi_sm_nb_l2.sv": "79dd6b1604f9b9b77a87aa2258fcdb0efcb2a898ff2225476c724a86b95d5726"
+  },
+  "document_sha256": {
+    "rtl_microarchitecture_spec.md": "4e97a42c31aa26654dfad0591fa00cc859264c82467592185575ab44f8166ed8",
+    "README.md": "a00853850de5ee5da58212b96c5d54ecc8ddf48f32c1068d64063eec67f9f075"
+  },
+  "checked_global_words": 24576,
+  "checked_unit_words": 56,
+  "timing_calibrated": false,
+  "hardware_parameters_closed": 0,
+  "unit_receipt_metadata_corrected": true
+}

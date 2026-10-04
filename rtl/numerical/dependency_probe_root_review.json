@@ -1,0 +1,13 @@
+{
+  "accepted": true,
+  "scope": "Section4.58 and exactinline parity; currentSVreceipt hashes; numerical and timing-boundary scope",
+  "manual_sha256": "4ce50982de5c237329482928c4defa2ab3d4697d0a2a33239d6ba4134f6e9843",
+  "inline_source_matches": true,
+  "receipt_sources_match": true,
+  "reader_repairs": [
+    "Corrected opcode width to2bits",
+    "Named separate phase-composition model and percent unit for unchanged largest error"
+  ],
+  "physical_accuracy_claim": false,
+  "hardware_parameters_closed": 0
+}

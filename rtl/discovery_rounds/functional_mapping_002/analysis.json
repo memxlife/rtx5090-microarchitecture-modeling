@@ -1,0 +1,4996 @@
+{
+  "round": "functional_mapping_002",
+  "scope": "CUDA12.8 sm120 BF16 WMMA row-majorA/B 16x16x16 with FP32 accumulator and zeroinitialC, exactly32participatinglanes",
+  "hardware_run": {
+    "gpu_index": 5,
+    "device": "NVIDIA GeForce RTX 5090",
+    "cases": 515,
+    "launches": 1030,
+    "matrix_words_checked": 263680,
+    "correct": true
+  },
+  "independent_python_checks": {
+    "output_words": 131840,
+    "a_fragment_words": 131840,
+    "b_fragment_words": 131840,
+    "c_fragment_words": 131840
+  },
+  "held_out_mapping_cases": 512,
+  "mapping_derivation_cases": {
+    "a": 0,
+    "b": 0,
+    "c": 1
+  },
+  "coordinate_maps": {
+    "a": [
+      {
+        "lane": 0,
+        "element": 0,
+        "row": 0,
+        "column": 0
+      },
+      {
+        "lane": 0,
+        "element": 1,
+        "row": 0,
+        "column": 1
+      },
+      {
+        "lane": 0,
+        "element": 2,
+        "row": 8,
+        "column": 0
+      },
+      {
+        "lane": 0,
+        "element": 3,
+        "row": 8,
+        "column": 1
+      },
+      {
+        "lane": 0,
+        "element": 4,
+        "row": 0,
+        "column": 8
+      },
+      {
+        "lane": 0,
+        "element": 5,
+        "row": 0,
+        "column": 9
+      },
+      {
+        "lane": 0,
+        "element": 6,
+        "row": 8,
+        "column": 8
+      },
+      {
+        "lane": 0,
+        "element": 7,
+        "row": 8,
+        "column": 9
+      },
+      {
+        "lane": 1,
+        "element": 0,
+        "row": 0,
+        "column": 2
+      },
+      {
+        "lane": 1,
+        "element": 1,
+        "row": 0,
+        "column": 3
+      },
+      {
+        "lane": 1,
+        "element": 2,
+        "row": 8,
+        "column": 2
+      },
+      {
+        "lane": 1,
+        "element": 3,
+        "row": 8,
+        "column": 3
+      },
+      {
+        "lane": 1,
+        "element": 4,
+        "row": 0,
+        "column": 10
+      },
+      {
+        "lane": 1,
+        "element": 5,
+        "row": 0,
+        "column": 11
+      },
+      {
+        "lane": 1,
+        "element": 6,
+        "row": 8,
+        "column": 10
+      },
+      {
+        "lane": 1,
+        "element": 7,
+        "row": 8,
+        "column": 11
+      },
+      {
+        "lane": 2,
+        "element": 0,
+        "row": 0,
+        "column": 4
+      },
+      {
+        "lane": 2,
+        "element": 1,
+        "row": 0,
+        "column": 5
+      },
+      {
+        "lane": 2,
+        "element": 2,
+        "row": 8,
+        "column": 4
+      },
+      {
+        "lane": 2,
+        "element": 3,
+        "row": 8,
+        "column": 5
+      },
+      {
+        "lane": 2,
+        "element": 4,
+        "row": 0,
+        "column": 12
+      },
+      {
+        "lane": 2,
+        "element": 5,
+        "row": 0,
+        "column": 13
+      },
+      {
+        "lane": 2,
+        "element": 6,
+        "row": 8,
+        "column": 12
+      },
+      {
+        "lane": 2,
+        "element": 7,
+        "row": 8,
+        "column": 13
+      },
+      {
+        "lane": 3,
+        "element": 0,
+        "row": 0,
+        "column": 6
+      },
+      {
+        "lane": 3,
+        "element": 1,
+        "row": 0,
+        "column": 7
+      },
+      {
+        "lane": 3,
+        "element": 2,
+        "row": 8,
+        "column": 6
+      },
+      {
+        "lane": 3,
+        "element": 3,
+        "row": 8,
+        "column": 7
+      },
+      {
+        "lane": 3,
+        "element": 4,
+        "row": 0,
+        "column": 14
+      },
+      {
+        "lane": 3,
+        "element": 5,
+        "row": 0,
+        "column": 15
+      },
+      {
+        "lane": 3,
+        "element": 6,
+        "row": 8,
+        "column": 14
+      },
+      {
+        "lane": 3,
+        "element": 7,
+        "row": 8,
+        "column": 15
+      },
+      {
+        "lane": 4,
+        "element": 0,
+        "row": 1,
+        "column": 0
+      },
+      {
+        "lane": 4,
+        "element": 1,
+        "row": 1,
+        "column": 1
+      },
+      {
+        "lane": 4,
+        "element": 2,
+        "row": 9,
+        "column": 0
+      },
+      {
+        "lane": 4,
+        "element": 3,
+        "row": 9,
+        "column": 1
+      },
+      {
+        "lane": 4,
+        "element": 4,
+        "row": 1,
+        "column": 8
+      },
+      {
+        "lane": 4,
+        "element": 5,
+        "row": 1,
+        "column": 9
+      },
+      {
+        "lane": 4,
+        "element": 6,
+        "row": 9,
+        "column": 8
+      },
+      {
+        "lane": 4,
+        "element": 7,
+        "row": 9,
+        "column": 9
+      },
+      {
+        "lane": 5,
+        "element": 0,
+        "row": 1,
+        "column": 2
+      },
+      {
+        "lane": 5,
+        "element": 1,
+        "row": 1,
+        "column": 3
+      },
+      {
+        "lane": 5,
+        "element": 2,
+        "row": 9,
+        "column": 2
+      },
+      {
+        "lane": 5,
+        "element": 3,
+        "row": 9,
+        "column": 3
+      },
+      {
+        "lane": 5,
+        "element": 4,
+        "row": 1,
+        "column": 10
+      },
+      {
+        "lane": 5,
+        "element": 5,
+        "row": 1,
+        "column": 11
+      },
+      {
+        "lane": 5,
+        "element": 6,
+        "row": 9,
+        "column": 10
+      },
+      {
+        "lane": 5,
+        "element": 7,
+        "row": 9,
+        "column": 11
+      },
+      {
+        "lane": 6,
+        "element": 0,
+        "row": 1,
+        "column": 4
+      },
+      {
+        "lane": 6,
+        "element": 1,
+        "row": 1,
+        "column": 5
+      },
+      {
+        "lane": 6,
+        "element": 2,
+        "row": 9,
+        "column": 4
+      },
+      {
+        "lane": 6,
+        "element": 3,
+        "row": 9,
+        "column": 5
+      },
+      {
+        "lane": 6,
+        "element": 4,
+        "row": 1,
+        "column": 12
+      },
+      {
+        "lane": 6,
+        "element": 5,
+        "row": 1,
+        "column": 13
+      },
+      {
+        "lane": 6,
+        "element": 6,
+        "row": 9,
+        "column": 12
+      },
+      {
+        "lane": 6,
+        "element": 7,
+        "row": 9,
+        "column": 13
+      },
+      {
+        "lane": 7,
+        "element": 0,
+        "row": 1,
+        "column": 6
+      },
+      {
+        "lane": 7,
+        "element": 1,
+        "row": 1,
+        "column": 7
+      },
+      {
+        "lane": 7,
+        "element": 2,
+        "row": 9,
+        "column": 6
+      },
+      {
+        "lane": 7,
+        "element": 3,
+        "row": 9,
+        "column": 7
+      },
+      {
+        "lane": 7,
+        "element": 4,
+        "row": 1,
+        "column": 14
+      },
+      {
+        "lane": 7,
+        "element": 5,
+        "row": 1,
+        "column": 15
+      },
+      {
+        "lane": 7,
+        "element": 6,
+        "row": 9,
+        "column": 14
+      },
+      {
+        "lane": 7,
+        "element": 7,
+        "row": 9,
+        "column": 15
+      },
+      {
+        "lane": 8,
+        "element": 0,
+        "row": 2,
+        "column": 0
+      },
+      {
+        "lane": 8,
+        "element": 1,
+        "row": 2,
+        "column": 1
+      },
+      {
+        "lane": 8,
+        "element": 2,
+        "row": 10,
+        "column": 0
+      },
+      {
+        "lane": 8,
+        "element": 3,
+        "row": 10,
+        "column": 1
+      },
+      {
+        "lane": 8,
+        "element": 4,
+        "row": 2,
+        "column": 8
+      },
+      {
+        "lane": 8,
+        "element": 5,
+        "row": 2,
+        "column": 9
+      },
+      {
+        "lane": 8,
+        "element": 6,
+        "row": 10,
+        "column": 8
+      },
+      {
+        "lane": 8,
+        "element": 7,
+        "row": 10,
+        "column": 9
+      },
+      {
+        "lane": 9,
+        "element": 0,
+        "row": 2,
+        "column": 2
+      },
+      {
+        "lane": 9,
+        "element": 1,
+        "row": 2,
+        "column": 3
+      },
+      {
+        "lane": 9,
+        "element": 2,
+        "row": 10,
+        "column": 2
+      },
+      {
+        "lane": 9,
+        "element": 3,
+        "row": 10,
+        "column": 3
+      },
+      {
+        "lane": 9,
+        "element": 4,
+        "row": 2,
+        "column": 10
+      },
+      {
+        "lane": 9,
+        "element": 5,
+        "row": 2,
+        "column": 11
+      },
+      {
+        "lane": 9,
+        "element": 6,
+        "row": 10,
+        "column": 10
+      },
+      {
+        "lane": 9,
+        "element": 7,
+        "row": 10,
+        "column": 11
+      },
+      {
+        "lane": 10,
+        "element": 0,
+        "row": 2,
+        "column": 4
+      },
+      {
+        "lane": 10,
+        "element": 1,
+        "row": 2,
+        "column": 5
+      },
+      {
+        "lane": 10,
+        "element": 2,
+        "row": 10,
+        "column": 4
+      },
+      {
+        "lane": 10,
+        "element": 3,
+        "row": 10,
+        "column": 5
+      },
+      {
+        "lane": 10,
+        "element": 4,
+        "row": 2,
+        "column": 12
+      },
+      {
+        "lane": 10,
+        "element": 5,
+        "row": 2,
+        "column": 13
+      },
+      {
+        "lane": 10,
+        "element": 6,
+        "row": 10,
+        "column": 12
+      },
+      {
+        "lane": 10,
+        "element": 7,
+        "row": 10,
+        "column": 13
+      },
+      {
+        "lane": 11,
+        "element": 0,
+        "row": 2,
+        "column": 6
+      },
+      {
+        "lane": 11,
+        "element": 1,
+        "row": 2,
+        "column": 7
+      },
+      {
+        "lane": 11,
+        "element": 2,
+        "row": 10,
+        "column": 6
+      },
+      {
+        "lane": 11,
+        "element": 3,
+        "row": 10,
+        "column": 7
+      },
+      {
+        "lane": 11,
+        "element": 4,
+        "row": 2,
+        "column": 14
+      },
+      {
+        "lane": 11,
+        "element": 5,
+        "row": 2,
+        "column": 15
+      },
+      {
+        "lane": 11,
+        "element": 6,
+        "row": 10,
+        "column": 14
+      },
+      {
+        "lane": 11,
+        "element": 7,
+        "row": 10,
+        "column": 15
+      },
+      {
+        "lane": 12,
+        "element": 0,
+        "row": 3,
+        "column": 0
+      },
+      {
+        "lane": 12,
+        "element": 1,
+        "row": 3,
+        "column": 1
+      },
+      {
+        "lane": 12,
+        "element": 2,
+        "row": 11,
+        "column": 0
+      },
+      {
+        "lane": 12,
+        "element": 3,
+        "row": 11,
+        "column": 1
+      },
+      {
+        "lane": 12,
+        "element": 4,
+        "row": 3,
+        "column": 8
+      },
+      {
+        "lane": 12,
+        "element": 5,
+        "row": 3,
+        "column": 9
+      },
+      {
+        "lane": 12,
+        "element": 6,
+        "row": 11,
+        "column": 8
+      },
+      {
+        "lane": 12,
+        "element": 7,
+        "row": 11,
+        "column": 9
+      },
+      {
+        "lane": 13,
+        "element": 0,
+        "row": 3,
+        "column": 2
+      },
+      {
+        "lane": 13,
+        "element": 1,
+        "row": 3,
+        "column": 3
+      },
+      {
+        "lane": 13,
+        "element": 2,
+        "row": 11,
+        "column": 2
+      },
+      {
+        "lane": 13,
+        "element": 3,
+        "row": 11,
+        "column": 3
+      },
+      {
+        "lane": 13,
+        "element": 4,
+        "row": 3,
+        "column": 10
+      },
+      {
+        "lane": 13,
+        "element": 5,
+        "row": 3,
+        "column": 11
+      },
+      {
+        "lane": 13,
+        "element": 6,
+        "row": 11,
+        "column": 10
+      },
+      {
+        "lane": 13,
+        "element": 7,
+        "row": 11,
+        "column": 11
+      },
+      {
+        "lane": 14,
+        "element": 0,
+        "row": 3,
+        "column": 4
+      },
+      {
+        "lane": 14,
+        "element": 1,
+        "row": 3,
+        "column": 5
+      },
+      {
+        "lane": 14,
+        "element": 2,
+        "row": 11,
+        "column": 4
+      },
+      {
+        "lane": 14,
+        "element": 3,
+        "row": 11,
+        "column": 5
+      },
+      {
+        "lane": 14,
+        "element": 4,
+        "row": 3,
+        "column": 12
+      },
+      {
+        "lane": 14,
+        "element": 5,
+        "row": 3,
+        "column": 13
+      },
+      {
+        "lane": 14,
+        "element": 6,
+        "row": 11,
+        "column": 12
+      },
+      {
+        "lane": 14,
+        "element": 7,
+        "row": 11,
+        "column": 13
+      },
+      {
+        "lane": 15,
+        "element": 0,
+        "row": 3,
+        "column": 6
+      },
+      {
+        "lane": 15,
+        "element": 1,
+        "row": 3,
+        "column": 7
+      },
+      {
+        "lane": 15,
+        "element": 2,
+        "row": 11,
+        "column": 6
+      },
+      {
+        "lane": 15,
+        "element": 3,
+        "row": 11,
+        "column": 7
+      },
+      {
+        "lane": 15,
+        "element": 4,
+        "row": 3,
+        "column": 14
+      },
+      {
+        "lane": 15,
+        "element": 5,
+        "row": 3,
+        "column": 15
+      },
+      {
+        "lane": 15,
+        "element": 6,
+        "row": 11,
+        "column": 14
+      },
+      {
+        "lane": 15,
+        "element": 7,
+        "row": 11,
+        "column": 15
+      },
+      {
+        "lane": 16,
+        "element": 0,
+        "row": 4,
+        "column": 0
+      },
+      {
+        "lane": 16,
+        "element": 1,
+        "row": 4,
+        "column": 1
+      },
+      {
+        "lane": 16,
+        "element": 2,
+        "row": 12,
+        "column": 0
+      },
+      {
+        "lane": 16,
+        "element": 3,
+        "row": 12,
+        "column": 1
+      },
+      {
+        "lane": 16,
+        "element": 4,
+        "row": 4,
+        "column": 8
+      },
+      {
+        "lane": 16,
+        "element": 5,
+        "row": 4,
+        "column": 9
+      },
+      {
+        "lane": 16,
+        "element": 6,
+        "row": 12,
+        "column": 8
+      },
+      {
+        "lane": 16,
+        "element": 7,
+        "row": 12,
+        "column": 9
+      },
+      {
+        "lane": 17,
+        "element": 0,
+        "row": 4,
+        "column": 2
+      },
+      {
+        "lane": 17,
+        "element": 1,
+        "row": 4,
+        "column": 3
+      },
+      {
+        "lane": 17,
+        "element": 2,
+        "row": 12,
+        "column": 2
+      },
+      {
+        "lane": 17,
+        "element": 3,
+        "row": 12,
+        "column": 3
+      },
+      {
+        "lane": 17,
+        "element": 4,
+        "row": 4,
+        "column": 10
+      },
+      {
+        "lane": 17,
+        "element": 5,
+        "row": 4,
+        "column": 11
+      },
+      {
+        "lane": 17,
+        "element": 6,
+        "row": 12,
+        "column": 10
+      },
+      {
+        "lane": 17,
+        "element": 7,
+        "row": 12,
+        "column": 11
+      },
+      {
+        "lane": 18,
+        "element": 0,
+        "row": 4,
+        "column": 4
+      },
+      {
+        "lane": 18,
+        "element": 1,
+        "row": 4,
+        "column": 5
+      },
+      {
+        "lane": 18,
+        "element": 2,
+        "row": 12,
+        "column": 4
+      },
+      {
+        "lane": 18,
+        "element": 3,
+        "row": 12,
+        "column": 5
+      },
+      {
+        "lane": 18,
+        "element": 4,
+        "row": 4,
+        "column": 12
+      },
+      {
+        "lane": 18,
+        "element": 5,
+        "row": 4,
+        "column": 13
+      },
+      {
+        "lane": 18,
+        "element": 6,
+        "row": 12,
+        "column": 12
+      },
+      {
+        "lane": 18,
+        "element": 7,
+        "row": 12,
+        "column": 13
+      },
+      {
+        "lane": 19,
+        "element": 0,
+        "row": 4,
+        "column": 6
+      },
+      {
+        "lane": 19,
+        "element": 1,
+        "row": 4,
+        "column": 7
+      },
+      {
+        "lane": 19,
+        "element": 2,
+        "row": 12,
+        "column": 6
+      },
+      {
+        "lane": 19,
+        "element": 3,
+        "row": 12,
+        "column": 7
+      },
+      {
+        "lane": 19,
+        "element": 4,
+        "row": 4,
+        "column": 14
+      },
+      {
+        "lane": 19,
+        "element": 5,
+        "row": 4,
+        "column": 15
+      },
+      {
+        "lane": 19,
+        "element": 6,
+        "row": 12,
+        "column": 14
+      },
+      {
+        "lane": 19,
+        "element": 7,
+        "row": 12,
+        "column": 15
+      },
+      {
+        "lane": 20,
+        "element": 0,
+        "row": 5,
+        "column": 0
+      },
+      {
+        "lane": 20,
+        "element": 1,
+        "row": 5,
+        "column": 1
+      },
+      {
+        "lane": 20,
+        "element": 2,
+        "row": 13,
+        "column": 0
+      },
+      {
+        "lane": 20,
+        "element": 3,
+        "row": 13,
+        "column": 1
+      },
+      {
+        "lane": 20,
+        "element": 4,
+        "row": 5,
+        "column": 8
+      },
+      {
+        "lane": 20,
+        "element": 5,
+        "row": 5,
+        "column": 9
+      },
+      {
+        "lane": 20,
+        "element": 6,
+        "row": 13,
+        "column": 8
+      },
+      {
+        "lane": 20,
+        "element": 7,
+        "row": 13,
+        "column": 9
+      },
+      {
+        "lane": 21,
+        "element": 0,
+        "row": 5,
+        "column": 2
+      },
+      {
+        "lane": 21,
+        "element": 1,
+        "row": 5,
+        "column": 3
+      },
+      {
+        "lane": 21,
+        "element": 2,
+        "row": 13,
+        "column": 2
+      },
+      {
+        "lane": 21,
+        "element": 3,
+        "row": 13,
+        "column": 3
+      },
+      {
+        "lane": 21,
+        "element": 4,
+        "row": 5,
+        "column": 10
+      },
+      {
+        "lane": 21,
+        "element": 5,
+        "row": 5,
+        "column": 11
+      },
+      {
+        "lane": 21,
+        "element": 6,
+        "row": 13,
+        "column": 10
+      },
+      {
+        "lane": 21,
+        "element": 7,
+        "row": 13,
+        "column": 11
+      },
+      {
+        "lane": 22,
+        "element": 0,
+        "row": 5,
+        "column": 4
+      },
+      {
+        "lane": 22,
+        "element": 1,
+        "row": 5,
+        "column": 5
+      },
+      {
+        "lane": 22,
+        "element": 2,
+        "row": 13,
+        "column": 4
+      },
+      {
+        "lane": 22,
+        "element": 3,
+        "row": 13,
+        "column": 5
+      },
+      {
+        "lane": 22,
+        "element": 4,
+        "row": 5,
+        "column": 12
+      },
+      {
+        "lane": 22,
+        "element": 5,
+        "row": 5,
+        "column": 13
+      },
+      {
+        "lane": 22,
+        "element": 6,
+        "row": 13,
+        "column": 12
+      },
+      {
+        "lane": 22,
+        "element": 7,
+        "row": 13,
+        "column": 13
+      },
+      {
+        "lane": 23,
+        "element": 0,
+        "row": 5,
+        "column": 6
+      },
+      {
+        "lane": 23,
+        "element": 1,
+        "row": 5,
+        "column": 7
+      },
+      {
+        "lane": 23,
+        "element": 2,
+        "row": 13,
+        "column": 6
+      },
+      {
+        "lane": 23,
+        "element": 3,
+        "row": 13,
+        "column": 7
+      },
+      {
+        "lane": 23,
+        "element": 4,
+        "row": 5,
+        "column": 14
+      },
+      {
+        "lane": 23,
+        "element": 5,
+        "row": 5,
+        "column": 15
+      },
+      {
+        "lane": 23,
+        "element": 6,
+        "row": 13,
+        "column": 14
+      },
+      {
+        "lane": 23,
+        "element": 7,
+        "row": 13,
+        "column": 15
+      },
+      {
+        "lane": 24,
+        "element": 0,
+        "row": 6,
+        "column": 0
+      },
+      {
+        "lane": 24,
+        "element": 1,
+        "row": 6,
+        "column": 1
+      },
+      {
+        "lane": 24,
+        "element": 2,
+        "row": 14,
+        "column": 0
+      },
+      {
+        "lane": 24,
+        "element": 3,
+        "row": 14,
+        "column": 1
+      },
+      {
+        "lane": 24,
+        "element": 4,
+        "row": 6,
+        "column": 8
+      },
+      {
+        "lane": 24,
+        "element": 5,
+        "row": 6,
+        "column": 9
+      },
+      {
+        "lane": 24,
+        "element": 6,
+        "row": 14,
+        "column": 8
+      },
+      {
+        "lane": 24,
+        "element": 7,
+        "row": 14,
+        "column": 9
+      },
+      {
+        "lane": 25,
+        "element": 0,
+        "row": 6,
+        "column": 2
+      },
+      {
+        "lane": 25,
+        "element": 1,
+        "row": 6,
+        "column": 3
+      },
+      {
+        "lane": 25,
+        "element": 2,
+        "row": 14,
+        "column": 2
+      },
+      {
+        "lane": 25,
+        "element": 3,
+        "row": 14,
+        "column": 3
+      },
+      {
+        "lane": 25,
+        "element": 4,
+        "row": 6,
+        "column": 10
+      },
+      {
+        "lane": 25,
+        "element": 5,
+        "row": 6,
+        "column": 11
+      },
+      {
+        "lane": 25,
+        "element": 6,
+        "row": 14,
+        "column": 10
+      },
+      {
+        "lane": 25,
+        "element": 7,
+        "row": 14,
+        "column": 11
+      },
+      {
+        "lane": 26,
+        "element": 0,
+        "row": 6,
+        "column": 4
+      },
+      {
+        "lane": 26,
+        "element": 1,
+        "row": 6,
+        "column": 5
+      },
+      {
+        "lane": 26,
+        "element": 2,
+        "row": 14,
+        "column": 4
+      },
+      {
+        "lane": 26,
+        "element": 3,
+        "row": 14,
+        "column": 5
+      },
+      {
+        "lane": 26,
+        "element": 4,
+        "row": 6,
+        "column": 12
+      },
+      {
+        "lane": 26,
+        "element": 5,
+        "row": 6,
+        "column": 13
+      },
+      {
+        "lane": 26,
+        "element": 6,
+        "row": 14,
+        "column": 12
+      },
+      {
+        "lane": 26,
+        "element": 7,
+        "row": 14,
+        "column": 13
+      },
+      {
+        "lane": 27,
+        "element": 0,
+        "row": 6,
+        "column": 6
+      },
+      {
+        "lane": 27,
+        "element": 1,
+        "row": 6,
+        "column": 7
+      },
+      {
+        "lane": 27,
+        "element": 2,
+        "row": 14,
+        "column": 6
+      },
+      {
+        "lane": 27,
+        "element": 3,
+        "row": 14,
+        "column": 7
+      },
+      {
+        "lane": 27,
+        "element": 4,
+        "row": 6,
+        "column": 14
+      },
+      {
+        "lane": 27,
+        "element": 5,
+        "row": 6,
+        "column": 15
+      },
+      {
+        "lane": 27,
+        "element": 6,
+        "row": 14,
+        "column": 14
+      },
+      {
+        "lane": 27,
+        "element": 7,
+        "row": 14,
+        "column": 15
+      },
+      {
+        "lane": 28,
+        "element": 0,
+        "row": 7,
+        "column": 0
+      },
+      {
+        "lane": 28,
+        "element": 1,
+        "row": 7,
+        "column": 1
+      },
+      {
+        "lane": 28,
+        "element": 2,
+        "row": 15,
+        "column": 0
+      },
+      {
+        "lane": 28,
+        "element": 3,
+        "row": 15,
+        "column": 1
+      },
+      {
+        "lane": 28,
+        "element": 4,
+        "row": 7,
+        "column": 8
+      },
+      {
+        "lane": 28,
+        "element": 5,
+        "row": 7,
+        "column": 9
+      },
+      {
+        "lane": 28,
+        "element": 6,
+        "row": 15,
+        "column": 8
+      },
+      {
+        "lane": 28,
+        "element": 7,
+        "row": 15,
+        "column": 9
+      },
+      {
+        "lane": 29,
+        "element": 0,
+        "row": 7,
+        "column": 2
+      },
+      {
+        "lane": 29,
+        "element": 1,
+        "row": 7,
+        "column": 3
+      },
+      {
+        "lane": 29,
+        "element": 2,
+        "row": 15,
+        "column": 2
+      },
+      {
+        "lane": 29,
+        "element": 3,
+        "row": 15,
+        "column": 3
+      },
+      {
+        "lane": 29,
+        "element": 4,
+        "row": 7,
+        "column": 10
+      },
+      {
+        "lane": 29,
+        "element": 5,
+        "row": 7,
+        "column": 11
+      },
+      {
+        "lane": 29,
+        "element": 6,
+        "row": 15,
+        "column": 10
+      },
+      {
+        "lane": 29,
+        "element": 7,
+        "row": 15,
+        "column": 11
+      },
+      {
+        "lane": 30,
+        "element": 0,
+        "row": 7,
+        "column": 4
+      },
+      {
+        "lane": 30,
+        "element": 1,
+        "row": 7,
+        "column": 5
+      },
+      {
+        "lane": 30,
+        "element": 2,
+        "row": 15,
+        "column": 4
+      },
+      {
+        "lane": 30,
+        "element": 3,
+        "row": 15,
+        "column": 5
+      },
+      {
+        "lane": 30,
+        "element": 4,
+        "row": 7,
+        "column": 12
+      },
+      {
+        "lane": 30,
+        "element": 5,
+        "row": 7,
+        "column": 13
+      },
+      {
+        "lane": 30,
+        "element": 6,
+        "row": 15,
+        "column": 12
+      },
+      {
+        "lane": 30,
+        "element": 7,
+        "row": 15,
+        "column": 13
+      },
+      {
+        "lane": 31,
+        "element": 0,
+        "row": 7,
+        "column": 6
+      },
+      {
+        "lane": 31,
+        "element": 1,
+        "row": 7,
+        "column": 7
+      },
+      {
+        "lane": 31,
+        "element": 2,
+        "row": 15,
+        "column": 6
+      },
+      {
+        "lane": 31,
+        "element": 3,
+        "row": 15,
+        "column": 7
+      },
+      {
+        "lane": 31,
+        "element": 4,
+        "row": 7,
+        "column": 14
+      },
+      {
+        "lane": 31,
+        "element": 5,
+        "row": 7,
+        "column": 15
+      },
+      {
+        "lane": 31,
+        "element": 6,
+        "row": 15,
+        "column": 14
+      },
+      {
+        "lane": 31,
+        "element": 7,
+        "row": 15,
+        "column": 15
+      }
+    ],
+    "b": [
+      {
+        "lane": 0,
+        "element": 0,
+        "row": 0,
+        "column": 0
+      },
+      {
+        "lane": 0,
+        "element": 1,
+        "row": 1,
+        "column": 0
+      },
+      {
+        "lane": 0,
+        "element": 2,
+        "row": 8,
+        "column": 0
+      },
+      {
+        "lane": 0,
+        "element": 3,
+        "row": 9,
+        "column": 0
+      },
+      {
+        "lane": 0,
+        "element": 4,
+        "row": 0,
+        "column": 8
+      },
+      {
+        "lane": 0,
+        "element": 5,
+        "row": 1,
+        "column": 8
+      },
+      {
+        "lane": 0,
+        "element": 6,
+        "row": 8,
+        "column": 8
+      },
+      {
+        "lane": 0,
+        "element": 7,
+        "row": 9,
+        "column": 8
+      },
+      {
+        "lane": 1,
+        "element": 0,
+        "row": 2,
+        "column": 0
+      },
+      {
+        "lane": 1,
+        "element": 1,
+        "row": 3,
+        "column": 0
+      },
+      {
+        "lane": 1,
+        "element": 2,
+        "row": 10,
+        "column": 0
+      },
+      {
+        "lane": 1,
+        "element": 3,
+        "row": 11,
+        "column": 0
+      },
+      {
+        "lane": 1,
+        "element": 4,
+        "row": 2,
+        "column": 8
+      },
+      {
+        "lane": 1,
+        "element": 5,
+        "row": 3,
+        "column": 8
+      },
+      {
+        "lane": 1,
+        "element": 6,
+        "row": 10,
+        "column": 8
+      },
+      {
+        "lane": 1,
+        "element": 7,
+        "row": 11,
+        "column": 8
+      },
+      {
+        "lane": 2,
+        "element": 0,
+        "row": 4,
+        "column": 0
+      },
+      {
+        "lane": 2,
+        "element": 1,
+        "row": 5,
+        "column": 0
+      },
+      {
+        "lane": 2,
+        "element": 2,
+        "row": 12,
+        "column": 0
+      },
+      {
+        "lane": 2,
+        "element": 3,
+        "row": 13,
+        "column": 0
+      },
+      {
+        "lane": 2,
+        "element": 4,
+        "row": 4,
+        "column": 8
+      },
+      {
+        "lane": 2,
+        "element": 5,
+        "row": 5,
+        "column": 8
+      },
+      {
+        "lane": 2,
+        "element": 6,
+        "row": 12,
+        "column": 8
+      },
+      {
+        "lane": 2,
+        "element": 7,
+        "row": 13,
+        "column": 8
+      },
+      {
+        "lane": 3,
+        "element": 0,
+        "row": 6,
+        "column": 0
+      },
+      {
+        "lane": 3,
+        "element": 1,
+        "row": 7,
+        "column": 0
+      },
+      {
+        "lane": 3,
+        "element": 2,
+        "row": 14,
+        "column": 0
+      },
+      {
+        "lane": 3,
+        "element": 3,
+        "row": 15,
+        "column": 0
+      },
+      {
+        "lane": 3,
+        "element": 4,
+        "row": 6,
+        "column": 8
+      },
+      {
+        "lane": 3,
+        "element": 5,
+        "row": 7,
+        "column": 8
+      },
+      {
+        "lane": 3,
+        "element": 6,
+        "row": 14,
+        "column": 8
+      },
+      {
+        "lane": 3,
+        "element": 7,
+        "row": 15,
+        "column": 8
+      },
+      {
+        "lane": 4,
+        "element": 0,
+        "row": 0,
+        "column": 1
+      },
+      {
+        "lane": 4,
+        "element": 1,
+        "row": 1,
+        "column": 1
+      },
+      {
+        "lane": 4,
+        "element": 2,
+        "row": 8,
+        "column": 1
+      },
+      {
+        "lane": 4,
+        "element": 3,
+        "row": 9,
+        "column": 1
+      },
+      {
+        "lane": 4,
+        "element": 4,
+        "row": 0,
+        "column": 9
+      },
+      {
+        "lane": 4,
+        "element": 5,
+        "row": 1,
+        "column": 9
+      },
+      {
+        "lane": 4,
+        "element": 6,
+        "row": 8,
+        "column": 9
+      },
+      {
+        "lane": 4,
+        "element": 7,
+        "row": 9,
+        "column": 9
+      },
+      {
+        "lane": 5,
+        "element": 0,
+        "row": 2,
+        "column": 1
+      },
+      {
+        "lane": 5,
+        "element": 1,
+        "row": 3,
+        "column": 1
+      },
+      {
+        "lane": 5,
+        "element": 2,
+        "row": 10,
+        "column": 1
+      },
+      {
+        "lane": 5,
+        "element": 3,
+        "row": 11,
+        "column": 1
+      },
+      {
+        "lane": 5,
+        "element": 4,
+        "row": 2,
+        "column": 9
+      },
+      {
+        "lane": 5,
+        "element": 5,
+        "row": 3,
+        "column": 9
+      },
+      {
+        "lane": 5,
+        "element": 6,
+        "row": 10,
+        "column": 9
+      },
+      {
+        "lane": 5,
+        "element": 7,
+        "row": 11,
+        "column": 9
+      },
+      {
+        "lane": 6,
+        "element": 0,
+        "row": 4,
+        "column": 1
+      },
+      {
+        "lane": 6,
+        "element": 1,
+        "row": 5,
+        "column": 1
+      },
+      {
+        "lane": 6,
+        "element": 2,
+        "row": 12,
+        "column": 1
+      },
+      {
+        "lane": 6,
+        "element": 3,
+        "row": 13,
+        "column": 1
+      },
+      {
+        "lane": 6,
+        "element": 4,
+        "row": 4,
+        "column": 9
+      },
+      {
+        "lane": 6,
+        "element": 5,
+        "row": 5,
+        "column": 9
+      },
+      {
+        "lane": 6,
+        "element": 6,
+        "row": 12,
+        "column": 9
+      },
+      {
+        "lane": 6,
+        "element": 7,
+        "row": 13,
+        "column": 9
+      },
+      {
+        "lane": 7,
+        "element": 0,
+        "row": 6,
+        "column": 1
+      },
+      {
+        "lane": 7,
+        "element": 1,
+        "row": 7,
+        "column": 1
+      },
+      {
+        "lane": 7,
+        "element": 2,
+        "row": 14,
+        "column": 1
+      },
+      {
+        "lane": 7,
+        "element": 3,
+        "row": 15,
+        "column": 1
+      },
+      {
+        "lane": 7,
+        "element": 4,
+        "row": 6,
+        "column": 9
+      },
+      {
+        "lane": 7,
+        "element": 5,
+        "row": 7,
+        "column": 9
+      },
+      {
+        "lane": 7,
+        "element": 6,
+        "row": 14,
+        "column": 9
+      },
+      {
+        "lane": 7,
+        "element": 7,
+        "row": 15,
+        "column": 9
+      },
+      {
+        "lane": 8,
+        "element": 0,
+        "row": 0,
+        "column": 2
+      },
+      {
+        "lane": 8,
+        "element": 1,
+        "row": 1,
+        "column": 2
+      },
+      {
+        "lane": 8,
+        "element": 2,
+        "row": 8,
+        "column": 2
+      },
+      {
+        "lane": 8,
+        "element": 3,
+        "row": 9,
+        "column": 2
+      },
+      {
+        "lane": 8,
+        "element": 4,
+        "row": 0,
+        "column": 10
+      },
+      {
+        "lane": 8,
+        "element": 5,
+        "row": 1,
+        "column": 10
+      },
+      {
+        "lane": 8,
+        "element": 6,
+        "row": 8,
+        "column": 10
+      },
+      {
+        "lane": 8,
+        "element": 7,
+        "row": 9,
+        "column": 10
+      },
+      {
+        "lane": 9,
+        "element": 0,
+        "row": 2,
+        "column": 2
+      },
+      {
+        "lane": 9,
+        "element": 1,
+        "row": 3,
+        "column": 2
+      },
+      {
+        "lane": 9,
+        "element": 2,
+        "row": 10,
+        "column": 2
+      },
+      {
+        "lane": 9,
+        "element": 3,
+        "row": 11,
+        "column": 2
+      },
+      {
+        "lane": 9,
+        "element": 4,
+        "row": 2,
+        "column": 10
+      },
+      {
+        "lane": 9,
+        "element": 5,
+        "row": 3,
+        "column": 10
+      },
+      {
+        "lane": 9,
+        "element": 6,
+        "row": 10,
+        "column": 10
+      },
+      {
+        "lane": 9,
+        "element": 7,
+        "row": 11,
+        "column": 10
+      },
+      {
+        "lane": 10,
+        "element": 0,
+        "row": 4,
+        "column": 2
+      },
+      {
+        "lane": 10,
+        "element": 1,
+        "row": 5,
+        "column": 2
+      },
+      {
+        "lane": 10,
+        "element": 2,
+        "row": 12,
+        "column": 2
+      },
+      {
+        "lane": 10,
+        "element": 3,
+        "row": 13,
+        "column": 2
+      },
+      {
+        "lane": 10,
+        "element": 4,
+        "row": 4,
+        "column": 10
+      },
+      {
+        "lane": 10,
+        "element": 5,
+        "row": 5,
+        "column": 10
+      },
+      {
+        "lane": 10,
+        "element": 6,
+        "row": 12,
+        "column": 10
+      },
+      {
+        "lane": 10,
+        "element": 7,
+        "row": 13,
+        "column": 10
+      },
+      {
+        "lane": 11,
+        "element": 0,
+        "row": 6,
+        "column": 2
+      },
+      {
+        "lane": 11,
+        "element": 1,
+        "row": 7,
+        "column": 2
+      },
+      {
+        "lane": 11,
+        "element": 2,
+        "row": 14,
+        "column": 2
+      },
+      {
+        "lane": 11,
+        "element": 3,
+        "row": 15,
+        "column": 2
+      },
+      {
+        "lane": 11,
+        "element": 4,
+        "row": 6,
+        "column": 10
+      },
+      {
+        "lane": 11,
+        "element": 5,
+        "row": 7,
+        "column": 10
+      },
+      {
+        "lane": 11,
+        "element": 6,
+        "row": 14,
+        "column": 10
+      },
+      {
+        "lane": 11,
+        "element": 7,
+        "row": 15,
+        "column": 10
+      },
+      {
+        "lane": 12,
+        "element": 0,
+        "row": 0,
+        "column": 3
+      },
+      {
+        "lane": 12,
+        "element": 1,
+        "row": 1,
+        "column": 3
+      },
+      {
+        "lane": 12,
+        "element": 2,
+        "row": 8,
+        "column": 3
+      },
+      {
+        "lane": 12,
+        "element": 3,
+        "row": 9,
+        "column": 3
+      },
+      {
+        "lane": 12,
+        "element": 4,
+        "row": 0,
+        "column": 11
+      },
+      {
+        "lane": 12,
+        "element": 5,
+        "row": 1,
+        "column": 11
+      },
+      {
+        "lane": 12,
+        "element": 6,
+        "row": 8,
+        "column": 11
+      },
+      {
+        "lane": 12,
+        "element": 7,
+        "row": 9,
+        "column": 11
+      },
+      {
+        "lane": 13,
+        "element": 0,
+        "row": 2,
+        "column": 3
+      },
+      {
+        "lane": 13,
+        "element": 1,
+        "row": 3,
+        "column": 3
+      },
+      {
+        "lane": 13,
+        "element": 2,
+        "row": 10,
+        "column": 3
+      },
+      {
+        "lane": 13,
+        "element": 3,
+        "row": 11,
+        "column": 3
+      },
+      {
+        "lane": 13,
+        "element": 4,
+        "row": 2,
+        "column": 11
+      },
+      {
+        "lane": 13,
+        "element": 5,
+        "row": 3,
+        "column": 11
+      },
+      {
+        "lane": 13,
+        "element": 6,
+        "row": 10,
+        "column": 11
+      },
+      {
+        "lane": 13,
+        "element": 7,
+        "row": 11,
+        "column": 11
+      },
+      {
+        "lane": 14,
+        "element": 0,
+        "row": 4,
+        "column": 3
+      },
+      {
+        "lane": 14,
+        "element": 1,
+        "row": 5,
+        "column": 3
+      },
+      {
+        "lane": 14,
+        "element": 2,
+        "row": 12,
+        "column": 3
+      },
+      {
+        "lane": 14,
+        "element": 3,
+        "row": 13,
+        "column": 3
+      },
+      {
+        "lane": 14,
+        "element": 4,
+        "row": 4,
+        "column": 11
+      },
+      {
+        "lane": 14,
+        "element": 5,
+        "row": 5,
+        "column": 11
+      },
+      {
+        "lane": 14,
+        "element": 6,
+        "row": 12,
+        "column": 11
+      },
+      {
+        "lane": 14,
+        "element": 7,
+        "row": 13,
+        "column": 11
+      },
+      {
+        "lane": 15,
+        "element": 0,
+        "row": 6,
+        "column": 3
+      },
+      {
+        "lane": 15,
+        "element": 1,
+        "row": 7,
+        "column": 3
+      },
+      {
+        "lane": 15,
+        "element": 2,
+        "row": 14,
+        "column": 3
+      },
+      {
+        "lane": 15,
+        "element": 3,
+        "row": 15,
+        "column": 3
+      },
+      {
+        "lane": 15,
+        "element": 4,
+        "row": 6,
+        "column": 11
+      },
+      {
+        "lane": 15,
+        "element": 5,
+        "row": 7,
+        "column": 11
+      },
+      {
+        "lane": 15,
+        "element": 6,
+        "row": 14,
+        "column": 11
+      },
+      {
+        "lane": 15,
+        "element": 7,
+        "row": 15,
+        "column": 11
+      },
+      {
+        "lane": 16,
+        "element": 0,
+        "row": 0,
+        "column": 4
+      },
+      {
+        "lane": 16,
+        "element": 1,
+        "row": 1,
+        "column": 4
+      },
+      {
+        "lane": 16,
+        "element": 2,
+        "row": 8,
+        "column": 4
+      },
+      {
+        "lane": 16,
+        "element": 3,
+        "row": 9,
+        "column": 4
+      },
+      {
+        "lane": 16,
+        "element": 4,
+        "row": 0,
+        "column": 12
+      },
+      {
+        "lane": 16,
+        "element": 5,
+        "row": 1,
+        "column": 12
+      },
+      {
+        "lane": 16,
+        "element": 6,
+        "row": 8,
+        "column": 12
+      },
+      {
+        "lane": 16,
+        "element": 7,
+        "row": 9,
+        "column": 12
+      },
+      {
+        "lane": 17,
+        "element": 0,
+        "row": 2,
+        "column": 4
+      },
+      {
+        "lane": 17,
+        "element": 1,
+        "row": 3,
+        "column": 4
+      },
+      {
+        "lane": 17,
+        "element": 2,
+        "row": 10,
+        "column": 4
+      },
+      {
+        "lane": 17,
+        "element": 3,
+        "row": 11,
+        "column": 4
+      },
+      {
+        "lane": 17,
+        "element": 4,
+        "row": 2,
+        "column": 12
+      },
+      {
+        "lane": 17,
+        "element": 5,
+        "row": 3,
+        "column": 12
+      },
+      {
+        "lane": 17,
+        "element": 6,
+        "row": 10,
+        "column": 12
+      },
+      {
+        "lane": 17,
+        "element": 7,
+        "row": 11,
+        "column": 12
+      },
+      {
+        "lane": 18,
+        "element": 0,
+        "row": 4,
+        "column": 4
+      },
+      {
+        "lane": 18,
+        "element": 1,
+        "row": 5,
+        "column": 4
+      },
+      {
+        "lane": 18,
+        "element": 2,
+        "row": 12,
+        "column": 4
+      },
+      {
+        "lane": 18,
+        "element": 3,
+        "row": 13,
+        "column": 4
+      },
+      {
+        "lane": 18,
+        "element": 4,
+        "row": 4,
+        "column": 12
+      },
+      {
+        "lane": 18,
+        "element": 5,
+        "row": 5,
+        "column": 12
+      },
+      {
+        "lane": 18,
+        "element": 6,
+        "row": 12,
+        "column": 12
+      },
+      {
+        "lane": 18,
+        "element": 7,
+        "row": 13,
+        "column": 12
+      },
+      {
+        "lane": 19,
+        "element": 0,
+        "row": 6,
+        "column": 4
+      },
+      {
+        "lane": 19,
+        "element": 1,
+        "row": 7,
+        "column": 4
+      },
+      {
+        "lane": 19,
+        "element": 2,
+        "row": 14,
+        "column": 4
+      },
+      {
+        "lane": 19,
+        "element": 3,
+        "row": 15,
+        "column": 4
+      },
+      {
+        "lane": 19,
+        "element": 4,
+        "row": 6,
+        "column": 12
+      },
+      {
+        "lane": 19,
+        "element": 5,
+        "row": 7,
+        "column": 12
+      },
+      {
+        "lane": 19,
+        "element": 6,
+        "row": 14,
+        "column": 12
+      },
+      {
+        "lane": 19,
+        "element": 7,
+        "row": 15,
+        "column": 12
+      },
+      {
+        "lane": 20,
+        "element": 0,
+        "row": 0,
+        "column": 5
+      },
+      {
+        "lane": 20,
+        "element": 1,
+        "row": 1,
+        "column": 5
+      },
+      {
+        "lane": 20,
+        "element": 2,
+        "row": 8,
+        "column": 5
+      },
+      {
+        "lane": 20,
+        "element": 3,
+        "row": 9,
+        "column": 5
+      },
+      {
+        "lane": 20,
+        "element": 4,
+        "row": 0,
+        "column": 13
+      },
+      {
+        "lane": 20,
+        "element": 5,
+        "row": 1,
+        "column": 13
+      },
+      {
+        "lane": 20,
+        "element": 6,
+        "row": 8,
+        "column": 13
+      },
+      {
+        "lane": 20,
+        "element": 7,
+        "row": 9,
+        "column": 13
+      },
+      {
+        "lane": 21,
+        "element": 0,
+        "row": 2,
+        "column": 5
+      },
+      {
+        "lane": 21,
+        "element": 1,
+        "row": 3,
+        "column": 5
+      },
+      {
+        "lane": 21,
+        "element": 2,
+        "row": 10,
+        "column": 5
+      },
+      {
+        "lane": 21,
+        "element": 3,
+        "row": 11,
+        "column": 5
+      },
+      {
+        "lane": 21,
+        "element": 4,
+        "row": 2,
+        "column": 13
+      },
+      {
+        "lane": 21,
+        "element": 5,
+        "row": 3,
+        "column": 13
+      },
+      {
+        "lane": 21,
+        "element": 6,
+        "row": 10,
+        "column": 13
+      },
+      {
+        "lane": 21,
+        "element": 7,
+        "row": 11,
+        "column": 13
+      },
+      {
+        "lane": 22,
+        "element": 0,
+        "row": 4,
+        "column": 5
+      },
+      {
+        "lane": 22,
+        "element": 1,
+        "row": 5,
+        "column": 5
+      },
+      {
+        "lane": 22,
+        "element": 2,
+        "row": 12,
+        "column": 5
+      },
+      {
+        "lane": 22,
+        "element": 3,
+        "row": 13,
+        "column": 5
+      },
+      {
+        "lane": 22,
+        "element": 4,
+        "row": 4,
+        "column": 13
+      },
+      {
+        "lane": 22,
+        "element": 5,
+        "row": 5,
+        "column": 13
+      },
+      {
+        "lane": 22,
+        "element": 6,
+        "row": 12,
+        "column": 13
+      },
+      {
+        "lane": 22,
+        "element": 7,
+        "row": 13,
+        "column": 13
+      },
+      {
+        "lane": 23,
+        "element": 0,
+        "row": 6,
+        "column": 5
+      },
+      {
+        "lane": 23,
+        "element": 1,
+        "row": 7,
+        "column": 5
+      },
+      {
+        "lane": 23,
+        "element": 2,
+        "row": 14,
+        "column": 5
+      },
+      {
+        "lane": 23,
+        "element": 3,
+        "row": 15,
+        "column": 5
+      },
+      {
+        "lane": 23,
+        "element": 4,
+        "row": 6,
+        "column": 13
+      },
+      {
+        "lane": 23,
+        "element": 5,
+        "row": 7,
+        "column": 13
+      },
+      {
+        "lane": 23,
+        "element": 6,
+        "row": 14,
+        "column": 13
+      },
+      {
+        "lane": 23,
+        "element": 7,
+        "row": 15,
+        "column": 13
+      },
+      {
+        "lane": 24,
+        "element": 0,
+        "row": 0,
+        "column": 6
+      },
+      {
+        "lane": 24,
+        "element": 1,
+        "row": 1,
+        "column": 6
+      },
+      {
+        "lane": 24,
+        "element": 2,
+        "row": 8,
+        "column": 6
+      },
+      {
+        "lane": 24,
+        "element": 3,
+        "row": 9,
+        "column": 6
+      },
+      {
+        "lane": 24,
+        "element": 4,
+        "row": 0,
+        "column": 14
+      },
+      {
+        "lane": 24,
+        "element": 5,
+        "row": 1,
+        "column": 14
+      },
+      {
+        "lane": 24,
+        "element": 6,
+        "row": 8,
+        "column": 14
+      },
+      {
+        "lane": 24,
+        "element": 7,
+        "row": 9,
+        "column": 14
+      },
+      {
+        "lane": 25,
+        "element": 0,
+        "row": 2,
+        "column": 6
+      },
+      {
+        "lane": 25,
+        "element": 1,
+        "row": 3,
+        "column": 6
+      },
+      {
+        "lane": 25,
+        "element": 2,
+        "row": 10,
+        "column": 6
+      },
+      {
+        "lane": 25,
+        "element": 3,
+        "row": 11,
+        "column": 6
+      },
+      {
+        "lane": 25,
+        "element": 4,
+        "row": 2,
+        "column": 14
+      },
+      {
+        "lane": 25,
+        "element": 5,
+        "row": 3,
+        "column": 14
+      },
+      {
+        "lane": 25,
+        "element": 6,
+        "row": 10,
+        "column": 14
+      },
+      {
+        "lane": 25,
+        "element": 7,
+        "row": 11,
+        "column": 14
+      },
+      {
+        "lane": 26,
+        "element": 0,
+        "row": 4,
+        "column": 6
+      },
+      {
+        "lane": 26,
+        "element": 1,
+        "row": 5,
+        "column": 6
+      },
+      {
+        "lane": 26,
+        "element": 2,
+        "row": 12,
+        "column": 6
+      },
+      {
+        "lane": 26,
+        "element": 3,
+        "row": 13,
+        "column": 6
+      },
+      {
+        "lane": 26,
+        "element": 4,
+        "row": 4,
+        "column": 14
+      },
+      {
+        "lane": 26,
+        "element": 5,
+        "row": 5,
+        "column": 14
+      },
+      {
+        "lane": 26,
+        "element": 6,
+        "row": 12,
+        "column": 14
+      },
+      {
+        "lane": 26,
+        "element": 7,
+        "row": 13,
+        "column": 14
+      },
+      {
+        "lane": 27,
+        "element": 0,
+        "row": 6,
+        "column": 6
+      },
+      {
+        "lane": 27,
+        "element": 1,
+        "row": 7,
+        "column": 6
+      },
+      {
+        "lane": 27,
+        "element": 2,
+        "row": 14,
+        "column": 6
+      },
+      {
+        "lane": 27,
+        "element": 3,
+        "row": 15,
+        "column": 6
+      },
+      {
+        "lane": 27,
+        "element": 4,
+        "row": 6,
+        "column": 14
+      },
+      {
+        "lane": 27,
+        "element": 5,
+        "row": 7,
+        "column": 14
+      },
+      {
+        "lane": 27,
+        "element": 6,
+        "row": 14,
+        "column": 14
+      },
+      {
+        "lane": 27,
+        "element": 7,
+        "row": 15,
+        "column": 14
+      },
+      {
+        "lane": 28,
+        "element": 0,
+        "row": 0,
+        "column": 7
+      },
+      {
+        "lane": 28,
+        "element": 1,
+        "row": 1,
+        "column": 7
+      },
+      {
+        "lane": 28,
+        "element": 2,
+        "row": 8,
+        "column": 7
+      },
+      {
+        "lane": 28,
+        "element": 3,
+        "row": 9,
+        "column": 7
+      },
+      {
+        "lane": 28,
+        "element": 4,
+        "row": 0,
+        "column": 15
+      },
+      {
+        "lane": 28,
+        "element": 5,
+        "row": 1,
+        "column": 15
+      },
+      {
+        "lane": 28,
+        "element": 6,
+        "row": 8,
+        "column": 15
+      },
+      {
+        "lane": 28,
+        "element": 7,
+        "row": 9,
+        "column": 15
+      },
+      {
+        "lane": 29,
+        "element": 0,
+        "row": 2,
+        "column": 7
+      },
+      {
+        "lane": 29,
+        "element": 1,
+        "row": 3,
+        "column": 7
+      },
+      {
+        "lane": 29,
+        "element": 2,
+        "row": 10,
+        "column": 7
+      },
+      {
+        "lane": 29,
+        "element": 3,
+        "row": 11,
+        "column": 7
+      },
+      {
+        "lane": 29,
+        "element": 4,
+        "row": 2,
+        "column": 15
+      },
+      {
+        "lane": 29,
+        "element": 5,
+        "row": 3,
+        "column": 15
+      },
+      {
+        "lane": 29,
+        "element": 6,
+        "row": 10,
+        "column": 15
+      },
+      {
+        "lane": 29,
+        "element": 7,
+        "row": 11,
+        "column": 15
+      },
+      {
+        "lane": 30,
+        "element": 0,
+        "row": 4,
+        "column": 7
+      },
+      {
+        "lane": 30,
+        "element": 1,
+        "row": 5,
+        "column": 7
+      },
+      {
+        "lane": 30,
+        "element": 2,
+        "row": 12,
+        "column": 7
+      },
+      {
+        "lane": 30,
+        "element": 3,
+        "row": 13,
+        "column": 7
+      },
+      {
+        "lane": 30,
+        "element": 4,
+        "row": 4,
+        "column": 15
+      },
+      {
+        "lane": 30,
+        "element": 5,
+        "row": 5,
+        "column": 15
+      },
+      {
+        "lane": 30,
+        "element": 6,
+        "row": 12,
+        "column": 15
+      },
+      {
+        "lane": 30,
+        "element": 7,
+        "row": 13,
+        "column": 15
+      },
+      {
+        "lane": 31,
+        "element": 0,
+        "row": 6,
+        "column": 7
+      },
+      {
+        "lane": 31,
+        "element": 1,
+        "row": 7,
+        "column": 7
+      },
+      {
+        "lane": 31,
+        "element": 2,
+        "row": 14,
+        "column": 7
+      },
+      {
+        "lane": 31,
+        "element": 3,
+        "row": 15,
+        "column": 7
+      },
+      {
+        "lane": 31,
+        "element": 4,
+        "row": 6,
+        "column": 15
+      },
+      {
+        "lane": 31,
+        "element": 5,
+        "row": 7,
+        "column": 15
+      },
+      {
+        "lane": 31,
+        "element": 6,
+        "row": 14,
+        "column": 15
+      },
+      {
+        "lane": 31,
+        "element": 7,
+        "row": 15,
+        "column": 15
+      }
+    ],
+    "c": [
+      {
+        "lane": 0,
+        "element": 0,
+        "row": 0,
+        "column": 0
+      },
+      {
+        "lane": 0,
+        "element": 1,
+        "row": 0,
+        "column": 1
+      },
+      {
+        "lane": 0,
+        "element": 2,
+        "row": 8,
+        "column": 0
+      },
+      {
+        "lane": 0,
+        "element": 3,
+        "row": 8,
+        "column": 1
+      },
+      {
+        "lane": 0,
+        "element": 4,
+        "row": 0,
+        "column": 8
+      },
+      {
+        "lane": 0,
+        "element": 5,
+        "row": 0,
+        "column": 9
+      },
+      {
+        "lane": 0,
+        "element": 6,
+        "row": 8,
+        "column": 8
+      },
+      {
+        "lane": 0,
+        "element": 7,
+        "row": 8,
+        "column": 9
+      },
+      {
+        "lane": 1,
+        "element": 0,
+        "row": 0,
+        "column": 2
+      },
+      {
+        "lane": 1,
+        "element": 1,
+        "row": 0,
+        "column": 3
+      },
+      {
+        "lane": 1,
+        "element": 2,
+        "row": 8,
+        "column": 2
+      },
+      {
+        "lane": 1,
+        "element": 3,
+        "row": 8,
+        "column": 3
+      },
+      {
+        "lane": 1,
+        "element": 4,
+        "row": 0,
+        "column": 10
+      },
+      {
+        "lane": 1,
+        "element": 5,
+        "row": 0,
+        "column": 11
+      },
+      {
+        "lane": 1,
+        "element": 6,
+        "row": 8,
+        "column": 10
+      },
+      {
+        "lane": 1,
+        "element": 7,
+        "row": 8,
+        "column": 11
+      },
+      {
+        "lane": 2,
+        "element": 0,
+        "row": 0,
+        "column": 4
+      },
+      {
+        "lane": 2,
+        "element": 1,
+        "row": 0,
+        "column": 5
+      },
+      {
+        "lane": 2,
+        "element": 2,
+        "row": 8,
+        "column": 4
+      },
+      {
+        "lane": 2,
+        "element": 3,
+        "row": 8,
+        "column": 5
+      },
+      {
+        "lane": 2,
+        "element": 4,
+        "row": 0,
+        "column": 12
+      },
+      {
+        "lane": 2,
+        "element": 5,
+        "row": 0,
+        "column": 13
+      },
+      {
+        "lane": 2,
+        "element": 6,
+        "row": 8,
+        "column": 12
+      },
+      {
+        "lane": 2,
+        "element": 7,
+        "row": 8,
+        "column": 13
+      },
+      {
+        "lane": 3,
+        "element": 0,
+        "row": 0,
+        "column": 6
+      },
+      {
+        "lane": 3,
+        "element": 1,
+        "row": 0,
+        "column": 7
+      },
+      {
+        "lane": 3,
+        "element": 2,
+        "row": 8,
+        "column": 6
+      },
+      {
+        "lane": 3,
+        "element": 3,
+        "row": 8,
+        "column": 7
+      },
+      {
+        "lane": 3,
+        "element": 4,
+        "row": 0,
+        "column": 14
+      },
+      {
+        "lane": 3,
+        "element": 5,
+        "row": 0,
+        "column": 15
+      },
+      {
+        "lane": 3,
+        "element": 6,
+        "row": 8,
+        "column": 14
+      },
+      {
+        "lane": 3,
+        "element": 7,
+        "row": 8,
+        "column": 15
+      },
+      {
+        "lane": 4,
+        "element": 0,
+        "row": 1,
+        "column": 0
+      },
+      {
+        "lane": 4,
+        "element": 1,
+        "row": 1,
+        "column": 1
+      },
+      {
+        "lane": 4,
+        "element": 2,
+        "row": 9,
+        "column": 0
+      },
+      {
+        "lane": 4,
+        "element": 3,
+        "row": 9,
+        "column": 1
+      },
+      {
+        "lane": 4,
+        "element": 4,
+        "row": 1,
+        "column": 8
+      },
+      {
+        "lane": 4,
+        "element": 5,
+        "row": 1,
+        "column": 9
+      },
+      {
+        "lane": 4,
+        "element": 6,
+        "row": 9,
+        "column": 8
+      },
+      {
+        "lane": 4,
+        "element": 7,
+        "row": 9,
+        "column": 9
+      },
+      {
+        "lane": 5,
+        "element": 0,
+        "row": 1,
+        "column": 2
+      },
+      {
+        "lane": 5,
+        "element": 1,
+        "row": 1,
+        "column": 3
+      },
+      {
+        "lane": 5,
+        "element": 2,
+        "row": 9,
+        "column": 2
+      },
+      {
+        "lane": 5,
+        "element": 3,
+        "row": 9,
+        "column": 3
+      },
+      {
+        "lane": 5,
+        "element": 4,
+        "row": 1,
+        "column": 10
+      },
+      {
+        "lane": 5,
+        "element": 5,
+        "row": 1,
+        "column": 11
+      },
+      {
+        "lane": 5,
+        "element": 6,
+        "row": 9,
+        "column": 10
+      },
+      {
+        "lane": 5,
+        "element": 7,
+        "row": 9,
+        "column": 11
+      },
+      {
+        "lane": 6,
+        "element": 0,
+        "row": 1,
+        "column": 4
+      },
+      {
+        "lane": 6,
+        "element": 1,
+        "row": 1,
+        "column": 5
+      },
+      {
+        "lane": 6,
+        "element": 2,
+        "row": 9,
+        "column": 4
+      },
+      {
+        "lane": 6,
+        "element": 3,
+        "row": 9,
+        "column": 5
+      },
+      {
+        "lane": 6,
+        "element": 4,
+        "row": 1,
+        "column": 12
+      },
+      {
+        "lane": 6,
+        "element": 5,
+        "row": 1,
+        "column": 13
+      },
+      {
+        "lane": 6,
+        "element": 6,
+        "row": 9,
+        "column": 12
+      },
+      {
+        "lane": 6,
+        "element": 7,
+        "row": 9,
+        "column": 13
+      },
+      {
+        "lane": 7,
+        "element": 0,
+        "row": 1,
+        "column": 6
+      },
+      {
+        "lane": 7,
+        "element": 1,
+        "row": 1,
+        "column": 7
+      },
+      {
+        "lane": 7,
+        "element": 2,
+        "row": 9,
+        "column": 6
+      },
+      {
+        "lane": 7,
+        "element": 3,
+        "row": 9,
+        "column": 7
+      },
+      {
+        "lane": 7,
+        "element": 4,
+        "row": 1,
+        "column": 14
+      },
+      {
+        "lane": 7,
+        "element": 5,
+        "row": 1,
+        "column": 15
+      },
+      {
+        "lane": 7,
+        "element": 6,
+        "row": 9,
+        "column": 14
+      },
+      {
+        "lane": 7,
+        "element": 7,
+        "row": 9,
+        "column": 15
+      },
+      {
+        "lane": 8,
+        "element": 0,
+        "row": 2,
+        "column": 0
+      },
+      {
+        "lane": 8,
+        "element": 1,
+        "row": 2,
+        "column": 1
+      },
+      {
+        "lane": 8,
+        "element": 2,
+        "row": 10,
+        "column": 0
+      },
+      {
+        "lane": 8,
+        "element": 3,
+        "row": 10,
+        "column": 1
+      },
+      {
+        "lane": 8,
+        "element": 4,
+        "row": 2,
+        "column": 8
+      },
+      {
+        "lane": 8,
+        "element": 5,
+        "row": 2,
+        "column": 9
+      },
+      {
+        "lane": 8,
+        "element": 6,
+        "row": 10,
+        "column": 8
+      },
+      {
+        "lane": 8,
+        "element": 7,
+        "row": 10,
+        "column": 9
+      },
+      {
+        "lane": 9,
+        "element": 0,
+        "row": 2,
+        "column": 2
+      },
+      {
+        "lane": 9,
+        "element": 1,
+        "row": 2,
+        "column": 3
+      },
+      {
+        "lane": 9,
+        "element": 2,
+        "row": 10,
+        "column": 2
+      },
+      {
+        "lane": 9,
+        "element": 3,
+        "row": 10,
+        "column": 3
+      },
+      {
+        "lane": 9,
+        "element": 4,
+        "row": 2,
+        "column": 10
+      },
+      {
+        "lane": 9,
+        "element": 5,
+        "row": 2,
+        "column": 11
+      },
+      {
+        "lane": 9,
+        "element": 6,
+        "row": 10,
+        "column": 10
+      },
+      {
+        "lane": 9,
+        "element": 7,
+        "row": 10,
+        "column": 11
+      },
+      {
+        "lane": 10,
+        "element": 0,
+        "row": 2,
+        "column": 4
+      },
+      {
+        "lane": 10,
+        "element": 1,
+        "row": 2,
+        "column": 5
+      },
+      {
+        "lane": 10,
+        "element": 2,
+        "row": 10,
+        "column": 4
+      },
+      {
+        "lane": 10,
+        "element": 3,
+        "row": 10,
+        "column": 5
+      },
+      {
+        "lane": 10,
+        "element": 4,
+        "row": 2,
+        "column": 12
+      },
+      {
+        "lane": 10,
+        "element": 5,
+        "row": 2,
+        "column": 13
+      },
+      {
+        "lane": 10,
+        "element": 6,
+        "row": 10,
+        "column": 12
+      },
+      {
+        "lane": 10,
+        "element": 7,
+        "row": 10,
+        "column": 13
+      },
+      {
+        "lane": 11,
+        "element": 0,
+        "row": 2,
+        "column": 6
+      },
+      {
+        "lane": 11,
+        "element": 1,
+        "row": 2,
+        "column": 7
+      },
+      {
+        "lane": 11,
+        "element": 2,
+        "row": 10,
+        "column": 6
+      },
+      {
+        "lane": 11,
+        "element": 3,
+        "row": 10,
+        "column": 7
+      },
+      {
+        "lane": 11,
+        "element": 4,
+        "row": 2,
+        "column": 14
+      },
+      {
+        "lane": 11,
+        "element": 5,
+        "row": 2,
+        "column": 15
+      },
+      {
+        "lane": 11,
+        "element": 6,
+        "row": 10,
+        "column": 14
+      },
+      {
+        "lane": 11,
+        "element": 7,
+        "row": 10,
+        "column": 15
+      },
+      {
+        "lane": 12,
+        "element": 0,
+        "row": 3,
+        "column": 0
+      },
+      {
+        "lane": 12,
+        "element": 1,
+        "row": 3,
+        "column": 1
+      },
+      {
+        "lane": 12,
+        "element": 2,
+        "row": 11,
+        "column": 0
+      },
+      {
+        "lane": 12,
+        "element": 3,
+        "row": 11,
+        "column": 1
+      },
+      {
+        "lane": 12,
+        "element": 4,
+        "row": 3,
+        "column": 8
+      },
+      {
+        "lane": 12,
+        "element": 5,
+        "row": 3,
+        "column": 9
+      },
+      {
+        "lane": 12,
+        "element": 6,
+        "row": 11,
+        "column": 8
+      },
+      {
+        "lane": 12,
+        "element": 7,
+        "row": 11,
+        "column": 9
+      },
+      {
+        "lane": 13,
+        "element": 0,
+        "row": 3,
+        "column": 2
+      },
+      {
+        "lane": 13,
+        "element": 1,
+        "row": 3,
+        "column": 3
+      },
+      {
+        "lane": 13,
+        "element": 2,
+        "row": 11,
+        "column": 2
+      },
+      {
+        "lane": 13,
+        "element": 3,
+        "row": 11,
+        "column": 3
+      },
+      {
+        "lane": 13,
+        "element": 4,
+        "row": 3,
+        "column": 10
+      },
+      {
+        "lane": 13,
+        "element": 5,
+        "row": 3,
+        "column": 11
+      },
+      {
+        "lane": 13,
+        "element": 6,
+        "row": 11,
+        "column": 10
+      },
+      {
+        "lane": 13,
+        "element": 7,
+        "row": 11,
+        "column": 11
+      },
+      {
+        "lane": 14,
+        "element": 0,
+        "row": 3,
+        "column": 4
+      },
+      {
+        "lane": 14,
+        "element": 1,
+        "row": 3,
+        "column": 5
+      },
+      {
+        "lane": 14,
+        "element": 2,
+        "row": 11,
+        "column": 4
+      },
+      {
+        "lane": 14,
+        "element": 3,
+        "row": 11,
+        "column": 5
+      },
+      {
+        "lane": 14,
+        "element": 4,
+        "row": 3,
+        "column": 12
+      },
+      {
+        "lane": 14,
+        "element": 5,
+        "row": 3,
+        "column": 13
+      },
+      {
+        "lane": 14,
+        "element": 6,
+        "row": 11,
+        "column": 12
+      },
+      {
+        "lane": 14,
+        "element": 7,
+        "row": 11,
+        "column": 13
+      },
+      {
+        "lane": 15,
+        "element": 0,
+        "row": 3,
+        "column": 6
+      },
+      {
+        "lane": 15,
+        "element": 1,
+        "row": 3,
+        "column": 7
+      },
+      {
+        "lane": 15,
+        "element": 2,
+        "row": 11,
+        "column": 6
+      },
+      {
+        "lane": 15,
+        "element": 3,
+        "row": 11,
+        "column": 7
+      },
+      {
+        "lane": 15,
+        "element": 4,
+        "row": 3,
+        "column": 14
+      },
+      {
+        "lane": 15,
+        "element": 5,
+        "row": 3,
+        "column": 15
+      },
+      {
+        "lane": 15,
+        "element": 6,
+        "row": 11,
+        "column": 14
+      },
+      {
+        "lane": 15,
+        "element": 7,
+        "row": 11,
+        "column": 15
+      },
+      {
+        "lane": 16,
+        "element": 0,
+        "row": 4,
+        "column": 0
+      },
+      {
+        "lane": 16,
+        "element": 1,
+        "row": 4,
+        "column": 1
+      },
+      {
+        "lane": 16,
+        "element": 2,
+        "row": 12,
+        "column": 0
+      },
+      {
+        "lane": 16,
+        "element": 3,
+        "row": 12,
+        "column": 1
+      },
+      {
+        "lane": 16,
+        "element": 4,
+        "row": 4,
+        "column": 8
+      },
+      {
+        "lane": 16,
+        "element": 5,
+        "row": 4,
+        "column": 9
+      },
+      {
+        "lane": 16,
+        "element": 6,
+        "row": 12,
+        "column": 8
+      },
+      {
+        "lane": 16,
+        "element": 7,
+        "row": 12,
+        "column": 9
+      },
+      {
+        "lane": 17,
+        "element": 0,
+        "row": 4,
+        "column": 2
+      },
+      {
+        "lane": 17,
+        "element": 1,
+        "row": 4,
+        "column": 3
+      },
+      {
+        "lane": 17,
+        "element": 2,
+        "row": 12,
+        "column": 2
+      },
+      {
+        "lane": 17,
+        "element": 3,
+        "row": 12,
+        "column": 3
+      },
+      {
+        "lane": 17,
+        "element": 4,
+        "row": 4,
+        "column": 10
+      },
+      {
+        "lane": 17,
+        "element": 5,
+        "row": 4,
+        "column": 11
+      },
+      {
+        "lane": 17,
+        "element": 6,
+        "row": 12,
+        "column": 10
+      },
+      {
+        "lane": 17,
+        "element": 7,
+        "row": 12,
+        "column": 11
+      },
+      {
+        "lane": 18,
+        "element": 0,
+        "row": 4,
+        "column": 4
+      },
+      {
+        "lane": 18,
+        "element": 1,
+        "row": 4,
+        "column": 5
+      },
+      {
+        "lane": 18,
+        "element": 2,
+        "row": 12,
+        "column": 4
+      },
+      {
+        "lane": 18,
+        "element": 3,
+        "row": 12,
+        "column": 5
+      },
+      {
+        "lane": 18,
+        "element": 4,
+        "row": 4,
+        "column": 12
+      },
+      {
+        "lane": 18,
+        "element": 5,
+        "row": 4,
+        "column": 13
+      },
+      {
+        "lane": 18,
+        "element": 6,
+        "row": 12,
+        "column": 12
+      },
+      {
+        "lane": 18,
+        "element": 7,
+        "row": 12,
+        "column": 13
+      },
+      {
+        "lane": 19,
+        "element": 0,
+        "row": 4,
+        "column": 6
+      },
+      {
+        "lane": 19,
+        "element": 1,
+        "row": 4,
+        "column": 7
+      },
+      {
+        "lane": 19,
+        "element": 2,
+        "row": 12,
+        "column": 6
+      },
+      {
+        "lane": 19,
+        "element": 3,
+        "row": 12,
+        "column": 7
+      },
+      {
+        "lane": 19,
+        "element": 4,
+        "row": 4,
+        "column": 14
+      },
+      {
+        "lane": 19,
+        "element": 5,
+        "row": 4,
+        "column": 15
+      },
+      {
+        "lane": 19,
+        "element": 6,
+        "row": 12,
+        "column": 14
+      },
+      {
+        "lane": 19,
+        "element": 7,
+        "row": 12,
+        "column": 15
+      },
+      {
+        "lane": 20,
+        "element": 0,
+        "row": 5,
+        "column": 0
+      },
+      {
+        "lane": 20,
+        "element": 1,
+        "row": 5,
+        "column": 1
+      },
+      {
+        "lane": 20,
+        "element": 2,
+        "row": 13,
+        "column": 0
+      },
+      {
+        "lane": 20,
+        "element": 3,
+        "row": 13,
+        "column": 1
+      },
+      {
+        "lane": 20,
+        "element": 4,
+        "row": 5,
+        "column": 8
+      },
+      {
+        "lane": 20,
+        "element": 5,
+        "row": 5,
+        "column": 9
+      },
+      {
+        "lane": 20,
+        "element": 6,
+        "row": 13,
+        "column": 8
+      },
+      {
+        "lane": 20,
+        "element": 7,
+        "row": 13,
+        "column": 9
+      },
+      {
+        "lane": 21,
+        "element": 0,
+        "row": 5,
+        "column": 2
+      },
+      {
+        "lane": 21,
+        "element": 1,
+        "row": 5,
+        "column": 3
+      },
+      {
+        "lane": 21,
+        "element": 2,
+        "row": 13,
+        "column": 2
+      },
+      {
+        "lane": 21,
+        "element": 3,
+        "row": 13,
+        "column": 3
+      },
+      {
+        "lane": 21,
+        "element": 4,
+        "row": 5,
+        "column": 10
+      },
+      {
+        "lane": 21,
+        "element": 5,
+        "row": 5,
+        "column": 11
+      },
+      {
+        "lane": 21,
+        "element": 6,
+        "row": 13,
+        "column": 10
+      },
+      {
+        "lane": 21,
+        "element": 7,
+        "row": 13,
+        "column": 11
+      },
+      {
+        "lane": 22,
+        "element": 0,
+        "row": 5,
+        "column": 4
+      },
+      {
+        "lane": 22,
+        "element": 1,
+        "row": 5,
+        "column": 5
+      },
+      {
+        "lane": 22,
+        "element": 2,
+        "row": 13,
+        "column": 4
+      },
+      {
+        "lane": 22,
+        "element": 3,
+        "row": 13,
+        "column": 5
+      },
+      {
+        "lane": 22,
+        "element": 4,
+        "row": 5,
+        "column": 12
+      },
+      {
+        "lane": 22,
+        "element": 5,
+        "row": 5,
+        "column": 13
+      },
+      {
+        "lane": 22,
+        "element": 6,
+        "row": 13,
+        "column": 12
+      },
+      {
+        "lane": 22,
+        "element": 7,
+        "row": 13,
+        "column": 13
+      },
+      {
+        "lane": 23,
+        "element": 0,
+        "row": 5,
+        "column": 6
+      },
+      {
+        "lane": 23,
+        "element": 1,
+        "row": 5,
+        "column": 7
+      },
+      {
+        "lane": 23,
+        "element": 2,
+        "row": 13,
+        "column": 6
+      },
+      {
+        "lane": 23,
+        "element": 3,
+        "row": 13,
+        "column": 7
+      },
+      {
+        "lane": 23,
+        "element": 4,
+        "row": 5,
+        "column": 14
+      },
+      {
+        "lane": 23,
+        "element": 5,
+        "row": 5,
+        "column": 15
+      },
+      {
+        "lane": 23,
+        "element": 6,
+        "row": 13,
+        "column": 14
+      },
+      {
+        "lane": 23,
+        "element": 7,
+        "row": 13,
+        "column": 15
+      },
+      {
+        "lane": 24,
+        "element": 0,
+        "row": 6,
+        "column": 0
+      },
+      {
+        "lane": 24,
+        "element": 1,
+        "row": 6,
+        "column": 1
+      },
+      {
+        "lane": 24,
+        "element": 2,
+        "row": 14,
+        "column": 0
+      },
+      {
+        "lane": 24,
+        "element": 3,
+        "row": 14,
+        "column": 1
+      },
+      {
+        "lane": 24,
+        "element": 4,
+        "row": 6,
+        "column": 8
+      },
+      {
+        "lane": 24,
+        "element": 5,
+        "row": 6,
+        "column": 9
+      },
+      {
+        "lane": 24,
+        "element": 6,
+        "row": 14,
+        "column": 8
+      },
+      {
+        "lane": 24,
+        "element": 7,
+        "row": 14,
+        "column": 9
+      },
+      {
+        "lane": 25,
+        "element": 0,
+        "row": 6,
+        "column": 2
+      },
+      {
+        "lane": 25,
+        "element": 1,
+        "row": 6,
+        "column": 3
+      },
+      {
+        "lane": 25,
+        "element": 2,
+        "row": 14,
+        "column": 2
+      },
+      {
+        "lane": 25,
+        "element": 3,
+        "row": 14,
+        "column": 3
+      },
+      {
+        "lane": 25,
+        "element": 4,
+        "row": 6,
+        "column": 10
+      },
+      {
+        "lane": 25,
+        "element": 5,
+        "row": 6,
+        "column": 11
+      },
+      {
+        "lane": 25,
+        "element": 6,
+        "row": 14,
+        "column": 10
+      },
+      {
+        "lane": 25,
+        "element": 7,
+        "row": 14,
+        "column": 11
+      },
+      {
+        "lane": 26,
+        "element": 0,
+        "row": 6,
+        "column": 4
+      },
+      {
+        "lane": 26,
+        "element": 1,
+        "row": 6,
+        "column": 5
+      },
+      {
+        "lane": 26,
+        "element": 2,
+        "row": 14,
+        "column": 4
+      },
+      {
+        "lane": 26,
+        "element": 3,
+        "row": 14,
+        "column": 5
+      },
+      {
+        "lane": 26,
+        "element": 4,
+        "row": 6,
+        "column": 12
+      },
+      {
+        "lane": 26,
+        "element": 5,
+        "row": 6,
+        "column": 13
+      },
+      {
+        "lane": 26,
+        "element": 6,
+        "row": 14,
+        "column": 12
+      },
+      {
+        "lane": 26,
+        "element": 7,
+        "row": 14,
+        "column": 13
+      },
+      {
+        "lane": 27,
+        "element": 0,
+        "row": 6,
+        "column": 6
+      },
+      {
+        "lane": 27,
+        "element": 1,
+        "row": 6,
+        "column": 7
+      },
+      {
+        "lane": 27,
+        "element": 2,
+        "row": 14,
+        "column": 6
+      },
+      {
+        "lane": 27,
+        "element": 3,
+        "row": 14,
+        "column": 7
+      },
+      {
+        "lane": 27,
+        "element": 4,
+        "row": 6,
+        "column": 14
+      },
+      {
+        "lane": 27,
+        "element": 5,
+        "row": 6,
+        "column": 15
+      },
+      {
+        "lane": 27,
+        "element": 6,
+        "row": 14,
+        "column": 14
+      },
+      {
+        "lane": 27,
+        "element": 7,
+        "row": 14,
+        "column": 15
+      },
+      {
+        "lane": 28,
+        "element": 0,
+        "row": 7,
+        "column": 0
+      },
+      {
+        "lane": 28,
+        "element": 1,
+        "row": 7,
+        "column": 1
+      },
+      {
+        "lane": 28,
+        "element": 2,
+        "row": 15,
+        "column": 0
+      },
+      {
+        "lane": 28,
+        "element": 3,
+        "row": 15,
+        "column": 1
+      },
+      {
+        "lane": 28,
+        "element": 4,
+        "row": 7,
+        "column": 8
+      },
+      {
+        "lane": 28,
+        "element": 5,
+        "row": 7,
+        "column": 9
+      },
+      {
+        "lane": 28,
+        "element": 6,
+        "row": 15,
+        "column": 8
+      },
+      {
+        "lane": 28,
+        "element": 7,
+        "row": 15,
+        "column": 9
+      },
+      {
+        "lane": 29,
+        "element": 0,
+        "row": 7,
+        "column": 2
+      },
+      {
+        "lane": 29,
+        "element": 1,
+        "row": 7,
+        "column": 3
+      },
+      {
+        "lane": 29,
+        "element": 2,
+        "row": 15,
+        "column": 2
+      },
+      {
+        "lane": 29,
+        "element": 3,
+        "row": 15,
+        "column": 3
+      },
+      {
+        "lane": 29,
+        "element": 4,
+        "row": 7,
+        "column": 10
+      },
+      {
+        "lane": 29,
+        "element": 5,
+        "row": 7,
+        "column": 11
+      },
+      {
+        "lane": 29,
+        "element": 6,
+        "row": 15,
+        "column": 10
+      },
+      {
+        "lane": 29,
+        "element": 7,
+        "row": 15,
+        "column": 11
+      },
+      {
+        "lane": 30,
+        "element": 0,
+        "row": 7,
+        "column": 4
+      },
+      {
+        "lane": 30,
+        "element": 1,
+        "row": 7,
+        "column": 5
+      },
+      {
+        "lane": 30,
+        "element": 2,
+        "row": 15,
+        "column": 4
+      },
+      {
+        "lane": 30,
+        "element": 3,
+        "row": 15,
+        "column": 5
+      },
+      {
+        "lane": 30,
+        "element": 4,
+        "row": 7,
+        "column": 12
+      },
+      {
+        "lane": 30,
+        "element": 5,
+        "row": 7,
+        "column": 13
+      },
+      {
+        "lane": 30,
+        "element": 6,
+        "row": 15,
+        "column": 12
+      },
+      {
+        "lane": 30,
+        "element": 7,
+        "row": 15,
+        "column": 13
+      },
+      {
+        "lane": 31,
+        "element": 0,
+        "row": 7,
+        "column": 6
+      },
+      {
+        "lane": 31,
+        "element": 1,
+        "row": 7,
+        "column": 7
+      },
+      {
+        "lane": 31,
+        "element": 2,
+        "row": 15,
+        "column": 6
+      },
+      {
+        "lane": 31,
+        "element": 3,
+        "row": 15,
+        "column": 7
+      },
+      {
+        "lane": 31,
+        "element": 4,
+        "row": 7,
+        "column": 14
+      },
+      {
+        "lane": 31,
+        "element": 5,
+        "row": 7,
+        "column": 15
+      },
+      {
+        "lane": 31,
+        "element": 6,
+        "row": 15,
+        "column": 14
+      },
+      {
+        "lane": 31,
+        "element": 7,
+        "row": 15,
+        "column": 15
+      }
+    ]
+  },
+  "movm_post_to_pre_halfword_permutation": [
+    0,
+    32,
+    2,
+    34,
+    4,
+    36,
+    6,
+    38,
+    64,
+    96,
+    66,
+    98,
+    68,
+    100,
+    70,
+    102,
+    128,
+    160,
+    130,
+    162,
+    132,
+    164,
+    134,
+    166,
+    192,
+    224,
+    194,
+    226,
+    196,
+    228,
+    198,
+    230,
+    1,
+    33,
+    3,
+    35,
+    5,
+    37,
+    7,
+    39,
+    65,
+    97,
+    67,
+    99,
+    69,
+    101,
+    71,
+    103,
+    129,
+    161,
+    131,
+    163,
+    133,
+    165,
+    135,
+    167,
+    193,
+    225,
+    195,
+    227,
+    197,
+    229,
+    199,
+    231,
+    8,
+    40,
+    10,
+    42,
+    12,
+    44,
+    14,
+    46,
+    72,
+    104,
+    74,
+    106,
+    76,
+    108,
+    78,
+    110,
+    136,
+    168,
+    138,
+    170,
+    140,
+    172,
+    142,
+    174,
+    200,
+    232,
+    202,
+    234,
+    204,
+    236,
+    206,
+    238,
+    9,
+    41,
+    11,
+    43,
+    13,
+    45,
+    15,
+    47,
+    73,
+    105,
+    75,
+    107,
+    77,
+    109,
+    79,
+    111,
+    137,
+    169,
+    139,
+    171,
+    141,
+    173,
+    143,
+    175,
+    201,
+    233,
+    203,
+    235,
+    205,
+    237,
+    207,
+    239,
+    16,
+    48,
+    18,
+    50,
+    20,
+    52,
+    22,
+    54,
+    80,
+    112,
+    82,
+    114,
+    84,
+    116,
+    86,
+    118,
+    144,
+    176,
+    146,
+    178,
+    148,
+    180,
+    150,
+    182,
+    208,
+    240,
+    210,
+    242,
+    212,
+    244,
+    214,
+    246,
+    17,
+    49,
+    19,
+    51,
+    21,
+    53,
+    23,
+    55,
+    81,
+    113,
+    83,
+    115,
+    85,
+    117,
+    87,
+    119,
+    145,
+    177,
+    147,
+    179,
+    149,
+    181,
+    151,
+    183,
+    209,
+    241,
+    211,
+    243,
+    213,
+    245,
+    215,
+    247,
+    24,
+    56,
+    26,
+    58,
+    28,
+    60,
+    30,
+    62,
+    88,
+    120,
+    90,
+    122,
+    92,
+    124,
+    94,
+    126,
+    152,
+    184,
+    154,
+    186,
+    156,
+    188,
+    158,
+    190,
+    216,
+    248,
+    218,
+    250,
+    220,
+    252,
+    222,
+    254,
+    25,
+    57,
+    27,
+    59,
+    29,
+    61,
+    31,
+    63,
+    89,
+    121,
+    91,
+    123,
+    93,
+    125,
+    95,
+    127,
+    153,
+    185,
+    155,
+    187,
+    157,
+    189,
+    159,
+    191,
+    217,
+    249,
+    219,
+    251,
+    221,
+    253,
+    223,
+    255
+  ],
+  "movm_permutation_validation": "All256 basisinputs peroperand validate coordinate maps; SASS ties Bdump toactualpostMOVM HMMAoperandregisters. Permutation applies tothese32bitinputwords andvalidBF16values, not arbitraryallbitpatterns.",
+  "native": {
+    "wmma_capture": {
+      "instruction_counts": {
+        "LDC": 1,
+        "S2R": 2,
+        "LDCU.128": 2,
+        "MOV": 3,
+        "LDCU.64": 3,
+        "LOP3.LUT": 3,
+        "SHF.R.U32.HI": 1,
+        "IMAD.WIDE.U32": 1,
+        "LEA": 3,
+        "LEA.HI.X": 3,
+        "LD.E": 8,
+        "IMAD.SHL.U32": 2,
+        "IADD.64": 3,
+        "MOVM.16.MT88": 4,
+        "STG.E.U16": 16,
+        "PRMT": 8,
+        "HMMA.16816.F32.BF16": 2,
+        "NOP": 9,
+        "STG.E": 8,
+        "STG.E.64": 4,
+        "EXIT": 1,
+        "BRA": 1
+      },
+      "matrix_instructions": [
+        "MOVM.16.MT88 R2, R2                     &req={2}         ?trans4",
+        "MOVM.16.MT88 R3, R3                     &wr=0x0          ?trans4",
+        "MOVM.16.MT88 R16, R16                                    ?trans4",
+        "MOVM.16.MT88 R17, R17                   &req={3} &wr=0x1 ?trans4",
+        "HMMA.16816.F32.BF16 R4, R8, R2, RZ      &req={0}         ?WAIT15_END_GROUP",
+        "HMMA.16816.F32.BF16 R12, R8, R16, RZ    &req={1}         ?trans7"
+      ]
+    },
+    "wmma_original": {
+      "instruction_counts": {
+        "LDC": 1,
+        "S2R": 1,
+        "LDCU.128": 1,
+        "MOV": 1,
+        "LDCU.64": 2,
+        "LOP3.LUT": 1,
+        "SHF.R.U32.HI": 1,
+        "IMAD.WIDE.U32": 1,
+        "LEA": 3,
+        "LEA.HI.X": 3,
+        "LD.E": 8,
+        "MOVM.16.MT88": 4,
+        "HMMA.16816.F32.BF16": 2,
+        "NOP": 13,
+        "STG.E.64": 4,
+        "EXIT": 1,
+        "BRA": 1
+      },
+      "matrix_instructions": [
+        "MOVM.16.MT88 R16, R0                    &req={2}         ?trans4",
+        "MOVM.16.MT88 R17, R12                   &req={4} &wr=0x0 ?trans4",
+        "MOVM.16.MT88 R18, R13                   &req={5}         ?trans4",
+        "MOVM.16.MT88 R19, R14                   &req={3} &wr=0x1 ?trans1",
+        "HMMA.16816.F32.BF16 R20, R4, R16, RZ    &req={0}         ?WAIT15_END_GROUP",
+        "HMMA.16816.F32.BF16 R16, R4, R18, RZ    &req={1}         ?trans8"
+      ]
+    }
+  },
+  "registers_per_thread": {
+    "original": 26,
+    "capture": 30
+  },
+  "functional_parameters_candidate_resolved": [
+    "F032-supported_BF16_rowmajor16x16x16_lane_register_content_mapping",
+    "F033-supported_WMMA_to_two_HMMA16x8x16_partition"
+  ],
+  "global_inventory_fields_fully_resolved": 0,
+  "timing_parameters_resolved": 0,
+  "new_model_contract": {
+    "A_fragment_mapping": "row=lane//4+8*((element//2)%2); column=2*(lane%4)+element%2+8*(element//4)",
+    "B_fragment_mapping": "row=2*(lane%4)+element%2+8*((element//2)%2); column=lane//4+8*(element//4)",
+    "C_fragment_mapping": "same row/column formula as A",
+    "HMMA_partition": "first HMMA writes fragment positions0..3 covering columns0..7; second writespositions4..7 coveringcolumns8..15; bothuseAwords0..3 and Bwordpairs0..1 /2..3 respectively"
+  },
+  "boundaries": [
+    "Native register numbers are compiler allocations, not physicalbankplacement.",
+    "No HMMA pipeline latency or issue rate measured.",
+    "FP32 nonzeroinitialC, exceptionalnumericvalues, othermatrixformats/shapes/layouts andgeneralMOVMallbitsemantics nottested.",
+    "Coordinate/basisintegers do notidentifyinternalFP32accumulationorder.",
+    "Optimizedlibrary LDSM loadswizzles notcovered."
+  ],
+  "next_benchmark_changes": [
+    "Feed recoveredpacked A/B/nativeCmapsintoconnectedBF16behavioralmodel insteadofopaque256valuepacket.",
+    "Compare LDSM matrixloadswiththeidentifiednativeoperandmapsusingcoordinatebasiscontrols.",
+    "UsepostMOVM nativeoperandreadinessforfuturematrixdependencytimingprobes."
+  ],
+  "next_document_search": [
+    "CheckPTX m16n8k16 BF16 mma fragmentlayoutagainstobservedmaps.",
+    "Checkldmatrix m8n8x4 sharedlaneaddresscontractandtransposedfragmentmapping."
+  ]
+}

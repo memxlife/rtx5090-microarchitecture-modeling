@@ -1,0 +1,12 @@
+.DS_Store
+__pycache__/
+*.pyc
+build/
+build_*/
+obj_dir/
+*.o
+*.a
+*.dylib
+*.so
+*.log
+*.vcd

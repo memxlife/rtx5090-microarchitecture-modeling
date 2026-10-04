@@ -1,0 +1,77 @@
+{
+  "version": "actual_path_v3",
+  "calibration_source": "diagnostic_044/control_measurements.json",
+  "coefficients_from_full_gemm": false,
+  "tile_32_32": {
+    "0": {
+      "stage_us": 0.03732499830729166,
+      "fixed_us": 2.739200733333334
+    },
+    "1": {
+      "stage_us": 0.7802749934895834,
+      "fixed_us": 2.9951976666666553
+    },
+    "2": {
+      "stage_us": 0.2021416666666667,
+      "fixed_us": 3.541333333333327
+    }
+  },
+  "scope": {
+    "device": "RTX5090 sm120 GPU7",
+    "M": 128,
+    "N": 96,
+    "BK": 32,
+    "warps": 4,
+    "input": "BF16",
+    "output": "FP32",
+    "cache": "warmed and cold preparation",
+    "grid": "one block or fullM128,N96grid(12small,4large)",
+    "tested_k": [
+      8192,
+      32768,
+      12288,
+      49152,
+      20480,
+      73728
+    ],
+    "reduction_range": [
+      8192,
+      73728
+    ],
+    "tiles": [
+      [
+        32,
+        32
+      ],
+      [
+        64,
+        48
+      ]
+    ]
+  },
+  "full_model_complete": false,
+  "validation_receipts": [
+    "diagnostic_044/verification.json",
+    "diagnostic_044/absolute_multi_verification.json",
+    "diagnostic_046/verification.json",
+    "diagnostic_047/verification.json",
+    "diagnostic_048/verification.json"
+  ],
+  "validation": "within5percent on listed warmed contexts; exact hardware latency explanation unfinished",
+  "tile_64_48": {
+    "0": {
+      "stage_us": 0.050675000130208335,
+      "fixed_us": 3.4111999666666666
+    },
+    "1": {
+      "stage_us": 1.3450667070312503,
+      "fixed_us": 3.822921999999892
+    },
+    "2": {
+      "stage_us": 0.46293334635416666,
+      "fixed_us": 4.369060333333337
+    }
+  },
+  "cache_penalty_per_group_us": 0.20950188669217687,
+  "cache_penalty_source": "019 independent global-response calibration"
+}

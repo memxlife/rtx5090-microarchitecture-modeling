@@ -1,0 +1,152 @@
+{
+  "receipt": "source_sprint_001_batch7",
+  "retrieval_method": "Google through Chrome source reading plus earlier exact PTX source receipts",
+  "unique_rows_with_scoped_prior": 11,
+  "rows": [
+    {
+      "id": "F036",
+      "evidence_check": "supported_analogy_prior",
+      "candidate": {
+        "common_ldst_dispatch_records": 1,
+        "OC_EX_MEM_pipeline_slots": 4
+      },
+      "source_url": "https://github.com/gpgpu-sim/gpgpu-sim_distribution/blob/dev/src/gpgpu-sim/shader.cc",
+      "source_locator": "simd_function_unit constructor/issue; ldst_unit constructor; RTX3070 -gpgpu_pipeline_widths OC_EX_MEM=4",
+      "scope": "One LDST dispatch record and four configured memory issue slots are published software-model capacities. They are not a complete physical load queue. Separate read-request capacity remains constrained by cache/MSHR paths.",
+      "identified_change": false
+    },
+    {
+      "id": "F037",
+      "evidence_check": "supported_analogy_prior",
+      "candidate": {
+        "common_ldst_dispatch_records": 1,
+        "OC_EX_MEM_pipeline_slots": 4
+      },
+      "source_url": "https://github.com/gpgpu-sim/gpgpu-sim_distribution/blob/dev/src/gpgpu-sim/shader.cc",
+      "source_locator": "simd_function_unit constructor/issue; ldst_unit::cycle stores exit pipeline; RTX3070 pipeline config",
+      "scope": "Stores share the memory dispatch/issue path in the model. This supports a common issue-buffer prior, not a private store buffer count.",
+      "identified_change": false
+    },
+    {
+      "id": "F038",
+      "evidence_check": "supported_analogy_prior",
+      "candidate": {
+        "separate_per_warp_transaction_limit": "not explicitly imposed in examined LDST issue/completion code",
+        "bounded_elsewhere": "cache MSHRs, miss queues, register dependencies, issue pipeline"
+      },
+      "source_url": "https://github.com/gpgpu-sim/gpgpu-sim_distribution/blob/dev/src/gpgpu-sim/shader.cc",
+      "source_locator": "ldst_unit::issue; ldst_unit::writeback_complete",
+      "scope": "The source tracks pending accesses per warp and output register. Do not validate the existing eight-transaction baseline from this source; use queue-constrained admission as a software-model alternative.",
+      "identified_change": false
+    },
+    {
+      "id": "F039",
+      "evidence_check": "supported_analogy_prior",
+      "candidate": {
+        "L1_distinct_pending_sector_entries": 384,
+        "max_consumers_per_entry": 48,
+        "miss_queue_entries": 16
+      },
+      "source_url": "https://github.com/gpgpu-sim/gpgpu-sim_distribution/blob/dev/configs/tested-cfgs/SM86_RTX3070/gpgpusim.config",
+      "source_locator": "-gpgpu_cache:dl1 ...,A:384:48,16:0,32",
+      "scope": "These are SM-local L1-path model capacities; the general SM transaction count includes other paths and is not the sum or equal to384. Provides explicit queue-constrained alternative to a single arbitrary global cap.",
+      "identified_change": false
+    },
+    {
+      "id": "F041",
+      "evidence_check": "supported_documented_subcontract",
+      "candidate": {
+        "default_ordinary_memory": "weak ordering",
+        "fence_scopes": [
+          "cta",
+          "gpu",
+          "sys"
+        ],
+        "fence_behavior": "order caller operations at selected scope, not a CTA rendezvous",
+        "cta_barrier_behavior": "all participant prior reads complete and prior writes visible to participants"
+      },
+      "source_url": "https://docs.nvidia.com/cuda/parallel-thread-execution/index.html",
+      "source_locator": "PTX9.4 \u00a78 Memory Consistency Model; \u00a79.7.15 synchronization bar/fence",
+      "scope": "Official ISA-visible ordering contract. Private buffers and acknowledgment timing remain separate. Earlier source_sweep002/044 contains exact source excerpts.",
+      "identified_change": false
+    },
+    {
+      "id": "F051",
+      "evidence_check": "supported_analogy_prior",
+      "candidate": {
+        "common_dispatch_records": 1,
+        "configured_shared_read_pipeline_records": 29
+      },
+      "source_url": "https://github.com/gpgpu-sim/gpgpu-sim_distribution/blob/dev/src/gpgpu-sim/shader.cc",
+      "source_locator": "ldst_unit constructor config->smem_latency; pipelined_simd_unit constructor; RTX3070 smem_latency29",
+      "scope": "Model allocates one common dispatch record plus a shared pipeline with configured depth29. This is a pipeline-capacity prior, not physical shared request queue capacity. Stores exit dispatch after bank processing rather than occupying the same read-return pipeline.",
+      "identified_change": false
+    },
+    {
+      "id": "F080",
+      "evidence_check": "supported_analogy_prior",
+      "candidate": {
+        "unified_or_separate_write_queue": "configurable",
+        "unified_queue_capacity_prior": 64,
+        "normal_write_completion": "reply packet after all request data bytes drain",
+        "cache_writeback_completion": "mark done without reply packet"
+      },
+      "source_url": "https://github.com/gpgpu-sim/gpgpu-sim_distribution/blob/dev/src/gpgpu-sim/dram.cc",
+      "source_locator": "dram_t::full; dram_t::cycle; RTX3070 scheduler queue64",
+      "scope": "Published DRAM controller model explicitly distinguishes ordinary write replies from cache writeback disposal. It supports handling policy alternatives, not a measured GDDR7 controller policy.",
+      "identified_change": false
+    },
+    {
+      "id": "T004",
+      "evidence_check": "supported_analogy_prior",
+      "candidate": {
+        "additional_icache_hit_delay_in_fetch_function": 0,
+        "fetch_to_decode": "separate buffer; next decode invocation"
+      },
+      "source_url": "https://github.com/gpgpu-sim/gpgpu-sim_distribution/blob/dev/src/gpgpu-sim/shader.cc",
+      "source_locator": "shader_core_ctx::fetch HIT branch; shader_core_ctx::cycle decode/fetch loop",
+      "scope": "Cache HIT immediately populates fetch buffer in this software model. Zero additional hit delay excludes fetch/decode/issue boundaries. It does not identify an RTX5090 instruction-cache latency.",
+      "identified_change": false
+    },
+    {
+      "id": "T028",
+      "evidence_check": "supported_analogy_prior",
+      "candidate": {
+        "additional_return_pipeline_after_shared_store_bank_processing": 0,
+        "bank_conflict_dispatch": "variable request-dependent delay"
+      },
+      "source_url": "https://github.com/gpgpu-sim/gpgpu-sim_distribution/blob/dev/src/gpgpu-sim/shader.cc",
+      "source_locator": "ldst_unit::shared_cycle; ldst_unit::cycle stores exit pipeline here",
+      "scope": "Scoped model store-retirement convention after bank processing. Actual write visibility/completion delay and physical bank SRAM time are not inferred.",
+      "identified_change": false
+    },
+    {
+      "id": "T030",
+      "evidence_check": "supported_analogy_prior",
+      "candidate": {
+        "extra_named_shared_to_operand_stage": 0,
+        "instead": "shared load response goes through memory writeback/register release, then normal dependency and collector path"
+      },
+      "source_url": "https://github.com/gpgpu-sim/gpgpu-sim_distribution/blob/dev/src/gpgpu-sim/shader.cc",
+      "source_locator": "ldst_unit::writeback_complete shared branch; shader_core_ctx::cycle",
+      "scope": "No separately charged shared-to-operand transfer stage in this software model. This is an accounting alternative; actual LDS return plus register/collector effects still must be charged once.",
+      "identified_change": false
+    },
+    {
+      "id": "T047",
+      "evidence_check": "supported_analogy_prior",
+      "candidate": {
+        "boundary_buffers": 2,
+        "one_flit_moves_per_network_clock": "credit returned when moved into boundary buffer",
+        "destination_packet_service": 1,
+        "fixed_extra_crossing_delay": "not separately specified"
+      },
+      "source_url": "https://gpgpu-sim.org/manual/index.php/Main_Page",
+      "source_locator": "\u00a74.4.1.4 Clock domain crossing for intersim",
+      "scope": "A concrete two-buffer, credit-based software crossing protocol prior. Delay emerges from phase, serialization and buffer occupancy. Do not assign a measured fixed two-SM-cycle delay from this description.",
+      "identified_change": false
+    }
+  ],
+  "physical_parameter_identifications_added": 0,
+  "review": "Every remaining row gets a concrete alternative, boundary or policy. Adjacent issue/pipeline capacities are explicitly distinguished from full hardware queue capacity; untested input baselines are not called validated."
+}

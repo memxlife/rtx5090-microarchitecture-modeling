@@ -1,0 +1,52 @@
+{
+  "all_passed": true,
+  "checked_output_words": 66048,
+  "checks": [
+    {
+      "latency_synthetic": 16,
+      "interval_synthetic": 4,
+      "checked_words": 33024,
+      "operations": 129,
+      "passed": true,
+      "stdout": "LIBRARY_GENERIC_MATRIX_PASS checked_words=33024 operations=129 latency=16\n- rtl/numerical/library_generic_matrix_tb.sv:68: Verilog $finish\n- S i m u l a t i o n   R e p o r t: Verilator 5.050 2026-07-01\n- Verilator: $finish at 43us; walltime 0.198 s; speed 214.753 us/s\n- Verilator: cpu 0.198 s on 1 threads; allocated 3 MB\n"
+    },
+    {
+      "invalid_input_rejected": "oddwrite",
+      "passed": true
+    },
+    {
+      "latency_synthetic": 37,
+      "interval_synthetic": 9,
+      "checked_words": 33024,
+      "operations": 129,
+      "passed": true,
+      "stdout": "LIBRARY_GENERIC_MATRIX_PASS checked_words=33024 operations=129 latency=37\n- rtl/numerical/library_generic_matrix_tb.sv:68: Verilog $finish\n- S i m u l a t i o n   R e p o r t: Verilator 5.050 2026-07-01\n- Verilator: $finish at 48us; walltime 0.218 s; speed 219.671 us/s\n- Verilator: cpu 0.218 s on 1 threads; allocated 3 MB\n"
+    }
+  ],
+  "source_sha256": {
+    "discovery_rounds/functional_mapping_002/native_bf16_layout.sv": "63658e6b59f2d124cab3a73159d3219c3d350616cec99bf72fab58afc42df76b",
+    "numerical/library_shared_layout.sv": "1ee7ce36b6cee8ff6a17bd01fc0781ba04f7a434c6a5a9521ffdde7850a67d19",
+    "numerical/library_movm_permutation.sv": "eb6d60b41d421751b14a0bff080d079bf0f0be82b185adbedbf2ad1b2df0e17e",
+    "numerical/numerical_matrix_pipeline.sv": "20d64fa7c297f0a4cf83a68f899a199330cc7907f136f031d1f5b030d4a010b4",
+    "numerical/native_bf16_adapter.sv": "ca05d62325e04c3ab0d982a6d0755355903f331799f83a396d512b866de58d6d",
+    "numerical/generic_shared_matrix_pipeline.sv": "79dec191479c459e0c5c35e825e7e283b7642bc1873487da1758b33ba9d9331d",
+    "numerical/library_generic_matrix_pipeline.sv": "4af6849047e3a30ef884e7ed12b909809c6ddb251c641d6a052a30b17dc7ea04",
+    "numerical/library_generic_matrix_tb.sv": "82f37d543574cc4caf01cc410ab9ff9de713088925a7d564ae0774c99712c753",
+    "numerical/bf16_reference.cpp": "0da9f3da8194c8d832b60ef29028a456397c76f9b0edc2b6e45c1ef69e14e1d3"
+  },
+  "vector_manifest_sha256": "a7d8e0371b123c53caad169eb996eab3038d153ffbd3f86869d4ff1bc2b5acd0",
+  "scope": "Four warp tiles and16reductionsteps (two128-Kslots) assemble a32x32 K256 integer GEMM product using actual selected-library generic shared operand addresses and measured MOVM mapping.",
+  "oracle": "Direct ordinary matrix multiplication, independent of consumer-address/permutation implementation.",
+  "protocol_checks": [
+    "last referenced halfword delays admission",
+    "operation identity",
+    "accepted operand snapshot survives shared overwrite",
+    "held result values",
+    "actual result accumulates into next step",
+    "reset invalidates words and pending results"
+  ],
+  "timing_calibrated": false,
+  "native_hotloop_scheduler_implemented": false,
+  "full_gpu_integrated": false,
+  "remaining": "Generic-load bank/response service and MOVM latency/issue controls omitted; global staging/cache/output stores and multiwarp scheduling are not connected to this operand adapter."
+}

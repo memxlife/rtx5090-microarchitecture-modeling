@@ -1,0 +1,24 @@
+{
+  "name": "direct_scalar_shared_load_dependency_path",
+  "classification": "measured_combined_cost",
+  "cycles_per_load": 28,
+  "scope": "One32thread warp conflictfree LDS32 dependent chain, unroll8or32, sharedarray32KiB; GPU6",
+  "includes": [
+    "shared response",
+    "dependency wakeup and issue",
+    "native compiler scheduling constraints"
+  ],
+  "excludes": [
+    "native cache timing",
+    "global loads",
+    "bank-conflicting loads",
+    "multiwarp shared service"
+  ],
+  "separately_unidentified_fields": [
+    "T027",
+    "T008"
+  ],
+  "used_in_integrated_RTL": false,
+  "evidence": "round_002_analysis.json",
+  "no_full_GEMM_accuracy_claim": true
+}

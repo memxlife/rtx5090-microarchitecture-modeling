@@ -1,0 +1,49 @@
+{
+  "accepted": true,
+  "changed_sections": [
+    "4.34",
+    "4.40",
+    "4.42"
+  ],
+  "documents": [
+    "rtl_microarchitecture_spec.md",
+    "README.md"
+  ],
+  "inline_source_parity": {
+    "components/cta_generation_barrier.sv": true,
+    "numerical/native_multiwarp_stage_pipeline.sv": true,
+    "numerical/studied_gemm_cta_controller.sv": true
+  },
+  "reviewed_current_receipts": [
+    "components/cta_generation_barrier_verification.json",
+    "numerical/native_multiwarp_stage_verification.json",
+    "numerical/studied_gemm_cta_barriers_verification.json"
+  ],
+  "receipt_source_hashes_current": true,
+  "human_first_review": "Starts with producer visibility and safe operand reuse, then explains arm, distinct arrivals, registered release and accepted service ownership.",
+  "reader_review": "Defines generation, mask granularity, participant counts versus arrival transfers and timing edges. Separates shared-memory performed-read visibility from register-result readiness using official PTX receipt044. Omitted LDC/UIADD3/BAR replay and the controller full-result wait remain explicit.",
+  "reader_language_lint": "passed",
+  "official_source_receipt": "discovery_rounds/literature_sweep_044.json",
+  "quantitative_review": {
+    "barrier_positive_checks": 20,
+    "barrier_rejected_protocol_cases": 9,
+    "multiwarp_unit_words": 4096,
+    "connected_words": 5120,
+    "full_K_producer_warp_arrivals": 192,
+    "full_K_consumer_warp_arrivals": 192,
+    "full_K_releases": 96,
+    "full_K_model_completion_cycles": 67832,
+    "new_physical_parameter_closures": 0
+  },
+  "timing_calibrated": false,
+  "boundary": "One active generation, registered release delay and warp-granularity arrivals are hypotheses. Memory-safe uses bounded window/cooldown plus shared-read retirement; full-result waiting is separate. No NVIDIA barrier flush or speedup claim.",
+  "document_sha256": {
+    "rtl_microarchitecture_spec.md": "49956e33260b37986f5ba7e8708b1954369e306298187a421307396acf2ddcc1",
+    "README.md": "4b9b43ff103460827702093119ccc866a766e83187735acab59b40b65e7ab58c"
+  },
+  "source_sha256": {
+    "components/cta_generation_barrier.sv": "383b1639ec746b4024a652cf9f11e225716ce871f8c2140781a361dbdb17857f",
+    "numerical/native_multiwarp_stage_pipeline.sv": "8d1bd9816753be3a05923013933a1d87aa89edc23a5b3062b0f50f5a2bb70753",
+    "numerical/studied_gemm_cta_controller.sv": "45d2a214f3334f2b576d5632b54174dc1f56efa3ab62316cf4f26742817ef4ee"
+  }
+}

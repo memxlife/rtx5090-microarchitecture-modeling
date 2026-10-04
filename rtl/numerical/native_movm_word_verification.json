@@ -1,0 +1,31 @@
+{
+  "all_passed": true,
+  "hardware_mapping_cases": 515,
+  "checked_output_words": 131840,
+  "cases": [
+    {
+      "latency": 1,
+      "interval": 1,
+      "operations": 2060,
+      "checked_words": 65920,
+      "stdout": "NATIVE_MOVM_PASS operations=2060 checked_words=65920\n- rtl/numerical/native_movm_word_tb.sv:45: Verilog $finish\n- S i m u l a t i o n   R e p o r t: Verilator 5.050 2026-07-01\n- Verilator: $finish at 34ns; walltime 0.036 s; speed 958.091 ns/s\n- Verilator: cpu 0.036 s on 1 threads; allocated 2 MB\n"
+    },
+    {
+      "latency": 7,
+      "interval": 3,
+      "operations": 2060,
+      "checked_words": 65920,
+      "stdout": "NATIVE_MOVM_PASS operations=2060 checked_words=65920\n- rtl/numerical/native_movm_word_tb.sv:45: Verilog $finish\n- S i m u l a t i o n   R e p o r t: Verilator 5.050 2026-07-01\n- Verilator: $finish at 62ns; walltime 0.037 s; speed 1.684 us/s\n- Verilator: cpu 0.037 s on 1 threads; allocated 2 MB\n"
+    }
+  ],
+  "oracle": "Actual saved post-MOVM BF16 hardware fragments; raw source words independently reconstructed from the original coordinate, identity and basis inputs and ordinary shared-load addresses.",
+  "evidence_boundary": "Supported finite BF16 mapping only; arbitrary bit semantics and intrinsic MOVM timing are not identified. Both cycle configurations are synthetic.",
+  "source_sha256": {
+    "numerical/library_movm_permutation.sv": "eb6d60b41d421751b14a0bff080d079bf0f0be82b185adbedbf2ad1b2df0e17e",
+    "numerical/native_movm_word_pipeline.sv": "3ef390ba095583072d92165d812f129a83e4c30d90bd431b2b702221dec66108",
+    "numerical/native_movm_word_tb.sv": "57f37a1b242459586689daad3b0baccb282e4e3c3f2f06d1da9018fec2442cfd",
+    "discovery_rounds/functional_mapping_002/b_fragments.bin": "79ac7d5394d394f6285bc065dc66925e9b39ce57aff5b42275af40ee8cdcc90b",
+    "discovery_rounds/functional_mapping_002/analysis.json": "4a6b7aaeeb23a3f8812ec3f8f37982a777ba5220bd2d41937362c07a00a30096"
+  },
+  "new_identified_registry_fields": 0
+}

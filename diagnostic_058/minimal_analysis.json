@@ -1,0 +1,34 @@
+{
+  "rows": [
+    {
+      "mode": 0,
+      "profile_us": 22.816,
+      "ordinary_us": 24.5696008,
+      "profile_minus_ordinary_fraction": -0.07137278355780208,
+      "profile_sm_counter_rate_hz": 2930049088.36
+    },
+    {
+      "mode": 1,
+      "profile_us": 364.384,
+      "ordinary_us": 364.94719399999997,
+      "profile_minus_ordinary_fraction": -0.0015432205241177055,
+      "profile_sm_counter_rate_hz": 2664496891.45
+    },
+    {
+      "mode": 2,
+      "profile_us": 308.16,
+      "ordinary_us": 310.05440400000003,
+      "profile_minus_ordinary_fraction": -0.006109908375950712,
+      "profile_sm_counter_rate_hz": 2932180838.07
+    },
+    {
+      "mode": -1,
+      "profile_us": 695.904,
+      "ordinary_us": 696.723199,
+      "profile_minus_ordinary_fraction": -0.0011757883204920327,
+      "profile_sm_counter_rate_hz": 2849578288.69
+    }
+  ],
+  "clock_counter_rates_not_interchangeable_with_host_snapshots": true,
+  "clock_correction_admitted": false
+}

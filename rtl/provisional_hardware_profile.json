@@ -1,0 +1,4067 @@
+{
+  "purpose": "Provide a concrete provisional choice for each of the 134 functional and timing fields in the current GEMM-path specification.",
+  "evidence_boundary": "Complete profile coverage does not mean complete hardware identification. Engineering assumptions permit simulation and sensitivity tests; they are not measured facts. The proof registry remains authoritative and unchanged. The integrated full-GEMM simulator is not yet validated.",
+  "counts": {
+    "functional": 87,
+    "timing": 47,
+    "total": 134,
+    "physical_identification": {
+      "identified": 8,
+      "unidentified": 94,
+      "partially_identified": 32
+    },
+    "profile_basis_labels": {
+      "KNOWN_SOURCE": 10,
+      "ENGINEERING_ASSUMPTION": 118,
+      "MEASURED": 5,
+      "QUERY_AND_MEASURED": 1
+    }
+  },
+  "timing_contract": "Respect the unit and scope of each entry. Compound measured instruction recurrence costs include dependencies or scheduling; do not add a second copy of the same delays. Reference-clock conversions do not establish clock topology.",
+  "source_profiles": [
+    "discovery_rounds/provisional_execution_profile.json",
+    "discovery_rounds/provisional_memory_profile.json",
+    "provisional_sync_clock_profile.json"
+  ],
+  "composition_and_consistency_rules": {
+    "discovery_rounds/provisional_execution_profile.json": [
+      "Use mutually exclusive EFFECTIVE_DEPENDENCY or DECOMPOSED timing for each supported opcode.",
+      "EFFECTIVE_DEPENDENCY uses T014/T016 without adding ordinary register, collector, wakeup or fixed writeback costs; retain native control timing and independently justified contention.",
+      "DECOMPOSED sums read, collection, execution and selected bypass OR register-write path, plus wakeup; T014/T016 become comparison targets. Do not charge both bypass and writeback.",
+      "MOVM native-barrier replay uses effective recurrence29cycles and decoded controls, with no4.8cycle throughput throttle.",
+      "T007 tensor interval4 and T018 are aliases; enforce once."
+    ],
+    "discovery_rounds/provisional_memory_profile.json": [
+      "Do not add compound measured path latency to separately modeled dependencies: calibrate one decomposition at a time.",
+      "L2 sets*ways*128*slices must remain96MiB. Baseline48x1024x16; alternative64x768x16. These geometries are assumptions.",
+      "Shared+usableL1+modeled overhead must not exceed128KiB; profile baseline32+64+32KiB.",
+      "Timing ranges are sensitivity domains, not measured confidence intervals. Controller timings expressed in SM-reference cycles do not identify controller clock frequency.",
+      "T042 is aggregate transfer pacing; per-controller32-byte interval is16times this baseline for balanced traffic.",
+      "Keep official proof counts unchanged. F053 retains its identified functional contract; other fallback portions remain unsupported.",
+      "L1 capacity = L1 sets * associativity *128 bytes. Shared storage + L1 storage + overhead must fit128KiB. Overhead32KiB is a baseline for shared32KiB/L164KiB only; it must change for other partitions.",
+      "L2 baseline capacity =48*1024*16*128=96MiB; nominal64-slice alternative requires768sets/slice to preserve96MiB.",
+      "Keep modeled aggregate L2 return bandwidth768 bytes/reference cycle as an independent bottleneck when varying slice count; do not silently infer physical port counts from it.",
+      "Controller mapping must give2048bytes/bank row and remain bijective; update mapping jointly when geometry changes."
+    ],
+    "provisional_sync_clock_profile.json": []
+  },
+  "parameters": [
+    {
+      "id": "F001",
+      "name": "Register allocation granularity",
+      "baseline": 256,
+      "unit": "32-bit register words per warp",
+      "range": [
+        256,
+        256
+      ],
+      "confidence": "high",
+      "basis_label": "KNOWN_SOURCE",
+      "basis": "CUDA12.8.93 occupancy header, computeMajor12",
+      "scope": "Round registers_per_thread*32 upward to a 256-word quantum; allocator rule, not SRAM banking.",
+      "source_profile": "provisional_sync_clock_profile.json",
+      "physical_identification_status": "identified"
+    },
+    {
+      "id": "F002",
+      "name": "Shared allocation granularity",
+      "baseline": 128,
+      "unit": "bytes per CTA",
+      "range": [
+        128,
+        128
+      ],
+      "confidence": "high",
+      "basis_label": "KNOWN_SOURCE",
+      "basis": "CUDA12.8.93 occupancy header, computeMajor12",
+      "scope": "Round static+reserved+dynamic shared bytes upward to a 128-byte quantum.",
+      "source_profile": "provisional_sync_clock_profile.json",
+      "physical_identification_status": "identified"
+    },
+    {
+      "id": "F003",
+      "name": "Block placement policy",
+      "baseline": "round-robin across eligible SMs",
+      "unit": "policy",
+      "sensitivity_range_or_alternatives": [
+        "least resident CTAs",
+        "least resident warps"
+      ],
+      "classification": "ENGINEERING_ASSUMPTION",
+      "confidence": "low; unmeasured simulator starting choice",
+      "evidence_basis": {
+        "registry_status": "unidentified",
+        "basis": "engineering prior, selected for executable simulation; not hardware evidence"
+      },
+      "proof_registry_status_unchanged": "unidentified",
+      "identified_by_this_profile": false,
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "range": [
+        "least resident CTAs",
+        "least resident warps"
+      ],
+      "basis": {
+        "registry_status": "unidentified",
+        "basis": "engineering prior, selected for executable simulation; not hardware evidence"
+      },
+      "scope": "Provisional GEMM-path simulation baseline. Preserve the stated evidence limits; unsupported structure or timing is an engineering choice, not an identified RTX5090 property.",
+      "source_profile": "discovery_rounds/provisional_execution_profile.json",
+      "physical_identification_status": "unidentified"
+    },
+    {
+      "id": "F004",
+      "name": "Dispatch arbitration policy",
+      "baseline": "oldest ready CTA first",
+      "unit": "policy",
+      "sensitivity_range_or_alternatives": [
+        "round robin"
+      ],
+      "classification": "ENGINEERING_ASSUMPTION",
+      "confidence": "low; unmeasured simulator starting choice",
+      "evidence_basis": {
+        "registry_status": "unidentified",
+        "basis": "engineering prior, selected for executable simulation; not hardware evidence"
+      },
+      "proof_registry_status_unchanged": "unidentified",
+      "identified_by_this_profile": false,
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "range": [
+        "round robin"
+      ],
+      "basis": {
+        "registry_status": "unidentified",
+        "basis": "engineering prior, selected for executable simulation; not hardware evidence"
+      },
+      "scope": "Provisional GEMM-path simulation baseline. Preserve the stated evidence limits; unsupported structure or timing is an engineering choice, not an identified RTX5090 property.",
+      "source_profile": "discovery_rounds/provisional_execution_profile.json",
+      "physical_identification_status": "unidentified"
+    },
+    {
+      "id": "F005",
+      "name": "Instruction-cache capacity",
+      "baseline": 16384,
+      "unit": "bytes per partition",
+      "sensitivity_range_or_alternatives": [
+        8192,
+        65536
+      ],
+      "classification": "ENGINEERING_ASSUMPTION",
+      "confidence": "low; unmeasured simulator starting choice",
+      "evidence_basis": {
+        "registry_status": "unidentified",
+        "basis": "engineering prior, selected for executable simulation; not hardware evidence"
+      },
+      "proof_registry_status_unchanged": "unidentified",
+      "identified_by_this_profile": false,
+      "coupling": "16KiB = 64 sets * 4 ways * 64-byte lines; line size is also an engineering assumption",
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "range": [
+        8192,
+        65536
+      ],
+      "basis": {
+        "registry_status": "unidentified",
+        "basis": "engineering prior, selected for executable simulation; not hardware evidence"
+      },
+      "scope": "Provisional GEMM-path simulation baseline. Preserve the stated evidence limits; unsupported structure or timing is an engineering choice, not an identified RTX5090 property.",
+      "source_profile": "discovery_rounds/provisional_execution_profile.json",
+      "physical_identification_status": "unidentified"
+    },
+    {
+      "id": "F006",
+      "name": "Instruction-cache sets",
+      "baseline": 64,
+      "unit": "sets per partition",
+      "sensitivity_range_or_alternatives": [
+        32,
+        128
+      ],
+      "classification": "ENGINEERING_ASSUMPTION",
+      "confidence": "low; unmeasured simulator starting choice",
+      "evidence_basis": {
+        "registry_status": "unidentified",
+        "basis": "engineering prior, selected for executable simulation; not hardware evidence"
+      },
+      "proof_registry_status_unchanged": "unidentified",
+      "identified_by_this_profile": false,
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "range": [
+        32,
+        128
+      ],
+      "basis": {
+        "registry_status": "unidentified",
+        "basis": "engineering prior, selected for executable simulation; not hardware evidence"
+      },
+      "scope": "Provisional GEMM-path simulation baseline. Preserve the stated evidence limits; unsupported structure or timing is an engineering choice, not an identified RTX5090 property.",
+      "source_profile": "discovery_rounds/provisional_execution_profile.json",
+      "physical_identification_status": "unidentified"
+    },
+    {
+      "id": "F007",
+      "name": "Instruction-cache associativity",
+      "baseline": 4,
+      "unit": "ways",
+      "sensitivity_range_or_alternatives": [
+        2,
+        8
+      ],
+      "classification": "ENGINEERING_ASSUMPTION",
+      "confidence": "low; unmeasured simulator starting choice",
+      "evidence_basis": {
+        "registry_status": "unidentified",
+        "basis": "engineering prior, selected for executable simulation; not hardware evidence"
+      },
+      "proof_registry_status_unchanged": "unidentified",
+      "identified_by_this_profile": false,
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "range": [
+        2,
+        8
+      ],
+      "basis": {
+        "registry_status": "unidentified",
+        "basis": "engineering prior, selected for executable simulation; not hardware evidence"
+      },
+      "scope": "Provisional GEMM-path simulation baseline. Preserve the stated evidence limits; unsupported structure or timing is an engineering choice, not an identified RTX5090 property.",
+      "source_profile": "discovery_rounds/provisional_execution_profile.json",
+      "physical_identification_status": "unidentified"
+    },
+    {
+      "id": "F008",
+      "name": "Instruction-cache mapping",
+      "baseline": "set=(instruction_byte_address//64)%64; partition-private",
+      "unit": "policy",
+      "sensitivity_range_or_alternatives": [
+        "SM-shared instruction cache"
+      ],
+      "classification": "ENGINEERING_ASSUMPTION",
+      "confidence": "low; unmeasured simulator starting choice",
+      "evidence_basis": {
+        "registry_status": "unidentified",
+        "basis": "engineering prior, selected for executable simulation; not hardware evidence"
+      },
+      "proof_registry_status_unchanged": "unidentified",
+      "identified_by_this_profile": false,
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "range": [
+        "SM-shared instruction cache"
+      ],
+      "basis": {
+        "registry_status": "unidentified",
+        "basis": "engineering prior, selected for executable simulation; not hardware evidence"
+      },
+      "scope": "Provisional GEMM-path simulation baseline. Preserve the stated evidence limits; unsupported structure or timing is an engineering choice, not an identified RTX5090 property.",
+      "source_profile": "discovery_rounds/provisional_execution_profile.json",
+      "physical_identification_status": "unidentified"
+    },
+    {
+      "id": "F009",
+      "name": "Instruction-cache replacement policy",
+      "baseline": "LRU",
+      "unit": "replacement policy",
+      "sensitivity_range_or_alternatives": [
+        "pseudo-LRU",
+        "random"
+      ],
+      "classification": "ENGINEERING_ASSUMPTION",
+      "confidence": "low; unmeasured simulator starting choice",
+      "evidence_basis": {
+        "registry_status": "unidentified",
+        "basis": "engineering prior, selected for executable simulation; not hardware evidence"
+      },
+      "proof_registry_status_unchanged": "unidentified",
+      "identified_by_this_profile": false,
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "range": [
+        "pseudo-LRU",
+        "random"
+      ],
+      "basis": {
+        "registry_status": "unidentified",
+        "basis": "engineering prior, selected for executable simulation; not hardware evidence"
+      },
+      "scope": "Provisional GEMM-path simulation baseline. Preserve the stated evidence limits; unsupported structure or timing is an engineering choice, not an identified RTX5090 property.",
+      "source_profile": "discovery_rounds/provisional_execution_profile.json",
+      "physical_identification_status": "unidentified"
+    },
+    {
+      "id": "F010",
+      "name": "Native decoding rules",
+      "baseline": "use supported native_shared_decode, native_generic_load_decode and native_control_decode modules; unsupported opcodes rejected",
+      "unit": "policy",
+      "sensitivity_range_or_alternatives": [
+        "decode unsupported instructions from explicit trace labels"
+      ],
+      "classification": "EVIDENCE_SUPPORTED_SCOPED_BASELINE",
+      "confidence": "medium within stated supported family",
+      "evidence_basis": {
+        "path": "components/native_ldsm_decode_verification.json",
+        "round": "hardware_sweep_005",
+        "kind": "native_encoding_and_executable_decoder"
+      },
+      "proof_registry_status_unchanged": "partially_identified",
+      "identified_by_this_profile": false,
+      "existing_registry_value": {
+        "signature_low_bits_15_0": "0x783b",
+        "destination_low_bits": "23:16",
+        "address_low_bits": "31:24",
+        "width_high_bits": "9:8: 0/1/2 encode 1/2/4 words",
+        "transpose_high_bit": 14
+      },
+      "supporting_receipts": [
+        "discovery_rounds/shared_decoder_010",
+        "discovery_rounds/generic_decoder_011",
+        "discovery_rounds/native_barrier_015"
+      ],
+      "basis_label": "MEASURED",
+      "range": [
+        "decode unsupported instructions from explicit trace labels"
+      ],
+      "basis": {
+        "path": "components/native_ldsm_decode_verification.json",
+        "round": "hardware_sweep_005",
+        "kind": "native_encoding_and_executable_decoder"
+      },
+      "scope": "Provisional GEMM-path simulation baseline. Preserve the stated evidence limits; unsupported structure or timing is an engineering choice, not an identified RTX5090 property.",
+      "source_profile": "discovery_rounds/provisional_execution_profile.json",
+      "physical_identification_status": "partially_identified"
+    },
+    {
+      "id": "F011",
+      "name": "Divergence handling",
+      "baseline": "active-lane mask with per-thread program counter; only enabled lanes execute",
+      "unit": "policy",
+      "sensitivity_range_or_alternatives": [
+        "warp-stack approximation"
+      ],
+      "classification": "MIXED_SUPPORTED_CONTRACT_AND_ENGINEERING_POLICY",
+      "confidence": "medium for retained observed subcontracts; low for extension outside measured scope",
+      "evidence_basis": {
+        "url": "https://docs.nvidia.com/cuda/cuda-programming-guide/03-advanced/advanced-kernel-programming.html#independent-thread-scheduling",
+        "round": "source_sweep_005",
+        "kind": "official_documentation"
+      },
+      "proof_registry_status_unchanged": "partially_identified",
+      "identified_by_this_profile": false,
+      "existing_registry_value": "Warp paths execute with nonparticipating lanes disabled; cc7.0+ maintains thread-level execution state and allows subwarp scheduling.",
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "range": [
+        "warp-stack approximation"
+      ],
+      "basis": {
+        "url": "https://docs.nvidia.com/cuda/cuda-programming-guide/03-advanced/advanced-kernel-programming.html#independent-thread-scheduling",
+        "round": "source_sweep_005",
+        "kind": "official_documentation"
+      },
+      "scope": "Provisional GEMM-path simulation baseline. Preserve the stated evidence limits; unsupported structure or timing is an engineering choice, not an identified RTX5090 property.",
+      "source_profile": "discovery_rounds/provisional_execution_profile.json",
+      "physical_identification_status": "partially_identified"
+    },
+    {
+      "id": "F012",
+      "name": "Reconvergence handling",
+      "baseline": "explicit convergence tokens and active-mask restoration at annotated merge PCs",
+      "unit": "policy",
+      "sensitivity_range_or_alternatives": [
+        "immediate-postdominator warp stack"
+      ],
+      "classification": "MIXED_SUPPORTED_CONTRACT_AND_ENGINEERING_POLICY",
+      "confidence": "medium for retained observed subcontracts; low for extension outside measured scope",
+      "evidence_basis": {
+        "url": "https://docs.nvidia.com/cuda/cuda-programming-guide/03-advanced/advanced-kernel-programming.html#independent-thread-scheduling",
+        "round": "source_sweep_005",
+        "kind": "official_documentation"
+      },
+      "proof_registry_status_unchanged": "partially_identified",
+      "identified_by_this_profile": false,
+      "existing_registry_value": "cc7.0+ permits subwarp reconvergence; the schedule optimizer groups active threads from a warp.",
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "range": [
+        "immediate-postdominator warp stack"
+      ],
+      "basis": {
+        "url": "https://docs.nvidia.com/cuda/cuda-programming-guide/03-advanced/advanced-kernel-programming.html#independent-thread-scheduling",
+        "round": "source_sweep_005",
+        "kind": "official_documentation"
+      },
+      "scope": "Provisional GEMM-path simulation baseline. Preserve the stated evidence limits; unsupported structure or timing is an engineering choice, not an identified RTX5090 property.",
+      "source_profile": "discovery_rounds/provisional_execution_profile.json",
+      "physical_identification_status": "partially_identified"
+    },
+    {
+      "id": "F013",
+      "name": "Scheduler partitions per SM",
+      "baseline": 4,
+      "unit": "scheduler partitions per SM",
+      "sensitivity_range_or_alternatives": [
+        4,
+        4
+      ],
+      "classification": "EVIDENCE_SUPPORTED_SCOPED_BASELINE",
+      "confidence": "medium within stated supported family",
+      "evidence_basis": {
+        "round": "source_sweep_001",
+        "kind": "official_documentation",
+        "url": "https://images.nvidia.com/aem-dam/Solutions/geforce/blackwell/nvidia-rtx-blackwell-gpu-architecture.pdf#page=11"
+      },
+      "proof_registry_status_unchanged": "identified",
+      "identified_by_this_profile": false,
+      "existing_registry_value": 4,
+      "basis_label": "KNOWN_SOURCE",
+      "range": [
+        4,
+        4
+      ],
+      "basis": {
+        "round": "source_sweep_001",
+        "kind": "official_documentation",
+        "url": "https://images.nvidia.com/aem-dam/Solutions/geforce/blackwell/nvidia-rtx-blackwell-gpu-architecture.pdf#page=11"
+      },
+      "scope": "Provisional GEMM-path simulation baseline. Preserve the stated evidence limits; unsupported structure or timing is an engineering choice, not an identified RTX5090 property.",
+      "source_profile": "discovery_rounds/provisional_execution_profile.json",
+      "physical_identification_status": "identified"
+    },
+    {
+      "id": "F014",
+      "name": "Warp-to-partition assignment",
+      "baseline": "warp_id modulo 4",
+      "unit": "partition assignment",
+      "sensitivity_range_or_alternatives": [
+        "round-robin at admission"
+      ],
+      "classification": "ENGINEERING_ASSUMPTION",
+      "confidence": "low; unmeasured simulator starting choice",
+      "evidence_basis": {
+        "registry_status": "unidentified",
+        "basis": "engineering prior, selected for executable simulation; not hardware evidence"
+      },
+      "proof_registry_status_unchanged": "unidentified",
+      "identified_by_this_profile": false,
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "range": [
+        "round-robin at admission"
+      ],
+      "basis": {
+        "registry_status": "unidentified",
+        "basis": "engineering prior, selected for executable simulation; not hardware evidence"
+      },
+      "scope": "Provisional GEMM-path simulation baseline. Preserve the stated evidence limits; unsupported structure or timing is an engineering choice, not an identified RTX5090 property.",
+      "source_profile": "discovery_rounds/provisional_execution_profile.json",
+      "physical_identification_status": "unidentified"
+    },
+    {
+      "id": "F015",
+      "name": "Issue slot count",
+      "baseline": 1,
+      "unit": "instructions per scheduler per SM cycle",
+      "sensitivity_range_or_alternatives": [
+        1,
+        1
+      ],
+      "classification": "EVIDENCE_SUPPORTED_SCOPED_BASELINE",
+      "confidence": "medium within stated supported family",
+      "evidence_basis": {
+        "path": "discovery_rounds/literature_sweep_036.json",
+        "kind": "official_docs_and_three_queried_reports"
+      },
+      "proof_registry_status_unchanged": "identified",
+      "identified_by_this_profile": false,
+      "existing_registry_value": {
+        "max_instructions_per_scheduler_per_cycle": 1,
+        "schedulers_per_SM": 4,
+        "max_instructions_per_SM_per_cycle": 4
+      },
+      "basis_label": "KNOWN_SOURCE",
+      "range": [
+        1,
+        1
+      ],
+      "basis": {
+        "path": "discovery_rounds/literature_sweep_036.json",
+        "kind": "official_docs_and_three_queried_reports"
+      },
+      "scope": "Provisional GEMM-path simulation baseline. Preserve the stated evidence limits; unsupported structure or timing is an engineering choice, not an identified RTX5090 property.",
+      "source_profile": "discovery_rounds/provisional_execution_profile.json",
+      "physical_identification_status": "identified"
+    },
+    {
+      "id": "F016",
+      "name": "Multiple-issue compatibility rules",
+      "baseline": "one issue per partition per cycle; mixed classes allowed across partitions subject to resource readiness",
+      "unit": "policy",
+      "sensitivity_range_or_alternatives": [
+        "serialize shared execution classes"
+      ],
+      "classification": "MIXED_SUPPORTED_CONTRACT_AND_ENGINEERING_POLICY",
+      "confidence": "medium for retained observed subcontracts; low for extension outside measured scope",
+      "evidence_basis": {
+        "path": "discovery_rounds/literature_sweep_036.json",
+        "kind": "official_docs_and_queried_reports"
+      },
+      "proof_registry_status_unchanged": "partially_identified",
+      "identified_by_this_profile": false,
+      "existing_registry_value": "Same scheduler admits atmostone nativeinstruction perclock; no two-instruction same-scheduler issuepair. Cross-scheduler mixedclass resourceinteraction remainsunknown.",
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "range": [
+        "serialize shared execution classes"
+      ],
+      "basis": {
+        "path": "discovery_rounds/literature_sweep_036.json",
+        "kind": "official_docs_and_queried_reports"
+      },
+      "scope": "Provisional GEMM-path simulation baseline. Preserve the stated evidence limits; unsupported structure or timing is an engineering choice, not an identified RTX5090 property.",
+      "source_profile": "discovery_rounds/provisional_execution_profile.json",
+      "physical_identification_status": "partially_identified"
+    },
+    {
+      "id": "F017",
+      "name": "Instruction-class routing",
+      "baseline": "route by native opcode and generic pointer address window; shared-window LD.E uses shared path",
+      "unit": "policy",
+      "sensitivity_range_or_alternatives": [
+        "trace-specified routing"
+      ],
+      "classification": "MIXED_SUPPORTED_CONTRACT_AND_ENGINEERING_POLICY",
+      "confidence": "medium for retained observed subcontracts; low for extension outside measured scope",
+      "evidence_basis": {
+        "path": "parameter_sweep/generic_shared/analysis.json",
+        "round": "hardware_sweep_006",
+        "kind": "hardware"
+      },
+      "proof_registry_status_unchanged": "partially_identified",
+      "identified_by_this_profile": false,
+      "existing_registry_value": {
+        "native_generic_scalar_shared_routing": "Both plain LD.E and LD.E.STRONG.SYS shared-window pointers use shared service, not global sectors"
+      },
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "range": [
+        "trace-specified routing"
+      ],
+      "basis": {
+        "path": "parameter_sweep/generic_shared/analysis.json",
+        "round": "hardware_sweep_006",
+        "kind": "hardware"
+      },
+      "scope": "Provisional GEMM-path simulation baseline. Preserve the stated evidence limits; unsupported structure or timing is an engineering choice, not an identified RTX5090 property.",
+      "source_profile": "discovery_rounds/provisional_execution_profile.json",
+      "physical_identification_status": "partially_identified"
+    },
+    {
+      "id": "F018",
+      "name": "Arbitration policy",
+      "baseline": "oldest-ready warp per partition with round-robin ties",
+      "unit": "policy",
+      "sensitivity_range_or_alternatives": [
+        "round robin"
+      ],
+      "classification": "ENGINEERING_ASSUMPTION",
+      "confidence": "low; unmeasured simulator starting choice",
+      "evidence_basis": {
+        "registry_status": "unidentified",
+        "basis": "engineering prior, selected for executable simulation; not hardware evidence"
+      },
+      "proof_registry_status_unchanged": "unidentified",
+      "identified_by_this_profile": false,
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "range": [
+        "round robin"
+      ],
+      "basis": {
+        "registry_status": "unidentified",
+        "basis": "engineering prior, selected for executable simulation; not hardware evidence"
+      },
+      "scope": "Provisional GEMM-path simulation baseline. Preserve the stated evidence limits; unsupported structure or timing is an engineering choice, not an identified RTX5090 property.",
+      "source_profile": "discovery_rounds/provisional_execution_profile.json",
+      "physical_identification_status": "unidentified"
+    },
+    {
+      "id": "F019",
+      "name": "Register bank count",
+      "baseline": 4,
+      "unit": "register banks per partition",
+      "sensitivity_range_or_alternatives": [
+        2,
+        8
+      ],
+      "classification": "ENGINEERING_ASSUMPTION",
+      "confidence": "low; unmeasured simulator starting choice",
+      "evidence_basis": {
+        "registry_status": "unidentified",
+        "basis": "engineering prior, selected for executable simulation; not hardware evidence"
+      },
+      "proof_registry_status_unchanged": "unidentified",
+      "identified_by_this_profile": false,
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "range": [
+        2,
+        8
+      ],
+      "basis": {
+        "registry_status": "unidentified",
+        "basis": "engineering prior, selected for executable simulation; not hardware evidence"
+      },
+      "scope": "Provisional GEMM-path simulation baseline. Preserve the stated evidence limits; unsupported structure or timing is an engineering choice, not an identified RTX5090 property.",
+      "source_profile": "discovery_rounds/provisional_execution_profile.json",
+      "physical_identification_status": "unidentified"
+    },
+    {
+      "id": "F020",
+      "name": "Register bank mapping",
+      "baseline": "register index modulo 4",
+      "unit": "bank mapping",
+      "sensitivity_range_or_alternatives": [
+        "XOR register index with warp ID"
+      ],
+      "classification": "ENGINEERING_ASSUMPTION",
+      "confidence": "low; unmeasured simulator starting choice",
+      "evidence_basis": {
+        "registry_status": "unidentified",
+        "basis": "engineering prior, selected for executable simulation; not hardware evidence"
+      },
+      "proof_registry_status_unchanged": "unidentified",
+      "identified_by_this_profile": false,
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "range": [
+        "XOR register index with warp ID"
+      ],
+      "basis": {
+        "registry_status": "unidentified",
+        "basis": "engineering prior, selected for executable simulation; not hardware evidence"
+      },
+      "scope": "Provisional GEMM-path simulation baseline. Preserve the stated evidence limits; unsupported structure or timing is an engineering choice, not an identified RTX5090 property.",
+      "source_profile": "discovery_rounds/provisional_execution_profile.json",
+      "physical_identification_status": "unidentified"
+    },
+    {
+      "id": "F021",
+      "name": "Read ports per register bank",
+      "baseline": 2,
+      "unit": "32-bit operand words per bank per cycle per lane",
+      "sensitivity_range_or_alternatives": [
+        1,
+        4
+      ],
+      "classification": "ENGINEERING_ASSUMPTION",
+      "confidence": "low; unmeasured simulator starting choice",
+      "evidence_basis": {
+        "registry_status": "unidentified",
+        "basis": "engineering prior, selected for executable simulation; not hardware evidence"
+      },
+      "proof_registry_status_unchanged": "unidentified",
+      "identified_by_this_profile": false,
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "range": [
+        1,
+        4
+      ],
+      "basis": {
+        "registry_status": "unidentified",
+        "basis": "engineering prior, selected for executable simulation; not hardware evidence"
+      },
+      "scope": "Provisional GEMM-path simulation baseline. Preserve the stated evidence limits; unsupported structure or timing is an engineering choice, not an identified RTX5090 property.",
+      "source_profile": "discovery_rounds/provisional_execution_profile.json",
+      "physical_identification_status": "unidentified"
+    },
+    {
+      "id": "F022",
+      "name": "Write ports per register bank",
+      "baseline": 1,
+      "unit": "32-bit write words per bank per cycle per lane",
+      "sensitivity_range_or_alternatives": [
+        1,
+        2
+      ],
+      "classification": "ENGINEERING_ASSUMPTION",
+      "confidence": "low; unmeasured simulator starting choice",
+      "evidence_basis": {
+        "registry_status": "unidentified",
+        "basis": "engineering prior, selected for executable simulation; not hardware evidence"
+      },
+      "proof_registry_status_unchanged": "unidentified",
+      "identified_by_this_profile": false,
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "range": [
+        1,
+        2
+      ],
+      "basis": {
+        "registry_status": "unidentified",
+        "basis": "engineering prior, selected for executable simulation; not hardware evidence"
+      },
+      "scope": "Provisional GEMM-path simulation baseline. Preserve the stated evidence limits; unsupported structure or timing is an engineering choice, not an identified RTX5090 property.",
+      "source_profile": "discovery_rounds/provisional_execution_profile.json",
+      "physical_identification_status": "unidentified"
+    },
+    {
+      "id": "F023",
+      "name": "Operand collector capacity",
+      "baseline": 8,
+      "unit": "collector entries per partition",
+      "sensitivity_range_or_alternatives": [
+        4,
+        32
+      ],
+      "classification": "ENGINEERING_ASSUMPTION",
+      "confidence": "low; unmeasured simulator starting choice",
+      "evidence_basis": {
+        "registry_status": "unidentified",
+        "basis": "engineering prior, selected for executable simulation; not hardware evidence"
+      },
+      "proof_registry_status_unchanged": "unidentified",
+      "identified_by_this_profile": false,
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "range": [
+        4,
+        32
+      ],
+      "basis": {
+        "registry_status": "unidentified",
+        "basis": "engineering prior, selected for executable simulation; not hardware evidence"
+      },
+      "scope": "Provisional GEMM-path simulation baseline. Preserve the stated evidence limits; unsupported structure or timing is an engineering choice, not an identified RTX5090 property.",
+      "source_profile": "discovery_rounds/provisional_execution_profile.json",
+      "physical_identification_status": "unidentified"
+    },
+    {
+      "id": "F024",
+      "name": "Collector routing",
+      "baseline": "allocate any free collector in opcode class; bank conflicts serialize reads",
+      "unit": "policy",
+      "sensitivity_range_or_alternatives": [
+        "dedicated collectors per class"
+      ],
+      "classification": "ENGINEERING_ASSUMPTION",
+      "confidence": "low; unmeasured simulator starting choice",
+      "evidence_basis": {
+        "registry_status": "unidentified",
+        "basis": "engineering prior, selected for executable simulation; not hardware evidence"
+      },
+      "proof_registry_status_unchanged": "unidentified",
+      "identified_by_this_profile": false,
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "range": [
+        "dedicated collectors per class"
+      ],
+      "basis": {
+        "registry_status": "unidentified",
+        "basis": "engineering prior, selected for executable simulation; not hardware evidence"
+      },
+      "scope": "Provisional GEMM-path simulation baseline. Preserve the stated evidence limits; unsupported structure or timing is an engineering choice, not an identified RTX5090 property.",
+      "source_profile": "discovery_rounds/provisional_execution_profile.json",
+      "physical_identification_status": "unidentified"
+    },
+    {
+      "id": "F025",
+      "name": "Writeback queue capacity",
+      "baseline": 8,
+      "unit": "writeback entries per partition",
+      "sensitivity_range_or_alternatives": [
+        4,
+        32
+      ],
+      "classification": "ENGINEERING_ASSUMPTION",
+      "confidence": "low; unmeasured simulator starting choice",
+      "evidence_basis": {
+        "registry_status": "unidentified",
+        "basis": "engineering prior, selected for executable simulation; not hardware evidence"
+      },
+      "proof_registry_status_unchanged": "unidentified",
+      "identified_by_this_profile": false,
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "range": [
+        4,
+        32
+      ],
+      "basis": {
+        "registry_status": "unidentified",
+        "basis": "engineering prior, selected for executable simulation; not hardware evidence"
+      },
+      "scope": "Provisional GEMM-path simulation baseline. Preserve the stated evidence limits; unsupported structure or timing is an engineering choice, not an identified RTX5090 property.",
+      "source_profile": "discovery_rounds/provisional_execution_profile.json",
+      "physical_identification_status": "unidentified"
+    },
+    {
+      "id": "F026",
+      "name": "Writeback arbitration policy",
+      "baseline": "oldest completed instruction first; tensor and scalar share final arbitration",
+      "unit": "policy",
+      "sensitivity_range_or_alternatives": [
+        "round-robin class arbitration"
+      ],
+      "classification": "ENGINEERING_ASSUMPTION",
+      "confidence": "low; unmeasured simulator starting choice",
+      "evidence_basis": {
+        "registry_status": "unidentified",
+        "basis": "engineering prior, selected for executable simulation; not hardware evidence"
+      },
+      "proof_registry_status_unchanged": "unidentified",
+      "identified_by_this_profile": false,
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "range": [
+        "round-robin class arbitration"
+      ],
+      "basis": {
+        "registry_status": "unidentified",
+        "basis": "engineering prior, selected for executable simulation; not hardware evidence"
+      },
+      "scope": "Provisional GEMM-path simulation baseline. Preserve the stated evidence limits; unsupported structure or timing is an engineering choice, not an identified RTX5090 property.",
+      "source_profile": "discovery_rounds/provisional_execution_profile.json",
+      "physical_identification_status": "unidentified"
+    },
+    {
+      "id": "F027",
+      "name": "Execution pipeline counts by class",
+      "baseline": {
+        "FP32_INT32": 32,
+        "tensor_blocks": 1,
+        "SFU": 4,
+        "LSU": 4
+      },
+      "unit": "logical lanes or blocks per partition",
+      "sensitivity_range_or_alternatives": {
+        "FP32_INT32": [
+          16,
+          32
+        ],
+        "tensor_blocks": [
+          1,
+          1
+        ],
+        "SFU": [
+          4,
+          8
+        ],
+        "LSU": [
+          4,
+          8
+        ]
+      },
+      "classification": "ENGINEERING_ASSUMPTION",
+      "confidence": "low; unmeasured simulator starting choice",
+      "evidence_basis": {
+        "registry_status": "unidentified",
+        "basis": "engineering prior, selected for executable simulation; not hardware evidence"
+      },
+      "proof_registry_status_unchanged": "unidentified",
+      "identified_by_this_profile": false,
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "range": {
+        "FP32_INT32": [
+          16,
+          32
+        ],
+        "tensor_blocks": [
+          1,
+          1
+        ],
+        "SFU": [
+          4,
+          8
+        ],
+        "LSU": [
+          4,
+          8
+        ]
+      },
+      "basis": {
+        "registry_status": "unidentified",
+        "basis": "engineering prior, selected for executable simulation; not hardware evidence"
+      },
+      "scope": "Provisional GEMM-path simulation baseline. Preserve the stated evidence limits; unsupported structure or timing is an engineering choice, not an identified RTX5090 property.",
+      "source_profile": "discovery_rounds/provisional_execution_profile.json",
+      "physical_identification_status": "unidentified"
+    },
+    {
+      "id": "F028",
+      "name": "Supported numerical operation semantics",
+      "baseline": "PTX specified rounding/FTZ; measured BF16 exceptional cases and supported FP32 semantics retained",
+      "unit": "policy",
+      "sensitivity_range_or_alternatives": [
+        "strict IEEE scalar oracle; explicit matrix approximation"
+      ],
+      "classification": "MIXED_SUPPORTED_CONTRACT_AND_ENGINEERING_POLICY",
+      "confidence": "medium for retained observed subcontracts; low for extension outside measured scope",
+      "evidence_basis": {
+        "url": "https://docs.nvidia.com/cuda/parallel-thread-execution/index.html#floating-point-instructions-fma",
+        "round": "source_sweep_005",
+        "kind": "official_documentation"
+      },
+      "proof_registry_status_unchanged": "partially_identified",
+      "identified_by_this_profile": false,
+      "existing_registry_value": "PTX fma.rn.f32 computes product plus accumulator before one nearest-even FP32 rounding; .ftz changes subnormal handling.",
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "range": [
+        "strict IEEE scalar oracle; explicit matrix approximation"
+      ],
+      "basis": {
+        "url": "https://docs.nvidia.com/cuda/parallel-thread-execution/index.html#floating-point-instructions-fma",
+        "round": "source_sweep_005",
+        "kind": "official_documentation"
+      },
+      "scope": "Provisional GEMM-path simulation baseline. Preserve the stated evidence limits; unsupported structure or timing is an engineering choice, not an identified RTX5090 property.",
+      "source_profile": "discovery_rounds/provisional_execution_profile.json",
+      "physical_identification_status": "partially_identified"
+    },
+    {
+      "id": "F029",
+      "name": "Pipeline sharing rules",
+      "baseline": "FP32 and INT32 share unified execution capacity; tensor and LSU are independently scheduled logical paths",
+      "unit": "policy",
+      "sensitivity_range_or_alternatives": [
+        "additional collector contention"
+      ],
+      "classification": "MIXED_SUPPORTED_CONTRACT_AND_ENGINEERING_POLICY",
+      "confidence": "medium for retained observed subcontracts; low for extension outside measured scope",
+      "evidence_basis": {
+        "round": "source_sweep_001",
+        "kind": "official_documentation",
+        "url": "https://images.nvidia.com/aem-dam/Solutions/geforce/blackwell/nvidia-rtx-blackwell-gpu-architecture.pdf#page=12"
+      },
+      "proof_registry_status_unchanged": "partially_identified",
+      "identified_by_this_profile": false,
+      "existing_registry_value": "FP32 and INT32 share unified execution resources",
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "range": [
+        "additional collector contention"
+      ],
+      "basis": {
+        "round": "source_sweep_001",
+        "kind": "official_documentation",
+        "url": "https://images.nvidia.com/aem-dam/Solutions/geforce/blackwell/nvidia-rtx-blackwell-gpu-architecture.pdf#page=12"
+      },
+      "scope": "Provisional GEMM-path simulation baseline. Preserve the stated evidence limits; unsupported structure or timing is an engineering choice, not an identified RTX5090 property.",
+      "source_profile": "discovery_rounds/provisional_execution_profile.json",
+      "physical_identification_status": "partially_identified"
+    },
+    {
+      "id": "F030",
+      "name": "Tensor pipeline organization/count",
+      "baseline": 4,
+      "unit": "architectural Tensor Core blocks per SM",
+      "sensitivity_range_or_alternatives": [
+        4,
+        4
+      ],
+      "classification": "EVIDENCE_SUPPORTED_SCOPED_BASELINE",
+      "confidence": "medium within stated supported family",
+      "evidence_basis": {
+        "round": "source_sweep_001",
+        "kind": "official_documentation",
+        "url": "https://images.nvidia.com/aem-dam/Solutions/geforce/blackwell/nvidia-rtx-blackwell-gpu-architecture.pdf#page=11"
+      },
+      "proof_registry_status_unchanged": "partially_identified",
+      "identified_by_this_profile": false,
+      "existing_registry_value": "Four architectural Tensor Core blocks per SM, one depicted per partition",
+      "scope": "architectural block count; not inferred internal HMMA pipeline count",
+      "basis_label": "KNOWN_SOURCE",
+      "range": [
+        4,
+        4
+      ],
+      "basis": {
+        "round": "source_sweep_001",
+        "kind": "official_documentation",
+        "url": "https://images.nvidia.com/aem-dam/Solutions/geforce/blackwell/nvidia-rtx-blackwell-gpu-architecture.pdf#page=11"
+      },
+      "source_profile": "discovery_rounds/provisional_execution_profile.json",
+      "physical_identification_status": "partially_identified"
+    },
+    {
+      "id": "F031",
+      "name": "Execution partition routing",
+      "baseline": "issuing scheduler routes to its partition; shared services arbitrate SM-wide",
+      "unit": "policy",
+      "sensitivity_range_or_alternatives": [
+        "cross-partition execution stealing"
+      ],
+      "classification": "MIXED_SUPPORTED_CONTRACT_AND_ENGINEERING_POLICY",
+      "confidence": "medium for retained observed subcontracts; low for extension outside measured scope",
+      "evidence_basis": {
+        "registry_status": "unidentified",
+        "basis": "engineering prior, selected for executable simulation; not hardware evidence"
+      },
+      "proof_registry_status_unchanged": "unidentified",
+      "identified_by_this_profile": false,
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "range": [
+        "cross-partition execution stealing"
+      ],
+      "basis": {
+        "registry_status": "unidentified",
+        "basis": "engineering prior, selected for executable simulation; not hardware evidence"
+      },
+      "scope": "Provisional GEMM-path simulation baseline. Preserve the stated evidence limits; unsupported structure or timing is an engineering choice, not an identified RTX5090 property.",
+      "source_profile": "discovery_rounds/provisional_execution_profile.json",
+      "physical_identification_status": "unidentified"
+    },
+    {
+      "id": "F032",
+      "name": "Native lane/register layout",
+      "baseline": "use measured native_bf16_layout mapping only for supported BF16 m16n16k16 WMMA family",
+      "unit": "policy",
+      "sensitivity_range_or_alternatives": [
+        "reject unsupported matrix families"
+      ],
+      "classification": "EVIDENCE_SUPPORTED_SCOPED_BASELINE",
+      "confidence": "medium within stated supported family",
+      "evidence_basis": {
+        "url": "https://docs.nvidia.com/cuda/parallel-thread-execution/index.html#matrix-fragments-for-wmma",
+        "round": "source_sweep_005",
+        "kind": "official_documentation"
+      },
+      "proof_registry_status_unchanged": "partially_identified",
+      "identified_by_this_profile": false,
+      "existing_registry_value": "For CUDA12.8 sm120 row-major BF16 WMMA m16n16k16, all256 A,256 B and256 C positions are measured across32 lanes; each lane holds4 packed32-bit A/B words and8 FP32 C words. See executable native_bf16_layout package.",
+      "basis_label": "KNOWN_SOURCE",
+      "range": [
+        "reject unsupported matrix families"
+      ],
+      "basis": {
+        "url": "https://docs.nvidia.com/cuda/parallel-thread-execution/index.html#matrix-fragments-for-wmma",
+        "round": "source_sweep_005",
+        "kind": "official_documentation"
+      },
+      "scope": "Provisional GEMM-path simulation baseline. Preserve the stated evidence limits; unsupported structure or timing is an engineering choice, not an identified RTX5090 property.",
+      "source_profile": "discovery_rounds/provisional_execution_profile.json",
+      "physical_identification_status": "partially_identified"
+    },
+    {
+      "id": "F033",
+      "name": "Native instruction-to-operation decomposition",
+      "baseline": "m16n16k16 BF16 WMMA decomposes into two HMMA.16816.F32.BF16 instructions, each covering eight output columns",
+      "unit": "policy",
+      "sensitivity_range_or_alternatives": [
+        "trace explicit HMMA decomposition for other tiles"
+      ],
+      "classification": "EVIDENCE_SUPPORTED_SCOPED_BASELINE",
+      "confidence": "medium within stated supported family",
+      "evidence_basis": {
+        "round": "source_sweep_003",
+        "kind": "saved_native_instruction_audit",
+        "path": "discovery_rounds/native_matrix_inventory.json"
+      },
+      "proof_registry_status_unchanged": "partially_identified",
+      "identified_by_this_profile": false,
+      "existing_registry_value": "Saved SM120 loop bodies contain 4 HMMA.16816.F32.BF16 PCs for tile 32x32 and 12 for tile 64x48 in both p0/p2 variants",
+      "scope": "supported row-major BF16 WMMA family only",
+      "basis_label": "MEASURED",
+      "range": [
+        "trace explicit HMMA decomposition for other tiles"
+      ],
+      "basis": {
+        "round": "source_sweep_003",
+        "kind": "saved_native_instruction_audit",
+        "path": "discovery_rounds/native_matrix_inventory.json"
+      },
+      "source_profile": "discovery_rounds/provisional_execution_profile.json",
+      "physical_identification_status": "partially_identified"
+    },
+    {
+      "id": "F034",
+      "name": "Accumulation order",
+      "baseline": "supported BF16 matrix oracle uses magnitude-aligned truncation before summation for tested cancellation family",
+      "unit": "policy",
+      "sensitivity_range_or_alternatives": [
+        "ideal FP32 fused accumulation; conservative error interval"
+      ],
+      "classification": "MIXED_SUPPORTED_CONTRACT_AND_ENGINEERING_POLICY",
+      "confidence": "medium for retained observed subcontracts; low for extension outside measured scope",
+      "evidence_basis": {
+        "path": "parameter_sweep/bf16_exceptions/parameter_updates.json",
+        "kind": "hardware"
+      },
+      "proof_registry_status_unchanged": "partially_identified",
+      "identified_by_this_profile": false,
+      "existing_registry_value": "Magnitude-aligned truncation before summation predicts tested cancellation family, independent of measured term placement/order",
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "range": [
+        "ideal FP32 fused accumulation; conservative error interval"
+      ],
+      "basis": {
+        "path": "parameter_sweep/bf16_exceptions/parameter_updates.json",
+        "kind": "hardware"
+      },
+      "scope": "Provisional GEMM-path simulation baseline. Preserve the stated evidence limits; unsupported structure or timing is an engineering choice, not an identified RTX5090 property.",
+      "source_profile": "discovery_rounds/provisional_execution_profile.json",
+      "physical_identification_status": "partially_identified"
+    },
+    {
+      "id": "F035",
+      "name": "Exceptional numerical behavior",
+      "baseline": "preserve measured BF16/FP32 subnormals; overflow to infinity; use recorded NaN and zero-times-infinity results",
+      "unit": "policy",
+      "sensitivity_range_or_alternatives": [
+        "PTX-defined unsupported scalar exceptional semantics"
+      ],
+      "classification": "MIXED_SUPPORTED_CONTRACT_AND_ENGINEERING_POLICY",
+      "confidence": "medium for retained observed subcontracts; low for extension outside measured scope",
+      "evidence_basis": {
+        "path": "parameter_sweep/bf16_exceptions/parameter_updates.json",
+        "kind": "hardware"
+      },
+      "proof_registry_status_unchanged": "partially_identified",
+      "identified_by_this_profile": false,
+      "existing_registry_value": "Tested BF16 subnormal identity products and FP32 subnormal C are retained; overflow positive infinity and NaN/0\u00d7inf behavior recorded exactly",
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "range": [
+        "PTX-defined unsupported scalar exceptional semantics"
+      ],
+      "basis": {
+        "path": "parameter_sweep/bf16_exceptions/parameter_updates.json",
+        "kind": "hardware"
+      },
+      "scope": "Provisional GEMM-path simulation baseline. Preserve the stated evidence limits; unsupported structure or timing is an engineering choice, not an identified RTX5090 property.",
+      "source_profile": "discovery_rounds/provisional_execution_profile.json",
+      "physical_identification_status": "partially_identified"
+    },
+    {
+      "id": "F036",
+      "name": "Load queue capacity",
+      "baseline": 16,
+      "unit": "load entries per partition",
+      "sensitivity_range_or_alternatives": [
+        8,
+        64
+      ],
+      "classification": "ENGINEERING_ASSUMPTION",
+      "confidence": "low; unmeasured simulator starting choice",
+      "evidence_basis": {
+        "registry_status": "unidentified",
+        "basis": "engineering prior, selected for executable simulation; not hardware evidence"
+      },
+      "proof_registry_status_unchanged": "unidentified",
+      "identified_by_this_profile": false,
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "range": [
+        8,
+        64
+      ],
+      "basis": {
+        "registry_status": "unidentified",
+        "basis": "engineering prior, selected for executable simulation; not hardware evidence"
+      },
+      "scope": "Provisional GEMM-path simulation baseline. Preserve the stated evidence limits; unsupported structure or timing is an engineering choice, not an identified RTX5090 property.",
+      "source_profile": "discovery_rounds/provisional_execution_profile.json",
+      "physical_identification_status": "unidentified"
+    },
+    {
+      "id": "F037",
+      "name": "Store queue capacity",
+      "baseline": 8,
+      "unit": "store entries per partition",
+      "sensitivity_range_or_alternatives": [
+        4,
+        32
+      ],
+      "classification": "ENGINEERING_ASSUMPTION",
+      "confidence": "low; unmeasured simulator starting choice",
+      "evidence_basis": {
+        "registry_status": "unidentified",
+        "basis": "engineering prior, selected for executable simulation; not hardware evidence"
+      },
+      "proof_registry_status_unchanged": "unidentified",
+      "identified_by_this_profile": false,
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "range": [
+        4,
+        32
+      ],
+      "basis": {
+        "registry_status": "unidentified",
+        "basis": "engineering prior, selected for executable simulation; not hardware evidence"
+      },
+      "scope": "Provisional GEMM-path simulation baseline. Preserve the stated evidence limits; unsupported structure or timing is an engineering choice, not an identified RTX5090 property.",
+      "source_profile": "discovery_rounds/provisional_execution_profile.json",
+      "physical_identification_status": "unidentified"
+    },
+    {
+      "id": "F038",
+      "name": "Outstanding transaction limit per warp",
+      "baseline": 8,
+      "unit": "outstanding memory instructions per warp",
+      "sensitivity_range_or_alternatives": [
+        4,
+        32
+      ],
+      "classification": "ENGINEERING_ASSUMPTION",
+      "confidence": "low; unmeasured simulator starting choice",
+      "evidence_basis": {
+        "registry_status": "unidentified",
+        "basis": "engineering prior, selected for executable simulation; not hardware evidence"
+      },
+      "proof_registry_status_unchanged": "unidentified",
+      "identified_by_this_profile": false,
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "range": [
+        4,
+        32
+      ],
+      "basis": {
+        "registry_status": "unidentified",
+        "basis": "engineering prior, selected for executable simulation; not hardware evidence"
+      },
+      "scope": "Provisional GEMM-path simulation baseline. Preserve the stated evidence limits; unsupported structure or timing is an engineering choice, not an identified RTX5090 property.",
+      "source_profile": "discovery_rounds/provisional_execution_profile.json",
+      "physical_identification_status": "unidentified"
+    },
+    {
+      "id": "F039",
+      "name": "Outstanding transaction limit per SM",
+      "baseline": 64,
+      "unit": "outstanding requests per SM",
+      "sensitivity_range_or_alternatives": [
+        32,
+        256
+      ],
+      "classification": "ENGINEERING_ASSUMPTION",
+      "confidence": "low; unmeasured simulator starting choice",
+      "evidence_basis": {
+        "registry_status": "unidentified",
+        "basis": "engineering prior, selected for executable simulation; not hardware evidence"
+      },
+      "proof_registry_status_unchanged": "unidentified",
+      "identified_by_this_profile": false,
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "range": [
+        32,
+        256
+      ],
+      "basis": {
+        "registry_status": "unidentified",
+        "basis": "engineering prior, selected for executable simulation; not hardware evidence"
+      },
+      "scope": "Provisional GEMM-path simulation baseline. Preserve the stated evidence limits; unsupported structure or timing is an engineering choice, not an identified RTX5090 property.",
+      "source_profile": "discovery_rounds/provisional_execution_profile.json",
+      "physical_identification_status": "unidentified"
+    },
+    {
+      "id": "F040",
+      "name": "Native instruction coalescing rules",
+      "baseline": "global coalescing uses touched 32-byte segments of enabled lanes; shared uses supported measured package rules",
+      "unit": "policy",
+      "sensitivity_range_or_alternatives": [
+        "conservative separate packages for unsupported widths"
+      ],
+      "classification": "MIXED_SUPPORTED_CONTRACT_AND_ENGINEERING_POLICY",
+      "confidence": "medium for retained observed subcontracts; low for extension outside measured scope",
+      "evidence_basis": {
+        "url": "https://docs.nvidia.com/cuda/cuda-c-best-practices-guide/index.html#coalesced-access-to-global-memory",
+        "round": "source_sweep_005",
+        "kind": "official_documentation"
+      },
+      "proof_registry_status_unchanged": "partially_identified",
+      "identified_by_this_profile": false,
+      "existing_registry_value": "For cc6.0+ ordinary global warp accesses, service transaction count follows required 32-byte segments, including duplicate and inactive-lane cases.",
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "range": [
+        "conservative separate packages for unsupported widths"
+      ],
+      "basis": {
+        "url": "https://docs.nvidia.com/cuda/cuda-c-best-practices-guide/index.html#coalesced-access-to-global-memory",
+        "round": "source_sweep_005",
+        "kind": "official_documentation"
+      },
+      "scope": "Provisional GEMM-path simulation baseline. Preserve the stated evidence limits; unsupported structure or timing is an engineering choice, not an identified RTX5090 property.",
+      "source_profile": "discovery_rounds/provisional_execution_profile.json",
+      "physical_identification_status": "partially_identified"
+    },
+    {
+      "id": "F041",
+      "name": "Memory ordering rules",
+      "baseline": "preserve program dependencies and explicit scoped fences; permit independent request completion out of order",
+      "unit": "policy",
+      "sensitivity_range_or_alternatives": [
+        "fully ordered conservative memory model"
+      ],
+      "classification": "MIXED_SUPPORTED_CONTRACT_AND_ENGINEERING_POLICY",
+      "confidence": "medium for retained observed subcontracts; low for extension outside measured scope",
+      "evidence_basis": {
+        "round": "source_sweep_002",
+        "kind": "official_documentation",
+        "url": "https://docs.nvidia.com/cuda/parallel-thread-execution/index.html#memory-consistency-model"
+      },
+      "proof_registry_status_unchanged": "partially_identified",
+      "identified_by_this_profile": false,
+      "existing_registry_value": "PTX specifies scope-dependent memory consistency; cache hints do not strengthen ordering. Actual request issue, completion and return ordering are not identified.",
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "range": [
+        "fully ordered conservative memory model"
+      ],
+      "basis": {
+        "round": "source_sweep_002",
+        "kind": "official_documentation",
+        "url": "https://docs.nvidia.com/cuda/parallel-thread-execution/index.html#memory-consistency-model"
+      },
+      "scope": "Provisional GEMM-path simulation baseline. Preserve the stated evidence limits; unsupported structure or timing is an engineering choice, not an identified RTX5090 property.",
+      "source_profile": "discovery_rounds/provisional_execution_profile.json",
+      "physical_identification_status": "partially_identified"
+    },
+    {
+      "id": "F042",
+      "name": "Return assembly rules",
+      "baseline": "little-endian assembly; s8/s16 sign extension; unsigned narrow zero extension; b32 bit preservation",
+      "unit": "policy",
+      "sensitivity_range_or_alternatives": [
+        "reject unsupported packed return formats"
+      ],
+      "classification": "EVIDENCE_SUPPORTED_SCOPED_BASELINE",
+      "confidence": "medium within stated supported family",
+      "evidence_basis": {
+        "path": "discovery_rounds/literature_sweep_017.json",
+        "kind": "official_docs"
+      },
+      "proof_registry_status_unchanged": "partially_identified",
+      "identified_by_this_profile": false,
+      "existing_registry_value": {
+        "signed_load": "sign extend s8/s16 into32bit destination",
+        "unsigned_bit_load": "zero extend u8/b8/u16/b16 into32bit destination",
+        "packed_b32": "bit preservation",
+        "byte_order": "little endian"
+      },
+      "basis_label": "KNOWN_SOURCE",
+      "range": [
+        "reject unsupported packed return formats"
+      ],
+      "basis": {
+        "path": "discovery_rounds/literature_sweep_017.json",
+        "kind": "official_docs"
+      },
+      "scope": "Provisional GEMM-path simulation baseline. Preserve the stated evidence limits; unsupported structure or timing is an engineering choice, not an identified RTX5090 property.",
+      "source_profile": "discovery_rounds/provisional_execution_profile.json",
+      "physical_identification_status": "partially_identified"
+    },
+    {
+      "id": "F043",
+      "name": "Supported page sizes",
+      "component": "Address translation",
+      "proof_registry_status": "unidentified",
+      "baseline": [
+        4096,
+        65536,
+        2097152
+      ],
+      "plausible_range_or_alternatives": [
+        4096,
+        65536,
+        2097152
+      ],
+      "unit": "bytes/page",
+      "confidence": "low",
+      "basis": "Assume 4KiB,64KiB,2MiB translation modes. CUDA allocation granularity is not proof of hardware page support.",
+      "classification": "ENGINEERING_ASSUMPTION",
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "range": [
+        4096,
+        65536,
+        2097152
+      ],
+      "scope": "Provisional GEMM-path simulation baseline. Preserve the stated evidence limits; unsupported structure or timing is an engineering choice, not an identified RTX5090 property.",
+      "source_profile": "discovery_rounds/provisional_memory_profile.json",
+      "physical_identification_status": "unidentified"
+    },
+    {
+      "id": "F044",
+      "name": "Translation-cache organization",
+      "component": "Address translation",
+      "proof_registry_status": "unidentified",
+      "baseline": {
+        "L1_entries": 128,
+        "L1_ways": 4,
+        "L2_entries": 2048,
+        "L2_ways": 8
+      },
+      "plausible_range_or_alternatives": {
+        "L1_entries": [
+          32,
+          512
+        ],
+        "L2_entries": [
+          512,
+          8192
+        ],
+        "ways": [
+          2,
+          16
+        ]
+      },
+      "unit": "entries and ways",
+      "confidence": "low",
+      "basis": "Engineering baseline for an executable sensitivity study; not measured or identified.",
+      "classification": "ENGINEERING_ASSUMPTION",
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "range": {
+        "L1_entries": [
+          32,
+          512
+        ],
+        "L2_entries": [
+          512,
+          8192
+        ],
+        "ways": [
+          2,
+          16
+        ]
+      },
+      "scope": "Provisional GEMM-path simulation baseline. Preserve the stated evidence limits; unsupported structure or timing is an engineering choice, not an identified RTX5090 property.",
+      "source_profile": "discovery_rounds/provisional_memory_profile.json",
+      "physical_identification_status": "unidentified"
+    },
+    {
+      "id": "F045",
+      "name": "Translation mapping/replacement rules",
+      "component": "Address translation",
+      "proof_registry_status": "unidentified",
+      "baseline": "VPN modulo set count; LRU within set",
+      "plausible_range_or_alternatives": [
+        "modulo",
+        "XOR-hashed indexing",
+        "LRU",
+        "pseudo-LRU",
+        "random"
+      ],
+      "unit": "policy",
+      "confidence": "low",
+      "basis": "Engineering baseline for an executable sensitivity study; not measured or identified.",
+      "classification": "ENGINEERING_ASSUMPTION",
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "range": [
+        "modulo",
+        "XOR-hashed indexing",
+        "LRU",
+        "pseudo-LRU",
+        "random"
+      ],
+      "scope": "Provisional GEMM-path simulation baseline. Preserve the stated evidence limits; unsupported structure or timing is an engineering choice, not an identified RTX5090 property.",
+      "source_profile": "discovery_rounds/provisional_memory_profile.json",
+      "physical_identification_status": "unidentified"
+    },
+    {
+      "id": "F046",
+      "name": "Translation request capacity",
+      "component": "Address translation",
+      "proof_registry_status": "unidentified",
+      "baseline": 32,
+      "plausible_range_or_alternatives": [
+        8,
+        128
+      ],
+      "unit": "outstanding translation requests/SM",
+      "confidence": "low",
+      "basis": "Engineering baseline for an executable sensitivity study; not measured or identified.",
+      "classification": "ENGINEERING_ASSUMPTION",
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "range": [
+        8,
+        128
+      ],
+      "scope": "Provisional GEMM-path simulation baseline. Preserve the stated evidence limits; unsupported structure or timing is an engineering choice, not an identified RTX5090 property.",
+      "source_profile": "discovery_rounds/provisional_memory_profile.json",
+      "physical_identification_status": "unidentified"
+    },
+    {
+      "id": "F047",
+      "name": "Page-walk organization",
+      "component": "Address translation",
+      "proof_registry_status": "unidentified",
+      "baseline": {
+        "levels": 4,
+        "walkers": 4,
+        "walk_cache_entries": 32
+      },
+      "plausible_range_or_alternatives": {
+        "levels": [
+          3,
+          5
+        ],
+        "walkers": [
+          1,
+          16
+        ],
+        "walk_cache_entries": [
+          0,
+          256
+        ]
+      },
+      "unit": "levels; walkers; entries",
+      "confidence": "low",
+      "basis": "Engineering baseline for an executable sensitivity study; not measured or identified.",
+      "classification": "ENGINEERING_ASSUMPTION",
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "range": {
+        "levels": [
+          3,
+          5
+        ],
+        "walkers": [
+          1,
+          16
+        ],
+        "walk_cache_entries": [
+          0,
+          256
+        ]
+      },
+      "scope": "Provisional GEMM-path simulation baseline. Preserve the stated evidence limits; unsupported structure or timing is an engineering choice, not an identified RTX5090 property.",
+      "source_profile": "discovery_rounds/provisional_memory_profile.json",
+      "physical_identification_status": "unidentified"
+    },
+    {
+      "id": "F048",
+      "name": "L1/shared partition configuration",
+      "component": "Shared memory",
+      "proof_registry_status": "partially_identified",
+      "baseline": {
+        "shared_KiB": 32,
+        "unified_KiB": 128,
+        "L1_usable_KiB": 64
+      },
+      "plausible_range_or_alternatives": {
+        "shared_KiB": [
+          0,
+          8,
+          16,
+          32,
+          64,
+          100
+        ],
+        "L1_usable_KiB": [
+          16,
+          128
+        ]
+      },
+      "unit": "KiB/SM",
+      "confidence": "low",
+      "basis": "Supported shared configurations are toolkit facts; usable L1 capacity and overhead here are assumptions. Alternate 100KiB shared profile must reduce assumed L1 accordingly.",
+      "classification": "ENGINEERING_ASSUMPTION",
+      "preserved_stronger_evidence": {
+        "supported_shared_config_KiB": [
+          0,
+          8,
+          16,
+          32,
+          64,
+          100
+        ],
+        "scope": "CUDA occupancy model, cc12.0",
+        "rounding": "Smallest supported shared configuration greater than or equal to byte request; reject above102400bytes"
+      },
+      "existing_evidence": {
+        "path": "parameter_sweep/cuda_occupancy_header.txt",
+        "function": "cudaOccAlignUpShmemSizeVoltaPlus",
+        "lines": [
+          967,
+          991
+        ],
+        "sha256": "d076afacc2165c6c48ba36aaef6897df5fbbdd9a6bc7458161d8a59f764d3f6c",
+        "local_check": "parameter_sweep/shared_configs.json",
+        "round": "source_sweep_006",
+        "kind": "official_documentation_or_toolkit_source"
+      },
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "range": {
+        "shared_KiB": [
+          0,
+          8,
+          16,
+          32,
+          64,
+          100
+        ],
+        "L1_usable_KiB": [
+          16,
+          128
+        ]
+      },
+      "scope": "Provisional GEMM-path simulation baseline. Preserve the stated evidence limits; unsupported structure or timing is an engineering choice, not an identified RTX5090 property.",
+      "source_profile": "discovery_rounds/provisional_memory_profile.json",
+      "physical_identification_status": "partially_identified"
+    },
+    {
+      "id": "F049",
+      "name": "Read ports per shared bank",
+      "component": "Shared memory",
+      "proof_registry_status": "unidentified",
+      "baseline": 1,
+      "plausible_range_or_alternatives": [
+        1,
+        2
+      ],
+      "unit": "32-bit read ports/bank",
+      "confidence": "low",
+      "basis": "One logical service port is a modeling baseline; bank wavefront measurements do not identify physical ports.",
+      "classification": "ENGINEERING_ASSUMPTION",
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "range": [
+        1,
+        2
+      ],
+      "scope": "Provisional GEMM-path simulation baseline. Preserve the stated evidence limits; unsupported structure or timing is an engineering choice, not an identified RTX5090 property.",
+      "source_profile": "discovery_rounds/provisional_memory_profile.json",
+      "physical_identification_status": "unidentified"
+    },
+    {
+      "id": "F050",
+      "name": "Write ports per shared bank",
+      "component": "Shared memory",
+      "proof_registry_status": "unidentified",
+      "baseline": 1,
+      "plausible_range_or_alternatives": [
+        1,
+        2
+      ],
+      "unit": "32-bit write ports/bank",
+      "confidence": "low",
+      "basis": "Engineering baseline for an executable sensitivity study; not measured or identified.",
+      "classification": "ENGINEERING_ASSUMPTION",
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "range": [
+        1,
+        2
+      ],
+      "scope": "Provisional GEMM-path simulation baseline. Preserve the stated evidence limits; unsupported structure or timing is an engineering choice, not an identified RTX5090 property.",
+      "source_profile": "discovery_rounds/provisional_memory_profile.json",
+      "physical_identification_status": "unidentified"
+    },
+    {
+      "id": "F051",
+      "name": "Shared request queue capacity",
+      "component": "Shared memory",
+      "proof_registry_status": "unidentified",
+      "baseline": 32,
+      "plausible_range_or_alternatives": [
+        8,
+        128
+      ],
+      "unit": "warp shared requests/SM",
+      "confidence": "low",
+      "basis": "Engineering baseline for an executable sensitivity study; not measured or identified.",
+      "classification": "ENGINEERING_ASSUMPTION",
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "range": [
+        8,
+        128
+      ],
+      "scope": "Provisional GEMM-path simulation baseline. Preserve the stated evidence limits; unsupported structure or timing is an engineering choice, not an identified RTX5090 property.",
+      "source_profile": "discovery_rounds/provisional_memory_profile.json",
+      "physical_identification_status": "unidentified"
+    },
+    {
+      "id": "F052",
+      "name": "Warp transaction splitting rules",
+      "component": "Shared memory",
+      "proof_registry_status": "partially_identified",
+      "baseline": {
+        "scalar": "maximum distinct words in any bank",
+        "vector64": "two 128-byte logical phases",
+        "vector128": "four 128-byte logical phases; same-vector reads count occupied 16-lane halves"
+      },
+      "plausible_range_or_alternatives": {
+        "phase_bytes": [
+          64,
+          128,
+          256
+        ],
+        "cross_warp_arbitration": [
+          "round-robin",
+          "oldest-ready"
+        ]
+      },
+      "unit": "service packages/request",
+      "confidence": "low",
+      "basis": "Retain admitted scalar/full-warp/vector128 masked-broadcast measurements. General vector partition and cross-warp rule remain an engineering extrapolation.",
+      "classification": "ENGINEERING_ASSUMPTION",
+      "preserved_stronger_evidence": "Scalar generic warp reads: measured 4/2/8 shared wavefront packages for tested row strides 16/24/32, matching maximum distinct words per bank",
+      "existing_evidence": {
+        "round": "hardware_sweep_001",
+        "kind": "measured_profile_counts",
+        "path": "parameter_sweep/shared_work_verification.json"
+      },
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "range": {
+        "phase_bytes": [
+          64,
+          128,
+          256
+        ],
+        "cross_warp_arbitration": [
+          "round-robin",
+          "oldest-ready"
+        ]
+      },
+      "scope": "Provisional GEMM-path simulation baseline. Preserve the stated evidence limits; unsupported structure or timing is an engineering choice, not an identified RTX5090 property.",
+      "source_profile": "discovery_rounds/provisional_memory_profile.json",
+      "physical_identification_status": "partially_identified"
+    },
+    {
+      "id": "F053",
+      "name": "Broadcast rules",
+      "component": "Shared memory",
+      "proof_registry_status": "identified",
+      "baseline": "Same-location reads broadcast; independent-bank broadcasts multicast",
+      "plausible_range_or_alternatives": [
+        "documented behavior fixed"
+      ],
+      "unit": "functional policy",
+      "confidence": "low",
+      "basis": "Official ordinary shared-read contract is identified. This entry preserves it without adding a timing claim.",
+      "classification": "ENGINEERING_ASSUMPTION",
+      "preserved_stronger_evidence": "Same-location shared reads broadcast; separate-bank broadcasts may multicast",
+      "existing_evidence": {
+        "round": "source_sweep_001",
+        "kind": "official_documentation",
+        "url": "https://docs.nvidia.com/cuda/cuda-c-best-practices-guide/index.html#shared-memory-and-memory-banks"
+      },
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "range": [
+        "documented behavior fixed"
+      ],
+      "scope": "Provisional GEMM-path simulation baseline. Preserve the stated evidence limits; unsupported structure or timing is an engineering choice, not an identified RTX5090 property.",
+      "source_profile": "discovery_rounds/provisional_memory_profile.json",
+      "physical_identification_status": "identified"
+    },
+    {
+      "id": "F054",
+      "name": "L1 capacity in selected partition",
+      "component": "L1 cache",
+      "proof_registry_status": "partially_identified",
+      "baseline": 65536,
+      "plausible_range_or_alternatives": [
+        16384,
+        98304
+      ],
+      "unit": "usable L1 bytes/SM",
+      "confidence": "low",
+      "basis": "Baseline 32KiB shared +64KiB usable L1 +32KiB modeled overhead fits known128KiB unified pool; overhead not measured.",
+      "classification": "ENGINEERING_ASSUMPTION",
+      "preserved_stronger_evidence": "128 KiB unified L1/shared physical pool per SM",
+      "existing_evidence": {
+        "round": "source_sweep_001",
+        "kind": "official_documentation",
+        "url": "https://images.nvidia.com/aem-dam/Solutions/geforce/blackwell/nvidia-rtx-blackwell-gpu-architecture.pdf#page=10"
+      },
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "range": [
+        16384,
+        98304
+      ],
+      "scope": "Provisional GEMM-path simulation baseline. Preserve the stated evidence limits; unsupported structure or timing is an engineering choice, not an identified RTX5090 property.",
+      "source_profile": "discovery_rounds/provisional_memory_profile.json",
+      "physical_identification_status": "partially_identified"
+    },
+    {
+      "id": "F055",
+      "name": "L1 set count",
+      "component": "L1 cache",
+      "proof_registry_status": "unidentified",
+      "baseline": 64,
+      "plausible_range_or_alternatives": [
+        16,
+        128
+      ],
+      "unit": "sets/SM",
+      "confidence": "low",
+      "basis": "Baseline64sets*8ways*128-byte lines=64KiB. Recompute set count when capacity or ways changes.",
+      "classification": "ENGINEERING_ASSUMPTION",
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "range": [
+        16,
+        128
+      ],
+      "scope": "Provisional GEMM-path simulation baseline. Preserve the stated evidence limits; unsupported structure or timing is an engineering choice, not an identified RTX5090 property.",
+      "source_profile": "discovery_rounds/provisional_memory_profile.json",
+      "physical_identification_status": "unidentified"
+    },
+    {
+      "id": "F056",
+      "name": "L1 associativity",
+      "component": "L1 cache",
+      "proof_registry_status": "unidentified",
+      "baseline": 8,
+      "plausible_range_or_alternatives": [
+        4,
+        16
+      ],
+      "unit": "ways/set",
+      "confidence": "low",
+      "basis": "Engineering baseline for an executable sensitivity study; not measured or identified.",
+      "classification": "ENGINEERING_ASSUMPTION",
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "range": [
+        4,
+        16
+      ],
+      "scope": "Provisional GEMM-path simulation baseline. Preserve the stated evidence limits; unsupported structure or timing is an engineering choice, not an identified RTX5090 property.",
+      "source_profile": "discovery_rounds/provisional_memory_profile.json",
+      "physical_identification_status": "unidentified"
+    },
+    {
+      "id": "F057",
+      "name": "L1 address mapping",
+      "component": "L1 cache",
+      "proof_registry_status": "unidentified",
+      "baseline": "set=(byte_address//128)%64",
+      "plausible_range_or_alternatives": [
+        "modulo index",
+        "XOR high/low address hash"
+      ],
+      "unit": "mapping rule",
+      "confidence": "low",
+      "basis": "Engineering baseline for an executable sensitivity study; not measured or identified.",
+      "classification": "ENGINEERING_ASSUMPTION",
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "range": [
+        "modulo index",
+        "XOR high/low address hash"
+      ],
+      "scope": "Provisional GEMM-path simulation baseline. Preserve the stated evidence limits; unsupported structure or timing is an engineering choice, not an identified RTX5090 property.",
+      "source_profile": "discovery_rounds/provisional_memory_profile.json",
+      "physical_identification_status": "unidentified"
+    },
+    {
+      "id": "F058",
+      "name": "L1 replacement policy",
+      "component": "L1 cache",
+      "proof_registry_status": "unidentified",
+      "baseline": "pseudo-LRU per set",
+      "plausible_range_or_alternatives": [
+        "LRU",
+        "pseudo-LRU",
+        "random",
+        "round-robin"
+      ],
+      "unit": "replacement policy",
+      "confidence": "low",
+      "basis": "Engineering baseline for an executable sensitivity study; not measured or identified.",
+      "classification": "ENGINEERING_ASSUMPTION",
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "range": [
+        "LRU",
+        "pseudo-LRU",
+        "random",
+        "round-robin"
+      ],
+      "scope": "Provisional GEMM-path simulation baseline. Preserve the stated evidence limits; unsupported structure or timing is an engineering choice, not an identified RTX5090 property.",
+      "source_profile": "discovery_rounds/provisional_memory_profile.json",
+      "physical_identification_status": "unidentified"
+    },
+    {
+      "id": "F059",
+      "name": "L1 write policy",
+      "component": "L1 cache",
+      "proof_registry_status": "partially_identified",
+      "baseline": "Global store bypasses L1; no write allocation",
+      "plausible_range_or_alternatives": [
+        "bypass/no allocation",
+        "write-through/no allocation",
+        "write-through/allocation"
+      ],
+      "unit": "write policy",
+      "confidence": "low",
+      "basis": "PTX global L1 noncoherence and .cg bypass are documented. Actual native store allocation baseline is assumed.",
+      "classification": "ENGINEERING_ASSUMPTION",
+      "preserved_stronger_evidence": "PTX .cg bypasses L1; global L1 caches are not mutually coherent. Native store allocation and write buffering remain unidentified.",
+      "existing_evidence": {
+        "round": "source_sweep_002",
+        "kind": "official_documentation",
+        "url": "https://docs.nvidia.com/cuda/parallel-thread-execution/index.html#cache-operators"
+      },
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "range": [
+        "bypass/no allocation",
+        "write-through/no allocation",
+        "write-through/allocation"
+      ],
+      "scope": "Provisional GEMM-path simulation baseline. Preserve the stated evidence limits; unsupported structure or timing is an engineering choice, not an identified RTX5090 property.",
+      "source_profile": "discovery_rounds/provisional_memory_profile.json",
+      "physical_identification_status": "partially_identified"
+    },
+    {
+      "id": "F060",
+      "name": "L1 pending-miss capacity",
+      "component": "L1 cache",
+      "proof_registry_status": "unidentified",
+      "baseline": 64,
+      "plausible_range_or_alternatives": [
+        16,
+        256
+      ],
+      "unit": "pending distinct L1 misses/SM",
+      "confidence": "low",
+      "basis": "Engineering baseline for an executable sensitivity study; not measured or identified.",
+      "classification": "ENGINEERING_ASSUMPTION",
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "range": [
+        16,
+        256
+      ],
+      "scope": "Provisional GEMM-path simulation baseline. Preserve the stated evidence limits; unsupported structure or timing is an engineering choice, not an identified RTX5090 property.",
+      "source_profile": "discovery_rounds/provisional_memory_profile.json",
+      "physical_identification_status": "unidentified"
+    },
+    {
+      "id": "F061",
+      "name": "L1 pending-consumer merging rules",
+      "component": "L1 cache",
+      "proof_registry_status": "unidentified",
+      "baseline": "Merge identical 32-byte sectors into one pending fetch; retain all consumers",
+      "plausible_range_or_alternatives": [
+        "sector merge",
+        "128-byte line merge",
+        "no merge"
+      ],
+      "unit": "merge policy",
+      "confidence": "low",
+      "basis": "Engineering baseline for an executable sensitivity study; not measured or identified.",
+      "classification": "ENGINEERING_ASSUMPTION",
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "range": [
+        "sector merge",
+        "128-byte line merge",
+        "no merge"
+      ],
+      "scope": "Provisional GEMM-path simulation baseline. Preserve the stated evidence limits; unsupported structure or timing is an engineering choice, not an identified RTX5090 property.",
+      "source_profile": "discovery_rounds/provisional_memory_profile.json",
+      "physical_identification_status": "unidentified"
+    },
+    {
+      "id": "F062",
+      "name": "L1 fill/return queue capacities",
+      "component": "L1 cache",
+      "proof_registry_status": "unidentified",
+      "baseline": {
+        "fill_entries": 32,
+        "return_entries": 64
+      },
+      "plausible_range_or_alternatives": {
+        "fill_entries": [
+          8,
+          128
+        ],
+        "return_entries": [
+          16,
+          256
+        ]
+      },
+      "unit": "queue entries/SM",
+      "confidence": "low",
+      "basis": "Engineering baseline for an executable sensitivity study; not measured or identified.",
+      "classification": "ENGINEERING_ASSUMPTION",
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "range": {
+        "fill_entries": [
+          8,
+          128
+        ],
+        "return_entries": [
+          16,
+          256
+        ]
+      },
+      "scope": "Provisional GEMM-path simulation baseline. Preserve the stated evidence limits; unsupported structure or timing is an engineering choice, not an identified RTX5090 property.",
+      "source_profile": "discovery_rounds/provisional_memory_profile.json",
+      "physical_identification_status": "unidentified"
+    },
+    {
+      "id": "F063",
+      "name": "L2 set count",
+      "component": "L2 cache",
+      "proof_registry_status": "unidentified",
+      "baseline": 1024,
+      "plausible_range_or_alternatives": [
+        256,
+        2048
+      ],
+      "unit": "sets/L2 slice",
+      "confidence": "low",
+      "basis": "48-slice baseline:1024sets*16ways*128B*48=96MiB.64-slice alternative uses768sets to preserve96MiB; non-power-of-two indexing is assumed, not established.",
+      "classification": "ENGINEERING_ASSUMPTION",
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "range": [
+        256,
+        2048
+      ],
+      "scope": "Provisional GEMM-path simulation baseline. Preserve the stated evidence limits; unsupported structure or timing is an engineering choice, not an identified RTX5090 property.",
+      "source_profile": "discovery_rounds/provisional_memory_profile.json",
+      "physical_identification_status": "unidentified"
+    },
+    {
+      "id": "F064",
+      "name": "L2 associativity",
+      "component": "L2 cache",
+      "proof_registry_status": "unidentified",
+      "baseline": 16,
+      "plausible_range_or_alternatives": [
+        8,
+        32
+      ],
+      "unit": "ways/set",
+      "confidence": "low",
+      "basis": "Engineering baseline for an executable sensitivity study; not measured or identified.",
+      "classification": "ENGINEERING_ASSUMPTION",
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "range": [
+        8,
+        32
+      ],
+      "scope": "Provisional GEMM-path simulation baseline. Preserve the stated evidence limits; unsupported structure or timing is an engineering choice, not an identified RTX5090 property.",
+      "source_profile": "discovery_rounds/provisional_memory_profile.json",
+      "physical_identification_status": "unidentified"
+    },
+    {
+      "id": "F065",
+      "name": "L2 slice organization/count",
+      "component": "L2 cache",
+      "proof_registry_status": "partially_identified",
+      "baseline": {
+        "active_model_slices": 48,
+        "nominal_reported_slices": 64,
+        "FBPs": 8,
+        "nominal_slices_per_FBP": 8
+      },
+      "plausible_range_or_alternatives": {
+        "active_model_slices": [
+          48,
+          64
+        ]
+      },
+      "unit": "slices; FBPs",
+      "confidence": "low",
+      "basis": "64 is queried metadata;48 is inferred counter-instance denominator. Neither establishes enabled physical organization. Run both alternatives.",
+      "classification": "ENGINEERING_ASSUMPTION",
+      "preserved_stronger_evidence": {
+        "organization": "LTS is L2subpartition with tag/miss/data stages; LRC readcoalescing upstream",
+        "queried_l2s_count": 64,
+        "queried_fbp_count": 8,
+        "queried_l2s_per_fbp": 8,
+        "inferred_profiler_LTS_instances": 48,
+        "conflict_unresolved": true
+      },
+      "existing_evidence": {
+        "path": "discovery_rounds/literature_sweep_036.json",
+        "kind": "official_docs_and_queried_reports"
+      },
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "range": {
+        "active_model_slices": [
+          48,
+          64
+        ]
+      },
+      "scope": "Provisional GEMM-path simulation baseline. Preserve the stated evidence limits; unsupported structure or timing is an engineering choice, not an identified RTX5090 property.",
+      "source_profile": "discovery_rounds/provisional_memory_profile.json",
+      "physical_identification_status": "partially_identified"
+    },
+    {
+      "id": "F066",
+      "name": "L2 slice address mapping",
+      "component": "L2 cache",
+      "proof_registry_status": "unidentified",
+      "baseline": "slice=(byte_address//128)%active_model_slices",
+      "plausible_range_or_alternatives": [
+        "modulo stripe",
+        "XOR-hashed stripe"
+      ],
+      "unit": "mapping rule",
+      "confidence": "low",
+      "basis": "Engineering baseline for an executable sensitivity study; not measured or identified.",
+      "classification": "ENGINEERING_ASSUMPTION",
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "range": [
+        "modulo stripe",
+        "XOR-hashed stripe"
+      ],
+      "scope": "Provisional GEMM-path simulation baseline. Preserve the stated evidence limits; unsupported structure or timing is an engineering choice, not an identified RTX5090 property.",
+      "source_profile": "discovery_rounds/provisional_memory_profile.json",
+      "physical_identification_status": "unidentified"
+    },
+    {
+      "id": "F067",
+      "name": "L2 set address mapping",
+      "component": "L2 cache",
+      "proof_registry_status": "unidentified",
+      "baseline": "set=(byte_address//(128*active_model_slices))%sets_per_slice",
+      "plausible_range_or_alternatives": [
+        "modulo",
+        "XOR-hashed"
+      ],
+      "unit": "mapping rule",
+      "confidence": "low",
+      "basis": "Engineering baseline for an executable sensitivity study; not measured or identified.",
+      "classification": "ENGINEERING_ASSUMPTION",
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "range": [
+        "modulo",
+        "XOR-hashed"
+      ],
+      "scope": "Provisional GEMM-path simulation baseline. Preserve the stated evidence limits; unsupported structure or timing is an engineering choice, not an identified RTX5090 property.",
+      "source_profile": "discovery_rounds/provisional_memory_profile.json",
+      "physical_identification_status": "unidentified"
+    },
+    {
+      "id": "F068",
+      "name": "L2 lookup ports",
+      "component": "L2 cache",
+      "proof_registry_status": "unidentified",
+      "baseline": 1,
+      "plausible_range_or_alternatives": [
+        1,
+        4
+      ],
+      "unit": "logical lookup requests/slice/reference cycle",
+      "confidence": "low",
+      "basis": "Engineering baseline for an executable sensitivity study; not measured or identified.",
+      "classification": "ENGINEERING_ASSUMPTION",
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "range": [
+        1,
+        4
+      ],
+      "scope": "Provisional GEMM-path simulation baseline. Preserve the stated evidence limits; unsupported structure or timing is an engineering choice, not an identified RTX5090 property.",
+      "source_profile": "discovery_rounds/provisional_memory_profile.json",
+      "physical_identification_status": "unidentified"
+    },
+    {
+      "id": "F069",
+      "name": "L2 replacement policy",
+      "component": "L2 cache",
+      "proof_registry_status": "unidentified",
+      "baseline": "pseudo-LRU with persisting-line priority when policy enabled",
+      "plausible_range_or_alternatives": [
+        "LRU",
+        "pseudo-LRU",
+        "random"
+      ],
+      "unit": "replacement policy",
+      "confidence": "low",
+      "basis": "Public priority controls exist; hidden replacement is assumed. Known maximum set-aside60MiB and access-policy-window128MiB are controls, not current allocation/cachecapacity.",
+      "classification": "ENGINEERING_ASSUMPTION",
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "range": [
+        "LRU",
+        "pseudo-LRU",
+        "random"
+      ],
+      "scope": "Provisional GEMM-path simulation baseline. Preserve the stated evidence limits; unsupported structure or timing is an engineering choice, not an identified RTX5090 property.",
+      "source_profile": "discovery_rounds/provisional_memory_profile.json",
+      "physical_identification_status": "unidentified"
+    },
+    {
+      "id": "F070",
+      "name": "L2 write policy",
+      "component": "L2 cache",
+      "proof_registry_status": "partially_identified",
+      "baseline": "Write-back/write-allocate; dirty eviction issues DRAM write",
+      "plausible_range_or_alternatives": [
+        "write-back/write-allocate",
+        "write-back/no-write-allocate",
+        "write-through"
+      ],
+      "unit": "write policy",
+      "confidence": "low",
+      "basis": "Official triage documents dirty eviction and delayed DRAM stores; physical allocation and acknowledgment details remain assumptions.",
+      "classification": "ENGINEERING_ASSUMPTION",
+      "preserved_stronger_evidence": "Default st.wb requests write-back at coherent levels; st.wt has documented system-memory scope. These are performance hints, not identification of physical allocation, eviction or acknowledgement rules.",
+      "existing_evidence": {
+        "round": "source_sweep_002",
+        "kind": "official_documentation",
+        "url": "https://docs.nvidia.com/cuda/parallel-thread-execution/index.html#cache-operators"
+      },
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "range": [
+        "write-back/write-allocate",
+        "write-back/no-write-allocate",
+        "write-through"
+      ],
+      "scope": "Provisional GEMM-path simulation baseline. Preserve the stated evidence limits; unsupported structure or timing is an engineering choice, not an identified RTX5090 property.",
+      "source_profile": "discovery_rounds/provisional_memory_profile.json",
+      "physical_identification_status": "partially_identified"
+    },
+    {
+      "id": "F071",
+      "name": "L2 pending-miss capacity",
+      "component": "L2 cache",
+      "proof_registry_status": "unidentified",
+      "baseline": 128,
+      "plausible_range_or_alternatives": [
+        32,
+        512
+      ],
+      "unit": "pending distinct misses/L2 slice",
+      "confidence": "low",
+      "basis": "Engineering baseline for an executable sensitivity study; not measured or identified.",
+      "classification": "ENGINEERING_ASSUMPTION",
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "range": [
+        32,
+        512
+      ],
+      "scope": "Provisional GEMM-path simulation baseline. Preserve the stated evidence limits; unsupported structure or timing is an engineering choice, not an identified RTX5090 property.",
+      "source_profile": "discovery_rounds/provisional_memory_profile.json",
+      "physical_identification_status": "unidentified"
+    },
+    {
+      "id": "F072",
+      "name": "L2 pending-consumer merging rules",
+      "component": "L2 cache",
+      "proof_registry_status": "unidentified",
+      "baseline": "Merge requests to identical pending 32-byte sector; wake all registered consumers",
+      "plausible_range_or_alternatives": [
+        "sector merge",
+        "line merge",
+        "no merge"
+      ],
+      "unit": "merge policy",
+      "confidence": "low",
+      "basis": "Engineering baseline for an executable sensitivity study; not measured or identified.",
+      "classification": "ENGINEERING_ASSUMPTION",
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "range": [
+        "sector merge",
+        "line merge",
+        "no merge"
+      ],
+      "scope": "Provisional GEMM-path simulation baseline. Preserve the stated evidence limits; unsupported structure or timing is an engineering choice, not an identified RTX5090 property.",
+      "source_profile": "discovery_rounds/provisional_memory_profile.json",
+      "physical_identification_status": "unidentified"
+    },
+    {
+      "id": "F073",
+      "name": "L2 request queue capacity",
+      "component": "L2 cache",
+      "proof_registry_status": "unidentified",
+      "baseline": 64,
+      "plausible_range_or_alternatives": [
+        16,
+        256
+      ],
+      "unit": "request queue entries/L2 slice",
+      "confidence": "low",
+      "basis": "Engineering baseline for an executable sensitivity study; not measured or identified.",
+      "classification": "ENGINEERING_ASSUMPTION",
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "range": [
+        16,
+        256
+      ],
+      "scope": "Provisional GEMM-path simulation baseline. Preserve the stated evidence limits; unsupported structure or timing is an engineering choice, not an identified RTX5090 property.",
+      "source_profile": "discovery_rounds/provisional_memory_profile.json",
+      "physical_identification_status": "unidentified"
+    },
+    {
+      "id": "F074",
+      "name": "L2 fill/return queue capacities",
+      "component": "L2 cache",
+      "proof_registry_status": "unidentified",
+      "baseline": {
+        "fill_entries": 64,
+        "return_entries": 64
+      },
+      "plausible_range_or_alternatives": {
+        "fill_entries": [
+          16,
+          256
+        ],
+        "return_entries": [
+          16,
+          256
+        ]
+      },
+      "unit": "entries/L2 slice",
+      "confidence": "low",
+      "basis": "Engineering baseline for an executable sensitivity study; not measured or identified.",
+      "classification": "ENGINEERING_ASSUMPTION",
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "range": {
+        "fill_entries": [
+          16,
+          256
+        ],
+        "return_entries": [
+          16,
+          256
+        ]
+      },
+      "scope": "Provisional GEMM-path simulation baseline. Preserve the stated evidence limits; unsupported structure or timing is an engineering choice, not an identified RTX5090 property.",
+      "source_profile": "discovery_rounds/provisional_memory_profile.json",
+      "physical_identification_status": "unidentified"
+    },
+    {
+      "id": "F075",
+      "name": "Channel/bank organization",
+      "component": "GDDR7/controller",
+      "proof_registry_status": "partially_identified",
+      "baseline": {
+        "controllers": 16,
+        "bits_per_controller": 32,
+        "banks_per_controller": 16
+      },
+      "plausible_range_or_alternatives": {
+        "controllers": [
+          16
+        ],
+        "banks_per_controller": [
+          8,
+          16,
+          32
+        ]
+      },
+      "unit": "controllers; bits; banks",
+      "confidence": "low",
+      "basis": "16x32-bit controllers and512-bit interface documented; bank organization assumed.",
+      "classification": "ENGINEERING_ASSUMPTION",
+      "preserved_stronger_evidence": "Sixteen 32-bit memory controllers, 512-bit interface",
+      "existing_evidence": {
+        "round": "source_sweep_001",
+        "kind": "official_documentation",
+        "url": "https://images.nvidia.com/aem-dam/Solutions/geforce/blackwell/nvidia-rtx-blackwell-gpu-architecture.pdf#page=46"
+      },
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "range": {
+        "controllers": [
+          16
+        ],
+        "banks_per_controller": [
+          8,
+          16,
+          32
+        ]
+      },
+      "scope": "Provisional GEMM-path simulation baseline. Preserve the stated evidence limits; unsupported structure or timing is an engineering choice, not an identified RTX5090 property.",
+      "source_profile": "discovery_rounds/provisional_memory_profile.json",
+      "physical_identification_status": "partially_identified"
+    },
+    {
+      "id": "F076",
+      "name": "Address-to-channel/bank mapping",
+      "component": "GDDR7/controller",
+      "proof_registry_status": "unidentified",
+      "baseline": {
+        "channel": "(address//256)%16",
+        "bank": "(address//32768)%16",
+        "row": "address//524288",
+        "column": "(address%256)+256*((address//4096)%8)"
+      },
+      "plausible_range_or_alternatives": [
+        "256B interleave",
+        "128B interleave",
+        "XOR-hashed channel/bank"
+      ],
+      "unit": "address mapping",
+      "confidence": "low",
+      "basis": "Mapping is an executable placeholder; neither bus width nor profiler instance counts establish it. Corrected to give 2048 bytes per modeled bank row, consistent with F079. This address mapping remains an assumption.",
+      "classification": "ENGINEERING_ASSUMPTION",
+      "scope": "16 assumed controllers and16 assumed banks/controller; mapping must change jointly with row size, controller count or bank count.",
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "range": [
+        "256B interleave",
+        "128B interleave",
+        "XOR-hashed channel/bank"
+      ],
+      "source_profile": "discovery_rounds/provisional_memory_profile.json",
+      "physical_identification_status": "unidentified"
+    },
+    {
+      "id": "F077",
+      "name": "Controller queue capacities",
+      "component": "GDDR7/controller",
+      "proof_registry_status": "unidentified",
+      "baseline": {
+        "read_entries": 64,
+        "write_entries": 64
+      },
+      "plausible_range_or_alternatives": {
+        "read_entries": [
+          16,
+          256
+        ],
+        "write_entries": [
+          16,
+          256
+        ]
+      },
+      "unit": "queue entries/controller",
+      "confidence": "low",
+      "basis": "Engineering baseline for an executable sensitivity study; not measured or identified.",
+      "classification": "ENGINEERING_ASSUMPTION",
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "range": {
+        "read_entries": [
+          16,
+          256
+        ],
+        "write_entries": [
+          16,
+          256
+        ]
+      },
+      "scope": "Provisional GEMM-path simulation baseline. Preserve the stated evidence limits; unsupported structure or timing is an engineering choice, not an identified RTX5090 property.",
+      "source_profile": "discovery_rounds/provisional_memory_profile.json",
+      "physical_identification_status": "unidentified"
+    },
+    {
+      "id": "F078",
+      "name": "Controller arbitration policy",
+      "component": "GDDR7/controller",
+      "proof_registry_status": "unidentified",
+      "baseline": "FR-FCFS: ready row hits first, then oldest; fairness after64 selections",
+      "plausible_range_or_alternatives": [
+        "FIFO",
+        "FR-FCFS",
+        "round-robin"
+      ],
+      "unit": "arbitration policy",
+      "confidence": "low",
+      "basis": "Engineering baseline for an executable sensitivity study; not measured or identified.",
+      "classification": "ENGINEERING_ASSUMPTION",
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "range": [
+        "FIFO",
+        "FR-FCFS",
+        "round-robin"
+      ],
+      "scope": "Provisional GEMM-path simulation baseline. Preserve the stated evidence limits; unsupported structure or timing is an engineering choice, not an identified RTX5090 property.",
+      "source_profile": "discovery_rounds/provisional_memory_profile.json",
+      "physical_identification_status": "unidentified"
+    },
+    {
+      "id": "F079",
+      "name": "Row-state/command rules",
+      "component": "GDDR7/controller",
+      "proof_registry_status": "unidentified",
+      "baseline": {
+        "row_bytes": 2048,
+        "open_page": true,
+        "one_open_row_per_bank": true
+      },
+      "plausible_range_or_alternatives": {
+        "row_bytes": [
+          1024,
+          4096
+        ],
+        "page_policy": [
+          "open",
+          "closed",
+          "adaptive"
+        ]
+      },
+      "unit": "bytes/row; state rules",
+      "confidence": "low",
+      "basis": "Engineering baseline for an executable sensitivity study; not measured or identified.",
+      "classification": "ENGINEERING_ASSUMPTION",
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "range": {
+        "row_bytes": [
+          1024,
+          4096
+        ],
+        "page_policy": [
+          "open",
+          "closed",
+          "adaptive"
+        ]
+      },
+      "scope": "Provisional GEMM-path simulation baseline. Preserve the stated evidence limits; unsupported structure or timing is an engineering choice, not an identified RTX5090 property.",
+      "source_profile": "discovery_rounds/provisional_memory_profile.json",
+      "physical_identification_status": "unidentified"
+    },
+    {
+      "id": "F080",
+      "name": "Write handling policy",
+      "component": "GDDR7/controller",
+      "proof_registry_status": "unidentified",
+      "baseline": {
+        "write_buffer_entries": 64,
+        "drain_high_watermark": 48,
+        "drain_low_watermark": 16,
+        "merge_same_sector": true
+      },
+      "plausible_range_or_alternatives": {
+        "write_buffer_entries": [
+          16,
+          256
+        ],
+        "high_fraction": [
+          0.5,
+          0.9
+        ],
+        "low_fraction": [
+          0.1,
+          0.5
+        ]
+      },
+      "unit": "entries; controller write policy",
+      "confidence": "low",
+      "basis": "Controller-specific buffering/draining is unsupported. L2 dirty policy does not identify these values.",
+      "classification": "ENGINEERING_ASSUMPTION",
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "range": {
+        "write_buffer_entries": [
+          16,
+          256
+        ],
+        "high_fraction": [
+          0.5,
+          0.9
+        ],
+        "low_fraction": [
+          0.1,
+          0.5
+        ]
+      },
+      "scope": "Provisional GEMM-path simulation baseline. Preserve the stated evidence limits; unsupported structure or timing is an engineering choice, not an identified RTX5090 property.",
+      "source_profile": "discovery_rounds/provisional_memory_profile.json",
+      "physical_identification_status": "unidentified"
+    },
+    {
+      "id": "F081",
+      "name": "Barrier participant rules",
+      "baseline": {
+        "warp_size": 32,
+        "default_participants": "all live CTA threads",
+        "explicit_count_multiple": 32,
+        "barrier_slots": 16
+      },
+      "unit": "threads; named barrier slots",
+      "range": {
+        "explicit_count": [
+          32,
+          1024
+        ],
+        "barrier_id": [
+          0,
+          15
+        ]
+      },
+      "confidence": "high",
+      "basis_label": "KNOWN_SOURCE",
+      "basis": "PTX ordinary named CTA barrier semantics",
+      "scope": "No async or cluster barriers; model uses one arrival per participating warp representing its active participants.",
+      "source_profile": "provisional_sync_clock_profile.json",
+      "physical_identification_status": "identified"
+    },
+    {
+      "id": "F082",
+      "name": "Barrier generation rules",
+      "baseline": {
+        "generation_initial": 0,
+        "generation_increment": 1,
+        "release_when": "participant arrival count reaches configured count",
+        "reuse": "clear arrivals before accepting next generation"
+      },
+      "unit": "generation counter",
+      "range": {
+        "generation_counter_bits": [
+          32,
+          32
+        ]
+      },
+      "confidence": "mixed",
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "basis": "PTX completion/reuse is known; 32-bit model generation counter is an implementation choice",
+      "scope": "Do not interpret model counter width as hardware storage width; overlapping misuse rejected.",
+      "source_profile": "provisional_sync_clock_profile.json",
+      "physical_identification_status": "identified"
+    },
+    {
+      "id": "F083",
+      "name": "Barrier drain obligations",
+      "baseline": {
+        "release_requires": "all earlier participant shared/global operations complete at modeled visibility point",
+        "later_memory_issue": "blocked until release",
+        "universal_DRAM_writeback_required": false
+      },
+      "unit": "ordering rule",
+      "range": {
+        "participant_scope": "same CTA"
+      },
+      "confidence": "high",
+      "basis_label": "KNOWN_SOURCE",
+      "basis": "PTX bar.cta.sync participant-relative memory ordering",
+      "scope": "Model per-warp prior-operation counter; this is a conservative executable interpretation, not a discovered drain circuit.",
+      "source_profile": "provisional_sync_clock_profile.json",
+      "physical_identification_status": "identified"
+    },
+    {
+      "id": "F084",
+      "name": "Output-store acknowledgment semantics",
+      "baseline": {
+        "store_ack": "backing memory accepts and commits modeled store",
+        "pending_store_counter_bits": 16,
+        "thread_exit_waits_for_pending_stores": true
+      },
+      "unit": "completion rule",
+      "range": {
+        "pending_store_counter_bits": [
+          8,
+          32
+        ]
+      },
+      "confidence": "low",
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "basis": "No hardware store-acknowledgment point identified; conservative behavioral baseline",
+      "scope": "No claim actual GPU waits for physical DRAM commit; visibility may be established in cache.",
+      "source_profile": "provisional_sync_clock_profile.json",
+      "physical_identification_status": "unidentified"
+    },
+    {
+      "id": "F085",
+      "name": "Whole-grid completion rules",
+      "baseline": {
+        "grid_done": "all CTA threads exited and modeled pending stores returned",
+        "completion_collection": "central outstanding-CTA counter",
+        "stream_event_visible_after_grid_done": true
+      },
+      "unit": "completion rule",
+      "range": {
+        "counter_bits": [
+          16,
+          32
+        ]
+      },
+      "confidence": "mixed",
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "basis": "External CUDA stream/event completion contract known; central collector and store gate are provisional",
+      "scope": "Ordinary kernels only; no dynamic parallelism, clusters, or dependent-launch overlap.",
+      "source_profile": "provisional_sync_clock_profile.json",
+      "physical_identification_status": "partially_identified"
+    },
+    {
+      "id": "F086",
+      "name": "Clock-domain organization",
+      "baseline": {
+        "reference_SM_MHz": 2950,
+        "L1TEX_to_SM_rate_ratio": 1.0,
+        "LTS_to_SM_rate_ratio": 0.9020911965950098,
+        "globaltimer_reference": "documented nanosecond counter; target-specific"
+      },
+      "unit": "MHz; clock-rate ratios",
+      "range": {
+        "SM_MHz": [
+          180,
+          3090
+        ],
+        "LTS_to_SM_rate_ratio": [
+          0.5,
+          1.0
+        ]
+      },
+      "confidence": "medium",
+      "basis_label": "MEASURED",
+      "basis": "clock_domains and unit_clock_rates receipts; official counter semantics",
+      "scope": "Same-profile operating point SM=L1TEX=2011.50403938MHz, LTS=1814.56008584MHz. 2950MHz is a separate measured workload reference; ratios are not universal clock topology.",
+      "source_profile": "provisional_sync_clock_profile.json",
+      "physical_identification_status": "partially_identified"
+    },
+    {
+      "id": "F087",
+      "name": "Cross-domain transfer protocol",
+      "baseline": {
+        "protocol": "dual-clock ready/valid FIFO",
+        "depth": 4,
+        "synchronizer_stages": 2,
+        "ordering": "FIFO; no loss/duplication"
+      },
+      "unit": "entries; clock edges",
+      "range": {
+        "depth": [
+          2,
+          16
+        ],
+        "synchronizer_stages": [
+          2,
+          3
+        ]
+      },
+      "confidence": "low",
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "basis": "No private GPU CDC protocol observed; safe simulator baseline",
+      "scope": "Chosen asynchronous FIFO behavior, not inferred silicon circuitry.",
+      "source_profile": "provisional_sync_clock_profile.json",
+      "physical_identification_status": "unidentified"
+    },
+    {
+      "id": "T001",
+      "name": "Block admission delay",
+      "baseline": 32,
+      "unit": "SM cycles",
+      "sensitivity_range_or_alternatives": [
+        8,
+        256
+      ],
+      "classification": "ENGINEERING_ASSUMPTION",
+      "confidence": "low; unmeasured simulator starting choice",
+      "evidence_basis": {
+        "registry_status": "unidentified",
+        "basis": "engineering prior, selected for executable simulation; not hardware evidence"
+      },
+      "proof_registry_status_unchanged": "unidentified",
+      "identified_by_this_profile": false,
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "range": [
+        8,
+        256
+      ],
+      "basis": {
+        "registry_status": "unidentified",
+        "basis": "engineering prior, selected for executable simulation; not hardware evidence"
+      },
+      "scope": "Provisional GEMM-path simulation baseline. Preserve the stated evidence limits; unsupported structure or timing is an engineering choice, not an identified RTX5090 property.",
+      "source_profile": "discovery_rounds/provisional_execution_profile.json",
+      "physical_identification_status": "unidentified"
+    },
+    {
+      "id": "T002",
+      "name": "Dispatch delay",
+      "baseline": 4,
+      "unit": "SM cycles",
+      "sensitivity_range_or_alternatives": [
+        1,
+        32
+      ],
+      "classification": "ENGINEERING_ASSUMPTION",
+      "confidence": "low; unmeasured simulator starting choice",
+      "evidence_basis": {
+        "registry_status": "unidentified",
+        "basis": "engineering prior, selected for executable simulation; not hardware evidence"
+      },
+      "proof_registry_status_unchanged": "unidentified",
+      "identified_by_this_profile": false,
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "range": [
+        1,
+        32
+      ],
+      "basis": {
+        "registry_status": "unidentified",
+        "basis": "engineering prior, selected for executable simulation; not hardware evidence"
+      },
+      "scope": "Provisional GEMM-path simulation baseline. Preserve the stated evidence limits; unsupported structure or timing is an engineering choice, not an identified RTX5090 property.",
+      "source_profile": "discovery_rounds/provisional_execution_profile.json",
+      "physical_identification_status": "unidentified"
+    },
+    {
+      "id": "T003",
+      "name": "Allocation release delay",
+      "baseline": 8,
+      "unit": "SM cycles",
+      "sensitivity_range_or_alternatives": [
+        1,
+        64
+      ],
+      "classification": "ENGINEERING_ASSUMPTION",
+      "confidence": "low; unmeasured simulator starting choice",
+      "evidence_basis": {
+        "registry_status": "unidentified",
+        "basis": "engineering prior, selected for executable simulation; not hardware evidence"
+      },
+      "proof_registry_status_unchanged": "unidentified",
+      "identified_by_this_profile": false,
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "range": [
+        1,
+        64
+      ],
+      "basis": {
+        "registry_status": "unidentified",
+        "basis": "engineering prior, selected for executable simulation; not hardware evidence"
+      },
+      "scope": "Provisional GEMM-path simulation baseline. Preserve the stated evidence limits; unsupported structure or timing is an engineering choice, not an identified RTX5090 property.",
+      "source_profile": "discovery_rounds/provisional_execution_profile.json",
+      "physical_identification_status": "unidentified"
+    },
+    {
+      "id": "T004",
+      "name": "Instruction fetch latency",
+      "baseline": 4,
+      "unit": "SM cycles for instruction-cache hit",
+      "sensitivity_range_or_alternatives": [
+        1,
+        16
+      ],
+      "classification": "ENGINEERING_ASSUMPTION",
+      "confidence": "low; unmeasured simulator starting choice",
+      "evidence_basis": {
+        "registry_status": "unidentified",
+        "basis": "engineering prior, selected for executable simulation; not hardware evidence"
+      },
+      "proof_registry_status_unchanged": "unidentified",
+      "identified_by_this_profile": false,
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "range": [
+        1,
+        16
+      ],
+      "basis": {
+        "registry_status": "unidentified",
+        "basis": "engineering prior, selected for executable simulation; not hardware evidence"
+      },
+      "scope": "Provisional GEMM-path simulation baseline. Preserve the stated evidence limits; unsupported structure or timing is an engineering choice, not an identified RTX5090 property.",
+      "source_profile": "discovery_rounds/provisional_execution_profile.json",
+      "physical_identification_status": "unidentified"
+    },
+    {
+      "id": "T005",
+      "name": "Instruction fetch bandwidth",
+      "baseline": 1,
+      "unit": "16-byte native instructions per partition per SM cycle",
+      "sensitivity_range_or_alternatives": [
+        1,
+        2
+      ],
+      "classification": "ENGINEERING_ASSUMPTION",
+      "confidence": "low; unmeasured simulator starting choice",
+      "evidence_basis": {
+        "registry_status": "unidentified",
+        "basis": "engineering prior, selected for executable simulation; not hardware evidence"
+      },
+      "proof_registry_status_unchanged": "unidentified",
+      "identified_by_this_profile": false,
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "range": [
+        1,
+        2
+      ],
+      "basis": {
+        "registry_status": "unidentified",
+        "basis": "engineering prior, selected for executable simulation; not hardware evidence"
+      },
+      "scope": "Provisional GEMM-path simulation baseline. Preserve the stated evidence limits; unsupported structure or timing is an engineering choice, not an identified RTX5090 property.",
+      "source_profile": "discovery_rounds/provisional_execution_profile.json",
+      "physical_identification_status": "unidentified"
+    },
+    {
+      "id": "T006",
+      "name": "Decode delay",
+      "baseline": 1,
+      "unit": "SM cycles",
+      "sensitivity_range_or_alternatives": [
+        1,
+        4
+      ],
+      "classification": "ENGINEERING_ASSUMPTION",
+      "confidence": "low; unmeasured simulator starting choice",
+      "evidence_basis": {
+        "registry_status": "unidentified",
+        "basis": "engineering prior, selected for executable simulation; not hardware evidence"
+      },
+      "proof_registry_status_unchanged": "unidentified",
+      "identified_by_this_profile": false,
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "range": [
+        1,
+        4
+      ],
+      "basis": {
+        "registry_status": "unidentified",
+        "basis": "engineering prior, selected for executable simulation; not hardware evidence"
+      },
+      "scope": "Provisional GEMM-path simulation baseline. Preserve the stated evidence limits; unsupported structure or timing is an engineering choice, not an identified RTX5090 property.",
+      "source_profile": "discovery_rounds/provisional_execution_profile.json",
+      "physical_identification_status": "unidentified"
+    },
+    {
+      "id": "T007",
+      "name": "Instruction-class initiation intervals",
+      "baseline": {
+        "fp32_and_int32_add": 1,
+        "int32_mul_mad_and_shift": 2,
+        "tensor": 4,
+        "load": 1,
+        "store": 1,
+        "shuffle": 4,
+        "MOVM": "decoded issue controls and completion-dependent native barrier replay; no added4.8cycle throttle"
+      },
+      "unit": "SM cycles per warp instruction per partition",
+      "sensitivity_range_or_alternatives": {
+        "scalar": [
+          1,
+          2
+        ],
+        "tensor": [
+          2,
+          16
+        ],
+        "load": [
+          1,
+          4
+        ],
+        "store": [
+          1,
+          4
+        ],
+        "shuffle": [
+          4,
+          8
+        ],
+        "MOVM_effective": [
+          4,
+          8
+        ]
+      },
+      "classification": "ENGINEERING_ASSUMPTION",
+      "confidence": "low; unmeasured simulator starting choice",
+      "evidence_basis": {
+        "registry_status": "unidentified",
+        "basis": "engineering prior, selected for executable simulation; not hardware evidence"
+      },
+      "proof_registry_status_unchanged": "unidentified",
+      "identified_by_this_profile": false,
+      "scope": "Equal distribution of scalar service across four partitions is an assumption. Prefer aggregate SM service limits T015. Tensor4 duplicates T018 and must be charged once. MOVM achieved4.8cycles/op is not an initiation interval; do not combine it with validated dependency-barrier replay.",
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "range": {
+        "scalar": [
+          1,
+          2
+        ],
+        "tensor": [
+          2,
+          16
+        ],
+        "load": [
+          1,
+          4
+        ],
+        "store": [
+          1,
+          4
+        ],
+        "shuffle": [
+          4,
+          8
+        ],
+        "MOVM_effective": [
+          4,
+          8
+        ]
+      },
+      "basis": {
+        "registry_status": "unidentified",
+        "basis": "engineering prior, selected for executable simulation; not hardware evidence"
+      },
+      "source_profile": "discovery_rounds/provisional_execution_profile.json",
+      "physical_identification_status": "unidentified"
+    },
+    {
+      "id": "T008",
+      "name": "Dependency wakeup delay",
+      "baseline": 1,
+      "unit": "SM cycles after result ready",
+      "sensitivity_range_or_alternatives": [
+        0,
+        2
+      ],
+      "classification": "ENGINEERING_ASSUMPTION",
+      "confidence": "low; unmeasured simulator starting choice",
+      "evidence_basis": {
+        "registry_status": "unidentified",
+        "basis": "engineering prior, selected for executable simulation; not hardware evidence"
+      },
+      "proof_registry_status_unchanged": "unidentified",
+      "identified_by_this_profile": false,
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "range": [
+        0,
+        2
+      ],
+      "basis": {
+        "registry_status": "unidentified",
+        "basis": "engineering prior, selected for executable simulation; not hardware evidence"
+      },
+      "scope": "Provisional GEMM-path simulation baseline. Preserve the stated evidence limits; unsupported structure or timing is an engineering choice, not an identified RTX5090 property.",
+      "source_profile": "discovery_rounds/provisional_execution_profile.json",
+      "physical_identification_status": "unidentified"
+    },
+    {
+      "id": "T009",
+      "name": "Register read latency",
+      "baseline": 1,
+      "unit": "SM cycles",
+      "sensitivity_range_or_alternatives": [
+        1,
+        3
+      ],
+      "classification": "ENGINEERING_ASSUMPTION",
+      "confidence": "low; unmeasured simulator starting choice",
+      "evidence_basis": {
+        "registry_status": "unidentified",
+        "basis": "engineering prior, selected for executable simulation; not hardware evidence"
+      },
+      "proof_registry_status_unchanged": "unidentified",
+      "identified_by_this_profile": false,
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "range": [
+        1,
+        3
+      ],
+      "basis": {
+        "registry_status": "unidentified",
+        "basis": "engineering prior, selected for executable simulation; not hardware evidence"
+      },
+      "scope": "Provisional GEMM-path simulation baseline. Preserve the stated evidence limits; unsupported structure or timing is an engineering choice, not an identified RTX5090 property.",
+      "source_profile": "discovery_rounds/provisional_execution_profile.json",
+      "physical_identification_status": "unidentified"
+    },
+    {
+      "id": "T010",
+      "name": "Register write latency",
+      "baseline": 1,
+      "unit": "SM cycles",
+      "sensitivity_range_or_alternatives": [
+        1,
+        3
+      ],
+      "classification": "ENGINEERING_ASSUMPTION",
+      "confidence": "low; unmeasured simulator starting choice",
+      "evidence_basis": {
+        "registry_status": "unidentified",
+        "basis": "engineering prior, selected for executable simulation; not hardware evidence"
+      },
+      "proof_registry_status_unchanged": "unidentified",
+      "identified_by_this_profile": false,
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "range": [
+        1,
+        3
+      ],
+      "basis": {
+        "registry_status": "unidentified",
+        "basis": "engineering prior, selected for executable simulation; not hardware evidence"
+      },
+      "scope": "Provisional GEMM-path simulation baseline. Preserve the stated evidence limits; unsupported structure or timing is an engineering choice, not an identified RTX5090 property.",
+      "source_profile": "discovery_rounds/provisional_execution_profile.json",
+      "physical_identification_status": "unidentified"
+    },
+    {
+      "id": "T011",
+      "name": "Operand collection delay",
+      "baseline": 1,
+      "unit": "SM cycles plus serialized bank conflicts",
+      "sensitivity_range_or_alternatives": [
+        0,
+        4
+      ],
+      "classification": "ENGINEERING_ASSUMPTION",
+      "confidence": "low; unmeasured simulator starting choice",
+      "evidence_basis": {
+        "registry_status": "unidentified",
+        "basis": "engineering prior, selected for executable simulation; not hardware evidence"
+      },
+      "proof_registry_status_unchanged": "unidentified",
+      "identified_by_this_profile": false,
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "range": [
+        0,
+        4
+      ],
+      "basis": {
+        "registry_status": "unidentified",
+        "basis": "engineering prior, selected for executable simulation; not hardware evidence"
+      },
+      "scope": "Provisional GEMM-path simulation baseline. Preserve the stated evidence limits; unsupported structure or timing is an engineering choice, not an identified RTX5090 property.",
+      "source_profile": "discovery_rounds/provisional_execution_profile.json",
+      "physical_identification_status": "unidentified"
+    },
+    {
+      "id": "T012",
+      "name": "Bypass delay",
+      "baseline": 0,
+      "unit": "additional SM cycles for supported bypass",
+      "sensitivity_range_or_alternatives": [
+        0,
+        2
+      ],
+      "classification": "ENGINEERING_ASSUMPTION",
+      "confidence": "low; unmeasured simulator starting choice",
+      "evidence_basis": {
+        "registry_status": "unidentified",
+        "basis": "engineering prior, selected for executable simulation; not hardware evidence"
+      },
+      "proof_registry_status_unchanged": "unidentified",
+      "identified_by_this_profile": false,
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "range": [
+        0,
+        2
+      ],
+      "basis": {
+        "registry_status": "unidentified",
+        "basis": "engineering prior, selected for executable simulation; not hardware evidence"
+      },
+      "scope": "Provisional GEMM-path simulation baseline. Preserve the stated evidence limits; unsupported structure or timing is an engineering choice, not an identified RTX5090 property.",
+      "source_profile": "discovery_rounds/provisional_execution_profile.json",
+      "physical_identification_status": "unidentified"
+    },
+    {
+      "id": "T013",
+      "name": "Writeback service rate",
+      "baseline": 1,
+      "unit": "warp destination register vectors per partition per SM cycle",
+      "sensitivity_range_or_alternatives": [
+        1,
+        2
+      ],
+      "classification": "ENGINEERING_ASSUMPTION",
+      "confidence": "low; unmeasured simulator starting choice",
+      "evidence_basis": {
+        "registry_status": "unidentified",
+        "basis": "engineering prior, selected for executable simulation; not hardware evidence"
+      },
+      "proof_registry_status_unchanged": "unidentified",
+      "identified_by_this_profile": false,
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "range": [
+        1,
+        2
+      ],
+      "basis": {
+        "registry_status": "unidentified",
+        "basis": "engineering prior, selected for executable simulation; not hardware evidence"
+      },
+      "scope": "Provisional GEMM-path simulation baseline. Preserve the stated evidence limits; unsupported structure or timing is an engineering choice, not an identified RTX5090 property.",
+      "source_profile": "discovery_rounds/provisional_execution_profile.json",
+      "physical_identification_status": "unidentified"
+    },
+    {
+      "id": "T014",
+      "name": "Instruction-class result latencies",
+      "baseline": {
+        "FADD": 4,
+        "FFMA": 4,
+        "SHF": 4,
+        "SHFL": 29
+      },
+      "unit": "effective dependent SM cycles",
+      "sensitivity_range_or_alternatives": {
+        "FADD": [
+          4,
+          4.1
+        ],
+        "FFMA": [
+          4,
+          4.1
+        ],
+        "SHF": [
+          4,
+          4.1
+        ],
+        "SHFL": [
+          29,
+          30
+        ]
+      },
+      "classification": "EVIDENCE_SUPPORTED_SCOPED_BASELINE",
+      "confidence": "medium within stated supported family",
+      "evidence_basis": {
+        "path": "parameter_sweep/scalar_execution/parameter_updates.json",
+        "kind": "hardware"
+      },
+      "proof_registry_status_unchanged": "partially_identified",
+      "identified_by_this_profile": false,
+      "existing_registry_value": {
+        "FADD_dependent_asymptotic_cycles": 4.001139322916667,
+        "FFMA_dependent_asymptotic_cycles": 4.000651041666667,
+        "SHF_dependent_asymptotic_cycles": 4.00048828125,
+        "SHFL_dependent_asymptotic_cycles": 29.000162760416668
+      },
+      "scope": "Measured dependent instruction sequence, scoped to saved benchmark. In effective dependency mode this is issue-to-next-dependent-issue recurrence; do not add T008-T012 or fixed writeback drain to it. In decomposed mode use this observation only as a validation target, not an added latency.",
+      "basis_label": "MEASURED",
+      "range": {
+        "FADD": [
+          4,
+          4.1
+        ],
+        "FFMA": [
+          4,
+          4.1
+        ],
+        "SHF": [
+          4,
+          4.1
+        ],
+        "SHFL": [
+          29,
+          30
+        ]
+      },
+      "basis": {
+        "path": "parameter_sweep/scalar_execution/parameter_updates.json",
+        "kind": "hardware"
+      },
+      "source_profile": "discovery_rounds/provisional_execution_profile.json",
+      "physical_identification_status": "partially_identified"
+    },
+    {
+      "id": "T015",
+      "name": "Instruction-class initiation intervals",
+      "baseline": {
+        "fp32_add_mul_fma": 128,
+        "int32_add_sub": 128,
+        "int32_mul_mad": 64,
+        "int32_shift": 64,
+        "warp_shuffle": 32
+      },
+      "unit": "maximum scalar results per SM clock cycle",
+      "sensitivity_range_or_alternatives": {
+        "basis": "official cc12 throughput; convert warp instruction demand by 32 lanes"
+      },
+      "classification": "EVIDENCE_SUPPORTED_SCOPED_BASELINE",
+      "confidence": "medium within stated supported family",
+      "evidence_basis": {
+        "url": "https://docs.nvidia.com/cuda/cuda-c-best-practices-guide/index.html#arithmetic-instructions-throughput-native-arithmetic-instructions",
+        "round": "source_sweep_005",
+        "kind": "official_documentation"
+      },
+      "proof_registry_status_unchanged": "partially_identified",
+      "identified_by_this_profile": false,
+      "existing_registry_value": {
+        "unit": "maximum scalar results per SM clock cycle",
+        "cc": "12.0/12.1",
+        "fp32_add_mul_fma": 128,
+        "int32_add_sub": 128,
+        "int32_mul_mad": 64,
+        "int32_shift": 64,
+        "warp_shuffle_converged": 32
+      },
+      "basis_label": "KNOWN_SOURCE",
+      "range": {
+        "basis": "official cc12 throughput; convert warp instruction demand by 32 lanes"
+      },
+      "basis": {
+        "url": "https://docs.nvidia.com/cuda/cuda-c-best-practices-guide/index.html#arithmetic-instructions-throughput-native-arithmetic-instructions",
+        "round": "source_sweep_005",
+        "kind": "official_documentation"
+      },
+      "scope": "Provisional GEMM-path simulation baseline. Preserve the stated evidence limits; unsupported structure or timing is an engineering choice, not an identified RTX5090 property.",
+      "source_profile": "discovery_rounds/provisional_execution_profile.json",
+      "physical_identification_status": "partially_identified"
+    },
+    {
+      "id": "T016",
+      "name": "Register rearrangement delay",
+      "baseline": 29,
+      "unit": "effective dependent MOVM SM cycles",
+      "sensitivity_range_or_alternatives": [
+        28.9,
+        30.3
+      ],
+      "classification": "EVIDENCE_SUPPORTED_SCOPED_BASELINE",
+      "confidence": "medium within stated supported family",
+      "evidence_basis": {
+        "path": "discovery_rounds/movm_timing_012/model_update.json",
+        "kind": "hardware_and_nativeinspection"
+      },
+      "proof_registry_status_unchanged": "partially_identified",
+      "identified_by_this_profile": false,
+      "existing_registry_value": {
+        "dependent_compound_cycles_per_op": 28.98828125,
+        "four_chain_achieved_average_cycles_per_op": 7.25244140625,
+        "eight_chain_achieved_average_cycles_per_op": 4.823486328125,
+        "not_intrinsic_latency": true
+      },
+      "supporting_receipts": [
+        "discovery_rounds/movm_timing_012",
+        "discovery_rounds/native_barrier_015",
+        "discovery_rounds/movm_validation_016"
+      ],
+      "scope": "29-cycle effective recurrence plus decoded control validated on five/seven chain cases; not bare hardware latency In effective dependency mode this is issue-to-next-dependent-issue recurrence; do not add T008-T012 or fixed writeback drain to it. In decomposed mode use this observation only as a validation target, not an added latency.",
+      "basis_label": "MEASURED",
+      "range": [
+        28.9,
+        30.3
+      ],
+      "basis": {
+        "path": "discovery_rounds/movm_timing_012/model_update.json",
+        "kind": "hardware_and_nativeinspection"
+      },
+      "source_profile": "discovery_rounds/provisional_execution_profile.json",
+      "physical_identification_status": "partially_identified"
+    },
+    {
+      "id": "T017",
+      "name": "Native matrix result latency",
+      "baseline": 16,
+      "unit": "SM cycles for supported HMMA result",
+      "sensitivity_range_or_alternatives": [
+        8,
+        32
+      ],
+      "classification": "ENGINEERING_ASSUMPTION",
+      "confidence": "low; unmeasured simulator starting choice",
+      "evidence_basis": {
+        "registry_status": "unidentified",
+        "basis": "engineering prior, selected for executable simulation; not hardware evidence"
+      },
+      "proof_registry_status_unchanged": "unidentified",
+      "identified_by_this_profile": false,
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "range": [
+        8,
+        32
+      ],
+      "basis": {
+        "registry_status": "unidentified",
+        "basis": "engineering prior, selected for executable simulation; not hardware evidence"
+      },
+      "scope": "Provisional GEMM-path simulation baseline. Preserve the stated evidence limits; unsupported structure or timing is an engineering choice, not an identified RTX5090 property.",
+      "source_profile": "discovery_rounds/provisional_execution_profile.json",
+      "physical_identification_status": "unidentified"
+    },
+    {
+      "id": "T018",
+      "name": "Native matrix initiation interval",
+      "baseline": 4,
+      "unit": "SM cycles per HMMA instruction per partition",
+      "sensitivity_range_or_alternatives": [
+        2,
+        16
+      ],
+      "classification": "ENGINEERING_ASSUMPTION",
+      "confidence": "low; unmeasured simulator starting choice",
+      "evidence_basis": {
+        "registry_status": "unidentified",
+        "basis": "engineering prior, selected for executable simulation; not hardware evidence"
+      },
+      "proof_registry_status_unchanged": "unidentified",
+      "identified_by_this_profile": false,
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "range": [
+        2,
+        16
+      ],
+      "basis": {
+        "registry_status": "unidentified",
+        "basis": "engineering prior, selected for executable simulation; not hardware evidence"
+      },
+      "scope": "Provisional GEMM-path simulation baseline. Preserve the stated evidence limits; unsupported structure or timing is an engineering choice, not an identified RTX5090 property.",
+      "source_profile": "discovery_rounds/provisional_execution_profile.json",
+      "physical_identification_status": "unidentified"
+    },
+    {
+      "id": "T019",
+      "name": "Matrix result delivery bandwidth",
+      "baseline": 4,
+      "unit": "32-bit result words per lane per partition per SM cycle",
+      "sensitivity_range_or_alternatives": [
+        1,
+        8
+      ],
+      "classification": "ENGINEERING_ASSUMPTION",
+      "confidence": "low; unmeasured simulator starting choice",
+      "evidence_basis": {
+        "registry_status": "unidentified",
+        "basis": "engineering prior, selected for executable simulation; not hardware evidence"
+      },
+      "proof_registry_status_unchanged": "unidentified",
+      "identified_by_this_profile": false,
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "range": [
+        1,
+        8
+      ],
+      "basis": {
+        "registry_status": "unidentified",
+        "basis": "engineering prior, selected for executable simulation; not hardware evidence"
+      },
+      "scope": "Provisional GEMM-path simulation baseline. Preserve the stated evidence limits; unsupported structure or timing is an engineering choice, not an identified RTX5090 property.",
+      "source_profile": "discovery_rounds/provisional_execution_profile.json",
+      "physical_identification_status": "unidentified"
+    },
+    {
+      "id": "T020",
+      "name": "Load issue service rate",
+      "baseline": 1,
+      "unit": "warp load instructions per partition per SM cycle",
+      "sensitivity_range_or_alternatives": [
+        0.25,
+        1
+      ],
+      "classification": "ENGINEERING_ASSUMPTION",
+      "confidence": "low; unmeasured simulator starting choice",
+      "evidence_basis": {
+        "path": "parameter_sweep/ldsm_service/timing_validation_analysis.json",
+        "round": "hardware_sweep_005",
+        "kind": "six_fresh_frozen_timing_predictions"
+      },
+      "proof_registry_status_unchanged": "partially_identified",
+      "identified_by_this_profile": false,
+      "existing_registry_value": {
+        "additional_conflict_cycles_per_extra_package": 2,
+        "clock_domain": "SM cycles"
+      },
+      "measured_supported_increment": {
+        "cycles_per_extra_LDSM_service_package": 2,
+        "scope": "supported isolated LDSM path only; not baseline generic LSU issue rate"
+      },
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "range": [
+        0.25,
+        1
+      ],
+      "basis": {
+        "path": "parameter_sweep/ldsm_service/timing_validation_analysis.json",
+        "round": "hardware_sweep_005",
+        "kind": "six_fresh_frozen_timing_predictions"
+      },
+      "scope": "Provisional GEMM-path simulation baseline. Preserve the stated evidence limits; unsupported structure or timing is an engineering choice, not an identified RTX5090 property.",
+      "source_profile": "discovery_rounds/provisional_execution_profile.json",
+      "physical_identification_status": "partially_identified"
+    },
+    {
+      "id": "T021",
+      "name": "Store issue service rate",
+      "baseline": 1,
+      "unit": "warp store instructions per partition per SM cycle",
+      "sensitivity_range_or_alternatives": [
+        0.25,
+        1
+      ],
+      "classification": "ENGINEERING_ASSUMPTION",
+      "confidence": "low; unmeasured simulator starting choice",
+      "evidence_basis": {
+        "registry_status": "unidentified",
+        "basis": "engineering prior, selected for executable simulation; not hardware evidence"
+      },
+      "proof_registry_status_unchanged": "unidentified",
+      "identified_by_this_profile": false,
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "range": [
+        0.25,
+        1
+      ],
+      "basis": {
+        "registry_status": "unidentified",
+        "basis": "engineering prior, selected for executable simulation; not hardware evidence"
+      },
+      "scope": "Provisional GEMM-path simulation baseline. Preserve the stated evidence limits; unsupported structure or timing is an engineering choice, not an identified RTX5090 property.",
+      "source_profile": "discovery_rounds/provisional_execution_profile.json",
+      "physical_identification_status": "unidentified"
+    },
+    {
+      "id": "T022",
+      "name": "Return bandwidth",
+      "baseline": 128,
+      "unit": "return bytes per partition per SM cycle",
+      "sensitivity_range_or_alternatives": [
+        32,
+        256
+      ],
+      "classification": "ENGINEERING_ASSUMPTION",
+      "confidence": "low; unmeasured simulator starting choice",
+      "evidence_basis": {
+        "registry_status": "unidentified",
+        "basis": "engineering prior, selected for executable simulation; not hardware evidence"
+      },
+      "proof_registry_status_unchanged": "unidentified",
+      "identified_by_this_profile": false,
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "range": [
+        32,
+        256
+      ],
+      "basis": {
+        "registry_status": "unidentified",
+        "basis": "engineering prior, selected for executable simulation; not hardware evidence"
+      },
+      "scope": "Provisional GEMM-path simulation baseline. Preserve the stated evidence limits; unsupported structure or timing is an engineering choice, not an identified RTX5090 property.",
+      "source_profile": "discovery_rounds/provisional_execution_profile.json",
+      "physical_identification_status": "unidentified"
+    },
+    {
+      "id": "T023",
+      "name": "Store visibility/completion delay",
+      "baseline": 32,
+      "unit": "SM cycles to shared-store visibility; global modeled by memory service completion",
+      "sensitivity_range_or_alternatives": [
+        4,
+        128
+      ],
+      "classification": "ENGINEERING_ASSUMPTION",
+      "confidence": "low; unmeasured simulator starting choice",
+      "evidence_basis": {
+        "registry_status": "unidentified",
+        "basis": "engineering prior, selected for executable simulation; not hardware evidence"
+      },
+      "proof_registry_status_unchanged": "unidentified",
+      "identified_by_this_profile": false,
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "range": [
+        4,
+        128
+      ],
+      "basis": {
+        "registry_status": "unidentified",
+        "basis": "engineering prior, selected for executable simulation; not hardware evidence"
+      },
+      "scope": "Provisional GEMM-path simulation baseline. Preserve the stated evidence limits; unsupported structure or timing is an engineering choice, not an identified RTX5090 property.",
+      "source_profile": "discovery_rounds/provisional_execution_profile.json",
+      "physical_identification_status": "unidentified"
+    },
+    {
+      "id": "T024",
+      "name": "Translation hit delay",
+      "component": "Address translation",
+      "proof_registry_status": "unidentified",
+      "baseline": 4,
+      "plausible_range_or_alternatives": [
+        1,
+        20
+      ],
+      "unit": "SM-reference cycles",
+      "confidence": "low",
+      "basis": "Translation cache-hit delay. ENGINEERING_ASSUMPTION; sweep this range, not a confidence interval.",
+      "classification": "ENGINEERING_ASSUMPTION",
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "range": [
+        1,
+        20
+      ],
+      "scope": "Provisional GEMM-path simulation baseline. Preserve the stated evidence limits; unsupported structure or timing is an engineering choice, not an identified RTX5090 property.",
+      "source_profile": "discovery_rounds/provisional_memory_profile.json",
+      "physical_identification_status": "unidentified"
+    },
+    {
+      "id": "T025",
+      "name": "Translation miss processing delay",
+      "component": "Address translation",
+      "proof_registry_status": "unidentified",
+      "baseline": 40,
+      "plausible_range_or_alternatives": [
+        10,
+        200
+      ],
+      "unit": "SM-reference cycles",
+      "confidence": "low",
+      "basis": "Miss dispatch/processing overhead excludes page walk. ENGINEERING_ASSUMPTION; sweep this range, not a confidence interval.",
+      "classification": "ENGINEERING_ASSUMPTION",
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "range": [
+        10,
+        200
+      ],
+      "scope": "Provisional GEMM-path simulation baseline. Preserve the stated evidence limits; unsupported structure or timing is an engineering choice, not an identified RTX5090 property.",
+      "source_profile": "discovery_rounds/provisional_memory_profile.json",
+      "physical_identification_status": "unidentified"
+    },
+    {
+      "id": "T026",
+      "name": "Page-walk delay",
+      "component": "Address translation",
+      "proof_registry_status": "unidentified",
+      "baseline": 600,
+      "plausible_range_or_alternatives": [
+        100,
+        3000
+      ],
+      "unit": "SM-reference cycles",
+      "confidence": "low",
+      "basis": "Page-walk service delay beyond miss processing. ENGINEERING_ASSUMPTION; sweep this range, not a confidence interval.",
+      "classification": "ENGINEERING_ASSUMPTION",
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "range": [
+        100,
+        3000
+      ],
+      "scope": "Provisional GEMM-path simulation baseline. Preserve the stated evidence limits; unsupported structure or timing is an engineering choice, not an identified RTX5090 property.",
+      "source_profile": "discovery_rounds/provisional_memory_profile.json",
+      "physical_identification_status": "unidentified"
+    },
+    {
+      "id": "T027",
+      "name": "Shared read response latency",
+      "component": "Shared memory",
+      "proof_registry_status": "partially_identified",
+      "baseline": 24,
+      "plausible_range_or_alternatives": [
+        16,
+        28
+      ],
+      "unit": "SM-reference cycles",
+      "confidence": "low",
+      "basis": "Intrinsic shared response assumed; measured dependent chain28 includes wakeup. ENGINEERING_ASSUMPTION; sweep this range, not a confidence interval.",
+      "classification": "ENGINEERING_ASSUMPTION",
+      "preserved_stronger_evidence": "Conflict-free LDS dependent loop slope is 34 SM cycles per iteration at both measured length intervals; includes LEA and loop/control scheduling",
+      "existing_evidence": {
+        "round": "hardware_sweep_001",
+        "kind": "measured_compound_path",
+        "path": "parameter_sweep/analysis.json"
+      },
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "range": [
+        16,
+        28
+      ],
+      "scope": "Provisional GEMM-path simulation baseline. Preserve the stated evidence limits; unsupported structure or timing is an engineering choice, not an identified RTX5090 property.",
+      "source_profile": "discovery_rounds/provisional_memory_profile.json",
+      "physical_identification_status": "partially_identified"
+    },
+    {
+      "id": "T028",
+      "name": "Shared write response latency",
+      "component": "Shared memory",
+      "proof_registry_status": "unidentified",
+      "baseline": 12,
+      "plausible_range_or_alternatives": [
+        4,
+        32
+      ],
+      "unit": "SM-reference cycles",
+      "confidence": "low",
+      "basis": "Shared write acceptance-to-service completion, not global visibility. ENGINEERING_ASSUMPTION; sweep this range, not a confidence interval.",
+      "classification": "ENGINEERING_ASSUMPTION",
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "range": [
+        4,
+        32
+      ],
+      "scope": "Provisional GEMM-path simulation baseline. Preserve the stated evidence limits; unsupported structure or timing is an engineering choice, not an identified RTX5090 property.",
+      "source_profile": "discovery_rounds/provisional_memory_profile.json",
+      "physical_identification_status": "unidentified"
+    },
+    {
+      "id": "T029",
+      "name": "Broadcast delay",
+      "component": "Shared memory",
+      "proof_registry_status": "unidentified",
+      "baseline": 0,
+      "plausible_range_or_alternatives": [
+        0,
+        4
+      ],
+      "unit": "SM-reference cycles",
+      "confidence": "low",
+      "basis": "Additional broadcast delay beyond ordinary shared service. ENGINEERING_ASSUMPTION; sweep this range, not a confidence interval.",
+      "classification": "ENGINEERING_ASSUMPTION",
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "range": [
+        0,
+        4
+      ],
+      "scope": "Provisional GEMM-path simulation baseline. Preserve the stated evidence limits; unsupported structure or timing is an engineering choice, not an identified RTX5090 property.",
+      "source_profile": "discovery_rounds/provisional_memory_profile.json",
+      "physical_identification_status": "unidentified"
+    },
+    {
+      "id": "T030",
+      "name": "Shared-to-operand transfer delay",
+      "component": "Shared memory",
+      "proof_registry_status": "unidentified",
+      "baseline": 4,
+      "plausible_range_or_alternatives": [
+        1,
+        16
+      ],
+      "unit": "SM-reference cycles",
+      "confidence": "low",
+      "basis": "Shared result to operand-consumer availability. ENGINEERING_ASSUMPTION; sweep this range, not a confidence interval.",
+      "classification": "ENGINEERING_ASSUMPTION",
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "range": [
+        1,
+        16
+      ],
+      "scope": "Provisional GEMM-path simulation baseline. Preserve the stated evidence limits; unsupported structure or timing is an engineering choice, not an identified RTX5090 property.",
+      "source_profile": "discovery_rounds/provisional_memory_profile.json",
+      "physical_identification_status": "unidentified"
+    },
+    {
+      "id": "T031",
+      "name": "L1 read-hit latency",
+      "component": "L1 cache",
+      "proof_registry_status": "partially_identified",
+      "baseline": 32,
+      "plausible_range_or_alternatives": [
+        20,
+        43
+      ],
+      "unit": "SM-reference cycles",
+      "confidence": "low",
+      "basis": "Intrinsic L1 hit assumed; compound chain43.19 includes other costs. ENGINEERING_ASSUMPTION; sweep this range, not a confidence interval.",
+      "classification": "ENGINEERING_ASSUMPTION",
+      "preserved_stronger_evidence": {
+        "compound_dependency_cycles": 43.194661458333336,
+        "clock_domain": "SMclock64",
+        "not_intrinsic_cache_latency": true
+      },
+      "existing_evidence": {
+        "path": "parameter_sweep/cache_hit_fast/analysis.json",
+        "kind": "hardware"
+      },
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "range": [
+        20,
+        43
+      ],
+      "scope": "Provisional GEMM-path simulation baseline. Preserve the stated evidence limits; unsupported structure or timing is an engineering choice, not an identified RTX5090 property.",
+      "source_profile": "discovery_rounds/provisional_memory_profile.json",
+      "physical_identification_status": "partially_identified"
+    },
+    {
+      "id": "T032",
+      "name": "L1 write service latency",
+      "component": "L1 cache",
+      "proof_registry_status": "unidentified",
+      "baseline": 4,
+      "plausible_range_or_alternatives": [
+        1,
+        20
+      ],
+      "unit": "SM-reference cycles",
+      "confidence": "low",
+      "basis": "L1-path store acceptance/service, bypass still consumes resources. ENGINEERING_ASSUMPTION; sweep this range, not a confidence interval.",
+      "classification": "ENGINEERING_ASSUMPTION",
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "range": [
+        1,
+        20
+      ],
+      "scope": "Provisional GEMM-path simulation baseline. Preserve the stated evidence limits; unsupported structure or timing is an engineering choice, not an identified RTX5090 property.",
+      "source_profile": "discovery_rounds/provisional_memory_profile.json",
+      "physical_identification_status": "unidentified"
+    },
+    {
+      "id": "T033",
+      "name": "L1 service bandwidth",
+      "component": "L1 cache",
+      "proof_registry_status": "unidentified",
+      "baseline": 128,
+      "plausible_range_or_alternatives": [
+        32,
+        256
+      ],
+      "unit": "bytes/SM-reference cycle",
+      "confidence": "low",
+      "basis": "L1 bytes serviced per reference cycle. ENGINEERING_ASSUMPTION; sweep this range, not a confidence interval.",
+      "classification": "ENGINEERING_ASSUMPTION",
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "range": [
+        32,
+        256
+      ],
+      "scope": "Provisional GEMM-path simulation baseline. Preserve the stated evidence limits; unsupported structure or timing is an engineering choice, not an identified RTX5090 property.",
+      "source_profile": "discovery_rounds/provisional_memory_profile.json",
+      "physical_identification_status": "unidentified"
+    },
+    {
+      "id": "T034",
+      "name": "L1 refill transfer delay",
+      "component": "L1 cache",
+      "proof_registry_status": "unidentified",
+      "baseline": 40,
+      "plausible_range_or_alternatives": [
+        10,
+        160
+      ],
+      "unit": "SM-reference cycles",
+      "confidence": "low",
+      "basis": "L2-return to L1 fill transfer, excludes L2 lookup. ENGINEERING_ASSUMPTION; sweep this range, not a confidence interval.",
+      "classification": "ENGINEERING_ASSUMPTION",
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "range": [
+        10,
+        160
+      ],
+      "scope": "Provisional GEMM-path simulation baseline. Preserve the stated evidence limits; unsupported structure or timing is an engineering choice, not an identified RTX5090 property.",
+      "source_profile": "discovery_rounds/provisional_memory_profile.json",
+      "physical_identification_status": "unidentified"
+    },
+    {
+      "id": "T035",
+      "name": "L2 read-hit latency",
+      "component": "L2 cache",
+      "proof_registry_status": "partially_identified",
+      "baseline": 300,
+      "plausible_range_or_alternatives": [
+        150,
+        356
+      ],
+      "unit": "SM-reference cycles",
+      "confidence": "low",
+      "basis": "Intrinsic L2 response assumed; compound cg path356.48 includes other costs. ENGINEERING_ASSUMPTION; sweep this range, not a confidence interval.",
+      "classification": "ENGINEERING_ASSUMPTION",
+      "preserved_stronger_evidence": {
+        "compound_dependency_cycles": 356.47998046875,
+        "clock_domain": "SMclock64",
+        "not_intrinsic_cache_latency": true
+      },
+      "existing_evidence": {
+        "path": "parameter_sweep/cache_hit_fast/analysis.json",
+        "kind": "hardware"
+      },
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "range": [
+        150,
+        356
+      ],
+      "scope": "Provisional GEMM-path simulation baseline. Preserve the stated evidence limits; unsupported structure or timing is an engineering choice, not an identified RTX5090 property.",
+      "source_profile": "discovery_rounds/provisional_memory_profile.json",
+      "physical_identification_status": "partially_identified"
+    },
+    {
+      "id": "T036",
+      "name": "L2 write service latency",
+      "component": "L2 cache",
+      "proof_registry_status": "unidentified",
+      "baseline": 40,
+      "plausible_range_or_alternatives": [
+        10,
+        160
+      ],
+      "unit": "SM-reference cycles",
+      "confidence": "low",
+      "basis": "L2 store acceptance-to-cache update, not DRAM persistence. ENGINEERING_ASSUMPTION; sweep this range, not a confidence interval.",
+      "classification": "ENGINEERING_ASSUMPTION",
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "range": [
+        10,
+        160
+      ],
+      "scope": "Provisional GEMM-path simulation baseline. Preserve the stated evidence limits; unsupported structure or timing is an engineering choice, not an identified RTX5090 property.",
+      "source_profile": "discovery_rounds/provisional_memory_profile.json",
+      "physical_identification_status": "unidentified"
+    },
+    {
+      "id": "T037",
+      "name": "L2 service bandwidth per slice",
+      "component": "L2 cache",
+      "proof_registry_status": "unidentified",
+      "baseline": 16,
+      "plausible_range_or_alternatives": [
+        8,
+        64
+      ],
+      "unit": "bytes/SM-reference cycle",
+      "confidence": "low",
+      "basis": "L2 bytes serviced per slice per reference cycle. ENGINEERING_ASSUMPTION; sweep this range, not a confidence interval.",
+      "classification": "ENGINEERING_ASSUMPTION",
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "range": [
+        8,
+        64
+      ],
+      "scope": "Provisional GEMM-path simulation baseline. Preserve the stated evidence limits; unsupported structure or timing is an engineering choice, not an identified RTX5090 property.",
+      "source_profile": "discovery_rounds/provisional_memory_profile.json",
+      "physical_identification_status": "unidentified"
+    },
+    {
+      "id": "T038",
+      "name": "L2 return bandwidth",
+      "component": "L2 cache",
+      "proof_registry_status": "unidentified",
+      "baseline": 768,
+      "plausible_range_or_alternatives": [
+        256,
+        2048
+      ],
+      "unit": "bytes/SM-reference cycle",
+      "confidence": "low",
+      "basis": "Aggregate L2 return bytes per reference cycle. ENGINEERING_ASSUMPTION; sweep this range, not a confidence interval.",
+      "classification": "ENGINEERING_ASSUMPTION",
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "range": [
+        256,
+        2048
+      ],
+      "scope": "Provisional GEMM-path simulation baseline. Preserve the stated evidence limits; unsupported structure or timing is an engineering choice, not an identified RTX5090 property.",
+      "source_profile": "discovery_rounds/provisional_memory_profile.json",
+      "physical_identification_status": "unidentified"
+    },
+    {
+      "id": "T039",
+      "name": "Read command/response timing",
+      "component": "GDDR7/controller",
+      "proof_registry_status": "unidentified",
+      "baseline": 200,
+      "plausible_range_or_alternatives": [
+        80,
+        600
+      ],
+      "unit": "SM-reference cycles",
+      "confidence": "low",
+      "basis": "DRAM first-data response after command acceptance, assumes row miss average. ENGINEERING_ASSUMPTION; sweep this range, not a confidence interval.",
+      "classification": "ENGINEERING_ASSUMPTION",
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "range": [
+        80,
+        600
+      ],
+      "scope": "Provisional GEMM-path simulation baseline. Preserve the stated evidence limits; unsupported structure or timing is an engineering choice, not an identified RTX5090 property.",
+      "source_profile": "discovery_rounds/provisional_memory_profile.json",
+      "physical_identification_status": "unidentified"
+    },
+    {
+      "id": "T040",
+      "name": "Write command/response timing",
+      "component": "GDDR7/controller",
+      "proof_registry_status": "unidentified",
+      "baseline": 100,
+      "plausible_range_or_alternatives": [
+        40,
+        300
+      ],
+      "unit": "SM-reference cycles",
+      "confidence": "low",
+      "basis": "DRAM write service completion after acceptance; not cache acknowledgment. ENGINEERING_ASSUMPTION; sweep this range, not a confidence interval.",
+      "classification": "ENGINEERING_ASSUMPTION",
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "range": [
+        40,
+        300
+      ],
+      "scope": "Provisional GEMM-path simulation baseline. Preserve the stated evidence limits; unsupported structure or timing is an engineering choice, not an identified RTX5090 property.",
+      "source_profile": "discovery_rounds/provisional_memory_profile.json",
+      "physical_identification_status": "unidentified"
+    },
+    {
+      "id": "T041",
+      "name": "Read/write turnaround",
+      "component": "GDDR7/controller",
+      "proof_registry_status": "unidentified",
+      "baseline": 24,
+      "plausible_range_or_alternatives": [
+        8,
+        80
+      ],
+      "unit": "SM-reference cycles",
+      "confidence": "low",
+      "basis": "Read/write direction turnaround delay. ENGINEERING_ASSUMPTION; sweep this range, not a confidence interval.",
+      "classification": "ENGINEERING_ASSUMPTION",
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "range": [
+        8,
+        80
+      ],
+      "scope": "Provisional GEMM-path simulation baseline. Preserve the stated evidence limits; unsupported structure or timing is an engineering choice, not an identified RTX5090 property.",
+      "source_profile": "discovery_rounds/provisional_memory_profile.json",
+      "physical_identification_status": "unidentified"
+    },
+    {
+      "id": "T042",
+      "name": "Transfer service interval",
+      "component": "GDDR7/controller",
+      "proof_registry_status": "unidentified",
+      "baseline": 0.0525,
+      "plausible_range_or_alternatives": [
+        0.0525,
+        0.21
+      ],
+      "unit": "SM-reference cycles/32-byte sector, aggregate bus",
+      "confidence": "low",
+      "basis": "Aggregate transfer interval:2.94GHz/1.792TB/s=0.001640625cycles/byte, times32B. ENGINEERING_ASSUMPTION; sweep this range, not a confidence interval.",
+      "classification": "ENGINEERING_ASSUMPTION",
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "range": [
+        0.0525,
+        0.21
+      ],
+      "scope": "Provisional GEMM-path simulation baseline. Preserve the stated evidence limits; unsupported structure or timing is an engineering choice, not an identified RTX5090 property.",
+      "source_profile": "discovery_rounds/provisional_memory_profile.json",
+      "physical_identification_status": "unidentified"
+    },
+    {
+      "id": "T043",
+      "name": "Barrier arrival service rate",
+      "baseline": 1,
+      "unit": "warp arrivals per SM reference cycle",
+      "range": [
+        0.25,
+        4
+      ],
+      "confidence": "low",
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "basis": "No isolated arrival-throughput measurement; serial one-arrival baseline",
+      "scope": "Service one ready warp arrival each reference SM cycle; parameter remains adjustable.",
+      "source_profile": "provisional_sync_clock_profile.json",
+      "physical_identification_status": "unidentified"
+    },
+    {
+      "id": "T044",
+      "name": "Barrier release delay",
+      "baseline": 2,
+      "unit": "SM reference cycles after final accepted arrival",
+      "range": [
+        1,
+        32
+      ],
+      "confidence": "low",
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "basis": "No isolated release measurement; registered collect/release baseline",
+      "scope": "Excludes prior-memory completion and arrival service time.",
+      "source_profile": "provisional_sync_clock_profile.json",
+      "physical_identification_status": "unidentified"
+    },
+    {
+      "id": "T045",
+      "name": "Warp resume delay",
+      "baseline": 1,
+      "unit": "SM reference cycles from release to scheduler eligibility",
+      "range": [
+        0,
+        16
+      ],
+      "confidence": "low",
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "basis": "No isolated wakeup measurement; one registered eligibility update",
+      "scope": "Issue may still wait for scheduler/resource availability; this is not total post-barrier runtime.",
+      "source_profile": "provisional_sync_clock_profile.json",
+      "physical_identification_status": "unidentified"
+    },
+    {
+      "id": "T046",
+      "name": "Memory-domain frequencies",
+      "baseline": {
+        "reported_memory_MHz": 14001,
+        "reference_SM_MHz": 2950,
+        "same_profile_SM_MHz": 2011.50403938,
+        "same_profile_L1TEX_MHz": 2011.50403938,
+        "same_profile_LTS_MHz": 1814.56008584
+      },
+      "unit": "management-reported MHz; counter-derived MHz",
+      "range": {
+        "reported_supported_memory_MHz": [
+          405,
+          810,
+          7001,
+          13801,
+          14001
+        ],
+        "supported_SM_MHz": [
+          180,
+          3090
+        ]
+      },
+      "confidence": "medium",
+      "basis_label": "QUERY_AND_MEASURED",
+      "basis": "nvidia-smi supported clocks and same-profile unit cycle rates",
+      "scope": "No conversion of management memory MHz into GDDR7 command clock or data rate.",
+      "source_profile": "provisional_sync_clock_profile.json",
+      "physical_identification_status": "partially_identified"
+    },
+    {
+      "id": "T047",
+      "name": "Cross-domain transfer delay",
+      "baseline": {
+        "minimum_forward_latency": 2,
+        "minimum_return_latency": 2
+      },
+      "unit": "destination clock edges",
+      "range": {
+        "forward": [
+          2,
+          8
+        ],
+        "return": [
+          2,
+          8
+        ]
+      },
+      "confidence": "low",
+      "basis_label": "ENGINEERING_ASSUMPTION",
+      "basis": "Chosen two-stage CDC baseline; no transfer-delay measurement",
+      "scope": "Queueing adds delay separately; at equal clock rates empty round trip baseline is four cycles.",
+      "source_profile": "provisional_sync_clock_profile.json",
+      "physical_identification_status": "unidentified"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "l2_rtl_cycles": 3000,
+  "l2_fields_per_cycle": 25,
+  "l2_trace_match": true,
+  "geometry": {
+    "sms": 2,
+    "sets": 4,
+    "ways": 2,
+    "owners": 4,
+    "mshrs": 2,
+    "stride": 2
+  },
+  "global_credit_rtl_cycles": 2000,
+  "credit_sms": 170,
+  "credit_match": true,
+  "backing_slices": 48,
+  "backing_packets_accepted_returned": 1333,
+  "scope": "Cache metadata and admission policy match component RTL; not full GEMM GPU validation",
+  "sources": {
+    "l2_slice.hpp": "bd30c5aee458df9288f5397a1b3b0613abdd65e73bf390e0114777ea2ccd91cd",
+    "backing.hpp": "140d6929416127251dc8fb66a415e19ae418c43cc2657ec08a6776b5e6d37a55",
+    "l2_test.cpp": "e8ee61d3627621dc839da4dcd0cc8a2eb930ac1ee89a403eaf3040db6d930957",
+    "credit_test.cpp": "9f42d0e981de830393f36589ab5741cab8b7296f5771c9b110de54c7c64c18e5",
+    "l2_jump_test.cpp": "4f0a3c57faba5922f6ba5e2aa5792513e176cfa26a8f026cd3dbcb1a9fbc884f"
+  }
+}

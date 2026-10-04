@@ -1,0 +1,64 @@
+[
+  {
+    "tile": [
+      32,
+      32,
+      32
+    ],
+    "shape": [
+      64,
+      192,
+      196608
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 4096,
+    "resident_ctas": 11,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      11.5285952,
+      11.5208193,
+      11.5255297,
+      11.5218496,
+      11.5199999,
+      11.5189695,
+      11.5187649,
+      11.5210239,
+      11.5220545
+    ]
+  },
+  {
+    "tile": [
+      64,
+      48,
+      32
+    ],
+    "shape": [
+      64,
+      192,
+      196608
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 7168,
+    "resident_ctas": 8,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      20.0630207,
+      20.0640514,
+      20.0611839,
+      20.0636414,
+      20.0556614,
+      20.0626171,
+      20.0642563,
+      20.0611908,
+      20.0603584
+    ]
+  }
+]

@@ -1,0 +1,90 @@
+{
+  "receipt": "source_sprint_001_batch6",
+  "retrieval_method": "Google through Chrome \u2192 actual simulator cache sources",
+  "unique_rows_with_scoped_prior": 7,
+  "rows": [
+    {
+      "id": "F008",
+      "evidence_check": "supported_analogy_prior",
+      "candidate": "set_index=(address >> log2(line_bytes)) & (sets-1)",
+      "source_url": "https://github.com/gpgpu-sim/gpgpu-sim_distribution/blob/dev/src/gpgpu-sim/gpu-cache.cc",
+      "source_locator": "cache_config::hash_function LINEAR_SET_FUNCTION; gpu-cache.h selector L",
+      "scope": "Published simulator linear cache indexing. RTX3070 config uses L for instruction/L1 indexing. Not a measured RTX5090 hash.",
+      "identified_change": false
+    },
+    {
+      "id": "F057",
+      "evidence_check": "supported_analogy_prior",
+      "candidate": "set_index=(address >> log2(line_bytes)) & (sets-1)",
+      "source_url": "https://github.com/gpgpu-sim/gpgpu-sim_distribution/blob/dev/src/gpgpu-sim/gpu-cache.cc",
+      "source_locator": "cache_config::hash_function LINEAR_SET_FUNCTION; gpu-cache.h selector L",
+      "scope": "Published simulator linear cache indexing. RTX3070 config uses L for instruction/L1 indexing. Not a measured RTX5090 hash.",
+      "identified_change": false
+    },
+    {
+      "id": "F067",
+      "evidence_check": "supported_analogy_prior",
+      "candidate": "Remove memory-partition bits first, then ipoly hash for selector P",
+      "source_url": "https://github.com/gpgpu-sim/gpgpu-sim_distribution/blob/dev/src/gpgpu-sim/gpu-cache.cc",
+      "source_locator": "l2_cache_config::set_index; cache_config::hash_function HASH_IPOLY_FUNCTION; gpu-cache.h selector P",
+      "scope": "RTX3070 L2 simulator config selects P. No RTX5090 physical set hash established.",
+      "identified_change": false
+    },
+    {
+      "id": "T032",
+      "evidence_check": "supported_analogy_prior",
+      "candidate": {
+        "service_cycles": "ceil(request_bytes / data_port_bytes)",
+        "sector_bytes": 32,
+        "configured_data_port_bytes": 32,
+        "single_sector_service_cycles": 1
+      },
+      "source_url": "https://github.com/gpgpu-sim/gpgpu-sim_distribution/blob/dev/src/gpgpu-sim/gpu-cache.cc",
+      "source_locator": "baseline_cache::bandwidth_management::use_data_port",
+      "scope": "Cache service occupancy model for HIT, including write hit; excludes tag lookup, queues, acknowledgment and interconnect. One cycle is bandwidth occupancy, not physical write completion latency.",
+      "identified_change": false
+    },
+    {
+      "id": "T036",
+      "evidence_check": "supported_analogy_prior",
+      "candidate": {
+        "service_cycles": "ceil(request_bytes / data_port_bytes)",
+        "sector_bytes": 32,
+        "configured_data_port_bytes": 32,
+        "single_sector_service_cycles": 1
+      },
+      "source_url": "https://github.com/gpgpu-sim/gpgpu-sim_distribution/blob/dev/src/gpgpu-sim/gpu-cache.cc",
+      "source_locator": "baseline_cache::bandwidth_management::use_data_port",
+      "scope": "Cache service occupancy model for HIT, including write hit; excludes tag lookup, queues, acknowledgment and interconnect. One cycle is bandwidth occupancy, not physical write completion latency.",
+      "identified_change": false
+    },
+    {
+      "id": "T034",
+      "evidence_check": "supported_analogy_prior",
+      "candidate": {
+        "fill_cycles": "cache_atom_bytes/data_port_bytes",
+        "sector_atom_bytes": 32,
+        "configured_data_port_bytes": 32,
+        "sector_fill_service_cycles": 1
+      },
+      "source_url": "https://github.com/gpgpu-sim/gpgpu-sim_distribution/blob/dev/src/gpgpu-sim/gpu-cache.cc",
+      "source_locator": "baseline_cache::bandwidth_management::use_fill_port; gpu-cache.h atom size",
+      "scope": "Configured sector-cache refill occupancy. Excludes backing-data wait, actual return packet latency, and queue contention.",
+      "identified_change": false
+    },
+    {
+      "id": "F072",
+      "evidence_check": "supported_analogy_prior",
+      "candidate": {
+        "sector_merge_key": "address & ~(atom_bytes-1)",
+        "sector_atom_bytes": 32
+      },
+      "source_url": "https://github.com/gpgpu-sim/gpgpu-sim_distribution/blob/dev/src/gpgpu-sim/gpu-cache.cc",
+      "source_locator": "mshr_table::probe/add/full; gpu-cache.h mshr_addr",
+      "scope": "Same atom/sector pending requests share an MSHR in this software model. Merged consumer count bounded separately.",
+      "identified_change": false
+    }
+  ],
+  "physical_parameter_identifications_added": 0,
+  "review": "Service occupancy is explicitly separated from request response latency."
+}

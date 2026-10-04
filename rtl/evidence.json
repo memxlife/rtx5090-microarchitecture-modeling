@@ -1,0 +1,48 @@
+{
+  "hardware_accuracy_claim": false,
+  "observed_device_facts": {
+    "sm_count": 170,
+    "l2_bytes": 100663296
+  },
+  "structure_evidence": [
+    {
+      "property": "Finite matrix execution service; independent chains do not yield large benefit in corrected probe",
+      "source": "../diagnostic_006/results.md",
+      "intrinsic_latency_identified": false
+    },
+    {
+      "property": "Cache outcomes within dependent groups affect waiting",
+      "source": "../diagnostic_020/results.md",
+      "exact_cache_mapping_identified": false
+    },
+    {
+      "property": "Pending data differs from already available data",
+      "source": "../diagnostic_021/results.md",
+      "exact_miss_merging_hardware_identified": false
+    },
+    {
+      "property": "One shared-resource scheduler has retained 24.7 percent counterexample",
+      "source": "../diagnostic_027/results.md",
+      "prototype_not_admitted_as_hardware_model": true
+    },
+    {
+      "property": "Residency does not produce perfect overlap",
+      "source": "../diagnostic_057/results.md",
+      "resource_identity_identified": false
+    }
+  ],
+  "unknown_parameters": [
+    "scheduler partitioning",
+    "register-bank behavior",
+    "load/store queue sizes",
+    "intrinsic cached response delay",
+    "intrinsic device-memory response delay",
+    "L2 associativity and address mapping",
+    "cache writes and eviction policy",
+    "barrier release/drain semantics",
+    "cross-resource arbitration",
+    "independent clock domains"
+  ],
+  "synthetic_demo_parameters": "demo.json",
+  "validated_runtime_model": "../model_components/dense_runtime.py"
+}

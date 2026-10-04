@@ -1,0 +1,13 @@
+{
+  "reason": "N=144 gives a partial tile for BN=32; outside predeclared full-tile model. Retain original data and exclude from common confirmation domain. Replacement full-tile N=192 chosen without fitting or changing parameters.",
+  "shape": [
+    64,
+    192,
+    196608
+  ],
+  "hashes": {
+    "replacement_predictions.json": "6799d2c490cd15a387b8443542f2564e1bee337509e58da35371856cb4fcd204",
+    "stage_candidate.json": "788480dd5afc49a3462da8d15f42cb48bec0468fcabcae2b3d913e922bc94104",
+    "confirmation_predictions.json": "5ecd81f5ba72e6c5786b2d37c9651a61ebcf75167c7e1aa538d37dd787224f91"
+  }
+}

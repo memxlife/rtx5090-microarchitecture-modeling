@@ -1,0 +1,31 @@
+{
+  "accepted": true,
+  "changed_sections": [
+    "4.54",
+    "4.55"
+  ],
+  "human_first_review": "Explains hierarchy and actual data before counters, numerical observations and timing limitations.",
+  "reader_review": "Defines cumulative counter handshake edges and ownership-held-response distinction, unit sequential-read limits and absent coherence/concurrent misses.",
+  "reader_language_lint": true,
+  "receipts": [
+    "numerical/multi_sm_l2_gateway_verification.json",
+    "numerical/resident_multi_sm_l2_verification.json"
+  ],
+  "receipt_source_hashes_current": true,
+  "inline_source_parity": {
+    "numerical/multi_sm_l2_gateway.sv": true,
+    "numerical/resident_gemm_multi_sm_l2.sv": true
+  },
+  "source_sha256": {
+    "numerical/multi_sm_l2_gateway.sv": "1af7a581a71786c6663268a9dd7264b11b35ef9f0663de993804f2f61ea7d4f5",
+    "numerical/resident_gemm_multi_sm_l2.sv": "976cc1e17a13e40ae832513e92e571d997981b6e407f1ae4667d143572de6550"
+  },
+  "document_sha256": {
+    "rtl_microarchitecture_spec.md": "a044c309853a9cf8f25e15a8b135f9aa3bd8fddf1bce44ba2b587c9974eb5a6c",
+    "README.md": "65ad8d69d0aecf61fe631197a722a1f0cf8a3ac2c7e51d2f17c01f0b66b14ad3"
+  },
+  "checked_global_words": 24576,
+  "checked_unit_read_words": 40,
+  "timing_calibrated": false,
+  "hardware_parameters_closed": 0
+}

@@ -1,0 +1,546 @@
+{
+  "shared_bytes": 37376,
+  "storage_halfwords": 18688,
+  "written_halfwords": 16384,
+  "matrix_shapes": {
+    "A": [
+      32,
+      256
+    ],
+    "B": [
+      256,
+      32
+    ],
+    "C": [
+      32,
+      32
+    ]
+  },
+  "stage_cases": 64,
+  "output_words_per_case": 256,
+  "stage_output_words": 16384,
+  "accumulated_output_words": 16384,
+  "aggregate_order": "slot, kstep, warp, lane, word",
+  "C_order": "Measured c_mapping.hex maps lane*8+word to row*16+column",
+  "cases": [
+    {
+      "warp": 0,
+      "slot": 0,
+      "kstep": 0,
+      "aggregate_word_offset": 0,
+      "stage_file": "expected_w0_s0_k0.hex",
+      "accumulated_file": "accumulated_w0_s0_k0.hex"
+    },
+    {
+      "warp": 1,
+      "slot": 0,
+      "kstep": 0,
+      "aggregate_word_offset": 256,
+      "stage_file": "expected_w1_s0_k0.hex",
+      "accumulated_file": "accumulated_w1_s0_k0.hex"
+    },
+    {
+      "warp": 2,
+      "slot": 0,
+      "kstep": 0,
+      "aggregate_word_offset": 512,
+      "stage_file": "expected_w2_s0_k0.hex",
+      "accumulated_file": "accumulated_w2_s0_k0.hex"
+    },
+    {
+      "warp": 3,
+      "slot": 0,
+      "kstep": 0,
+      "aggregate_word_offset": 768,
+      "stage_file": "expected_w3_s0_k0.hex",
+      "accumulated_file": "accumulated_w3_s0_k0.hex"
+    },
+    {
+      "warp": 0,
+      "slot": 0,
+      "kstep": 1,
+      "aggregate_word_offset": 1024,
+      "stage_file": "expected_w0_s0_k1.hex",
+      "accumulated_file": "accumulated_w0_s0_k1.hex"
+    },
+    {
+      "warp": 1,
+      "slot": 0,
+      "kstep": 1,
+      "aggregate_word_offset": 1280,
+      "stage_file": "expected_w1_s0_k1.hex",
+      "accumulated_file": "accumulated_w1_s0_k1.hex"
+    },
+    {
+      "warp": 2,
+      "slot": 0,
+      "kstep": 1,
+      "aggregate_word_offset": 1536,
+      "stage_file": "expected_w2_s0_k1.hex",
+      "accumulated_file": "accumulated_w2_s0_k1.hex"
+    },
+    {
+      "warp": 3,
+      "slot": 0,
+      "kstep": 1,
+      "aggregate_word_offset": 1792,
+      "stage_file": "expected_w3_s0_k1.hex",
+      "accumulated_file": "accumulated_w3_s0_k1.hex"
+    },
+    {
+      "warp": 0,
+      "slot": 0,
+      "kstep": 2,
+      "aggregate_word_offset": 2048,
+      "stage_file": "expected_w0_s0_k2.hex",
+      "accumulated_file": "accumulated_w0_s0_k2.hex"
+    },
+    {
+      "warp": 1,
+      "slot": 0,
+      "kstep": 2,
+      "aggregate_word_offset": 2304,
+      "stage_file": "expected_w1_s0_k2.hex",
+      "accumulated_file": "accumulated_w1_s0_k2.hex"
+    },
+    {
+      "warp": 2,
+      "slot": 0,
+      "kstep": 2,
+      "aggregate_word_offset": 2560,
+      "stage_file": "expected_w2_s0_k2.hex",
+      "accumulated_file": "accumulated_w2_s0_k2.hex"
+    },
+    {
+      "warp": 3,
+      "slot": 0,
+      "kstep": 2,
+      "aggregate_word_offset": 2816,
+      "stage_file": "expected_w3_s0_k2.hex",
+      "accumulated_file": "accumulated_w3_s0_k2.hex"
+    },
+    {
+      "warp": 0,
+      "slot": 0,
+      "kstep": 3,
+      "aggregate_word_offset": 3072,
+      "stage_file": "expected_w0_s0_k3.hex",
+      "accumulated_file": "accumulated_w0_s0_k3.hex"
+    },
+    {
+      "warp": 1,
+      "slot": 0,
+      "kstep": 3,
+      "aggregate_word_offset": 3328,
+      "stage_file": "expected_w1_s0_k3.hex",
+      "accumulated_file": "accumulated_w1_s0_k3.hex"
+    },
+    {
+      "warp": 2,
+      "slot": 0,
+      "kstep": 3,
+      "aggregate_word_offset": 3584,
+      "stage_file": "expected_w2_s0_k3.hex",
+      "accumulated_file": "accumulated_w2_s0_k3.hex"
+    },
+    {
+      "warp": 3,
+      "slot": 0,
+      "kstep": 3,
+      "aggregate_word_offset": 3840,
+      "stage_file": "expected_w3_s0_k3.hex",
+      "accumulated_file": "accumulated_w3_s0_k3.hex"
+    },
+    {
+      "warp": 0,
+      "slot": 0,
+      "kstep": 4,
+      "aggregate_word_offset": 4096,
+      "stage_file": "expected_w0_s0_k4.hex",
+      "accumulated_file": "accumulated_w0_s0_k4.hex"
+    },
+    {
+      "warp": 1,
+      "slot": 0,
+      "kstep": 4,
+      "aggregate_word_offset": 4352,
+      "stage_file": "expected_w1_s0_k4.hex",
+      "accumulated_file": "accumulated_w1_s0_k4.hex"
+    },
+    {
+      "warp": 2,
+      "slot": 0,
+      "kstep": 4,
+      "aggregate_word_offset": 4608,
+      "stage_file": "expected_w2_s0_k4.hex",
+      "accumulated_file": "accumulated_w2_s0_k4.hex"
+    },
+    {
+      "warp": 3,
+      "slot": 0,
+      "kstep": 4,
+      "aggregate_word_offset": 4864,
+      "stage_file": "expected_w3_s0_k4.hex",
+      "accumulated_file": "accumulated_w3_s0_k4.hex"
+    },
+    {
+      "warp": 0,
+      "slot": 0,
+      "kstep": 5,
+      "aggregate_word_offset": 5120,
+      "stage_file": "expected_w0_s0_k5.hex",
+      "accumulated_file": "accumulated_w0_s0_k5.hex"
+    },
+    {
+      "warp": 1,
+      "slot": 0,
+      "kstep": 5,
+      "aggregate_word_offset": 5376,
+      "stage_file": "expected_w1_s0_k5.hex",
+      "accumulated_file": "accumulated_w1_s0_k5.hex"
+    },
+    {
+      "warp": 2,
+      "slot": 0,
+      "kstep": 5,
+      "aggregate_word_offset": 5632,
+      "stage_file": "expected_w2_s0_k5.hex",
+      "accumulated_file": "accumulated_w2_s0_k5.hex"
+    },
+    {
+      "warp": 3,
+      "slot": 0,
+      "kstep": 5,
+      "aggregate_word_offset": 5888,
+      "stage_file": "expected_w3_s0_k5.hex",
+      "accumulated_file": "accumulated_w3_s0_k5.hex"
+    },
+    {
+      "warp": 0,
+      "slot": 0,
+      "kstep": 6,
+      "aggregate_word_offset": 6144,
+      "stage_file": "expected_w0_s0_k6.hex",
+      "accumulated_file": "accumulated_w0_s0_k6.hex"
+    },
+    {
+      "warp": 1,
+      "slot": 0,
+      "kstep": 6,
+      "aggregate_word_offset": 6400,
+      "stage_file": "expected_w1_s0_k6.hex",
+      "accumulated_file": "accumulated_w1_s0_k6.hex"
+    },
+    {
+      "warp": 2,
+      "slot": 0,
+      "kstep": 6,
+      "aggregate_word_offset": 6656,
+      "stage_file": "expected_w2_s0_k6.hex",
+      "accumulated_file": "accumulated_w2_s0_k6.hex"
+    },
+    {
+      "warp": 3,
+      "slot": 0,
+      "kstep": 6,
+      "aggregate_word_offset": 6912,
+      "stage_file": "expected_w3_s0_k6.hex",
+      "accumulated_file": "accumulated_w3_s0_k6.hex"
+    },
+    {
+      "warp": 0,
+      "slot": 0,
+      "kstep": 7,
+      "aggregate_word_offset": 7168,
+      "stage_file": "expected_w0_s0_k7.hex",
+      "accumulated_file": "accumulated_w0_s0_k7.hex"
+    },
+    {
+      "warp": 1,
+      "slot": 0,
+      "kstep": 7,
+      "aggregate_word_offset": 7424,
+      "stage_file": "expected_w1_s0_k7.hex",
+      "accumulated_file": "accumulated_w1_s0_k7.hex"
+    },
+    {
+      "warp": 2,
+      "slot": 0,
+      "kstep": 7,
+      "aggregate_word_offset": 7680,
+      "stage_file": "expected_w2_s0_k7.hex",
+      "accumulated_file": "accumulated_w2_s0_k7.hex"
+    },
+    {
+      "warp": 3,
+      "slot": 0,
+      "kstep": 7,
+      "aggregate_word_offset": 7936,
+      "stage_file": "expected_w3_s0_k7.hex",
+      "accumulated_file": "accumulated_w3_s0_k7.hex"
+    },
+    {
+      "warp": 0,
+      "slot": 1,
+      "kstep": 0,
+      "aggregate_word_offset": 8192,
+      "stage_file": "expected_w0_s1_k0.hex",
+      "accumulated_file": "accumulated_w0_s1_k0.hex"
+    },
+    {
+      "warp": 1,
+      "slot": 1,
+      "kstep": 0,
+      "aggregate_word_offset": 8448,
+      "stage_file": "expected_w1_s1_k0.hex",
+      "accumulated_file": "accumulated_w1_s1_k0.hex"
+    },
+    {
+      "warp": 2,
+      "slot": 1,
+      "kstep": 0,
+      "aggregate_word_offset": 8704,
+      "stage_file": "expected_w2_s1_k0.hex",
+      "accumulated_file": "accumulated_w2_s1_k0.hex"
+    },
+    {
+      "warp": 3,
+      "slot": 1,
+      "kstep": 0,
+      "aggregate_word_offset": 8960,
+      "stage_file": "expected_w3_s1_k0.hex",
+      "accumulated_file": "accumulated_w3_s1_k0.hex"
+    },
+    {
+      "warp": 0,
+      "slot": 1,
+      "kstep": 1,
+      "aggregate_word_offset": 9216,
+      "stage_file": "expected_w0_s1_k1.hex",
+      "accumulated_file": "accumulated_w0_s1_k1.hex"
+    },
+    {
+      "warp": 1,
+      "slot": 1,
+      "kstep": 1,
+      "aggregate_word_offset": 9472,
+      "stage_file": "expected_w1_s1_k1.hex",
+      "accumulated_file": "accumulated_w1_s1_k1.hex"
+    },
+    {
+      "warp": 2,
+      "slot": 1,
+      "kstep": 1,
+      "aggregate_word_offset": 9728,
+      "stage_file": "expected_w2_s1_k1.hex",
+      "accumulated_file": "accumulated_w2_s1_k1.hex"
+    },
+    {
+      "warp": 3,
+      "slot": 1,
+      "kstep": 1,
+      "aggregate_word_offset": 9984,
+      "stage_file": "expected_w3_s1_k1.hex",
+      "accumulated_file": "accumulated_w3_s1_k1.hex"
+    },
+    {
+      "warp": 0,
+      "slot": 1,
+      "kstep": 2,
+      "aggregate_word_offset": 10240,
+      "stage_file": "expected_w0_s1_k2.hex",
+      "accumulated_file": "accumulated_w0_s1_k2.hex"
+    },
+    {
+      "warp": 1,
+      "slot": 1,
+      "kstep": 2,
+      "aggregate_word_offset": 10496,
+      "stage_file": "expected_w1_s1_k2.hex",
+      "accumulated_file": "accumulated_w1_s1_k2.hex"
+    },
+    {
+      "warp": 2,
+      "slot": 1,
+      "kstep": 2,
+      "aggregate_word_offset": 10752,
+      "stage_file": "expected_w2_s1_k2.hex",
+      "accumulated_file": "accumulated_w2_s1_k2.hex"
+    },
+    {
+      "warp": 3,
+      "slot": 1,
+      "kstep": 2,
+      "aggregate_word_offset": 11008,
+      "stage_file": "expected_w3_s1_k2.hex",
+      "accumulated_file": "accumulated_w3_s1_k2.hex"
+    },
+    {
+      "warp": 0,
+      "slot": 1,
+      "kstep": 3,
+      "aggregate_word_offset": 11264,
+      "stage_file": "expected_w0_s1_k3.hex",
+      "accumulated_file": "accumulated_w0_s1_k3.hex"
+    },
+    {
+      "warp": 1,
+      "slot": 1,
+      "kstep": 3,
+      "aggregate_word_offset": 11520,
+      "stage_file": "expected_w1_s1_k3.hex",
+      "accumulated_file": "accumulated_w1_s1_k3.hex"
+    },
+    {
+      "warp": 2,
+      "slot": 1,
+      "kstep": 3,
+      "aggregate_word_offset": 11776,
+      "stage_file": "expected_w2_s1_k3.hex",
+      "accumulated_file": "accumulated_w2_s1_k3.hex"
+    },
+    {
+      "warp": 3,
+      "slot": 1,
+      "kstep": 3,
+      "aggregate_word_offset": 12032,
+      "stage_file": "expected_w3_s1_k3.hex",
+      "accumulated_file": "accumulated_w3_s1_k3.hex"
+    },
+    {
+      "warp": 0,
+      "slot": 1,
+      "kstep": 4,
+      "aggregate_word_offset": 12288,
+      "stage_file": "expected_w0_s1_k4.hex",
+      "accumulated_file": "accumulated_w0_s1_k4.hex"
+    },
+    {
+      "warp": 1,
+      "slot": 1,
+      "kstep": 4,
+      "aggregate_word_offset": 12544,
+      "stage_file": "expected_w1_s1_k4.hex",
+      "accumulated_file": "accumulated_w1_s1_k4.hex"
+    },
+    {
+      "warp": 2,
+      "slot": 1,
+      "kstep": 4,
+      "aggregate_word_offset": 12800,
+      "stage_file": "expected_w2_s1_k4.hex",
+      "accumulated_file": "accumulated_w2_s1_k4.hex"
+    },
+    {
+      "warp": 3,
+      "slot": 1,
+      "kstep": 4,
+      "aggregate_word_offset": 13056,
+      "stage_file": "expected_w3_s1_k4.hex",
+      "accumulated_file": "accumulated_w3_s1_k4.hex"
+    },
+    {
+      "warp": 0,
+      "slot": 1,
+      "kstep": 5,
+      "aggregate_word_offset": 13312,
+      "stage_file": "expected_w0_s1_k5.hex",
+      "accumulated_file": "accumulated_w0_s1_k5.hex"
+    },
+    {
+      "warp": 1,
+      "slot": 1,
+      "kstep": 5,
+      "aggregate_word_offset": 13568,
+      "stage_file": "expected_w1_s1_k5.hex",
+      "accumulated_file": "accumulated_w1_s1_k5.hex"
+    },
+    {
+      "warp": 2,
+      "slot": 1,
+      "kstep": 5,
+      "aggregate_word_offset": 13824,
+      "stage_file": "expected_w2_s1_k5.hex",
+      "accumulated_file": "accumulated_w2_s1_k5.hex"
+    },
+    {
+      "warp": 3,
+      "slot": 1,
+      "kstep": 5,
+      "aggregate_word_offset": 14080,
+      "stage_file": "expected_w3_s1_k5.hex",
+      "accumulated_file": "accumulated_w3_s1_k5.hex"
+    },
+    {
+      "warp": 0,
+      "slot": 1,
+      "kstep": 6,
+      "aggregate_word_offset": 14336,
+      "stage_file": "expected_w0_s1_k6.hex",
+      "accumulated_file": "accumulated_w0_s1_k6.hex"
+    },
+    {
+      "warp": 1,
+      "slot": 1,
+      "kstep": 6,
+      "aggregate_word_offset": 14592,
+      "stage_file": "expected_w1_s1_k6.hex",
+      "accumulated_file": "accumulated_w1_s1_k6.hex"
+    },
+    {
+      "warp": 2,
+      "slot": 1,
+      "kstep": 6,
+      "aggregate_word_offset": 14848,
+      "stage_file": "expected_w2_s1_k6.hex",
+      "accumulated_file": "accumulated_w2_s1_k6.hex"
+    },
+    {
+      "warp": 3,
+      "slot": 1,
+      "kstep": 6,
+      "aggregate_word_offset": 15104,
+      "stage_file": "expected_w3_s1_k6.hex",
+      "accumulated_file": "accumulated_w3_s1_k6.hex"
+    },
+    {
+      "warp": 0,
+      "slot": 1,
+      "kstep": 7,
+      "aggregate_word_offset": 15360,
+      "stage_file": "expected_w0_s1_k7.hex",
+      "accumulated_file": "accumulated_w0_s1_k7.hex"
+    },
+    {
+      "warp": 1,
+      "slot": 1,
+      "kstep": 7,
+      "aggregate_word_offset": 15616,
+      "stage_file": "expected_w1_s1_k7.hex",
+      "accumulated_file": "accumulated_w1_s1_k7.hex"
+    },
+    {
+      "warp": 2,
+      "slot": 1,
+      "kstep": 7,
+      "aggregate_word_offset": 15872,
+      "stage_file": "expected_w2_s1_k7.hex",
+      "accumulated_file": "accumulated_w2_s1_k7.hex"
+    },
+    {
+      "warp": 3,
+      "slot": 1,
+      "kstep": 7,
+      "aggregate_word_offset": 16128,
+      "stage_file": "expected_w3_s1_k7.hex",
+      "accumulated_file": "accumulated_w3_s1_k7.hex"
+    }
+  ],
+  "oracle": "Direct ordinary integer matrix multiplication; does not call consumer_a/b or reconstruct operands through the functions being tested. All integer sums exactly representable in FP32.",
+  "source_sha256": {
+    "layout_binding.py": "2c342a5e86a81d362e10a314436370664ebe59c87a72f707bc5829c8012d270e",
+    "c_mapping.hex": "b1931c41f72db43219a0c6bf1c6daf970dd0d4fb321005f4bcee35e581e7781b"
+  },
+  "validation": "1024 full-K products equal accumulated sixteen stage products; producer addresses nonoverlapping and in bounds.",
+  "scope": "Selected compiled-software layout; no hardware timing claim."
+}

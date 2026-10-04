@@ -1,0 +1,50 @@
+{
+  "created_UTC": "2026-10-03T22:42:38.091393+00:00",
+  "coefficient": 0.1979886039191788,
+  "coefficient_type": "Effective interaction approximation from ONE matched phase/full calibration case; not a measured hardware overlap fraction.",
+  "calibration_shape": [
+    2048,
+    2112,
+    1536
+  ],
+  "formula": "phase1 + phase2 - phase0 - coefficient * min(phase1-phase0,phase2-phase0)",
+  "new_shape_phase_method": "Linear interpolation in K between frozen 1536 and 4608 phase predictions for the same M,N. This is an explicit modeling assumption.",
+  "checks": [
+    {
+      "m": 1920,
+      "n": 1920,
+      "k": 3072,
+      "tile": [
+        32,
+        32
+      ],
+      "warm": 1,
+      "phase_predictions_us": {
+        "0": 20.339200733333332,
+        "1": 278.1034666666667,
+        "2": 235.23840096666666
+      },
+      "old_prediction_us": 493.0026669,
+      "candidate_prediction_us": 450.4550742624543
+    },
+    {
+      "m": 2048,
+      "n": 2112,
+      "k": 3072,
+      "tile": [
+        32,
+        32
+      ],
+      "warm": 1,
+      "phase_predictions_us": {
+        "0": 23.394762538929292,
+        "1": 316.7224461113131,
+        "2": 267.7131530196162
+      },
+      "old_prediction_us": 561.040836592,
+      "candidate_prediction_us": 512.6685795489481
+    }
+  ],
+  "predictions_frozen_before_new_measurements": true,
+  "no_assertion_of_intrinsic_microarchitectural_cause": true
+}

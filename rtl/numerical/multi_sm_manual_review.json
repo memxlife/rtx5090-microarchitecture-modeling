@@ -1,0 +1,31 @@
+{
+  "accepted": true,
+  "changed_sections": [
+    "4.52",
+    "4.53"
+  ],
+  "human_first_review": "Explains one owner first, then replicated SM-local resources, global ledger and numerical comparison.",
+  "reader_review": "Distinguishes unit transaction checks from final-grid values; defines timing boundary and absent L2/physical bandwidth evidence.",
+  "reader_language_lint": true,
+  "receipts": [
+    "numerical/multi_sm_gateway_verification.json",
+    "numerical/resident_multi_sm_verification.json"
+  ],
+  "receipt_source_hashes_current": true,
+  "inline_source_parity": {
+    "numerical/multi_sm_sector_gateway.sv": true,
+    "numerical/resident_gemm_multi_sm.sv": true
+  },
+  "source_sha256": {
+    "numerical/multi_sm_sector_gateway.sv": "a66a220ab879ef8c4d103fe7d7c8eb5630fd0c3ca44844ea34dd35a52e4ecd12",
+    "numerical/resident_gemm_multi_sm.sv": "f2ee7db3a650bda7d0538c45260950874f8c4abfdbedc7fc29a61f2cd8211fd8"
+  },
+  "document_sha256": {
+    "rtl_microarchitecture_spec.md": "2f3ce500eab5c3d66e4da8f43246557d381b8a541b4405b481b042e05a8d9bb8",
+    "README.md": "f3a46c8ce881caef81af8884bca142229d3198be4738ec155100117075da91af"
+  },
+  "checked_global_words": 24576,
+  "checked_gateway_read_words": 16,
+  "timing_calibrated": false,
+  "hardware_parameters_closed": 0
+}

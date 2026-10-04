@@ -1,0 +1,5 @@
+{
+  "reason": "The verifier agent finalized an additional progress assertion while the first run was being observed. Pre-build source hashes were not captured, so the initial receipt is superseded by a source-frozen rerun.",
+  "test_failure": false,
+  "hardware_consequence": null
+}

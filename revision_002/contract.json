@@ -1,0 +1,16 @@
+{
+ "question":"Can a phase- and occupancy-aware MILP improve tile selection on held-out matrix shapes without an L2 reuse term?",
+ "kernel":"Unchanged BF16 WMMA family, 128 threads, single shared buffer, cyclic warp fragments",
+ "hardware_domain":{"qM":[1,6],"qN":[1,6],"qK":[1,4]},
+ "calibration_shapes":[[768,768,1024],[2048,2048,1024]],
+ "calibration_tiles":[[16,16,32],[32,32,16],[32,32,32],[32,32,64],[64,32,32],[32,64,32],[64,64,16],[64,64,32],[64,64,64],[96,32,32],[32,96,32],[96,64,32],[64,96,32],[96,96,32]],
+ "controlled_occupancy":{"tile":[32,32,32],"shape":[2048,2048,1024],"dynamic_shared_bytes":[4096,20480,45056,94208],"purpose":"Keep instructions and data fixed while changing residency with unused shared-memory reservation"},
+ "controlled_grid":{"tile":[32,32,32],"shapes":[[64,64,1024],[128,128,1024],[256,256,1024],[512,512,1024],[1024,1024,1024],[2048,2048,1024]]},
+ "confirmation_shapes":[[640,640,640],[1536,1536,1536]],
+ "confirmation_rule":"Freeze coefficients and solver choices before measuring the full 144-tile confirmation domains",
+ "falsification":"A worse held-out selection regret or no improvement in ordering rejects the claimed refinement; preserve negative evidence",
+ "constraints":"No L2 term, no complete-tile performance lookup; physical memory traffic is diagnostic rather than presumed equal to requested bytes",
+ "timing":"Existing cold-cache sweep, 9 groups of 5, GPU 7 only, sequential trials",
+ "profile_targets":[[80,64,16],[32,32,32]],
+ "status":"preregistered before new calibration and confirmation measurements"
+}

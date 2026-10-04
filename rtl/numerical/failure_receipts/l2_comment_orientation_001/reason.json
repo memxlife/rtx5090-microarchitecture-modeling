@@ -1,0 +1,5 @@
+{
+  "reason": "Superseded passing sources/receipts before comment-only correction of layer orientation. Actual wiring and behavior did not change. New run freezes the updated source hash.",
+  "initial_runs_passed": true,
+  "hardware_parameters_changed": 0
+}

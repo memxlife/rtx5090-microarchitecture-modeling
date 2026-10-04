@@ -1,0 +1,39 @@
+{
+  "method": "Google search through Chrome browser, followed by visible forum and primary-source links. No generic search engine tool.",
+  "exact_rtx5090_hash_identified": false,
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2407.13996v3#S5.SS2",
+      "title": "SGDRC: Software-Defined Dynamic Resource Control for Concurrent DNN Inference on NVIDIA GPUs",
+      "scope": "Tesla P40 Pascal12channels and RTX A2000 Ampere6channels, notRTX5090/Ada",
+      "finding": "Authors measured channel assignments in10MiBphysicalspace. Contiguous1KiB belongs tooneVRAMchannel; higherphysicalbits10..34 determine channel permutation. P40 hasthree groups of4channels with24patterns;A2000three pairs with12patterns. PureXOR reconstruction doesnotgeneralize toarbitrarychannelcounts.",
+      "model_use": "Justifies explicit higher-address-bit mixing/permutation hypotheses; doesnotidentify coefficients orRTX5090bankmapping. Physical versusvirtualaddress unknown remains."
+    },
+    {
+      "url": "https://github.com/sakjain92/Fractional-GPUs/blob/master/doc/REVERSE.md",
+      "scope": "GTX1070/1080 Pascal and V100 Volta",
+      "finding": "Primary reconstruction providesmultibitXORphysical-address mappings forDRAMbank,cacheset,memorymodule. Includes high bits through32/33, notsimplelowbitmodulo.",
+      "model_use": "Mechanismprioronly; copying exactcoefficients onto5090unsupported."
+    },
+    {
+      "url": "https://forums.developer.nvidia.com/t/how-can-we-achieve-maximum-l2-cache-throughput-on-an-rtx-3080-gpu/372657/8",
+      "scope": "Community discussion,RTX3080, notofficialhardwarecontract",
+      "finding": "Mapping isundocumented andmaydiffer bymemory/cacheconfiguration. Suggests Nsightdevice__attribute_l2s_count and32B/slice/corecycle estimate.",
+      "model_use": "Pointertoofficialattribute andhypothesis, not5090countorportproof."
+    },
+    {
+      "url": "https://docs.nvidia.com/nsight-compute/ProfilingGuide/index.html#device-attributes",
+      "scope": "OfficialNsightCompute definitions",
+      "finding": "device__attribute_l2s_count istotalslices;device__attribute_fbp_count totalframebufferpartitions;num_l2s_per_fbp slicesperpartition. Counter.sum and.avg aggregate overallunitinstances. Noexplanationfound reconcilingdriver64 andcounterdenominator48."
+    }
+  ],
+  "saved5090evidence": {
+    "receipt": "rtl/discovery_rounds/literature_sweep_036.json",
+    "driver_l2s_count": 64,
+    "fbp_count": 8,
+    "num_l2s_per_fbp": 8,
+    "counter_denominator": 48,
+    "resolution": "Preserve64driverreported and48effectivecounter-domain counts separately.96MiBcapacitydoesnotbyitselfestablish48independent2MiBports or16disabledphysicalslice hypothesis."
+  },
+  "recommended_experiment_without_new_gpu": "Keepcurrentmodulo48baseline;testanexplicit high-bitmixed/permutationmap asstructuralhypothesis withsamecapacity,servicecredits,queuebounds. Preserveeventequivalence onlyforhostoptimization; mappingchange intentionallychangesmodeledphysicalbehavior. Comparehardwarepredictionandaddresshotspots, notclaimhashreverseengineering."
+}

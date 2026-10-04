@@ -1,0 +1,10 @@
+{
+  "failure": "TB verifies on first negedge after registered rsp assertion, before next posedge monitor samples final warp_drained flag. Earlier warps sampled correctly.",
+  "source_sha256": {
+    "native_multiwarp_stage_run_1.log": "98c5588d33251c9f0288e0533bf82fef5b66db5669524e72b0f7708cb1bc3c78",
+    "native_multiwarp_stage_tb.sv": "045d583beba0eb81b9b452d97ef92d6471d82c9cd121923055e1b6dec3dc09b9",
+    "native_multiwarp_stage_pipeline.sv": "8d1bd9816753be3a05923013933a1d87aa89edc23a5b3062b0f50f5a2bb70753"
+  },
+  "repair": "Wait one monitor sampling posedge and a small scheduling settle before checking response; keep all drain safety/order assertions and RTL unchanged.",
+  "classification": "Testbench observation boundary defect, not an admitted hardware/model explanation."
+}

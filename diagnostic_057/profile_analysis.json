@@ -1,0 +1,26 @@
+{
+  "1": {
+    "gpu__time_duration.sum": 2980192.0,
+    "sm__cycles_elapsed.avg.per_second": 2943655000.0,
+    "sm__warps_active.avg.pct_of_peak_sustained_active": 8.333161,
+    "smsp__inst_executed.sum": 558129600.0,
+    "smsp__issue_active.avg.pct_of_peak_sustained_active": 9.621512,
+    "l2_hit_fraction": 1.0
+  },
+  "4": {
+    "gpu__time_duration.sum": 964992.0,
+    "sm__cycles_elapsed.avg.per_second": 2925201000.0,
+    "sm__warps_active.avg.pct_of_peak_sustained_active": 31.057719,
+    "smsp__inst_executed.sum": 558129600.0,
+    "smsp__issue_active.avg.pct_of_peak_sustained_active": 29.781377,
+    "l2_hit_fraction": 1.0
+  },
+  "11": {
+    "gpu__time_duration.sum": 704704.0,
+    "sm__cycles_elapsed.avg.per_second": 2821533000.0,
+    "sm__warps_active.avg.pct_of_peak_sustained_active": 76.1105,
+    "smsp__inst_executed.sum": 558129600.0,
+    "smsp__issue_active.avg.pct_of_peak_sustained_active": 42.984784,
+    "l2_hit_fraction": 1.0
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "checks": [
+    {
+      "mode": 0,
+      "matches_hardware": false,
+      "output": "[41000] %Fatal: numerical_matrix_tb.sv:36: Assertion failed in numerical_matrix_tb.unnamedblk2: Matrix value mismatch case=0 word=0 actual=00000000 expected=3f000000\n%Error: rtl/numerical/numerical_matrix_tb.sv:36: Verilog $stop\nAborting...\n"
+    },
+    {
+      "mode": 1,
+      "matches_hardware": true,
+      "output": "NUMERICAL_MATRIX_PASS operations=6 checked_words=1536 latency=17 interval=3 held_cycles=35 cycles=92\n- rtl/numerical/numerical_matrix_tb.sv:53: Verilog $finish\n- S i m u l a t i o n   R e p o r t: Verilator 5.050 2026-07-01\n- Verilator: $finish at 192ns; walltime 0.001 s; speed 128.152 us/s\n- Verilator: cpu 0.001 s on 1 threads; allocated 2 MB\n"
+    },
+    {
+      "rejected": "nan",
+      "mode": 1,
+      "passed": true
+    },
+    {
+      "rejected": "subnormal",
+      "mode": 1,
+      "passed": true
+    }
+  ],
+  "configured_mode1_passed": true,
+  "sequential_mode0_counterexample_preserved": true,
+  "hardware_cases": [
+    [
+      24,
+      0.75,
+      0,
+      0
+    ],
+    [
+      26,
+      2.5,
+      0,
+      1
+    ],
+    [
+      26,
+      6.0,
+      1,
+      2
+    ],
+    [
+      26,
+      7.0,
+      2,
+      0
+    ],
+    [
+      28,
+      -7.0,
+      1,
+      1
+    ],
+    [
+      28,
+      0.75,
+      2,
+      2
+    ]
+  ],
+  "checked_output_words": 1536,
+  "source_sha256": {
+    "numerical_matrix_pipeline.sv": "20d64fa7c297f0a4cf83a68f899a199330cc7907f136f031d1f5b030d4a010b4",
+    "numerical_matrix_tb.sv": "62c02244930373845bd8df3cf39a1fde4a3d716561d401db4d1985db3685c314",
+    "bf16_reference.cpp": "0da9f3da8194c8d832b60ef29028a456397c76f9b0edc2b6e45c1ef69e14e1d3"
+  },
+  "supported_domain": "Measured finite power-of-two cancellation and small accumulator/products family",
+  "intrinsic_timing_validated": false,
+  "full_gpu_model": false,
+  "unsupported": "Exceptional/subnormal inputs or outputs explicitly rejected; other finite reductions remain hypotheses"
+}

@@ -1,0 +1,7 @@
+{
+  "reason": "Preserve initial test coverage before adding launch rejection and C-base snapshot controls.",
+  "source_sha256": {
+    "resident_gemm_complete_tb.sv": "16a91b8c41ff5a496e6e512b7a189a13a5ee5cc3af16045c20e782fcaf1923e0",
+    "verify_resident_gemm_complete.py": "b8de0b6a057cf2bcda7ba564ca2cb14dbb71ea8ef900564ebddf7bcadf1f682d"
+  }
+}

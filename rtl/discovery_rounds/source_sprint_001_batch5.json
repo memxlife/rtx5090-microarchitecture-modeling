@@ -1,0 +1,123 @@
+{
+  "receipt": "source_sprint_001_batch5",
+  "retrieval_method": "Google through Chrome \u2192 observed simulator source tree \u2192 rendered source text",
+  "unique_rows_with_scoped_prior": 9,
+  "rows": [
+    {
+      "id": "F020",
+      "evidence_check": "supported_analogy_prior",
+      "candidate": "bank=((register_number+warp_id)%banks_per_scheduler)+scheduler_id*banks_per_scheduler when subcore model enabled; otherwise (register_number+warp_id)%num_banks",
+      "unit": null,
+      "source_url": "https://github.com/gpgpu-sim/gpgpu-sim_distribution/blob/dev/src/gpgpu-sim/shader.cc",
+      "source_locator": "register_bank()",
+      "scope": "Current GPGPU-Sim software bank mapping. This is not the physical RTX5090 register hash.",
+      "identified_change": false
+    },
+    {
+      "id": "F026",
+      "evidence_check": "supported_analogy_prior",
+      "candidate": "Memory writeback clients use round-robin arbitration; register writes reserve banks before reads; arithmetic result bus is pre-reserved",
+      "unit": null,
+      "source_url": "https://github.com/gpgpu-sim/gpgpu-sim_distribution/blob/dev/src/gpgpu-sim/shader.cc",
+      "source_locator": "ldst_unit::writeback; shader_core_ctx::writeback; opndcoll_rfu_t::arbiter_t::allocate_reads",
+      "scope": "Source distinguishes memory writeback arbitration from arithmetic writeback. RTX5090 private arbitration remains unknown.",
+      "identified_change": false
+    },
+    {
+      "id": "F062",
+      "evidence_check": "supported_analogy_prior",
+      "candidate": 2,
+      "unit": "response packets",
+      "source_url": "https://github.com/gpgpu-sim/gpgpu-sim_distribution/blob/dev/src/gpgpu-sim/gpu-sim.cc",
+      "source_locator": "shader_core_config::reg_options, -gpgpu_n_ldst_response_buffer_size",
+      "scope": "Default simulator load/store ejection response buffer. Not physical L1 fill-queue capacity.",
+      "identified_change": false
+    },
+    {
+      "id": "T008",
+      "evidence_check": "supported_analogy_prior",
+      "candidate": 0,
+      "unit": "extra model core cycles",
+      "source_url": "https://github.com/gpgpu-sim/gpgpu-sim_distribution/blob/dev/src/gpgpu-sim/shader.cc",
+      "source_locator": "shader_core_ctx::cycle; shader_core_ctx::writeback",
+      "scope": "Source invokes writeback/releaseRegisters before issue in the same core cycle. Zero additional scoreboard wakeup cycle is this software ordering convention, not intrinsic GPU wakeup delay.",
+      "identified_change": false
+    },
+    {
+      "id": "T010",
+      "evidence_check": "supported_analogy_prior",
+      "candidate": 0,
+      "unit": "extra model cycles after writeback acceptance",
+      "source_url": "https://github.com/gpgpu-sim/gpgpu-sim_distribution/blob/dev/src/gpgpu-sim/shader.cc",
+      "source_locator": "shader_core_ctx::writeback",
+      "scope": "Register release occurs while retiring the EX_WB record; no separately charged write latency in this model. This does not resolve SRAM write time.",
+      "identified_change": false
+    },
+    {
+      "id": "T009",
+      "evidence_check": "supported_analogy_prior",
+      "candidate": {
+        "step_order": [
+          "dispatch_ready_cu",
+          "allocate_reads",
+          "allocate_cu",
+          "reset_bank_allocations"
+        ],
+        "newly_allocated_to_first_read_minimum_steps": 1,
+        "final_operand_read_to_dispatch_minimum_steps": 1
+      },
+      "unit": null,
+      "source_url": "https://github.com/gpgpu-sim/gpgpu-sim_distribution/blob/dev/src/gpgpu-sim/shader.h",
+      "source_locator": "opndcoll_rfu_t::step",
+      "scope": "These are ordering boundaries per collector step. Configurable reg_file_port_throughput can run multiple steps in one core cycle; do not call each boundary a full SM cycle.",
+      "identified_change": false
+    },
+    {
+      "id": "T011",
+      "evidence_check": "supported_analogy_prior",
+      "candidate": {
+        "step_order": [
+          "dispatch_ready_cu",
+          "allocate_reads",
+          "allocate_cu",
+          "reset_bank_allocations"
+        ],
+        "newly_allocated_to_first_read_minimum_steps": 1,
+        "final_operand_read_to_dispatch_minimum_steps": 1
+      },
+      "unit": null,
+      "source_url": "https://github.com/gpgpu-sim/gpgpu-sim_distribution/blob/dev/src/gpgpu-sim/shader.h",
+      "source_locator": "opndcoll_rfu_t::step",
+      "scope": "These are ordering boundaries per collector step. Configurable reg_file_port_throughput can run multiple steps in one core cycle; do not call each boundary a full SM cycle.",
+      "identified_change": false
+    },
+    {
+      "id": "F021",
+      "evidence_check": "supported_analogy_prior",
+      "candidate": {
+        "default_reg_file_ports": 1,
+        "RTX3070_config_reg_file_ports": 2
+      },
+      "unit": null,
+      "source_url": "https://github.com/gpgpu-sim/gpgpu-sim_distribution/blob/dev/src/gpgpu-sim/gpu-sim.cc",
+      "source_locator": "-gpgpu_reg_file_port_throughput option",
+      "scope": "Source calls the setting number of register-file ports; actual implementation repeatedly advances collector per core clock. Configured model port count, not a physical RTX5090 measurement.",
+      "identified_change": false
+    },
+    {
+      "id": "F057",
+      "evidence_check": "supported_analogy_prior",
+      "candidate": {
+        "bank_interleave_bytes": 32,
+        "default_bank_hash_setting": 0
+      },
+      "unit": null,
+      "source_url": "https://github.com/gpgpu-sim/gpgpu-sim_distribution/blob/dev/src/gpgpu-sim/gpu-sim.cc",
+      "source_locator": "-gpgpu_l1_banks_byte_interleaving; -gpgpu_l1_banks_hashing_function",
+      "scope": "Simulator L1 bank-index controls; these do not yet supply the full cache-set hash.",
+      "identified_change": false
+    }
+  ],
+  "physical_parameter_identifications_added": 0,
+  "review": "Cycle-step conventions and queue identities are explicit, preventing double charging or invented physical ports."
+}

@@ -1,0 +1,258 @@
+{
+  "confirmation": [
+    {
+      "tile": [
+        32,
+        32,
+        32
+      ],
+      "shape": [
+        128,
+        192,
+        12288
+      ],
+      "measured_ms": 0.717209589,
+      "old_predicted_ms": 0.7418226555811246,
+      "old_error": 0.03431781582207005,
+      "stage_predicted_ms": 0.6919019670531059,
+      "stage_error": 0.03528622920697466,
+      "micro_transfer": {
+        "1": {
+          "predicted_ms": 0.42491585422884226,
+          "error": 0.4075429822106823
+        },
+        "4": {
+          "predicted_ms": 0.2763078497913422,
+          "error": 0.6147460184175784
+        }
+      },
+      "correct": true,
+      "local_bytes": 0
+    },
+    {
+      "tile": [
+        64,
+        48,
+        32
+      ],
+      "shape": [
+        128,
+        192,
+        12288
+      ],
+      "measured_ms": 1.24723196,
+      "old_predicted_ms": 1.2511986239599024,
+      "old_error": 0.003180373889635213,
+      "stage_predicted_ms": 1.2347398838267722,
+      "stage_error": 0.01001584033592895,
+      "micro_transfer": {
+        "1": {
+          "predicted_ms": 0.8133843607973068,
+          "error": 0.34784836591478396
+        },
+        "4": {
+          "predicted_ms": 0.6259923675473068,
+          "error": 0.49809467074007074
+        }
+      },
+      "correct": true,
+      "local_bytes": 0
+    },
+    {
+      "tile": [
+        32,
+        32,
+        32
+      ],
+      "shape": [
+        256,
+        288,
+        49152
+      ],
+      "measured_ms": 2.79777288,
+      "old_predicted_ms": 2.5546811216202268,
+      "old_error": 0.08688759552911718,
+      "stage_predicted_ms": 2.714416663994177,
+      "stage_error": 0.029793775113662213,
+      "micro_transfer": {
+        "1": {
+          "predicted_ms": 1.2924998524996756,
+          "error": 0.5380254552686652
+        },
+        "4": {
+          "predicted_ms": 0.9077318450413422,
+          "error": 0.6755519893947424
+        }
+      },
+      "correct": true,
+      "local_bytes": 0
+    },
+    {
+      "tile": [
+        64,
+        48,
+        32
+      ],
+      "shape": [
+        256,
+        288,
+        49152
+      ],
+      "measured_ms": 4.99998083,
+      "old_predicted_ms": 4.679257415310499,
+      "old_error": 0.06414492886955758,
+      "stage_predicted_ms": 4.901193140044982,
+      "stage_error": 0.019757613741694713,
+      "micro_transfer": {
+        "1": {
+          "predicted_ms": 2.446298645261593,
+          "error": 0.5107383951186883
+        },
+        "4": {
+          "predicted_ms": 1.9629706397615925,
+          "error": 0.607404366836024
+        }
+      },
+      "correct": true,
+      "local_bytes": 0
+    },
+    {
+      "tile": [
+        32,
+        32,
+        32
+      ],
+      "shape": [
+        64,
+        192,
+        196608
+      ],
+      "measured_ms": 11.5210239,
+      "old_predicted_ms": 13.962762516945983,
+      "old_error": 0.21193764010384375,
+      "stage_predicted_ms": 11.212647388097547,
+      "stage_error": 0.026766415431396906,
+      "micro_transfer": {
+        "1": {
+          "predicted_ms": 8.901331885541342,
+          "error": 0.227383610796837
+        },
+        "4": {
+          "predicted_ms": 5.362387757541342,
+          "error": 0.5345563203335302
+        }
+      },
+      "correct": true,
+      "local_bytes": 0
+    },
+    {
+      "tile": [
+        64,
+        48,
+        32
+      ],
+      "shape": [
+        64,
+        192,
+        196608
+      ],
+      "measured_ms": 20.0626171,
+      "old_predicted_ms": 21.582708765660378,
+      "old_error": 0.07576736664432371,
+      "stage_predicted_ms": 19.855189359162427,
+      "stage_error": 0.010339017078563217,
+      "micro_transfer": {
+        "1": {
+          "predicted_ms": 17.375194297761595,
+          "error": 0.1339517565850572
+        },
+        "4": {
+          "predicted_ms": 12.902362585761592,
+          "error": 0.3568953381579718
+        }
+      },
+      "correct": true,
+      "local_bytes": 0
+    }
+  ],
+  "median_stage_error": 0.02326201458654581,
+  "max_stage_error": 0.03528622920697466,
+  "target_met": true,
+  "old_median_error": 0.06995614775694065,
+  "old_max_error": 0.21193764010384375,
+  "micro_transfer_summary": {
+    "1": {
+      "median_error": 0.37769567406273313,
+      "max_error": 0.5380254552686652
+    },
+    "4": {
+      "median_error": 0.5709803435847771,
+      "max_error": 0.6755519893947424
+    }
+  },
+  "profiles": [
+    {
+      "name": "profile_32_32_32_m4096",
+      "device_ms": 0.453856,
+      "ordinary_ms": 0.453824002,
+      "duration_relative_difference": 7.050750920822857e-05,
+      "active_clock_GHz": 2.944559,
+      "clock_unit": "Ghz",
+      "read_sectors": 12452040.0,
+      "hit_sectors": 10305762.0,
+      "miss_sectors": 2146304.0,
+      "long_wait_samples": 36789.0,
+      "long_wait_at_shared_store_fraction": 0.9778194569028785
+    },
+    {
+      "name": "profile_32_32_32_m64",
+      "device_ms": 0.47593599999999997,
+      "ordinary_ms": 0.478009605,
+      "duration_relative_difference": -0.004337998605697502,
+      "active_clock_GHz": 2.946499,
+      "clock_unit": "Ghz",
+      "read_sectors": 196608.0,
+      "hit_sectors": 114688.0,
+      "miss_sectors": 81920.0,
+      "long_wait_samples": 1496.0,
+      "long_wait_at_shared_store_fraction": 0.9745989304812834
+    },
+    {
+      "name": "profile_64_48_32_m4096",
+      "device_ms": 0.814016,
+      "ordinary_ms": 0.810988796,
+      "duration_relative_difference": 0.003732732209040357,
+      "active_clock_GHz": 2.913751,
+      "clock_unit": "Ghz",
+      "read_sectors": 7340032.0,
+      "hit_sectors": 5193728.0,
+      "miss_sectors": 2146304.0,
+      "long_wait_samples": 51035.0,
+      "long_wait_at_shared_store_fraction": 0.9650044087391006
+    },
+    {
+      "name": "profile_64_48_32_m64",
+      "device_ms": 0.8378239999999999,
+      "ordinary_ms": 0.83559041,
+      "duration_relative_difference": 0.0026730680166613396,
+      "active_clock_GHz": 2.947149,
+      "clock_unit": "Ghz",
+      "read_sectors": 114688.0,
+      "hit_sectors": 32768.0,
+      "miss_sectors": 81920.0,
+      "long_wait_samples": 867.0,
+      "long_wait_at_shared_store_fraction": 0.9677047289504037
+    }
+  ],
+  "frozen_hashes_unchanged": true,
+  "ordinary_original_cases": 28,
+  "ordinary_confirmation_cases": 6,
+  "ordinary_path_measurements": 504,
+  "all_correct": true,
+  "all_spill_free": true,
+  "full_physically_grounded_model_complete": false,
+  "replacement_hashes_unchanged": true,
+  "total_original_full_output_checks_including_excluded": 36,
+  "excluded_common_domain_confirmation_checks": 2,
+  "profile_count": 4
+}

@@ -1,0 +1,34 @@
+{
+  "all_passed": true,
+  "checked_output_words": 320,
+  "cases": [
+    {
+      "interval": 1,
+      "return_delay": 9,
+      "checked_words": 160,
+      "stdout": "SHARED_SERVICE_PASS checks=160 interval=1 delay=9\n- rtl/components/warp_shared_read_service_tb.sv:88: Verilog $finish\n- S i m u l a t i o n   R e p o r t: Verilator 5.050 2026-07-01\n- Verilator: $finish at 770ps; walltime 0.000 s; speed 4.231 us/s\n- Verilator: cpu 0.000 s on 1 threads; allocated 2 MB\n"
+    },
+    {
+      "interval": 3,
+      "return_delay": 1,
+      "checked_words": 160,
+      "stdout": "SHARED_SERVICE_PASS checks=160 interval=3 delay=1\n- rtl/components/warp_shared_read_service_tb.sv:88: Verilog $finish\n- S i m u l a t i o n   R e p o r t: Verilator 5.050 2026-07-01\n- Verilator: $finish at 1ns; walltime 0.000 s; speed 5.830 us/s\n- Verilator: cpu 0.000 s on 1 threads; allocated 2 MB\n"
+    }
+  ],
+  "checks": [
+    "scalar broadcast and 2/4/32 bank packages",
+    "four concurrent requests and capacity backpressure",
+    "acceptance snapshots",
+    "FIFO response identities",
+    "stable stalled response",
+    "exact isolated completion edge",
+    "reset cancellation and slot reclamation",
+    "misalignment and duplicate ID rejection"
+  ],
+  "source_sha256": {
+    "warp_shared_read_service.sv": "82df6598d987c0df1c5be4db8ec504951f2d958783390d7b458cbde6b904500b",
+    "warp_shared_read_service_tb.sv": "2188e027c52edea82183ee9c20a60150efd8a7de98c36db3817556f555fc9c68"
+  },
+  "timing_parameters_identified": 0,
+  "evidence_boundary": "Bank-work rule matches measured scalar contract; FIFO policy, queue capacity, initiation and return delays remain model hypotheses. This is local protocol verification, not RTX5090 timing validation."
+}

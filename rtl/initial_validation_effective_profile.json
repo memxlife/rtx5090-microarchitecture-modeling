@@ -1,0 +1,186 @@
+{
+  "purpose": "Measured effective timing costs for the tested instruction paths; consume these instead of adding separate intrinsic delays. These values do not calibrate full-chip RTL.",
+  "source": "parameter_sweep/initial_validation_20261003_222837/round_001_evidence.json",
+  "shared_scalar_dependency": {
+    "base_SM_cycles": 28,
+    "additional_SM_cycles_per_distinct_bank_word": 2,
+    "same_word_broadcast_extra_SM_cycles": 0,
+    "bank_count": 32,
+    "bank_word_bytes": 4,
+    "formula": "28 + 2 * (maximum distinct words in any bank - 1)",
+    "scope": "One full warp, scalar explicit LDS, 32 KiB shared allocation, two chain lengths."
+  },
+  "L1_dependent_ca": {
+    "effective_SM_cycles": 43.20947265625,
+    "working_set_bytes": 8192,
+    "replaces_compound_path": true,
+    "do_not_add": [
+      "separate_issue",
+      "address_generation",
+      "dependency_wakeup",
+      "intrinsic_cache_hit_latency"
+    ]
+  },
+  "L2_dependent_cg": {
+    "effective_SM_cycles": 357.0791015625,
+    "working_set_bytes": 8192,
+    "L1_bypassed": true,
+    "replaces_compound_path": true,
+    "do_not_add": [
+      "separate_issue",
+      "address_generation",
+      "dependency_wakeup",
+      "intrinsic_cache_hit_latency"
+    ]
+  },
+  "L1_working_set": {
+    "preference_shared_percent": 32,
+    "cache_friendly_KiB": 64,
+    "degraded_KiB": 96,
+    "exact_capacity_identified": false
+  },
+  "model_updates": [
+    {
+      "ids": [
+        "T027",
+        "T029",
+        "F052",
+        "F053"
+      ],
+      "change": "Retain the measured 28-cycle shared recurrence, add two cycles per extra distinct bank word, and use zero extra delay for the tested same-word broadcast."
+    },
+    {
+      "ids": [
+        "T031",
+        "T035"
+      ],
+      "change": "Use 43.20947 and 357.07910 cycles for the complete tested dependent ca/cg paths; retain 32 and 300 only as unseparated intrinsic hypotheses."
+    },
+    {
+      "ids": [
+        "F048",
+        "F054"
+      ],
+      "change": "Replace the assertion that a 32-percent carveout preference guarantees 32 KiB shared with the queried preference contract and measured working-set bounds."
+    },
+    {
+      "ids": [
+        "T042"
+      ],
+      "change": "Use the measured 1.476 TB/s aggregate read-plus-write service prior for this streaming-copy path, equivalent to 0.06394 reference cycles per 32 bytes at 2.95 GHz; keep separate from nominal 1.792 TB/s bandwidth."
+    },
+    {
+      "ids": [
+        "T017",
+        "T018",
+        "T019",
+        "F029"
+      ],
+      "change": "Add the compiled HMMA effective throughput envelope; do not treat 16/4 intrinsic hypotheses as measured dependency or service times."
+    },
+    {
+      "ids": [
+        "F029",
+        "phase_composition_interaction"
+      ],
+      "change": "Replace pure addition for the tested compiled GEMM family with an explicit provisional interaction term; coefficient calibrated from separate phase/full runs, then frozen before two new K3072 measurements."
+    }
+  ],
+  "full_GEMM_error_percent": 5.812245946148686,
+  "full_GEMM_prediction_refit": false,
+  "shared_independent_validation": [
+    {
+      "stride": 3,
+      "frozen_expected": 28,
+      "actual": 28.0,
+      "all32lanes_correct": true
+    },
+    {
+      "stride": 6,
+      "frozen_expected": 30,
+      "actual": 30.0,
+      "all32lanes_correct": true
+    }
+  ],
+  "compiled_native_HMMA": {
+    "observations": [
+      {
+        "warps": 1,
+        "chains": 1,
+        "effective_cycles_per_native_HMMA": 34.5390625
+      },
+      {
+        "warps": 1,
+        "chains": 4,
+        "effective_cycles_per_native_HMMA": 32.0040283203125
+      },
+      {
+        "warps": 4,
+        "chains": 1,
+        "effective_cycles_per_native_HMMA": 34.53857421875
+      },
+      {
+        "warps": 4,
+        "chains": 4,
+        "effective_cycles_per_native_HMMA": 32.0372314453125
+      },
+      {
+        "warps": 8,
+        "chains": 1,
+        "effective_cycles_per_native_HMMA": 64.29833984375
+      },
+      {
+        "warps": 8,
+        "chains": 4,
+        "effective_cycles_per_native_HMMA": 64.01007080078125
+      }
+    ],
+    "scope": "Native BF16 HMMA plus compiled NOP, wait controls, loop, and accumulator reduction. These are effective sequence costs, not bare instruction latency.",
+    "aggregate_saturation_prior": "About one native operation per eight SM cycles across four active warps in this compiled probe.",
+    "do_not_override_intrinsic_T017_T018": true
+  },
+  "aggregate_streaming_copy": {
+    "samples": [
+      {
+        "correct_sampled_words": 4,
+        "repeat": 0,
+        "event_ms_10copies": 7.27814388,
+        "read_plus_write_GBs": 1475.29623
+      },
+      {
+        "correct_sampled_words": 4,
+        "repeat": 1,
+        "event_ms_10copies": 7.26115179,
+        "read_plus_write_GBs": 1478.74863
+      },
+      {
+        "correct_sampled_words": 4,
+        "repeat": 2,
+        "event_ms_10copies": 7.27331209,
+        "read_plus_write_GBs": 1476.2763
+      }
+    ],
+    "median_read_plus_write_GBs": 1476.2763,
+    "effective_cycles_per32B_at2950MHz": 0.06394466943620242,
+    "nominal_profile": 0.0525,
+    "test_checked_words": 12,
+    "not_fullcopy_correctness_check": true,
+    "scope": "Read-plus-write traffic, ten large device copies per event. Correctness sampled at four words per repetition. Use the measured byte/s rate for the same aggregate traffic convention.",
+    "measured_GBs": 1476.2763,
+    "cycle_reference_MHz": 2950
+  },
+  "compiled_GEMM_interaction": {
+    "fraction": 0.1979886039191788,
+    "unit": "fraction of the smaller net phase cost",
+    "scope": "32x32 tile; one matched calibration case, two K3072 confirmation workloads; not an identified overlap fraction of a hardware pipeline.",
+    "formula": "phase1 + phase2 - phase0 - coefficient * min(phase1-phase0,phase2-phase0)",
+    "calibration_receipt": "parameter_sweep/initial_validation_20261003_222837/phase_composition_evidence.json",
+    "prediction_receipt": "parameter_sweep/initial_validation_20261003_222837/interaction_candidate_frozen.json",
+    "confirmation_receipt": "parameter_sweep/initial_validation_20261003_222837/interaction_confirmation_evidence.json",
+    "confirmation_absolute_errors_percent": [
+      4.613750271490557,
+      3.718279459357773
+    ],
+    "no_refit_after_results": true
+  }
+}

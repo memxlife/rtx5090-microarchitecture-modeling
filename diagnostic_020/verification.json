@@ -1,0 +1,173 @@
+{
+  "cases": 14,
+  "checks": 126,
+  "compiled_body_identical": true,
+  "all_correct": true,
+  "all_spill_free": true,
+  "profiles": [
+    {
+      "file": "profile_w4_mode0_p0.raw.csv",
+      "mode": 0,
+      "l2_hit_fraction": 0.0,
+      "expected_l2_hit_fraction": 0,
+      "l1_hit_fraction": 0.0,
+      "accepted": true,
+      "global_requests": 32768.0,
+      "shared_store_packages": 32768.0,
+      "dram_bytes": 2142208.0
+    },
+    {
+      "file": "profile_w4_mode1_p0.raw.csv",
+      "mode": 1,
+      "l2_hit_fraction": 1.0,
+      "expected_l2_hit_fraction": 1,
+      "l1_hit_fraction": 0.0,
+      "accepted": true,
+      "global_requests": 32768.0,
+      "shared_store_packages": 32768.0,
+      "dram_bytes": 256.0
+    },
+    {
+      "file": "profile_w4_mode2_p0.raw.csv",
+      "mode": 2,
+      "l2_hit_fraction": 0.75,
+      "expected_l2_hit_fraction": 0.75,
+      "l1_hit_fraction": 0.0,
+      "accepted": true,
+      "global_requests": 32768.0,
+      "shared_store_packages": 32768.0,
+      "dram_bytes": 525056.0
+    },
+    {
+      "file": "profile_w4_mode2_p3.raw.csv",
+      "mode": 2,
+      "l2_hit_fraction": 0.75,
+      "expected_l2_hit_fraction": 0.75,
+      "l1_hit_fraction": 0.0,
+      "accepted": true,
+      "global_requests": 32768.0,
+      "shared_store_packages": 32768.0,
+      "dram_bytes": 524544.0
+    },
+    {
+      "file": "profile_w4_mode3_p0.raw.csv",
+      "mode": 3,
+      "l2_hit_fraction": 0.75,
+      "expected_l2_hit_fraction": 0.75,
+      "l1_hit_fraction": 0.0,
+      "accepted": true,
+      "global_requests": 32768.0,
+      "shared_store_packages": 32768.0,
+      "dram_bytes": 525824.0
+    },
+    {
+      "file": "profile_w4_mode4_p0.raw.csv",
+      "mode": 4,
+      "l2_hit_fraction": 0.25,
+      "expected_l2_hit_fraction": 0.25,
+      "l1_hit_fraction": 0.0,
+      "accepted": true,
+      "global_requests": 32768.0,
+      "shared_store_packages": 32768.0,
+      "dram_bytes": 1593856.0
+    },
+    {
+      "file": "profile_w4_mode5_p0.raw.csv",
+      "mode": 5,
+      "l2_hit_fraction": 0.5,
+      "expected_l2_hit_fraction": 0.5,
+      "l1_hit_fraction": 0.0,
+      "accepted": true,
+      "global_requests": 32768.0,
+      "shared_store_packages": 32768.0,
+      "dram_bytes": 1061888.0
+    }
+  ],
+  "slopes": [
+    {
+      "warps": 4,
+      "mode": 0,
+      "position": 0,
+      "measured_window_cycles": 1013.7428385416666,
+      "critical_interval_relative_error": null,
+      "average_relative_error": null
+    },
+    {
+      "warps": 4,
+      "mode": 1,
+      "position": 0,
+      "measured_window_cycles": 398.7076822916667,
+      "critical_interval_relative_error": null,
+      "average_relative_error": null
+    },
+    {
+      "warps": 4,
+      "mode": 2,
+      "position": 0,
+      "measured_window_cycles": 969.486328125,
+      "critical_interval_relative_error": 0.011989878660775983,
+      "average_relative_error": 0.42917161082537403
+    },
+    {
+      "warps": 4,
+      "mode": 2,
+      "position": 3,
+      "measured_window_cycles": 959.5305989583334,
+      "critical_interval_relative_error": 0.02248990561384245,
+      "average_relative_error": 0.42324890981986507
+    },
+    {
+      "warps": 4,
+      "mode": 3,
+      "position": 0,
+      "measured_window_cycles": 552.9928385416666,
+      "critical_interval_relative_error": null,
+      "average_relative_error": 0.0007549473332258062
+    },
+    {
+      "warps": 1,
+      "mode": 2,
+      "position": 0,
+      "measured_window_cycles": 968.1419270833334,
+      "critical_interval_relative_error": 0.0133951687416698,
+      "average_relative_error": 0.42837893543393507
+    },
+    {
+      "warps": 8,
+      "mode": 2,
+      "position": 0,
+      "measured_window_cycles": 974.4192708333334,
+      "critical_interval_relative_error": 0.006866736865173395,
+      "average_relative_error": 0.4320613974135236
+    }
+  ],
+  "profile_controls_complete": true,
+  "critical_model_accepted": true,
+  "no_gemm_fit": true,
+  "full_model_complete": false,
+  "fresh_confirmation": {
+    "cases": 4,
+    "checks": 36,
+    "compiled_body_identical": true,
+    "predictions": [
+      {
+        "mode": 4,
+        "warm_fraction": 0.25,
+        "external_requests": 3,
+        "predicted_window_cycles": 1003.9447699652778,
+        "measured_window_cycles": 1002.107421875,
+        "relative_error": 0.0018334841656396932
+      },
+      {
+        "mode": 5,
+        "warm_fraction": 0.5,
+        "external_requests": 2,
+        "predicted_window_cycles": 992.5275607638888,
+        "measured_window_cycles": 980.068359375,
+        "relative_error": 0.012712584045498791
+      }
+    ],
+    "accepted": true
+  },
+  "bounded_mixed_component_accepted": true
+}

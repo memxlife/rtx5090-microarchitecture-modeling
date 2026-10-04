@@ -1,0 +1,11 @@
+{
+  "same_launch_cycles_output_address_coverage_cache_counters": true,
+  "before": [
+    "LARGE_TIMING_PASS launch=0 M=64 N=96 K=64 checked=6144 cycles=40547 peak_blocks=4 l2_requests=1536 hits=522 misses=1014 merges=278 fills=736",
+    "LARGE_TIMING_PASS launch=1 M=64 N=96 K=64 checked=6144 cycles=40799 peak_blocks=4 l2_requests=3072 hits=1084 misses=1988 merges=552 fills=1436"
+  ],
+  "after": [
+    "LARGE_TIMING_PASS launch=0 M=64 N=96 K=64 checked=6144 cycles=40547 peak_blocks=4 l2_requests=1536 hits=522 misses=1014 merges=278 fills=736",
+    "LARGE_TIMING_PASS launch=1 M=64 N=96 K=64 checked=6144 cycles=40799 peak_blocks=4 l2_requests=3072 hits=1084 misses=1988 merges=552 fills=1436"
+  ]
+}

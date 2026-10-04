@@ -1,0 +1,1266 @@
+{
+  "track": "Native CUDA/PTX/actual optimized library evidence and connected implementation audit",
+  "batch": 1,
+  "new_remote_commands": 0,
+  "new_GPU_launches": 0,
+  "assumption_fields_checked": 118,
+  "counts": {
+    "supported_model_level_provisional_consistency": 13,
+    "untested": 97,
+    "contradicted_implementation_mapping": 2,
+    "supported_scoped_observation": 6
+  },
+  "definition": "Supported scoped observation means one saved empirical/source/native check supports the stated subcase. Model-level consistency means exercised numerical implementation choices can reproduce correct values; it does not validate hardware timing/private structure. Implementation contradictions require profile-to-code repair, not hardware-value rejection. Untested entries received a negative sufficiency check and retain their engineering baseline.",
+  "rows": [
+    {
+      "id": "F003",
+      "name": "Block placement policy",
+      "profile_baseline": "round-robin across eligible SMs",
+      "result": "supported_model_level_provisional_consistency",
+      "evidence": [
+        "numerical/resident_multi_sm_nb_l2_verification.json"
+      ],
+      "interpretation": "RR eligible-SM dispatch baseline produces correct disjoint grid outputs under the two-SM test; not hardware dispatch-policy identification.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F004",
+      "name": "Dispatch arbitration policy",
+      "profile_baseline": "oldest ready CTA first",
+      "result": "untested",
+      "evidence": [],
+      "interpretation": "saved native/library evidence does not identify this private value, or the connected model does not exercise its exact baseline",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F005",
+      "name": "Instruction-cache capacity",
+      "profile_baseline": 16384,
+      "result": "untested",
+      "evidence": [],
+      "interpretation": "saved native/library evidence does not identify this private value, or the connected model does not exercise its exact baseline",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F006",
+      "name": "Instruction-cache sets",
+      "profile_baseline": 64,
+      "result": "untested",
+      "evidence": [],
+      "interpretation": "saved native/library evidence does not identify this private value, or the connected model does not exercise its exact baseline",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F007",
+      "name": "Instruction-cache associativity",
+      "profile_baseline": 4,
+      "result": "untested",
+      "evidence": [],
+      "interpretation": "saved native/library evidence does not identify this private value, or the connected model does not exercise its exact baseline",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F008",
+      "name": "Instruction-cache mapping",
+      "profile_baseline": "set=(instruction_byte_address//64)%64; partition-private",
+      "result": "untested",
+      "evidence": [],
+      "interpretation": "saved native/library evidence does not identify this private value, or the connected model does not exercise its exact baseline",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F009",
+      "name": "Instruction-cache replacement policy",
+      "profile_baseline": "LRU",
+      "result": "untested",
+      "evidence": [],
+      "interpretation": "saved native/library evidence does not identify this private value, or the connected model does not exercise its exact baseline",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F011",
+      "name": "Divergence handling",
+      "profile_baseline": "active-lane mask with per-thread program counter; only enabled lanes execute",
+      "result": "untested",
+      "evidence": [],
+      "interpretation": "saved native/library evidence does not identify this private value, or the connected model does not exercise its exact baseline",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F012",
+      "name": "Reconvergence handling",
+      "profile_baseline": "explicit convergence tokens and active-mask restoration at annotated merge PCs",
+      "result": "untested",
+      "evidence": [],
+      "interpretation": "saved native/library evidence does not identify this private value, or the connected model does not exercise its exact baseline",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F014",
+      "name": "Warp-to-partition assignment",
+      "profile_baseline": "warp_id modulo 4",
+      "result": "untested",
+      "evidence": [],
+      "interpretation": "saved native/library evidence does not identify this private value, or the connected model does not exercise its exact baseline",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F016",
+      "name": "Multiple-issue compatibility rules",
+      "profile_baseline": "one issue per partition per cycle; mixed classes allowed across partitions subject to resource readiness",
+      "result": "untested",
+      "evidence": [],
+      "interpretation": "saved native/library evidence does not identify this private value, or the connected model does not exercise its exact baseline",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F017",
+      "name": "Instruction-class routing",
+      "profile_baseline": "route by native opcode and generic pointer address window; shared-window LD.E uses shared path",
+      "result": "untested",
+      "evidence": [],
+      "interpretation": "saved native/library evidence does not identify this private value, or the connected model does not exercise its exact baseline",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F018",
+      "name": "Arbitration policy",
+      "profile_baseline": "oldest-ready warp per partition with round-robin ties",
+      "result": "contradicted_implementation_mapping",
+      "evidence": [
+        "numerical/resident_native_stage_shared.sv"
+      ],
+      "interpretation": "Profile says oldest-ready per partition with RR ties; exercised engine is global RR eligible warp, with no ready-age or partition records. Model does not validate that baseline policy.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F019",
+      "name": "Register bank count",
+      "profile_baseline": 4,
+      "result": "untested",
+      "evidence": [],
+      "interpretation": "saved native/library evidence does not identify this private value, or the connected model does not exercise its exact baseline",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F020",
+      "name": "Register bank mapping",
+      "profile_baseline": "register index modulo 4",
+      "result": "untested",
+      "evidence": [],
+      "interpretation": "saved native/library evidence does not identify this private value, or the connected model does not exercise its exact baseline",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F021",
+      "name": "Read ports per register bank",
+      "profile_baseline": 2,
+      "result": "untested",
+      "evidence": [],
+      "interpretation": "saved native/library evidence does not identify this private value, or the connected model does not exercise its exact baseline",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F022",
+      "name": "Write ports per register bank",
+      "profile_baseline": 1,
+      "result": "untested",
+      "evidence": [],
+      "interpretation": "saved native/library evidence does not identify this private value, or the connected model does not exercise its exact baseline",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F023",
+      "name": "Operand collector capacity",
+      "profile_baseline": 8,
+      "result": "untested",
+      "evidence": [],
+      "interpretation": "saved native/library evidence does not identify this private value, or the connected model does not exercise its exact baseline",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F024",
+      "name": "Collector routing",
+      "profile_baseline": "allocate any free collector in opcode class; bank conflicts serialize reads",
+      "result": "untested",
+      "evidence": [],
+      "interpretation": "saved native/library evidence does not identify this private value, or the connected model does not exercise its exact baseline",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F025",
+      "name": "Writeback queue capacity",
+      "profile_baseline": 8,
+      "result": "untested",
+      "evidence": [],
+      "interpretation": "saved native/library evidence does not identify this private value, or the connected model does not exercise its exact baseline",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F026",
+      "name": "Writeback arbitration policy",
+      "profile_baseline": "oldest completed instruction first; tensor and scalar share final arbitration",
+      "result": "untested",
+      "evidence": [],
+      "interpretation": "saved native/library evidence does not identify this private value, or the connected model does not exercise its exact baseline",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F027",
+      "name": "Execution pipeline counts by class",
+      "profile_baseline": {
+        "FP32_INT32": 32,
+        "tensor_blocks": 1,
+        "SFU": 4,
+        "LSU": 4
+      },
+      "result": "untested",
+      "evidence": [],
+      "interpretation": "saved native/library evidence does not identify this private value, or the connected model does not exercise its exact baseline",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F028",
+      "name": "Supported numerical operation semantics",
+      "profile_baseline": "PTX specified rounding/FTZ; measured BF16 exceptional cases and supported FP32 semantics retained",
+      "result": "supported_scoped_observation",
+      "evidence": [
+        "parameter_sweep/bf16_exceptions/analysis.json"
+      ],
+      "interpretation": "Supported BF16 family raw exceptional outputs retain tested subnormal inputs/C, record NaN/overflow; no full arithmetic vocabulary or exact universal rounding contract.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F029",
+      "name": "Pipeline sharing rules",
+      "profile_baseline": "FP32 and INT32 share unified execution capacity; tensor and LSU are independently scheduled logical paths",
+      "result": "untested",
+      "evidence": [],
+      "interpretation": "saved native/library evidence does not identify this private value, or the connected model does not exercise its exact baseline",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F031",
+      "name": "Execution partition routing",
+      "profile_baseline": "issuing scheduler routes to its partition; shared services arbitrate SM-wide",
+      "result": "untested",
+      "evidence": [],
+      "interpretation": "saved native/library evidence does not identify this private value, or the connected model does not exercise its exact baseline",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F034",
+      "name": "Accumulation order",
+      "profile_baseline": "supported BF16 matrix oracle uses magnitude-aligned truncation before summation for tested cancellation family",
+      "result": "supported_scoped_observation",
+      "evidence": [
+        "parameter_sweep/bf16_exceptions/parameter_updates.json"
+      ],
+      "interpretation": "Magnitude-aligned truncation predicts162 independent cancellation confirmation cases; simple sequential FP32 accumulation is explicitly falsified in finite_cancellation_regression.json. General dot distributions remain open.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F035",
+      "name": "Exceptional numerical behavior",
+      "profile_baseline": "preserve measured BF16/FP32 subnormals; overflow to infinity; use recorded NaN and zero-times-infinity results",
+      "result": "supported_scoped_observation",
+      "evidence": [
+        "parameter_sweep/bf16_exceptions/analysis.json"
+      ],
+      "interpretation": "14 exact-bit cases across42 saved launches: smallest BF16 subnormal0x10000, FP32 subnormalC0x1, overflow0x7f800000, zero-times-inf/NaN0x7fffffff; all exceptional families not established.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F036",
+      "name": "Load queue capacity",
+      "profile_baseline": 16,
+      "result": "untested",
+      "evidence": [],
+      "interpretation": "saved native/library evidence does not identify this private value, or the connected model does not exercise its exact baseline",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F037",
+      "name": "Store queue capacity",
+      "profile_baseline": 8,
+      "result": "untested",
+      "evidence": [],
+      "interpretation": "saved native/library evidence does not identify this private value, or the connected model does not exercise its exact baseline",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F038",
+      "name": "Outstanding transaction limit per warp",
+      "profile_baseline": 8,
+      "result": "untested",
+      "evidence": [],
+      "interpretation": "saved native/library evidence does not identify this private value, or the connected model does not exercise its exact baseline",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F039",
+      "name": "Outstanding transaction limit per SM",
+      "profile_baseline": 64,
+      "result": "untested",
+      "evidence": [],
+      "interpretation": "saved native/library evidence does not identify this private value, or the connected model does not exercise its exact baseline",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F040",
+      "name": "Native instruction coalescing rules",
+      "profile_baseline": "global coalescing uses touched 32-byte segments of enabled lanes; shared uses supported measured package rules",
+      "result": "supported_scoped_observation",
+      "evidence": [
+        "parameter_sweep/generic_shared/analysis.json"
+      ],
+      "interpretation": "Supported generic shared/global load path observations constrain scalar service and touched32B sectors; optimized library contains128-bit global/shared operations, not proof of all coalescing rules.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F041",
+      "name": "Memory ordering rules",
+      "profile_baseline": "preserve program dependencies and explicit scoped fences; permit independent request completion out of order",
+      "result": "untested",
+      "evidence": [],
+      "interpretation": "saved native/library evidence does not identify this private value, or the connected model does not exercise its exact baseline",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F043",
+      "name": "Supported page sizes",
+      "profile_baseline": [
+        4096,
+        65536,
+        2097152
+      ],
+      "result": "untested",
+      "evidence": [],
+      "interpretation": "saved native/library evidence does not identify this private value, or the connected model does not exercise its exact baseline",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F044",
+      "name": "Translation-cache organization",
+      "profile_baseline": {
+        "L1_entries": 128,
+        "L1_ways": 4,
+        "L2_entries": 2048,
+        "L2_ways": 8
+      },
+      "result": "untested",
+      "evidence": [],
+      "interpretation": "saved native/library evidence does not identify this private value, or the connected model does not exercise its exact baseline",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F045",
+      "name": "Translation mapping/replacement rules",
+      "profile_baseline": "VPN modulo set count; LRU within set",
+      "result": "untested",
+      "evidence": [],
+      "interpretation": "saved native/library evidence does not identify this private value, or the connected model does not exercise its exact baseline",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F046",
+      "name": "Translation request capacity",
+      "profile_baseline": 32,
+      "result": "untested",
+      "evidence": [],
+      "interpretation": "saved native/library evidence does not identify this private value, or the connected model does not exercise its exact baseline",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F047",
+      "name": "Page-walk organization",
+      "profile_baseline": {
+        "levels": 4,
+        "walkers": 4,
+        "walk_cache_entries": 32
+      },
+      "result": "untested",
+      "evidence": [],
+      "interpretation": "saved native/library evidence does not identify this private value, or the connected model does not exercise its exact baseline",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F048",
+      "name": "L1/shared partition configuration",
+      "profile_baseline": {
+        "shared_KiB": 32,
+        "unified_KiB": 128,
+        "L1_usable_KiB": 64
+      },
+      "result": "untested",
+      "evidence": [],
+      "interpretation": "saved native/library evidence does not identify this private value, or the connected model does not exercise its exact baseline",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F049",
+      "name": "Read ports per shared bank",
+      "profile_baseline": 1,
+      "result": "supported_model_level_provisional_consistency",
+      "evidence": [
+        "components/warp_shared_read_service_verification.json"
+      ],
+      "interpretation": "One distinct32-bit word per bank per modeled package is executable and numerically consistent; measured service packages do not identify physical read-port count.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F050",
+      "name": "Write ports per shared bank",
+      "profile_baseline": 1,
+      "result": "supported_model_level_provisional_consistency",
+      "evidence": [
+        "numerical/studied_output_scratch_verification.json"
+      ],
+      "interpretation": "One scratch word per bank per granted package reaches correct outputs; physical write-port count remains unmeasured.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F051",
+      "name": "Shared request queue capacity",
+      "profile_baseline": 32,
+      "result": "untested",
+      "evidence": [],
+      "interpretation": "saved native/library evidence does not identify this private value, or the connected model does not exercise its exact baseline",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F052",
+      "name": "Warp transaction splitting rules",
+      "profile_baseline": {
+        "scalar": "maximum distinct words in any bank",
+        "vector64": "two 128-byte logical phases",
+        "vector128": "four 128-byte logical phases; same-vector reads count occupied 16-lane halves"
+      },
+      "result": "supported_scoped_observation",
+      "evidence": [
+        "parameter_sweep/wide_shared/analysis.json"
+      ],
+      "interpretation": "Supported scalar/vector shared package rules are saved measured subcontracts; vector grouping does not identify physical bank ports.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F053",
+      "name": "Broadcast rules",
+      "profile_baseline": "Same-location reads broadcast; independent-bank broadcasts multicast",
+      "result": "supported_scoped_observation",
+      "evidence": [
+        "missing_parameter_registry.json",
+        "parameter_sweep/wide_shared/analysis.json"
+      ],
+      "interpretation": "Saved official CUDA shared-bank broadcast contract identifies same-location ordinary shared reads; measured wide_shared patterns corroborate scoped broadcast package reduction. Delay and untested instruction families remain separate.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F054",
+      "name": "L1 capacity in selected partition",
+      "profile_baseline": 65536,
+      "result": "supported_model_level_provisional_consistency",
+      "evidence": [
+        "numerical/resident_multi_sm_nb_l2_verification.json"
+      ],
+      "interpretation": "Private cache64sets*8ways*128B is64KiB and complete numerical grids pass. This only supports model feasibility at selected testgeometry, not actual usable L1 capacity.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F055",
+      "name": "L1 set count",
+      "profile_baseline": 64,
+      "result": "supported_model_level_provisional_consistency",
+      "evidence": [
+        "numerical/resident_multi_sm_nb_l2_verification.json"
+      ],
+      "interpretation": "Model private64-set cache participates in passing grid values; physical set count untested.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F056",
+      "name": "L1 associativity",
+      "profile_baseline": 8,
+      "result": "supported_model_level_provisional_consistency",
+      "evidence": [
+        "numerical/resident_multi_sm_nb_l2_verification.json"
+      ],
+      "interpretation": "Model private8-way cache participates in passing grid values; physical associativity untested.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F057",
+      "name": "L1 address mapping",
+      "profile_baseline": "set=(byte_address//128)%64",
+      "result": "supported_model_level_provisional_consistency",
+      "evidence": [
+        "components/sector_read_cache.sv"
+      ],
+      "interpretation": "Private model set=(address/128)%64 matches provisional lookup function; numerical cache/grid receipts demonstrate correct values, not address hashing identification.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F058",
+      "name": "L1 replacement policy",
+      "profile_baseline": "pseudo-LRU per set",
+      "result": "contradicted_implementation_mapping",
+      "evidence": [
+        "components/sector_read_cache.sv"
+      ],
+      "interpretation": "Profile says pseudo-LRU, but the exercised private cache uses advancing victim pointer, not pseudo-LRU. This is implementation/profile mismatch, not evidence against hardware pseudo-LRU.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F059",
+      "name": "L1 write policy",
+      "profile_baseline": "Global store bypasses L1; no write allocation",
+      "result": "supported_model_level_provisional_consistency",
+      "evidence": [
+        "numerical/resident_multi_sm_nb_l2_verification.json"
+      ],
+      "interpretation": "Output stores bypass private input caches and correctly update disjoint C. Aliasing/writing cached inputs is excluded; actual L1 write policy untested.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F060",
+      "name": "L1 pending-miss capacity",
+      "profile_baseline": 64,
+      "result": "untested",
+      "evidence": [],
+      "interpretation": "saved native/library evidence does not identify this private value, or the connected model does not exercise its exact baseline",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F061",
+      "name": "L1 pending-consumer merging rules",
+      "profile_baseline": "Merge identical 32-byte sectors into one pending fetch; retain all consumers",
+      "result": "untested",
+      "evidence": [],
+      "interpretation": "saved native/library evidence does not identify this private value, or the connected model does not exercise its exact baseline",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F062",
+      "name": "L1 fill/return queue capacities",
+      "profile_baseline": {
+        "fill_entries": 32,
+        "return_entries": 64
+      },
+      "result": "untested",
+      "evidence": [],
+      "interpretation": "saved native/library evidence does not identify this private value, or the connected model does not exercise its exact baseline",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F063",
+      "name": "L2 set count",
+      "profile_baseline": 1024,
+      "result": "untested",
+      "evidence": [],
+      "interpretation": "saved native/library evidence does not identify this private value, or the connected model does not exercise its exact baseline",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F064",
+      "name": "L2 associativity",
+      "profile_baseline": 16,
+      "result": "untested",
+      "evidence": [],
+      "interpretation": "saved native/library evidence does not identify this private value, or the connected model does not exercise its exact baseline",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F065",
+      "name": "L2 slice organization/count",
+      "profile_baseline": {
+        "active_model_slices": 48,
+        "nominal_reported_slices": 64,
+        "FBPs": 8,
+        "nominal_slices_per_FBP": 8
+      },
+      "result": "untested",
+      "evidence": [],
+      "interpretation": "saved native/library evidence does not identify this private value, or the connected model does not exercise its exact baseline",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F066",
+      "name": "L2 slice address mapping",
+      "profile_baseline": "slice=(byte_address//128)%active_model_slices",
+      "result": "untested",
+      "evidence": [],
+      "interpretation": "saved native/library evidence does not identify this private value, or the connected model does not exercise its exact baseline",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F067",
+      "name": "L2 set address mapping",
+      "profile_baseline": "set=(byte_address//(128*active_model_slices))%sets_per_slice",
+      "result": "untested",
+      "evidence": [],
+      "interpretation": "saved native/library evidence does not identify this private value, or the connected model does not exercise its exact baseline",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F068",
+      "name": "L2 lookup ports",
+      "profile_baseline": 1,
+      "result": "untested",
+      "evidence": [],
+      "interpretation": "saved native/library evidence does not identify this private value, or the connected model does not exercise its exact baseline",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F069",
+      "name": "L2 replacement policy",
+      "profile_baseline": "pseudo-LRU with persisting-line priority when policy enabled",
+      "result": "untested",
+      "evidence": [],
+      "interpretation": "saved native/library evidence does not identify this private value, or the connected model does not exercise its exact baseline",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F070",
+      "name": "L2 write policy",
+      "profile_baseline": "Write-back/write-allocate; dirty eviction issues DRAM write",
+      "result": "untested",
+      "evidence": [],
+      "interpretation": "saved native/library evidence does not identify this private value, or the connected model does not exercise its exact baseline",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F071",
+      "name": "L2 pending-miss capacity",
+      "profile_baseline": 128,
+      "result": "untested",
+      "evidence": [],
+      "interpretation": "saved native/library evidence does not identify this private value, or the connected model does not exercise its exact baseline",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F072",
+      "name": "L2 pending-consumer merging rules",
+      "profile_baseline": "Merge requests to identical pending 32-byte sector; wake all registered consumers",
+      "result": "supported_model_level_provisional_consistency",
+      "evidence": [
+        "numerical/multi_sm_nonblocking_l2_verification.json"
+      ],
+      "interpretation": "Same pending32B sector merges multiple owner requests;7accepts/1hit/6miss/2merge/4fills, including same-edge merge+fill, pass. Private physical merge limits remain untested.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F073",
+      "name": "L2 request queue capacity",
+      "profile_baseline": 64,
+      "result": "untested",
+      "evidence": [],
+      "interpretation": "saved native/library evidence does not identify this private value, or the connected model does not exercise its exact baseline",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F074",
+      "name": "L2 fill/return queue capacities",
+      "profile_baseline": {
+        "fill_entries": 64,
+        "return_entries": 64
+      },
+      "result": "untested",
+      "evidence": [],
+      "interpretation": "saved native/library evidence does not identify this private value, or the connected model does not exercise its exact baseline",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F075",
+      "name": "Channel/bank organization",
+      "profile_baseline": {
+        "controllers": 16,
+        "bits_per_controller": 32,
+        "banks_per_controller": 16
+      },
+      "result": "untested",
+      "evidence": [],
+      "interpretation": "saved native/library evidence does not identify this private value, or the connected model does not exercise its exact baseline",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F076",
+      "name": "Address-to-channel/bank mapping",
+      "profile_baseline": {
+        "channel": "(address//256)%16",
+        "bank": "(address//32768)%16",
+        "row": "address//524288",
+        "column": "(address%256)+256*((address//4096)%8)"
+      },
+      "result": "untested",
+      "evidence": [],
+      "interpretation": "saved native/library evidence does not identify this private value, or the connected model does not exercise its exact baseline",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F077",
+      "name": "Controller queue capacities",
+      "profile_baseline": {
+        "read_entries": 64,
+        "write_entries": 64
+      },
+      "result": "untested",
+      "evidence": [],
+      "interpretation": "saved native/library evidence does not identify this private value, or the connected model does not exercise its exact baseline",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F078",
+      "name": "Controller arbitration policy",
+      "profile_baseline": "FR-FCFS: ready row hits first, then oldest; fairness after64 selections",
+      "result": "untested",
+      "evidence": [],
+      "interpretation": "saved native/library evidence does not identify this private value, or the connected model does not exercise its exact baseline",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F079",
+      "name": "Row-state/command rules",
+      "profile_baseline": {
+        "row_bytes": 2048,
+        "open_page": true,
+        "one_open_row_per_bank": true
+      },
+      "result": "untested",
+      "evidence": [],
+      "interpretation": "saved native/library evidence does not identify this private value, or the connected model does not exercise its exact baseline",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F080",
+      "name": "Write handling policy",
+      "profile_baseline": {
+        "write_buffer_entries": 64,
+        "drain_high_watermark": 48,
+        "drain_low_watermark": 16,
+        "merge_same_sector": true
+      },
+      "result": "untested",
+      "evidence": [],
+      "interpretation": "saved native/library evidence does not identify this private value, or the connected model does not exercise its exact baseline",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F082",
+      "name": "Barrier generation rules",
+      "profile_baseline": {
+        "generation_initial": 0,
+        "generation_increment": 1,
+        "release_when": "participant arrival count reaches configured count",
+        "reuse": "clear arrivals before accepting next generation"
+      },
+      "result": "supported_model_level_provisional_consistency",
+      "evidence": [
+        "components/cta_generation_barrier_verification.json"
+      ],
+      "interpretation": "Generation0,+1-afterrelease contract is executable and rejects stale/duplicate arrivals; counter storage width is a model choice.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F084",
+      "name": "Output-store acknowledgment semantics",
+      "profile_baseline": {
+        "store_ack": "backing memory accepts and commits modeled store",
+        "pending_store_counter_bits": 16,
+        "thread_exit_waits_for_pending_stores": true
+      },
+      "result": "supported_model_level_provisional_consistency",
+      "evidence": [
+        "numerical/resident_multi_sm_nb_l2_verification.json"
+      ],
+      "interpretation": "Resources remain held until modeled backing commits/acks all outputstores; full output values pass. Counter-width and device visibility circuit untested.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F085",
+      "name": "Whole-grid completion rules",
+      "profile_baseline": {
+        "grid_done": "all CTA threads exited and modeled pending stores returned",
+        "completion_collection": "central outstanding-CTA counter",
+        "stream_event_visible_after_grid_done": true
+      },
+      "result": "supported_model_level_provisional_consistency",
+      "evidence": [
+        "numerical/resident_multi_sm_nb_l2_verification.json"
+      ],
+      "interpretation": "Central grid completion follows all child outputacks and retirement; grid values/helddone pass. CUDA stream-event implementation unmodeled.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "F087",
+      "name": "Cross-domain transfer protocol",
+      "profile_baseline": {
+        "protocol": "dual-clock ready/valid FIFO",
+        "depth": 4,
+        "synchronizer_stages": 2,
+        "ordering": "FIFO; no loss/duplication"
+      },
+      "result": "untested",
+      "evidence": [],
+      "interpretation": "saved native/library evidence does not identify this private value, or the connected model does not exercise its exact baseline",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "T001",
+      "name": "Block admission delay",
+      "profile_baseline": 32,
+      "result": "untested",
+      "evidence": [],
+      "interpretation": "saved native/library evidence does not identify this private value, or the connected model does not exercise its exact baseline",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "T002",
+      "name": "Dispatch delay",
+      "profile_baseline": 4,
+      "result": "untested",
+      "evidence": [],
+      "interpretation": "saved native/library evidence does not identify this private value, or the connected model does not exercise its exact baseline",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "T003",
+      "name": "Allocation release delay",
+      "profile_baseline": 8,
+      "result": "untested",
+      "evidence": [],
+      "interpretation": "saved native/library evidence does not identify this private value, or the connected model does not exercise its exact baseline",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "T004",
+      "name": "Instruction fetch latency",
+      "profile_baseline": 4,
+      "result": "untested",
+      "evidence": [],
+      "interpretation": "saved native/library evidence does not identify this private value, or the connected model does not exercise its exact baseline",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "T005",
+      "name": "Instruction fetch bandwidth",
+      "profile_baseline": 1,
+      "result": "untested",
+      "evidence": [],
+      "interpretation": "saved native/library evidence does not identify this private value, or the connected model does not exercise its exact baseline",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "T006",
+      "name": "Decode delay",
+      "profile_baseline": 1,
+      "result": "untested",
+      "evidence": [],
+      "interpretation": "saved native/library evidence does not identify this private value, or the connected model does not exercise its exact baseline",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "T007",
+      "name": "Instruction-class initiation intervals",
+      "profile_baseline": {
+        "fp32_and_int32_add": 1,
+        "int32_mul_mad_and_shift": 2,
+        "tensor": 4,
+        "load": 1,
+        "store": 1,
+        "shuffle": 4,
+        "MOVM": "decoded issue controls and completion-dependent native barrier replay; no added4.8cycle throttle"
+      },
+      "result": "untested",
+      "evidence": [],
+      "interpretation": "saved native/library evidence does not identify this private value, or the connected model does not exercise its exact baseline",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "T008",
+      "name": "Dependency wakeup delay",
+      "profile_baseline": 1,
+      "result": "untested",
+      "evidence": [],
+      "interpretation": "saved native/library evidence does not identify this private value, or the connected model does not exercise its exact baseline",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "T009",
+      "name": "Register read latency",
+      "profile_baseline": 1,
+      "result": "untested",
+      "evidence": [],
+      "interpretation": "saved native/library evidence does not identify this private value, or the connected model does not exercise its exact baseline",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "T010",
+      "name": "Register write latency",
+      "profile_baseline": 1,
+      "result": "untested",
+      "evidence": [],
+      "interpretation": "saved native/library evidence does not identify this private value, or the connected model does not exercise its exact baseline",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "T011",
+      "name": "Operand collection delay",
+      "profile_baseline": 1,
+      "result": "untested",
+      "evidence": [],
+      "interpretation": "saved native/library evidence does not identify this private value, or the connected model does not exercise its exact baseline",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "T012",
+      "name": "Bypass delay",
+      "profile_baseline": 0,
+      "result": "untested",
+      "evidence": [],
+      "interpretation": "saved native/library evidence does not identify this private value, or the connected model does not exercise its exact baseline",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "T013",
+      "name": "Writeback service rate",
+      "profile_baseline": 1,
+      "result": "untested",
+      "evidence": [],
+      "interpretation": "saved native/library evidence does not identify this private value, or the connected model does not exercise its exact baseline",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "T017",
+      "name": "Native matrix result latency",
+      "profile_baseline": 16,
+      "result": "untested",
+      "evidence": [],
+      "interpretation": "saved native/library evidence does not identify this private value, or the connected model does not exercise its exact baseline",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "T018",
+      "name": "Native matrix initiation interval",
+      "profile_baseline": 4,
+      "result": "supported_model_level_provisional_consistency",
+      "evidence": [
+        "numerical/resident_multi_sm_nb_l2_verification.json"
+      ],
+      "interpretation": "Interval4 is a consistent configured numerical admission schedule; no real GPU interval4 performance comparison yet.",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "T019",
+      "name": "Matrix result delivery bandwidth",
+      "profile_baseline": 4,
+      "result": "untested",
+      "evidence": [],
+      "interpretation": "saved native/library evidence does not identify this private value, or the connected model does not exercise its exact baseline",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "T020",
+      "name": "Load issue service rate",
+      "profile_baseline": 1,
+      "result": "untested",
+      "evidence": [],
+      "interpretation": "saved native/library evidence does not identify this private value, or the connected model does not exercise its exact baseline",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "T021",
+      "name": "Store issue service rate",
+      "profile_baseline": 1,
+      "result": "untested",
+      "evidence": [],
+      "interpretation": "saved native/library evidence does not identify this private value, or the connected model does not exercise its exact baseline",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "T022",
+      "name": "Return bandwidth",
+      "profile_baseline": 128,
+      "result": "untested",
+      "evidence": [],
+      "interpretation": "saved native/library evidence does not identify this private value, or the connected model does not exercise its exact baseline",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "T023",
+      "name": "Store visibility/completion delay",
+      "profile_baseline": 32,
+      "result": "untested",
+      "evidence": [],
+      "interpretation": "saved native/library evidence does not identify this private value, or the connected model does not exercise its exact baseline",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "T024",
+      "name": "Translation hit delay",
+      "profile_baseline": 4,
+      "result": "untested",
+      "evidence": [],
+      "interpretation": "saved native/library evidence does not identify this private value, or the connected model does not exercise its exact baseline",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "T025",
+      "name": "Translation miss processing delay",
+      "profile_baseline": 40,
+      "result": "untested",
+      "evidence": [],
+      "interpretation": "saved native/library evidence does not identify this private value, or the connected model does not exercise its exact baseline",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "T026",
+      "name": "Page-walk delay",
+      "profile_baseline": 600,
+      "result": "untested",
+      "evidence": [],
+      "interpretation": "saved native/library evidence does not identify this private value, or the connected model does not exercise its exact baseline",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "T027",
+      "name": "Shared read response latency",
+      "profile_baseline": 24,
+      "result": "untested",
+      "evidence": [],
+      "interpretation": "saved native/library evidence does not identify this private value, or the connected model does not exercise its exact baseline",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "T028",
+      "name": "Shared write response latency",
+      "profile_baseline": 12,
+      "result": "untested",
+      "evidence": [],
+      "interpretation": "saved native/library evidence does not identify this private value, or the connected model does not exercise its exact baseline",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "T029",
+      "name": "Broadcast delay",
+      "profile_baseline": 0,
+      "result": "untested",
+      "evidence": [],
+      "interpretation": "saved native/library evidence does not identify this private value, or the connected model does not exercise its exact baseline",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "T030",
+      "name": "Shared-to-operand transfer delay",
+      "profile_baseline": 4,
+      "result": "untested",
+      "evidence": [],
+      "interpretation": "saved native/library evidence does not identify this private value, or the connected model does not exercise its exact baseline",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "T031",
+      "name": "L1 read-hit latency",
+      "profile_baseline": 32,
+      "result": "untested",
+      "evidence": [],
+      "interpretation": "saved native/library evidence does not identify this private value, or the connected model does not exercise its exact baseline",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "T032",
+      "name": "L1 write service latency",
+      "profile_baseline": 4,
+      "result": "untested",
+      "evidence": [],
+      "interpretation": "saved native/library evidence does not identify this private value, or the connected model does not exercise its exact baseline",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "T033",
+      "name": "L1 service bandwidth",
+      "profile_baseline": 128,
+      "result": "untested",
+      "evidence": [],
+      "interpretation": "saved native/library evidence does not identify this private value, or the connected model does not exercise its exact baseline",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "T034",
+      "name": "L1 refill transfer delay",
+      "profile_baseline": 40,
+      "result": "untested",
+      "evidence": [],
+      "interpretation": "saved native/library evidence does not identify this private value, or the connected model does not exercise its exact baseline",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "T035",
+      "name": "L2 read-hit latency",
+      "profile_baseline": 300,
+      "result": "untested",
+      "evidence": [],
+      "interpretation": "saved native/library evidence does not identify this private value, or the connected model does not exercise its exact baseline",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "T036",
+      "name": "L2 write service latency",
+      "profile_baseline": 40,
+      "result": "untested",
+      "evidence": [],
+      "interpretation": "saved native/library evidence does not identify this private value, or the connected model does not exercise its exact baseline",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "T037",
+      "name": "L2 service bandwidth per slice",
+      "profile_baseline": 16,
+      "result": "untested",
+      "evidence": [],
+      "interpretation": "saved native/library evidence does not identify this private value, or the connected model does not exercise its exact baseline",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "T038",
+      "name": "L2 return bandwidth",
+      "profile_baseline": 768,
+      "result": "untested",
+      "evidence": [],
+      "interpretation": "saved native/library evidence does not identify this private value, or the connected model does not exercise its exact baseline",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "T039",
+      "name": "Read command/response timing",
+      "profile_baseline": 200,
+      "result": "untested",
+      "evidence": [],
+      "interpretation": "saved native/library evidence does not identify this private value, or the connected model does not exercise its exact baseline",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "T040",
+      "name": "Write command/response timing",
+      "profile_baseline": 100,
+      "result": "untested",
+      "evidence": [],
+      "interpretation": "saved native/library evidence does not identify this private value, or the connected model does not exercise its exact baseline",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "T041",
+      "name": "Read/write turnaround",
+      "profile_baseline": 24,
+      "result": "untested",
+      "evidence": [],
+      "interpretation": "saved native/library evidence does not identify this private value, or the connected model does not exercise its exact baseline",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "T042",
+      "name": "Transfer service interval",
+      "profile_baseline": 0.0525,
+      "result": "untested",
+      "evidence": [],
+      "interpretation": "saved native/library evidence does not identify this private value, or the connected model does not exercise its exact baseline",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "T043",
+      "name": "Barrier arrival service rate",
+      "profile_baseline": 1,
+      "result": "untested",
+      "evidence": [],
+      "interpretation": "saved native/library evidence does not identify this private value, or the connected model does not exercise its exact baseline",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "T044",
+      "name": "Barrier release delay",
+      "profile_baseline": 2,
+      "result": "untested",
+      "evidence": [],
+      "interpretation": "saved native/library evidence does not identify this private value, or the connected model does not exercise its exact baseline",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "T045",
+      "name": "Warp resume delay",
+      "profile_baseline": 1,
+      "result": "untested",
+      "evidence": [],
+      "interpretation": "saved native/library evidence does not identify this private value, or the connected model does not exercise its exact baseline",
+      "physical_status_unchanged": true
+    },
+    {
+      "id": "T047",
+      "name": "Cross-domain transfer delay",
+      "profile_baseline": {
+        "minimum_forward_latency": 2,
+        "minimum_return_latency": 2
+      },
+      "result": "untested",
+      "evidence": [],
+      "interpretation": "saved native/library evidence does not identify this private value, or the connected model does not exercise its exact baseline",
+      "physical_status_unchanged": true
+    }
+  ],
+  "supplementary_nonassumption_fields": [
+    {
+      "id": "F010",
+      "basis": "MEASURED",
+      "evidence": [
+        "discovery_rounds/shared_decoder_010/analysis.json",
+        "discovery_rounds/generic_decoder_011/analysis.json"
+      ],
+      "fact": "28shared and159generic descriptors;10+9decoded fields; no broad decoder closure."
+    },
+    {
+      "id": "F032",
+      "basis": "KNOWN_SOURCE",
+      "evidence": [
+        "discovery_rounds/functional_mapping_002/analysis.json",
+        "discovery_rounds/executed_layout_009/analysis.json"
+      ],
+      "fact": "Measured supported BF16 lane/register mapping and actual library shared padding/address bindings;32768coordinate checks0mismatch."
+    },
+    {
+      "id": "F033",
+      "basis": "MEASURED",
+      "evidence": [
+        "discovery_rounds/executed_library_006/analysis.json"
+      ],
+      "fact": "Actual selectedkernel128threads96regs37376shared,16staticHMMA36MOVM72genericLD.E; twoHMMA coverlogical16x16 output halves in supported family."
+    },
+    {
+      "id": "F042",
+      "basis": "KNOWN_SOURCE",
+      "evidence": [
+        "parameter_sweep/load_assembly/analysis.json"
+      ],
+      "fact": "448hardware words check7signed/unsigned/bit-size load contracts in shared/global addressspaces."
+    }
+  ],
+  "source_sha256": {
+    "components/cta_generation_barrier_verification.json": "70956cd411915f926b01e14129a48cf07d4a719e47c411804a20ff1617f76fc4",
+    "components/sector_read_cache.sv": "45c49166f1cf330b3c2ae4b41f5af0d96655d3a6d8cbeb5f09452e21c3592298",
+    "components/warp_shared_read_service_verification.json": "82b967f083e4af37dffaa4f1cec6f24a8052d0a225649297b4f7e608bf514fb9",
+    "discovery_rounds/executed_layout_009/analysis.json": "8a29cd5f00ea1a775a57c90ae764e4917c389c3690d814d8c2edd5214e1b20ea",
+    "discovery_rounds/executed_library_006/analysis.json": "f18c0ea164ea694c1c82f7cdd11e4763caf18b0092b41454837397bd2b6f959c",
+    "discovery_rounds/functional_mapping_002/analysis.json": "4a6b7aaeeb23a3f8812ec3f8f37982a777ba5220bd2d41937362c07a00a30096",
+    "discovery_rounds/generic_decoder_011/analysis.json": "0f5470bbe23d28f56d9c89bb95a634e333d41e77e9a843a547b4aa6ff6d195be",
+    "discovery_rounds/shared_decoder_010/analysis.json": "b8199f57ea70465ec2d33bd0d7284d004d744b0a8d4b3c06b45c44ca0de1cba4",
+    "numerical/multi_sm_nonblocking_l2_verification.json": "20b87b96ba4228e34a7a2fe142fe38ac30955852bd7c7fd960b6ce420b7514c9",
+    "numerical/resident_multi_sm_nb_l2_verification.json": "6165e8cc5f15aa546760d2a904985bc7e14a62eb91e2a8dfca6562cc6bd1d7c7",
+    "numerical/resident_native_stage_shared.sv": "f23e493e6013fd95beb3ea50f6bc84a6a81d1adde0f21e76e6645d78998a07d3",
+    "numerical/studied_output_scratch_verification.json": "49a286cbcc03b9725067c5f464913c76a5b888983fd70f3d6c1fb1d5b9455822",
+    "parameter_sweep/bf16_exceptions/analysis.json": "b3a224c1b9a32046e95060114c818a95f3b4092bb16aae395a3188591f77c69f",
+    "parameter_sweep/bf16_exceptions/parameter_updates.json": "9ab431f25a861dbb375f201a2f3e7a820e614daa61c09a9b18b6c39c7f93d4aa",
+    "parameter_sweep/generic_shared/analysis.json": "ea66af8613ee80ea67cced5f86dff345feb54f71e5f0e7106a7eadef24347e13",
+    "parameter_sweep/load_assembly/analysis.json": "375df3573f5df41a0eeec8242c13a4e8c04520962d57032966d08ecfb58e74f5",
+    "parameter_sweep/wide_shared/analysis.json": "30b4d6e0e958dfd9b1b8beb7c2872ae0eb791fe0031f2d11d55e30903126ffdf",
+    "missing_parameter_registry.json": "ca0382be0556f30cb67d1921f9a3c6d4c417cbdce475104cc18bfb0545d769e2"
+  },
+  "master_table_sha256": "14b294e47596fca86d4b10cafc3a569a22465f6fc12ea3b201ca8311b28239cb",
+  "scope_limit": "All current full-grid receipts are numerical/model protocol validation with timing_calibrated=false. They cannot establish realistic hardware runtime before saved/repeated GPU timings are compared."
+}

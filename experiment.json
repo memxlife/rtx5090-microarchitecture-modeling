@@ -1,0 +1,145 @@
+{
+  "gpu_index": 7,
+  "remote_directory": "$HOME/rtx5090-gemm-milp-20261002-01",
+  "kernel_family": "BF16 WMMA 16x16x16, FP32 accumulator/output",
+  "threads_cta": 128,
+  "buffering_stages": 1,
+  "layout": "row-major A/B shared and global; cyclic warp assignment of 16x16 output tiles",
+  "compiler": "CUDA 12.8 nvcc -O3 -arch=sm_120 -Xptxas=-v",
+  "hardware": {
+    "peak_global_bandwidth_B_s": {
+      "value": 1792000000000.0,
+      "evidence": "published"
+    },
+    "sustainable_copy_bandwidth_B_s": {
+      "value": 1473715186000.0,
+      "evidence": "measured"
+    },
+    "shared_sm_bytes": {
+      "value": 102400,
+      "evidence": "queried"
+    },
+    "shared_cta_optin_bytes": {
+      "value": 101376,
+      "evidence": "queried"
+    },
+    "regs_sm_words": {
+      "value": 65536,
+      "evidence": "queried"
+    },
+    "global_dependent_load_cycles": {
+      "value": 832.30916,
+      "evidence": "measured"
+    },
+    "shared_dependent_load_cycles": {
+      "value": 34.000995,
+      "evidence": "measured"
+    },
+    "shared_bandwidth_B_s": {
+      "value": null,
+      "evidence": "unknown"
+    },
+    "sustainable_tensor_flops_s": {
+      "value": null,
+      "evidence": "not measured in isolation; not required for reduced study"
+    },
+    "register_allocation_granularity": {
+      "value": null,
+      "evidence": "unknown"
+    },
+    "shared_allocation_granularity": {
+      "value": null,
+      "evidence": "unknown"
+    },
+    "register_thread_limit": {
+      "value": 255,
+      "evidence": "published",
+      "source": "https://docs.nvidia.com/cuda/archive/12.8.1/blackwell-tuning-guide/index.html#occupancy"
+    },
+    "effective_outstanding_global_requests": {
+      "value": null,
+      "evidence": "unknown"
+    },
+    "effective_kernel_flops_s": {
+      "value": 50718802405563.9,
+      "evidence": "measured",
+      "meaning": "effective throughput of the fixed 64x64x32 kernel on 3072 cubed; coarse proxy only"
+    }
+  },
+  "sources": [
+    "https://images.nvidia.com/aem-dam/Solutions/geforce/blackwell/nvidia-rtx-blackwell-gpu-architecture.pdf",
+    "https://docs.nvidia.com/cuda/archive/12.8.1/blackwell-tuning-guide/index.html"
+  ],
+  "source_sha256": {
+    "test_model.py": "45b766356366d624b64f7f257ae1dbfaedd82f2cd2eef22570d6c1cb8449cdf5",
+    "gemm.cu": "9cb82675c8ac2ad8f7961a1a44ae9cdf0b49199dbe69478f9b3a7f2d2cee4f87",
+    "test_milp_core.py": "6c271292c5ffb168c63502aee5b8a079df2415bf77833f70854f6736baa9ace5",
+    "characterize.cu": "4cbf29a27538135c0c5af0dbc627579c6fcb2124215761270c415c2943d05886",
+    "remote.py": "a69aaeb20aeb7b6f24ab4229540257d23651ea24df39195433a0362791eb5812",
+    "milp_core.py": "3544667c1c62c2f138636af19e56fd0707d3ab5cabb8e1b18beae11751f09d9c",
+    "solve.py": "e27322d3bf46f239d4e1ddb99f34292c5046634b40b389ebd3887c4eb35bbf3a",
+    "calibrate.py": "66b22ddaa0edca119862fdf58f1cd69a4f29094cb3c55117aaabb3706bf6f515",
+    "validate_domain.py": "b60dd0294c9c814011cf9fb09aceed7613636bc0ca99731e572235f4a1e3b9e3"
+  },
+  "primary_question": "Can independent integer GEMM tile dimensions be reformulated exactly as a small MILP and searched efficiently with a legal real-device realization?",
+  "l2_model": "excluded by user",
+  "hardware_domain": {
+    "BM": {
+      "min": 16,
+      "max": 96,
+      "granularity": 16
+    },
+    "BN": {
+      "min": 16,
+      "max": 96,
+      "granularity": 16
+    },
+    "BK": {
+      "min": 16,
+      "max": 64,
+      "granularity": 16
+    },
+    "bound_evidence": "assumed bounded demonstrator domain, not hardware maxima"
+  },
+  "workload": {
+    "M": 1008,
+    "N": 1008,
+    "K": 1008,
+    "input": "BF16",
+    "accumulator_output": "FP32"
+  },
+  "timing": {
+    "warmup_launches": 10,
+    "groups": 9,
+    "launches_per_group": 5,
+    "cache_sweep_bytes": 536870912,
+    "cache_sweep_excluded_from_timer": true
+  },
+  "development_data": [
+    "characterization.json",
+    "cold_64_64_32.json"
+  ],
+  "confirmation_data": [
+    "domain_validation.json"
+  ],
+  "scientific_scope": "Exact reformulation of a reduced two-resource model; not a complete architectural performance model or demonstration of near-best tile selection",
+  "confirmation_completed": true,
+  "confirmation_total_tiles": 144,
+  "published_vs_queried_shared_memory_note": "CUDA 12.8 guide lists 128 KiB shared memory per SM for capability 12.0; this device query reports 100 KiB. The model uses the query and verified launches, not the larger published value.",
+  "measurement_sha256": {
+    "paired_recheck.jsonl": "9346dfff0bd247cbe9aee50646ce3c18038a133db59016259f28765bd1b04f91",
+    "scaling_32768.json": "418753706931b28ef3bb95daa9ea3ed676e6682889456b1d32dc6c0060f2bc34",
+    "ablation_padding.json": "fb8bc0d58c01f1486ef6b734fd461245ae52fc41a35c2627d47c0ffca1b26575",
+    "ablation_capacity.json": "b8fbfffc49af61602804a1b45e33e67cba392b9cc3b7430b9ed2cf07a0205b7f",
+    "paired_recheck_summary.json": "ac3d3d9d1c00b369debdc9b90d66744a3c021e183735d3c99f121099635ae746",
+    "validation_summary.json": "7ce9e6aa4dd0f14f167e19f4b85e2691728c3b6578d7461a7097463630c1f2cf",
+    "cold_64_64_32.json": "cdf9a7b19207a1cdb0fb13ea78c19470c8f0443b43c85a0193099ff1ce8be155",
+    "domain_validation.jsonl": "d41bc9558cb9d0fb91e9338bf3f7ef42f5bfb8b6c76511e6ac7e481cf1a71f42",
+    "scaling_1152.json": "866fbad92c4c80a0f5f1175835b9b0b492b556be5bd57ac1dd1993d9c9dd520e",
+    "calibration.jsonl": "01f953d836b5a2d02fd5f8e4b1e5371dfec4c9b27390837ac924b4ed47e9c472",
+    "ablation_memory.json": "1d48fe464f4f51930b1a6a1cefd11c3b2250541034c42a9aef82217e65baa89a",
+    "domain_validation.json": "3c5446fab75cbf3c76b896ea66dfe1f7ffec399b749c5e26931d8b7a01676a13",
+    "characterization.json": "3fbd5119ceca09d9f5e6a38b020609da3bcb874029fd0edb23282278eccb419c",
+    "solution.json": "d4cf1003d4dc779dc42fe37a4aaa5309102938f5ba8ebdaa28cfa1bffc6c5f80"
+  }
+}

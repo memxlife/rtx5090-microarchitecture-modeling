@@ -1,0 +1,5 @@
+{
+  "failure": "Testbench syntax error: adjacent end tokens were concatenated as endend in the reset loop.",
+  "resolution": "Separate tokens; no DUT logic or test assertion changed.",
+  "source_sha256": "edc1b51cf6e9faaed6507a959822a0ecda009667a93f9ed1463b4bef98288816"
+}

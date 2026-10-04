@@ -1,0 +1,58 @@
+[
+  {
+    "title": "Work distribution and block admission",
+    "path": "rtl/manual/components/01_work_distribution_and_block_admission.md"
+  },
+  {
+    "title": "Warp state and instruction supply",
+    "path": "rtl/manual/components/02_warp_state_and_instruction_supply.md"
+  },
+  {
+    "title": "Scheduling and instruction issue",
+    "path": "rtl/manual/components/03_scheduling_and_instruction_issue.md"
+  },
+  {
+    "title": "Registers, readiness, and operand collection",
+    "path": "rtl/manual/components/04_registers_readiness_and_operand_collection.md"
+  },
+  {
+    "title": "Scalar and address execution",
+    "path": "rtl/manual/components/05_scalar_and_address_execution.md"
+  },
+  {
+    "title": "Matrix operands and tensor execution",
+    "path": "rtl/manual/components/06_matrix_operands_and_tensor_execution.md"
+  },
+  {
+    "title": "Load/store execution",
+    "path": "rtl/manual/components/07_load_store_execution.md"
+  },
+  {
+    "title": "Address translation",
+    "path": "rtl/manual/components/08_address_translation.md"
+  },
+  {
+    "title": "Shared-memory service",
+    "path": "rtl/manual/components/09_shared_memory_service.md"
+  },
+  {
+    "title": "L1 cache and shared partition",
+    "path": "rtl/manual/components/10_l1_cache_and_shared_partition.md"
+  },
+  {
+    "title": "L2 cache and refill ownership",
+    "path": "rtl/manual/components/11_l2_cache_and_refill_ownership.md"
+  },
+  {
+    "title": "Backing memory and response transport",
+    "path": "rtl/manual/components/12_backing_memory_and_response_transport.md"
+  },
+  {
+    "title": "Barriers and retirement",
+    "path": "rtl/manual/components/13_barriers_and_retirement.md"
+  },
+  {
+    "title": "Clocks, event transport, and observation",
+    "path": "rtl/manual/components/14_clocks_event_transport_and_observation.md"
+  }
+]

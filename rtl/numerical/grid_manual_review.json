@@ -1,0 +1,43 @@
+{
+  "accepted": true,
+  "changed_sections": [
+    "4.34",
+    "4.43"
+  ],
+  "documents": [
+    "rtl_microarchitecture_spec.md",
+    "README.md"
+  ],
+  "inline_source_parity": {
+    "numerical/studied_gemm_cta_controller.sv": true,
+    "numerical/studied_gemm_grid_controller.sv": true
+  },
+  "reviewed_current_receipts": [
+    "numerical/studied_gemm_grid_verification.json",
+    "numerical/studied_gemm_cta_barriers_quick_verification.json"
+  ],
+  "receipt_source_hashes_current": true,
+  "human_first_review": "Explains complete-grid addressing by a concrete six-block traversal, then defines launch capture, ordinal IDs, acknowledgment ordering and cache persistence.",
+  "reader_review": "Defines matrix and block coordinates separately; qualifies full-grid results by tested small shapes. Separates grid launch cycles from whole-fixture cycles and serial reuse from unmodeled GPU concurrency. Grid has no invalidation port. Registered launch/CTA completion edge example is explicit. Snapshot behavior is code-inspected rather than mutation-tested; reset fixture cancels the first pending backing read, and periodic input limitations are stated.",
+  "reader_language_lint": "passed",
+  "quantitative_review": {
+    "complete_grid_launches": 4,
+    "blocks_per_launch": 6,
+    "complete_grid_output_words_and_acks": 24576,
+    "output_packets_and_acks_per_launch": 768,
+    "fresh_single_CTA_regression_words": 4096,
+    "original_full2048x2112_grid_validated": false,
+    "new_physical_parameter_closures": 0
+  },
+  "timing_calibrated": false,
+  "boundary": "One serial reused CTA. No SM placement, concurrent residency, calibrated cache behavior or hardware timing validation. Cache assumes immutable inputs across preserved contexts.",
+  "document_sha256": {
+    "rtl_microarchitecture_spec.md": "7021eb10458d754ff8e9feda018370a858d0ed56169135861610dbd41cffd330",
+    "README.md": "4c7c50995b34b9f6df1702435e3bfa602375341404efd5bb11123a0ad17f70c2"
+  },
+  "source_sha256": {
+    "numerical/studied_gemm_cta_controller.sv": "fb696aca2dbc7898651ddf820a6323b2357b9b5ba810ce715fc562043c6cc4ab",
+    "numerical/studied_gemm_grid_controller.sv": "b6513e2aa54f3b44005728d34bad9a021a3ea623018541ccd8e3a18b6135c65b"
+  },
+  "historical_receipt_qualification": "Sections4.41/4.42 explicitly preserve earlier5120-word controller versions and refer to current4096-word CTA regression plus24576-word complete-grid proof."
+}

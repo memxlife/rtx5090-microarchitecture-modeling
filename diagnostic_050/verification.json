@@ -1,0 +1,69 @@
+{
+  "rows": [
+    {
+      "tile": [
+        32,
+        32,
+        32
+      ],
+      "shape": [
+        1920,
+        1920,
+        1536
+      ],
+      "observed_us": 246.5408,
+      "predicted_us": 257.4634641,
+      "relative_error": 0.04430367752518061
+    },
+    {
+      "tile": [
+        32,
+        32,
+        32
+      ],
+      "shape": [
+        1920,
+        1920,
+        4608
+      ],
+      "observed_us": 697.1328020000001,
+      "predicted_us": 728.5418696999999,
+      "relative_error": 0.04505464039260598
+    },
+    {
+      "tile": [
+        32,
+        32,
+        32
+      ],
+      "shape": [
+        2048,
+        2112,
+        1536
+      ],
+      "observed_us": 276.863998,
+      "predicted_us": 293.382651592,
+      "relative_error": 0.05966342215429554
+    },
+    {
+      "tile": [
+        32,
+        32,
+        32
+      ],
+      "shape": [
+        2048,
+        2112,
+        4608
+      ],
+      "observed_us": 784.377611,
+      "predicted_us": 828.699021592,
+      "relative_error": 0.05650519592915826
+    }
+  ],
+  "all_correct": true,
+  "checks": 180,
+  "largest_error": 0.05966342215429554,
+  "full_gemm_coefficients": false,
+  "accepted_bounded": true
+}

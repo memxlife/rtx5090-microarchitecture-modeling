@@ -1,0 +1,91 @@
+{
+  "all_passed": true,
+  "checked_output_words": 14336,
+  "checks": [
+    {
+      "mode": 0,
+      "cases": 24,
+      "checked_words": 6144,
+      "backing_delay_synthetic": 2,
+      "backing_sector_requests": 768,
+      "cycles": 41208,
+      "passed": true,
+      "stdout": "CACHED_SHARED_MATRIX_PASS cases=24 checked_words=6144 misses=768 cycles=41208 backing_delay=2 arithmetic_mode=0\n- rtl/numerical/cached_shared_matrix_tb.sv:91: Verilog $finish\n- S i m u l a t i o n   R e p o r t: Verilator 5.050 2026-07-01\n- Verilator: $finish at 83us; walltime 0.092 s; speed 899.473 us/s\n- Verilator: cpu 0.092 s on 1 threads; allocated 3 MB\n"
+    },
+    {
+      "mode": 0,
+      "cases": 24,
+      "checked_words": 6144,
+      "backing_delay_synthetic": 13,
+      "backing_sector_requests": 768,
+      "cycles": 49656,
+      "passed": true,
+      "stdout": "CACHED_SHARED_MATRIX_PASS cases=24 checked_words=6144 misses=768 cycles=49656 backing_delay=13 arithmetic_mode=0\n- rtl/numerical/cached_shared_matrix_tb.sv:91: Verilog $finish\n- S i m u l a t i o n   R e p o r t: Verilator 5.050 2026-07-01\n- Verilator: $finish at 99us; walltime 0.097 s; speed 1.025 ms/s\n- Verilator: cpu 0.097 s on 1 threads; allocated 3 MB\n"
+    },
+    {
+      "mode": 0,
+      "variable_latency_propagation_cycles": 8448,
+      "expected_cycles": 8448,
+      "passed": true
+    },
+    {
+      "rejected": "unaligned",
+      "passed": true
+    },
+    {
+      "rejected": "wrongid",
+      "passed": true
+    },
+    {
+      "mode": 1,
+      "cases": 4,
+      "checked_words": 1024,
+      "backing_delay_synthetic": 2,
+      "backing_sector_requests": 128,
+      "cycles": 6868,
+      "passed": true,
+      "stdout": "CACHED_SHARED_MATRIX_PASS cases=4 checked_words=1024 misses=128 cycles=6868 backing_delay=2 arithmetic_mode=1\n- rtl/numerical/cached_shared_matrix_tb.sv:91: Verilog $finish\n- S i m u l a t i o n   R e p o r t: Verilator 5.050 2026-07-01\n- Verilator: $finish at 14us; walltime 0.029 s; speed 469.087 us/s\n- Verilator: cpu 0.029 s on 1 threads; allocated 3 MB\n"
+    },
+    {
+      "mode": 1,
+      "cases": 4,
+      "checked_words": 1024,
+      "backing_delay_synthetic": 13,
+      "backing_sector_requests": 128,
+      "cycles": 8276,
+      "passed": true,
+      "stdout": "CACHED_SHARED_MATRIX_PASS cases=4 checked_words=1024 misses=128 cycles=8276 backing_delay=13 arithmetic_mode=1\n- rtl/numerical/cached_shared_matrix_tb.sv:91: Verilog $finish\n- S i m u l a t i o n   R e p o r t: Verilator 5.050 2026-07-01\n- Verilator: $finish at 17us; walltime 0.025 s; speed 651.238 us/s\n- Verilator: cpu 0.025 s on 1 threads; allocated 3 MB\n"
+    },
+    {
+      "mode": 1,
+      "variable_latency_propagation_cycles": 1408,
+      "expected_cycles": 1408,
+      "passed": true
+    }
+  ],
+  "source_sha256": {
+    "discovery_rounds/ldsm_mapping_003/ldsm_x4_layout.sv": "23a1d35298e0bdac49b0d8f9a65e313032affca08f4a0eaaf9483b4c3b2bf47c",
+    "discovery_rounds/functional_mapping_002/native_bf16_layout.sv": "63658e6b59f2d124cab3a73159d3219c3d350616cec99bf72fab58afc42df76b",
+    "components/sector_read_cache.sv": "f27a1623b4a5691fc34db16bf277938a658a799af0b15d79ac5036c559060d05",
+    "numerical/numerical_matrix_pipeline.sv": "20d64fa7c297f0a4cf83a68f899a199330cc7907f136f031d1f5b030d4a010b4",
+    "numerical/native_bf16_adapter.sv": "ca05d62325e04c3ab0d982a6d0755355903f331799f83a396d512b866de58d6d",
+    "numerical/shared_matrix_pipeline.sv": "535f3405d1d2b27ff0c3cb0b789283565f2e7dd5d9ff9376e40f3fcdb677a62e",
+    "numerical/cached_shared_matrix_pipeline.sv": "da5a9f2a440c631262600eb0f428bb13703fa2ea1df5df38b7c0db3654793c42",
+    "numerical/cached_shared_matrix_tb.sv": "6aa73eeb0381280b6bfc454e4bda35369c35c30917b830bca12179561afae437",
+    "numerical/bf16_reference.cpp": "0da9f3da8194c8d832b60ef29028a456397c76f9b0edc2b6e45c1ef69e14e1d3"
+  },
+  "profile_sha256": "72f3012a1cff79b12cf3fb58beade9d57affc4af709a8c1a00c72c9326688948",
+  "timing_calibrated": false,
+  "full_gpu_integrated": false,
+  "supported_increment": "One warp numerical16x16x16 operation; backing sector return through cache, two shared stores, measured LDSM placement and matrix arithmetic.",
+  "remaining": "No full-GEMM scheduler, global output-store path, multiblock residency or calibrated chip timing. This LDSM path is not the genericLD.E/MOVM path of the inspected cuBLAS kernel.",
+  "protocol_checks": [
+    "matrix waits for initialized operands and consumed staging acknowledgment",
+    "sector reuse and request conservation",
+    "staging/result identity",
+    "held staging and numerical completions",
+    "reset invalidates shared and cache state",
+    "actual backing delay propagates to elapsed cycles"
+  ],
+  "arithmetic_scope": "MODE0 sequential reference24cases; MODE1 reconstructed aligned-dot four exact integer identity cases. These tests do not establish universal NVIDIA numerical behavior."
+}

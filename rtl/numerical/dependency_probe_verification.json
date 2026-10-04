@@ -1,0 +1,49 @@
+{
+  "all_passed": true,
+  "checked_words": 128,
+  "checks": [
+    {
+      "case": "normal",
+      "passed": true,
+      "observations": [
+        "DEPENDENCY_CASE opcode=0 operations=37 recurrence=29 modeled_elapsed=1074 first_to_last_admission=1044 first_to_final_return=1073",
+        "DEPENDENCY_CASE opcode=1 operations=37 recurrence=28 modeled_elapsed=1037 first_to_last_admission=1008 first_to_final_return=1036"
+      ]
+    },
+    {
+      "case": "long",
+      "passed": true,
+      "observations": [
+        "DEPENDENCY_CASE opcode=0 operations=1024 recurrence=29 modeled_elapsed=29697 first_to_last_admission=29667 first_to_final_return=29696",
+        "DEPENDENCY_CASE opcode=1 operations=1024 recurrence=28 modeled_elapsed=28673 first_to_last_admission=28644 first_to_final_return=28672"
+      ]
+    },
+    {
+      "case": "mode",
+      "passed": true,
+      "observations": []
+    },
+    {
+      "case": "double_charge",
+      "passed": true,
+      "observations": []
+    }
+  ],
+  "timing_scope": "29/28-cycle spacing is the effective replay convention, not identified intrinsic hardware latency. Last actual return and held completion are distinct from the historical timer endpoint.",
+  "MOVM_observation": {
+    "measured_net_cycles": 29684,
+    "measured_operations": 1024,
+    "measured_average": 28.98828125,
+    "rounded_recurrence": 29,
+    "rounding_difference_per_op": 0.01171875,
+    "relative_rounding_error": 0.0004042581862282457
+  },
+  "new_hardware_evidence": false,
+  "functional_oracle": "Independent MT88 coordinate transpose applied repeatedly; scalar LDS pointer ring rotates32 distinct addresses.",
+  "source_sha256": {
+    "numerical/library_movm_permutation.sv": "eb6d60b41d421751b14a0bff080d079bf0f0be82b185adbedbf2ad1b2df0e17e",
+    "numerical/native_movm_word_pipeline.sv": "3ef390ba095583072d92165d812f129a83e4c30d90bd431b2b702221dec66108",
+    "numerical/dependency_probe_replay.sv": "688105d8fa664590c2d49daa77da9bc5538ceaa22a780a8370122855da634c83",
+    "numerical/dependency_probe_replay_tb.sv": "da656b4d3fc1c08fa0e7f57a3ae8fc02128c49d092a797b6fd079c7ffb8e9ba7"
+  }
+}

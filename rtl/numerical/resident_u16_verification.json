@@ -1,0 +1,27 @@
+{
+  "all_passed": true,
+  "checked_lane_values": 128,
+  "backing_misses_after_reset": 2,
+  "checks": [
+    "two independently snapshotted contexts",
+    "inactive lanes and empty mask",
+    "repeated and shared sectors reuse one cache",
+    "delayed matching backing response",
+    "held response while other context progresses",
+    "reset cancels loader and provider",
+    "accepted-minus-retired conservation"
+  ],
+  "oracle": "Each active halfword is 0x5000 XOR the original accepted byte address divided by two; inactive lanes are zero.",
+  "scope": "Two-context component behavior with one blocking sector cache; not full CTA behavior or measured GPU throughput.",
+  "reset_contract": "Provider flushes pre-reset responses; contents are immutable until cache reset.",
+  "timing_calibrated": false,
+  "source_sha256": {
+    "components/sector_read_cache.sv": "45c49166f1cf330b3c2ae4b41f5af0d96655d3a6d8cbeb5f09452e21c3592298",
+    "numerical/resident_u16_warp_load.sv": "0cbf01fb3926115579cbbc82e9104beceae21261586eadd44de6c215d3b7e318",
+    "numerical/resident_u16_warp_load_tb.sv": "b220f3cf18901c7394d76a53a052fd01d9787620d15f0a5a762e69e13e574034"
+  },
+  "review": {
+    "human_first_technical_writing": true,
+    "undergraduate_reader_review": true
+  }
+}

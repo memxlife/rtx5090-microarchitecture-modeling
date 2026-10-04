@@ -1,0 +1,34 @@
+{
+  "lower_us": 4.727905296612107,
+  "upper_us": 4.974857220672344,
+  "phase_intervals": {
+    "0": [
+      0.1324000052083333,
+      0.1361389213622477
+    ],
+    "1": [
+      2.5254441856826877,
+      2.7008666979166667
+    ],
+    "2": [
+      2.3386000322916667,
+      2.40639052796401
+    ]
+  },
+  "admitted_physical_bound": false,
+  "assumptions": [
+    "phase cost has a constant SM-sensitive fraction between0and1",
+    "no frequency-dependent queue or overlap changes"
+  ],
+  "runtime_coefficient_fit": false,
+  "source_hz": {
+    "0": 2930049088.36,
+    "1": 2664496891.45,
+    "2": 2932180838.07
+  },
+  "target_hz": 2849578288.69,
+  "observed_increment_us_per_step": 4.693600010416667,
+  "observed_below_hypothesis_lower": true,
+  "comparison": "retrospective diagnostic; target counter rate measured at longer reduction only",
+  "decision": "No blind phase-cycle correction admitted; retain mixed clock-domain and interaction uncertainty"
+}

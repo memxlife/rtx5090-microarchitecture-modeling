@@ -1,0 +1,9 @@
+{
+  "source_sha256": "1ee7ce36b6cee8ff6a17bd01fc0781ba04f7a434c6a5a9521ffdde7850a67d19",
+  "inline_source_parity": true,
+  "evidence_scope": "reconstructed selected-library software layout only",
+  "verification_status": "passed18432 addresses and invalid-index rejection; source hashes matched",
+  "human_first_review": "Concrete purpose and byte constants precede function interfaces and timing limits.",
+  "undergraduate_review": "Index domains, pitches, slots and returned byte addresses explicit; pure functions not confused with hardware cycles.",
+  "verification_receipt": "library_shared_layout_verification.json"
+}

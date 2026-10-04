@@ -1,0 +1,530 @@
+[
+  {
+    "tile": [
+      32,
+      32,
+      32
+    ],
+    "shape": [
+      1728,
+      2112,
+      2304
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 4096,
+    "resident_ctas": 11,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.371916801,
+      0.370681602,
+      0.371904004,
+      0.370681596,
+      0.371916801,
+      0.370681596,
+      0.370694399,
+      0.371097594,
+      0.371513599
+    ],
+    "group": 1,
+    "paired_repeat": 0
+  },
+  {
+    "tile": [
+      32,
+      32,
+      32
+    ],
+    "shape": [
+      1728,
+      2112,
+      2304
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 48,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 4096,
+    "resident_ctas": 10,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.443596786,
+      0.442790395,
+      0.441535991,
+      0.443180799,
+      0.443193597,
+      0.44195199,
+      0.442752004,
+      0.443174392,
+      0.442361593
+    ],
+    "group": 4,
+    "paired_repeat": 0
+  },
+  {
+    "tile": [
+      32,
+      32,
+      32
+    ],
+    "shape": [
+      1728,
+      2112,
+      2304
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 48,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 4096,
+    "resident_ctas": 10,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.444415992,
+      0.443993592,
+      0.443609595,
+      0.443590397,
+      0.444006401,
+      0.441964793,
+      0.443603194,
+      0.44482559,
+      0.443999994
+    ],
+    "group": 4,
+    "paired_repeat": 1
+  },
+  {
+    "tile": [
+      32,
+      32,
+      32
+    ],
+    "shape": [
+      1728,
+      2112,
+      2304
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 4096,
+    "resident_ctas": 11,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.371500802,
+      0.371103996,
+      0.370681596,
+      0.370681596,
+      0.370265603,
+      0.371097594,
+      0.371923202,
+      0.371929604,
+      0.372729605
+    ],
+    "group": 1,
+    "paired_repeat": 1
+  },
+  {
+    "tile": [
+      64,
+      48,
+      32
+    ],
+    "shape": [
+      1728,
+      2112,
+      2304
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 7168,
+    "resident_ctas": 8,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.269503993,
+      0.269100791,
+      0.269926399,
+      0.269113594,
+      0.267884791,
+      0.269094396,
+      0.269932801,
+      0.269932801,
+      0.269523191
+    ],
+    "group": 1,
+    "paired_repeat": 0
+  },
+  {
+    "tile": [
+      64,
+      48,
+      32
+    ],
+    "shape": [
+      1728,
+      2112,
+      2304
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 7168,
+    "resident_ctas": 8,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.314982396,
+      0.314572793,
+      0.315385598,
+      0.315385592,
+      0.314182401,
+      0.315391994,
+      0.315385592,
+      0.315391988,
+      0.315398389
+    ],
+    "group": 4,
+    "paired_repeat": 0
+  },
+  {
+    "tile": [
+      64,
+      48,
+      32
+    ],
+    "shape": [
+      1728,
+      2112,
+      2304
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 7168,
+    "resident_ctas": 8,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.315391988,
+      0.315391988,
+      0.315391988,
+      0.315814394,
+      0.315385592,
+      0.315801597,
+      0.315385592,
+      0.315801591,
+      0.315398389
+    ],
+    "group": 4,
+    "paired_repeat": 1
+  },
+  {
+    "tile": [
+      64,
+      48,
+      32
+    ],
+    "shape": [
+      1728,
+      2112,
+      2304
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 7168,
+    "resident_ctas": 8,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.269510394,
+      0.268691194,
+      0.269926399,
+      0.269100797,
+      0.268691188,
+      0.26869759,
+      0.269107193,
+      0.268684798,
+      0.269510394
+    ],
+    "group": 1,
+    "paired_repeat": 1
+  },
+  {
+    "tile": [
+      32,
+      32,
+      32
+    ],
+    "shape": [
+      960,
+      1152,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 4096,
+    "resident_ctas": 11,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.0434111997,
+      0.0438271999,
+      0.0438271999,
+      0.0442368001,
+      0.0430079997,
+      0.0434175998,
+      0.0430015996,
+      0.0430015996,
+      0.0434111997
+    ],
+    "group": 1,
+    "paired_repeat": 0
+  },
+  {
+    "tile": [
+      32,
+      32,
+      32
+    ],
+    "shape": [
+      960,
+      1152,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 48,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 4096,
+    "resident_ctas": 10,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.047097601,
+      0.047104001,
+      0.047097601,
+      0.047097601,
+      0.047104001,
+      0.047097601,
+      0.047104001,
+      0.047097601,
+      0.047097601
+    ],
+    "group": 4,
+    "paired_repeat": 0
+  },
+  {
+    "tile": [
+      32,
+      32,
+      32
+    ],
+    "shape": [
+      960,
+      1152,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 48,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 4096,
+    "resident_ctas": 10,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.0475072011,
+      0.047097601,
+      0.047104001,
+      0.047104001,
+      0.047104001,
+      0.047104001,
+      0.047104001,
+      0.047104001,
+      0.047104001
+    ],
+    "group": 4,
+    "paired_repeat": 1
+  },
+  {
+    "tile": [
+      32,
+      32,
+      32
+    ],
+    "shape": [
+      960,
+      1152,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 4096,
+    "resident_ctas": 11,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.0434175998,
+      0.0434111997,
+      0.0430143997,
+      0.0442304,
+      0.0434175998,
+      0.0438143998,
+      0.0434175998,
+      0.0438143998,
+      0.0434175998
+    ],
+    "group": 1,
+    "paired_repeat": 1
+  },
+  {
+    "tile": [
+      64,
+      48,
+      32
+    ],
+    "shape": [
+      960,
+      1152,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 7168,
+    "resident_ctas": 8,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.0716608018,
+      0.0716800019,
+      0.0716672018,
+      0.0716736019,
+      0.0716544017,
+      0.0716992021,
+      0.0716608018,
+      0.0716736019,
+      0.0716608018
+    ],
+    "group": 1,
+    "paired_repeat": 0
+  },
+  {
+    "tile": [
+      64,
+      48,
+      32
+    ],
+    "shape": [
+      960,
+      1152,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 7168,
+    "resident_ctas": 8,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.0827199981,
+      0.0819071978,
+      0.0818943977,
+      0.0818943977,
+      0.0819135979,
+      0.0818879977,
+      0.0818943977,
+      0.0818943977,
+      0.0818879977
+    ],
+    "group": 4,
+    "paired_repeat": 0
+  },
+  {
+    "tile": [
+      64,
+      48,
+      32
+    ],
+    "shape": [
+      960,
+      1152,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 7168,
+    "resident_ctas": 8,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.0827199981,
+      0.0818943977,
+      0.0818879977,
+      0.0818943977,
+      0.0818879977,
+      0.0818879977,
+      0.0818879977,
+      0.0819007978,
+      0.0818943977
+    ],
+    "group": 4,
+    "paired_repeat": 1
+  },
+  {
+    "tile": [
+      64,
+      48,
+      32
+    ],
+    "shape": [
+      960,
+      1152,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 7168,
+    "resident_ctas": 8,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.0716608018,
+      0.0716736019,
+      0.0716736019,
+      0.071686402,
+      0.0716672018,
+      0.0716800019,
+      0.0716992021,
+      0.0716608018,
+      0.0716736019
+    ],
+    "group": 1,
+    "paired_repeat": 1
+  }
+]

@@ -1,0 +1,50 @@
+{
+  "cases": 8,
+  "full_output_checks": 360,
+  "all_correct": true,
+  "all_spill_free": true,
+  "rows": [
+    {
+      "tile": [
+        32,
+        32
+      ],
+      "stage_us": {
+        "0": 0.9920000625000002,
+        "2": 0.9597666562499999
+      },
+      "relative_speedup": 0.03249335102738493,
+      "registers": {
+        "0": 40,
+        "2": 40
+      },
+      "resident_ctas": {
+        "0": 11,
+        "2": 11
+      }
+    },
+    {
+      "tile": [
+        64,
+        48
+      ],
+      "stage_us": {
+        "0": 1.7365833567708335,
+        "2": 1.7215833463541665
+      },
+      "relative_speedup": 0.008637656440839914,
+      "registers": {
+        "0": 64,
+        "2": 64
+      },
+      "resident_ctas": {
+        "0": 8,
+        "2": 8
+      }
+    }
+  ],
+  "accepted_as_intrinsic_pointer_latency": false,
+  "dynamic_profile_analysis": "profile_analysis.json",
+  "profile_conclusion": "Input LDG.E.U16 and four-load groups match; repeated64-bit parameter loads removed. Other integer/address instruction counts change, so timing is a net compiled-path effect, not intrinsic LDC latency.",
+  "control_strength": "matched input form, groups, registers and residency; unmatched address/control sequence"
+}

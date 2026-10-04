@@ -1,0 +1,137 @@
+{
+  "rows": [
+    {
+      "variant": "controls",
+      "mode": 0,
+      "shape": [
+        1920,
+        1920,
+        1024
+      ],
+      "median_us": 11.7568003,
+      "sm_clock_before_median_mhz": 1155,
+      "sm_clock_after_median_mhz": 1155,
+      "sm_clock_after_range_mhz": [
+        1155,
+        2445
+      ]
+    },
+    {
+      "variant": "controls",
+      "mode": 0,
+      "shape": [
+        1920,
+        1920,
+        4096
+      ],
+      "median_us": 24.5696008,
+      "sm_clock_before_median_mhz": 2415,
+      "sm_clock_after_median_mhz": 2415,
+      "sm_clock_after_range_mhz": [
+        2415,
+        2415
+      ]
+    },
+    {
+      "variant": "controls",
+      "mode": 1,
+      "shape": [
+        1920,
+        1920,
+        1024
+      ],
+      "median_us": 105.65759800000001,
+      "sm_clock_before_median_mhz": 2467,
+      "sm_clock_after_median_mhz": 2467,
+      "sm_clock_after_range_mhz": [
+        2415,
+        2467
+      ]
+    },
+    {
+      "variant": "controls",
+      "mode": 1,
+      "shape": [
+        1920,
+        1920,
+        4096
+      ],
+      "median_us": 364.94719399999997,
+      "sm_clock_before_median_mhz": 2437,
+      "sm_clock_after_median_mhz": 2437,
+      "sm_clock_after_range_mhz": [
+        2437,
+        2452
+      ]
+    },
+    {
+      "variant": "controls",
+      "mode": 2,
+      "shape": [
+        1920,
+        1920,
+        1024
+      ],
+      "median_us": 86.3999993,
+      "sm_clock_before_median_mhz": 2437,
+      "sm_clock_after_median_mhz": 2437,
+      "sm_clock_after_range_mhz": [
+        2437,
+        2437
+      ]
+    },
+    {
+      "variant": "controls",
+      "mode": 2,
+      "shape": [
+        1920,
+        1920,
+        4096
+      ],
+      "median_us": 310.05440400000003,
+      "sm_clock_before_median_mhz": 2445,
+      "sm_clock_after_median_mhz": 2445,
+      "sm_clock_after_range_mhz": [
+        2445,
+        2467
+      ]
+    },
+    {
+      "variant": "original",
+      "mode": 0,
+      "shape": [
+        1920,
+        1920,
+        1536
+      ],
+      "median_us": 246.13759800000003,
+      "sm_clock_before_median_mhz": 2400,
+      "sm_clock_after_median_mhz": 2400,
+      "sm_clock_after_range_mhz": [
+        2400,
+        2452
+      ]
+    },
+    {
+      "variant": "original",
+      "mode": 0,
+      "shape": [
+        1920,
+        1920,
+        4608
+      ],
+      "median_us": 696.723199,
+      "sm_clock_before_median_mhz": 2482,
+      "sm_clock_after_median_mhz": 2482,
+      "sm_clock_after_range_mhz": [
+        2400,
+        2482
+      ]
+    }
+  ],
+  "all_correct": true,
+  "checks": 360,
+  "native_path_identity_checked_before_runs": true,
+  "within_kernel_average_clock_measured": false,
+  "clock_scaling_admitted": false
+}

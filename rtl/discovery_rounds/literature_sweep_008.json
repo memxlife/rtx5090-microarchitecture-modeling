@@ -1,0 +1,74 @@
+{
+  "round": "literature_sweep_008",
+  "kind": "candidate_documentation_evidence",
+  "search_engine": "Google via Chrome",
+  "hardware_benchmark_run": false,
+  "question": "Which compiler contract retains repeated ordinary shared vector loads, and what does it leave unguaranteed?",
+  "source_versions": {
+    "PTX": "9.4",
+    "Inline_PTX_Assembly": "13.4"
+  },
+  "fully_identified_candidates": [],
+  "new_partial_candidates": [],
+  "findings": [
+    {
+      "topic": "Front-end assembly qualifier",
+      "source": "https://docs.nvidia.com/cuda/inline-ptx-assembly/index.html#incorrect-optimization",
+      "section": "1.2.3 Incorrect Optimization",
+      "fact": "C++ asm volatile prevents assembly deletion or movement during PTX generation. A memory clobber constrains front-end memory optimization around hidden memory side effects. Neither statement promises preservation of a nonvolatile PTX load through later assembly optimization.",
+      "implication": "The observed ptxas hoisting is not contradicted by the documented front-end contract."
+    },
+    {
+      "topic": "Legal shared volatile vectors",
+      "source": "https://docs.nvidia.com/cuda/parallel-thread-execution/index.html#data-movement-and-conversion-instructions-ld",
+      "section": "9.7.10.8 ld",
+      "fact": "The volatile load syntax permits shared space and v2/v4.b32 vectors; cache modifiers are disallowed.",
+      "implication": "Use ld.volatile.shared.v2.b32 or ld.volatile.shared.v4.b32 for the repeated-load control."
+    },
+    {
+      "topic": "Instruction preservation versus memory-operation preservation",
+      "source": "https://docs.nvidia.com/cuda/parallel-thread-execution/index.html#volatile-operation",
+      "section": "8.4.2 volatile Operation",
+      "fact": "Volatile instruction count is preserved. Volatile instructions retain order relative to each other, but their memory operations may reorder or merge.",
+      "implication": "Confirm native load width and dynamic request counts. Volatile is not a guarantee of a separate physical transaction for every instruction or a general fence."
+    },
+    {
+      "topic": "Alignment",
+      "source": "https://docs.nvidia.com/cuda/parallel-thread-execution/index.html#addresses-as-operands",
+      "section": "6.4.1 Addresses as Operands",
+      "fact": "Each address must align to the complete access size: 8 bytes for v2.b32 and 16 for v4.b32; misalignment is undefined.",
+      "implication": "Retain the aligned per-lane word offsets in the prepared sweep."
+    }
+  ],
+  "experiment_acceptance": {
+    "functional": "Check numerical values independently of dynamic instruction retention. Correct values alone can survive a hoisted constant load.",
+    "compiled": "Require the intended native 64/128-bit LDS instruction inside the repeated loop after ptxas.",
+    "dynamic": "Use repeated-iteration minus zero-iteration counters to confirm repeated requests and service work.",
+    "timing": "Use the volatile variant to identify splitting only. Do not transfer its timing to ordinary GEMM loads without an additional equivalence check."
+  },
+  "current_wide_broadcast_observation": {
+    "origin": "Parent message, preliminary hardware observation; not independently verified by this literature worker",
+    "value": "One native 128-bit same-vector read reportedly generated two wavefronts.",
+    "interpretation": "Potentially rejects one whole-warp merged service package, but repeated-load confirmation and exact native instruction must precede admission.",
+    "missing": "Fixed lane groups, masked-lane handling, arbitration and physical bank ports remain unidentified."
+  },
+  "candidate_field_impacts": {
+    "F052": "Improves the benchmark contract; no additional full identification.",
+    "F053": "Wide broadcast observation requires hardware confirmation; ordinary same-word broadcast does not settle it.",
+    "F049": "No read-port count recovered.",
+    "F050": "No write-port count recovered."
+  },
+  "counts_if_candidates_admitted": {
+    "new_functional_identified": 0,
+    "new_timing_identified": 0,
+    "functional_remaining": 80,
+    "timing_remaining": 47,
+    "total_remaining": 127
+  },
+  "registry_mutated": false,
+  "runtime_coefficients_changed": false,
+  "review": {
+    "human_first_cold_read": true,
+    "reader_cold_read": true
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "model_sha256": "d10d437c8d04070888a8a22763e2c2202de08675945b61f705cde5c17fe18cb0",
+  "calibration_rows": 96,
+  "confirmation_started": false,
+  "solver": "HiGHS 1.15.1 direct API",
+  "presolve": true,
+  "feasibility_tolerance": 1e-09,
+  "time_units": "microseconds internally; milliseconds reported",
+  "covered_extent_bounds": "tightened using exact coverage before recursive products",
+  "regime_cost_encoding": "exact binary-times-integer products; no conditional time big-M inequalities",
+  "source_hashes": {
+    "amend_calibration.py": "06b43fc46e89e47f696f561b4cb8d7123dd2625ddc2a4f181c68233609e3c23e",
+    "fit_model.py": "9fbac3d646288392a46edb42e206e66d2ada8c18a8500bc0b910687d56cc5d2f",
+    "solve_revision.py": "452f67848f728dba70e6771b3295040de2d674ad11de2a7582b18d440ba9312e",
+    "solver_backend.py": "ad503d00d48e6af52c748275dc83058e2e60d2d39d9b732316d8f65fd93dff48",
+    "calibrate.py": "a68f0f2b1aa9cb802bd431c02ac1d166728a9d825489b3032631de48abac6d49",
+    "confirm.py": "1c66ef50fc4f3017df3672c40d95fbd1b5f09d8b1405cb40964df22474e961d3",
+    "test_revision.py": "856b3ede3224eda65202a1fca71d657698e64615ac8f0b1717e7cda53723e1f0"
+  }
+}

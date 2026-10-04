@@ -1,0 +1,23 @@
+{
+  "source_sha256": {
+    "discovery_rounds/functional_mapping_002/native_bf16_layout.sv": "63658e6b59f2d124cab3a73159d3219c3d350616cec99bf72fab58afc42df76b",
+    "numerical/library_movm_permutation.sv": "eb6d60b41d421751b14a0bff080d079bf0f0be82b185adbedbf2ad1b2df0e17e",
+    "numerical/numerical_matrix_pipeline.sv": "20d64fa7c297f0a4cf83a68f899a199330cc7907f136f031d1f5b030d4a010b4",
+    "numerical/native_bf16_adapter.sv": "ca05d62325e04c3ab0d982a6d0755355903f331799f83a396d512b866de58d6d",
+    "components/warp_shared_read_service.sv": "82df6598d987c0df1c5be4db8ec504951f2d958783390d7b458cbde6b904500b",
+    "numerical/generic_shared_matrix_pipeline.sv": "79dec191479c459e0c5c35e825e7e283b7642bc1873487da1758b33ba9d9331d",
+    "numerical/timed_generic_shared_matrix_pipeline.sv": "dc174e58303f169397d9baffb6cf5a1461c32904402d45fa2b21f73a29c8d7c4",
+    "numerical/studied_gemm_matrix_pipeline.sv": "71fca0fe0793ad133f18cd9c6c4887dbaaa538aba951284bb9ab68c678ce87c6",
+    "numerical/studied_gemm_matrix_tb.sv": "f6cad264b07dd9df0446cf6912b7a310695ee471fa62a571f7d44ea64129dac6",
+    "numerical/bf16_reference.cpp": "0da9f3da8194c8d832b60ef29028a456397c76f9b0edc2b6e45c1ef69e14e1d3"
+  },
+  "verified_receipt": "studied_gemm_matrix_verification.json",
+  "inline_source_parity": true,
+  "functional_review_defects": [],
+  "checked_intermediate_words": 393216,
+  "scope": "firstCTA originalpattern K1536, untimed and completion-driven shared paths; native/global/chip timing unvalidated",
+  "human_first_review": "Question and original target precede geometry, interfaces, numerical oracle and limits.",
+  "undergraduate_review": "BM/BN/BK, fragment enumeration, first-CTA scope, dyadic patterns and intermediate counts explicitly defined; shared operand bytes not confused with full allocation.",
+  "timed_receipt": "studied_gemm_matrix_timed_verification.json",
+  "timed_checked_intermediate_words": 393216
+}

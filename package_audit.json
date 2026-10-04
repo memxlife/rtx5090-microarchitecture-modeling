@@ -1,0 +1,7 @@
+{
+  "included_files": 733,
+  "unresolved_links": [],
+  "python_syntax_errors": [],
+  "excluded": "binaries, build directories, logs, progress records, agent traces, course materials; user original design text and manuals; credential-dependent remote launcher",
+  "source_status": "Copied public sources; absolute chapter links converted to relative paths. Historical source receipts use repository-relative provenance keys."
+}

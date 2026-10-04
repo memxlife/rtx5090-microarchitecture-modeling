@@ -1,0 +1,31 @@
+{
+  "reviewed_source_sha256": {
+    "discovery_rounds/functional_mapping_002/native_bf16_layout.sv": "63658e6b59f2d124cab3a73159d3219c3d350616cec99bf72fab58afc42df76b",
+    "numerical/library_shared_layout.sv": "1ee7ce36b6cee8ff6a17bd01fc0781ba04f7a434c6a5a9521ffdde7850a67d19",
+    "numerical/library_movm_permutation.sv": "eb6d60b41d421751b14a0bff080d079bf0f0be82b185adbedbf2ad1b2df0e17e",
+    "numerical/numerical_matrix_pipeline.sv": "20d64fa7c297f0a4cf83a68f899a199330cc7907f136f031d1f5b030d4a010b4",
+    "numerical/native_bf16_adapter.sv": "ca05d62325e04c3ab0d982a6d0755355903f331799f83a396d512b866de58d6d",
+    "numerical/generic_shared_matrix_pipeline.sv": "79dec191479c459e0c5c35e825e7e283b7642bc1873487da1758b33ba9d9331d",
+    "numerical/library_generic_matrix_pipeline.sv": "4af6849047e3a30ef884e7ed12b909809c6ddb251c641d6a052a30b17dc7ea04",
+    "numerical/library_generic_matrix_tb.sv": "82f37d543574cc4caf01cc410ab9ff9de713088925a7d564ae0774c99712c753",
+    "numerical/bf16_reference.cpp": "0da9f3da8194c8d832b60ef29028a456397c76f9b0edc2b6e45c1ef69e14e1d3"
+  },
+  "functional_review_defects": [],
+  "movm_table_exact_measured_parity": true,
+  "movm_table_bijection_entries": 256,
+  "reviewed_contracts": [
+    "32 lanes times4 scalar words each operand;2halfwords eachword",
+    "address legality and all referenced initialized halves gate acceptance",
+    "post-MOVM destination maps to measured pre-MOVM halfword",
+    "acceptance snapshot isolates later writes",
+    "reset cancels child requests and invalidates storage",
+    "same-edge writes use pre-edge values"
+  ],
+  "timing_scope": "ideal collective reads; no native generic-load/MOVM service or instruction scheduling implemented",
+  "connected_verification": "refactored wrapper/common regression passed66048 outputs; source hashes current",
+  "manual_section_4_29": "exact library wrapper, common explicit-address module and measured MOVM package inlined",
+  "human_first_review": "Concrete path mismatch, storage/request quantities, value construction, snapshot ordering, evidence and limits reviewed in order.",
+  "undergraduate_review": "Defined lane/word/halfword indexing, output tile selection, two-slot reduction and timing omissions; independent ordinary matrix oracle distinguished from address implementation.",
+  "verification_receipt": "library_generic_matrix_verification.json",
+  "receipt_sha256": "75f97fdbe7c9cbb0ab1e4d87b0d80c28295863feaf758617dda9166590c52e4e"
+}

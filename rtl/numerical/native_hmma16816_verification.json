@@ -1,0 +1,27 @@
+{
+  "all_passed": true,
+  "checked_words": 512,
+  "native_half_operations": 4,
+  "oracle": "Independent direct sixteen-term dyadic dot product for all16x8outputs in each column half; two distinct FP32accumulators.",
+  "recombined_full_matrix_cases": 2,
+  "full_WMMA_comparison_words": 512,
+  "checks": [
+    "Both column halves cover the full256output matrix and match the complete WMMA adapter",
+    "Nonzero initial accumulation",
+    "Acceptance snapshot",
+    "Response backpressure",
+    "reset"
+  ],
+  "timing_calibrated": false,
+  "scope": "Supported numerical operation family adapter, not physical pipeline count or native result timing.",
+  "new_identified_registry_fields": 0,
+  "source_sha256": {
+    "discovery_rounds/functional_mapping_002/native_bf16_layout.sv": "63658e6b59f2d124cab3a73159d3219c3d350616cec99bf72fab58afc42df76b",
+    "numerical/numerical_matrix_pipeline.sv": "20d64fa7c297f0a4cf83a68f899a199330cc7907f136f031d1f5b030d4a010b4",
+    "numerical/native_bf16_adapter.sv": "ca05d62325e04c3ab0d982a6d0755355903f331799f83a396d512b866de58d6d",
+    "numerical/native_hmma16816_adapter.sv": "b7b24dc0c6ea8e2acd4dd48b309f5b23804b167f3d4aa7a35af6abd5d6dce18d",
+    "numerical/native_hmma16816_tb.sv": "691dbcf05e2599d1774cfb54dab19856042e89ec4528ba8a63340a3d0730e961",
+    "numerical/bf16_reference.cpp": "0da9f3da8194c8d832b60ef29028a456397c76f9b0edc2b6e45c1ef69e14e1d3"
+  },
+  "stdout": "NATIVE_HMMA_PASS checked_words=512 halves=4 full_recombination_checks=512\n- rtl/numerical/native_hmma16816_tb.sv:61: Verilog $finish\n- S i m u l a t i o n   R e p o r t: Verilator 5.050 2026-07-01\n- Verilator: $finish at 386ps; walltime 0.002 s; speed 220.068 ns/s\n- Verilator: cpu 0.002 s on 1 threads; allocated 2 MB\n"
+}

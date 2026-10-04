@@ -1,0 +1,56 @@
+{
+  "confirmation_started": false,
+  "model_sha256": "eb1394cf03a3dbb20b21f7e0c9efbb50f8de3647aef4964cdfde22ee518b1e2d",
+  "sources": {
+    "model.json": "eb1394cf03a3dbb20b21f7e0c9efbb50f8de3647aef4964cdfde22ee518b1e2d",
+    "solution_960_1152_640.json": "247c2339fae78989b52a06595fab5a993ebb315f76155ff4789900492ff2977f",
+    "calibration.json": "99614842d7ae863124d35498650d8a2687c3f39ee5ae4dbdab3ea7b7aeb298e8",
+    "service_proxy_check.json": "7b86ce3902ed6251ea803ebf1d6c3c0d0d6f7fafb65c51acc34c1af81620d281",
+    "previous_solution_960_1152_640.json": "a47fe914bcd9c412d0f0a4bd5c2cd35b03db042f2cffcc4bca677cfe51d11c19",
+    "fit_model.py": "cdd19ce410ddd1aa7583c0e41c5cd3e37ecaee55a30dad3ac49f90577dd5c6ce",
+    "fresh_calibration.json": "de92bbd745bfd37b2421c4ada6f4e681ca010d881463a416fc122a4cb4478bc4",
+    "solve_revision.py": "c9b046bf148521d9b3af870de54969db9813544e80a5669842fbfa1706401e9d",
+    "fit_summary.json": "0a44a173e408fc9f158ed28f9ccb88d6112bc84b40ad6cc8ce0d716c3bb7520c",
+    "solution_1728_2112_2304.json": "0e3271142a78e8dba7a8b46898cf811cfba6ea1075fed67e4d800f65b944f544",
+    "solver_backend.py": "5ef0f487f50a8a0a42c1574e0f59c12f58207b22b9e5a16f95dbb228d25cc1de",
+    "numerical_failure.json": "61546f37b881a81b66b3b4565f10f7223a67c8d9ccbd12421a6e463cd6293693",
+    "previous_solution_1728_2112_2304.json": "64451766b155b3eb1ef95f12abdd7de974a7d79b0aa74618c99543a81ff22a70",
+    "calibrate.py": "9967b85f9ca4f68a0bd982640cb03dad64ec1de80e2f8e16a9c6eac2b9d683a2",
+    "profile_service.py": "2a41ea19fc222f2c33a9e9c956d5137da52641b9f181d12e92f24c7a0180b782",
+    "contract.json": "6608fefee3e9864df6279a9a712104a5c9bc2890f601e1981b92020fb91aab67",
+    "confirm.py": "d1cf9a07610d7ec2800bde87757878a75788afefa53c3f76d7e27fb9fee6a8d8",
+    "test_revision.py": "7f4cb35e05feb908c6013e8f05f66e0d0d7e410daac2df5ec848284c74ce2e7d"
+  },
+  "solver": "HiGHS 1.15.1",
+  "feasibility_tolerance": 1e-08,
+  "time_unit": "microseconds",
+  "choices": [
+    {
+      "shape": [
+        960,
+        1152,
+        640
+      ],
+      "tile": [
+        32,
+        32,
+        32
+      ],
+      "solve_seconds": 0.9106814580736682
+    },
+    {
+      "shape": [
+        1728,
+        2112,
+        2304
+      ],
+      "tile": [
+        64,
+        48,
+        32
+      ],
+      "solve_seconds": 3.5568200410343707
+    }
+  ],
+  "fixed_tile_checks": "144 tiles on each of both shapes agree with direct counts, residency, waves and objective"
+}

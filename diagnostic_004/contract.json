@@ -1,0 +1,54 @@
+{
+  "question": "Which physical mechanism explains the 1920-cubed ranking inversion?",
+  "tiles": [
+    [
+      32,
+      32,
+      32
+    ],
+    [
+      64,
+      48,
+      32
+    ]
+  ],
+  "baseline_source": "../gemm.cu",
+  "model_changes": false,
+  "device": 7,
+  "hypotheses": {
+    "scheduling": "gap changes near actual resident block capacity or under unused shared reservation",
+    "recurring_cost": "gap persists and grows with reduction stages at fixed grid",
+    "layout": "padding reduces shared service work and ordinary latency, after checking resources and compiled instructions"
+  },
+  "output_sizes": [
+    1280,
+    1344,
+    1376,
+    1408,
+    1440,
+    1472,
+    1536,
+    1792,
+    1920,
+    2048
+  ],
+  "reduction_lengths": [
+    256,
+    512,
+    1024,
+    1920,
+    3072
+  ],
+  "padding_bf16_elements": [
+    0,
+    8,
+    16
+  ],
+  "reservation_bytes": [
+    24576,
+    45056
+  ],
+  "repeats": 2,
+  "boundary": "L2 model excluded; caches active; reservations and padding can change residency and compiler behavior; counters alone are not causal proof",
+  "decision": "preserve negative interventions; no posthoc model refit; explain only mechanisms supported by matched controls"
+}

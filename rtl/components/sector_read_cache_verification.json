@@ -1,0 +1,40 @@
+{
+  "all_passed": true,
+  "checks": [
+    {
+      "name": "normal",
+      "passed": true,
+      "output": "SECTOR_CACHE_PASS checks=7 sectors_first_miss_then_hit delayed_completion eviction reset\n- rtl/components/sector_read_cache_tb.sv:57: Verilog $finish\n- S i m u l a t i o n   R e p o r t: Verilator 5.050 2026-07-01\n- Verilator: $finish at 220ns; walltime 0.000 s; speed 5.946 ms/s\n- Verilator: cpu 0.000 s on 1 threads; allocated 2 MB\n"
+    },
+    {
+      "name": "completion_identity",
+      "passed": true,
+      "output": "[33000] %Fatal: sector_read_cache.sv:59: Assertion failed in sector_read_cache_tb.dut: Cache backing completion identity mismatch\n%Error: rtl/components/sector_read_cache.sv:59: Verilog $stop\nAborting...\n"
+    },
+    {
+      "name": "alignment",
+      "passed": true,
+      "output": "[9000] %Fatal: sector_read_cache.sv:50: Assertion failed in sector_read_cache_tb.dut: Unaligned cache word request\n%Error: rtl/components/sector_read_cache.sv:50: Verilog $stop\nAborting...\n"
+    }
+  ],
+  "physical_geometry": {
+    "line_bytes": 128,
+    "sector_bytes": 32,
+    "sectors_per_line": 4
+  },
+  "model_choices": {
+    "SETS": 2,
+    "WAYS": 1,
+    "pending_requests": 1,
+    "replacement": "first invalid else rotating victim",
+    "hit_result": "registered nextedge"
+  },
+  "backing_timing": "Actual ID-matched backing return, no inferred miss timestamp",
+  "numerical_storage": "Full256bit sector packet and requested32bit word captured on hit or return; packet contents checked independently for all8words",
+  "source_sha256": {
+    "sector_read_cache.sv": "45c49166f1cf330b3c2ae4b41f5af0d96655d3a6d8cbeb5f09452e21c3592298",
+    "sector_read_cache_tb.sv": "60df250ced77dde9a666652bfe89d807bb01e9a9e9da4fa3a906267872bdaef4"
+  },
+  "full_gpu_integrated": false,
+  "hardware_latency_identified": false
+}

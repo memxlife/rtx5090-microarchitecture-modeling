@@ -1,0 +1,52 @@
+{
+  "all_passed": true,
+  "checked_words": 4096,
+  "checks": [
+    {
+      "K": 64,
+      "checked_words": 2048,
+      "passed": true
+    },
+    {
+      "K": 1536,
+      "checked_words": 2048,
+      "passed": true
+    }
+  ],
+  "rejected_invalid_launches": [
+    "odd_base",
+    "allocation_overflow"
+  ],
+  "oracle": "Direct full K integer dot products using original A17/B13 global strides, then exact division by256; both distinct block coordinates.",
+  "scope": "Two resident full reductions through staging and native compute; excludes output scratch, output stores, full CTA/grid behavior and physical GPU timing.",
+  "reset_contract": "Backing provider flushes pre-reset work; memory remains immutable.",
+  "timing_calibrated": false,
+  "source_sha256": {
+    "discovery_rounds/native_barrier_015/native_control_decode.sv": "8c50509b7a80eeed376e83a2078ec8f1b7da30f7cea64d48c8f5248569315cdb",
+    "discovery_rounds/native_barrier_015/producer_barrier_tracker.sv": "a07e60e6d6596cd2aec665367a308b358e2bad05196096c6d68ef636e57d42ad",
+    "discovery_rounds/functional_mapping_002/native_bf16_layout.sv": "63658e6b59f2d124cab3a73159d3219c3d350616cec99bf72fab58afc42df76b",
+    "numerical/library_movm_permutation.sv": "eb6d60b41d421751b14a0bff080d079bf0f0be82b185adbedbf2ad1b2df0e17e",
+    "numerical/native_studied_stage_schedule.sv": "c5a8c42153dd967e71096ea0f6312927f35e89f1fb41b682b61f45d898a1f56c",
+    "components/decoded_native_issue_gate.sv": "9b3f3e8c82c40af5d73839b64dfc1279778f53fc95044cfe55cf0ce09625b427",
+    "components/warp_shared_read_service.sv": "82df6598d987c0df1c5be4db8ec504951f2d958783390d7b458cbde6b904500b",
+    "numerical/numerical_matrix_pipeline.sv": "20d64fa7c297f0a4cf83a68f899a199330cc7907f136f031d1f5b030d4a010b4",
+    "numerical/native_bf16_adapter.sv": "ca05d62325e04c3ab0d982a6d0755355903f331799f83a396d512b866de58d6d",
+    "numerical/native_hmma16816_adapter.sv": "b7b24dc0c6ea8e2acd4dd48b309f5b23804b167f3d4aa7a35af6abd5d6dce18d",
+    "numerical/native_movm_word_pipeline.sv": "3ef390ba095583072d92165d812f129a83e4c30d90bd431b2b702221dec66108",
+    "numerical/bf16_reference.cpp": "0da9f3da8194c8d832b60ef29028a456397c76f9b0edc2b6e45c1ef69e14e1d3",
+    "components/hardware_blocks.sv": "5f440c3e53abf5f907a2300c47798d7df41d81a39e1666d1c2ebfcb8a6add97a",
+    "components/allocation_demands.sv": "9225576fee76bd34f3c55262b2cacd5c21f43a2ced88ce375221d8519b6bd760",
+    "components/quantized_block_admission.sv": "048f8fc9dfaa3d807c5b5bbe5b9a7d1c5eeb4ec33150ef3058a2b0f8769bcacd",
+    "numerical/resident_stage_admission.sv": "bfc76513d2415c16ec38064f12f9d3d00a15ea7958e61a899b534dac10065935",
+    "numerical/resident_native_stage_engine.sv": "dd696ad6776a16b8591f011d51a53c90b816b6b0c7cdbefb5ae3e90a2bf3c641",
+    "components/sector_read_cache.sv": "45c49166f1cf330b3c2ae4b41f5af0d96655d3a6d8cbeb5f09452e21c3592298",
+    "numerical/resident_u16_warp_load.sv": "0cbf01fb3926115579cbbc82e9104beceae21261586eadd44de6c215d3b7e318",
+    "numerical/resident_operand_staging.sv": "0ee192e43a0f95009659b7d01d07fb44239e4039248038f9aa8bb32133e60c37",
+    "numerical/resident_gemm_reduction.sv": "a4cb28c5c357483fcc9e8dab0469b751193042be470a68035f9a32617a8ea136",
+    "numerical/resident_gemm_reduction_tb.sv": "2ae38119ac69d8a717545e8c0839f2155ae55f1f8d5d6bf862e351fdb35563fd"
+  },
+  "review": {
+    "human_first_technical_writing": true,
+    "undergraduate_reader_review": true
+  }
+}

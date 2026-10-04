@@ -1,0 +1,111 @@
+{
+  "total": 144,
+  "compiled": 144,
+  "correct": 144,
+  "spill_free": 144,
+  "selected": {
+    "tile": [
+      80,
+      64,
+      16
+    ],
+    "executable": "cold_80_64_16",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=80",
+      "-DBN=64",
+      "-DBK=16",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_80_64_16"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 4608,
+    "resident_ctas": 8,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.206048,
+      0.205606398,
+      0.206425598,
+      0.205203199,
+      0.205625597,
+      0.206035197,
+      0.206022397,
+      0.205222398,
+      0.205215997
+    ],
+    "latency_ms_median": 0.205625597,
+    "elapsed_seconds": 2.8206350803375244
+  },
+  "best": {
+    "tile": [
+      32,
+      32,
+      32
+    ],
+    "executable": "cold_32_32_32",
+    "compile_returncode": 0,
+    "compile_command": [
+      "/usr/local/cuda-12.8/bin/nvcc",
+      "-O3",
+      "-arch=sm_120",
+      "-Xptxas=-v",
+      "-DBM=32",
+      "-DBN=32",
+      "-DBK=32",
+      "gemm_cold.cu",
+      "-lcublas",
+      "-o",
+      "cold_32_32_32"
+    ],
+    "compiler_spills": false,
+    "run_returncode": 0,
+    "shape": [
+      1008,
+      1008,
+      1008
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 4096,
+    "resident_ctas": 11,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.0655359998,
+      0.0655423999,
+      0.0655359998,
+      0.0651327997,
+      0.0655423999,
+      0.0655359998,
+      0.0655423999,
+      0.0655359998,
+      0.0655423999
+    ],
+    "latency_ms_median": 0.0655359998,
+    "elapsed_seconds": 21.949557304382324
+  },
+  "regret": 2.137597620048821,
+  "relative_prediction_error": 0.7921155433236747,
+  "minimum_registers": 26,
+  "maximum_registers": 168,
+  "elapsed_seconds": 91.65441036224365
+}

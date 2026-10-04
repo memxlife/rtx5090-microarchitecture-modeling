@@ -1,0 +1,6 @@
+{
+  "returncode": 0,
+  "run_seconds": 16.073111708043143,
+  "implementation": "Existing compiled Verilog component libraries plus generated thin top and explicitC++driver",
+  "hardware_timing_validated": false
+}

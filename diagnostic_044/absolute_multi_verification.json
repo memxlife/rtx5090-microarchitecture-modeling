@@ -1,0 +1,41 @@
+{
+  "absolute_rows": [
+    {
+      "single_block": false,
+      "k": 12288,
+      "predicted_us": 366.7125284166667,
+      "observed_us": 380.844808,
+      "relative_error": 0.03710771234495413
+    },
+    {
+      "single_block": false,
+      "k": 49152,
+      "predicted_us": 1455.4581228666668,
+      "observed_us": 1519.20002,
+      "relative_error": 0.04195754100459607
+    },
+    {
+      "single_block": true,
+      "k": 20480,
+      "predicted_us": 608.6559938500001,
+      "observed_us": 608.262384,
+      "relative_error": 0.0006471053616889044
+    },
+    {
+      "single_block": true,
+      "k": 73728,
+      "predicted_us": 2181.288519166667,
+      "observed_us": 2183.9935800000003,
+      "relative_error": 0.0012385846085378102
+    }
+  ],
+  "multi_block_increment": {
+    "predicted_us": 1088.7455944500002,
+    "observed_us": 1138.355212,
+    "relative_error": 0.04358008557174306
+  },
+  "all_correct": true,
+  "checks": 180,
+  "all_spill_free": true,
+  "accepted": true
+}

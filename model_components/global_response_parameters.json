@@ -1,0 +1,11 @@
+{
+  "cold_base_cycles": 956.986328125,
+  "cold_extra_request_cycles": 19.45855034722221,
+  "cached_base_cycles": 375.3024088541667,
+  "cached_extra_request_cycles": 8.041341145833334,
+  "provenance": "diagnostic019 frozen from one/four-load probe slopes; no GEMM timing",
+  "limits": "Full-warp LDG.E.U16 followed by dependent STS.U16,64B from distinct128Bline perrequest; oneCTA; includesloop/address/store/scheduling. Homogeneous endpoints and selectedfourloadmixedorders validated; mixedtwo-loadgroupsnotvalidated. Not intrinsic latency or completeGEMMcost.",
+  "confirmation_max_relative_error": 0.022349607306579075,
+  "full_model_complete": false,
+  "mixed_confirmation": "diagnostic020: exact0/25/50/75/100percent hit counters; supported4-load orders; fresh25/50percent hits predictedwithin0.18/1.27percent from019parameters; same nativebenchmarkbody;162fullchecks; noGEMMfit"
+}

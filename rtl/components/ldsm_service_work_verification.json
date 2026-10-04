@@ -1,0 +1,14 @@
+{
+  "all_passed": true,
+  "measured_configurations": 24,
+  "source_sha256": {
+    "ldsm_service_work.sv": "4054780b5060a7408350de2dee0cd49c64fc5bf4d4693a9361e1b38bdf8e67bd",
+    "ldsm_service_work_tb.sv": "b51ded26de9989a5fc6a2df0dddfd07ad58e6bb8b00da4b32d0ea683bfd57b06"
+  },
+  "python_source_sha256": "2c6e409aea5ccdaa8bdb21ae0c95b76bdb9e8f086a51ada9a567cc850b84a1ff",
+  "output": "PASS:24 measured LDSM service cases and2 invalid controls\n- rtl/components/ldsm_service_work_tb.sv:15: Verilog $finish\n- S i m u l a t i o n   R e p o r t: Verilator 5.050 2026-07-01\n- Verilator: $finish at 26ps; walltime 0.000 s; speed 58.166 ns/s\n- Verilator: cpu 0.000 s on 1 threads; allocated 2 MB\n",
+  "scope": "Aligned all-lane LDSM service work; group boundaries do not merge",
+  "intrinsic_timing_identified": false,
+  "full_GPU_integrated": false,
+  "within_group_duplicate_row_rule": "inferred; fresh confirmation pending"
+}

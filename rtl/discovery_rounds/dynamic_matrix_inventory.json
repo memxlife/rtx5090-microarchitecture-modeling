@@ -1,0 +1,37 @@
+{
+  "records": [
+    {
+      "tile": [
+        32,
+        32
+      ],
+      "blocks": 6,
+      "k": 16384,
+      "stages": 512,
+      "observed_warp_matrix_instructions": 49152,
+      "derived_warp_matrix_instructions": 49152,
+      "source_sha256": "43927b042db1d4fe9a6d07001fd05bcb642eeae8883f60d060dad3d2bada59a1",
+      "raw_sha256": "edeb0e8cf277190727cb2a42c91253e43ca3a22e4c7f470f02ae3f4e71345192",
+      "source": "diagnostic_042/profile_32_32_p2_k16384_c1.source.csv",
+      "raw": "diagnostic_042/profile_32_32_p2_k16384_c1.raw.csv"
+    },
+    {
+      "tile": [
+        64,
+        48
+      ],
+      "blocks": 2,
+      "k": 16384,
+      "stages": 512,
+      "observed_warp_matrix_instructions": 49152,
+      "derived_warp_matrix_instructions": 49152,
+      "source_sha256": "d10e6fde47216c94a606b5fcdc116790829ce7ee26cdcd0e7b5d5910d0bb45af",
+      "raw_sha256": "38db702a38389ffbc5a8dce33b134ac8c21e5c46cd2b57e4d90ae3fa336304a4",
+      "source": "diagnostic_042/profile_64_48_p2_k16384_c1.source.csv",
+      "raw": "diagnostic_042/profile_64_48_p2_k16384_c1.raw.csv"
+    }
+  ],
+  "scope": "Saved diagnostic_042 p2 launches only; arithmetic count, not timing prediction",
+  "hardware_benchmark_run": false,
+  "timing_parameters_identified": 0
+}

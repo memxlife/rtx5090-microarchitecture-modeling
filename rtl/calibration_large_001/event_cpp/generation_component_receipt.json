@@ -1,0 +1,10 @@
+{
+  "returncode": 0,
+  "result": "GENERATION_METADATA_PASS cycles=2000 checks=13986 releases=165",
+  "scope": "Metadata-only C++ generation barrier versusunchangedRTL,2000cycles,165generations,4cyclerelease delay,backpressuredarm/arrival/release andreset.",
+  "files": {
+    "generation_metadata.hpp": "32b8aff44983f29e0623611070202226c13d3029bc24b8a98131f81caf86c7b4",
+    "generation_component_top.sv": "02b24795133673e04ea9668d1642e20dfac4f36291a32b8968229fa91249dcab",
+    "generation_component_test.cpp": "e6977f64d30ed63fb8a5637436070515f74a4e31e770841774bcd061816dd2fc"
+  }
+}

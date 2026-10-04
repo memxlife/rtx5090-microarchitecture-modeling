@@ -1,0 +1,48 @@
+{
+  "all_passed": true,
+  "checked_words": 4096,
+  "checks": [
+    {
+      "store_delay_synthetic": 7,
+      "read_delay_synthetic": 11,
+      "read_slots": 1,
+      "checked_words": 2048,
+      "passed": true,
+      "stdout": "OUTPUT_SCRATCH_PASS checked_words=2048 store_delay=7 read_delay=11 read_slots=1\n- rtl/numerical/studied_output_scratch_tb.sv:52: Verilog $finish\n- S i m u l a t i o n   R e p o r t: Verilator 5.050 2026-07-01\n- Verilator: $finish at 149ns; walltime 0.003 s; speed 56.806 us/s\n- Verilator: cpu 0.003 s on 1 threads; allocated 2 MB\n"
+    },
+    {
+      "store_delay_synthetic": 19,
+      "read_delay_synthetic": 23,
+      "read_slots": 2,
+      "checked_words": 2048,
+      "passed": true,
+      "stdout": "OUTPUT_SCRATCH_PASS checked_words=2048 store_delay=19 read_delay=23 read_slots=2\n- rtl/numerical/studied_output_scratch_tb.sv:52: Verilog $finish\n- S i m u l a t i o n   R e p o r t: Verilator 5.050 2026-07-01\n- Verilator: $finish at 265ns; walltime 0.004 s; speed 60.301 us/s\n- Verilator: cpu 0.004 s on 1 threads; allocated 2 MB\n"
+    }
+  ],
+  "per_batch_counts": {
+    "store_requests": 16,
+    "store_commit_words": 1024,
+    "read_requests": 32,
+    "read_completions": 32
+  },
+  "oracle": "Coordinate-specific finite FP32 bit identities placed through measured C layout; every resulting row-major coordinate checked independently.",
+  "protocol_checks": [
+    "request input snapshot despite mutation",
+    "first read waits for all1024 committed store words",
+    "held response identity/data",
+    "reset cancels partial store batch",
+    "refill/replay"
+  ],
+  "timing_calibrated": false,
+  "scope": "Native-shaped output scratch behavior with synthetic finite service; not physical latency identification.",
+  "source_sha256": {
+    "discovery_rounds/functional_mapping_002/native_bf16_layout.sv": "63658e6b59f2d124cab3a73159d3219c3d350616cec99bf72fab58afc42df76b",
+    "components/warp_shared_read_service.sv": "82df6598d987c0df1c5be4db8ec504951f2d958783390d7b458cbde6b904500b",
+    "numerical/studied_output_scratch_pipeline.sv": "73b253eea79f3011b936157a7790ca0f4c413dc6f3e601e2934832470f41c988",
+    "numerical/studied_output_scratch_tb.sv": "cddc4fe7eb24eae09c4f14fb57ccc2251be2c9fe3641648e30be9e08d24484e5"
+  },
+  "review": {
+    "human_first_technical_writing": true,
+    "undergraduate_reader_review": true
+  }
+}

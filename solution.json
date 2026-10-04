@@ -1,0 +1,155 @@
+{
+  "shape": [
+    1008,
+    1008,
+    1008
+  ],
+  "limits_quotients": [
+    6,
+    6,
+    4
+  ],
+  "ablation": null,
+  "status": 0,
+  "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+  "solve_seconds": 0.02109950000885874,
+  "variables": 73,
+  "constraints": 146,
+  "integer_variables": 42,
+  "mip_gap": 0.0,
+  "mip_nodes": 9,
+  "objective_bound": 0.04274636551109001,
+  "performance_model": "max(padded work / measured effective kernel throughput, requested bytes / measured copy bandwidth); no L2 term",
+  "effective_flops_s": 50718802405563.9,
+  "bandwidth_B_s": 1473715186000.0,
+  "maximum_constraint_violation": 0.0,
+  "tile": [
+    80,
+    64,
+    16
+  ],
+  "predicted_ms": 0.04274636551109001,
+  "independently_recomputed_ms": 0.04274636551109001,
+  "shared_bytes": 8704,
+  "minimum_accumulator_register_words": 40,
+  "independent_enumeration_seconds": 0.0001336670247837901,
+  "domain_triples": 144,
+  "feasible_model_triples": 144,
+  "enumeration_optimum_ms": 0.04274636551109001,
+  "agrees_with_enumeration": true,
+  "near_optimal_1pct": [
+    {
+      "tile": [
+        64,
+        80,
+        16
+      ],
+      "predicted_ms": 0.04274636551109001
+    },
+    {
+      "tile": [
+        64,
+        80,
+        48
+      ],
+      "predicted_ms": 0.04274636551109001
+    },
+    {
+      "tile": [
+        80,
+        64,
+        16
+      ],
+      "predicted_ms": 0.04274636551109001
+    },
+    {
+      "tile": [
+        80,
+        64,
+        48
+      ],
+      "predicted_ms": 0.04274636551109001
+    },
+    {
+      "tile": [
+        64,
+        96,
+        16
+      ],
+      "predicted_ms": 0.042981880498046875
+    },
+    {
+      "tile": [
+        64,
+        96,
+        48
+      ],
+      "predicted_ms": 0.042981880498046875
+    },
+    {
+      "tile": [
+        96,
+        64,
+        16
+      ],
+      "predicted_ms": 0.042981880498046875
+    },
+    {
+      "tile": [
+        96,
+        64,
+        48
+      ],
+      "predicted_ms": 0.042981880498046875
+    },
+    {
+      "tile": [
+        80,
+        80,
+        16
+      ],
+      "predicted_ms": 0.04299205613263448
+    },
+    {
+      "tile": [
+        80,
+        80,
+        48
+      ],
+      "predicted_ms": 0.04299205613263448
+    },
+    {
+      "tile": [
+        64,
+        80,
+        32
+      ],
+      "predicted_ms": 0.04300255480324074
+    },
+    {
+      "tile": [
+        64,
+        80,
+        64
+      ],
+      "predicted_ms": 0.04300255480324074
+    },
+    {
+      "tile": [
+        80,
+        64,
+        32
+      ],
+      "predicted_ms": 0.04300255480324074
+    },
+    {
+      "tile": [
+        80,
+        64,
+        64
+      ],
+      "predicted_ms": 0.04300255480324074
+    }
+  ],
+  "active_bottleneck": "global_bandwidth"
+}

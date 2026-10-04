@@ -1,0 +1,59 @@
+{
+  "source_sha256": {
+    "hardware_blocks.sv": "5f440c3e53abf5f907a2300c47798d7df41d81a39e1666d1c2ebfcb8a6add97a",
+    "completion_register_file.sv": "9ea0b9df081c5d9fc05270192137477ed3857a6eda20b88b9175b632ffa68e04",
+    "completion_path_tb.sv": "879bb141f4de26e535d8309d59980294689810e89556b5d65f2978b0a4db925a"
+  },
+  "verilator_version": "Verilator 5.050 2026-07-01 rev vUNKNOWN-built20260701",
+  "checks": [
+    {
+      "memory_latency_baseline_cycles": 2,
+      "passed": true,
+      "output": "COMPLETION_PATH_PASS cycles=31 issues=1 delayed_load held_return consumer_stall data_flow concurrent_events reset\n- rtl/components/completion_path_tb.sv:79: Verilog $finish\n- S i m u l a t i o n   R e p o r t: Verilator 5.050 2026-07-01\n- Verilator: $finish at 70ns; walltime 0.000 s; speed 1.630 ms/s\n- Verilator: cpu 0.000 s on 1 threads; allocated 2 MB\n"
+    },
+    {
+      "memory_latency_baseline_cycles": 12,
+      "passed": true,
+      "output": "COMPLETION_PATH_PASS cycles=33 issues=1 delayed_load held_return consumer_stall data_flow concurrent_events reset\n- rtl/components/completion_path_tb.sv:79: Verilog $finish\n- S i m u l a t i o n   R e p o r t: Verilator 5.050 2026-07-01\n- Verilator: $finish at 74ns; walltime 0.000 s; speed 2.179 ms/s\n- Verilator: cpu 0.000 s on 1 threads; allocated 2 MB\n"
+    },
+    {
+      "rejected_case": "bad_index",
+      "passed": true,
+      "diagnostic": "Reservation destination outside writable register range"
+    },
+    {
+      "rejected_case": "unreserved",
+      "passed": true,
+      "diagnostic": "Completion has no matching pending reservation"
+    },
+    {
+      "rejected_case": "wrong_id",
+      "passed": true,
+      "diagnostic": "Completion has no matching pending reservation"
+    },
+    {
+      "rejected_case": "duplicate_id",
+      "passed": true,
+      "diagnostic": "Duplicate outstanding reservation identity"
+    },
+    {
+      "rejected_case": "duplicate_completion",
+      "passed": true,
+      "diagnostic": "Completion has no matching pending reservation"
+    },
+    {
+      "memory_latency_baseline_cycles": 40,
+      "passed": true,
+      "output": "COMPLETION_PATH_PASS cycles=61 issues=1 delayed_load held_return consumer_stall data_flow concurrent_events reset\n- rtl/components/completion_path_tb.sv:79: Verilog $finish\n- S i m u l a t i o n   R e p o r t: Verilator 5.050 2026-07-01\n- Verilator: $finish at 130ns; walltime 0.000 s; speed 1.712 ms/s\n- Verilator: cpu 0.000 s on 1 threads; allocated 2 MB\n"
+    }
+  ],
+  "all_passed": true,
+  "hardware_calibrated": false,
+  "full_gemm_model": false,
+  "behavior_update": "Register data/readiness is updated only by a matching actual completion; timestamps are not used.",
+  "limits": [
+    "Single register context, two read views and one completion port",
+    "Arithmetic in the test is integer addition, not matrix instruction emulation",
+    "Three memory delays are synthetic protocol controls, not RTX measurements"
+  ]
+}

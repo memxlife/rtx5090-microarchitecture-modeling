@@ -1,0 +1,28 @@
+{
+  "all_passed": true,
+  "checks": [
+    "256 FP32 outputs using independently recorded hardware layout tables",
+    "response identity",
+    "response stability across three stalled cycles",
+    "retirement releases outstanding entry"
+  ],
+  "source_sha256": {
+    "numerical/native_bf16_adapter.sv": "bd4c6f3c9ca4548bbfc9c10e0f967ae809d847bac2b7f14826398791300ac4e4",
+    "numerical/native_bf16_adapter_tb.sv": "619473562d85825b3996782390c173e03c4fb3083892644a25017ace81007056",
+    "numerical/numerical_matrix_pipeline.sv": "e999ddc02b4e8c38f5b8d679afc2a1642fd340bf5aca2eabd1925fec069f3728",
+    "numerical/bf16_reference.cpp": "b2f8d0a848d75ec9dd92a8fa5285f10365e34b5f239183be40c91ab22e1bff40",
+    "discovery_rounds/functional_mapping_002/native_bf16_layout.sv": "63658e6b59f2d124cab3a73159d3219c3d350616cec99bf72fab58afc42df76b"
+  },
+  "hardware_layout_evidence": "discovery_rounds/functional_mapping_002",
+  "timing_calibrated": false,
+  "latency_cycles": 3,
+  "latency_classification": "synthetic directed-test value",
+  "native_hmma_pipeline_modeled": false,
+  "accumulation_order": "sequential reference FMA convention, not identified NVIDIA tensor accumulation order",
+  "newly_identified_functional_inventory_fields": 0,
+  "newly_identified_timing_inventory_fields": 0,
+  "remaining_functional": 80,
+  "remaining_timing": 47,
+  "manual_inline_integration_pending": false,
+  "broader_verification": "numerical/native_matrix_verification.json"
+}

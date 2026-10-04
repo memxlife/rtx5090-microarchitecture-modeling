@@ -1,0 +1,50 @@
+{
+  "all_prefix_events_and_counters_match": true,
+  "cycles_checked": 10000,
+  "scope": "Observed prefix hash and counters; not full-workload equivalence",
+  "rows": [
+    {
+      "cycles": "10000",
+      "elapsed": "9995",
+      "trace_hash": "6d53b3e7238353a5",
+      "l2_requests": "7597",
+      "hits": "6922",
+      "misses": "675",
+      "fills": "159",
+      "dispatched": "1870",
+      "completed": "0",
+      "resident": "1870",
+      "file": "prefix_before_packed.log",
+      "wall_seconds": 23.605
+    },
+    {
+      "cycles": "10000",
+      "elapsed": "9995",
+      "trace_hash": "6d53b3e7238353a5",
+      "l2_requests": "7597",
+      "hits": "6922",
+      "misses": "675",
+      "fills": "159",
+      "dispatched": "1870",
+      "completed": "0",
+      "resident": "1870",
+      "file": "prefix_packed.log",
+      "wall_seconds": 25.361
+    },
+    {
+      "cycles": "10000",
+      "elapsed": "9995",
+      "trace_hash": "6d53b3e7238353a5",
+      "l2_requests": "7597",
+      "hits": "6922",
+      "misses": "675",
+      "fills": "159",
+      "dispatched": "1870",
+      "completed": "0",
+      "resident": "1870",
+      "file": "prefix_shared_optimized.log",
+      "wall_seconds": 15.699
+    }
+  ],
+  "speedup": 1.5035989553474745
+}

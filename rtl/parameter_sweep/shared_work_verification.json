@@ -1,0 +1,28 @@
+{
+  "profile_checks": [
+    {
+      "row_words": 16,
+      "packages_per_scalar_warp_read": 4,
+      "predicted_wavefronts": 32768,
+      "observed_wavefronts": 32768,
+      "requested_request_counter_returned": false
+    },
+    {
+      "row_words": 24,
+      "packages_per_scalar_warp_read": 2,
+      "predicted_wavefronts": 16384,
+      "observed_wavefronts": 16384,
+      "requested_request_counter_returned": false
+    },
+    {
+      "row_words": 32,
+      "packages_per_scalar_warp_read": 8,
+      "predicted_wavefronts": 65536,
+      "observed_wavefronts": 65536,
+      "requested_request_counter_returned": false
+    }
+  ],
+  "synthetic_broadcast_check": true,
+  "synthetic_conflict_free_check": true,
+  "timing_validated": false
+}

@@ -1,0 +1,59 @@
+{
+  "source_sha256": {
+    "numerical_matrix_pipeline.sv": "20d64fa7c297f0a4cf83a68f899a199330cc7907f136f031d1f5b030d4a010b4",
+    "numerical_matrix_tb.sv": "62c02244930373845bd8df3cf39a1fde4a3d716561d401db4d1985db3685c314",
+    "bf16_reference.cpp": "0da9f3da8194c8d832b60ef29028a456397c76f9b0edc2b6e45c1ef69e14e1d3"
+  },
+  "vector_sha256": {
+    "expected.hex": "a9ff57610733a398a5bae19aa768fda0cfe19f2e70429dc55cf6afc70c33c4f9",
+    "a.hex": "f6e6eb8fa2a99a482e7613f21fa80dc5794fc8fc55b29d266afbcaa6b6b6880f",
+    "b.hex": "6d50fc5a0831d696154d1a50508a2fd837bc479d3a81ee2207b0da67b8fbd6e9",
+    "c.hex": "abff4932487f1064b98d7fd6e7b312dcd044fe2e51d28cbe0e33be52c2239e02"
+  },
+  "verilator_version": "Verilator 5.050 2026-07-01 rev vUNKNOWN-built20260701",
+  "oracle": "Exact rational BF16 products plus FP32 accumulator; round nearest even after each reduction element",
+  "case_labels": [
+    "identity_right",
+    "zero_product_nonzero_accumulator",
+    "signed_integer",
+    "fractional_rounding",
+    "cancellation",
+    "varied_exponents"
+  ],
+  "checks": [
+    {
+      "latency_baseline_cycles": 2,
+      "interval_baseline_cycles": 1,
+      "passed": true,
+      "output": "NUMERICAL_MATRIX_PASS operations=6 checked_words=1536 latency=2 interval=1 held_cycles=50 cycles=60\n- rtl/numerical/numerical_matrix_tb.sv:53: Verilog $finish\n- S i m u l a t i o n   R e p o r t: Verilator 5.050 2026-07-01\n- Verilator: $finish at 128ns; walltime 0.003 s; speed 48.413 us/s\n- Verilator: cpu 0.003 s on 1 threads; allocated 2 MB\n"
+    },
+    {
+      "latency_baseline_cycles": 17,
+      "interval_baseline_cycles": 3,
+      "passed": true,
+      "output": "NUMERICAL_MATRIX_PASS operations=6 checked_words=1536 latency=17 interval=3 held_cycles=35 cycles=92\n- rtl/numerical/numerical_matrix_tb.sv:53: Verilog $finish\n- S i m u l a t i o n   R e p o r t: Verilator 5.050 2026-07-01\n- Verilator: $finish at 192ns; walltime 0.003 s; speed 63.274 us/s\n- Verilator: cpu 0.003 s on 1 threads; allocated 2 MB\n"
+    },
+    {
+      "rejected": "duplicate_pending_identity",
+      "passed": true
+    },
+    {
+      "rejected": "nan",
+      "passed": true
+    },
+    {
+      "rejected": "subnormal",
+      "passed": true
+    }
+  ],
+  "all_passed": true,
+  "checked_output_words": 3072,
+  "hardware_calibrated": false,
+  "native_tensor_accumulation_order_identified": false,
+  "full_gemm_model": false,
+  "unsupported": [
+    "nonfinite/subnormal operands or results",
+    "native lane mapping",
+    "multiple SM/block scheduling"
+  ]
+}

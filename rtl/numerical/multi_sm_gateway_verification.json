@@ -1,0 +1,28 @@
+{
+  "all_passed": true,
+  "checks": [
+    {
+      "case": "normal",
+      "passed": true
+    },
+    {
+      "case": "wrong_id",
+      "passed": true
+    }
+  ],
+  "checked_read_words": 16,
+  "checks_scope": [
+    "equal IDs across SMs/read-write",
+    "accepted write payload snapshot",
+    "delayed actual backing returns",
+    "held client responses",
+    "one combined read/write transaction",
+    "reset provider flush",
+    "wrong return identity rejection"
+  ],
+  "timing_calibrated": false,
+  "source_sha256": {
+    "numerical/multi_sm_sector_gateway.sv": "a66a220ab879ef8c4d103fe7d7c8eb5630fd0c3ca44844ea34dd35a52e4ecd12",
+    "numerical/multi_sm_sector_gateway_tb.sv": "26084157d7230c89c7eac9afc2de3ba9fd97c6c3e30fbc69e018a2b9dc2fe0fa"
+  }
+}

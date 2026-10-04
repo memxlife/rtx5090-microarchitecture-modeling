@@ -1,0 +1,30 @@
+{
+  "previous_goal_turn": "progress: whole-grid resident dispatcher, full matrix output/ack validation, executable model-edge count and manual synchronization",
+  "model_change": "Two resident SM models execute disjoint blocks from one global grid; a single shared backing gateway owns one accepted read or masked write through provider return and client acknowledgment. Global block ordinals and a dispatch/retirement ledger preserve operation identity.",
+  "verification": [
+    "numerical/multi_sm_gateway_verification.json",
+    "numerical/resident_multi_sm_verification.json"
+  ],
+  "checked_outputs": 24576,
+  "gateway_checked_read_words": 16,
+  "gateway_wrong_identity_rejected": true,
+  "modeled_sms": 2,
+  "contexts_per_sm": 2,
+  "peak_resident_blocks": 4,
+  "hardware_parameters_closed": 0,
+  "physical_evidence_counts": {
+    "identified": 8,
+    "partial": 32,
+    "unknown": 94
+  },
+  "timing_calibrated": false,
+  "limits": [
+    "Private per-SM cache instances and no shared L2.",
+    "One outstanding backing read-or-write operation is an implementation hypothesis, not measured GPU concurrency or bandwidth.",
+    "Numerical tests retain immutable A/B and write C separately; no cross-SM cache coherence.",
+    "Only32x32native tile; original physical large workload and rankings not validated.",
+    "No output-phase reset in integrated fixture."
+  ],
+  "next": "Add shared L2 and outstanding memory paths, wire the provisional/physical parameter contracts, then calibrate and validate against real hardware under renewed authorization.",
+  "independent_root_review": "numerical/multi_sm_root_review.json"
+}

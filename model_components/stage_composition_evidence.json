@@ -1,0 +1,24 @@
+{
+  "status": "rejected as accurate elapsed-stage predictor; independent component hypotheses only",
+  "source": "diagnostic022",
+  "no_gemm_fit": true,
+  "parameters_sources": [
+    "diagnostic019 response costs",
+    "diagnostic014 shared resource bounds",
+    "diagnostic006 matrix capacity"
+  ],
+  "verified": "unchangedcompiled original kernels; exactrequested/cache/bank/HMMA counts;360fulloutputchecks no spills; profiledevicedurationswithin0.37percent ordinary timings",
+  "stage_errors_percent": [
+    19.710898246423852,
+    31.313463758864003,
+    16.655039677566116,
+    25.684921090568842
+  ],
+  "cold_minus_warm_errors_percent": [
+    7.263555014101075,
+    6.747206914976206
+  ],
+  "interpretation": "Most missing costremains allL2hit; notproofofonehardwarecause. Sharedbankwork/TCcapacitylowerbounds andcompoundglobalresponse do not model all actualproducer/consumer/issue/barrier interactions.",
+  "clock_limit": "Profilefrequency proxy2.934-2.946GHz matchesordinarydurations; after-run clocks lower duepossibleidle. No per-cycle unprofiled clockreconstruction.",
+  "full_model_complete": false
+}

@@ -1,0 +1,13 @@
+{
+  "accepted": true,
+  "reviewer": "root independent cold read",
+  "section": "4.51",
+  "human_first_review": "Read the concrete grid, ports, captured metadata, per-block ownership, completion handshake and model-cycle boundary in order. Prose states what the component does and why the final acknowledgment matters.",
+  "undergraduate_reader_review": "Verified six32x32tiles yield6144outputs per launch and four launches yield24576checkedoutputs. Model-edge counter includes drain check, excludes held done, and is not GPU timing. Repeated-cache state is not used to claim a physical cause. Disjoint grid tiles, one SM, two contexts, immutable backing inputs and untested output-reset are explicit.",
+  "inline_source_parity": true,
+  "current_receipt_hashes": true,
+  "source_sha256": "581c58d56c154b96f39b62fdf3a67b915fb136a97ca4fee9f030e4ab85dcd903",
+  "document_sha256": "e04efcfa41a5d637476f87bd4d8ce5f650b78e0c5afc66bd5117fc3b04772676",
+  "timing_validated": false,
+  "physical_parameters_closed": 0
+}

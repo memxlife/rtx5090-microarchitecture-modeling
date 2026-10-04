@@ -1,0 +1,22 @@
+{
+  "source_sha256": {
+    "components/warp_shared_read_service.sv": "82df6598d987c0df1c5be4db8ec504951f2d958783390d7b458cbde6b904500b",
+    "numerical/timed_generic_shared_matrix_pipeline.sv": "dc174e58303f169397d9baffb6cf5a1461c32904402d45fa2b21f73a29c8d7c4"
+  },
+  "source_parity": true,
+  "receipt_source_hashes_match": true,
+  "functional_review_defects": [],
+  "reviewed_contracts": [
+    "snapshot at acceptance",
+    "FIFO service and return separated from admission/delivery",
+    "slot remains occupied until acknowledgment",
+    "pre-edge admission capacity",
+    "eight response mask gates numerical admission",
+    "reset cancellation",
+    "duplicate/misaligned IDs/addresses rejected"
+  ],
+  "human_first_review": "Operation, measured work versus assumed timing, interfaces and bounded verification reviewed in order.",
+  "undergraduate_review": "Defined bank packages, snapshots and received mask; scalar bank work does not imply ports/latency; timed integration not confused with full native execution.",
+  "broadcast_consistency": "equal addresses require equal supplied words; final service source and receipt hashes verified",
+  "timed_wrapper_receipt_refresh": "final identity256 and fullK1536timed393216/baseline393216 receipts verified with current source hashes"
+}

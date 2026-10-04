@@ -1,0 +1,7 @@
+{
+  "stage": "initial testbench run",
+  "failure": "Reset did not cancel generation assertion at time240",
+  "cause": "Testbench inspected combinational ready/active immediately after changing rst at a negative edge, before delta-cycle settling.",
+  "repair": "Add one testbench time unit after deassertion before checking ready/active; no RTL change.",
+  "verified_after_repair": "20 positive directed checks and9 rejected invalid-event cases across release delay1/5."
+}

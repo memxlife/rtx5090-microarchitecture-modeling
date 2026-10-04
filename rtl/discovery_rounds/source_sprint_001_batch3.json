@@ -1,0 +1,182 @@
+{
+  "receipt": "source_sprint_001_batch3",
+  "retrieval_method": "Google through Chrome \u2192 original simulator manual",
+  "unique_rows_with_scoped_prior": 16,
+  "physical_parameter_identifications_added": 0,
+  "rows": [
+    {
+      "id": "F004",
+      "evidence_check": "supported_analogy_prior",
+      "candidate": "Round-robin across clusters, then cores; admit one CTA to a selected core only when resources permit",
+      "unit": null,
+      "source_url": "https://gpgpu-sim.org/manual/index.php/Main_Page",
+      "source_locator": "2.3.5 Thread Block / CTA / Work Group Scheduling",
+      "scope": "Published GPGPU-Sim 3.x design prior, not RTX5090 measured hardware.",
+      "identified_change": false
+    },
+    {
+      "id": "F022",
+      "evidence_check": "supported_analogy_prior",
+      "candidate": 1,
+      "unit": "model bank access per cycle",
+      "source_url": "https://gpgpu-sim.org/manual/index.php/Main_Page",
+      "source_locator": "2.3.2 Register Access and the Operand Collector",
+      "scope": "Older simulator model uses single-ported banked RAM, with write priority. This provides a one-access/bank/cycle prior, not physical RTX5090 write-port evidence.",
+      "identified_change": false
+    },
+    {
+      "id": "F026",
+      "evidence_check": "supported_analogy_prior",
+      "candidate": "Write requests take priority over register reads; arithmetic instructions reserve future shared result-bus slots before issue",
+      "unit": null,
+      "source_url": "https://gpgpu-sim.org/manual/index.php/Main_Page",
+      "source_locator": "2.3.2 Register Access and Operand Collector; 2.3.3 ALU Pipelines",
+      "scope": "Published GPGPU-Sim 3.x design prior, not RTX5090 measured hardware.",
+      "identified_change": false
+    },
+    {
+      "id": "F084",
+      "evidence_check": "supported_analogy_prior",
+      "candidate": "Global store remains outstanding until a write-acknowledgment packet returns; block finish requires no outstanding stores or pending register writes",
+      "unit": null,
+      "source_url": "https://gpgpu-sim.org/manual/index.php/Main_Page",
+      "source_locator": "2.3.1.1 Fetch and Decode; 2.4 Interconnection Network; 4.4.1.2.7 Memory Stage Software Model",
+      "scope": "Published GPGPU-Sim 3.x design prior, not RTX5090 measured hardware.",
+      "identified_change": false
+    },
+    {
+      "id": "F085",
+      "evidence_check": "supported_analogy_prior",
+      "candidate": "Kernel completes only after all dispatched blocks finish and have no pending operations",
+      "unit": null,
+      "source_url": "https://gpgpu-sim.org/manual/index.php/Main_Page",
+      "source_locator": "2.3.1.1 Fetch and Decode",
+      "scope": "Published GPGPU-Sim 3.x design prior, not RTX5090 measured hardware.",
+      "identified_change": false
+    },
+    {
+      "id": "F087",
+      "evidence_check": "supported_analogy_prior",
+      "candidate": {
+        "stages": 2,
+        "default_boundary_buffer_flits": 16,
+        "receive_packets_per_destination_clock": 1,
+        "credit_return": "after transfer to boundary buffer",
+        "virtual_channel_selection": "round robin"
+      },
+      "unit": null,
+      "source_url": "https://gpgpu-sim.org/manual/index.php/Main_Page",
+      "source_locator": "4.4.1.4 Clock domain crossing for intersim",
+      "scope": "Manual explicitly labels this as its simulation interface, not necessarily real hardware.",
+      "identified_change": false
+    },
+    {
+      "id": "T003",
+      "evidence_check": "supported_analogy_prior",
+      "candidate": 1,
+      "unit": "model core cycle boundary",
+      "source_url": "https://gpgpu-sim.org/manual/index.php/Main_Page",
+      "source_locator": "4.4.1.2.9 Thread Block / CTA / Work Group Scheduling",
+      "scope": "Model allows a new block on the cycle following last-thread completion. This is an admission/release scheduling convention, not a measured physical allocator latency.",
+      "identified_change": false
+    },
+    {
+      "id": "T006",
+      "evidence_check": "supported_analogy_prior",
+      "candidate": {
+        "pipeline_boundary_stages": 1,
+        "decode_capacity": 2
+      },
+      "unit": "model pipeline stage / instructions per cycle",
+      "source_url": "https://gpgpu-sim.org/manual/index.php/Main_Page",
+      "source_locator": "4.4.1.2.1 Fetch and Decode Software Model",
+      "scope": "Fetch buffer separates fetch and decode; model decodes up to two instructions per cycle. The one-boundary prior excludes cache wait and issue delay.",
+      "identified_change": false
+    },
+    {
+      "id": "T011",
+      "evidence_check": "supported_analogy_prior",
+      "candidate": {
+        "operands_received_per_collector_cycle": 1,
+        "instruction_releases": "when all operands ready",
+        "bank_conflict_wait": "variable"
+      },
+      "unit": "model operand per cycle",
+      "source_url": "https://gpgpu-sim.org/manual/index.php/Main_Page",
+      "source_locator": "2.3.2 Register Access and Operand Collector",
+      "scope": "Variable collector residency follows bank arbitration and operand count. A constant one-cycle collector delay is not supported.",
+      "identified_change": false
+    },
+    {
+      "id": "T012",
+      "evidence_check": "supported_analogy_prior",
+      "candidate": 0,
+      "unit": "additional bookkeeping stages in described path",
+      "source_url": "https://gpgpu-sim.org/manual/index.php/Main_Page",
+      "source_locator": "4.4.1.2.7 Memory Stage Software Model",
+      "scope": "Source describes bypassing writeback bookkeeping for all-hit load/store completion. Zero additional bookkeeping stages is a scoped model convention, not a physical register-forwarding delay.",
+      "identified_change": false
+    },
+    {
+      "id": "T019",
+      "evidence_check": "supported_analogy_prior",
+      "candidate": "Arithmetic result-bus slot is reserved before instruction issue; memory has separate writeback",
+      "unit": null,
+      "source_url": "https://gpgpu-sim.org/manual/index.php/Main_Page",
+      "source_locator": "2.3.3 ALU Pipelines",
+      "scope": "Policy prior only. The older model has no native RTX5090 matrix output bandwidth measurement.",
+      "identified_change": false
+    },
+    {
+      "id": "T022",
+      "evidence_check": "supported_analogy_prior",
+      "candidate": 1,
+      "unit": "model complete packet per destination clock",
+      "source_url": "https://gpgpu-sim.org/manual/index.php/Main_Page",
+      "source_locator": "4.4.1.4.2 Ejection interface details",
+      "scope": "One complete packet removed per destination clock from boundary buffers. This is a network receive prior, not matrix/register or private cache physical port bandwidth.",
+      "identified_change": false
+    },
+    {
+      "id": "T038",
+      "evidence_check": "supported_analogy_prior",
+      "candidate": 1,
+      "unit": "model complete packet per destination clock",
+      "source_url": "https://gpgpu-sim.org/manual/index.php/Main_Page",
+      "source_locator": "4.4.1.4.2 Ejection interface details",
+      "scope": "One complete packet removed per destination clock from boundary buffers. This is a network receive prior, not matrix/register or private cache physical port bandwidth.",
+      "identified_change": false
+    },
+    {
+      "id": "T020",
+      "evidence_check": "supported_analogy_prior",
+      "candidate": 2,
+      "unit": "legacy model coalesced accesses per core cycle",
+      "source_url": "https://gpgpu-sim.org/manual/index.php/Main_Page",
+      "source_locator": "2.3.4 Memory Pipeline (LDST unit)",
+      "scope": "Legacy half-warp coalescing model processes two accesses per core cycle. Different GPU/memory model: do not transplant its half-warp grouping into SM120.",
+      "identified_change": false
+    },
+    {
+      "id": "T021",
+      "evidence_check": "supported_analogy_prior",
+      "candidate": 2,
+      "unit": "legacy model coalesced accesses per core cycle",
+      "source_url": "https://gpgpu-sim.org/manual/index.php/Main_Page",
+      "source_locator": "2.3.4 Memory Pipeline (LDST unit)",
+      "scope": "Legacy half-warp coalescing model processes two accesses per core cycle. Different GPU/memory model: do not transplant its half-warp grouping into SM120.",
+      "identified_change": false
+    },
+    {
+      "id": "T043",
+      "evidence_check": "supported_analogy_prior",
+      "candidate": "Barrier operation handled at instruction issue",
+      "unit": null,
+      "source_url": "https://gpgpu-sim.org/manual/index.php/Main_Page",
+      "source_locator": "2.3.1.2 Instruction Issue",
+      "scope": "Admission policy prior; physical arrival throughput is not supplied.",
+      "identified_change": false
+    }
+  ],
+  "review": "All model conventions are labeled as such. Adjacent interface rates are not presented as private hardware ports."
+}

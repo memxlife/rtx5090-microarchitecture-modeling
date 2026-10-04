@@ -1,0 +1,195 @@
+{
+  "cases": 8,
+  "output_checks": 360,
+  "all_correct": true,
+  "all_spill_free": true,
+  "gpu_functions_identical": true,
+  "profiles": [
+    {
+      "tile": [
+        32,
+        32,
+        32
+      ],
+      "warm": 0,
+      "hit_fraction": 0.5833333333333334,
+      "miss_sectors": 163840.0,
+      "expected_miss_sectors": 163840.0,
+      "l1_hit_fraction": 0.0,
+      "requests": 196608.0,
+      "raw_global_requests": 196608.0,
+      "windows_per_warp_stage": 4.0,
+      "read_bank_packages": 786624.0,
+      "expected_read_bank_packages": 786624.0,
+      "hmma_count": 49152.0,
+      "expected_hmma": 49152.0,
+      "all_warp_instructions": 3297192.0,
+      "frequency_hz": 2933560000.0,
+      "profile_device_ms": 0.967776,
+      "ordinary_ms": 0.967328,
+      "profile_duration_relative_difference": 0.00046313143008369856,
+      "accepted": true
+    },
+    {
+      "tile": [
+        32,
+        32,
+        32
+      ],
+      "warm": 1,
+      "hit_fraction": 1.0,
+      "miss_sectors": 0.0,
+      "expected_miss_sectors": 0,
+      "l1_hit_fraction": 0.0,
+      "requests": 196608.0,
+      "raw_global_requests": 196608.0,
+      "windows_per_warp_stage": 4.0,
+      "read_bank_packages": 786624.0,
+      "expected_read_bank_packages": 786624.0,
+      "hmma_count": 49152.0,
+      "expected_hmma": 49152.0,
+      "all_warp_instructions": 3297192.0,
+      "frequency_hz": 2946380000.0,
+      "profile_device_ms": 0.505024,
+      "ordinary_ms": 0.505036795,
+      "profile_duration_relative_difference": 2.5334787735524046e-05,
+      "accepted": true
+    },
+    {
+      "tile": [
+        64,
+        48,
+        32
+      ],
+      "warm": 0,
+      "hit_fraction": 0.2857142857142857,
+      "miss_sectors": 163840.0,
+      "expected_miss_sectors": 163840.0,
+      "l1_hit_fraction": 0.0,
+      "requests": 114688.0,
+      "raw_global_requests": 114688.0,
+      "windows_per_warp_stage": 7.0,
+      "read_bank_packages": 590016.0,
+      "expected_read_bank_packages": 590016.0,
+      "hmma_count": 49152.0,
+      "expected_hmma": 49152.0,
+      "all_warp_instructions": 2530912.0,
+      "frequency_hz": 2942319000.0,
+      "profile_device_ms": 1.682848,
+      "ordinary_ms": 1.685728,
+      "profile_duration_relative_difference": 0.0017084606769300823,
+      "accepted": true
+    },
+    {
+      "tile": [
+        64,
+        48,
+        32
+      ],
+      "warm": 1,
+      "hit_fraction": 1.0,
+      "miss_sectors": 0.0,
+      "expected_miss_sectors": 0,
+      "l1_hit_fraction": 0.0,
+      "requests": 114688.0,
+      "raw_global_requests": 114688.0,
+      "windows_per_warp_stage": 7.0,
+      "read_bank_packages": 590016.0,
+      "expected_read_bank_packages": 590016.0,
+      "hmma_count": 49152.0,
+      "expected_hmma": 49152.0,
+      "all_warp_instructions": 2530912.0,
+      "frequency_hz": 2939391000.0,
+      "profile_device_ms": 0.887552,
+      "ordinary_ms": 0.884319997,
+      "profile_duration_relative_difference": 0.003654789002809397,
+      "accepted": true
+    }
+  ],
+  "slopes": [
+    {
+      "tile": [
+        32,
+        32,
+        32
+      ],
+      "warm": 0,
+      "measured_stage_us": 1.887400005208333,
+      "critical_serial_predicted_stage_us": 1.51537651067872,
+      "critical_serial_relative_error": 0.19710898246423852,
+      "overlap_predicted_stage_us": 1.471743518682647,
+      "overlap_relative_error": 0.22022702414891931,
+      "remaining_serial_stage_us": 0.37202349452961303,
+      "average_cache_predicted_stage_us": 1.0254656369593032
+    },
+    {
+      "tile": [
+        32,
+        32,
+        32
+      ],
+      "warm": 1,
+      "measured_stage_us": 0.9792166536458332,
+      "critical_serial_predicted_stage_us": 0.6725900016856844,
+      "critical_serial_relative_error": 0.31313463758864,
+      "overlap_predicted_stage_us": 0.629146861289673,
+      "overlap_relative_error": 0.3574998352537974,
+      "remaining_serial_stage_us": 0.3066266519601488,
+      "average_cache_predicted_stage_us": null
+    },
+    {
+      "tile": [
+        32,
+        32,
+        32
+      ],
+      "cold_minus_warm_stage_us": 0.9081833515624999,
+      "predicted_cold_minus_warm_stage_us": 0.8422169541928507,
+      "delta_relative_error": 0.07263555014101075
+    },
+    {
+      "tile": [
+        64,
+        48,
+        32
+      ],
+      "warm": 0,
+      "measured_stage_us": 3.2898166640624997,
+      "critical_serial_predicted_stage_us": 2.7418963933437084,
+      "critical_serial_relative_error": 0.16655039677566116,
+      "overlap_predicted_stage_us": 2.6113870909873014,
+      "overlap_relative_error": 0.20622108839263562,
+      "remaining_serial_stage_us": 0.5479202707187913,
+      "average_cache_predicted_stage_us": 2.323222859389708
+    },
+    {
+      "tile": [
+        64,
+        48,
+        32
+      ],
+      "warm": 1,
+      "measured_stage_us": 1.7194499895833333,
+      "critical_serial_predicted_stage_us": 1.27781061656706,
+      "critical_serial_relative_error": 0.2568492109056884,
+      "overlap_predicted_stage_us": 1.147171310670022,
+      "overlap_relative_error": 0.33282659128224423,
+      "remaining_serial_stage_us": 0.4416393730162733,
+      "average_cache_predicted_stage_us": null
+    },
+    {
+      "tile": [
+        64,
+        48,
+        32
+      ],
+      "cold_minus_warm_stage_us": 1.5703666744791664,
+      "predicted_cold_minus_warm_stage_us": 1.4644107856282262,
+      "delta_relative_error": 0.06747206914976206
+    }
+  ],
+  "profile_controls_accepted": true,
+  "composition_within5percent": false,
+  "no_gemm_fit": true,
+  "absolute_full_gemm_model_complete": false
+}

@@ -1,0 +1,41 @@
+{
+  "status": "confirmation_completed; no refit after confirmation",
+  "model_sha256": "02fec56720af43fcd46cc46f9cf02886e8e5439ac4182e2cda7a9eee7ccd40bb",
+  "roles": {
+    "calibration": "calibration.json",
+    "untouched_confirmation": "confirmation.json",
+    "compiler_resource_evidence": "../domain_validation.json",
+    "profiles": "profiles_summary.json",
+    "results": "results.json"
+  },
+  "hardware": "RTX 5090 GPU 7, unchanged BF16 WMMA binary family",
+  "tests": "All 144 fixed tile objectives, resource residency, and wave counts verified against direct computation",
+  "files": {
+    "model.json": "02fec56720af43fcd46cc46f9cf02886e8e5439ac4182e2cda7a9eee7ccd40bb",
+    "upload.json": "861397b5960706a1224582e43955422b7e4dfdb55a6d44fb3547a1260456d55d",
+    "final_report.md": "c9f276e2ffb852f0220195d6afe371b18d38b8808eca20aebb58dcfdb8ce84d5",
+    "formulation.md": "90667356c273ba3062f6dced90df794ffa0e49dec62b539bd2dc72d458b66535",
+    "calibration.json": "3a4e4d5e5b352488266e84f17af814936e3a48f0610849bca89bb638a93ed368",
+    "profiles_raw.csv": "98972885cb08b00f668762c8c6cf76d210a69689ae3ffdd1798a021288d98282",
+    "fit_model.py": "ee2cf1ee8ca32a38ddc0d2ede32ed9b5cd7740fc739eac8fe0cb4431076fe8e9",
+    "calibrate_revision.py": "65ca89e538e99bc00e6dcb0ebbdc31517adcfa029a161f10e78435006dc3430b",
+    "results.json": "a2a649b324d0c94bb1a0f61f70a3a0a01ceff409bbb0dbdfca2c735d24766e94",
+    "solve_revision.py": "510c8f038bb0ff46c27e8437077231e6e9ce4d1b3558eb7718ca9baafd03c790",
+    "solution_1536_1536_1536.json": "71768ff57c8c892e5250bb2b6b40ef399114eb9e316e913e071fe18532887084",
+    "baseline_solution_640_640_640.json": "98f1754d4465d9b01c1006a3b0138827f710bc4a34b83d6b13957a7288e19a81",
+    "calibration.jsonl": "71603dc23c1df158b2641062caa51d75e9bbfe7e691d5e73ce6b45258b84bc57",
+    "baseline_solution_1536_1536_1536.json": "3790a3cccc80b4c793ba26ccd8c3cf32e1270487232dffc35c1120d183f04afa",
+    "confirmation_upload.json": "01a7f0949494d79301581ee2801a02b58b97889811f279fd6253cd3c8e1bee33",
+    "solution_640_640_640.json": "725032b50751023acd532790d24687c9b6e863ed7b583f86ea416b4753c118b4",
+    "confirmation.jsonl": "c0c295c9fec2bb6cd5abb31b5ea19ab1abb9a836c7f0eee1b60cce4e3aa019d7",
+    "paired_confirmation.jsonl": "fda43b4e74af81379d83930f1e30f2184efa3ff33bee87895ad9cbb3e3aec5a7",
+    "profiles_summary.json": "69f265f0bf6224cfabed9932000f693b4f974f4916a9cec43beff250393f16f9",
+    "confirmation.json": "27b6ba3d2a4525417be0c0e12c93c6ecd43a86a36d0cf77d9daaa62c02bad187",
+    "analyze.py": "9a41661b907ea75edeb5c1af50748bd7c068668a3df3461d90db71c0b1c17b4d",
+    "contract.json": "6753a169b3eb3172217d36af2870cabd05a368115c89646a04d90d98b6e2623d",
+    "confirm.py": "1c66ef50fc4f3017df3672c40d95fbd1b5f09d8b1405cb40964df22474e961d3",
+    "test_revision.py": "ea9604e99b4cf23f836e64715c15da6403c672c2b94fb0bd218c7469acbfec27"
+  },
+  "paired_recheck_completed": true,
+  "confirmation_rows": 288
+}

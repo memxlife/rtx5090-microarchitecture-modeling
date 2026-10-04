@@ -1,0 +1,22 @@
+{
+  "accepted": true,
+  "reviewer": "root independent cold read and exact source/hash audit",
+  "sections": [
+    "4.48",
+    "4.49",
+    "4.50"
+  ],
+  "human_first_review": "Read the question, component operation, acceptance/ownership and timing limits without relying on chat. Replaced ambiguous intermediate-allocation wording with the exact register-result boundary.",
+  "undergraduate_reader_review": "Verified the numerical comparison, output acknowledgment boundary, dyadic oracle, parameter assumptions and claim limits. Corrected Boolean contention flags so they are not described as event counts. Added explicit read/MOVM/HMMA/cache capacities.",
+  "inline_source_parity": {
+    "components/shared_read_candidate_hub.sv": true,
+    "numerical/resident_native_stage_shared.sv": true,
+    "numerical/studied_output_scratch_shared.sv": true,
+    "numerical/resident_gemm_complete.sv": true
+  },
+  "current_receipt_sha256": "8b9dd3a66f1bd4e2173ced08ef6a2b776c2680e7fa3106065fcbd4be8a1f6e1e",
+  "document_sha256": "653ad4daaf592ff8c0b041fe0b63fa4ab0de6c504cba57ebe2bb146174d04f99",
+  "checked_output_words": 12288,
+  "hardware_parameters_closed": 0,
+  "timing_calibrated": false
+}

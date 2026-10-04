@@ -1,0 +1,50 @@
+{
+  "cases": 8,
+  "full_output_checks": 360,
+  "all_correct": true,
+  "all_spill_free": true,
+  "rows": [
+    {
+      "tile": [
+        32,
+        32
+      ],
+      "stage_us": {
+        "0": 0.9812999661458335,
+        "2": 2.483233427083333
+      },
+      "ratio": 2.5305548891808414,
+      "registers": {
+        "0": 40,
+        "2": 39
+      },
+      "resident_ctas": {
+        "0": 11,
+        "2": 11
+      }
+    },
+    {
+      "tile": [
+        64,
+        48
+      ],
+      "stage_us": {
+        "0": 1.7205166692708336,
+        "2": 4.151466645833334
+      },
+      "ratio": 2.4129185842719867,
+      "registers": {
+        "0": 64,
+        "2": 64
+      },
+      "resident_ctas": {
+        "0": 8,
+        "2": 8
+      }
+    }
+  ],
+  "accepted_as_isolated_pointer_latency_control": false,
+  "model_effect": "Refuse pointer-load latency transfer when input load form changes; retain full GEMM accuracy failure.",
+  "dynamic_profile_analysis": "profile_analysis.json",
+  "profile_conclusion": "Repeated LDC.64 removed; actual input groups changed from four loads to one. Generic memory instructions and reconvergence work also changed. One metadata-sector L2 miss, repeated input overwhelmingly hits."
+}

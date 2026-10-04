@@ -1,0 +1,7750 @@
+{
+  "all_passed": true,
+  "checked_words": 8192,
+  "checks": [
+    {
+      "read_slots_synthetic": 1,
+      "checked_words": 4096,
+      "issue_trace": [
+        {
+          "cycle": 133,
+          "context": 0,
+          "warp": 0,
+          "PC": "00001350"
+        },
+        {
+          "cycle": 266,
+          "context": 0,
+          "warp": 0,
+          "PC": "00001350"
+        },
+        {
+          "cycle": 281,
+          "context": 0,
+          "warp": 1,
+          "PC": "00001350"
+        },
+        {
+          "cycle": 296,
+          "context": 0,
+          "warp": 2,
+          "PC": "00001350"
+        },
+        {
+          "cycle": 311,
+          "context": 0,
+          "warp": 3,
+          "PC": "00001350"
+        },
+        {
+          "cycle": 326,
+          "context": 1,
+          "warp": 0,
+          "PC": "00001350"
+        },
+        {
+          "cycle": 341,
+          "context": 1,
+          "warp": 1,
+          "PC": "00001350"
+        },
+        {
+          "cycle": 356,
+          "context": 1,
+          "warp": 2,
+          "PC": "00001350"
+        },
+        {
+          "cycle": 371,
+          "context": 1,
+          "warp": 3,
+          "PC": "00001350"
+        },
+        {
+          "cycle": 386,
+          "context": 0,
+          "warp": 0,
+          "PC": "00001360"
+        },
+        {
+          "cycle": 401,
+          "context": 0,
+          "warp": 1,
+          "PC": "00001360"
+        },
+        {
+          "cycle": 416,
+          "context": 0,
+          "warp": 2,
+          "PC": "00001360"
+        },
+        {
+          "cycle": 431,
+          "context": 0,
+          "warp": 3,
+          "PC": "00001360"
+        },
+        {
+          "cycle": 446,
+          "context": 1,
+          "warp": 0,
+          "PC": "00001360"
+        },
+        {
+          "cycle": 461,
+          "context": 1,
+          "warp": 1,
+          "PC": "00001360"
+        },
+        {
+          "cycle": 476,
+          "context": 1,
+          "warp": 2,
+          "PC": "00001360"
+        },
+        {
+          "cycle": 491,
+          "context": 1,
+          "warp": 3,
+          "PC": "00001360"
+        },
+        {
+          "cycle": 506,
+          "context": 0,
+          "warp": 0,
+          "PC": "00001370"
+        },
+        {
+          "cycle": 521,
+          "context": 0,
+          "warp": 1,
+          "PC": "00001370"
+        },
+        {
+          "cycle": 536,
+          "context": 0,
+          "warp": 2,
+          "PC": "00001370"
+        },
+        {
+          "cycle": 551,
+          "context": 0,
+          "warp": 3,
+          "PC": "00001370"
+        },
+        {
+          "cycle": 566,
+          "context": 1,
+          "warp": 0,
+          "PC": "00001370"
+        },
+        {
+          "cycle": 581,
+          "context": 1,
+          "warp": 1,
+          "PC": "00001370"
+        },
+        {
+          "cycle": 596,
+          "context": 1,
+          "warp": 2,
+          "PC": "00001370"
+        },
+        {
+          "cycle": 611,
+          "context": 1,
+          "warp": 3,
+          "PC": "00001370"
+        },
+        {
+          "cycle": 626,
+          "context": 0,
+          "warp": 0,
+          "PC": "00001380"
+        },
+        {
+          "cycle": 627,
+          "context": 0,
+          "warp": 0,
+          "PC": "00001390"
+        },
+        {
+          "cycle": 628,
+          "context": 0,
+          "warp": 0,
+          "PC": "000013a0"
+        },
+        {
+          "cycle": 630,
+          "context": 0,
+          "warp": 0,
+          "PC": "000013b0"
+        },
+        {
+          "cycle": 641,
+          "context": 0,
+          "warp": 1,
+          "PC": "00001380"
+        },
+        {
+          "cycle": 642,
+          "context": 0,
+          "warp": 1,
+          "PC": "00001390"
+        },
+        {
+          "cycle": 643,
+          "context": 0,
+          "warp": 1,
+          "PC": "000013a0"
+        },
+        {
+          "cycle": 645,
+          "context": 0,
+          "warp": 1,
+          "PC": "000013b0"
+        },
+        {
+          "cycle": 656,
+          "context": 0,
+          "warp": 2,
+          "PC": "00001380"
+        },
+        {
+          "cycle": 657,
+          "context": 0,
+          "warp": 2,
+          "PC": "00001390"
+        },
+        {
+          "cycle": 658,
+          "context": 0,
+          "warp": 2,
+          "PC": "000013a0"
+        },
+        {
+          "cycle": 660,
+          "context": 0,
+          "warp": 2,
+          "PC": "000013b0"
+        },
+        {
+          "cycle": 671,
+          "context": 0,
+          "warp": 3,
+          "PC": "00001380"
+        },
+        {
+          "cycle": 672,
+          "context": 0,
+          "warp": 3,
+          "PC": "00001390"
+        },
+        {
+          "cycle": 673,
+          "context": 0,
+          "warp": 3,
+          "PC": "000013a0"
+        },
+        {
+          "cycle": 675,
+          "context": 0,
+          "warp": 3,
+          "PC": "000013b0"
+        },
+        {
+          "cycle": 686,
+          "context": 1,
+          "warp": 0,
+          "PC": "00001380"
+        },
+        {
+          "cycle": 687,
+          "context": 1,
+          "warp": 0,
+          "PC": "00001390"
+        },
+        {
+          "cycle": 688,
+          "context": 1,
+          "warp": 0,
+          "PC": "000013a0"
+        },
+        {
+          "cycle": 690,
+          "context": 1,
+          "warp": 0,
+          "PC": "000013b0"
+        },
+        {
+          "cycle": 701,
+          "context": 1,
+          "warp": 1,
+          "PC": "00001380"
+        },
+        {
+          "cycle": 702,
+          "context": 1,
+          "warp": 1,
+          "PC": "00001390"
+        },
+        {
+          "cycle": 703,
+          "context": 1,
+          "warp": 1,
+          "PC": "000013a0"
+        },
+        {
+          "cycle": 705,
+          "context": 1,
+          "warp": 1,
+          "PC": "000013b0"
+        },
+        {
+          "cycle": 716,
+          "context": 1,
+          "warp": 2,
+          "PC": "00001380"
+        },
+        {
+          "cycle": 717,
+          "context": 1,
+          "warp": 2,
+          "PC": "00001390"
+        },
+        {
+          "cycle": 718,
+          "context": 1,
+          "warp": 2,
+          "PC": "000013a0"
+        },
+        {
+          "cycle": 720,
+          "context": 1,
+          "warp": 2,
+          "PC": "000013b0"
+        },
+        {
+          "cycle": 731,
+          "context": 1,
+          "warp": 3,
+          "PC": "00001380"
+        },
+        {
+          "cycle": 732,
+          "context": 1,
+          "warp": 3,
+          "PC": "00001390"
+        },
+        {
+          "cycle": 733,
+          "context": 1,
+          "warp": 3,
+          "PC": "000013a0"
+        },
+        {
+          "cycle": 735,
+          "context": 1,
+          "warp": 3,
+          "PC": "000013b0"
+        },
+        {
+          "cycle": 746,
+          "context": 0,
+          "warp": 0,
+          "PC": "000013c0"
+        },
+        {
+          "cycle": 749,
+          "context": 0,
+          "warp": 0,
+          "PC": "000013d0"
+        },
+        {
+          "cycle": 761,
+          "context": 0,
+          "warp": 1,
+          "PC": "000013c0"
+        },
+        {
+          "cycle": 764,
+          "context": 0,
+          "warp": 1,
+          "PC": "000013d0"
+        },
+        {
+          "cycle": 776,
+          "context": 0,
+          "warp": 2,
+          "PC": "000013c0"
+        },
+        {
+          "cycle": 779,
+          "context": 0,
+          "warp": 2,
+          "PC": "000013d0"
+        },
+        {
+          "cycle": 791,
+          "context": 0,
+          "warp": 3,
+          "PC": "000013c0"
+        },
+        {
+          "cycle": 794,
+          "context": 0,
+          "warp": 3,
+          "PC": "000013d0"
+        },
+        {
+          "cycle": 806,
+          "context": 1,
+          "warp": 0,
+          "PC": "000013c0"
+        },
+        {
+          "cycle": 809,
+          "context": 1,
+          "warp": 0,
+          "PC": "000013d0"
+        },
+        {
+          "cycle": 821,
+          "context": 1,
+          "warp": 1,
+          "PC": "000013c0"
+        },
+        {
+          "cycle": 824,
+          "context": 1,
+          "warp": 1,
+          "PC": "000013d0"
+        },
+        {
+          "cycle": 836,
+          "context": 1,
+          "warp": 2,
+          "PC": "000013c0"
+        },
+        {
+          "cycle": 839,
+          "context": 1,
+          "warp": 2,
+          "PC": "000013d0"
+        },
+        {
+          "cycle": 851,
+          "context": 1,
+          "warp": 3,
+          "PC": "000013c0"
+        },
+        {
+          "cycle": 854,
+          "context": 1,
+          "warp": 3,
+          "PC": "000013d0"
+        },
+        {
+          "cycle": 866,
+          "context": 0,
+          "warp": 0,
+          "PC": "000013e0"
+        },
+        {
+          "cycle": 869,
+          "context": 0,
+          "warp": 0,
+          "PC": "000013f0"
+        },
+        {
+          "cycle": 881,
+          "context": 0,
+          "warp": 1,
+          "PC": "000013e0"
+        },
+        {
+          "cycle": 884,
+          "context": 0,
+          "warp": 1,
+          "PC": "000013f0"
+        },
+        {
+          "cycle": 896,
+          "context": 0,
+          "warp": 2,
+          "PC": "000013e0"
+        },
+        {
+          "cycle": 899,
+          "context": 0,
+          "warp": 2,
+          "PC": "000013f0"
+        },
+        {
+          "cycle": 911,
+          "context": 0,
+          "warp": 3,
+          "PC": "000013e0"
+        },
+        {
+          "cycle": 914,
+          "context": 0,
+          "warp": 3,
+          "PC": "000013f0"
+        },
+        {
+          "cycle": 926,
+          "context": 1,
+          "warp": 0,
+          "PC": "000013e0"
+        },
+        {
+          "cycle": 929,
+          "context": 1,
+          "warp": 0,
+          "PC": "000013f0"
+        },
+        {
+          "cycle": 941,
+          "context": 1,
+          "warp": 1,
+          "PC": "000013e0"
+        },
+        {
+          "cycle": 944,
+          "context": 1,
+          "warp": 1,
+          "PC": "000013f0"
+        },
+        {
+          "cycle": 956,
+          "context": 1,
+          "warp": 2,
+          "PC": "000013e0"
+        },
+        {
+          "cycle": 959,
+          "context": 1,
+          "warp": 2,
+          "PC": "000013f0"
+        },
+        {
+          "cycle": 971,
+          "context": 1,
+          "warp": 3,
+          "PC": "000013e0"
+        },
+        {
+          "cycle": 974,
+          "context": 1,
+          "warp": 3,
+          "PC": "000013f0"
+        },
+        {
+          "cycle": 986,
+          "context": 0,
+          "warp": 0,
+          "PC": "00001400"
+        },
+        {
+          "cycle": 1001,
+          "context": 0,
+          "warp": 1,
+          "PC": "00001400"
+        },
+        {
+          "cycle": 1016,
+          "context": 0,
+          "warp": 2,
+          "PC": "00001400"
+        },
+        {
+          "cycle": 1031,
+          "context": 0,
+          "warp": 3,
+          "PC": "00001400"
+        },
+        {
+          "cycle": 1046,
+          "context": 1,
+          "warp": 0,
+          "PC": "00001400"
+        },
+        {
+          "cycle": 1061,
+          "context": 1,
+          "warp": 1,
+          "PC": "00001400"
+        },
+        {
+          "cycle": 1076,
+          "context": 1,
+          "warp": 2,
+          "PC": "00001400"
+        },
+        {
+          "cycle": 1091,
+          "context": 1,
+          "warp": 3,
+          "PC": "00001400"
+        },
+        {
+          "cycle": 1106,
+          "context": 0,
+          "warp": 0,
+          "PC": "00001410"
+        },
+        {
+          "cycle": 1121,
+          "context": 0,
+          "warp": 1,
+          "PC": "00001410"
+        },
+        {
+          "cycle": 1136,
+          "context": 0,
+          "warp": 2,
+          "PC": "00001410"
+        },
+        {
+          "cycle": 1151,
+          "context": 0,
+          "warp": 3,
+          "PC": "00001410"
+        },
+        {
+          "cycle": 1166,
+          "context": 1,
+          "warp": 0,
+          "PC": "00001410"
+        },
+        {
+          "cycle": 1181,
+          "context": 1,
+          "warp": 1,
+          "PC": "00001410"
+        },
+        {
+          "cycle": 1196,
+          "context": 1,
+          "warp": 2,
+          "PC": "00001410"
+        },
+        {
+          "cycle": 1211,
+          "context": 1,
+          "warp": 3,
+          "PC": "00001410"
+        },
+        {
+          "cycle": 1226,
+          "context": 0,
+          "warp": 0,
+          "PC": "00001420"
+        },
+        {
+          "cycle": 1241,
+          "context": 0,
+          "warp": 1,
+          "PC": "00001420"
+        },
+        {
+          "cycle": 1256,
+          "context": 0,
+          "warp": 2,
+          "PC": "00001420"
+        },
+        {
+          "cycle": 1271,
+          "context": 0,
+          "warp": 3,
+          "PC": "00001420"
+        },
+        {
+          "cycle": 1286,
+          "context": 1,
+          "warp": 0,
+          "PC": "00001420"
+        },
+        {
+          "cycle": 1301,
+          "context": 1,
+          "warp": 1,
+          "PC": "00001420"
+        },
+        {
+          "cycle": 1316,
+          "context": 1,
+          "warp": 2,
+          "PC": "00001420"
+        },
+        {
+          "cycle": 1331,
+          "context": 1,
+          "warp": 3,
+          "PC": "00001420"
+        },
+        {
+          "cycle": 1346,
+          "context": 0,
+          "warp": 0,
+          "PC": "00001430"
+        },
+        {
+          "cycle": 1361,
+          "context": 0,
+          "warp": 1,
+          "PC": "00001430"
+        },
+        {
+          "cycle": 1376,
+          "context": 0,
+          "warp": 2,
+          "PC": "00001430"
+        },
+        {
+          "cycle": 1391,
+          "context": 0,
+          "warp": 3,
+          "PC": "00001430"
+        },
+        {
+          "cycle": 1406,
+          "context": 1,
+          "warp": 0,
+          "PC": "00001430"
+        },
+        {
+          "cycle": 1421,
+          "context": 1,
+          "warp": 1,
+          "PC": "00001430"
+        },
+        {
+          "cycle": 1436,
+          "context": 1,
+          "warp": 2,
+          "PC": "00001430"
+        },
+        {
+          "cycle": 1451,
+          "context": 1,
+          "warp": 3,
+          "PC": "00001430"
+        },
+        {
+          "cycle": 1466,
+          "context": 0,
+          "warp": 0,
+          "PC": "00001440"
+        },
+        {
+          "cycle": 1481,
+          "context": 0,
+          "warp": 1,
+          "PC": "00001440"
+        },
+        {
+          "cycle": 1496,
+          "context": 0,
+          "warp": 2,
+          "PC": "00001440"
+        },
+        {
+          "cycle": 1511,
+          "context": 0,
+          "warp": 3,
+          "PC": "00001440"
+        },
+        {
+          "cycle": 1526,
+          "context": 1,
+          "warp": 0,
+          "PC": "00001440"
+        },
+        {
+          "cycle": 1541,
+          "context": 1,
+          "warp": 1,
+          "PC": "00001440"
+        },
+        {
+          "cycle": 1556,
+          "context": 1,
+          "warp": 2,
+          "PC": "00001440"
+        },
+        {
+          "cycle": 1571,
+          "context": 1,
+          "warp": 3,
+          "PC": "00001440"
+        },
+        {
+          "cycle": 1586,
+          "context": 0,
+          "warp": 0,
+          "PC": "00001450"
+        },
+        {
+          "cycle": 1601,
+          "context": 0,
+          "warp": 1,
+          "PC": "00001450"
+        },
+        {
+          "cycle": 1616,
+          "context": 0,
+          "warp": 2,
+          "PC": "00001450"
+        },
+        {
+          "cycle": 1631,
+          "context": 0,
+          "warp": 3,
+          "PC": "00001450"
+        },
+        {
+          "cycle": 1646,
+          "context": 1,
+          "warp": 0,
+          "PC": "00001450"
+        },
+        {
+          "cycle": 1661,
+          "context": 1,
+          "warp": 1,
+          "PC": "00001450"
+        },
+        {
+          "cycle": 1676,
+          "context": 1,
+          "warp": 2,
+          "PC": "00001450"
+        },
+        {
+          "cycle": 1691,
+          "context": 1,
+          "warp": 3,
+          "PC": "00001450"
+        },
+        {
+          "cycle": 1706,
+          "context": 0,
+          "warp": 0,
+          "PC": "00001460"
+        },
+        {
+          "cycle": 1721,
+          "context": 0,
+          "warp": 1,
+          "PC": "00001460"
+        },
+        {
+          "cycle": 1736,
+          "context": 0,
+          "warp": 2,
+          "PC": "00001460"
+        },
+        {
+          "cycle": 1751,
+          "context": 0,
+          "warp": 3,
+          "PC": "00001460"
+        },
+        {
+          "cycle": 1766,
+          "context": 1,
+          "warp": 0,
+          "PC": "00001460"
+        },
+        {
+          "cycle": 1781,
+          "context": 1,
+          "warp": 1,
+          "PC": "00001460"
+        },
+        {
+          "cycle": 1796,
+          "context": 1,
+          "warp": 2,
+          "PC": "00001460"
+        },
+        {
+          "cycle": 1811,
+          "context": 1,
+          "warp": 3,
+          "PC": "00001460"
+        },
+        {
+          "cycle": 1826,
+          "context": 0,
+          "warp": 0,
+          "PC": "00001470"
+        },
+        {
+          "cycle": 1841,
+          "context": 0,
+          "warp": 1,
+          "PC": "00001470"
+        },
+        {
+          "cycle": 1856,
+          "context": 0,
+          "warp": 2,
+          "PC": "00001470"
+        },
+        {
+          "cycle": 1871,
+          "context": 0,
+          "warp": 3,
+          "PC": "00001470"
+        },
+        {
+          "cycle": 1886,
+          "context": 1,
+          "warp": 0,
+          "PC": "00001470"
+        },
+        {
+          "cycle": 1901,
+          "context": 1,
+          "warp": 1,
+          "PC": "00001470"
+        },
+        {
+          "cycle": 1916,
+          "context": 1,
+          "warp": 2,
+          "PC": "00001470"
+        },
+        {
+          "cycle": 1931,
+          "context": 1,
+          "warp": 3,
+          "PC": "00001470"
+        },
+        {
+          "cycle": 1946,
+          "context": 0,
+          "warp": 0,
+          "PC": "00001480"
+        },
+        {
+          "cycle": 1961,
+          "context": 0,
+          "warp": 1,
+          "PC": "00001480"
+        },
+        {
+          "cycle": 1976,
+          "context": 0,
+          "warp": 2,
+          "PC": "00001480"
+        },
+        {
+          "cycle": 1991,
+          "context": 0,
+          "warp": 3,
+          "PC": "00001480"
+        },
+        {
+          "cycle": 2006,
+          "context": 1,
+          "warp": 0,
+          "PC": "00001480"
+        },
+        {
+          "cycle": 2021,
+          "context": 1,
+          "warp": 1,
+          "PC": "00001480"
+        },
+        {
+          "cycle": 2036,
+          "context": 1,
+          "warp": 2,
+          "PC": "00001480"
+        },
+        {
+          "cycle": 2051,
+          "context": 1,
+          "warp": 3,
+          "PC": "00001480"
+        },
+        {
+          "cycle": 2066,
+          "context": 0,
+          "warp": 0,
+          "PC": "00001490"
+        },
+        {
+          "cycle": 2067,
+          "context": 0,
+          "warp": 0,
+          "PC": "000014a0"
+        },
+        {
+          "cycle": 2072,
+          "context": 0,
+          "warp": 0,
+          "PC": "000014b0"
+        },
+        {
+          "cycle": 2073,
+          "context": 0,
+          "warp": 0,
+          "PC": "000014c0"
+        },
+        {
+          "cycle": 2077,
+          "context": 0,
+          "warp": 0,
+          "PC": "000014d0"
+        },
+        {
+          "cycle": 2081,
+          "context": 0,
+          "warp": 1,
+          "PC": "00001490"
+        },
+        {
+          "cycle": 2082,
+          "context": 0,
+          "warp": 0,
+          "PC": "000014e0"
+        },
+        {
+          "cycle": 2083,
+          "context": 0,
+          "warp": 1,
+          "PC": "000014a0"
+        },
+        {
+          "cycle": 2086,
+          "context": 0,
+          "warp": 0,
+          "PC": "000014f0"
+        },
+        {
+          "cycle": 2088,
+          "context": 0,
+          "warp": 1,
+          "PC": "000014b0"
+        },
+        {
+          "cycle": 2093,
+          "context": 0,
+          "warp": 1,
+          "PC": "000014c0"
+        },
+        {
+          "cycle": 2096,
+          "context": 0,
+          "warp": 2,
+          "PC": "00001490"
+        },
+        {
+          "cycle": 2097,
+          "context": 0,
+          "warp": 0,
+          "PC": "00001500"
+        },
+        {
+          "cycle": 2098,
+          "context": 0,
+          "warp": 1,
+          "PC": "000014d0"
+        },
+        {
+          "cycle": 2099,
+          "context": 0,
+          "warp": 2,
+          "PC": "000014a0"
+        },
+        {
+          "cycle": 2102,
+          "context": 0,
+          "warp": 1,
+          "PC": "000014e0"
+        },
+        {
+          "cycle": 2104,
+          "context": 0,
+          "warp": 2,
+          "PC": "000014b0"
+        },
+        {
+          "cycle": 2106,
+          "context": 0,
+          "warp": 1,
+          "PC": "000014f0"
+        },
+        {
+          "cycle": 2111,
+          "context": 0,
+          "warp": 3,
+          "PC": "00001490"
+        },
+        {
+          "cycle": 2112,
+          "context": 0,
+          "warp": 0,
+          "PC": "00001510"
+        },
+        {
+          "cycle": 2113,
+          "context": 0,
+          "warp": 2,
+          "PC": "000014c0"
+        },
+        {
+          "cycle": 2114,
+          "context": 0,
+          "warp": 3,
+          "PC": "000014a0"
+        },
+        {
+          "cycle": 2115,
+          "context": 0,
+          "warp": 0,
+          "PC": "00001520"
+        },
+        {
+          "cycle": 2118,
+          "context": 0,
+          "warp": 2,
+          "PC": "000014d0"
+        },
+        {
+          "cycle": 2119,
+          "context": 0,
+          "warp": 3,
+          "PC": "000014b0"
+        },
+        {
+          "cycle": 2122,
+          "context": 0,
+          "warp": 0,
+          "PC": "00001530"
+        },
+        {
+          "cycle": 2126,
+          "context": 1,
+          "warp": 0,
+          "PC": "00001490"
+        },
+        {
+          "cycle": 2127,
+          "context": 0,
+          "warp": 0,
+          "PC": "00001540"
+        },
+        {
+          "cycle": 2128,
+          "context": 1,
+          "warp": 0,
+          "PC": "000014a0"
+        },
+        {
+          "cycle": 2133,
+          "context": 0,
+          "warp": 0,
+          "PC": "00001550"
+        },
+        {
+          "cycle": 2134,
+          "context": 1,
+          "warp": 0,
+          "PC": "000014b0"
+        },
+        {
+          "cycle": 2138,
+          "context": 0,
+          "warp": 0,
+          "PC": "00001560"
+        },
+        {
+          "cycle": 2141,
+          "context": 1,
+          "warp": 1,
+          "PC": "00001490"
+        },
+        {
+          "cycle": 2142,
+          "context": 0,
+          "warp": 2,
+          "PC": "000014e0"
+        },
+        {
+          "cycle": 2143,
+          "context": 1,
+          "warp": 1,
+          "PC": "000014a0"
+        },
+        {
+          "cycle": 2147,
+          "context": 0,
+          "warp": 2,
+          "PC": "000014f0"
+        },
+        {
+          "cycle": 2148,
+          "context": 1,
+          "warp": 1,
+          "PC": "000014b0"
+        },
+        {
+          "cycle": 2153,
+          "context": 0,
+          "warp": 3,
+          "PC": "000014c0"
+        },
+        {
+          "cycle": 2156,
+          "context": 1,
+          "warp": 2,
+          "PC": "00001490"
+        },
+        {
+          "cycle": 2157,
+          "context": 1,
+          "warp": 2,
+          "PC": "000014a0"
+        },
+        {
+          "cycle": 2158,
+          "context": 0,
+          "warp": 3,
+          "PC": "000014d0"
+        },
+        {
+          "cycle": 2162,
+          "context": 1,
+          "warp": 0,
+          "PC": "000014c0"
+        },
+        {
+          "cycle": 2163,
+          "context": 1,
+          "warp": 2,
+          "PC": "000014b0"
+        },
+        {
+          "cycle": 2167,
+          "context": 0,
+          "warp": 3,
+          "PC": "000014e0"
+        },
+        {
+          "cycle": 2171,
+          "context": 1,
+          "warp": 3,
+          "PC": "00001490"
+        },
+        {
+          "cycle": 2172,
+          "context": 0,
+          "warp": 0,
+          "PC": "00001570"
+        },
+        {
+          "cycle": 2173,
+          "context": 0,
+          "warp": 3,
+          "PC": "000014f0"
+        },
+        {
+          "cycle": 2174,
+          "context": 1,
+          "warp": 3,
+          "PC": "000014a0"
+        },
+        {
+          "cycle": 2178,
+          "context": 1,
+          "warp": 0,
+          "PC": "000014d0"
+        },
+        {
+          "cycle": 2179,
+          "context": 1,
+          "warp": 3,
+          "PC": "000014b0"
+        },
+        {
+          "cycle": 2182,
+          "context": 1,
+          "warp": 0,
+          "PC": "000014e0"
+        },
+        {
+          "cycle": 2187,
+          "context": 1,
+          "warp": 1,
+          "PC": "000014c0"
+        },
+        {
+          "cycle": 2188,
+          "context": 0,
+          "warp": 0,
+          "PC": "00001580"
+        },
+        {
+          "cycle": 2189,
+          "context": 0,
+          "warp": 1,
+          "PC": "00001500"
+        },
+        {
+          "cycle": 2193,
+          "context": 1,
+          "warp": 0,
+          "PC": "000014f0"
+        },
+        {
+          "cycle": 2198,
+          "context": 1,
+          "warp": 1,
+          "PC": "000014d0"
+        },
+        {
+          "cycle": 2202,
+          "context": 1,
+          "warp": 2,
+          "PC": "000014c0"
+        },
+        {
+          "cycle": 2204,
+          "context": 0,
+          "warp": 1,
+          "PC": "00001510"
+        },
+        {
+          "cycle": 2207,
+          "context": 1,
+          "warp": 1,
+          "PC": "000014e0"
+        },
+        {
+          "cycle": 2213,
+          "context": 1,
+          "warp": 2,
+          "PC": "000014d0"
+        },
+        {
+          "cycle": 2218,
+          "context": 1,
+          "warp": 3,
+          "PC": "000014c0"
+        },
+        {
+          "cycle": 2222,
+          "context": 1,
+          "warp": 1,
+          "PC": "000014f0"
+        },
+        {
+          "cycle": 2227,
+          "context": 1,
+          "warp": 2,
+          "PC": "000014e0"
+        },
+        {
+          "cycle": 2233,
+          "context": 1,
+          "warp": 3,
+          "PC": "000014d0"
+        },
+        {
+          "cycle": 2238,
+          "context": 1,
+          "warp": 2,
+          "PC": "000014f0"
+        },
+        {
+          "cycle": 2242,
+          "context": 1,
+          "warp": 3,
+          "PC": "000014e0"
+        },
+        {
+          "cycle": 2246,
+          "context": 0,
+          "warp": 0,
+          "PC": "00001590"
+        },
+        {
+          "cycle": 2247,
+          "context": 1,
+          "warp": 3,
+          "PC": "000014f0"
+        },
+        {
+          "cycle": 2261,
+          "context": 0,
+          "warp": 0,
+          "PC": "000015a0"
+        },
+        {
+          "cycle": 2263,
+          "context": 0,
+          "warp": 1,
+          "PC": "00001520"
+        },
+        {
+          "cycle": 2264,
+          "context": 0,
+          "warp": 1,
+          "PC": "00001530"
+        },
+        {
+          "cycle": 2268,
+          "context": 0,
+          "warp": 1,
+          "PC": "00001540"
+        },
+        {
+          "cycle": 2272,
+          "context": 0,
+          "warp": 1,
+          "PC": "00001550"
+        },
+        {
+          "cycle": 2275,
+          "context": 0,
+          "warp": 0,
+          "PC": "000015b0"
+        },
+        {
+          "cycle": 2276,
+          "context": 0,
+          "warp": 1,
+          "PC": "00001560"
+        },
+        {
+          "cycle": 2280,
+          "context": 0,
+          "warp": 0,
+          "PC": "000015c0"
+        },
+        {
+          "cycle": 2320,
+          "context": 0,
+          "warp": 1,
+          "PC": "00001570"
+        },
+        {
+          "cycle": 2335,
+          "context": 0,
+          "warp": 1,
+          "PC": "00001580"
+        },
+        {
+          "cycle": 2337,
+          "context": 0,
+          "warp": 2,
+          "PC": "00001500"
+        },
+        {
+          "cycle": 2352,
+          "context": 0,
+          "warp": 2,
+          "PC": "00001510"
+        },
+        {
+          "cycle": 2394,
+          "context": 0,
+          "warp": 3,
+          "PC": "00001500"
+        },
+        {
+          "cycle": 2409,
+          "context": 0,
+          "warp": 3,
+          "PC": "00001510"
+        },
+        {
+          "cycle": 2411,
+          "context": 1,
+          "warp": 0,
+          "PC": "00001500"
+        },
+        {
+          "cycle": 2426,
+          "context": 1,
+          "warp": 0,
+          "PC": "00001510"
+        },
+        {
+          "cycle": 2468,
+          "context": 1,
+          "warp": 1,
+          "PC": "00001500"
+        },
+        {
+          "cycle": 2483,
+          "context": 1,
+          "warp": 1,
+          "PC": "00001510"
+        },
+        {
+          "cycle": 2485,
+          "context": 1,
+          "warp": 2,
+          "PC": "00001500"
+        },
+        {
+          "cycle": 2500,
+          "context": 1,
+          "warp": 2,
+          "PC": "00001510"
+        },
+        {
+          "cycle": 2542,
+          "context": 1,
+          "warp": 3,
+          "PC": "00001500"
+        },
+        {
+          "cycle": 2557,
+          "context": 1,
+          "warp": 3,
+          "PC": "00001510"
+        },
+        {
+          "cycle": 2559,
+          "context": 0,
+          "warp": 1,
+          "PC": "00001590"
+        },
+        {
+          "cycle": 2574,
+          "context": 0,
+          "warp": 1,
+          "PC": "000015a0"
+        },
+        {
+          "cycle": 2588,
+          "context": 0,
+          "warp": 1,
+          "PC": "000015b0"
+        },
+        {
+          "cycle": 2593,
+          "context": 0,
+          "warp": 1,
+          "PC": "000015c0"
+        },
+        {
+          "cycle": 2616,
+          "context": 0,
+          "warp": 2,
+          "PC": "00001520"
+        },
+        {
+          "cycle": 2617,
+          "context": 0,
+          "warp": 2,
+          "PC": "00001530"
+        },
+        {
+          "cycle": 2621,
+          "context": 0,
+          "warp": 2,
+          "PC": "00001540"
+        },
+        {
+          "cycle": 2625,
+          "context": 0,
+          "warp": 2,
+          "PC": "00001550"
+        },
+        {
+          "cycle": 2629,
+          "context": 0,
+          "warp": 2,
+          "PC": "00001560"
+        },
+        {
+          "cycle": 2633,
+          "context": 0,
+          "warp": 3,
+          "PC": "00001520"
+        },
+        {
+          "cycle": 2637,
+          "context": 0,
+          "warp": 3,
+          "PC": "00001530"
+        },
+        {
+          "cycle": 2641,
+          "context": 0,
+          "warp": 3,
+          "PC": "00001540"
+        },
+        {
+          "cycle": 2645,
+          "context": 0,
+          "warp": 3,
+          "PC": "00001550"
+        },
+        {
+          "cycle": 2649,
+          "context": 0,
+          "warp": 3,
+          "PC": "00001560"
+        },
+        {
+          "cycle": 2690,
+          "context": 1,
+          "warp": 0,
+          "PC": "00001520"
+        },
+        {
+          "cycle": 2691,
+          "context": 1,
+          "warp": 0,
+          "PC": "00001530"
+        },
+        {
+          "cycle": 2695,
+          "context": 1,
+          "warp": 0,
+          "PC": "00001540"
+        },
+        {
+          "cycle": 2699,
+          "context": 1,
+          "warp": 0,
+          "PC": "00001550"
+        },
+        {
+          "cycle": 2703,
+          "context": 1,
+          "warp": 0,
+          "PC": "00001560"
+        },
+        {
+          "cycle": 2707,
+          "context": 1,
+          "warp": 1,
+          "PC": "00001520"
+        },
+        {
+          "cycle": 2711,
+          "context": 1,
+          "warp": 1,
+          "PC": "00001530"
+        },
+        {
+          "cycle": 2715,
+          "context": 1,
+          "warp": 1,
+          "PC": "00001540"
+        },
+        {
+          "cycle": 2719,
+          "context": 1,
+          "warp": 1,
+          "PC": "00001550"
+        },
+        {
+          "cycle": 2723,
+          "context": 1,
+          "warp": 1,
+          "PC": "00001560"
+        },
+        {
+          "cycle": 2764,
+          "context": 1,
+          "warp": 2,
+          "PC": "00001520"
+        },
+        {
+          "cycle": 2765,
+          "context": 1,
+          "warp": 2,
+          "PC": "00001530"
+        },
+        {
+          "cycle": 2769,
+          "context": 1,
+          "warp": 2,
+          "PC": "00001540"
+        },
+        {
+          "cycle": 2773,
+          "context": 1,
+          "warp": 2,
+          "PC": "00001550"
+        },
+        {
+          "cycle": 2777,
+          "context": 1,
+          "warp": 2,
+          "PC": "00001560"
+        },
+        {
+          "cycle": 2781,
+          "context": 1,
+          "warp": 3,
+          "PC": "00001520"
+        },
+        {
+          "cycle": 2785,
+          "context": 1,
+          "warp": 3,
+          "PC": "00001530"
+        },
+        {
+          "cycle": 2789,
+          "context": 1,
+          "warp": 3,
+          "PC": "00001540"
+        },
+        {
+          "cycle": 2793,
+          "context": 1,
+          "warp": 3,
+          "PC": "00001550"
+        },
+        {
+          "cycle": 2797,
+          "context": 1,
+          "warp": 3,
+          "PC": "00001560"
+        },
+        {
+          "cycle": 2838,
+          "context": 0,
+          "warp": 2,
+          "PC": "00001570"
+        },
+        {
+          "cycle": 2853,
+          "context": 0,
+          "warp": 2,
+          "PC": "00001580"
+        },
+        {
+          "cycle": 2855,
+          "context": 0,
+          "warp": 3,
+          "PC": "00001570"
+        },
+        {
+          "cycle": 2870,
+          "context": 0,
+          "warp": 3,
+          "PC": "00001580"
+        },
+        {
+          "cycle": 2912,
+          "context": 1,
+          "warp": 0,
+          "PC": "00001570"
+        },
+        {
+          "cycle": 2927,
+          "context": 1,
+          "warp": 0,
+          "PC": "00001580"
+        },
+        {
+          "cycle": 2929,
+          "context": 1,
+          "warp": 1,
+          "PC": "00001570"
+        },
+        {
+          "cycle": 2944,
+          "context": 1,
+          "warp": 1,
+          "PC": "00001580"
+        },
+        {
+          "cycle": 2986,
+          "context": 1,
+          "warp": 2,
+          "PC": "00001570"
+        },
+        {
+          "cycle": 3001,
+          "context": 1,
+          "warp": 2,
+          "PC": "00001580"
+        },
+        {
+          "cycle": 3003,
+          "context": 1,
+          "warp": 3,
+          "PC": "00001570"
+        },
+        {
+          "cycle": 3018,
+          "context": 1,
+          "warp": 3,
+          "PC": "00001580"
+        },
+        {
+          "cycle": 3060,
+          "context": 0,
+          "warp": 2,
+          "PC": "00001590"
+        },
+        {
+          "cycle": 3075,
+          "context": 0,
+          "warp": 2,
+          "PC": "000015a0"
+        },
+        {
+          "cycle": 3077,
+          "context": 0,
+          "warp": 3,
+          "PC": "00001590"
+        },
+        {
+          "cycle": 3089,
+          "context": 0,
+          "warp": 2,
+          "PC": "000015b0"
+        },
+        {
+          "cycle": 3092,
+          "context": 0,
+          "warp": 3,
+          "PC": "000015a0"
+        },
+        {
+          "cycle": 3094,
+          "context": 0,
+          "warp": 2,
+          "PC": "000015c0"
+        },
+        {
+          "cycle": 3106,
+          "context": 0,
+          "warp": 3,
+          "PC": "000015b0"
+        },
+        {
+          "cycle": 3111,
+          "context": 0,
+          "warp": 3,
+          "PC": "000015c0"
+        },
+        {
+          "cycle": 3134,
+          "context": 1,
+          "warp": 0,
+          "PC": "00001590"
+        },
+        {
+          "cycle": 3149,
+          "context": 1,
+          "warp": 0,
+          "PC": "000015a0"
+        },
+        {
+          "cycle": 3151,
+          "context": 1,
+          "warp": 1,
+          "PC": "00001590"
+        },
+        {
+          "cycle": 3163,
+          "context": 1,
+          "warp": 0,
+          "PC": "000015b0"
+        },
+        {
+          "cycle": 3166,
+          "context": 1,
+          "warp": 1,
+          "PC": "000015a0"
+        },
+        {
+          "cycle": 3168,
+          "context": 1,
+          "warp": 0,
+          "PC": "000015c0"
+        },
+        {
+          "cycle": 3180,
+          "context": 1,
+          "warp": 1,
+          "PC": "000015b0"
+        },
+        {
+          "cycle": 3185,
+          "context": 1,
+          "warp": 1,
+          "PC": "000015c0"
+        },
+        {
+          "cycle": 3208,
+          "context": 1,
+          "warp": 2,
+          "PC": "00001590"
+        },
+        {
+          "cycle": 3223,
+          "context": 1,
+          "warp": 2,
+          "PC": "000015a0"
+        },
+        {
+          "cycle": 3225,
+          "context": 1,
+          "warp": 3,
+          "PC": "00001590"
+        },
+        {
+          "cycle": 3237,
+          "context": 1,
+          "warp": 2,
+          "PC": "000015b0"
+        },
+        {
+          "cycle": 3240,
+          "context": 1,
+          "warp": 3,
+          "PC": "000015a0"
+        },
+        {
+          "cycle": 3242,
+          "context": 1,
+          "warp": 2,
+          "PC": "000015c0"
+        },
+        {
+          "cycle": 3254,
+          "context": 1,
+          "warp": 3,
+          "PC": "000015b0"
+        },
+        {
+          "cycle": 3259,
+          "context": 1,
+          "warp": 3,
+          "PC": "000015c0"
+        },
+        {
+          "cycle": 3306,
+          "context": 0,
+          "warp": 0,
+          "PC": "00001350"
+        },
+        {
+          "cycle": 3321,
+          "context": 0,
+          "warp": 1,
+          "PC": "00001350"
+        },
+        {
+          "cycle": 3336,
+          "context": 0,
+          "warp": 2,
+          "PC": "00001350"
+        },
+        {
+          "cycle": 3351,
+          "context": 0,
+          "warp": 3,
+          "PC": "00001350"
+        },
+        {
+          "cycle": 3366,
+          "context": 0,
+          "warp": 0,
+          "PC": "00001360"
+        },
+        {
+          "cycle": 3381,
+          "context": 0,
+          "warp": 1,
+          "PC": "00001360"
+        },
+        {
+          "cycle": 3396,
+          "context": 0,
+          "warp": 2,
+          "PC": "00001360"
+        },
+        {
+          "cycle": 3411,
+          "context": 0,
+          "warp": 3,
+          "PC": "00001360"
+        },
+        {
+          "cycle": 3426,
+          "context": 0,
+          "warp": 0,
+          "PC": "00001370"
+        },
+        {
+          "cycle": 3441,
+          "context": 0,
+          "warp": 1,
+          "PC": "00001370"
+        },
+        {
+          "cycle": 3456,
+          "context": 0,
+          "warp": 2,
+          "PC": "00001370"
+        },
+        {
+          "cycle": 3471,
+          "context": 0,
+          "warp": 3,
+          "PC": "00001370"
+        },
+        {
+          "cycle": 3486,
+          "context": 0,
+          "warp": 0,
+          "PC": "00001380"
+        },
+        {
+          "cycle": 3487,
+          "context": 0,
+          "warp": 0,
+          "PC": "00001390"
+        },
+        {
+          "cycle": 3488,
+          "context": 0,
+          "warp": 0,
+          "PC": "000013a0"
+        },
+        {
+          "cycle": 3490,
+          "context": 0,
+          "warp": 0,
+          "PC": "000013b0"
+        },
+        {
+          "cycle": 3501,
+          "context": 0,
+          "warp": 1,
+          "PC": "00001380"
+        },
+        {
+          "cycle": 3502,
+          "context": 0,
+          "warp": 1,
+          "PC": "00001390"
+        },
+        {
+          "cycle": 3503,
+          "context": 0,
+          "warp": 1,
+          "PC": "000013a0"
+        },
+        {
+          "cycle": 3505,
+          "context": 0,
+          "warp": 1,
+          "PC": "000013b0"
+        },
+        {
+          "cycle": 3516,
+          "context": 0,
+          "warp": 2,
+          "PC": "00001380"
+        },
+        {
+          "cycle": 3517,
+          "context": 0,
+          "warp": 2,
+          "PC": "00001390"
+        },
+        {
+          "cycle": 3518,
+          "context": 0,
+          "warp": 2,
+          "PC": "000013a0"
+        },
+        {
+          "cycle": 3520,
+          "context": 0,
+          "warp": 2,
+          "PC": "000013b0"
+        },
+        {
+          "cycle": 3531,
+          "context": 0,
+          "warp": 3,
+          "PC": "00001380"
+        },
+        {
+          "cycle": 3532,
+          "context": 0,
+          "warp": 3,
+          "PC": "00001390"
+        },
+        {
+          "cycle": 3533,
+          "context": 0,
+          "warp": 3,
+          "PC": "000013a0"
+        },
+        {
+          "cycle": 3535,
+          "context": 0,
+          "warp": 3,
+          "PC": "000013b0"
+        },
+        {
+          "cycle": 3546,
+          "context": 0,
+          "warp": 0,
+          "PC": "000013c0"
+        },
+        {
+          "cycle": 3549,
+          "context": 0,
+          "warp": 0,
+          "PC": "000013d0"
+        },
+        {
+          "cycle": 3561,
+          "context": 0,
+          "warp": 1,
+          "PC": "000013c0"
+        },
+        {
+          "cycle": 3564,
+          "context": 0,
+          "warp": 1,
+          "PC": "000013d0"
+        },
+        {
+          "cycle": 3576,
+          "context": 0,
+          "warp": 2,
+          "PC": "000013c0"
+        },
+        {
+          "cycle": 3579,
+          "context": 0,
+          "warp": 2,
+          "PC": "000013d0"
+        },
+        {
+          "cycle": 3591,
+          "context": 0,
+          "warp": 3,
+          "PC": "000013c0"
+        },
+        {
+          "cycle": 3594,
+          "context": 0,
+          "warp": 3,
+          "PC": "000013d0"
+        },
+        {
+          "cycle": 3606,
+          "context": 0,
+          "warp": 0,
+          "PC": "000013e0"
+        },
+        {
+          "cycle": 3609,
+          "context": 0,
+          "warp": 0,
+          "PC": "000013f0"
+        },
+        {
+          "cycle": 3621,
+          "context": 0,
+          "warp": 1,
+          "PC": "000013e0"
+        },
+        {
+          "cycle": 3624,
+          "context": 0,
+          "warp": 1,
+          "PC": "000013f0"
+        },
+        {
+          "cycle": 3636,
+          "context": 0,
+          "warp": 2,
+          "PC": "000013e0"
+        },
+        {
+          "cycle": 3639,
+          "context": 0,
+          "warp": 2,
+          "PC": "000013f0"
+        },
+        {
+          "cycle": 3651,
+          "context": 0,
+          "warp": 3,
+          "PC": "000013e0"
+        },
+        {
+          "cycle": 3654,
+          "context": 0,
+          "warp": 3,
+          "PC": "000013f0"
+        },
+        {
+          "cycle": 3666,
+          "context": 0,
+          "warp": 0,
+          "PC": "00001400"
+        },
+        {
+          "cycle": 3681,
+          "context": 0,
+          "warp": 1,
+          "PC": "00001400"
+        },
+        {
+          "cycle": 3696,
+          "context": 0,
+          "warp": 2,
+          "PC": "00001400"
+        },
+        {
+          "cycle": 3711,
+          "context": 0,
+          "warp": 3,
+          "PC": "00001400"
+        },
+        {
+          "cycle": 3726,
+          "context": 0,
+          "warp": 0,
+          "PC": "00001410"
+        },
+        {
+          "cycle": 3741,
+          "context": 0,
+          "warp": 1,
+          "PC": "00001410"
+        },
+        {
+          "cycle": 3756,
+          "context": 0,
+          "warp": 2,
+          "PC": "00001410"
+        },
+        {
+          "cycle": 3771,
+          "context": 0,
+          "warp": 3,
+          "PC": "00001410"
+        },
+        {
+          "cycle": 3786,
+          "context": 0,
+          "warp": 0,
+          "PC": "00001420"
+        },
+        {
+          "cycle": 3801,
+          "context": 0,
+          "warp": 1,
+          "PC": "00001420"
+        },
+        {
+          "cycle": 3816,
+          "context": 0,
+          "warp": 2,
+          "PC": "00001420"
+        },
+        {
+          "cycle": 3831,
+          "context": 0,
+          "warp": 3,
+          "PC": "00001420"
+        },
+        {
+          "cycle": 3846,
+          "context": 0,
+          "warp": 0,
+          "PC": "00001430"
+        },
+        {
+          "cycle": 3861,
+          "context": 0,
+          "warp": 1,
+          "PC": "00001430"
+        },
+        {
+          "cycle": 3876,
+          "context": 0,
+          "warp": 2,
+          "PC": "00001430"
+        },
+        {
+          "cycle": 3891,
+          "context": 0,
+          "warp": 3,
+          "PC": "00001430"
+        },
+        {
+          "cycle": 3906,
+          "context": 0,
+          "warp": 0,
+          "PC": "00001440"
+        },
+        {
+          "cycle": 3921,
+          "context": 0,
+          "warp": 1,
+          "PC": "00001440"
+        },
+        {
+          "cycle": 3936,
+          "context": 0,
+          "warp": 2,
+          "PC": "00001440"
+        },
+        {
+          "cycle": 3951,
+          "context": 0,
+          "warp": 3,
+          "PC": "00001440"
+        },
+        {
+          "cycle": 3966,
+          "context": 0,
+          "warp": 0,
+          "PC": "00001450"
+        },
+        {
+          "cycle": 3981,
+          "context": 0,
+          "warp": 1,
+          "PC": "00001450"
+        },
+        {
+          "cycle": 3996,
+          "context": 0,
+          "warp": 2,
+          "PC": "00001450"
+        },
+        {
+          "cycle": 4011,
+          "context": 0,
+          "warp": 3,
+          "PC": "00001450"
+        },
+        {
+          "cycle": 4026,
+          "context": 0,
+          "warp": 0,
+          "PC": "00001460"
+        },
+        {
+          "cycle": 4041,
+          "context": 0,
+          "warp": 1,
+          "PC": "00001460"
+        },
+        {
+          "cycle": 4056,
+          "context": 0,
+          "warp": 2,
+          "PC": "00001460"
+        },
+        {
+          "cycle": 4071,
+          "context": 0,
+          "warp": 3,
+          "PC": "00001460"
+        },
+        {
+          "cycle": 4086,
+          "context": 0,
+          "warp": 0,
+          "PC": "00001470"
+        },
+        {
+          "cycle": 4101,
+          "context": 0,
+          "warp": 1,
+          "PC": "00001470"
+        },
+        {
+          "cycle": 4116,
+          "context": 0,
+          "warp": 2,
+          "PC": "00001470"
+        },
+        {
+          "cycle": 4131,
+          "context": 0,
+          "warp": 3,
+          "PC": "00001470"
+        },
+        {
+          "cycle": 4146,
+          "context": 0,
+          "warp": 0,
+          "PC": "00001480"
+        },
+        {
+          "cycle": 4161,
+          "context": 0,
+          "warp": 1,
+          "PC": "00001480"
+        },
+        {
+          "cycle": 4176,
+          "context": 0,
+          "warp": 2,
+          "PC": "00001480"
+        },
+        {
+          "cycle": 4191,
+          "context": 0,
+          "warp": 3,
+          "PC": "00001480"
+        },
+        {
+          "cycle": 4206,
+          "context": 0,
+          "warp": 0,
+          "PC": "00001490"
+        },
+        {
+          "cycle": 4207,
+          "context": 0,
+          "warp": 0,
+          "PC": "000014a0"
+        },
+        {
+          "cycle": 4212,
+          "context": 0,
+          "warp": 0,
+          "PC": "000014b0"
+        },
+        {
+          "cycle": 4213,
+          "context": 0,
+          "warp": 0,
+          "PC": "000014c0"
+        },
+        {
+          "cycle": 4217,
+          "context": 0,
+          "warp": 0,
+          "PC": "000014d0"
+        },
+        {
+          "cycle": 4221,
+          "context": 0,
+          "warp": 1,
+          "PC": "00001490"
+        },
+        {
+          "cycle": 4222,
+          "context": 0,
+          "warp": 0,
+          "PC": "000014e0"
+        },
+        {
+          "cycle": 4223,
+          "context": 0,
+          "warp": 1,
+          "PC": "000014a0"
+        },
+        {
+          "cycle": 4226,
+          "context": 0,
+          "warp": 0,
+          "PC": "000014f0"
+        },
+        {
+          "cycle": 4228,
+          "context": 0,
+          "warp": 1,
+          "PC": "000014b0"
+        },
+        {
+          "cycle": 4233,
+          "context": 0,
+          "warp": 1,
+          "PC": "000014c0"
+        },
+        {
+          "cycle": 4236,
+          "context": 0,
+          "warp": 2,
+          "PC": "00001490"
+        },
+        {
+          "cycle": 4237,
+          "context": 0,
+          "warp": 0,
+          "PC": "00001500"
+        },
+        {
+          "cycle": 4238,
+          "context": 0,
+          "warp": 1,
+          "PC": "000014d0"
+        },
+        {
+          "cycle": 4239,
+          "context": 0,
+          "warp": 2,
+          "PC": "000014a0"
+        },
+        {
+          "cycle": 4242,
+          "context": 0,
+          "warp": 1,
+          "PC": "000014e0"
+        },
+        {
+          "cycle": 4244,
+          "context": 0,
+          "warp": 2,
+          "PC": "000014b0"
+        },
+        {
+          "cycle": 4246,
+          "context": 0,
+          "warp": 1,
+          "PC": "000014f0"
+        },
+        {
+          "cycle": 4251,
+          "context": 0,
+          "warp": 3,
+          "PC": "00001490"
+        },
+        {
+          "cycle": 4252,
+          "context": 0,
+          "warp": 0,
+          "PC": "00001510"
+        },
+        {
+          "cycle": 4253,
+          "context": 0,
+          "warp": 2,
+          "PC": "000014c0"
+        },
+        {
+          "cycle": 4254,
+          "context": 0,
+          "warp": 3,
+          "PC": "000014a0"
+        },
+        {
+          "cycle": 4255,
+          "context": 0,
+          "warp": 0,
+          "PC": "00001520"
+        },
+        {
+          "cycle": 4258,
+          "context": 0,
+          "warp": 2,
+          "PC": "000014d0"
+        },
+        {
+          "cycle": 4259,
+          "context": 0,
+          "warp": 3,
+          "PC": "000014b0"
+        },
+        {
+          "cycle": 4262,
+          "context": 0,
+          "warp": 0,
+          "PC": "00001530"
+        },
+        {
+          "cycle": 4267,
+          "context": 0,
+          "warp": 2,
+          "PC": "000014e0"
+        },
+        {
+          "cycle": 4273,
+          "context": 0,
+          "warp": 3,
+          "PC": "000014c0"
+        },
+        {
+          "cycle": 4278,
+          "context": 0,
+          "warp": 0,
+          "PC": "00001540"
+        },
+        {
+          "cycle": 4282,
+          "context": 0,
+          "warp": 2,
+          "PC": "000014f0"
+        },
+        {
+          "cycle": 4287,
+          "context": 0,
+          "warp": 3,
+          "PC": "000014d0"
+        },
+        {
+          "cycle": 4293,
+          "context": 0,
+          "warp": 0,
+          "PC": "00001550"
+        },
+        {
+          "cycle": 4298,
+          "context": 0,
+          "warp": 3,
+          "PC": "000014e0"
+        },
+        {
+          "cycle": 4302,
+          "context": 0,
+          "warp": 0,
+          "PC": "00001560"
+        },
+        {
+          "cycle": 4307,
+          "context": 0,
+          "warp": 3,
+          "PC": "000014f0"
+        },
+        {
+          "cycle": 4311,
+          "context": 0,
+          "warp": 0,
+          "PC": "00001570"
+        },
+        {
+          "cycle": 4326,
+          "context": 0,
+          "warp": 0,
+          "PC": "00001580"
+        },
+        {
+          "cycle": 4329,
+          "context": 0,
+          "warp": 1,
+          "PC": "00001500"
+        },
+        {
+          "cycle": 4344,
+          "context": 0,
+          "warp": 1,
+          "PC": "00001510"
+        },
+        {
+          "cycle": 4385,
+          "context": 0,
+          "warp": 2,
+          "PC": "00001500"
+        },
+        {
+          "cycle": 4400,
+          "context": 0,
+          "warp": 2,
+          "PC": "00001510"
+        },
+        {
+          "cycle": 4403,
+          "context": 0,
+          "warp": 3,
+          "PC": "00001500"
+        },
+        {
+          "cycle": 4418,
+          "context": 0,
+          "warp": 3,
+          "PC": "00001510"
+        },
+        {
+          "cycle": 4459,
+          "context": 0,
+          "warp": 0,
+          "PC": "00001590"
+        },
+        {
+          "cycle": 4474,
+          "context": 0,
+          "warp": 0,
+          "PC": "000015a0"
+        },
+        {
+          "cycle": 4477,
+          "context": 0,
+          "warp": 1,
+          "PC": "00001520"
+        },
+        {
+          "cycle": 4478,
+          "context": 0,
+          "warp": 1,
+          "PC": "00001530"
+        },
+        {
+          "cycle": 4482,
+          "context": 0,
+          "warp": 1,
+          "PC": "00001540"
+        },
+        {
+          "cycle": 4486,
+          "context": 0,
+          "warp": 1,
+          "PC": "00001550"
+        },
+        {
+          "cycle": 4488,
+          "context": 0,
+          "warp": 0,
+          "PC": "000015b0"
+        },
+        {
+          "cycle": 4490,
+          "context": 0,
+          "warp": 1,
+          "PC": "00001560"
+        },
+        {
+          "cycle": 4493,
+          "context": 0,
+          "warp": 0,
+          "PC": "000015c0"
+        },
+        {
+          "cycle": 4533,
+          "context": 0,
+          "warp": 1,
+          "PC": "00001570"
+        },
+        {
+          "cycle": 4548,
+          "context": 0,
+          "warp": 1,
+          "PC": "00001580"
+        },
+        {
+          "cycle": 4551,
+          "context": 0,
+          "warp": 2,
+          "PC": "00001520"
+        },
+        {
+          "cycle": 4552,
+          "context": 0,
+          "warp": 2,
+          "PC": "00001530"
+        },
+        {
+          "cycle": 4556,
+          "context": 0,
+          "warp": 2,
+          "PC": "00001540"
+        },
+        {
+          "cycle": 4560,
+          "context": 0,
+          "warp": 2,
+          "PC": "00001550"
+        },
+        {
+          "cycle": 4564,
+          "context": 0,
+          "warp": 2,
+          "PC": "00001560"
+        },
+        {
+          "cycle": 4607,
+          "context": 0,
+          "warp": 3,
+          "PC": "00001520"
+        },
+        {
+          "cycle": 4608,
+          "context": 0,
+          "warp": 3,
+          "PC": "00001530"
+        },
+        {
+          "cycle": 4612,
+          "context": 0,
+          "warp": 3,
+          "PC": "00001540"
+        },
+        {
+          "cycle": 4616,
+          "context": 0,
+          "warp": 3,
+          "PC": "00001550"
+        },
+        {
+          "cycle": 4620,
+          "context": 0,
+          "warp": 3,
+          "PC": "00001560"
+        },
+        {
+          "cycle": 4625,
+          "context": 0,
+          "warp": 1,
+          "PC": "00001590"
+        },
+        {
+          "cycle": 4640,
+          "context": 0,
+          "warp": 1,
+          "PC": "000015a0"
+        },
+        {
+          "cycle": 4654,
+          "context": 0,
+          "warp": 1,
+          "PC": "000015b0"
+        },
+        {
+          "cycle": 4659,
+          "context": 0,
+          "warp": 1,
+          "PC": "000015c0"
+        },
+        {
+          "cycle": 4681,
+          "context": 0,
+          "warp": 2,
+          "PC": "00001570"
+        },
+        {
+          "cycle": 4696,
+          "context": 0,
+          "warp": 2,
+          "PC": "00001580"
+        },
+        {
+          "cycle": 4699,
+          "context": 0,
+          "warp": 3,
+          "PC": "00001570"
+        },
+        {
+          "cycle": 4714,
+          "context": 0,
+          "warp": 3,
+          "PC": "00001580"
+        },
+        {
+          "cycle": 4755,
+          "context": 0,
+          "warp": 2,
+          "PC": "00001590"
+        },
+        {
+          "cycle": 4770,
+          "context": 0,
+          "warp": 2,
+          "PC": "000015a0"
+        },
+        {
+          "cycle": 4773,
+          "context": 0,
+          "warp": 3,
+          "PC": "00001590"
+        },
+        {
+          "cycle": 4784,
+          "context": 0,
+          "warp": 2,
+          "PC": "000015b0"
+        },
+        {
+          "cycle": 4788,
+          "context": 0,
+          "warp": 3,
+          "PC": "000015a0"
+        },
+        {
+          "cycle": 4789,
+          "context": 0,
+          "warp": 2,
+          "PC": "000015c0"
+        },
+        {
+          "cycle": 4802,
+          "context": 0,
+          "warp": 3,
+          "PC": "000015b0"
+        },
+        {
+          "cycle": 4807,
+          "context": 0,
+          "warp": 3,
+          "PC": "000015c0"
+        },
+        {
+          "cycle": 4852,
+          "context": 1,
+          "warp": 0,
+          "PC": "00001350"
+        },
+        {
+          "cycle": 4867,
+          "context": 1,
+          "warp": 1,
+          "PC": "00001350"
+        },
+        {
+          "cycle": 4882,
+          "context": 1,
+          "warp": 2,
+          "PC": "00001350"
+        },
+        {
+          "cycle": 4897,
+          "context": 1,
+          "warp": 3,
+          "PC": "00001350"
+        },
+        {
+          "cycle": 4912,
+          "context": 1,
+          "warp": 0,
+          "PC": "00001360"
+        },
+        {
+          "cycle": 4927,
+          "context": 1,
+          "warp": 1,
+          "PC": "00001360"
+        },
+        {
+          "cycle": 4942,
+          "context": 1,
+          "warp": 2,
+          "PC": "00001360"
+        },
+        {
+          "cycle": 4957,
+          "context": 1,
+          "warp": 3,
+          "PC": "00001360"
+        },
+        {
+          "cycle": 4972,
+          "context": 1,
+          "warp": 0,
+          "PC": "00001370"
+        },
+        {
+          "cycle": 4987,
+          "context": 1,
+          "warp": 1,
+          "PC": "00001370"
+        },
+        {
+          "cycle": 5002,
+          "context": 1,
+          "warp": 2,
+          "PC": "00001370"
+        },
+        {
+          "cycle": 5017,
+          "context": 1,
+          "warp": 3,
+          "PC": "00001370"
+        },
+        {
+          "cycle": 5032,
+          "context": 1,
+          "warp": 0,
+          "PC": "00001380"
+        },
+        {
+          "cycle": 5033,
+          "context": 1,
+          "warp": 0,
+          "PC": "00001390"
+        },
+        {
+          "cycle": 5034,
+          "context": 1,
+          "warp": 0,
+          "PC": "000013a0"
+        },
+        {
+          "cycle": 5036,
+          "context": 1,
+          "warp": 0,
+          "PC": "000013b0"
+        },
+        {
+          "cycle": 5047,
+          "context": 1,
+          "warp": 1,
+          "PC": "00001380"
+        },
+        {
+          "cycle": 5048,
+          "context": 1,
+          "warp": 1,
+          "PC": "00001390"
+        },
+        {
+          "cycle": 5049,
+          "context": 1,
+          "warp": 1,
+          "PC": "000013a0"
+        },
+        {
+          "cycle": 5051,
+          "context": 1,
+          "warp": 1,
+          "PC": "000013b0"
+        },
+        {
+          "cycle": 5062,
+          "context": 1,
+          "warp": 2,
+          "PC": "00001380"
+        },
+        {
+          "cycle": 5063,
+          "context": 1,
+          "warp": 2,
+          "PC": "00001390"
+        },
+        {
+          "cycle": 5064,
+          "context": 1,
+          "warp": 2,
+          "PC": "000013a0"
+        },
+        {
+          "cycle": 5066,
+          "context": 1,
+          "warp": 2,
+          "PC": "000013b0"
+        },
+        {
+          "cycle": 5077,
+          "context": 1,
+          "warp": 3,
+          "PC": "00001380"
+        },
+        {
+          "cycle": 5078,
+          "context": 1,
+          "warp": 3,
+          "PC": "00001390"
+        },
+        {
+          "cycle": 5079,
+          "context": 1,
+          "warp": 3,
+          "PC": "000013a0"
+        },
+        {
+          "cycle": 5081,
+          "context": 1,
+          "warp": 3,
+          "PC": "000013b0"
+        },
+        {
+          "cycle": 5092,
+          "context": 1,
+          "warp": 0,
+          "PC": "000013c0"
+        },
+        {
+          "cycle": 5095,
+          "context": 1,
+          "warp": 0,
+          "PC": "000013d0"
+        },
+        {
+          "cycle": 5107,
+          "context": 1,
+          "warp": 1,
+          "PC": "000013c0"
+        },
+        {
+          "cycle": 5110,
+          "context": 1,
+          "warp": 1,
+          "PC": "000013d0"
+        },
+        {
+          "cycle": 5122,
+          "context": 1,
+          "warp": 2,
+          "PC": "000013c0"
+        },
+        {
+          "cycle": 5125,
+          "context": 1,
+          "warp": 2,
+          "PC": "000013d0"
+        },
+        {
+          "cycle": 5137,
+          "context": 1,
+          "warp": 3,
+          "PC": "000013c0"
+        },
+        {
+          "cycle": 5140,
+          "context": 1,
+          "warp": 3,
+          "PC": "000013d0"
+        },
+        {
+          "cycle": 5152,
+          "context": 1,
+          "warp": 0,
+          "PC": "000013e0"
+        },
+        {
+          "cycle": 5155,
+          "context": 1,
+          "warp": 0,
+          "PC": "000013f0"
+        },
+        {
+          "cycle": 5167,
+          "context": 1,
+          "warp": 1,
+          "PC": "000013e0"
+        },
+        {
+          "cycle": 5170,
+          "context": 1,
+          "warp": 1,
+          "PC": "000013f0"
+        },
+        {
+          "cycle": 5182,
+          "context": 1,
+          "warp": 2,
+          "PC": "000013e0"
+        },
+        {
+          "cycle": 5185,
+          "context": 1,
+          "warp": 2,
+          "PC": "000013f0"
+        },
+        {
+          "cycle": 5197,
+          "context": 1,
+          "warp": 3,
+          "PC": "000013e0"
+        },
+        {
+          "cycle": 5200,
+          "context": 1,
+          "warp": 3,
+          "PC": "000013f0"
+        },
+        {
+          "cycle": 5212,
+          "context": 1,
+          "warp": 0,
+          "PC": "00001400"
+        },
+        {
+          "cycle": 5227,
+          "context": 1,
+          "warp": 1,
+          "PC": "00001400"
+        },
+        {
+          "cycle": 5242,
+          "context": 1,
+          "warp": 2,
+          "PC": "00001400"
+        },
+        {
+          "cycle": 5257,
+          "context": 1,
+          "warp": 3,
+          "PC": "00001400"
+        },
+        {
+          "cycle": 5272,
+          "context": 1,
+          "warp": 0,
+          "PC": "00001410"
+        },
+        {
+          "cycle": 5287,
+          "context": 1,
+          "warp": 1,
+          "PC": "00001410"
+        },
+        {
+          "cycle": 5302,
+          "context": 1,
+          "warp": 2,
+          "PC": "00001410"
+        },
+        {
+          "cycle": 5317,
+          "context": 1,
+          "warp": 3,
+          "PC": "00001410"
+        },
+        {
+          "cycle": 5332,
+          "context": 1,
+          "warp": 0,
+          "PC": "00001420"
+        },
+        {
+          "cycle": 5347,
+          "context": 1,
+          "warp": 1,
+          "PC": "00001420"
+        },
+        {
+          "cycle": 5362,
+          "context": 1,
+          "warp": 2,
+          "PC": "00001420"
+        },
+        {
+          "cycle": 5377,
+          "context": 1,
+          "warp": 3,
+          "PC": "00001420"
+        },
+        {
+          "cycle": 5392,
+          "context": 1,
+          "warp": 0,
+          "PC": "00001430"
+        },
+        {
+          "cycle": 5407,
+          "context": 1,
+          "warp": 1,
+          "PC": "00001430"
+        },
+        {
+          "cycle": 5422,
+          "context": 1,
+          "warp": 2,
+          "PC": "00001430"
+        },
+        {
+          "cycle": 5437,
+          "context": 1,
+          "warp": 3,
+          "PC": "00001430"
+        },
+        {
+          "cycle": 5452,
+          "context": 1,
+          "warp": 0,
+          "PC": "00001440"
+        },
+        {
+          "cycle": 5467,
+          "context": 1,
+          "warp": 1,
+          "PC": "00001440"
+        },
+        {
+          "cycle": 5482,
+          "context": 1,
+          "warp": 2,
+          "PC": "00001440"
+        },
+        {
+          "cycle": 5497,
+          "context": 1,
+          "warp": 3,
+          "PC": "00001440"
+        },
+        {
+          "cycle": 5512,
+          "context": 1,
+          "warp": 0,
+          "PC": "00001450"
+        },
+        {
+          "cycle": 5527,
+          "context": 1,
+          "warp": 1,
+          "PC": "00001450"
+        },
+        {
+          "cycle": 5542,
+          "context": 1,
+          "warp": 2,
+          "PC": "00001450"
+        },
+        {
+          "cycle": 5557,
+          "context": 1,
+          "warp": 3,
+          "PC": "00001450"
+        },
+        {
+          "cycle": 5572,
+          "context": 1,
+          "warp": 0,
+          "PC": "00001460"
+        },
+        {
+          "cycle": 5587,
+          "context": 1,
+          "warp": 1,
+          "PC": "00001460"
+        },
+        {
+          "cycle": 5602,
+          "context": 1,
+          "warp": 2,
+          "PC": "00001460"
+        },
+        {
+          "cycle": 5617,
+          "context": 1,
+          "warp": 3,
+          "PC": "00001460"
+        },
+        {
+          "cycle": 5632,
+          "context": 1,
+          "warp": 0,
+          "PC": "00001470"
+        },
+        {
+          "cycle": 5647,
+          "context": 1,
+          "warp": 1,
+          "PC": "00001470"
+        },
+        {
+          "cycle": 5662,
+          "context": 1,
+          "warp": 2,
+          "PC": "00001470"
+        },
+        {
+          "cycle": 5677,
+          "context": 1,
+          "warp": 3,
+          "PC": "00001470"
+        },
+        {
+          "cycle": 5692,
+          "context": 1,
+          "warp": 0,
+          "PC": "00001480"
+        },
+        {
+          "cycle": 5707,
+          "context": 1,
+          "warp": 1,
+          "PC": "00001480"
+        },
+        {
+          "cycle": 5722,
+          "context": 1,
+          "warp": 2,
+          "PC": "00001480"
+        },
+        {
+          "cycle": 5737,
+          "context": 1,
+          "warp": 3,
+          "PC": "00001480"
+        },
+        {
+          "cycle": 5752,
+          "context": 1,
+          "warp": 0,
+          "PC": "00001490"
+        },
+        {
+          "cycle": 5753,
+          "context": 1,
+          "warp": 0,
+          "PC": "000014a0"
+        },
+        {
+          "cycle": 5758,
+          "context": 1,
+          "warp": 0,
+          "PC": "000014b0"
+        },
+        {
+          "cycle": 5759,
+          "context": 1,
+          "warp": 0,
+          "PC": "000014c0"
+        },
+        {
+          "cycle": 5763,
+          "context": 1,
+          "warp": 0,
+          "PC": "000014d0"
+        },
+        {
+          "cycle": 5767,
+          "context": 1,
+          "warp": 1,
+          "PC": "00001490"
+        },
+        {
+          "cycle": 5768,
+          "context": 1,
+          "warp": 0,
+          "PC": "000014e0"
+        },
+        {
+          "cycle": 5769,
+          "context": 1,
+          "warp": 1,
+          "PC": "000014a0"
+        },
+        {
+          "cycle": 5772,
+          "context": 1,
+          "warp": 0,
+          "PC": "000014f0"
+        },
+        {
+          "cycle": 5774,
+          "context": 1,
+          "warp": 1,
+          "PC": "000014b0"
+        },
+        {
+          "cycle": 5779,
+          "context": 1,
+          "warp": 1,
+          "PC": "000014c0"
+        },
+        {
+          "cycle": 5782,
+          "context": 1,
+          "warp": 2,
+          "PC": "00001490"
+        },
+        {
+          "cycle": 5783,
+          "context": 1,
+          "warp": 0,
+          "PC": "00001500"
+        },
+        {
+          "cycle": 5784,
+          "context": 1,
+          "warp": 1,
+          "PC": "000014d0"
+        },
+        {
+          "cycle": 5785,
+          "context": 1,
+          "warp": 2,
+          "PC": "000014a0"
+        },
+        {
+          "cycle": 5788,
+          "context": 1,
+          "warp": 1,
+          "PC": "000014e0"
+        },
+        {
+          "cycle": 5790,
+          "context": 1,
+          "warp": 2,
+          "PC": "000014b0"
+        },
+        {
+          "cycle": 5792,
+          "context": 1,
+          "warp": 1,
+          "PC": "000014f0"
+        },
+        {
+          "cycle": 5797,
+          "context": 1,
+          "warp": 3,
+          "PC": "00001490"
+        },
+        {
+          "cycle": 5798,
+          "context": 1,
+          "warp": 0,
+          "PC": "00001510"
+        },
+        {
+          "cycle": 5799,
+          "context": 1,
+          "warp": 2,
+          "PC": "000014c0"
+        },
+        {
+          "cycle": 5800,
+          "context": 1,
+          "warp": 3,
+          "PC": "000014a0"
+        },
+        {
+          "cycle": 5801,
+          "context": 1,
+          "warp": 0,
+          "PC": "00001520"
+        },
+        {
+          "cycle": 5804,
+          "context": 1,
+          "warp": 2,
+          "PC": "000014d0"
+        },
+        {
+          "cycle": 5805,
+          "context": 1,
+          "warp": 3,
+          "PC": "000014b0"
+        },
+        {
+          "cycle": 5808,
+          "context": 1,
+          "warp": 0,
+          "PC": "00001530"
+        },
+        {
+          "cycle": 5813,
+          "context": 1,
+          "warp": 2,
+          "PC": "000014e0"
+        },
+        {
+          "cycle": 5819,
+          "context": 1,
+          "warp": 3,
+          "PC": "000014c0"
+        },
+        {
+          "cycle": 5824,
+          "context": 1,
+          "warp": 0,
+          "PC": "00001540"
+        },
+        {
+          "cycle": 5828,
+          "context": 1,
+          "warp": 2,
+          "PC": "000014f0"
+        },
+        {
+          "cycle": 5833,
+          "context": 1,
+          "warp": 3,
+          "PC": "000014d0"
+        },
+        {
+          "cycle": 5839,
+          "context": 1,
+          "warp": 0,
+          "PC": "00001550"
+        },
+        {
+          "cycle": 5844,
+          "context": 1,
+          "warp": 3,
+          "PC": "000014e0"
+        },
+        {
+          "cycle": 5848,
+          "context": 1,
+          "warp": 0,
+          "PC": "00001560"
+        },
+        {
+          "cycle": 5853,
+          "context": 1,
+          "warp": 3,
+          "PC": "000014f0"
+        },
+        {
+          "cycle": 5857,
+          "context": 1,
+          "warp": 0,
+          "PC": "00001570"
+        },
+        {
+          "cycle": 5872,
+          "context": 1,
+          "warp": 0,
+          "PC": "00001580"
+        },
+        {
+          "cycle": 5875,
+          "context": 1,
+          "warp": 1,
+          "PC": "00001500"
+        },
+        {
+          "cycle": 5890,
+          "context": 1,
+          "warp": 1,
+          "PC": "00001510"
+        },
+        {
+          "cycle": 5931,
+          "context": 1,
+          "warp": 2,
+          "PC": "00001500"
+        },
+        {
+          "cycle": 5946,
+          "context": 1,
+          "warp": 2,
+          "PC": "00001510"
+        },
+        {
+          "cycle": 5949,
+          "context": 1,
+          "warp": 3,
+          "PC": "00001500"
+        },
+        {
+          "cycle": 5964,
+          "context": 1,
+          "warp": 3,
+          "PC": "00001510"
+        },
+        {
+          "cycle": 6005,
+          "context": 1,
+          "warp": 0,
+          "PC": "00001590"
+        },
+        {
+          "cycle": 6020,
+          "context": 1,
+          "warp": 0,
+          "PC": "000015a0"
+        },
+        {
+          "cycle": 6023,
+          "context": 1,
+          "warp": 1,
+          "PC": "00001520"
+        },
+        {
+          "cycle": 6024,
+          "context": 1,
+          "warp": 1,
+          "PC": "00001530"
+        },
+        {
+          "cycle": 6028,
+          "context": 1,
+          "warp": 1,
+          "PC": "00001540"
+        },
+        {
+          "cycle": 6032,
+          "context": 1,
+          "warp": 1,
+          "PC": "00001550"
+        },
+        {
+          "cycle": 6034,
+          "context": 1,
+          "warp": 0,
+          "PC": "000015b0"
+        },
+        {
+          "cycle": 6036,
+          "context": 1,
+          "warp": 1,
+          "PC": "00001560"
+        },
+        {
+          "cycle": 6039,
+          "context": 1,
+          "warp": 0,
+          "PC": "000015c0"
+        },
+        {
+          "cycle": 6079,
+          "context": 1,
+          "warp": 1,
+          "PC": "00001570"
+        },
+        {
+          "cycle": 6094,
+          "context": 1,
+          "warp": 1,
+          "PC": "00001580"
+        },
+        {
+          "cycle": 6097,
+          "context": 1,
+          "warp": 2,
+          "PC": "00001520"
+        },
+        {
+          "cycle": 6098,
+          "context": 1,
+          "warp": 2,
+          "PC": "00001530"
+        },
+        {
+          "cycle": 6102,
+          "context": 1,
+          "warp": 2,
+          "PC": "00001540"
+        },
+        {
+          "cycle": 6106,
+          "context": 1,
+          "warp": 2,
+          "PC": "00001550"
+        },
+        {
+          "cycle": 6110,
+          "context": 1,
+          "warp": 2,
+          "PC": "00001560"
+        },
+        {
+          "cycle": 6153,
+          "context": 1,
+          "warp": 3,
+          "PC": "00001520"
+        },
+        {
+          "cycle": 6154,
+          "context": 1,
+          "warp": 3,
+          "PC": "00001530"
+        },
+        {
+          "cycle": 6158,
+          "context": 1,
+          "warp": 3,
+          "PC": "00001540"
+        },
+        {
+          "cycle": 6162,
+          "context": 1,
+          "warp": 3,
+          "PC": "00001550"
+        },
+        {
+          "cycle": 6166,
+          "context": 1,
+          "warp": 3,
+          "PC": "00001560"
+        },
+        {
+          "cycle": 6171,
+          "context": 1,
+          "warp": 1,
+          "PC": "00001590"
+        },
+        {
+          "cycle": 6186,
+          "context": 1,
+          "warp": 1,
+          "PC": "000015a0"
+        },
+        {
+          "cycle": 6200,
+          "context": 1,
+          "warp": 1,
+          "PC": "000015b0"
+        },
+        {
+          "cycle": 6205,
+          "context": 1,
+          "warp": 1,
+          "PC": "000015c0"
+        },
+        {
+          "cycle": 6227,
+          "context": 1,
+          "warp": 2,
+          "PC": "00001570"
+        },
+        {
+          "cycle": 6242,
+          "context": 1,
+          "warp": 2,
+          "PC": "00001580"
+        },
+        {
+          "cycle": 6245,
+          "context": 1,
+          "warp": 3,
+          "PC": "00001570"
+        },
+        {
+          "cycle": 6260,
+          "context": 1,
+          "warp": 3,
+          "PC": "00001580"
+        },
+        {
+          "cycle": 6301,
+          "context": 1,
+          "warp": 2,
+          "PC": "00001590"
+        },
+        {
+          "cycle": 6316,
+          "context": 1,
+          "warp": 2,
+          "PC": "000015a0"
+        },
+        {
+          "cycle": 6319,
+          "context": 1,
+          "warp": 3,
+          "PC": "00001590"
+        },
+        {
+          "cycle": 6330,
+          "context": 1,
+          "warp": 2,
+          "PC": "000015b0"
+        },
+        {
+          "cycle": 6334,
+          "context": 1,
+          "warp": 3,
+          "PC": "000015a0"
+        },
+        {
+          "cycle": 6335,
+          "context": 1,
+          "warp": 2,
+          "PC": "000015c0"
+        },
+        {
+          "cycle": 6348,
+          "context": 1,
+          "warp": 3,
+          "PC": "000015b0"
+        },
+        {
+          "cycle": 6353,
+          "context": 1,
+          "warp": 3,
+          "PC": "000015c0"
+        }
+      ],
+      "held_other_context_progress": true,
+      "passed": true
+    },
+    {
+      "read_slots_synthetic": 2,
+      "checked_words": 4096,
+      "issue_trace": [
+        {
+          "cycle": 133,
+          "context": 0,
+          "warp": 0,
+          "PC": "00001350"
+        },
+        {
+          "cycle": 266,
+          "context": 0,
+          "warp": 0,
+          "PC": "00001350"
+        },
+        {
+          "cycle": 267,
+          "context": 0,
+          "warp": 1,
+          "PC": "00001350"
+        },
+        {
+          "cycle": 281,
+          "context": 0,
+          "warp": 2,
+          "PC": "00001350"
+        },
+        {
+          "cycle": 285,
+          "context": 0,
+          "warp": 3,
+          "PC": "00001350"
+        },
+        {
+          "cycle": 296,
+          "context": 1,
+          "warp": 0,
+          "PC": "00001350"
+        },
+        {
+          "cycle": 300,
+          "context": 1,
+          "warp": 1,
+          "PC": "00001350"
+        },
+        {
+          "cycle": 311,
+          "context": 1,
+          "warp": 2,
+          "PC": "00001350"
+        },
+        {
+          "cycle": 315,
+          "context": 1,
+          "warp": 3,
+          "PC": "00001350"
+        },
+        {
+          "cycle": 326,
+          "context": 0,
+          "warp": 0,
+          "PC": "00001360"
+        },
+        {
+          "cycle": 330,
+          "context": 0,
+          "warp": 1,
+          "PC": "00001360"
+        },
+        {
+          "cycle": 341,
+          "context": 0,
+          "warp": 2,
+          "PC": "00001360"
+        },
+        {
+          "cycle": 345,
+          "context": 0,
+          "warp": 3,
+          "PC": "00001360"
+        },
+        {
+          "cycle": 356,
+          "context": 1,
+          "warp": 0,
+          "PC": "00001360"
+        },
+        {
+          "cycle": 360,
+          "context": 1,
+          "warp": 1,
+          "PC": "00001360"
+        },
+        {
+          "cycle": 371,
+          "context": 1,
+          "warp": 2,
+          "PC": "00001360"
+        },
+        {
+          "cycle": 375,
+          "context": 1,
+          "warp": 3,
+          "PC": "00001360"
+        },
+        {
+          "cycle": 386,
+          "context": 0,
+          "warp": 0,
+          "PC": "00001370"
+        },
+        {
+          "cycle": 390,
+          "context": 0,
+          "warp": 1,
+          "PC": "00001370"
+        },
+        {
+          "cycle": 401,
+          "context": 0,
+          "warp": 2,
+          "PC": "00001370"
+        },
+        {
+          "cycle": 405,
+          "context": 0,
+          "warp": 3,
+          "PC": "00001370"
+        },
+        {
+          "cycle": 416,
+          "context": 1,
+          "warp": 0,
+          "PC": "00001370"
+        },
+        {
+          "cycle": 420,
+          "context": 1,
+          "warp": 1,
+          "PC": "00001370"
+        },
+        {
+          "cycle": 431,
+          "context": 1,
+          "warp": 2,
+          "PC": "00001370"
+        },
+        {
+          "cycle": 435,
+          "context": 1,
+          "warp": 3,
+          "PC": "00001370"
+        },
+        {
+          "cycle": 446,
+          "context": 0,
+          "warp": 0,
+          "PC": "00001380"
+        },
+        {
+          "cycle": 447,
+          "context": 0,
+          "warp": 0,
+          "PC": "00001390"
+        },
+        {
+          "cycle": 448,
+          "context": 0,
+          "warp": 0,
+          "PC": "000013a0"
+        },
+        {
+          "cycle": 450,
+          "context": 0,
+          "warp": 1,
+          "PC": "00001380"
+        },
+        {
+          "cycle": 451,
+          "context": 0,
+          "warp": 0,
+          "PC": "000013b0"
+        },
+        {
+          "cycle": 452,
+          "context": 0,
+          "warp": 1,
+          "PC": "00001390"
+        },
+        {
+          "cycle": 453,
+          "context": 0,
+          "warp": 1,
+          "PC": "000013a0"
+        },
+        {
+          "cycle": 455,
+          "context": 0,
+          "warp": 1,
+          "PC": "000013b0"
+        },
+        {
+          "cycle": 461,
+          "context": 0,
+          "warp": 2,
+          "PC": "00001380"
+        },
+        {
+          "cycle": 462,
+          "context": 0,
+          "warp": 2,
+          "PC": "00001390"
+        },
+        {
+          "cycle": 463,
+          "context": 0,
+          "warp": 2,
+          "PC": "000013a0"
+        },
+        {
+          "cycle": 465,
+          "context": 0,
+          "warp": 3,
+          "PC": "00001380"
+        },
+        {
+          "cycle": 466,
+          "context": 0,
+          "warp": 2,
+          "PC": "000013b0"
+        },
+        {
+          "cycle": 467,
+          "context": 0,
+          "warp": 3,
+          "PC": "00001390"
+        },
+        {
+          "cycle": 468,
+          "context": 0,
+          "warp": 3,
+          "PC": "000013a0"
+        },
+        {
+          "cycle": 470,
+          "context": 0,
+          "warp": 3,
+          "PC": "000013b0"
+        },
+        {
+          "cycle": 476,
+          "context": 1,
+          "warp": 0,
+          "PC": "00001380"
+        },
+        {
+          "cycle": 477,
+          "context": 1,
+          "warp": 0,
+          "PC": "00001390"
+        },
+        {
+          "cycle": 478,
+          "context": 1,
+          "warp": 0,
+          "PC": "000013a0"
+        },
+        {
+          "cycle": 480,
+          "context": 1,
+          "warp": 1,
+          "PC": "00001380"
+        },
+        {
+          "cycle": 481,
+          "context": 1,
+          "warp": 0,
+          "PC": "000013b0"
+        },
+        {
+          "cycle": 482,
+          "context": 1,
+          "warp": 1,
+          "PC": "00001390"
+        },
+        {
+          "cycle": 483,
+          "context": 1,
+          "warp": 1,
+          "PC": "000013a0"
+        },
+        {
+          "cycle": 485,
+          "context": 1,
+          "warp": 1,
+          "PC": "000013b0"
+        },
+        {
+          "cycle": 491,
+          "context": 1,
+          "warp": 2,
+          "PC": "00001380"
+        },
+        {
+          "cycle": 492,
+          "context": 1,
+          "warp": 2,
+          "PC": "00001390"
+        },
+        {
+          "cycle": 493,
+          "context": 1,
+          "warp": 2,
+          "PC": "000013a0"
+        },
+        {
+          "cycle": 495,
+          "context": 1,
+          "warp": 3,
+          "PC": "00001380"
+        },
+        {
+          "cycle": 496,
+          "context": 1,
+          "warp": 2,
+          "PC": "000013b0"
+        },
+        {
+          "cycle": 497,
+          "context": 1,
+          "warp": 3,
+          "PC": "00001390"
+        },
+        {
+          "cycle": 498,
+          "context": 1,
+          "warp": 3,
+          "PC": "000013a0"
+        },
+        {
+          "cycle": 500,
+          "context": 1,
+          "warp": 3,
+          "PC": "000013b0"
+        },
+        {
+          "cycle": 506,
+          "context": 0,
+          "warp": 0,
+          "PC": "000013c0"
+        },
+        {
+          "cycle": 509,
+          "context": 0,
+          "warp": 0,
+          "PC": "000013d0"
+        },
+        {
+          "cycle": 510,
+          "context": 0,
+          "warp": 1,
+          "PC": "000013c0"
+        },
+        {
+          "cycle": 513,
+          "context": 0,
+          "warp": 1,
+          "PC": "000013d0"
+        },
+        {
+          "cycle": 521,
+          "context": 0,
+          "warp": 2,
+          "PC": "000013c0"
+        },
+        {
+          "cycle": 524,
+          "context": 0,
+          "warp": 2,
+          "PC": "000013d0"
+        },
+        {
+          "cycle": 525,
+          "context": 0,
+          "warp": 3,
+          "PC": "000013c0"
+        },
+        {
+          "cycle": 528,
+          "context": 0,
+          "warp": 3,
+          "PC": "000013d0"
+        },
+        {
+          "cycle": 536,
+          "context": 1,
+          "warp": 0,
+          "PC": "000013c0"
+        },
+        {
+          "cycle": 539,
+          "context": 1,
+          "warp": 0,
+          "PC": "000013d0"
+        },
+        {
+          "cycle": 540,
+          "context": 1,
+          "warp": 1,
+          "PC": "000013c0"
+        },
+        {
+          "cycle": 543,
+          "context": 1,
+          "warp": 1,
+          "PC": "000013d0"
+        },
+        {
+          "cycle": 551,
+          "context": 1,
+          "warp": 2,
+          "PC": "000013c0"
+        },
+        {
+          "cycle": 554,
+          "context": 1,
+          "warp": 2,
+          "PC": "000013d0"
+        },
+        {
+          "cycle": 555,
+          "context": 1,
+          "warp": 3,
+          "PC": "000013c0"
+        },
+        {
+          "cycle": 558,
+          "context": 1,
+          "warp": 3,
+          "PC": "000013d0"
+        },
+        {
+          "cycle": 566,
+          "context": 0,
+          "warp": 0,
+          "PC": "000013e0"
+        },
+        {
+          "cycle": 569,
+          "context": 0,
+          "warp": 0,
+          "PC": "000013f0"
+        },
+        {
+          "cycle": 570,
+          "context": 0,
+          "warp": 1,
+          "PC": "000013e0"
+        },
+        {
+          "cycle": 573,
+          "context": 0,
+          "warp": 1,
+          "PC": "000013f0"
+        },
+        {
+          "cycle": 581,
+          "context": 0,
+          "warp": 2,
+          "PC": "000013e0"
+        },
+        {
+          "cycle": 584,
+          "context": 0,
+          "warp": 2,
+          "PC": "000013f0"
+        },
+        {
+          "cycle": 585,
+          "context": 0,
+          "warp": 3,
+          "PC": "000013e0"
+        },
+        {
+          "cycle": 588,
+          "context": 0,
+          "warp": 3,
+          "PC": "000013f0"
+        },
+        {
+          "cycle": 596,
+          "context": 1,
+          "warp": 0,
+          "PC": "000013e0"
+        },
+        {
+          "cycle": 599,
+          "context": 1,
+          "warp": 0,
+          "PC": "000013f0"
+        },
+        {
+          "cycle": 600,
+          "context": 1,
+          "warp": 1,
+          "PC": "000013e0"
+        },
+        {
+          "cycle": 603,
+          "context": 1,
+          "warp": 1,
+          "PC": "000013f0"
+        },
+        {
+          "cycle": 611,
+          "context": 1,
+          "warp": 2,
+          "PC": "000013e0"
+        },
+        {
+          "cycle": 614,
+          "context": 1,
+          "warp": 2,
+          "PC": "000013f0"
+        },
+        {
+          "cycle": 615,
+          "context": 1,
+          "warp": 3,
+          "PC": "000013e0"
+        },
+        {
+          "cycle": 618,
+          "context": 1,
+          "warp": 3,
+          "PC": "000013f0"
+        },
+        {
+          "cycle": 626,
+          "context": 0,
+          "warp": 0,
+          "PC": "00001400"
+        },
+        {
+          "cycle": 630,
+          "context": 0,
+          "warp": 1,
+          "PC": "00001400"
+        },
+        {
+          "cycle": 641,
+          "context": 0,
+          "warp": 2,
+          "PC": "00001400"
+        },
+        {
+          "cycle": 645,
+          "context": 0,
+          "warp": 3,
+          "PC": "00001400"
+        },
+        {
+          "cycle": 656,
+          "context": 1,
+          "warp": 0,
+          "PC": "00001400"
+        },
+        {
+          "cycle": 660,
+          "context": 1,
+          "warp": 1,
+          "PC": "00001400"
+        },
+        {
+          "cycle": 671,
+          "context": 1,
+          "warp": 2,
+          "PC": "00001400"
+        },
+        {
+          "cycle": 675,
+          "context": 1,
+          "warp": 3,
+          "PC": "00001400"
+        },
+        {
+          "cycle": 686,
+          "context": 0,
+          "warp": 0,
+          "PC": "00001410"
+        },
+        {
+          "cycle": 690,
+          "context": 0,
+          "warp": 1,
+          "PC": "00001410"
+        },
+        {
+          "cycle": 701,
+          "context": 0,
+          "warp": 2,
+          "PC": "00001410"
+        },
+        {
+          "cycle": 705,
+          "context": 0,
+          "warp": 3,
+          "PC": "00001410"
+        },
+        {
+          "cycle": 716,
+          "context": 1,
+          "warp": 0,
+          "PC": "00001410"
+        },
+        {
+          "cycle": 720,
+          "context": 1,
+          "warp": 1,
+          "PC": "00001410"
+        },
+        {
+          "cycle": 731,
+          "context": 1,
+          "warp": 2,
+          "PC": "00001410"
+        },
+        {
+          "cycle": 735,
+          "context": 1,
+          "warp": 3,
+          "PC": "00001410"
+        },
+        {
+          "cycle": 746,
+          "context": 0,
+          "warp": 0,
+          "PC": "00001420"
+        },
+        {
+          "cycle": 750,
+          "context": 0,
+          "warp": 1,
+          "PC": "00001420"
+        },
+        {
+          "cycle": 761,
+          "context": 0,
+          "warp": 2,
+          "PC": "00001420"
+        },
+        {
+          "cycle": 765,
+          "context": 0,
+          "warp": 3,
+          "PC": "00001420"
+        },
+        {
+          "cycle": 776,
+          "context": 1,
+          "warp": 0,
+          "PC": "00001420"
+        },
+        {
+          "cycle": 780,
+          "context": 1,
+          "warp": 1,
+          "PC": "00001420"
+        },
+        {
+          "cycle": 791,
+          "context": 1,
+          "warp": 2,
+          "PC": "00001420"
+        },
+        {
+          "cycle": 795,
+          "context": 1,
+          "warp": 3,
+          "PC": "00001420"
+        },
+        {
+          "cycle": 806,
+          "context": 0,
+          "warp": 0,
+          "PC": "00001430"
+        },
+        {
+          "cycle": 810,
+          "context": 0,
+          "warp": 1,
+          "PC": "00001430"
+        },
+        {
+          "cycle": 821,
+          "context": 0,
+          "warp": 2,
+          "PC": "00001430"
+        },
+        {
+          "cycle": 825,
+          "context": 0,
+          "warp": 3,
+          "PC": "00001430"
+        },
+        {
+          "cycle": 836,
+          "context": 1,
+          "warp": 0,
+          "PC": "00001430"
+        },
+        {
+          "cycle": 840,
+          "context": 1,
+          "warp": 1,
+          "PC": "00001430"
+        },
+        {
+          "cycle": 851,
+          "context": 1,
+          "warp": 2,
+          "PC": "00001430"
+        },
+        {
+          "cycle": 855,
+          "context": 1,
+          "warp": 3,
+          "PC": "00001430"
+        },
+        {
+          "cycle": 866,
+          "context": 0,
+          "warp": 0,
+          "PC": "00001440"
+        },
+        {
+          "cycle": 870,
+          "context": 0,
+          "warp": 1,
+          "PC": "00001440"
+        },
+        {
+          "cycle": 881,
+          "context": 0,
+          "warp": 2,
+          "PC": "00001440"
+        },
+        {
+          "cycle": 885,
+          "context": 0,
+          "warp": 3,
+          "PC": "00001440"
+        },
+        {
+          "cycle": 896,
+          "context": 1,
+          "warp": 0,
+          "PC": "00001440"
+        },
+        {
+          "cycle": 900,
+          "context": 1,
+          "warp": 1,
+          "PC": "00001440"
+        },
+        {
+          "cycle": 911,
+          "context": 1,
+          "warp": 2,
+          "PC": "00001440"
+        },
+        {
+          "cycle": 915,
+          "context": 1,
+          "warp": 3,
+          "PC": "00001440"
+        },
+        {
+          "cycle": 926,
+          "context": 0,
+          "warp": 0,
+          "PC": "00001450"
+        },
+        {
+          "cycle": 930,
+          "context": 0,
+          "warp": 1,
+          "PC": "00001450"
+        },
+        {
+          "cycle": 941,
+          "context": 0,
+          "warp": 2,
+          "PC": "00001450"
+        },
+        {
+          "cycle": 945,
+          "context": 0,
+          "warp": 3,
+          "PC": "00001450"
+        },
+        {
+          "cycle": 956,
+          "context": 1,
+          "warp": 0,
+          "PC": "00001450"
+        },
+        {
+          "cycle": 960,
+          "context": 1,
+          "warp": 1,
+          "PC": "00001450"
+        },
+        {
+          "cycle": 971,
+          "context": 1,
+          "warp": 2,
+          "PC": "00001450"
+        },
+        {
+          "cycle": 975,
+          "context": 1,
+          "warp": 3,
+          "PC": "00001450"
+        },
+        {
+          "cycle": 986,
+          "context": 0,
+          "warp": 0,
+          "PC": "00001460"
+        },
+        {
+          "cycle": 990,
+          "context": 0,
+          "warp": 1,
+          "PC": "00001460"
+        },
+        {
+          "cycle": 1001,
+          "context": 0,
+          "warp": 2,
+          "PC": "00001460"
+        },
+        {
+          "cycle": 1005,
+          "context": 0,
+          "warp": 3,
+          "PC": "00001460"
+        },
+        {
+          "cycle": 1016,
+          "context": 1,
+          "warp": 0,
+          "PC": "00001460"
+        },
+        {
+          "cycle": 1020,
+          "context": 1,
+          "warp": 1,
+          "PC": "00001460"
+        },
+        {
+          "cycle": 1031,
+          "context": 1,
+          "warp": 2,
+          "PC": "00001460"
+        },
+        {
+          "cycle": 1035,
+          "context": 1,
+          "warp": 3,
+          "PC": "00001460"
+        },
+        {
+          "cycle": 1046,
+          "context": 0,
+          "warp": 0,
+          "PC": "00001470"
+        },
+        {
+          "cycle": 1050,
+          "context": 0,
+          "warp": 1,
+          "PC": "00001470"
+        },
+        {
+          "cycle": 1061,
+          "context": 0,
+          "warp": 2,
+          "PC": "00001470"
+        },
+        {
+          "cycle": 1065,
+          "context": 0,
+          "warp": 3,
+          "PC": "00001470"
+        },
+        {
+          "cycle": 1076,
+          "context": 1,
+          "warp": 0,
+          "PC": "00001470"
+        },
+        {
+          "cycle": 1080,
+          "context": 1,
+          "warp": 1,
+          "PC": "00001470"
+        },
+        {
+          "cycle": 1091,
+          "context": 1,
+          "warp": 2,
+          "PC": "00001470"
+        },
+        {
+          "cycle": 1095,
+          "context": 1,
+          "warp": 3,
+          "PC": "00001470"
+        },
+        {
+          "cycle": 1106,
+          "context": 0,
+          "warp": 0,
+          "PC": "00001480"
+        },
+        {
+          "cycle": 1110,
+          "context": 0,
+          "warp": 1,
+          "PC": "00001480"
+        },
+        {
+          "cycle": 1121,
+          "context": 0,
+          "warp": 2,
+          "PC": "00001480"
+        },
+        {
+          "cycle": 1125,
+          "context": 0,
+          "warp": 3,
+          "PC": "00001480"
+        },
+        {
+          "cycle": 1136,
+          "context": 1,
+          "warp": 0,
+          "PC": "00001480"
+        },
+        {
+          "cycle": 1140,
+          "context": 1,
+          "warp": 1,
+          "PC": "00001480"
+        },
+        {
+          "cycle": 1151,
+          "context": 1,
+          "warp": 2,
+          "PC": "00001480"
+        },
+        {
+          "cycle": 1155,
+          "context": 1,
+          "warp": 3,
+          "PC": "00001480"
+        },
+        {
+          "cycle": 1166,
+          "context": 0,
+          "warp": 0,
+          "PC": "00001490"
+        },
+        {
+          "cycle": 1167,
+          "context": 0,
+          "warp": 0,
+          "PC": "000014a0"
+        },
+        {
+          "cycle": 1170,
+          "context": 0,
+          "warp": 1,
+          "PC": "00001490"
+        },
+        {
+          "cycle": 1171,
+          "context": 0,
+          "warp": 1,
+          "PC": "000014a0"
+        },
+        {
+          "cycle": 1172,
+          "context": 0,
+          "warp": 0,
+          "PC": "000014b0"
+        },
+        {
+          "cycle": 1173,
+          "context": 0,
+          "warp": 0,
+          "PC": "000014c0"
+        },
+        {
+          "cycle": 1176,
+          "context": 0,
+          "warp": 1,
+          "PC": "000014b0"
+        },
+        {
+          "cycle": 1177,
+          "context": 0,
+          "warp": 0,
+          "PC": "000014d0"
+        },
+        {
+          "cycle": 1178,
+          "context": 0,
+          "warp": 1,
+          "PC": "000014c0"
+        },
+        {
+          "cycle": 1181,
+          "context": 0,
+          "warp": 2,
+          "PC": "00001490"
+        },
+        {
+          "cycle": 1182,
+          "context": 0,
+          "warp": 0,
+          "PC": "000014e0"
+        },
+        {
+          "cycle": 1183,
+          "context": 0,
+          "warp": 2,
+          "PC": "000014a0"
+        },
+        {
+          "cycle": 1185,
+          "context": 0,
+          "warp": 3,
+          "PC": "00001490"
+        },
+        {
+          "cycle": 1186,
+          "context": 0,
+          "warp": 3,
+          "PC": "000014a0"
+        },
+        {
+          "cycle": 1188,
+          "context": 0,
+          "warp": 2,
+          "PC": "000014b0"
+        },
+        {
+          "cycle": 1191,
+          "context": 0,
+          "warp": 3,
+          "PC": "000014b0"
+        },
+        {
+          "cycle": 1193,
+          "context": 0,
+          "warp": 0,
+          "PC": "000014f0"
+        },
+        {
+          "cycle": 1196,
+          "context": 1,
+          "warp": 0,
+          "PC": "00001490"
+        },
+        {
+          "cycle": 1197,
+          "context": 0,
+          "warp": 0,
+          "PC": "00001500"
+        },
+        {
+          "cycle": 1198,
+          "context": 0,
+          "warp": 1,
+          "PC": "000014d0"
+        },
+        {
+          "cycle": 1199,
+          "context": 0,
+          "warp": 2,
+          "PC": "000014c0"
+        },
+        {
+          "cycle": 1200,
+          "context": 1,
+          "warp": 0,
+          "PC": "000014a0"
+        },
+        {
+          "cycle": 1201,
+          "context": 1,
+          "warp": 1,
+          "PC": "00001490"
+        },
+        {
+          "cycle": 1202,
+          "context": 0,
+          "warp": 1,
+          "PC": "000014e0"
+        },
+        {
+          "cycle": 1203,
+          "context": 1,
+          "warp": 1,
+          "PC": "000014a0"
+        },
+        {
+          "cycle": 1205,
+          "context": 1,
+          "warp": 0,
+          "PC": "000014b0"
+        },
+        {
+          "cycle": 1208,
+          "context": 1,
+          "warp": 1,
+          "PC": "000014b0"
+        },
+        {
+          "cycle": 1211,
+          "context": 1,
+          "warp": 2,
+          "PC": "00001490"
+        },
+        {
+          "cycle": 1212,
+          "context": 0,
+          "warp": 0,
+          "PC": "00001510"
+        },
+        {
+          "cycle": 1213,
+          "context": 0,
+          "warp": 1,
+          "PC": "000014f0"
+        },
+        {
+          "cycle": 1214,
+          "context": 1,
+          "warp": 2,
+          "PC": "000014a0"
+        },
+        {
+          "cycle": 1215,
+          "context": 0,
+          "warp": 0,
+          "PC": "00001520"
+        },
+        {
+          "cycle": 1216,
+          "context": 1,
+          "warp": 3,
+          "PC": "00001490"
+        },
+        {
+          "cycle": 1217,
+          "context": 1,
+          "warp": 3,
+          "PC": "000014a0"
+        },
+        {
+          "cycle": 1218,
+          "context": 0,
+          "warp": 0,
+          "PC": "00001530"
+        },
+        {
+          "cycle": 1219,
+          "context": 0,
+          "warp": 2,
+          "PC": "000014d0"
+        },
+        {
+          "cycle": 1220,
+          "context": 1,
+          "warp": 2,
+          "PC": "000014b0"
+        },
+        {
+          "cycle": 1222,
+          "context": 1,
+          "warp": 3,
+          "PC": "000014b0"
+        },
+        {
+          "cycle": 1223,
+          "context": 0,
+          "warp": 0,
+          "PC": "00001540"
+        },
+        {
+          "cycle": 1233,
+          "context": 0,
+          "warp": 2,
+          "PC": "000014e0"
+        },
+        {
+          "cycle": 1238,
+          "context": 0,
+          "warp": 3,
+          "PC": "000014c0"
+        },
+        {
+          "cycle": 1239,
+          "context": 1,
+          "warp": 0,
+          "PC": "000014c0"
+        },
+        {
+          "cycle": 1243,
+          "context": 1,
+          "warp": 1,
+          "PC": "000014c0"
+        },
+        {
+          "cycle": 1253,
+          "context": 1,
+          "warp": 2,
+          "PC": "000014c0"
+        },
+        {
+          "cycle": 1258,
+          "context": 1,
+          "warp": 3,
+          "PC": "000014c0"
+        },
+        {
+          "cycle": 1259,
+          "context": 0,
+          "warp": 0,
+          "PC": "00001550"
+        },
+        {
+          "cycle": 1263,
+          "context": 0,
+          "warp": 2,
+          "PC": "000014f0"
+        },
+        {
+          "cycle": 1271,
+          "context": 0,
+          "warp": 1,
+          "PC": "00001500"
+        },
+        {
+          "cycle": 1273,
+          "context": 0,
+          "warp": 3,
+          "PC": "000014d0"
+        },
+        {
+          "cycle": 1278,
+          "context": 1,
+          "warp": 0,
+          "PC": "000014d0"
+        },
+        {
+          "cycle": 1279,
+          "context": 1,
+          "warp": 1,
+          "PC": "000014d0"
+        },
+        {
+          "cycle": 1283,
+          "context": 1,
+          "warp": 2,
+          "PC": "000014d0"
+        },
+        {
+          "cycle": 1286,
+          "context": 0,
+          "warp": 1,
+          "PC": "00001510"
+        },
+        {
+          "cycle": 1289,
+          "context": 0,
+          "warp": 2,
+          "PC": "00001500"
+        },
+        {
+          "cycle": 1293,
+          "context": 0,
+          "warp": 3,
+          "PC": "000014e0"
+        },
+        {
+          "cycle": 1298,
+          "context": 1,
+          "warp": 0,
+          "PC": "000014e0"
+        },
+        {
+          "cycle": 1299,
+          "context": 1,
+          "warp": 1,
+          "PC": "000014e0"
+        },
+        {
+          "cycle": 1303,
+          "context": 1,
+          "warp": 2,
+          "PC": "000014e0"
+        },
+        {
+          "cycle": 1304,
+          "context": 0,
+          "warp": 2,
+          "PC": "00001510"
+        },
+        {
+          "cycle": 1313,
+          "context": 0,
+          "warp": 3,
+          "PC": "000014f0"
+        },
+        {
+          "cycle": 1318,
+          "context": 1,
+          "warp": 0,
+          "PC": "000014f0"
+        },
+        {
+          "cycle": 1319,
+          "context": 1,
+          "warp": 1,
+          "PC": "000014f0"
+        },
+        {
+          "cycle": 1323,
+          "context": 1,
+          "warp": 2,
+          "PC": "000014f0"
+        },
+        {
+          "cycle": 1333,
+          "context": 1,
+          "warp": 3,
+          "PC": "000014d0"
+        },
+        {
+          "cycle": 1338,
+          "context": 0,
+          "warp": 0,
+          "PC": "00001560"
+        },
+        {
+          "cycle": 1339,
+          "context": 1,
+          "warp": 3,
+          "PC": "000014e0"
+        },
+        {
+          "cycle": 1343,
+          "context": 1,
+          "warp": 3,
+          "PC": "000014f0"
+        },
+        {
+          "cycle": 1345,
+          "context": 0,
+          "warp": 0,
+          "PC": "00001570"
+        },
+        {
+          "cycle": 1360,
+          "context": 0,
+          "warp": 0,
+          "PC": "00001580"
+        },
+        {
+          "cycle": 1364,
+          "context": 0,
+          "warp": 1,
+          "PC": "00001520"
+        },
+        {
+          "cycle": 1365,
+          "context": 0,
+          "warp": 1,
+          "PC": "00001530"
+        },
+        {
+          "cycle": 1369,
+          "context": 0,
+          "warp": 1,
+          "PC": "00001540"
+        },
+        {
+          "cycle": 1373,
+          "context": 0,
+          "warp": 1,
+          "PC": "00001550"
+        },
+        {
+          "cycle": 1377,
+          "context": 0,
+          "warp": 1,
+          "PC": "00001560"
+        },
+        {
+          "cycle": 1419,
+          "context": 0,
+          "warp": 2,
+          "PC": "00001520"
+        },
+        {
+          "cycle": 1420,
+          "context": 0,
+          "warp": 2,
+          "PC": "00001530"
+        },
+        {
+          "cycle": 1424,
+          "context": 0,
+          "warp": 2,
+          "PC": "00001540"
+        },
+        {
+          "cycle": 1428,
+          "context": 0,
+          "warp": 2,
+          "PC": "00001550"
+        },
+        {
+          "cycle": 1432,
+          "context": 0,
+          "warp": 2,
+          "PC": "00001560"
+        },
+        {
+          "cycle": 1438,
+          "context": 0,
+          "warp": 3,
+          "PC": "00001500"
+        },
+        {
+          "cycle": 1453,
+          "context": 0,
+          "warp": 3,
+          "PC": "00001510"
+        },
+        {
+          "cycle": 1493,
+          "context": 1,
+          "warp": 0,
+          "PC": "00001500"
+        },
+        {
+          "cycle": 1508,
+          "context": 1,
+          "warp": 0,
+          "PC": "00001510"
+        },
+        {
+          "cycle": 1512,
+          "context": 1,
+          "warp": 1,
+          "PC": "00001500"
+        },
+        {
+          "cycle": 1527,
+          "context": 1,
+          "warp": 1,
+          "PC": "00001510"
+        },
+        {
+          "cycle": 1567,
+          "context": 1,
+          "warp": 2,
+          "PC": "00001500"
+        },
+        {
+          "cycle": 1582,
+          "context": 1,
+          "warp": 2,
+          "PC": "00001510"
+        },
+        {
+          "cycle": 1586,
+          "context": 1,
+          "warp": 3,
+          "PC": "00001500"
+        },
+        {
+          "cycle": 1601,
+          "context": 1,
+          "warp": 3,
+          "PC": "00001510"
+        },
+        {
+          "cycle": 1641,
+          "context": 0,
+          "warp": 0,
+          "PC": "00001590"
+        },
+        {
+          "cycle": 1656,
+          "context": 0,
+          "warp": 0,
+          "PC": "000015a0"
+        },
+        {
+          "cycle": 1660,
+          "context": 0,
+          "warp": 1,
+          "PC": "00001570"
+        },
+        {
+          "cycle": 1670,
+          "context": 0,
+          "warp": 0,
+          "PC": "000015b0"
+        },
+        {
+          "cycle": 1675,
+          "context": 0,
+          "warp": 1,
+          "PC": "00001580"
+        },
+        {
+          "cycle": 1676,
+          "context": 0,
+          "warp": 0,
+          "PC": "000015c0"
+        },
+        {
+          "cycle": 1715,
+          "context": 0,
+          "warp": 1,
+          "PC": "00001590"
+        },
+        {
+          "cycle": 1730,
+          "context": 0,
+          "warp": 1,
+          "PC": "000015a0"
+        },
+        {
+          "cycle": 1734,
+          "context": 0,
+          "warp": 2,
+          "PC": "00001570"
+        },
+        {
+          "cycle": 1744,
+          "context": 0,
+          "warp": 1,
+          "PC": "000015b0"
+        },
+        {
+          "cycle": 1749,
+          "context": 0,
+          "warp": 2,
+          "PC": "00001580"
+        },
+        {
+          "cycle": 1750,
+          "context": 0,
+          "warp": 1,
+          "PC": "000015c0"
+        },
+        {
+          "cycle": 1789,
+          "context": 0,
+          "warp": 2,
+          "PC": "00001590"
+        },
+        {
+          "cycle": 1804,
+          "context": 0,
+          "warp": 2,
+          "PC": "000015a0"
+        },
+        {
+          "cycle": 1808,
+          "context": 0,
+          "warp": 3,
+          "PC": "00001520"
+        },
+        {
+          "cycle": 1809,
+          "context": 0,
+          "warp": 3,
+          "PC": "00001530"
+        },
+        {
+          "cycle": 1813,
+          "context": 0,
+          "warp": 3,
+          "PC": "00001540"
+        },
+        {
+          "cycle": 1817,
+          "context": 0,
+          "warp": 3,
+          "PC": "00001550"
+        },
+        {
+          "cycle": 1818,
+          "context": 0,
+          "warp": 2,
+          "PC": "000015b0"
+        },
+        {
+          "cycle": 1821,
+          "context": 0,
+          "warp": 3,
+          "PC": "00001560"
+        },
+        {
+          "cycle": 1823,
+          "context": 0,
+          "warp": 2,
+          "PC": "000015c0"
+        },
+        {
+          "cycle": 1863,
+          "context": 0,
+          "warp": 3,
+          "PC": "00001570"
+        },
+        {
+          "cycle": 1878,
+          "context": 0,
+          "warp": 3,
+          "PC": "00001580"
+        },
+        {
+          "cycle": 1882,
+          "context": 1,
+          "warp": 0,
+          "PC": "00001520"
+        },
+        {
+          "cycle": 1883,
+          "context": 1,
+          "warp": 0,
+          "PC": "00001530"
+        },
+        {
+          "cycle": 1887,
+          "context": 1,
+          "warp": 0,
+          "PC": "00001540"
+        },
+        {
+          "cycle": 1891,
+          "context": 1,
+          "warp": 0,
+          "PC": "00001550"
+        },
+        {
+          "cycle": 1895,
+          "context": 1,
+          "warp": 0,
+          "PC": "00001560"
+        },
+        {
+          "cycle": 1937,
+          "context": 1,
+          "warp": 1,
+          "PC": "00001520"
+        },
+        {
+          "cycle": 1938,
+          "context": 1,
+          "warp": 1,
+          "PC": "00001530"
+        },
+        {
+          "cycle": 1942,
+          "context": 1,
+          "warp": 1,
+          "PC": "00001540"
+        },
+        {
+          "cycle": 1946,
+          "context": 1,
+          "warp": 1,
+          "PC": "00001550"
+        },
+        {
+          "cycle": 1950,
+          "context": 1,
+          "warp": 1,
+          "PC": "00001560"
+        },
+        {
+          "cycle": 1956,
+          "context": 1,
+          "warp": 2,
+          "PC": "00001520"
+        },
+        {
+          "cycle": 1958,
+          "context": 1,
+          "warp": 2,
+          "PC": "00001530"
+        },
+        {
+          "cycle": 1962,
+          "context": 1,
+          "warp": 2,
+          "PC": "00001540"
+        },
+        {
+          "cycle": 1966,
+          "context": 1,
+          "warp": 2,
+          "PC": "00001550"
+        },
+        {
+          "cycle": 1970,
+          "context": 1,
+          "warp": 2,
+          "PC": "00001560"
+        },
+        {
+          "cycle": 2011,
+          "context": 1,
+          "warp": 3,
+          "PC": "00001520"
+        },
+        {
+          "cycle": 2012,
+          "context": 1,
+          "warp": 3,
+          "PC": "00001530"
+        },
+        {
+          "cycle": 2016,
+          "context": 1,
+          "warp": 3,
+          "PC": "00001540"
+        },
+        {
+          "cycle": 2020,
+          "context": 1,
+          "warp": 3,
+          "PC": "00001550"
+        },
+        {
+          "cycle": 2024,
+          "context": 1,
+          "warp": 3,
+          "PC": "00001560"
+        },
+        {
+          "cycle": 2030,
+          "context": 0,
+          "warp": 3,
+          "PC": "00001590"
+        },
+        {
+          "cycle": 2045,
+          "context": 0,
+          "warp": 3,
+          "PC": "000015a0"
+        },
+        {
+          "cycle": 2059,
+          "context": 0,
+          "warp": 3,
+          "PC": "000015b0"
+        },
+        {
+          "cycle": 2064,
+          "context": 0,
+          "warp": 3,
+          "PC": "000015c0"
+        },
+        {
+          "cycle": 2085,
+          "context": 1,
+          "warp": 0,
+          "PC": "00001570"
+        },
+        {
+          "cycle": 2100,
+          "context": 1,
+          "warp": 0,
+          "PC": "00001580"
+        },
+        {
+          "cycle": 2104,
+          "context": 1,
+          "warp": 1,
+          "PC": "00001570"
+        },
+        {
+          "cycle": 2119,
+          "context": 1,
+          "warp": 1,
+          "PC": "00001580"
+        },
+        {
+          "cycle": 2159,
+          "context": 1,
+          "warp": 2,
+          "PC": "00001570"
+        },
+        {
+          "cycle": 2174,
+          "context": 1,
+          "warp": 2,
+          "PC": "00001580"
+        },
+        {
+          "cycle": 2178,
+          "context": 1,
+          "warp": 3,
+          "PC": "00001570"
+        },
+        {
+          "cycle": 2193,
+          "context": 1,
+          "warp": 3,
+          "PC": "00001580"
+        },
+        {
+          "cycle": 2233,
+          "context": 1,
+          "warp": 0,
+          "PC": "00001590"
+        },
+        {
+          "cycle": 2248,
+          "context": 1,
+          "warp": 0,
+          "PC": "000015a0"
+        },
+        {
+          "cycle": 2252,
+          "context": 1,
+          "warp": 1,
+          "PC": "00001590"
+        },
+        {
+          "cycle": 2262,
+          "context": 1,
+          "warp": 0,
+          "PC": "000015b0"
+        },
+        {
+          "cycle": 2267,
+          "context": 1,
+          "warp": 1,
+          "PC": "000015a0"
+        },
+        {
+          "cycle": 2268,
+          "context": 1,
+          "warp": 0,
+          "PC": "000015c0"
+        },
+        {
+          "cycle": 2281,
+          "context": 1,
+          "warp": 1,
+          "PC": "000015b0"
+        },
+        {
+          "cycle": 2286,
+          "context": 1,
+          "warp": 1,
+          "PC": "000015c0"
+        },
+        {
+          "cycle": 2307,
+          "context": 1,
+          "warp": 2,
+          "PC": "00001590"
+        },
+        {
+          "cycle": 2322,
+          "context": 1,
+          "warp": 2,
+          "PC": "000015a0"
+        },
+        {
+          "cycle": 2326,
+          "context": 1,
+          "warp": 3,
+          "PC": "00001590"
+        },
+        {
+          "cycle": 2336,
+          "context": 1,
+          "warp": 2,
+          "PC": "000015b0"
+        },
+        {
+          "cycle": 2341,
+          "context": 1,
+          "warp": 3,
+          "PC": "000015a0"
+        },
+        {
+          "cycle": 2342,
+          "context": 1,
+          "warp": 2,
+          "PC": "000015c0"
+        },
+        {
+          "cycle": 2355,
+          "context": 1,
+          "warp": 3,
+          "PC": "000015b0"
+        },
+        {
+          "cycle": 2360,
+          "context": 1,
+          "warp": 3,
+          "PC": "000015c0"
+        },
+        {
+          "cycle": 2407,
+          "context": 0,
+          "warp": 0,
+          "PC": "00001350"
+        },
+        {
+          "cycle": 2408,
+          "context": 0,
+          "warp": 1,
+          "PC": "00001350"
+        },
+        {
+          "cycle": 2422,
+          "context": 0,
+          "warp": 2,
+          "PC": "00001350"
+        },
+        {
+          "cycle": 2426,
+          "context": 0,
+          "warp": 3,
+          "PC": "00001350"
+        },
+        {
+          "cycle": 2437,
+          "context": 0,
+          "warp": 0,
+          "PC": "00001360"
+        },
+        {
+          "cycle": 2441,
+          "context": 0,
+          "warp": 1,
+          "PC": "00001360"
+        },
+        {
+          "cycle": 2452,
+          "context": 0,
+          "warp": 2,
+          "PC": "00001360"
+        },
+        {
+          "cycle": 2456,
+          "context": 0,
+          "warp": 3,
+          "PC": "00001360"
+        },
+        {
+          "cycle": 2467,
+          "context": 0,
+          "warp": 0,
+          "PC": "00001370"
+        },
+        {
+          "cycle": 2471,
+          "context": 0,
+          "warp": 1,
+          "PC": "00001370"
+        },
+        {
+          "cycle": 2482,
+          "context": 0,
+          "warp": 2,
+          "PC": "00001370"
+        },
+        {
+          "cycle": 2486,
+          "context": 0,
+          "warp": 3,
+          "PC": "00001370"
+        },
+        {
+          "cycle": 2497,
+          "context": 0,
+          "warp": 0,
+          "PC": "00001380"
+        },
+        {
+          "cycle": 2498,
+          "context": 0,
+          "warp": 0,
+          "PC": "00001390"
+        },
+        {
+          "cycle": 2499,
+          "context": 0,
+          "warp": 0,
+          "PC": "000013a0"
+        },
+        {
+          "cycle": 2501,
+          "context": 0,
+          "warp": 1,
+          "PC": "00001380"
+        },
+        {
+          "cycle": 2502,
+          "context": 0,
+          "warp": 0,
+          "PC": "000013b0"
+        },
+        {
+          "cycle": 2503,
+          "context": 0,
+          "warp": 1,
+          "PC": "00001390"
+        },
+        {
+          "cycle": 2504,
+          "context": 0,
+          "warp": 1,
+          "PC": "000013a0"
+        },
+        {
+          "cycle": 2506,
+          "context": 0,
+          "warp": 1,
+          "PC": "000013b0"
+        },
+        {
+          "cycle": 2512,
+          "context": 0,
+          "warp": 2,
+          "PC": "00001380"
+        },
+        {
+          "cycle": 2513,
+          "context": 0,
+          "warp": 2,
+          "PC": "00001390"
+        },
+        {
+          "cycle": 2514,
+          "context": 0,
+          "warp": 2,
+          "PC": "000013a0"
+        },
+        {
+          "cycle": 2516,
+          "context": 0,
+          "warp": 3,
+          "PC": "00001380"
+        },
+        {
+          "cycle": 2517,
+          "context": 0,
+          "warp": 2,
+          "PC": "000013b0"
+        },
+        {
+          "cycle": 2518,
+          "context": 0,
+          "warp": 3,
+          "PC": "00001390"
+        },
+        {
+          "cycle": 2519,
+          "context": 0,
+          "warp": 3,
+          "PC": "000013a0"
+        },
+        {
+          "cycle": 2521,
+          "context": 0,
+          "warp": 3,
+          "PC": "000013b0"
+        },
+        {
+          "cycle": 2527,
+          "context": 0,
+          "warp": 0,
+          "PC": "000013c0"
+        },
+        {
+          "cycle": 2530,
+          "context": 0,
+          "warp": 0,
+          "PC": "000013d0"
+        },
+        {
+          "cycle": 2531,
+          "context": 0,
+          "warp": 1,
+          "PC": "000013c0"
+        },
+        {
+          "cycle": 2534,
+          "context": 0,
+          "warp": 1,
+          "PC": "000013d0"
+        },
+        {
+          "cycle": 2542,
+          "context": 0,
+          "warp": 2,
+          "PC": "000013c0"
+        },
+        {
+          "cycle": 2545,
+          "context": 0,
+          "warp": 2,
+          "PC": "000013d0"
+        },
+        {
+          "cycle": 2546,
+          "context": 0,
+          "warp": 3,
+          "PC": "000013c0"
+        },
+        {
+          "cycle": 2549,
+          "context": 0,
+          "warp": 3,
+          "PC": "000013d0"
+        },
+        {
+          "cycle": 2557,
+          "context": 0,
+          "warp": 0,
+          "PC": "000013e0"
+        },
+        {
+          "cycle": 2560,
+          "context": 0,
+          "warp": 0,
+          "PC": "000013f0"
+        },
+        {
+          "cycle": 2561,
+          "context": 0,
+          "warp": 1,
+          "PC": "000013e0"
+        },
+        {
+          "cycle": 2564,
+          "context": 0,
+          "warp": 1,
+          "PC": "000013f0"
+        },
+        {
+          "cycle": 2572,
+          "context": 0,
+          "warp": 2,
+          "PC": "000013e0"
+        },
+        {
+          "cycle": 2575,
+          "context": 0,
+          "warp": 2,
+          "PC": "000013f0"
+        },
+        {
+          "cycle": 2576,
+          "context": 0,
+          "warp": 3,
+          "PC": "000013e0"
+        },
+        {
+          "cycle": 2579,
+          "context": 0,
+          "warp": 3,
+          "PC": "000013f0"
+        },
+        {
+          "cycle": 2587,
+          "context": 0,
+          "warp": 0,
+          "PC": "00001400"
+        },
+        {
+          "cycle": 2591,
+          "context": 0,
+          "warp": 1,
+          "PC": "00001400"
+        },
+        {
+          "cycle": 2602,
+          "context": 0,
+          "warp": 2,
+          "PC": "00001400"
+        },
+        {
+          "cycle": 2606,
+          "context": 0,
+          "warp": 3,
+          "PC": "00001400"
+        },
+        {
+          "cycle": 2617,
+          "context": 0,
+          "warp": 0,
+          "PC": "00001410"
+        },
+        {
+          "cycle": 2621,
+          "context": 0,
+          "warp": 1,
+          "PC": "00001410"
+        },
+        {
+          "cycle": 2632,
+          "context": 0,
+          "warp": 2,
+          "PC": "00001410"
+        },
+        {
+          "cycle": 2636,
+          "context": 0,
+          "warp": 3,
+          "PC": "00001410"
+        },
+        {
+          "cycle": 2647,
+          "context": 0,
+          "warp": 0,
+          "PC": "00001420"
+        },
+        {
+          "cycle": 2651,
+          "context": 0,
+          "warp": 1,
+          "PC": "00001420"
+        },
+        {
+          "cycle": 2662,
+          "context": 0,
+          "warp": 2,
+          "PC": "00001420"
+        },
+        {
+          "cycle": 2666,
+          "context": 0,
+          "warp": 3,
+          "PC": "00001420"
+        },
+        {
+          "cycle": 2677,
+          "context": 0,
+          "warp": 0,
+          "PC": "00001430"
+        },
+        {
+          "cycle": 2681,
+          "context": 0,
+          "warp": 1,
+          "PC": "00001430"
+        },
+        {
+          "cycle": 2692,
+          "context": 0,
+          "warp": 2,
+          "PC": "00001430"
+        },
+        {
+          "cycle": 2696,
+          "context": 0,
+          "warp": 3,
+          "PC": "00001430"
+        },
+        {
+          "cycle": 2707,
+          "context": 0,
+          "warp": 0,
+          "PC": "00001440"
+        },
+        {
+          "cycle": 2711,
+          "context": 0,
+          "warp": 1,
+          "PC": "00001440"
+        },
+        {
+          "cycle": 2722,
+          "context": 0,
+          "warp": 2,
+          "PC": "00001440"
+        },
+        {
+          "cycle": 2726,
+          "context": 0,
+          "warp": 3,
+          "PC": "00001440"
+        },
+        {
+          "cycle": 2737,
+          "context": 0,
+          "warp": 0,
+          "PC": "00001450"
+        },
+        {
+          "cycle": 2741,
+          "context": 0,
+          "warp": 1,
+          "PC": "00001450"
+        },
+        {
+          "cycle": 2752,
+          "context": 0,
+          "warp": 2,
+          "PC": "00001450"
+        },
+        {
+          "cycle": 2756,
+          "context": 0,
+          "warp": 3,
+          "PC": "00001450"
+        },
+        {
+          "cycle": 2767,
+          "context": 0,
+          "warp": 0,
+          "PC": "00001460"
+        },
+        {
+          "cycle": 2771,
+          "context": 0,
+          "warp": 1,
+          "PC": "00001460"
+        },
+        {
+          "cycle": 2782,
+          "context": 0,
+          "warp": 2,
+          "PC": "00001460"
+        },
+        {
+          "cycle": 2786,
+          "context": 0,
+          "warp": 3,
+          "PC": "00001460"
+        },
+        {
+          "cycle": 2797,
+          "context": 0,
+          "warp": 0,
+          "PC": "00001470"
+        },
+        {
+          "cycle": 2801,
+          "context": 0,
+          "warp": 1,
+          "PC": "00001470"
+        },
+        {
+          "cycle": 2812,
+          "context": 0,
+          "warp": 2,
+          "PC": "00001470"
+        },
+        {
+          "cycle": 2816,
+          "context": 0,
+          "warp": 3,
+          "PC": "00001470"
+        },
+        {
+          "cycle": 2827,
+          "context": 0,
+          "warp": 0,
+          "PC": "00001480"
+        },
+        {
+          "cycle": 2831,
+          "context": 0,
+          "warp": 1,
+          "PC": "00001480"
+        },
+        {
+          "cycle": 2842,
+          "context": 0,
+          "warp": 2,
+          "PC": "00001480"
+        },
+        {
+          "cycle": 2846,
+          "context": 0,
+          "warp": 3,
+          "PC": "00001480"
+        },
+        {
+          "cycle": 2857,
+          "context": 0,
+          "warp": 0,
+          "PC": "00001490"
+        },
+        {
+          "cycle": 2858,
+          "context": 0,
+          "warp": 0,
+          "PC": "000014a0"
+        },
+        {
+          "cycle": 2861,
+          "context": 0,
+          "warp": 1,
+          "PC": "00001490"
+        },
+        {
+          "cycle": 2862,
+          "context": 0,
+          "warp": 1,
+          "PC": "000014a0"
+        },
+        {
+          "cycle": 2863,
+          "context": 0,
+          "warp": 0,
+          "PC": "000014b0"
+        },
+        {
+          "cycle": 2864,
+          "context": 0,
+          "warp": 0,
+          "PC": "000014c0"
+        },
+        {
+          "cycle": 2867,
+          "context": 0,
+          "warp": 1,
+          "PC": "000014b0"
+        },
+        {
+          "cycle": 2868,
+          "context": 0,
+          "warp": 0,
+          "PC": "000014d0"
+        },
+        {
+          "cycle": 2869,
+          "context": 0,
+          "warp": 1,
+          "PC": "000014c0"
+        },
+        {
+          "cycle": 2872,
+          "context": 0,
+          "warp": 2,
+          "PC": "00001490"
+        },
+        {
+          "cycle": 2873,
+          "context": 0,
+          "warp": 0,
+          "PC": "000014e0"
+        },
+        {
+          "cycle": 2874,
+          "context": 0,
+          "warp": 2,
+          "PC": "000014a0"
+        },
+        {
+          "cycle": 2876,
+          "context": 0,
+          "warp": 3,
+          "PC": "00001490"
+        },
+        {
+          "cycle": 2877,
+          "context": 0,
+          "warp": 3,
+          "PC": "000014a0"
+        },
+        {
+          "cycle": 2879,
+          "context": 0,
+          "warp": 2,
+          "PC": "000014b0"
+        },
+        {
+          "cycle": 2882,
+          "context": 0,
+          "warp": 3,
+          "PC": "000014b0"
+        },
+        {
+          "cycle": 2884,
+          "context": 0,
+          "warp": 0,
+          "PC": "000014f0"
+        },
+        {
+          "cycle": 2888,
+          "context": 0,
+          "warp": 1,
+          "PC": "000014d0"
+        },
+        {
+          "cycle": 2889,
+          "context": 0,
+          "warp": 2,
+          "PC": "000014c0"
+        },
+        {
+          "cycle": 2890,
+          "context": 0,
+          "warp": 0,
+          "PC": "00001500"
+        },
+        {
+          "cycle": 2893,
+          "context": 0,
+          "warp": 1,
+          "PC": "000014e0"
+        },
+        {
+          "cycle": 2904,
+          "context": 0,
+          "warp": 2,
+          "PC": "000014d0"
+        },
+        {
+          "cycle": 2905,
+          "context": 0,
+          "warp": 0,
+          "PC": "00001510"
+        },
+        {
+          "cycle": 2906,
+          "context": 0,
+          "warp": 0,
+          "PC": "00001520"
+        },
+        {
+          "cycle": 2908,
+          "context": 0,
+          "warp": 1,
+          "PC": "000014f0"
+        },
+        {
+          "cycle": 2909,
+          "context": 0,
+          "warp": 2,
+          "PC": "000014e0"
+        },
+        {
+          "cycle": 2913,
+          "context": 0,
+          "warp": 3,
+          "PC": "000014c0"
+        },
+        {
+          "cycle": 2924,
+          "context": 0,
+          "warp": 0,
+          "PC": "00001530"
+        },
+        {
+          "cycle": 2928,
+          "context": 0,
+          "warp": 2,
+          "PC": "000014f0"
+        },
+        {
+          "cycle": 2929,
+          "context": 0,
+          "warp": 3,
+          "PC": "000014d0"
+        },
+        {
+          "cycle": 2933,
+          "context": 0,
+          "warp": 0,
+          "PC": "00001540"
+        },
+        {
+          "cycle": 2944,
+          "context": 0,
+          "warp": 3,
+          "PC": "000014e0"
+        },
+        {
+          "cycle": 2948,
+          "context": 0,
+          "warp": 0,
+          "PC": "00001550"
+        },
+        {
+          "cycle": 2949,
+          "context": 0,
+          "warp": 3,
+          "PC": "000014f0"
+        },
+        {
+          "cycle": 2953,
+          "context": 0,
+          "warp": 0,
+          "PC": "00001560"
+        },
+        {
+          "cycle": 2965,
+          "context": 0,
+          "warp": 1,
+          "PC": "00001500"
+        },
+        {
+          "cycle": 2980,
+          "context": 0,
+          "warp": 2,
+          "PC": "00001500"
+        },
+        {
+          "cycle": 2981,
+          "context": 0,
+          "warp": 1,
+          "PC": "00001510"
+        },
+        {
+          "cycle": 2995,
+          "context": 0,
+          "warp": 2,
+          "PC": "00001510"
+        },
+        {
+          "cycle": 3039,
+          "context": 0,
+          "warp": 3,
+          "PC": "00001500"
+        },
+        {
+          "cycle": 3054,
+          "context": 0,
+          "warp": 0,
+          "PC": "00001570"
+        },
+        {
+          "cycle": 3055,
+          "context": 0,
+          "warp": 3,
+          "PC": "00001510"
+        },
+        {
+          "cycle": 3069,
+          "context": 0,
+          "warp": 0,
+          "PC": "00001580"
+        },
+        {
+          "cycle": 3113,
+          "context": 0,
+          "warp": 1,
+          "PC": "00001520"
+        },
+        {
+          "cycle": 3114,
+          "context": 0,
+          "warp": 1,
+          "PC": "00001530"
+        },
+        {
+          "cycle": 3118,
+          "context": 0,
+          "warp": 1,
+          "PC": "00001540"
+        },
+        {
+          "cycle": 3122,
+          "context": 0,
+          "warp": 1,
+          "PC": "00001550"
+        },
+        {
+          "cycle": 3126,
+          "context": 0,
+          "warp": 1,
+          "PC": "00001560"
+        },
+        {
+          "cycle": 3128,
+          "context": 0,
+          "warp": 2,
+          "PC": "00001520"
+        },
+        {
+          "cycle": 3134,
+          "context": 0,
+          "warp": 2,
+          "PC": "00001530"
+        },
+        {
+          "cycle": 3138,
+          "context": 0,
+          "warp": 2,
+          "PC": "00001540"
+        },
+        {
+          "cycle": 3142,
+          "context": 0,
+          "warp": 2,
+          "PC": "00001550"
+        },
+        {
+          "cycle": 3146,
+          "context": 0,
+          "warp": 2,
+          "PC": "00001560"
+        },
+        {
+          "cycle": 3187,
+          "context": 0,
+          "warp": 3,
+          "PC": "00001520"
+        },
+        {
+          "cycle": 3188,
+          "context": 0,
+          "warp": 3,
+          "PC": "00001530"
+        },
+        {
+          "cycle": 3192,
+          "context": 0,
+          "warp": 3,
+          "PC": "00001540"
+        },
+        {
+          "cycle": 3196,
+          "context": 0,
+          "warp": 3,
+          "PC": "00001550"
+        },
+        {
+          "cycle": 3200,
+          "context": 0,
+          "warp": 3,
+          "PC": "00001560"
+        },
+        {
+          "cycle": 3202,
+          "context": 0,
+          "warp": 0,
+          "PC": "00001590"
+        },
+        {
+          "cycle": 3217,
+          "context": 0,
+          "warp": 0,
+          "PC": "000015a0"
+        },
+        {
+          "cycle": 3231,
+          "context": 0,
+          "warp": 0,
+          "PC": "000015b0"
+        },
+        {
+          "cycle": 3236,
+          "context": 0,
+          "warp": 0,
+          "PC": "000015c0"
+        },
+        {
+          "cycle": 3261,
+          "context": 0,
+          "warp": 1,
+          "PC": "00001570"
+        },
+        {
+          "cycle": 3276,
+          "context": 0,
+          "warp": 2,
+          "PC": "00001570"
+        },
+        {
+          "cycle": 3277,
+          "context": 0,
+          "warp": 1,
+          "PC": "00001580"
+        },
+        {
+          "cycle": 3291,
+          "context": 0,
+          "warp": 2,
+          "PC": "00001580"
+        },
+        {
+          "cycle": 3335,
+          "context": 0,
+          "warp": 3,
+          "PC": "00001570"
+        },
+        {
+          "cycle": 3350,
+          "context": 0,
+          "warp": 1,
+          "PC": "00001590"
+        },
+        {
+          "cycle": 3351,
+          "context": 0,
+          "warp": 3,
+          "PC": "00001580"
+        },
+        {
+          "cycle": 3365,
+          "context": 0,
+          "warp": 1,
+          "PC": "000015a0"
+        },
+        {
+          "cycle": 3379,
+          "context": 0,
+          "warp": 1,
+          "PC": "000015b0"
+        },
+        {
+          "cycle": 3384,
+          "context": 0,
+          "warp": 1,
+          "PC": "000015c0"
+        },
+        {
+          "cycle": 3409,
+          "context": 0,
+          "warp": 2,
+          "PC": "00001590"
+        },
+        {
+          "cycle": 3424,
+          "context": 0,
+          "warp": 3,
+          "PC": "00001590"
+        },
+        {
+          "cycle": 3425,
+          "context": 0,
+          "warp": 2,
+          "PC": "000015a0"
+        },
+        {
+          "cycle": 3439,
+          "context": 0,
+          "warp": 3,
+          "PC": "000015a0"
+        },
+        {
+          "cycle": 3440,
+          "context": 0,
+          "warp": 2,
+          "PC": "000015b0"
+        },
+        {
+          "cycle": 3445,
+          "context": 0,
+          "warp": 2,
+          "PC": "000015c0"
+        },
+        {
+          "cycle": 3453,
+          "context": 0,
+          "warp": 3,
+          "PC": "000015b0"
+        },
+        {
+          "cycle": 3458,
+          "context": 0,
+          "warp": 3,
+          "PC": "000015c0"
+        },
+        {
+          "cycle": 3503,
+          "context": 1,
+          "warp": 0,
+          "PC": "00001350"
+        },
+        {
+          "cycle": 3504,
+          "context": 1,
+          "warp": 1,
+          "PC": "00001350"
+        },
+        {
+          "cycle": 3518,
+          "context": 1,
+          "warp": 2,
+          "PC": "00001350"
+        },
+        {
+          "cycle": 3522,
+          "context": 1,
+          "warp": 3,
+          "PC": "00001350"
+        },
+        {
+          "cycle": 3533,
+          "context": 1,
+          "warp": 0,
+          "PC": "00001360"
+        },
+        {
+          "cycle": 3537,
+          "context": 1,
+          "warp": 1,
+          "PC": "00001360"
+        },
+        {
+          "cycle": 3548,
+          "context": 1,
+          "warp": 2,
+          "PC": "00001360"
+        },
+        {
+          "cycle": 3552,
+          "context": 1,
+          "warp": 3,
+          "PC": "00001360"
+        },
+        {
+          "cycle": 3563,
+          "context": 1,
+          "warp": 0,
+          "PC": "00001370"
+        },
+        {
+          "cycle": 3567,
+          "context": 1,
+          "warp": 1,
+          "PC": "00001370"
+        },
+        {
+          "cycle": 3578,
+          "context": 1,
+          "warp": 2,
+          "PC": "00001370"
+        },
+        {
+          "cycle": 3582,
+          "context": 1,
+          "warp": 3,
+          "PC": "00001370"
+        },
+        {
+          "cycle": 3593,
+          "context": 1,
+          "warp": 0,
+          "PC": "00001380"
+        },
+        {
+          "cycle": 3594,
+          "context": 1,
+          "warp": 0,
+          "PC": "00001390"
+        },
+        {
+          "cycle": 3595,
+          "context": 1,
+          "warp": 0,
+          "PC": "000013a0"
+        },
+        {
+          "cycle": 3597,
+          "context": 1,
+          "warp": 1,
+          "PC": "00001380"
+        },
+        {
+          "cycle": 3598,
+          "context": 1,
+          "warp": 0,
+          "PC": "000013b0"
+        },
+        {
+          "cycle": 3599,
+          "context": 1,
+          "warp": 1,
+          "PC": "00001390"
+        },
+        {
+          "cycle": 3600,
+          "context": 1,
+          "warp": 1,
+          "PC": "000013a0"
+        },
+        {
+          "cycle": 3602,
+          "context": 1,
+          "warp": 1,
+          "PC": "000013b0"
+        },
+        {
+          "cycle": 3608,
+          "context": 1,
+          "warp": 2,
+          "PC": "00001380"
+        },
+        {
+          "cycle": 3609,
+          "context": 1,
+          "warp": 2,
+          "PC": "00001390"
+        },
+        {
+          "cycle": 3610,
+          "context": 1,
+          "warp": 2,
+          "PC": "000013a0"
+        },
+        {
+          "cycle": 3612,
+          "context": 1,
+          "warp": 3,
+          "PC": "00001380"
+        },
+        {
+          "cycle": 3613,
+          "context": 1,
+          "warp": 2,
+          "PC": "000013b0"
+        },
+        {
+          "cycle": 3614,
+          "context": 1,
+          "warp": 3,
+          "PC": "00001390"
+        },
+        {
+          "cycle": 3615,
+          "context": 1,
+          "warp": 3,
+          "PC": "000013a0"
+        },
+        {
+          "cycle": 3617,
+          "context": 1,
+          "warp": 3,
+          "PC": "000013b0"
+        },
+        {
+          "cycle": 3623,
+          "context": 1,
+          "warp": 0,
+          "PC": "000013c0"
+        },
+        {
+          "cycle": 3626,
+          "context": 1,
+          "warp": 0,
+          "PC": "000013d0"
+        },
+        {
+          "cycle": 3627,
+          "context": 1,
+          "warp": 1,
+          "PC": "000013c0"
+        },
+        {
+          "cycle": 3630,
+          "context": 1,
+          "warp": 1,
+          "PC": "000013d0"
+        },
+        {
+          "cycle": 3638,
+          "context": 1,
+          "warp": 2,
+          "PC": "000013c0"
+        },
+        {
+          "cycle": 3641,
+          "context": 1,
+          "warp": 2,
+          "PC": "000013d0"
+        },
+        {
+          "cycle": 3642,
+          "context": 1,
+          "warp": 3,
+          "PC": "000013c0"
+        },
+        {
+          "cycle": 3645,
+          "context": 1,
+          "warp": 3,
+          "PC": "000013d0"
+        },
+        {
+          "cycle": 3653,
+          "context": 1,
+          "warp": 0,
+          "PC": "000013e0"
+        },
+        {
+          "cycle": 3656,
+          "context": 1,
+          "warp": 0,
+          "PC": "000013f0"
+        },
+        {
+          "cycle": 3657,
+          "context": 1,
+          "warp": 1,
+          "PC": "000013e0"
+        },
+        {
+          "cycle": 3660,
+          "context": 1,
+          "warp": 1,
+          "PC": "000013f0"
+        },
+        {
+          "cycle": 3668,
+          "context": 1,
+          "warp": 2,
+          "PC": "000013e0"
+        },
+        {
+          "cycle": 3671,
+          "context": 1,
+          "warp": 2,
+          "PC": "000013f0"
+        },
+        {
+          "cycle": 3672,
+          "context": 1,
+          "warp": 3,
+          "PC": "000013e0"
+        },
+        {
+          "cycle": 3675,
+          "context": 1,
+          "warp": 3,
+          "PC": "000013f0"
+        },
+        {
+          "cycle": 3683,
+          "context": 1,
+          "warp": 0,
+          "PC": "00001400"
+        },
+        {
+          "cycle": 3687,
+          "context": 1,
+          "warp": 1,
+          "PC": "00001400"
+        },
+        {
+          "cycle": 3698,
+          "context": 1,
+          "warp": 2,
+          "PC": "00001400"
+        },
+        {
+          "cycle": 3702,
+          "context": 1,
+          "warp": 3,
+          "PC": "00001400"
+        },
+        {
+          "cycle": 3713,
+          "context": 1,
+          "warp": 0,
+          "PC": "00001410"
+        },
+        {
+          "cycle": 3717,
+          "context": 1,
+          "warp": 1,
+          "PC": "00001410"
+        },
+        {
+          "cycle": 3728,
+          "context": 1,
+          "warp": 2,
+          "PC": "00001410"
+        },
+        {
+          "cycle": 3732,
+          "context": 1,
+          "warp": 3,
+          "PC": "00001410"
+        },
+        {
+          "cycle": 3743,
+          "context": 1,
+          "warp": 0,
+          "PC": "00001420"
+        },
+        {
+          "cycle": 3747,
+          "context": 1,
+          "warp": 1,
+          "PC": "00001420"
+        },
+        {
+          "cycle": 3758,
+          "context": 1,
+          "warp": 2,
+          "PC": "00001420"
+        },
+        {
+          "cycle": 3762,
+          "context": 1,
+          "warp": 3,
+          "PC": "00001420"
+        },
+        {
+          "cycle": 3773,
+          "context": 1,
+          "warp": 0,
+          "PC": "00001430"
+        },
+        {
+          "cycle": 3777,
+          "context": 1,
+          "warp": 1,
+          "PC": "00001430"
+        },
+        {
+          "cycle": 3788,
+          "context": 1,
+          "warp": 2,
+          "PC": "00001430"
+        },
+        {
+          "cycle": 3792,
+          "context": 1,
+          "warp": 3,
+          "PC": "00001430"
+        },
+        {
+          "cycle": 3803,
+          "context": 1,
+          "warp": 0,
+          "PC": "00001440"
+        },
+        {
+          "cycle": 3807,
+          "context": 1,
+          "warp": 1,
+          "PC": "00001440"
+        },
+        {
+          "cycle": 3818,
+          "context": 1,
+          "warp": 2,
+          "PC": "00001440"
+        },
+        {
+          "cycle": 3822,
+          "context": 1,
+          "warp": 3,
+          "PC": "00001440"
+        },
+        {
+          "cycle": 3833,
+          "context": 1,
+          "warp": 0,
+          "PC": "00001450"
+        },
+        {
+          "cycle": 3837,
+          "context": 1,
+          "warp": 1,
+          "PC": "00001450"
+        },
+        {
+          "cycle": 3848,
+          "context": 1,
+          "warp": 2,
+          "PC": "00001450"
+        },
+        {
+          "cycle": 3852,
+          "context": 1,
+          "warp": 3,
+          "PC": "00001450"
+        },
+        {
+          "cycle": 3863,
+          "context": 1,
+          "warp": 0,
+          "PC": "00001460"
+        },
+        {
+          "cycle": 3867,
+          "context": 1,
+          "warp": 1,
+          "PC": "00001460"
+        },
+        {
+          "cycle": 3878,
+          "context": 1,
+          "warp": 2,
+          "PC": "00001460"
+        },
+        {
+          "cycle": 3882,
+          "context": 1,
+          "warp": 3,
+          "PC": "00001460"
+        },
+        {
+          "cycle": 3893,
+          "context": 1,
+          "warp": 0,
+          "PC": "00001470"
+        },
+        {
+          "cycle": 3897,
+          "context": 1,
+          "warp": 1,
+          "PC": "00001470"
+        },
+        {
+          "cycle": 3908,
+          "context": 1,
+          "warp": 2,
+          "PC": "00001470"
+        },
+        {
+          "cycle": 3912,
+          "context": 1,
+          "warp": 3,
+          "PC": "00001470"
+        },
+        {
+          "cycle": 3923,
+          "context": 1,
+          "warp": 0,
+          "PC": "00001480"
+        },
+        {
+          "cycle": 3927,
+          "context": 1,
+          "warp": 1,
+          "PC": "00001480"
+        },
+        {
+          "cycle": 3938,
+          "context": 1,
+          "warp": 2,
+          "PC": "00001480"
+        },
+        {
+          "cycle": 3942,
+          "context": 1,
+          "warp": 3,
+          "PC": "00001480"
+        },
+        {
+          "cycle": 3953,
+          "context": 1,
+          "warp": 0,
+          "PC": "00001490"
+        },
+        {
+          "cycle": 3954,
+          "context": 1,
+          "warp": 0,
+          "PC": "000014a0"
+        },
+        {
+          "cycle": 3957,
+          "context": 1,
+          "warp": 1,
+          "PC": "00001490"
+        },
+        {
+          "cycle": 3958,
+          "context": 1,
+          "warp": 1,
+          "PC": "000014a0"
+        },
+        {
+          "cycle": 3959,
+          "context": 1,
+          "warp": 0,
+          "PC": "000014b0"
+        },
+        {
+          "cycle": 3960,
+          "context": 1,
+          "warp": 0,
+          "PC": "000014c0"
+        },
+        {
+          "cycle": 3963,
+          "context": 1,
+          "warp": 1,
+          "PC": "000014b0"
+        },
+        {
+          "cycle": 3964,
+          "context": 1,
+          "warp": 0,
+          "PC": "000014d0"
+        },
+        {
+          "cycle": 3965,
+          "context": 1,
+          "warp": 1,
+          "PC": "000014c0"
+        },
+        {
+          "cycle": 3968,
+          "context": 1,
+          "warp": 2,
+          "PC": "00001490"
+        },
+        {
+          "cycle": 3969,
+          "context": 1,
+          "warp": 0,
+          "PC": "000014e0"
+        },
+        {
+          "cycle": 3970,
+          "context": 1,
+          "warp": 2,
+          "PC": "000014a0"
+        },
+        {
+          "cycle": 3972,
+          "context": 1,
+          "warp": 3,
+          "PC": "00001490"
+        },
+        {
+          "cycle": 3973,
+          "context": 1,
+          "warp": 3,
+          "PC": "000014a0"
+        },
+        {
+          "cycle": 3975,
+          "context": 1,
+          "warp": 2,
+          "PC": "000014b0"
+        },
+        {
+          "cycle": 3978,
+          "context": 1,
+          "warp": 3,
+          "PC": "000014b0"
+        },
+        {
+          "cycle": 3980,
+          "context": 1,
+          "warp": 0,
+          "PC": "000014f0"
+        },
+        {
+          "cycle": 3984,
+          "context": 1,
+          "warp": 1,
+          "PC": "000014d0"
+        },
+        {
+          "cycle": 3985,
+          "context": 1,
+          "warp": 2,
+          "PC": "000014c0"
+        },
+        {
+          "cycle": 3986,
+          "context": 1,
+          "warp": 0,
+          "PC": "00001500"
+        },
+        {
+          "cycle": 3989,
+          "context": 1,
+          "warp": 1,
+          "PC": "000014e0"
+        },
+        {
+          "cycle": 4000,
+          "context": 1,
+          "warp": 2,
+          "PC": "000014d0"
+        },
+        {
+          "cycle": 4001,
+          "context": 1,
+          "warp": 0,
+          "PC": "00001510"
+        },
+        {
+          "cycle": 4002,
+          "context": 1,
+          "warp": 0,
+          "PC": "00001520"
+        },
+        {
+          "cycle": 4004,
+          "context": 1,
+          "warp": 1,
+          "PC": "000014f0"
+        },
+        {
+          "cycle": 4005,
+          "context": 1,
+          "warp": 2,
+          "PC": "000014e0"
+        },
+        {
+          "cycle": 4009,
+          "context": 1,
+          "warp": 3,
+          "PC": "000014c0"
+        },
+        {
+          "cycle": 4020,
+          "context": 1,
+          "warp": 0,
+          "PC": "00001530"
+        },
+        {
+          "cycle": 4024,
+          "context": 1,
+          "warp": 2,
+          "PC": "000014f0"
+        },
+        {
+          "cycle": 4025,
+          "context": 1,
+          "warp": 3,
+          "PC": "000014d0"
+        },
+        {
+          "cycle": 4029,
+          "context": 1,
+          "warp": 0,
+          "PC": "00001540"
+        },
+        {
+          "cycle": 4040,
+          "context": 1,
+          "warp": 3,
+          "PC": "000014e0"
+        },
+        {
+          "cycle": 4044,
+          "context": 1,
+          "warp": 0,
+          "PC": "00001550"
+        },
+        {
+          "cycle": 4045,
+          "context": 1,
+          "warp": 3,
+          "PC": "000014f0"
+        },
+        {
+          "cycle": 4049,
+          "context": 1,
+          "warp": 0,
+          "PC": "00001560"
+        },
+        {
+          "cycle": 4061,
+          "context": 1,
+          "warp": 1,
+          "PC": "00001500"
+        },
+        {
+          "cycle": 4076,
+          "context": 1,
+          "warp": 2,
+          "PC": "00001500"
+        },
+        {
+          "cycle": 4077,
+          "context": 1,
+          "warp": 1,
+          "PC": "00001510"
+        },
+        {
+          "cycle": 4091,
+          "context": 1,
+          "warp": 2,
+          "PC": "00001510"
+        },
+        {
+          "cycle": 4135,
+          "context": 1,
+          "warp": 3,
+          "PC": "00001500"
+        },
+        {
+          "cycle": 4150,
+          "context": 1,
+          "warp": 0,
+          "PC": "00001570"
+        },
+        {
+          "cycle": 4151,
+          "context": 1,
+          "warp": 3,
+          "PC": "00001510"
+        },
+        {
+          "cycle": 4165,
+          "context": 1,
+          "warp": 0,
+          "PC": "00001580"
+        },
+        {
+          "cycle": 4209,
+          "context": 1,
+          "warp": 1,
+          "PC": "00001520"
+        },
+        {
+          "cycle": 4210,
+          "context": 1,
+          "warp": 1,
+          "PC": "00001530"
+        },
+        {
+          "cycle": 4214,
+          "context": 1,
+          "warp": 1,
+          "PC": "00001540"
+        },
+        {
+          "cycle": 4218,
+          "context": 1,
+          "warp": 1,
+          "PC": "00001550"
+        },
+        {
+          "cycle": 4222,
+          "context": 1,
+          "warp": 1,
+          "PC": "00001560"
+        },
+        {
+          "cycle": 4224,
+          "context": 1,
+          "warp": 2,
+          "PC": "00001520"
+        },
+        {
+          "cycle": 4230,
+          "context": 1,
+          "warp": 2,
+          "PC": "00001530"
+        },
+        {
+          "cycle": 4234,
+          "context": 1,
+          "warp": 2,
+          "PC": "00001540"
+        },
+        {
+          "cycle": 4238,
+          "context": 1,
+          "warp": 2,
+          "PC": "00001550"
+        },
+        {
+          "cycle": 4242,
+          "context": 1,
+          "warp": 2,
+          "PC": "00001560"
+        },
+        {
+          "cycle": 4283,
+          "context": 1,
+          "warp": 3,
+          "PC": "00001520"
+        },
+        {
+          "cycle": 4284,
+          "context": 1,
+          "warp": 3,
+          "PC": "00001530"
+        },
+        {
+          "cycle": 4288,
+          "context": 1,
+          "warp": 3,
+          "PC": "00001540"
+        },
+        {
+          "cycle": 4292,
+          "context": 1,
+          "warp": 3,
+          "PC": "00001550"
+        },
+        {
+          "cycle": 4296,
+          "context": 1,
+          "warp": 3,
+          "PC": "00001560"
+        },
+        {
+          "cycle": 4298,
+          "context": 1,
+          "warp": 0,
+          "PC": "00001590"
+        },
+        {
+          "cycle": 4313,
+          "context": 1,
+          "warp": 0,
+          "PC": "000015a0"
+        },
+        {
+          "cycle": 4327,
+          "context": 1,
+          "warp": 0,
+          "PC": "000015b0"
+        },
+        {
+          "cycle": 4332,
+          "context": 1,
+          "warp": 0,
+          "PC": "000015c0"
+        },
+        {
+          "cycle": 4357,
+          "context": 1,
+          "warp": 1,
+          "PC": "00001570"
+        },
+        {
+          "cycle": 4372,
+          "context": 1,
+          "warp": 2,
+          "PC": "00001570"
+        },
+        {
+          "cycle": 4373,
+          "context": 1,
+          "warp": 1,
+          "PC": "00001580"
+        },
+        {
+          "cycle": 4387,
+          "context": 1,
+          "warp": 2,
+          "PC": "00001580"
+        },
+        {
+          "cycle": 4431,
+          "context": 1,
+          "warp": 3,
+          "PC": "00001570"
+        },
+        {
+          "cycle": 4446,
+          "context": 1,
+          "warp": 1,
+          "PC": "00001590"
+        },
+        {
+          "cycle": 4447,
+          "context": 1,
+          "warp": 3,
+          "PC": "00001580"
+        },
+        {
+          "cycle": 4461,
+          "context": 1,
+          "warp": 1,
+          "PC": "000015a0"
+        },
+        {
+          "cycle": 4475,
+          "context": 1,
+          "warp": 1,
+          "PC": "000015b0"
+        },
+        {
+          "cycle": 4480,
+          "context": 1,
+          "warp": 1,
+          "PC": "000015c0"
+        },
+        {
+          "cycle": 4505,
+          "context": 1,
+          "warp": 2,
+          "PC": "00001590"
+        },
+        {
+          "cycle": 4520,
+          "context": 1,
+          "warp": 3,
+          "PC": "00001590"
+        },
+        {
+          "cycle": 4521,
+          "context": 1,
+          "warp": 2,
+          "PC": "000015a0"
+        },
+        {
+          "cycle": 4535,
+          "context": 1,
+          "warp": 3,
+          "PC": "000015a0"
+        },
+        {
+          "cycle": 4536,
+          "context": 1,
+          "warp": 2,
+          "PC": "000015b0"
+        },
+        {
+          "cycle": 4541,
+          "context": 1,
+          "warp": 2,
+          "PC": "000015c0"
+        },
+        {
+          "cycle": 4549,
+          "context": 1,
+          "warp": 3,
+          "PC": "000015b0"
+        },
+        {
+          "cycle": 4554,
+          "context": 1,
+          "warp": 3,
+          "PC": "000015c0"
+        }
+      ],
+      "held_other_context_progress": true,
+      "passed": true
+    }
+  ],
+  "oracle": "Distinct context-specific A17/B13 dyadic inputs and nonzeroC; direct32element dot products with globalK1536,N2112 strides.",
+  "scope": "Two preloaded native-stage lifetimes reserve two CTA-shaped resource demands; not fullCTA/grid retirement or physical resident capacity.",
+  "protocol_checks": [
+    "independent shared values and input snapshot",
+    "interleaved context instructions",
+    "held context0 response permits new context1 batch to fully drain",
+    "two allocations/eight warps retained until acknowledgment",
+    "one retirement leaves other allocation",
+    "final live block, warp and engine counts are zero; per-request demand outputs remain nonzero",
+    "reset cancels resident contexts then refill/replay"
+  ],
+  "timing_calibrated": false,
+  "source_sha256": {
+    "discovery_rounds/native_barrier_015/native_control_decode.sv": "8c50509b7a80eeed376e83a2078ec8f1b7da30f7cea64d48c8f5248569315cdb",
+    "discovery_rounds/native_barrier_015/producer_barrier_tracker.sv": "a07e60e6d6596cd2aec665367a308b358e2bad05196096c6d68ef636e57d42ad",
+    "discovery_rounds/functional_mapping_002/native_bf16_layout.sv": "63658e6b59f2d124cab3a73159d3219c3d350616cec99bf72fab58afc42df76b",
+    "numerical/library_movm_permutation.sv": "eb6d60b41d421751b14a0bff080d079bf0f0be82b185adbedbf2ad1b2df0e17e",
+    "numerical/native_studied_stage_schedule.sv": "c5a8c42153dd967e71096ea0f6312927f35e89f1fb41b682b61f45d898a1f56c",
+    "components/decoded_native_issue_gate.sv": "9b3f3e8c82c40af5d73839b64dfc1279778f53fc95044cfe55cf0ce09625b427",
+    "components/warp_shared_read_service.sv": "82df6598d987c0df1c5be4db8ec504951f2d958783390d7b458cbde6b904500b",
+    "numerical/numerical_matrix_pipeline.sv": "20d64fa7c297f0a4cf83a68f899a199330cc7907f136f031d1f5b030d4a010b4",
+    "numerical/native_bf16_adapter.sv": "ca05d62325e04c3ab0d982a6d0755355903f331799f83a396d512b866de58d6d",
+    "numerical/native_hmma16816_adapter.sv": "b7b24dc0c6ea8e2acd4dd48b309f5b23804b167f3d4aa7a35af6abd5d6dce18d",
+    "numerical/native_movm_word_pipeline.sv": "3ef390ba095583072d92165d812f129a83e4c30d90bd431b2b702221dec66108",
+    "numerical/bf16_reference.cpp": "0da9f3da8194c8d832b60ef29028a456397c76f9b0edc2b6e45c1ef69e14e1d3",
+    "components/hardware_blocks.sv": "5f440c3e53abf5f907a2300c47798d7df41d81a39e1666d1c2ebfcb8a6add97a",
+    "components/allocation_demands.sv": "9225576fee76bd34f3c55262b2cacd5c21f43a2ced88ce375221d8519b6bd760",
+    "components/quantized_block_admission.sv": "048f8fc9dfaa3d807c5b5bbe5b9a7d1c5eeb4ec33150ef3058a2b0f8769bcacd",
+    "numerical/resident_stage_admission.sv": "bfc76513d2415c16ec38064f12f9d3d00a15ea7958e61a899b534dac10065935",
+    "numerical/resident_native_stage_engine.sv": "dd696ad6776a16b8591f011d51a53c90b816b6b0c7cdbefb5ae3e90a2bf3c641",
+    "numerical/resident_native_stage_tb.sv": "24787775f8b6dc2f35920b1fb56ff1ce9fbabff95bc5f0a0df610181df5bb4b5"
+  },
+  "review": {
+    "human_first_technical_writing": true,
+    "undergraduate_reader_review": true
+  }
+}

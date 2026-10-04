@@ -1,0 +1,14 @@
+#include "Voutput_component_top.h"
+#include "output_metadata.hpp"
+#include <iostream>
+using namespace output_event;
+int main(){Voutput_component_top v;Scratch s;s.interval=3;s.delay=4;WarpStore w;Admission a;int pending_read=-1,pending_ack=-1,passes=0;uint32_t readid=0,ackid=0;uint64_t checks=0;
+for(int t=0;t<4000;t++){Scratch::Inputs si;WarpStore::Inputs wi;Admission::Demand ad;bool reset=t==0||t==2500;si.reset=wi.reset=reset;si.valid=(t==2||t==1500||t==2510);si.request_id=91;si.response_ready=t%5!=0;auto ss=s.signals(reset);si.store_grant=ss.store_candidate&&t%7!=0;si.read_grant=ss.read_candidate&&t%3!=0;si.read_response=pending_read==t;si.read_response_id=readid;if(si.read_grant){pending_read=t+5;readid=ss.read_id;}
+wi.valid=t==4||t==100||t==200||t==2600;wi.request_id=t==200?32:107;wi.active=t==200?0:~0u;wi.response_ready=t%4!=0;wi.backing_ready=t%3!=0;wi.ack_valid=pending_ack==t;wi.ack_id=ackid;for(int l=0;l<32;l++)wi.addresses[l]=4096+4*((l*3)%32);auto ws=w.signals(wi);if(ws.backing_valid&&wi.backing_ready){pending_ack=t+6;ackid=ws.backing_id;}
+bool admit=t>=10&&t<35||t>=2511&&t<2530;bool retire=t==70||t==80||t==90;int rs=t==70?0:t==80?1:2;auto as=a.signals(ad);
+v.clk=0;v.rst=reset;v.sv=si.valid;v.sr=si.response_ready;v.sg=si.store_grant;v.rg=si.read_grant;v.rv=si.read_response;v.rid=si.read_response_id;v.wv=wi.valid;v.wr=wi.response_ready;v.wb=wi.backing_ready;v.wa=wi.ack_valid;v.wid=wi.request_id;v.mask=wi.active;v.ackid=wi.ack_id;for(int l=0;l<32;l++)v.addresses[l]=wi.addresses[l];v.av=admit;v.retire=retire;v.retire_slot=rs;v.thread_count=ad.threads;v.regs=ad.registers;v.user_shared=ad.user_shared;v.reserved_shared=ad.reserved_shared;v.eval();
+if(!reset){auto eq=[&](uint64_t x,uint64_t y,const char*n){checks++;if(x!=y){std::cerr<<"cycle "<<t<<" "<<n<<" rtl="<<x<<" cpp="<<y<<"\n";std::exit(1);}};
+#define EQ(x,y) eq(v.x,y,#x)
+EQ(ready,ss.ready);EQ(rsp,ss.response);EQ(sc,ss.store_candidate);EQ(rc,ss.read_candidate);EQ(rr,ss.read_response_ready);EQ(response_id,ss.response_id);EQ(read_id,ss.read_id);EQ(outstanding,ss.outstanding);EQ(stores,s.stores);EQ(commits,s.commits);EQ(reads,s.reads);EQ(completions,s.completions);for(int l=0;l<32;l++)eq(v.read_addresses[l],ss.read_addresses[l],"read_address");EQ(wready,ws.ready);EQ(wrsp,ws.response);EQ(wback,ws.backing_valid);EQ(wackready,ws.ack_ready);EQ(wrid,ws.response_id);EQ(wbackid,ws.backing_id);EQ(waddress,ws.address);EQ(wmask,ws.mask);EQ(sectors,ws.sector_count);EQ(aready,as.ready);eq(int(v.slot),as.slot,"slot");EQ(resident,as.resident);EQ(warps,as.resident_warps);EQ(allocregs,as.allocated_regs);EQ(allocshared,as.allocated_shared);if(ss.response&&si.response_ready)passes++;}
+v.clk=1;v.eval();s.edge(si);w.edge(wi);a.edge(reset,admit,retire,rs,ad);if(reset){pending_read=pending_ack=-1;}}
+std::cout<<"OUTPUT_METADATA_PASS checks="<<checks<<" cycles=4000 scratch_completed="<<passes<<"\n";return passes>=2?0:2;}

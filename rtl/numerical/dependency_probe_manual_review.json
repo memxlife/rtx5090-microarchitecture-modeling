@@ -1,0 +1,21 @@
+{
+  "accepted": true,
+  "changed_sections": [
+    "4.58"
+  ],
+  "human_first_review": "Explains historical timer endpoint before configured recurrence and exact edge calculations.",
+  "reader_review": "Defines N/R and distinguishes rounding, model completion and GEMM prediction error; no independent timing claim.",
+  "reader_language_lint": true,
+  "receipt": "numerical/dependency_probe_verification.json",
+  "receipt_source_hashes_current": true,
+  "inline_source_parity": {
+    "numerical/dependency_probe_replay.sv": true
+  },
+  "document_sha256": {
+    "rtl_microarchitecture_spec.md": "f1cefa7f478cb4c9808bee49156bfae47ec31666799609f9cc91a699d8083850",
+    "README.md": "6fb5280912eeea985fad56e7aa5d2765ab6695470f67a015b888e3e26bffd91a"
+  },
+  "checked_words": 128,
+  "new_hardware_evidence": false,
+  "hardware_parameters_closed": 0
+}

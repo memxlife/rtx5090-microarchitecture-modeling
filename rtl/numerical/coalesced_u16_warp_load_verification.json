@@ -1,0 +1,51 @@
+{
+  "all_passed": true,
+  "checked_lane_values": 224,
+  "warp_cases": 7,
+  "checks": [
+    {
+      "name": "normal",
+      "passed": true,
+      "stdout": "COALESCED_U16_PASS checked_words=224 cases=7 reset=1\n- rtl/numerical/coalesced_u16_warp_load_tb.sv:67: Verilog $finish\n- S i m u l a t i o n   R e p o r t: Verilator 5.050 2026-07-01\n- Verilator: $finish at 5ns; walltime 0.001 s; speed 6.871 us/s\n- Verilator: cpu 0.001 s on 1 threads; allocated 2 MB\n"
+    },
+    {
+      "name": "alignment",
+      "passed": true,
+      "stdout": "[15] %Fatal: coalesced_u16_warp_load.sv:40: Assertion failed in coalesced_u16_warp_load_tb.dut: Unaligned active u16 lane address\n%Error: rtl/numerical/coalesced_u16_warp_load.sv:40: Verilog $stop\nAborting...\n"
+    },
+    {
+      "name": "completion_identity",
+      "passed": true,
+      "stdout": "[105] %Fatal: sector_read_cache.sv:59: Assertion failed in coalesced_u16_warp_load_tb.dut.cache: Cache backing completion identity mismatch\n%Error: rtl/components/sector_read_cache.sv:59: Verilog $stop\nAborting...\n"
+    }
+  ],
+  "unique_sector_counts": [
+    2,
+    2,
+    1,
+    8,
+    32,
+    1,
+    0
+  ],
+  "backing_misses": [
+    2,
+    0,
+    1,
+    8,
+    32,
+    0,
+    0
+  ],
+  "oracle": "Each requested halfword equals0x5000 XOR its global halfword index; expected per-lane values use original accepted addresses, not packet extraction or permutation.",
+  "snapshot": "Addresses and active mask capture on acceptance; data comes from each actual matching packet response.",
+  "timing_scope": "Serial unique sector cache service and FIFO/blocking policy are model choices, not native warp load issue throughput.",
+  "reset_contract": "Backing provider discards pre-reset transactions; IDs contain no reset epoch.",
+  "cache_contract": "Input contents immutable between requests unless cache reset.",
+  "new_identified_registry_fields": 0,
+  "source_sha256": {
+    "components/sector_read_cache.sv": "45c49166f1cf330b3c2ae4b41f5af0d96655d3a6d8cbeb5f09452e21c3592298",
+    "numerical/coalesced_u16_warp_load.sv": "473859bae9e27d6bdaec22c6d24189f7494e027e318a9cab1a745541b72b0d43",
+    "numerical/coalesced_u16_warp_load_tb.sv": "6afe5b2601f5b7d3e8a61da3d5c8b70accea9ca384952f3bb23044def55a71c4"
+  }
+}

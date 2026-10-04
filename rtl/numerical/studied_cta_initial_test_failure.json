@@ -1,0 +1,7 @@
+{
+  "failed_assertion": "Store ID differs from row-major element index",
+  "cause": "Testbench incorrectly assumed retirement ID equals row-major address index; controller retires native fragment/lane/element ordinal while addresses are mapped independently.",
+  "repair": "ID expectation retirement ordinal; retain independent output address/value oracle and all-coordinate coverage",
+  "initial_quick_rerun_passed_words": 4096,
+  "subsequent_control_fix": "cycle counter is nonblocking to keep ready/backpressure based on pre-edge cycle"
+}

@@ -1,0 +1,20 @@
+{
+  "rows": [
+    {
+      "k": 12288,
+      "predicted_us": 688.5074263758504,
+      "observed_us": 716.096008,
+      "relative_error": 0.03852637260358751
+    },
+    {
+      "k": 49152,
+      "predicted_us": 2742.637714703402,
+      "observed_us": 2822.90559,
+      "relative_error": 0.028434488061146266
+    }
+  ],
+  "accepted": true,
+  "all_correct": true,
+  "checks": 90,
+  "cold_full_gemm_used_for_coefficients": false
+}

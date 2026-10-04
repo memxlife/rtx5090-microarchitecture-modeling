@@ -1,0 +1,411 @@
+{
+  "executions": 32,
+  "all_correct": true,
+  "all_spill_free": true,
+  "model_unchanged": true,
+  "model_sha256": "eb1394cf03a3dbb20b21f7e0c9efbb50f8de3647aef4964cdfde22ee518b1e2d",
+  "cases": [
+    {
+      "shape": [
+        960,
+        1152,
+        640
+      ],
+      "tile": [
+        32,
+        32,
+        32
+      ],
+      "modes": [
+        {
+          "mode": 0,
+          "paired_time_ratios": [
+            1.0,
+            1.0
+          ],
+          "median_ms": 0.043407999700000005,
+          "registers": [
+            40
+          ],
+          "resident_blocks": [
+            11
+          ],
+          "same_residency": true,
+          "accepted_for_calibration": false,
+          "phase_diagnostic_only": {}
+        },
+        {
+          "mode": 1,
+          "paired_time_ratios": [
+            1.0281916562965219,
+            1.0286051429468985
+          ],
+          "median_ms": 0.04484800025,
+          "registers": [
+            40
+          ],
+          "resident_blocks": [
+            11
+          ],
+          "same_residency": true,
+          "accepted_for_calibration": false,
+          "phase_diagnostic_only": {
+            "whole_stage_median_cycles": 5401.0
+          }
+        },
+        {
+          "mode": 2,
+          "paired_time_ratios": [
+            1.0189891999844307,
+            1.0191683962545737
+          ],
+          "median_ms": 0.04443840015,
+          "registers": [
+            40
+          ],
+          "resident_blocks": [
+            11
+          ],
+          "same_residency": true,
+          "accepted_for_calibration": true,
+          "phase_diagnostic_only": {
+            "staging_including_barrier_median_cycles": 4025.0,
+            "compute_including_barrier_median_cycles": 1387.0,
+            "whole_stage_median_cycles": 5414.0
+          }
+        },
+        {
+          "mode": 3,
+          "paired_time_ratios": [
+            0.9815950896581721,
+            0.9907107024387444
+          ],
+          "median_ms": 0.04300479965,
+          "registers": [
+            39
+          ],
+          "resident_blocks": [
+            11
+          ],
+          "same_residency": true,
+          "accepted_for_calibration": false,
+          "phase_diagnostic_only": {
+            "adjacent_three_read_span_median_cycles": 2.0
+          }
+        }
+      ]
+    },
+    {
+      "shape": [
+        1728,
+        2112,
+        2304
+      ],
+      "tile": [
+        32,
+        32,
+        32
+      ],
+      "modes": [
+        {
+          "mode": 0,
+          "paired_time_ratios": [
+            1.0,
+            1.0
+          ],
+          "median_ms": 0.370694393,
+          "registers": [
+            40
+          ],
+          "resident_blocks": [
+            11
+          ],
+          "same_residency": true,
+          "accepted_for_calibration": false,
+          "phase_diagnostic_only": {}
+        },
+        {
+          "mode": 1,
+          "paired_time_ratios": [
+            1.0087705858556106,
+            1.0077174299207703
+          ],
+          "median_ms": 0.37355840500000004,
+          "registers": [
+            40
+          ],
+          "resident_blocks": [
+            11
+          ],
+          "same_residency": true,
+          "accepted_for_calibration": false,
+          "phase_diagnostic_only": {
+            "whole_stage_median_cycles": 6144.0
+          }
+        },
+        {
+          "mode": 2,
+          "paired_time_ratios": [
+            1.0021926552312324,
+            1.004385307764825
+          ],
+          "median_ms": 0.371718401,
+          "registers": [
+            40
+          ],
+          "resident_blocks": [
+            11
+          ],
+          "same_residency": true,
+          "accepted_for_calibration": true,
+          "phase_diagnostic_only": {
+            "staging_including_barrier_median_cycles": 4424.5,
+            "compute_including_barrier_median_cycles": 1313.5,
+            "whole_stage_median_cycles": 5790.0
+          }
+        },
+        {
+          "mode": 3,
+          "paired_time_ratios": [
+            0.9999655106733701,
+            1.0010877073071889
+          ],
+          "median_ms": 0.370892799,
+          "registers": [
+            39
+          ],
+          "resident_blocks": [
+            11
+          ],
+          "same_residency": true,
+          "accepted_for_calibration": false,
+          "phase_diagnostic_only": {
+            "adjacent_three_read_span_median_cycles": 2.0
+          }
+        }
+      ]
+    },
+    {
+      "shape": [
+        960,
+        1152,
+        640
+      ],
+      "tile": [
+        64,
+        48,
+        32
+      ],
+      "modes": [
+        {
+          "mode": 0,
+          "paired_time_ratios": [
+            1.0,
+            1.0
+          ],
+          "median_ms": 0.0716736019,
+          "registers": [
+            64
+          ],
+          "resident_blocks": [
+            8
+          ],
+          "same_residency": true,
+          "accepted_for_calibration": false,
+          "phase_diagnostic_only": {}
+        },
+        {
+          "mode": 1,
+          "paired_time_ratios": [
+            1.9999999609340133,
+            1.9998213476609856
+          ],
+          "median_ms": 0.143347201,
+          "registers": [
+            56
+          ],
+          "resident_blocks": [
+            8
+          ],
+          "same_residency": true,
+          "accepted_for_calibration": false,
+          "phase_diagnostic_only": {
+            "whole_stage_median_cycles": 20121.5
+          }
+        },
+        {
+          "mode": 2,
+          "paired_time_ratios": [
+            1.6628270359048332,
+            1.6569642836463152
+          ],
+          "median_ms": 0.118976003,
+          "registers": [
+            56
+          ],
+          "resident_blocks": [
+            8
+          ],
+          "same_residency": true,
+          "accepted_for_calibration": false,
+          "phase_diagnostic_only": {
+            "staging_including_barrier_median_cycles": 15173.0,
+            "compute_including_barrier_median_cycles": 1584.5,
+            "whole_stage_median_cycles": 16759.0
+          }
+        },
+        {
+          "mode": 3,
+          "paired_time_ratios": [
+            1.0171443930181499,
+            1.01116071538497
+          ],
+          "median_ms": 0.0729024023,
+          "registers": [
+            56
+          ],
+          "resident_blocks": [
+            8
+          ],
+          "same_residency": true,
+          "accepted_for_calibration": false,
+          "phase_diagnostic_only": {
+            "adjacent_three_read_span_median_cycles": 2.0
+          }
+        }
+      ]
+    },
+    {
+      "shape": [
+        1728,
+        2112,
+        2304
+      ],
+      "tile": [
+        64,
+        48,
+        32
+      ],
+      "modes": [
+        {
+          "mode": 0,
+          "paired_time_ratios": [
+            1.0,
+            1.0
+          ],
+          "median_ms": 0.273615995,
+          "registers": [
+            64
+          ],
+          "resident_blocks": [
+            8
+          ],
+          "same_residency": true,
+          "accepted_for_calibration": false,
+          "phase_diagnostic_only": {}
+        },
+        {
+          "mode": 1,
+          "paired_time_ratios": [
+            1.8859893486318102,
+            1.8788564604971705
+          ],
+          "median_ms": 0.515062386,
+          "registers": [
+            56
+          ],
+          "resident_blocks": [
+            8
+          ],
+          "same_residency": true,
+          "accepted_for_calibration": false,
+          "phase_diagnostic_only": {
+            "whole_stage_median_cycles": 20350.0
+          }
+        },
+        {
+          "mode": 2,
+          "paired_time_ratios": [
+            1.5771041878045893,
+            1.5738608381756891
+          ],
+          "median_ms": 0.430879998,
+          "registers": [
+            56
+          ],
+          "resident_blocks": [
+            8
+          ],
+          "same_residency": true,
+          "accepted_for_calibration": false,
+          "phase_diagnostic_only": {
+            "staging_including_barrier_median_cycles": 14802.0,
+            "compute_including_barrier_median_cycles": 1921.0,
+            "whole_stage_median_cycles": 16813.0
+          }
+        },
+        {
+          "mode": 3,
+          "paired_time_ratios": [
+            1.0044742462120546,
+            1.0029661079202907
+          ],
+          "median_ms": 0.274438405,
+          "registers": [
+            56
+          ],
+          "resident_blocks": [
+            8
+          ],
+          "same_residency": true,
+          "accepted_for_calibration": false,
+          "phase_diagnostic_only": {
+            "adjacent_three_read_span_median_cycles": 2.0
+          }
+        }
+      ]
+    }
+  ],
+  "compiled_instruction_check": {
+    "gemm_64_48_m1.sass": {
+      "matrix_instructions": 12,
+      "barrier_instructions": 2,
+      "clock_reads": 2
+    },
+    "gemm_32_32_m3.sass": {
+      "matrix_instructions": 4,
+      "barrier_instructions": 2,
+      "clock_reads": 3
+    },
+    "gemm_64_48_m0.sass": {
+      "matrix_instructions": 12,
+      "barrier_instructions": 2,
+      "clock_reads": 0
+    },
+    "gemm_32_32_m2.sass": {
+      "matrix_instructions": 4,
+      "barrier_instructions": 2,
+      "clock_reads": 3
+    },
+    "gemm_32_32_m1.sass": {
+      "matrix_instructions": 4,
+      "barrier_instructions": 2,
+      "clock_reads": 2
+    },
+    "gemm_64_48_m3.sass": {
+      "matrix_instructions": 12,
+      "barrier_instructions": 2,
+      "clock_reads": 3
+    },
+    "gemm_32_32_m0.sass": {
+      "matrix_instructions": 4,
+      "barrier_instructions": 2,
+      "clock_reads": 0
+    },
+    "gemm_64_48_m2.sass": {
+      "matrix_instructions": 12,
+      "barrier_instructions": 2,
+      "clock_reads": 3
+    }
+  }
+}

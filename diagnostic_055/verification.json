@@ -1,0 +1,12 @@
+{
+  "native_instructions_identical": true,
+  "all_correct": true,
+  "checks": 45,
+  "strict_cold_us": 2571.05923,
+  "preheated_us": 2514.73927,
+  "strict_cold_slowdown": 0.022395944053476224,
+  "warm_service_prediction_error": 0.014280808886693697,
+  "cache_flush_bytes": 2147483648,
+  "full_gemm_coefficients": false,
+  "dense_cold_mechanism_complete": false
+}

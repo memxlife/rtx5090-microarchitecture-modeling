@@ -1,0 +1,44 @@
+{
+  "accepted": true,
+  "changed_sections": [
+    "4.34",
+    "4.40"
+  ],
+  "documents": [
+    "rtl_microarchitecture_spec.md",
+    "README.md"
+  ],
+  "inline_source_parity": {
+    "numerical/studied_gemm_cta_controller.sv": true,
+    "numerical/native_multiwarp_stage_pipeline.sv": true
+  },
+  "reviewed_current_receipts": [
+    "numerical/native_multiwarp_stage_verification.json",
+    "numerical/studied_gemm_cta_multiwarp_verification.json"
+  ],
+  "receipt_source_hashes_current": true,
+  "human_first_review": "Begins with the need for four warps to contend for common finite resources; explains local readiness, shared service capacity, round-robin issue and completion ownership before quantitative results.",
+  "reader_review": "Complete port table, capacities, state transitions, arbitration and cycle boundaries are explicit. Modeled semantic arrays are distinguished from physical register storage; address arithmetic and scratch service remain omitted.",
+  "reader_language_lint": "passed",
+  "quantitative_review": {
+    "unit_output_words": 4096,
+    "unit_40_instruction_windows": 16,
+    "connected_output_words": 5120,
+    "full_K_batches_accepted_and_completed": 48,
+    "full_K_input_warp_requests_and_commits": 3072,
+    "full_K_cold_sectors": 6144,
+    "output_sector_packets_and_acks": 128,
+    "full_K_model_completion_cycles": 67389,
+    "new_physical_parameter_closures": 0
+  },
+  "timing_calibrated": false,
+  "initial_build_boundary": "Initial numeric tests passed but lint warned; clean reruns are authoritative and initial logs remain archived.",
+  "document_sha256": {
+    "rtl_microarchitecture_spec.md": "bc2d8caa6f3bc800cc0d7312c84d02e7b5acb99ed463a8fcd90d6a5e1c56d763",
+    "README.md": "49520ecb3e4e1478835e3c11c8c5ad70838afd07ef82c8a727c4a6876719a588"
+  },
+  "source_sha256": {
+    "numerical/studied_gemm_cta_controller.sv": "0c08a7031db7fc799df418f0f6680f03b0182de39e89f4687358477277de5979",
+    "numerical/native_multiwarp_stage_pipeline.sv": "555c4f15edb797b8a3752693c622def5c2ad5d0367c00cde5e64b75279adccd7"
+  }
+}

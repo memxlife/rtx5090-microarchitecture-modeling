@@ -1,0 +1,91 @@
+{
+  "checks": {
+    "dependency_chain": {
+      "dependent": {
+        "cycles": 10,
+        "issued": 2,
+        "hits": 0,
+        "misses": 0,
+        "pending_hits": 0,
+        "dependency_wait": 4,
+        "service_wait": 0,
+        "barrier_wait": 0
+      },
+      "independent": {
+        "cycles": 6,
+        "issued": 2,
+        "hits": 0,
+        "misses": 0,
+        "pending_hits": 0,
+        "dependency_wait": 0,
+        "service_wait": 0,
+        "barrier_wait": 0
+      }
+    },
+    "shared_pending_fill": {
+      "cycles": 23,
+      "issued": 4,
+      "hits": 3,
+      "misses": 1,
+      "pending_hits": 3,
+      "dependency_wait": 0,
+      "service_wait": 0,
+      "barrier_wait": 0
+    },
+    "ready_cache_hit": {
+      "cycles": 25,
+      "issued": 3,
+      "hits": 1,
+      "misses": 1,
+      "pending_hits": 0,
+      "dependency_wait": 19,
+      "service_wait": 0,
+      "barrier_wait": 0
+    },
+    "matrix_service_capacity": {
+      "fast": {
+        "cycles": 14,
+        "issued": 4,
+        "hits": 0,
+        "misses": 0,
+        "pending_hits": 0,
+        "dependency_wait": 0,
+        "service_wait": 6,
+        "barrier_wait": 0
+      },
+      "slow": {
+        "cycles": 38,
+        "issued": 4,
+        "hits": 0,
+        "misses": 0,
+        "pending_hits": 0,
+        "dependency_wait": 0,
+        "service_wait": 54,
+        "barrier_wait": 0
+      }
+    },
+    "staging_barrier_compute": {
+      "cycles": 49,
+      "issued": 16,
+      "hits": 0,
+      "misses": 4,
+      "pending_hits": 0,
+      "dependency_wait": 70,
+      "service_wait": 4,
+      "barrier_wait": 58
+    },
+    "memory_outstanding_limit": {
+      "cycles": 107,
+      "issued": 16,
+      "hits": 0,
+      "misses": 4,
+      "pending_hits": 0,
+      "dependency_wait": 80,
+      "service_wait": 118,
+      "barrier_wait": 172
+    },
+    "undefined_input_rejected": true
+  },
+  "all_passed": true,
+  "hardware_validated": false
+}

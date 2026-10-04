@@ -1,0 +1,266 @@
+{
+  "scalar_load_result": {
+    "path": "rtl/components/scalar_load_result.sv",
+    "kind": "module"
+  },
+  "ldsm_service_work": {
+    "path": "rtl/components/ldsm_service_work.sv",
+    "kind": "module"
+  },
+  "quantized_block_admission": {
+    "path": "rtl/components/quantized_block_admission.sv",
+    "kind": "module"
+  },
+  "completion_register_file": {
+    "path": "rtl/components/completion_register_file.sv",
+    "kind": "module"
+  },
+  "warp_shared_read_service": {
+    "path": "rtl/components/warp_shared_read_service.sv",
+    "kind": "module"
+  },
+  "shared_read_candidate_hub": {
+    "path": "rtl/components/shared_read_candidate_hub.sv",
+    "kind": "module"
+  },
+  "timed_queue": {
+    "path": "rtl/components/library/timed_queue.sv",
+    "kind": "module"
+  },
+  "block_allocator": {
+    "path": "rtl/components/library/block_allocator.sv",
+    "kind": "module"
+  },
+  "warp_context": {
+    "path": "rtl/components/library/warp_context.sv",
+    "kind": "module"
+  },
+  "warp_scheduler": {
+    "path": "rtl/components/library/warp_scheduler.sv",
+    "kind": "module"
+  },
+  "register_scoreboard": {
+    "path": "rtl/components/library/register_scoreboard.sv",
+    "kind": "module"
+  },
+  "execution_pipeline": {
+    "path": "rtl/components/library/execution_pipeline.sv",
+    "kind": "module"
+  },
+  "transaction_queue": {
+    "path": "rtl/components/library/transaction_queue.sv",
+    "kind": "module"
+  },
+  "address_translation": {
+    "path": "rtl/components/library/address_translation.sv",
+    "kind": "module"
+  },
+  "shared_memory_bank": {
+    "path": "rtl/components/library/shared_memory_bank.sv",
+    "kind": "module"
+  },
+  "read_cache": {
+    "path": "rtl/components/library/read_cache.sv",
+    "kind": "module"
+  },
+  "memory_controller": {
+    "path": "rtl/components/library/memory_controller.sv",
+    "kind": "module"
+  },
+  "barrier_controller": {
+    "path": "rtl/components/library/barrier_controller.sv",
+    "kind": "module"
+  },
+  "completion_tracker": {
+    "path": "rtl/components/library/completion_tracker.sv",
+    "kind": "module"
+  },
+  "reference_clock_counter": {
+    "path": "rtl/components/library/reference_clock_counter.sv",
+    "kind": "module"
+  },
+  "decoded_native_issue_gate": {
+    "path": "rtl/components/decoded_native_issue_gate.sv",
+    "kind": "module"
+  },
+  "sector_read_cache": {
+    "path": "rtl/components/sector_read_cache.sv",
+    "kind": "module"
+  },
+  "shared_broadcast_work": {
+    "path": "rtl/components/shared_broadcast_work.sv",
+    "kind": "module"
+  },
+  "native_ldsm_decode": {
+    "path": "rtl/components/native_ldsm_decode.sv",
+    "kind": "module"
+  },
+  "cta_generation_barrier": {
+    "path": "rtl/components/cta_generation_barrier.sv",
+    "kind": "module"
+  },
+  "allocation_demands": {
+    "path": "rtl/components/allocation_demands.sv",
+    "kind": "module"
+  },
+  "native_movm_word_pipeline": {
+    "path": "rtl/numerical/native_movm_word_pipeline.sv",
+    "kind": "module"
+  },
+  "resident_gemm_multi_sm": {
+    "path": "rtl/numerical/resident_gemm_multi_sm.sv",
+    "kind": "module"
+  },
+  "library_generic_matrix_pipeline": {
+    "path": "rtl/numerical/library_generic_matrix_pipeline.sv",
+    "kind": "module"
+  },
+  "resident_u16_warp_load": {
+    "path": "rtl/numerical/resident_u16_warp_load.sv",
+    "kind": "module"
+  },
+  "multi_sm_l2_gateway": {
+    "path": "rtl/numerical/multi_sm_l2_gateway.sv",
+    "kind": "module"
+  },
+  "resident_stage_admission": {
+    "path": "rtl/numerical/resident_stage_admission.sv",
+    "kind": "module"
+  },
+  "gemm_tile_controller": {
+    "path": "rtl/numerical/gemm_tile_controller.sv",
+    "kind": "module"
+  },
+  "multi_sm_sector_gateway": {
+    "path": "rtl/numerical/multi_sm_sector_gateway.sv",
+    "kind": "module"
+  },
+  "native_hmma16816_adapter": {
+    "path": "rtl/numerical/native_hmma16816_adapter.sv",
+    "kind": "module"
+  },
+  "coalesced_fp32_warp_store": {
+    "path": "rtl/numerical/coalesced_fp32_warp_store.sv",
+    "kind": "module"
+  },
+  "resident_gemm_grid": {
+    "path": "rtl/numerical/resident_gemm_grid.sv",
+    "kind": "module"
+  },
+  "timed_generic_shared_matrix_pipeline": {
+    "path": "rtl/numerical/timed_generic_shared_matrix_pipeline.sv",
+    "kind": "module"
+  },
+  "coalesced_u16_warp_load": {
+    "path": "rtl/numerical/coalesced_u16_warp_load.sv",
+    "kind": "module"
+  },
+  "library_movm_permutation": {
+    "path": "rtl/numerical/library_movm_permutation.sv",
+    "kind": "package"
+  },
+  "library_shared_layout": {
+    "path": "rtl/numerical/library_shared_layout.sv",
+    "kind": "package"
+  },
+  "studied_gemm_cta_controller": {
+    "path": "rtl/numerical/studied_gemm_cta_controller.sv",
+    "kind": "module"
+  },
+  "resident_gemm_multi_sm_l2": {
+    "path": "rtl/numerical/resident_gemm_multi_sm_l2.sv",
+    "kind": "module"
+  },
+  "studied_output_scratch_shared": {
+    "path": "rtl/numerical/studied_output_scratch_shared.sv",
+    "kind": "module"
+  },
+  "studied_gemm_grid_controller": {
+    "path": "rtl/numerical/studied_gemm_grid_controller.sv",
+    "kind": "module"
+  },
+  "native_studied_stage_schedule": {
+    "path": "rtl/numerical/native_studied_stage_schedule.sv",
+    "kind": "package"
+  },
+  "generic_shared_matrix_pipeline": {
+    "path": "rtl/numerical/generic_shared_matrix_pipeline.sv",
+    "kind": "module"
+  },
+  "resident_gemm_complete": {
+    "path": "rtl/numerical/resident_gemm_complete.sv",
+    "kind": "module"
+  },
+  "resident_native_stage_shared": {
+    "path": "rtl/numerical/resident_native_stage_shared.sv",
+    "kind": "module"
+  },
+  "native_studied_stage_pipeline": {
+    "path": "rtl/numerical/native_studied_stage_pipeline.sv",
+    "kind": "module"
+  },
+  "studied_output_scratch_pipeline": {
+    "path": "rtl/numerical/studied_output_scratch_pipeline.sv",
+    "kind": "module"
+  },
+  "resident_operand_staging": {
+    "path": "rtl/numerical/resident_operand_staging.sv",
+    "kind": "module"
+  },
+  "numerical_matrix_pipeline": {
+    "path": "rtl/numerical/numerical_matrix_pipeline.sv",
+    "kind": "module"
+  },
+  "resident_native_stage_engine": {
+    "path": "rtl/numerical/resident_native_stage_engine.sv",
+    "kind": "module"
+  },
+  "cached_shared_matrix_pipeline": {
+    "path": "rtl/numerical/cached_shared_matrix_pipeline.sv",
+    "kind": "module"
+  },
+  "native_multiwarp_stage_pipeline": {
+    "path": "rtl/numerical/native_multiwarp_stage_pipeline.sv",
+    "kind": "module"
+  },
+  "tb_library_shared_layout": {
+    "path": "rtl/numerical/tb_library_shared_layout.sv",
+    "kind": "module"
+  },
+  "shared_matrix_pipeline": {
+    "path": "rtl/numerical/shared_matrix_pipeline.sv",
+    "kind": "module"
+  },
+  "multi_sm_nonblocking_l2": {
+    "path": "rtl/numerical/multi_sm_nonblocking_l2.sv",
+    "kind": "module"
+  },
+  "resident_gemm_multi_sm_nb_l2": {
+    "path": "rtl/numerical/resident_gemm_multi_sm_nb_l2.sv",
+    "kind": "module"
+  },
+  "native_bf16_adapter": {
+    "path": "rtl/numerical/native_bf16_adapter.sv",
+    "kind": "module"
+  },
+  "dependency_probe_replay": {
+    "path": "rtl/numerical/dependency_probe_replay.sv",
+    "kind": "module"
+  },
+  "resident_gemm_reduction": {
+    "path": "rtl/numerical/resident_gemm_reduction.sv",
+    "kind": "module"
+  },
+  "studied_gemm_matrix_pipeline": {
+    "path": "rtl/numerical/studied_gemm_matrix_pipeline.sv",
+    "kind": "module"
+  },
+  "native_bf16_layout": {
+    "path": "rtl/discovery_rounds/functional_mapping_002/native_bf16_layout.sv",
+    "kind": "package"
+  },
+  "ldsm_x4_layout": {
+    "path": "rtl/discovery_rounds/ldsm_mapping_003/ldsm_x4_layout.sv",
+    "kind": "package"
+  }
+}

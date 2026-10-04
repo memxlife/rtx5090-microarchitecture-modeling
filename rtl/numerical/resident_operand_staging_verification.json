@@ -1,0 +1,43 @@
+{
+  "all_passed": true,
+  "checked_halfwords": 4096,
+  "shape": {
+    "M": 64,
+    "N": 96,
+    "K": 64
+  },
+  "contexts": [
+    {
+      "row": 0,
+      "column": 0,
+      "stage": 0
+    },
+    {
+      "row": 1,
+      "column": 1,
+      "stage": 1
+    }
+  ],
+  "oracle": "A global linear index modulo17 minus8 and B index modulo13 minus6, divided by16; each actual shared destination checked once.",
+  "checks": [
+    "request snapshot",
+    "held shared vector payload",
+    "delayed backing packets",
+    "all2048 commits before done",
+    "held done permits other context staging",
+    "reset cancels provider and model",
+    "final outstanding zero"
+  ],
+  "scope": "Staging into checked shared-write sinks, not numerical compute integration or full CTA execution.",
+  "timing_calibrated": false,
+  "source_sha256": {
+    "components/sector_read_cache.sv": "45c49166f1cf330b3c2ae4b41f5af0d96655d3a6d8cbeb5f09452e21c3592298",
+    "numerical/resident_u16_warp_load.sv": "0cbf01fb3926115579cbbc82e9104beceae21261586eadd44de6c215d3b7e318",
+    "numerical/resident_operand_staging.sv": "0ee192e43a0f95009659b7d01d07fb44239e4039248038f9aa8bb32133e60c37",
+    "numerical/resident_operand_staging_tb.sv": "29b3512b4d6bac7cae39a3670ca62ae716b237360d52caa3210fd2b0c49c7b40"
+  },
+  "review": {
+    "human_first_technical_writing": true,
+    "undergraduate_reader_review": true
+  }
+}

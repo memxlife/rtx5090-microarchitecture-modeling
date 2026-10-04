@@ -1,0 +1,134 @@
+{
+  "receipt": "source_sprint_001_batch4",
+  "retrieval_method": "Google search through Chrome then actual paper HTML and official CUDA source",
+  "unique_rows_with_scoped_prior": 8,
+  "rows": [
+    {
+      "id": "F043",
+      "evidence_check": "supported_analogy_prior",
+      "candidate": {
+        "page_bytes": [
+          4096,
+          2097152
+        ]
+      },
+      "source_url": "https://arxiv.org/html/2606.00486v2",
+      "source_locator": "\u00a74.1/Table1; \u00a74.4 huge-page configuration",
+      "scope": "Published simulated RTX3070-class translation hierarchy, not measured RTX5090 MMU. A four-level x86 page table is an experimental model choice. Page-walk total depends on caching and contention.",
+      "identified_change": false
+    },
+    {
+      "id": "F044",
+      "evidence_check": "supported_analogy_prior",
+      "candidate": {
+        "L1": {
+          "entries": 32,
+          "associativity": "fully associative",
+          "ports": 4
+        },
+        "L2": {
+          "entries": 1024,
+          "ways": 16,
+          "ports": 16
+        },
+        "walk_cache_entries": 32
+      },
+      "source_url": "https://arxiv.org/html/2606.00486v2",
+      "source_locator": "\u00a74.1/Table1; \u00a74.4 huge-page configuration",
+      "scope": "Published simulated RTX3070-class translation hierarchy, not measured RTX5090 MMU. A four-level x86 page table is an experimental model choice. Page-walk total depends on caching and contention.",
+      "identified_change": false
+    },
+    {
+      "id": "F045",
+      "evidence_check": "supported_analogy_prior",
+      "candidate": {
+        "replacement": "LRU",
+        "translation": "VPN to PFN; same-VPN requests merge"
+      },
+      "source_url": "https://arxiv.org/html/2606.00486v2",
+      "source_locator": "\u00a74.1/Table1; \u00a74.4 huge-page configuration",
+      "scope": "Published simulated RTX3070-class translation hierarchy, not measured RTX5090 MMU. A four-level x86 page table is an experimental model choice. Page-walk total depends on caching and contention.",
+      "identified_change": false
+    },
+    {
+      "id": "F046",
+      "evidence_check": "supported_analogy_prior",
+      "candidate": {
+        "L1_mshrs": 16,
+        "L1_merge": 4,
+        "L2_mshrs": 128,
+        "L2_merge": 8
+      },
+      "source_url": "https://arxiv.org/html/2606.00486v2",
+      "source_locator": "\u00a74.1/Table1; \u00a74.4 huge-page configuration",
+      "scope": "Published simulated RTX3070-class translation hierarchy, not measured RTX5090 MMU. A four-level x86 page table is an experimental model choice. Page-walk total depends on caching and contention.",
+      "identified_change": false
+    },
+    {
+      "id": "F047",
+      "evidence_check": "supported_analogy_prior",
+      "candidate": {
+        "walkers": 16,
+        "concurrent_walks_per_walker": 1,
+        "page_table_levels": 4,
+        "table_type": "x86-64 model",
+        "walk_cache_entries": 32
+      },
+      "source_url": "https://arxiv.org/html/2606.00486v2",
+      "source_locator": "\u00a74.1/Table1; \u00a74.4 huge-page configuration",
+      "scope": "Published simulated RTX3070-class translation hierarchy, not measured RTX5090 MMU. A four-level x86 page table is an experimental model choice. Page-walk total depends on caching and contention.",
+      "identified_change": false
+    },
+    {
+      "id": "T024",
+      "evidence_check": "supported_analogy_prior",
+      "candidate": {
+        "L1_lookup_cycles": 20,
+        "L2_lookup_cycles": 80
+      },
+      "source_url": "https://arxiv.org/html/2606.00486v2",
+      "source_locator": "\u00a74.1/Table1; \u00a74.4 huge-page configuration",
+      "scope": "Published simulated RTX3070-class translation hierarchy, not measured RTX5090 MMU. A four-level x86 page table is an experimental model choice. Page-walk total depends on caching and contention.",
+      "identified_change": false
+    },
+    {
+      "id": "T025",
+      "evidence_check": "supported_analogy_prior",
+      "candidate": {
+        "L2_lookup_cycles": 80,
+        "then": "queue for one of16walkers; same-VPN merging; latency depends on walker/cache state"
+      },
+      "source_url": "https://arxiv.org/html/2606.00486v2",
+      "source_locator": "\u00a74.1/Table1; \u00a74.4 huge-page configuration",
+      "scope": "Published simulated RTX3070-class translation hierarchy, not measured RTX5090 MMU. A four-level x86 page table is an experimental model choice. Page-walk total depends on caching and contention.",
+      "identified_change": false
+    },
+    {
+      "id": "T026",
+      "evidence_check": "supported_analogy_prior",
+      "candidate": {
+        "memory_cycles_per_level": 254,
+        "levels": 4,
+        "walk_cache_lookup_cycles": 20,
+        "uncached_sum_cycles": 1016
+      },
+      "source_url": "https://arxiv.org/html/2606.00486v2",
+      "source_locator": "\u00a74.1/Table1; \u00a74.4 huge-page configuration",
+      "scope": "Published simulated RTX3070-class translation hierarchy, not measured RTX5090 MMU. A four-level x86 page table is an experimental model choice. Page-walk total depends on caching and contention.",
+      "identified_change": false
+    },
+    {
+      "id": "F043",
+      "evidence_check": "supported_documented_subcontract",
+      "candidate": {
+        "preferred_gpu_physical_page_bytes_minimum": 2097152
+      },
+      "source_url": "https://docs.nvidia.com/cuda/cuda-programming-guide/04-special-topics/unified-memory.html",
+      "source_locator": "\u00a74.1.1.2.1 Memory Paging and Page Sizes",
+      "scope": "CUDA says NVIDIA GPUs support multiple physical page sizes and prefer2MiB orlarger. This is not an exhaustive sm120 supported-page list.",
+      "identified_change": false
+    }
+  ],
+  "physical_parameter_identifications_added": 0,
+  "review": "Quantities and model scope are explicit; simulated pagewalk timing is not presented as real GPU measurement."
+}

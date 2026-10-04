@@ -1,0 +1,9 @@
+{
+  "human_first_review": "Sentence and paragraph review complete; read-aloud review removes compressed claims.",
+  "undergraduate_reader_review": "Question, clock-edge setup, every control/identity/counter, worked original-PC example,13checks and limits explained.",
+  "source": "components/decoded_native_issue_gate.sv",
+  "section": "4.33",
+  "status": "worker reviewed; coordinator cold-read required",
+  "functional_checks": 13,
+  "new_registry_closures": 0
+}

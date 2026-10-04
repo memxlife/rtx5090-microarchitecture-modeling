@@ -1,0 +1,14 @@
+{
+  "prototype_shared_slots": 2,
+  "candidate_shared_slots": 32,
+  "candidate_source": "Existinginventoryprior, not selected by full-GEMM timing fit",
+  "measured_dependency_cycles": 28,
+  "measured_saturated_conflict_free_floor_cycles_per_warp_load": 2,
+  "implied_requests_per_cycle": 0.5,
+  "conditional_occupancy_lower_bound": 14,
+  "derivation": "At 0.5 requests/cycle, 28-cycle pending lifetime requires at least ceil(28*0.5)=14 concurrent owners to sustain measured throughput. Two owners cannot represent both effective measurements.",
+  "claim_limit": "Effective dependency latency includes scheduling; probe-path comparability must be checked. Neither14 nor32 is an identified physical queue depth.32 is a provisional structurally consistent candidate.",
+  "mapping_candidate": "slice=(line^(line>>7)^(line>>13))%48, tag=full_line_identity; provisional hashed mapping, no hardware hash identification",
+  "l2_capacity_bytes": 100663296,
+  "effective_slices": 48
+}

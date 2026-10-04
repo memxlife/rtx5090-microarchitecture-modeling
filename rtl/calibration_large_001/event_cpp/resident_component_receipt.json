@@ -1,0 +1,10 @@
+{
+  "returncode": 0,
+  "result": "RESIDENT_METADATA_PASS cycles=6000 checks=491836 retired=23",
+  "scope": "Original resident-controller always_ff source extracted unchanged into an RTL harness; metadata C++ compared every pre-edge for6000cycles with11contexts,2Kstages,queued outputs,backpressure,re-admission,reset. No arithmetic payloads.",
+  "files": {
+    "resident_metadata.hpp": "e80f43ba854c0621f50b671a5de37fd8d7f85a6574ae362e9c89e03a1a07a3fa",
+    "resident_component_top.sv": "7e327a39387a35b632bcbf9a7b6d4df9cf4fd7f83a16a956152c9ccef02d1e9b",
+    "resident_component_test.cpp": "def5b3496f9f1a060947f330f87bdd381258c95f89a64afc74596f1095cb9a2e"
+  }
+}

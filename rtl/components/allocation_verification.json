@@ -1,0 +1,14 @@
+{
+  "result": "passed",
+  "checks": [
+    "SavedsmallGEMM5120regs9216shared",
+    "SavedlargeGEMM8192regs12288shared",
+    "Partialwarpquantization",
+    "Zero-threadinvalid",
+    "256regsthreadinvalid",
+    "NegativeSharedinvalid"
+  ],
+  "toolkit_function_check": "parameter_sweep/occupancy_allocation.json",
+  "top_level_integrated": false,
+  "timing_validated": false
+}

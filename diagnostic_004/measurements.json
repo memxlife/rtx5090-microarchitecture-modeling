@@ -1,0 +1,2882 @@
+[
+  {
+    "tile": [
+      32,
+      32,
+      32
+    ],
+    "shape": [
+      1280,
+      1280,
+      1920
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 4096,
+    "resident_ctas": 11,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.155647993,
+      0.155654395,
+      0.155647993,
+      0.155647993,
+      0.155654395,
+      0.155647993,
+      0.155647993,
+      0.155654395,
+      0.155244794
+    ],
+    "kind": "grid",
+    "padding": 0,
+    "reservation": 0,
+    "repeat": 0,
+    "latency_ms_median": 0.155647993
+  },
+  {
+    "tile": [
+      64,
+      48,
+      32
+    ],
+    "shape": [
+      1280,
+      1280,
+      1920
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 7168,
+    "resident_ctas": 8,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.2068288,
+      0.206835198,
+      0.206835198,
+      0.206841597,
+      0.206847996,
+      0.206425598,
+      0.206835198,
+      0.206835198,
+      0.2068288
+    ],
+    "kind": "grid",
+    "padding": 0,
+    "reservation": 0,
+    "repeat": 0,
+    "latency_ms_median": 0.206835198
+  },
+  {
+    "tile": [
+      32,
+      32,
+      32
+    ],
+    "shape": [
+      1344,
+      1344,
+      1920
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 4096,
+    "resident_ctas": 11,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.169990402,
+      0.169983998,
+      0.169977599,
+      0.169977599,
+      0.169990399,
+      0.169977599,
+      0.169996801,
+      0.169990399,
+      0.170003203
+    ],
+    "kind": "grid",
+    "padding": 0,
+    "reservation": 0,
+    "repeat": 0,
+    "latency_ms_median": 0.169990399
+  },
+  {
+    "tile": [
+      64,
+      48,
+      32
+    ],
+    "shape": [
+      1344,
+      1344,
+      1920
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 7168,
+    "resident_ctas": 8,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.207232001,
+      0.207232001,
+      0.206822401,
+      0.2068288,
+      0.206809601,
+      0.206816003,
+      0.207232001,
+      0.207232001,
+      0.207244799
+    ],
+    "kind": "grid",
+    "padding": 0,
+    "reservation": 0,
+    "repeat": 0,
+    "latency_ms_median": 0.207232001
+  },
+  {
+    "tile": [
+      32,
+      32,
+      32
+    ],
+    "shape": [
+      1376,
+      1376,
+      1920
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 4096,
+    "resident_ctas": 11,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.1704,
+      0.170393598,
+      0.170393598,
+      0.169983998,
+      0.169964802,
+      0.169990402,
+      0.169964802,
+      0.1703872,
+      0.169983998
+    ],
+    "kind": "grid",
+    "padding": 0,
+    "reservation": 0,
+    "repeat": 0,
+    "latency_ms_median": 0.169990402
+  },
+  {
+    "tile": [
+      64,
+      48,
+      32
+    ],
+    "shape": [
+      1376,
+      1376,
+      1920
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 7168,
+    "resident_ctas": 8,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.2064192,
+      0.205593601,
+      0.205599999,
+      0.2068288,
+      0.206015998,
+      0.205606398,
+      0.205593601,
+      0.205599999,
+      0.205587202
+    ],
+    "kind": "grid",
+    "padding": 0,
+    "reservation": 0,
+    "repeat": 0,
+    "latency_ms_median": 0.205599999
+  },
+  {
+    "tile": [
+      32,
+      32,
+      32
+    ],
+    "shape": [
+      1408,
+      1408,
+      1920
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 4096,
+    "resident_ctas": 11,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.213401598,
+      0.212991998,
+      0.213388804,
+      0.212985599,
+      0.213824001,
+      0.213414401,
+      0.212985599,
+      0.212985599,
+      0.213414401
+    ],
+    "kind": "grid",
+    "padding": 0,
+    "reservation": 0,
+    "repeat": 0,
+    "latency_ms_median": 0.213388804
+  },
+  {
+    "tile": [
+      64,
+      48,
+      32
+    ],
+    "shape": [
+      1408,
+      1408,
+      1920
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 7168,
+    "resident_ctas": 8,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.208889601,
+      0.2080576,
+      0.208473599,
+      0.208063999,
+      0.208883199,
+      0.208486396,
+      0.208479998,
+      0.208479998,
+      0.2080576
+    ],
+    "kind": "grid",
+    "padding": 0,
+    "reservation": 0,
+    "repeat": 0,
+    "latency_ms_median": 0.208479998
+  },
+  {
+    "tile": [
+      32,
+      32,
+      32
+    ],
+    "shape": [
+      1440,
+      1440,
+      1920
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 4096,
+    "resident_ctas": 11,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.2162624,
+      0.215027204,
+      0.215449598,
+      0.216672,
+      0.215027201,
+      0.2154432,
+      0.215436801,
+      0.215430403,
+      0.2158656
+    ],
+    "kind": "grid",
+    "padding": 0,
+    "reservation": 0,
+    "repeat": 0,
+    "latency_ms_median": 0.2154432
+  },
+  {
+    "tile": [
+      64,
+      48,
+      32
+    ],
+    "shape": [
+      1440,
+      1440,
+      1920
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 7168,
+    "resident_ctas": 8,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.205606401,
+      0.205599999,
+      0.205196798,
+      0.205190399,
+      0.205196798,
+      0.205606401,
+      0.205190396,
+      0.204787198,
+      0.2056128
+    ],
+    "kind": "grid",
+    "padding": 0,
+    "reservation": 0,
+    "repeat": 0,
+    "latency_ms_median": 0.205196798
+  },
+  {
+    "tile": [
+      32,
+      32,
+      32
+    ],
+    "shape": [
+      1472,
+      1472,
+      1920
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 4096,
+    "resident_ctas": 11,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.2170816,
+      0.2170816,
+      0.216678402,
+      0.216665602,
+      0.217088002,
+      0.216684803,
+      0.217087999,
+      0.2170816,
+      0.2170816
+    ],
+    "kind": "grid",
+    "padding": 0,
+    "reservation": 0,
+    "repeat": 0,
+    "latency_ms_median": 0.2170816
+  },
+  {
+    "tile": [
+      64,
+      48,
+      32
+    ],
+    "shape": [
+      1472,
+      1472,
+      1920
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 7168,
+    "resident_ctas": 8,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.212153605,
+      0.211334404,
+      0.210918403,
+      0.2117376,
+      0.210924801,
+      0.211328003,
+      0.212153605,
+      0.211744002,
+      0.212147203
+    ],
+    "kind": "grid",
+    "padding": 0,
+    "reservation": 0,
+    "repeat": 0,
+    "latency_ms_median": 0.2117376
+  },
+  {
+    "tile": [
+      32,
+      32,
+      32
+    ],
+    "shape": [
+      1536,
+      1536,
+      1920
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 4096,
+    "resident_ctas": 11,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.221171197,
+      0.220352003,
+      0.220755199,
+      0.220345598,
+      0.221580797,
+      0.220761597,
+      0.221164796,
+      0.220767996,
+      0.220768002
+    ],
+    "kind": "grid",
+    "padding": 0,
+    "reservation": 0,
+    "repeat": 0,
+    "latency_ms_median": 0.220767996
+  },
+  {
+    "tile": [
+      64,
+      48,
+      32
+    ],
+    "shape": [
+      1536,
+      1536,
+      1920
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 7168,
+    "resident_ctas": 8,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.210924801,
+      0.210105601,
+      0.2109312,
+      0.210924801,
+      0.210937598,
+      0.2109312,
+      0.2105216,
+      0.210508803,
+      0.211353597
+    ],
+    "kind": "grid",
+    "padding": 0,
+    "reservation": 0,
+    "repeat": 0,
+    "latency_ms_median": 0.210924801
+  },
+  {
+    "tile": [
+      32,
+      32,
+      32
+    ],
+    "shape": [
+      1792,
+      1792,
+      1920
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 4096,
+    "resident_ctas": 11,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.278521603,
+      0.278924805,
+      0.278521603,
+      0.279750395,
+      0.278528005,
+      0.279737604,
+      0.279756802,
+      0.280166394,
+      0.279340798
+    ],
+    "kind": "grid",
+    "padding": 0,
+    "reservation": 0,
+    "repeat": 0,
+    "latency_ms_median": 0.279340798
+  },
+  {
+    "tile": [
+      64,
+      48,
+      32
+    ],
+    "shape": [
+      1792,
+      1792,
+      1920
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 7168,
+    "resident_ctas": 8,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.2301824,
+      0.230598402,
+      0.229785603,
+      0.230604801,
+      0.230611202,
+      0.231014404,
+      0.230195203,
+      0.231424004,
+      0.230201602
+    ],
+    "kind": "grid",
+    "padding": 0,
+    "reservation": 0,
+    "repeat": 0,
+    "latency_ms_median": 0.230598402
+  },
+  {
+    "tile": [
+      32,
+      32,
+      32
+    ],
+    "shape": [
+      1920,
+      1920,
+      1920
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 4096,
+    "resident_ctas": 11,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.315391994,
+      0.314982396,
+      0.314163196,
+      0.314579195,
+      0.314982396,
+      0.31498239,
+      0.314988792,
+      0.315801591,
+      0.315801591
+    ],
+    "kind": "grid",
+    "padding": 0,
+    "reservation": 0,
+    "repeat": 0,
+    "latency_ms_median": 0.314982396
+  },
+  {
+    "tile": [
+      64,
+      48,
+      32
+    ],
+    "shape": [
+      1920,
+      1920,
+      1920
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 7168,
+    "resident_ctas": 8,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.253945601,
+      0.253542399,
+      0.253535992,
+      0.253529596,
+      0.253945595,
+      0.253145593,
+      0.253145593,
+      0.253542393,
+      0.2543616
+    ],
+    "kind": "grid",
+    "padding": 0,
+    "reservation": 0,
+    "repeat": 0,
+    "latency_ms_median": 0.253542393
+  },
+  {
+    "tile": [
+      32,
+      32,
+      32
+    ],
+    "shape": [
+      2048,
+      2048,
+      1920
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 4096,
+    "resident_ctas": 11,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.364140797,
+      0.362079996,
+      0.361683202,
+      0.362483197,
+      0.363321596,
+      0.360742402,
+      0.362899196,
+      0.362502396,
+      0.362918401
+    ],
+    "kind": "grid",
+    "padding": 0,
+    "reservation": 0,
+    "repeat": 0,
+    "latency_ms_median": 0.362502396
+  },
+  {
+    "tile": [
+      64,
+      48,
+      32
+    ],
+    "shape": [
+      2048,
+      2048,
+      1920
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 7168,
+    "resident_ctas": 8,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.341600007,
+      0.339968002,
+      0.339961594,
+      0.340377599,
+      0.339558405,
+      0.340793598,
+      0.341196805,
+      0.340371197,
+      0.3399616
+    ],
+    "kind": "grid",
+    "padding": 0,
+    "reservation": 0,
+    "repeat": 0,
+    "latency_ms_median": 0.340371197
+  },
+  {
+    "tile": [
+      32,
+      32,
+      32
+    ],
+    "shape": [
+      1920,
+      1920,
+      256
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 4096,
+    "resident_ctas": 11,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.047104001,
+      0.047104001,
+      0.047104001,
+      0.047104001,
+      0.0470912009,
+      0.047097601,
+      0.047104001,
+      0.0471104011,
+      0.047097601
+    ],
+    "kind": "depth",
+    "padding": 0,
+    "reservation": 0,
+    "repeat": 0,
+    "latency_ms_median": 0.047104001
+  },
+  {
+    "tile": [
+      64,
+      48,
+      32
+    ],
+    "shape": [
+      1920,
+      1920,
+      256
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 7168,
+    "resident_ctas": 8,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.0393087998,
+      0.038905599,
+      0.038905599,
+      0.0389119983,
+      0.0389055997,
+      0.038911999,
+      0.038905599,
+      0.0389183983,
+      0.0389247984
+    ],
+    "kind": "depth",
+    "padding": 0,
+    "reservation": 0,
+    "repeat": 0,
+    "latency_ms_median": 0.0389119983
+  },
+  {
+    "tile": [
+      32,
+      32,
+      32
+    ],
+    "shape": [
+      1920,
+      1920,
+      512
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 4096,
+    "resident_ctas": 11,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.0917504013,
+      0.0913408011,
+      0.0913408011,
+      0.0917504013,
+      0.0905344009,
+      0.0917632014,
+      0.0909568012,
+      0.0917760015,
+      0.090931201
+    ],
+    "kind": "depth",
+    "padding": 0,
+    "reservation": 0,
+    "repeat": 0,
+    "latency_ms_median": 0.0913408011
+  },
+  {
+    "tile": [
+      64,
+      48,
+      32
+    ],
+    "shape": [
+      1920,
+      1920,
+      512
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 7168,
+    "resident_ctas": 8,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.0729216024,
+      0.0737408027,
+      0.0737408027,
+      0.0733248025,
+      0.0737344027,
+      0.0737344027,
+      0.0733312026,
+      0.0737472028,
+      0.0733312026
+    ],
+    "kind": "depth",
+    "padding": 0,
+    "reservation": 0,
+    "repeat": 0,
+    "latency_ms_median": 0.0737344027
+  },
+  {
+    "tile": [
+      32,
+      32,
+      32
+    ],
+    "shape": [
+      1920,
+      1920,
+      1024
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 4096,
+    "resident_ctas": 11,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.174079999,
+      0.173664001,
+      0.1732544,
+      0.174079999,
+      0.173670399,
+      0.174489599,
+      0.172441599,
+      0.174079999,
+      0.174079999
+    ],
+    "kind": "depth",
+    "padding": 0,
+    "reservation": 0,
+    "repeat": 0,
+    "latency_ms_median": 0.174079999
+  },
+  {
+    "tile": [
+      64,
+      48,
+      32
+    ],
+    "shape": [
+      1920,
+      1920,
+      1024
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 7168,
+    "resident_ctas": 8,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.140492803,
+      0.139673603,
+      0.139673603,
+      0.139264002,
+      0.139270401,
+      0.140083203,
+      0.139270401,
+      0.139680001,
+      0.139264002
+    ],
+    "kind": "depth",
+    "padding": 0,
+    "reservation": 0,
+    "repeat": 0,
+    "latency_ms_median": 0.139673603
+  },
+  {
+    "tile": [
+      32,
+      32,
+      32
+    ],
+    "shape": [
+      1920,
+      1920,
+      1920
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 4096,
+    "resident_ctas": 11,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.315801597,
+      0.31498239,
+      0.315391994,
+      0.315398389,
+      0.314163196,
+      0.314975989,
+      0.315385592,
+      0.314163196,
+      0.31498239
+    ],
+    "kind": "depth",
+    "padding": 0,
+    "reservation": 0,
+    "repeat": 0,
+    "latency_ms_median": 0.31498239
+  },
+  {
+    "tile": [
+      64,
+      48,
+      32
+    ],
+    "shape": [
+      1920,
+      1920,
+      1920
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 7168,
+    "resident_ctas": 8,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.253139198,
+      0.252313608,
+      0.252723205,
+      0.252716804,
+      0.252729607,
+      0.253542399,
+      0.253951997,
+      0.253958398,
+      0.253951997
+    ],
+    "kind": "depth",
+    "padding": 0,
+    "reservation": 0,
+    "repeat": 0,
+    "latency_ms_median": 0.253139198
+  },
+  {
+    "tile": [
+      32,
+      32,
+      32
+    ],
+    "shape": [
+      1920,
+      1920,
+      3072
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 4096,
+    "resident_ctas": 11,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.497248,
+      0.497663999,
+      0.497254401,
+      0.498086405,
+      0.496838403,
+      0.497248,
+      0.497260803,
+      0.498476797,
+      0.498912001
+    ],
+    "kind": "depth",
+    "padding": 0,
+    "reservation": 0,
+    "repeat": 0,
+    "latency_ms_median": 0.497260803
+  },
+  {
+    "tile": [
+      64,
+      48,
+      32
+    ],
+    "shape": [
+      1920,
+      1920,
+      3072
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 7168,
+    "resident_ctas": 8,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.397311985,
+      0.398131192,
+      0.398143995,
+      0.397311991,
+      0.398131198,
+      0.398112005,
+      0.398540795,
+      0.398950398,
+      0.398553598
+    ],
+    "kind": "depth",
+    "padding": 0,
+    "reservation": 0,
+    "repeat": 0,
+    "latency_ms_median": 0.398131198
+  },
+  {
+    "tile": [
+      32,
+      32,
+      32
+    ],
+    "shape": [
+      1920,
+      1920,
+      1920
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 24576,
+    "resident_ctas": 3,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.679532814,
+      0.6774912,
+      0.677062392,
+      0.679513597,
+      0.680339205,
+      0.680332804,
+      0.677888,
+      0.677068794,
+      0.679526401
+    ],
+    "kind": "residency",
+    "padding": 0,
+    "reservation": 24576,
+    "repeat": 0,
+    "latency_ms_median": 0.679513597
+  },
+  {
+    "tile": [
+      64,
+      48,
+      32
+    ],
+    "shape": [
+      1920,
+      1920,
+      1920
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 24576,
+    "resident_ctas": 3,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.521011198,
+      0.520588815,
+      0.520601606,
+      0.523071992,
+      0.522233593,
+      0.523475194,
+      0.523468792,
+      0.522649586,
+      0.523071992
+    ],
+    "kind": "residency",
+    "padding": 0,
+    "reservation": 24576,
+    "repeat": 0,
+    "latency_ms_median": 0.522649586
+  },
+  {
+    "tile": [
+      32,
+      32,
+      32
+    ],
+    "shape": [
+      1920,
+      1920,
+      1920
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 45056,
+    "resident_ctas": 2,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.966240001,
+      0.960921609,
+      0.965024006,
+      0.96380161,
+      0.967059207,
+      0.962163198,
+      0.963795209,
+      0.96746881,
+      0.965433598
+    ],
+    "kind": "residency",
+    "padding": 0,
+    "reservation": 45056,
+    "repeat": 0,
+    "latency_ms_median": 0.965024006
+  },
+  {
+    "tile": [
+      64,
+      48,
+      32
+    ],
+    "shape": [
+      1920,
+      1920,
+      1920
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 45056,
+    "resident_ctas": 2,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.672556794,
+      0.670918393,
+      0.672563195,
+      0.6729792,
+      0.673792005,
+      0.6729792,
+      0.672959995,
+      0.671743989,
+      0.673785603
+    ],
+    "kind": "residency",
+    "padding": 0,
+    "reservation": 45056,
+    "repeat": 0,
+    "latency_ms_median": 0.672959995
+  },
+  {
+    "tile": [
+      32,
+      32,
+      32
+    ],
+    "shape": [
+      1920,
+      1920,
+      1920
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 48,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 5120,
+    "resident_ctas": 10,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.323999995,
+      0.323583996,
+      0.323180801,
+      0.323577601,
+      0.3222848,
+      0.322764796,
+      0.323993599,
+      0.323577601,
+      0.323993593
+    ],
+    "kind": "layout",
+    "padding": 8,
+    "reservation": 0,
+    "repeat": 0,
+    "latency_ms_median": 0.323577601
+  },
+  {
+    "tile": [
+      64,
+      48,
+      32
+    ],
+    "shape": [
+      1920,
+      1920,
+      1920
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 8704,
+    "resident_ctas": 7,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.333004797,
+      0.333004802,
+      0.332595199,
+      0.332595199,
+      0.332595199,
+      0.332588798,
+      0.332595199,
+      0.333824003,
+      0.3334144
+    ],
+    "kind": "layout",
+    "padding": 8,
+    "reservation": 0,
+    "repeat": 0,
+    "latency_ms_median": 0.332595199
+  },
+  {
+    "tile": [
+      32,
+      32,
+      32
+    ],
+    "shape": [
+      1920,
+      1920,
+      1920
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 48,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 6144,
+    "resident_ctas": 9,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.325228798,
+      0.325632,
+      0.326041603,
+      0.326035202,
+      0.3248128,
+      0.324819201,
+      0.323577601,
+      0.325632,
+      0.326048005
+    ],
+    "kind": "layout",
+    "padding": 16,
+    "reservation": 0,
+    "repeat": 0,
+    "latency_ms_median": 0.325632
+  },
+  {
+    "tile": [
+      64,
+      48,
+      32
+    ],
+    "shape": [
+      1920,
+      1920,
+      1920
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 10240,
+    "resident_ctas": 6,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.397721601,
+      0.39730559,
+      0.397721589,
+      0.397715193,
+      0.397311985,
+      0.398937595,
+      0.398547196,
+      0.398540801,
+      0.398131192
+    ],
+    "kind": "layout",
+    "padding": 16,
+    "reservation": 0,
+    "repeat": 0,
+    "latency_ms_median": 0.397721601
+  },
+  {
+    "tile": [
+      32,
+      32,
+      32
+    ],
+    "shape": [
+      1920,
+      1920,
+      1920
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 4096,
+    "resident_ctas": 11,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.3174272,
+      0.316614395,
+      0.317440003,
+      0.317440003,
+      0.3170304,
+      0.316620797,
+      0.3166336,
+      0.317433602,
+      0.318259203
+    ],
+    "kind": "recompiled_baseline",
+    "padding": 0,
+    "reservation": 0,
+    "repeat": 0,
+    "latency_ms_median": 0.3174272
+  },
+  {
+    "tile": [
+      64,
+      48,
+      32
+    ],
+    "shape": [
+      1920,
+      1920,
+      1920
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 7168,
+    "resident_ctas": 8,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.259257603,
+      0.259673607,
+      0.259270406,
+      0.259276807,
+      0.259692806,
+      0.258854401,
+      0.260096014,
+      0.259270406,
+      0.259276801
+    ],
+    "kind": "recompiled_baseline",
+    "padding": 0,
+    "reservation": 0,
+    "repeat": 0,
+    "latency_ms_median": 0.259276801
+  },
+  {
+    "tile": [
+      64,
+      48,
+      32
+    ],
+    "shape": [
+      1280,
+      1280,
+      1920
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 7168,
+    "resident_ctas": 8,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.206828803,
+      0.2072384,
+      0.206816003,
+      0.206816003,
+      0.207232001,
+      0.2068288,
+      0.207244799,
+      0.206822401,
+      0.206816003
+    ],
+    "kind": "grid",
+    "padding": 0,
+    "reservation": 0,
+    "repeat": 1,
+    "latency_ms_median": 0.2068288
+  },
+  {
+    "tile": [
+      32,
+      32,
+      32
+    ],
+    "shape": [
+      1280,
+      1280,
+      1920
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 4096,
+    "resident_ctas": 11,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.155641595,
+      0.155647993,
+      0.155647993,
+      0.155654395,
+      0.155647993,
+      0.155654395,
+      0.155647993,
+      0.155654395,
+      0.155238396
+    ],
+    "kind": "grid",
+    "padding": 0,
+    "reservation": 0,
+    "repeat": 1,
+    "latency_ms_median": 0.155647993
+  },
+  {
+    "tile": [
+      64,
+      48,
+      32
+    ],
+    "shape": [
+      1344,
+      1344,
+      1920
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 7168,
+    "resident_ctas": 8,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.207225603,
+      0.206822401,
+      0.206816003,
+      0.207238403,
+      0.2080576,
+      0.207648,
+      0.207232001,
+      0.208051202,
+      0.2076608
+    ],
+    "kind": "grid",
+    "padding": 0,
+    "reservation": 0,
+    "repeat": 1,
+    "latency_ms_median": 0.207238403
+  },
+  {
+    "tile": [
+      32,
+      32,
+      32
+    ],
+    "shape": [
+      1344,
+      1344,
+      1920
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 4096,
+    "resident_ctas": 11,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.169983998,
+      0.169983998,
+      0.169958404,
+      0.170003203,
+      0.169983998,
+      0.169983998,
+      0.169990399,
+      0.169983998,
+      0.1704
+    ],
+    "kind": "grid",
+    "padding": 0,
+    "reservation": 0,
+    "repeat": 1,
+    "latency_ms_median": 0.169983998
+  },
+  {
+    "tile": [
+      64,
+      48,
+      32
+    ],
+    "shape": [
+      1376,
+      1376,
+      1920
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 7168,
+    "resident_ctas": 8,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.206432,
+      0.206431997,
+      0.205606398,
+      0.205599999,
+      0.206015998,
+      0.206438395,
+      0.206438398,
+      0.206015998,
+      0.206847996
+    ],
+    "kind": "grid",
+    "padding": 0,
+    "reservation": 0,
+    "repeat": 1,
+    "latency_ms_median": 0.206431997
+  },
+  {
+    "tile": [
+      32,
+      32,
+      32
+    ],
+    "shape": [
+      1376,
+      1376,
+      1920
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 4096,
+    "resident_ctas": 11,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.1703872,
+      0.169983998,
+      0.169996804,
+      0.169983998,
+      0.169977599,
+      0.170393601,
+      0.170803198,
+      0.169977599,
+      0.170393601
+    ],
+    "kind": "grid",
+    "padding": 0,
+    "reservation": 0,
+    "repeat": 1,
+    "latency_ms_median": 0.169996804
+  },
+  {
+    "tile": [
+      64,
+      48,
+      32
+    ],
+    "shape": [
+      1408,
+      1408,
+      1920
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 7168,
+    "resident_ctas": 8,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.208473599,
+      0.208063999,
+      0.207648,
+      0.208063999,
+      0.2072384,
+      0.208889598,
+      0.208473599,
+      0.208864003,
+      0.208895999
+    ],
+    "kind": "grid",
+    "padding": 0,
+    "reservation": 0,
+    "repeat": 1,
+    "latency_ms_median": 0.208473599
+  },
+  {
+    "tile": [
+      32,
+      32,
+      32
+    ],
+    "shape": [
+      1408,
+      1408,
+      1920
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 4096,
+    "resident_ctas": 11,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.213395199,
+      0.213401598,
+      0.212998402,
+      0.213395199,
+      0.213395199,
+      0.212991998,
+      0.213830402,
+      0.2146368,
+      0.214643201
+    ],
+    "kind": "grid",
+    "padding": 0,
+    "reservation": 0,
+    "repeat": 1,
+    "latency_ms_median": 0.213395199
+  },
+  {
+    "tile": [
+      64,
+      48,
+      32
+    ],
+    "shape": [
+      1440,
+      1440,
+      1920
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 7168,
+    "resident_ctas": 8,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.2060096,
+      0.205184001,
+      0.205190399,
+      0.205606398,
+      0.2060096,
+      0.205606398,
+      0.205599999,
+      0.206432,
+      0.206412801
+    ],
+    "kind": "grid",
+    "padding": 0,
+    "reservation": 0,
+    "repeat": 1,
+    "latency_ms_median": 0.205606398
+  },
+  {
+    "tile": [
+      32,
+      32,
+      32
+    ],
+    "shape": [
+      1440,
+      1440,
+      1920
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 4096,
+    "resident_ctas": 11,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.215859202,
+      0.215039998,
+      0.216268802,
+      0.215846401,
+      0.215039998,
+      0.2162752,
+      0.215859199,
+      0.216275203,
+      0.216268799
+    ],
+    "kind": "grid",
+    "padding": 0,
+    "reservation": 0,
+    "repeat": 1,
+    "latency_ms_median": 0.215859202
+  },
+  {
+    "tile": [
+      64,
+      48,
+      32
+    ],
+    "shape": [
+      1472,
+      1472,
+      1920
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 7168,
+    "resident_ctas": 8,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.211328003,
+      0.211334401,
+      0.210918403,
+      0.2117504,
+      0.210918403,
+      0.210924801,
+      0.211756805,
+      0.212153602,
+      0.211321604
+    ],
+    "kind": "grid",
+    "padding": 0,
+    "reservation": 0,
+    "repeat": 1,
+    "latency_ms_median": 0.211328003
+  },
+  {
+    "tile": [
+      32,
+      32,
+      32
+    ],
+    "shape": [
+      1472,
+      1472,
+      1920
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 4096,
+    "resident_ctas": 11,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.217894402,
+      0.217894402,
+      0.217888004,
+      0.217484802,
+      0.2170816,
+      0.2170816,
+      0.217894402,
+      0.217900801,
+      0.217913601
+    ],
+    "kind": "grid",
+    "padding": 0,
+    "reservation": 0,
+    "repeat": 1,
+    "latency_ms_median": 0.217894402
+  },
+  {
+    "tile": [
+      64,
+      48,
+      32
+    ],
+    "shape": [
+      1536,
+      1536,
+      1920
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 7168,
+    "resident_ctas": 8,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.211328003,
+      0.211340803,
+      0.210924801,
+      0.2109312,
+      0.2113408,
+      0.2109312,
+      0.2117504,
+      0.211744002,
+      0.2113408
+    ],
+    "kind": "grid",
+    "padding": 0,
+    "reservation": 0,
+    "repeat": 1,
+    "latency_ms_median": 0.2113408
+  },
+  {
+    "tile": [
+      32,
+      32,
+      32
+    ],
+    "shape": [
+      1536,
+      1536,
+      1920
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 4096,
+    "resident_ctas": 11,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.221587199,
+      0.2207616,
+      0.220364797,
+      0.2207744,
+      0.221164799,
+      0.221190399,
+      0.221190399,
+      0.220767999,
+      0.2207616
+    ],
+    "kind": "grid",
+    "padding": 0,
+    "reservation": 0,
+    "repeat": 1,
+    "latency_ms_median": 0.2207744
+  },
+  {
+    "tile": [
+      64,
+      48,
+      32
+    ],
+    "shape": [
+      1792,
+      1792,
+      1920
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 7168,
+    "resident_ctas": 8,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.229792002,
+      0.229382402,
+      0.231014404,
+      0.230208001,
+      0.230604804,
+      0.230611202,
+      0.230201602,
+      0.231424004,
+      0.230195203
+    ],
+    "kind": "grid",
+    "padding": 0,
+    "reservation": 0,
+    "repeat": 1,
+    "latency_ms_median": 0.230208001
+  },
+  {
+    "tile": [
+      32,
+      32,
+      32
+    ],
+    "shape": [
+      1792,
+      1792,
+      1920
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 4096,
+    "resident_ctas": 11,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.278937602,
+      0.278937602,
+      0.278521603,
+      0.278937602,
+      0.278528005,
+      0.279340798,
+      0.279340798,
+      0.278528005,
+      0.279347199
+    ],
+    "kind": "grid",
+    "padding": 0,
+    "reservation": 0,
+    "repeat": 1,
+    "latency_ms_median": 0.278937602
+  },
+  {
+    "tile": [
+      64,
+      48,
+      32
+    ],
+    "shape": [
+      1920,
+      1920,
+      1920
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 7168,
+    "resident_ctas": 8,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.253945595,
+      0.253529596,
+      0.253958398,
+      0.253145599,
+      0.252716804,
+      0.252307206,
+      0.254777604,
+      0.253958398,
+      0.253939193
+    ],
+    "kind": "grid",
+    "padding": 0,
+    "reservation": 0,
+    "repeat": 1,
+    "latency_ms_median": 0.253939193
+  },
+  {
+    "tile": [
+      32,
+      32,
+      32
+    ],
+    "shape": [
+      1920,
+      1920,
+      1920
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 4096,
+    "resident_ctas": 11,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.314156801,
+      0.314572799,
+      0.314988792,
+      0.314988792,
+      0.314988792,
+      0.314572793,
+      0.31498239,
+      0.314982396,
+      0.31498239
+    ],
+    "kind": "grid",
+    "padding": 0,
+    "reservation": 0,
+    "repeat": 1,
+    "latency_ms_median": 0.31498239
+  },
+  {
+    "tile": [
+      64,
+      48,
+      32
+    ],
+    "shape": [
+      2048,
+      2048,
+      1920
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 7168,
+    "resident_ctas": 8,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.340793598,
+      0.341196805,
+      0.341196805,
+      0.339980805,
+      0.342016006,
+      0.341606408,
+      0.340780801,
+      0.341190404,
+      0.341209602
+    ],
+    "kind": "grid",
+    "padding": 0,
+    "reservation": 0,
+    "repeat": 1,
+    "latency_ms_median": 0.341196805
+  },
+  {
+    "tile": [
+      32,
+      32,
+      32
+    ],
+    "shape": [
+      2048,
+      2048,
+      1920
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 4096,
+    "resident_ctas": 11,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.361260796,
+      0.362508804,
+      0.362911999,
+      0.362079996,
+      0.361247998,
+      0.364134401,
+      0.362105596,
+      0.361683202,
+      0.362502396
+    ],
+    "kind": "grid",
+    "padding": 0,
+    "reservation": 0,
+    "repeat": 1,
+    "latency_ms_median": 0.362105596
+  },
+  {
+    "tile": [
+      64,
+      48,
+      32
+    ],
+    "shape": [
+      1920,
+      1920,
+      256
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 7168,
+    "resident_ctas": 8,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.0393151991,
+      0.0393215984,
+      0.0389119983,
+      0.0389119983,
+      0.0389247984,
+      0.0389183983,
+      0.0389183983,
+      0.0389183983,
+      0.0389183983
+    ],
+    "kind": "depth",
+    "padding": 0,
+    "reservation": 0,
+    "repeat": 1,
+    "latency_ms_median": 0.0389183983
+  },
+  {
+    "tile": [
+      32,
+      32,
+      32
+    ],
+    "shape": [
+      1920,
+      1920,
+      256
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 4096,
+    "resident_ctas": 11,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.0471104011,
+      0.047097601,
+      0.047104001,
+      0.047104001,
+      0.0470912009,
+      0.0471104011,
+      0.0471104011,
+      0.047104001,
+      0.0471104011
+    ],
+    "kind": "depth",
+    "padding": 0,
+    "reservation": 0,
+    "repeat": 1,
+    "latency_ms_median": 0.047104001
+  },
+  {
+    "tile": [
+      64,
+      48,
+      32
+    ],
+    "shape": [
+      1920,
+      1920,
+      512
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 7168,
+    "resident_ctas": 8,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.0737408027,
+      0.0737280026,
+      0.0737408027,
+      0.0737408027,
+      0.0737408027,
+      0.0737472028,
+      0.0733312026,
+      0.0733376026,
+      0.0733376026
+    ],
+    "kind": "depth",
+    "padding": 0,
+    "reservation": 0,
+    "repeat": 1,
+    "latency_ms_median": 0.0737408027
+  },
+  {
+    "tile": [
+      32,
+      32,
+      32
+    ],
+    "shape": [
+      1920,
+      1920,
+      512
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 4096,
+    "resident_ctas": 11,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.0913408011,
+      0.0917824015,
+      0.090937601,
+      0.0913408011,
+      0.0913536012,
+      0.0917632014,
+      0.0913408011,
+      0.0905344009,
+      0.0917632014
+    ],
+    "kind": "depth",
+    "padding": 0,
+    "reservation": 0,
+    "repeat": 1,
+    "latency_ms_median": 0.0913408011
+  },
+  {
+    "tile": [
+      64,
+      48,
+      32
+    ],
+    "shape": [
+      1920,
+      1920,
+      1024
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 7168,
+    "resident_ctas": 8,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.140492803,
+      0.140902403,
+      0.140902403,
+      0.139680001,
+      0.1392768,
+      0.1413248,
+      0.140102398,
+      0.140902403,
+      0.1405056
+    ],
+    "kind": "depth",
+    "padding": 0,
+    "reservation": 0,
+    "repeat": 1,
+    "latency_ms_median": 0.1405056
+  },
+  {
+    "tile": [
+      32,
+      32,
+      32
+    ],
+    "shape": [
+      1920,
+      1920,
+      1024
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 4096,
+    "resident_ctas": 11,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.174892801,
+      0.174079999,
+      0.174073601,
+      0.174079999,
+      0.174079999,
+      0.174489599,
+      0.1748992,
+      0.174489599,
+      0.174892801
+    ],
+    "kind": "depth",
+    "padding": 0,
+    "reservation": 0,
+    "repeat": 1,
+    "latency_ms_median": 0.174489599
+  },
+  {
+    "tile": [
+      64,
+      48,
+      32
+    ],
+    "shape": [
+      1920,
+      1920,
+      1920
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 7168,
+    "resident_ctas": 8,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.253542393,
+      0.253535998,
+      0.253139204,
+      0.253139198,
+      0.253126401,
+      0.253945595,
+      0.252307206,
+      0.253542399,
+      0.253139204
+    ],
+    "kind": "depth",
+    "padding": 0,
+    "reservation": 0,
+    "repeat": 1,
+    "latency_ms_median": 0.253139204
+  },
+  {
+    "tile": [
+      32,
+      32,
+      32
+    ],
+    "shape": [
+      1920,
+      1920,
+      1920
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 4096,
+    "resident_ctas": 11,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.315391994,
+      0.313740796,
+      0.314988792,
+      0.314566392,
+      0.313747197,
+      0.315391994,
+      0.315385598,
+      0.315391988,
+      0.315807992
+    ],
+    "kind": "depth",
+    "padding": 0,
+    "reservation": 0,
+    "repeat": 1,
+    "latency_ms_median": 0.315385598
+  },
+  {
+    "tile": [
+      64,
+      48,
+      32
+    ],
+    "shape": [
+      1920,
+      1920,
+      3072
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 7168,
+    "resident_ctas": 8,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.396889597,
+      0.397721589,
+      0.3972992,
+      0.398534399,
+      0.398527992,
+      0.398131192,
+      0.398137593,
+      0.398143995,
+      0.398553598
+    ],
+    "kind": "depth",
+    "padding": 0,
+    "reservation": 0,
+    "repeat": 1,
+    "latency_ms_median": 0.398137593
+  },
+  {
+    "tile": [
+      32,
+      32,
+      32
+    ],
+    "shape": [
+      1920,
+      1920,
+      3072
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 4096,
+    "resident_ctas": 11,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.496844798,
+      0.496832007,
+      0.497254395,
+      0.498073596,
+      0.498073602,
+      0.498476803,
+      0.498892796,
+      0.498892796,
+      0.498483199
+    ],
+    "kind": "depth",
+    "padding": 0,
+    "reservation": 0,
+    "repeat": 1,
+    "latency_ms_median": 0.498073602
+  },
+  {
+    "tile": [
+      64,
+      48,
+      32
+    ],
+    "shape": [
+      1920,
+      1920,
+      1920
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 24576,
+    "resident_ctas": 3,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.523052788,
+      0.522233582,
+      0.523859191,
+      0.522630394,
+      0.522630394,
+      0.523046386,
+      0.525100803,
+      0.523871994,
+      0.523871994
+    ],
+    "kind": "residency",
+    "padding": 0,
+    "reservation": 24576,
+    "repeat": 1,
+    "latency_ms_median": 0.523052788
+  },
+  {
+    "tile": [
+      32,
+      32,
+      32
+    ],
+    "shape": [
+      1920,
+      1920,
+      1920
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 24576,
+    "resident_ctas": 3,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.680351996,
+      0.680364799,
+      0.677478397,
+      0.679116797,
+      0.678713596,
+      0.679123199,
+      0.68035841,
+      0.677075183,
+      0.677894402
+    ],
+    "kind": "residency",
+    "padding": 0,
+    "reservation": 24576,
+    "repeat": 1,
+    "latency_ms_median": 0.679116797
+  },
+  {
+    "tile": [
+      64,
+      48,
+      32
+    ],
+    "shape": [
+      1920,
+      1920,
+      1920
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 45056,
+    "resident_ctas": 2,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.670111978,
+      0.669286394,
+      0.671347189,
+      0.672153592,
+      0.672153592,
+      0.672563195,
+      0.672140789,
+      0.672563195,
+      0.670931184
+    ],
+    "kind": "residency",
+    "padding": 0,
+    "reservation": 45056,
+    "repeat": 1,
+    "latency_ms_median": 0.672140789
+  },
+  {
+    "tile": [
+      32,
+      32,
+      32
+    ],
+    "shape": [
+      1920,
+      1920,
+      1920
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 45056,
+    "resident_ctas": 2,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.960915196,
+      0.968704009,
+      0.963379216,
+      0.9691136,
+      0.9642048,
+      0.963795209,
+      0.966662395,
+      0.961740816,
+      0.960102403
+    ],
+    "kind": "residency",
+    "padding": 0,
+    "reservation": 45056,
+    "repeat": 1,
+    "latency_ms_median": 0.963795209
+  },
+  {
+    "tile": [
+      64,
+      48,
+      32
+    ],
+    "shape": [
+      1920,
+      1920,
+      1920
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 8704,
+    "resident_ctas": 7,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.334643203,
+      0.334227204,
+      0.333824003,
+      0.333011204,
+      0.333011204,
+      0.332192004,
+      0.3330176,
+      0.3334144,
+      0.334643203
+    ],
+    "kind": "layout",
+    "padding": 8,
+    "reservation": 0,
+    "repeat": 1,
+    "latency_ms_median": 0.3334144
+  },
+  {
+    "tile": [
+      32,
+      32,
+      32
+    ],
+    "shape": [
+      1920,
+      1920,
+      1920
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 48,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 5120,
+    "resident_ctas": 10,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.323174399,
+      0.323161596,
+      0.323180795,
+      0.322355199,
+      0.323583996,
+      0.322771198,
+      0.323161602,
+      0.323999995,
+      0.323583996
+    ],
+    "kind": "layout",
+    "padding": 8,
+    "reservation": 0,
+    "repeat": 1,
+    "latency_ms_median": 0.323174399
+  },
+  {
+    "tile": [
+      64,
+      48,
+      32
+    ],
+    "shape": [
+      1920,
+      1920,
+      1920
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 10240,
+    "resident_ctas": 6,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.400159991,
+      0.399347198,
+      0.398943996,
+      0.399347198,
+      0.399347198,
+      0.400191998,
+      0.400179195,
+      0.400588793,
+      0.401401591
+    ],
+    "kind": "layout",
+    "padding": 16,
+    "reservation": 0,
+    "repeat": 1,
+    "latency_ms_median": 0.400159991
+  },
+  {
+    "tile": [
+      32,
+      32,
+      32
+    ],
+    "shape": [
+      1920,
+      1920,
+      1920
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 48,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 6144,
+    "resident_ctas": 9,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.326047999,
+      0.326438403,
+      0.324806398,
+      0.326041603,
+      0.326457602,
+      0.326047999,
+      0.327673602,
+      0.326047999,
+      0.325632
+    ],
+    "kind": "layout",
+    "padding": 16,
+    "reservation": 0,
+    "repeat": 1,
+    "latency_ms_median": 0.326047999
+  },
+  {
+    "tile": [
+      64,
+      48,
+      32
+    ],
+    "shape": [
+      1920,
+      1920,
+      1920
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 7168,
+    "resident_ctas": 8,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.260089606,
+      0.259673607,
+      0.259673607,
+      0.260096014,
+      0.259699208,
+      0.259270406,
+      0.260096014,
+      0.260096014,
+      0.260096014
+    ],
+    "kind": "recompiled_baseline",
+    "padding": 0,
+    "reservation": 0,
+    "repeat": 1,
+    "latency_ms_median": 0.260089606
+  },
+  {
+    "tile": [
+      32,
+      32,
+      32
+    ],
+    "shape": [
+      1920,
+      1920,
+      1920
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 4096,
+    "resident_ctas": 11,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.317446405,
+      0.317433602,
+      0.317440003,
+      0.317440003,
+      0.317856002,
+      0.317440003,
+      0.317446405,
+      0.318252802,
+      0.317433602
+    ],
+    "kind": "recompiled_baseline",
+    "padding": 0,
+    "reservation": 0,
+    "repeat": 1,
+    "latency_ms_median": 0.317440003
+  }
+]

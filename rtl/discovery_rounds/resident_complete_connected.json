@@ -1,0 +1,31 @@
+{
+  "previous_goal_turn": "status-only no progress; current continuation revalidated sources and executed verification",
+  "model_change": "Native operand reads and output scratch reads now share one read hub; staging and scratch write commits arbitrate one modeled edge. Complete reductions carry actual operands through native arithmetic and actual masked global output stores. Allocations remain live through done acknowledgment.",
+  "failed_explanation_or_bug": "Barrier-owned arrived_mask cannot be used as persistent stage arrival history because barrier release clears it before delayed matrix results complete.",
+  "repair": "Separate consumer_seen mask persists for the whole compute stage and clears on next accepted compute request.",
+  "verification": "numerical/resident_complete_verification.json",
+  "checked_output_words": 12288,
+  "K": [
+    64,
+    1536
+  ],
+  "tiles_per_case": 6,
+  "contexts": 2,
+  "invalid_launches_rejected": 4,
+  "physical_parameters_closed": 0,
+  "hardware_counts": {
+    "identified": 8,
+    "partial": 32,
+    "unknown": 94
+  },
+  "calibrated_timing": false,
+  "limitations": [
+    "One modeled SM and two contexts, external test driver supplies six tile launches.",
+    "Private scratch storage and serialized output actor are model choices, not recovered physical topology.",
+    "Full-top fixture observes write contention but no native/scratch simultaneous read candidates; separate synthetic shared engine test covers common read contention.",
+    "Reset during output writes and required progress during held done are not covered by this receipt.",
+    "No hardware timing comparison, multi-SM memory hierarchy, arbitrary instruction stream or tile-choice support."
+  ],
+  "next_action": "Integrate grid dispatch and support physical workload geometry, then calibrate and independently validate runtime with renewed remote authorization.",
+  "independent_root_review": "numerical/resident_complete_root_review.json"
+}

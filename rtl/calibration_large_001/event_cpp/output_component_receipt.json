@@ -1,0 +1,11 @@
+{
+  "returncode": 0,
+  "result": "OUTPUT_METADATA_PASS checks=235882 cycles=4000 scratch_completed=3",
+  "scope": "Pre-edge comparison of metadata-only C++ against original RTL scratch, FP32 store coalescer and quantized admission. 4000 cycles with reset, backpressure, reads, stores, zero-mask and resource limits. Numerical payloads excluded.",
+  "files": {
+    "output_metadata.hpp": "86e07a8c18f0da075ec88bae56069ff805fd211961e985f83c789397787c55d2",
+    "output_component_top.sv": "2c7d82cd3b5a8117d519092694bd225716ca3031cf3818adb9aa79952e32a93d",
+    "output_component_test.cpp": "2d839db4c28df5820dbc4fd38b6881c731b1c4fe319b6f53615703a83d31d792"
+  },
+  "resident_controller_rtl_validated": false
+}

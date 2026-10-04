@@ -1,0 +1,86 @@
+{
+  "hypothesis": "Runtime is proportional to aggregate executed warp-instruction count, so divide composite runtime by measured count ratio",
+  "coefficient_source": "diagnostic_052 counters only, no GEMM runtime coefficient",
+  "count_ratio": 1.0409711292861012,
+  "assessment": "retrospective hypothesis test; not untouched validation",
+  "rows": [
+    {
+      "source": "diagnostic_050/verification.json",
+      "shape": [
+        1920,
+        1920,
+        1536
+      ],
+      "prediction_us": 257.4634641,
+      "measurement_us": 246.5408,
+      "count_scaled_us": 247.330071753833,
+      "original_error": 0.04430367752518061,
+      "count_scaled_error": 0.003201383924417378,
+      "original_signed_error": 0.04430367752518061,
+      "count_scaled_signed_error": 0.003201383924417378
+    },
+    {
+      "source": "diagnostic_050/verification.json",
+      "shape": [
+        1920,
+        1920,
+        4608
+      ],
+      "prediction_us": 728.5418696999999,
+      "measurement_us": 697.1328020000001,
+      "count_scaled_us": 699.867507564436,
+      "original_error": 0.04505464039260598,
+      "count_scaled_error": 0.003922789971423368,
+      "original_signed_error": 0.04505464039260598,
+      "count_scaled_signed_error": 0.003922789971423368
+    },
+    {
+      "source": "diagnostic_050/verification.json",
+      "shape": [
+        2048,
+        2112,
+        1536
+      ],
+      "prediction_us": 293.382651592,
+      "measurement_us": 276.863998,
+      "count_scaled_us": 281.8355315898166,
+      "original_error": 0.05966342215429554,
+      "count_scaled_error": 0.017956591054560267,
+      "original_signed_error": 0.05966342215429554,
+      "count_scaled_signed_error": 0.017956591054560267
+    },
+    {
+      "source": "diagnostic_050/verification.json",
+      "shape": [
+        2048,
+        2112,
+        4608
+      ],
+      "prediction_us": 828.699021592,
+      "measurement_us": 784.377611,
+      "count_scaled_us": 796.0826177382291,
+      "original_error": 0.05650519592915826,
+      "count_scaled_error": 0.01492266807986331,
+      "original_signed_error": 0.05650519592915826,
+      "count_scaled_signed_error": 0.01492266807986331
+    },
+    {
+      "source": "diagnostic_054/verification.json",
+      "shape": [
+        1920,
+        1920,
+        16384
+      ],
+      "prediction_us": 2534.3424245,
+      "measurement_us": 2514.73927,
+      "count_scaled_us": 2434.5943448384146,
+      "original_error": 0.007795302969917817,
+      "count_scaled_error": 0.03187007341782411,
+      "original_signed_error": 0.007795302969917817,
+      "count_scaled_signed_error": -0.03187007341782411
+    }
+  ],
+  "decision": "not admitted as physical correction",
+  "reason": "Aggregate counts do not distinguish instruction service, dependencies, overlap or clocks; correction worsens the long-reduction preheated case",
+  "full_gemm_coefficients": false
+}

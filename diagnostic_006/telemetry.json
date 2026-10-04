@@ -1,0 +1,86 @@
+[
+  {
+    "blocks": 1,
+    "warps": 1,
+    "operations": 16384,
+    "before": "22 MHz, 405 MHz, 30, 23.27 W, 2 MiB\n",
+    "after": "1612 MHz, 14001 MHz, 31, 23.27 W, 2 MiB\n"
+  },
+  {
+    "blocks": 1,
+    "warps": 4,
+    "operations": 16384,
+    "before": "1612 MHz, 14001 MHz, 31, 23.27 W, 2 MiB\n",
+    "after": "2460 MHz, 14001 MHz, 31, 23.27 W, 2 MiB\n"
+  },
+  {
+    "blocks": 1,
+    "warps": 8,
+    "operations": 16384,
+    "before": "2460 MHz, 14001 MHz, 31, 23.27 W, 2 MiB\n",
+    "after": "2400 MHz, 14001 MHz, 31, 78.25 W, 2 MiB\n"
+  },
+  {
+    "blocks": 170,
+    "warps": 1,
+    "operations": 16384,
+    "before": "2400 MHz, 14001 MHz, 31, 78.25 W, 2 MiB\n",
+    "after": "2460 MHz, 13801 MHz, 31, 76.00 W, 2 MiB\n"
+  },
+  {
+    "blocks": 170,
+    "warps": 4,
+    "operations": 16384,
+    "before": "2460 MHz, 14001 MHz, 31, 76.00 W, 2 MiB\n",
+    "after": "2452 MHz, 14001 MHz, 31, 77.42 W, 2 MiB\n"
+  },
+  {
+    "blocks": 170,
+    "warps": 8,
+    "operations": 16384,
+    "before": "2452 MHz, 14001 MHz, 31, 77.42 W, 2 MiB\n",
+    "after": "2400 MHz, 14001 MHz, 31, 77.42 W, 2 MiB\n"
+  },
+  {
+    "blocks": 1,
+    "warps": 1,
+    "operations": 4096,
+    "before": "2400 MHz, 14001 MHz, 31, 77.42 W, 2 MiB\n",
+    "after": "2437 MHz, 14001 MHz, 31, 81.63 W, 2 MiB\n"
+  },
+  {
+    "blocks": 1,
+    "warps": 4,
+    "operations": 4096,
+    "before": "2437 MHz, 14001 MHz, 31, 81.63 W, 2 MiB\n",
+    "after": "2400 MHz, 14001 MHz, 31, 80.58 W, 2 MiB\n"
+  },
+  {
+    "blocks": 1,
+    "warps": 8,
+    "operations": 4096,
+    "before": "2400 MHz, 14001 MHz, 31, 80.58 W, 2 MiB\n",
+    "after": "2445 MHz, 14001 MHz, 31, 75.50 W, 2 MiB\n"
+  },
+  {
+    "blocks": 170,
+    "warps": 1,
+    "operations": 4096,
+    "before": "2445 MHz, 14001 MHz, 31, 75.50 W, 2 MiB\n",
+    "after": "2400 MHz, 13801 MHz, 32, 75.96 W, 2 MiB\n"
+  },
+  {
+    "blocks": 170,
+    "warps": 4,
+    "operations": 4096,
+    "before": "2400 MHz, 14001 MHz, 32, 75.96 W, 2 MiB\n",
+    "after": "2422 MHz, 14001 MHz, 31, 77.21 W, 2 MiB\n"
+  },
+  {
+    "blocks": 170,
+    "warps": 8,
+    "operations": 4096,
+    "before": "2422 MHz, 14001 MHz, 31, 77.21 W, 2 MiB\n",
+    "after": "2415 MHz, 14001 MHz, 31, 77.21 W, 2 MiB\n"
+  }
+]

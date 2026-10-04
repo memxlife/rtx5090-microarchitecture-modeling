@@ -1,0 +1,9506 @@
+[
+  {
+    "tile": [
+      32,
+      32,
+      64
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 8192,
+    "resident_ctas": 7,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.041350399,
+      0.0409407988,
+      0.0409535989,
+      0.0409535989,
+      0.040959999,
+      0.0409471989,
+      0.0409535989,
+      0.040959999,
+      0.0409407988
+    ],
+    "latency_ms_median": 0.0409535989,
+    "elapsed_seconds": 0.7042996883392334
+  },
+  {
+    "tile": [
+      16,
+      16,
+      16
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 26,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 1024,
+    "resident_ctas": 12,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.0655487999,
+      0.0655295998,
+      0.0655359998,
+      0.0655359998,
+      0.0655423999,
+      0.0655103996,
+      0.0655359998,
+      0.0655295998,
+      0.0655359998
+    ],
+    "latency_ms_median": 0.0655359998,
+    "elapsed_seconds": 1.3042254447937012
+  },
+  {
+    "tile": [
+      16,
+      16,
+      32
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 36,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 2048,
+    "resident_ctas": 12,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.0634815991,
+      0.0626367986,
+      0.063468799,
+      0.063071999,
+      0.0634943992,
+      0.0634815991,
+      0.0634815991,
+      0.063071999,
+      0.0634623989
+    ],
+    "latency_ms_median": 0.063468799,
+    "elapsed_seconds": 1.938218593597412
+  },
+  {
+    "tile": [
+      16,
+      16,
+      48
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 39,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 3072,
+    "resident_ctas": 12,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.066336,
+      0.0663616002,
+      0.0655167997,
+      0.0655295998,
+      0.0663424,
+      0.066336,
+      0.0659327999,
+      0.0655295998,
+      0.0659391999
+    ],
+    "latency_ms_median": 0.0659391999,
+    "elapsed_seconds": 2.508146286010742
+  },
+  {
+    "tile": [
+      16,
+      16,
+      64
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 42,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 4096,
+    "resident_ctas": 10,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.029888,
+      0.0294848002,
+      0.0286592003,
+      0.0299007997,
+      0.0294911999,
+      0.0298943996,
+      0.0294976,
+      0.0286464002,
+      0.0303039994
+    ],
+    "latency_ms_median": 0.0294976,
+    "elapsed_seconds": 3.081202268600464
+  },
+  {
+    "tile": [
+      16,
+      32,
+      16
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 32,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 1536,
+    "resident_ctas": 12,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.0921536013,
+      0.0917504013,
+      0.0921600014,
+      0.0921600014,
+      0.0917568013,
+      0.0921664014,
+      0.0917504013,
+      0.0917504013,
+      0.0921536013
+    ],
+    "latency_ms_median": 0.0921536013,
+    "elapsed_seconds": 3.8018949031829834
+  },
+  {
+    "tile": [
+      16,
+      32,
+      32
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 3072,
+    "resident_ctas": 12,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.0511871986,
+      0.0511807986,
+      0.0511807986,
+      0.0511743985,
+      0.0507647991,
+      0.0511679985,
+      0.0511807986,
+      0.0511743985,
+      0.0511679985
+    ],
+    "latency_ms_median": 0.0511743985,
+    "elapsed_seconds": 4.37530779838562
+  },
+  {
+    "tile": [
+      16,
+      32,
+      48
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 4608,
+    "resident_ctas": 10,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.0511871986,
+      0.0512127988,
+      0.0512063988,
+      0.0511871986,
+      0.0511935987,
+      0.0511871986,
+      0.0511871986,
+      0.0511679985,
+      0.0511807986
+    ],
+    "latency_ms_median": 0.0511871986,
+    "elapsed_seconds": 4.940147876739502
+  },
+  {
+    "tile": [
+      16,
+      32,
+      64
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 6144,
+    "resident_ctas": 9,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.0335808001,
+      0.0331519999,
+      0.0327679999,
+      0.0327487998,
+      0.0327487998,
+      0.0327615999,
+      0.0327423997,
+      0.0327487998,
+      0.0327551998
+    ],
+    "latency_ms_median": 0.0327551998,
+    "elapsed_seconds": 5.508508682250977
+  },
+  {
+    "tile": [
+      16,
+      48,
+      16
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 32,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 2048,
+    "resident_ctas": 12,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.115104002,
+      0.114694402,
+      0.115091202,
+      0.115097602,
+      0.115097602,
+      0.114688002,
+      0.115084802,
+      0.114694402,
+      0.114272001
+    ],
+    "latency_ms_median": 0.115084802,
+    "elapsed_seconds": 6.120774269104004
+  },
+  {
+    "tile": [
+      16,
+      48,
+      32
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 4096,
+    "resident_ctas": 11,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.0598016009,
+      0.0593792014,
+      0.0593920015,
+      0.0593920015,
+      0.0593920015,
+      0.0593984015,
+      0.0589760013,
+      0.0593792014,
+      0.0593920015
+    ],
+    "latency_ms_median": 0.0593920015,
+    "elapsed_seconds": 6.699594736099243
+  },
+  {
+    "tile": [
+      16,
+      48,
+      48
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 6144,
+    "resident_ctas": 9,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.0704320014,
+      0.0708416015,
+      0.0708352014,
+      0.0708416015,
+      0.0712512016,
+      0.0708480015,
+      0.0708352014,
+      0.0700096011,
+      0.0712576017
+    ],
+    "latency_ms_median": 0.0708416015,
+    "elapsed_seconds": 7.318598508834839
+  },
+  {
+    "tile": [
+      16,
+      48,
+      64
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 8192,
+    "resident_ctas": 7,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.0454592004,
+      0.0450304002,
+      0.0450432003,
+      0.0454464003,
+      0.0450368002,
+      0.0450304002,
+      0.0450368002,
+      0.0454528004,
+      0.0450368002
+    ],
+    "latency_ms_median": 0.0450368002,
+    "elapsed_seconds": 7.9644715785980225
+  },
+  {
+    "tile": [
+      16,
+      64,
+      16
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 2560,
+    "resident_ctas": 12,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.0720896021,
+      0.071692802,
+      0.0716800019,
+      0.0716672018,
+      0.0716800019,
+      0.0716672018,
+      0.0716672018,
+      0.0716736019,
+      0.0716800019
+    ],
+    "latency_ms_median": 0.0716800019,
+    "elapsed_seconds": 8.57257342338562
+  },
+  {
+    "tile": [
+      16,
+      64,
+      32
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 5120,
+    "resident_ctas": 10,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.0679808006,
+      0.0675840005,
+      0.0675776005,
+      0.0675776005,
+      0.0675840005,
+      0.0675712004,
+      0.0675840005,
+      0.0675648004,
+      0.0675776005
+    ],
+    "latency_ms_median": 0.0675776005,
+    "elapsed_seconds": 9.15556287765503
+  },
+  {
+    "tile": [
+      16,
+      64,
+      48
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 7680,
+    "resident_ctas": 8,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.0679680005,
+      0.0675520003,
+      0.0675520003,
+      0.0675456002,
+      0.0675520003,
+      0.0675584003,
+      0.0675712004,
+      0.0675584003,
+      0.0675584003
+    ],
+    "latency_ms_median": 0.0675584003,
+    "elapsed_seconds": 9.791493892669678
+  },
+  {
+    "tile": [
+      16,
+      64,
+      64
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 10240,
+    "resident_ctas": 6,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.0507903993,
+      0.0507903993,
+      0.0503743999,
+      0.049548801,
+      0.0511999987,
+      0.0499712005,
+      0.0499712005,
+      0.0503743999,
+      0.0499839999
+    ],
+    "latency_ms_median": 0.0503743999,
+    "elapsed_seconds": 10.457662343978882
+  },
+  {
+    "tile": [
+      16,
+      80,
+      16
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 3072,
+    "resident_ctas": 12,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.113043201,
+      0.113049601,
+      0.112211201,
+      0.113452801,
+      0.112627201,
+      0.113043201,
+      0.112640001,
+      0.112230401,
+      0.112633601
+    ],
+    "latency_ms_median": 0.112640001,
+    "elapsed_seconds": 11.165364265441895
+  },
+  {
+    "tile": [
+      16,
+      80,
+      32
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 6144,
+    "resident_ctas": 9,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.0802495971,
+      0.079839997,
+      0.0798655972,
+      0.079846397,
+      0.0798591971,
+      0.0802559972,
+      0.0798591971,
+      0.0798591971,
+      0.079449597
+    ],
+    "latency_ms_median": 0.0798591971,
+    "elapsed_seconds": 11.842885732650757
+  },
+  {
+    "tile": [
+      16,
+      80,
+      48
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 9216,
+    "resident_ctas": 7,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.0921408013,
+      0.0925440013,
+      0.0921472013,
+      0.0921344012,
+      0.0933760017,
+      0.0925440013,
+      0.0925696015,
+      0.0921408013,
+      0.0917248011
+    ],
+    "latency_ms_median": 0.0921472013,
+    "elapsed_seconds": 12.443920135498047
+  },
+  {
+    "tile": [
+      16,
+      80,
+      64
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 48,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 12288,
+    "resident_ctas": 5,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.0659391999,
+      0.0655295998,
+      0.0651071995,
+      0.0655167997,
+      0.0651071995,
+      0.0647039995,
+      0.0655295998,
+      0.0646847993,
+      0.0655103996
+    ],
+    "latency_ms_median": 0.0655103996,
+    "elapsed_seconds": 13.030801773071289
+  },
+  {
+    "tile": [
+      16,
+      96,
+      16
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 3584,
+    "resident_ctas": 11,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.112640001,
+      0.112633601,
+      0.113459201,
+      0.112211201,
+      0.112640001,
+      0.112224001,
+      0.113036801,
+      0.112217601,
+      0.113049601
+    ],
+    "latency_ms_median": 0.112640001,
+    "elapsed_seconds": 13.612311124801636
+  },
+  {
+    "tile": [
+      16,
+      96,
+      32
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 7168,
+    "resident_ctas": 8,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.0888704002,
+      0.0880383998,
+      0.0880319998,
+      0.088448,
+      0.088448,
+      0.0880383998,
+      0.0888640001,
+      0.0888640001,
+      0.0888704002
+    ],
+    "latency_ms_median": 0.088448,
+    "elapsed_seconds": 14.260423421859741
+  },
+  {
+    "tile": [
+      16,
+      96,
+      48
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 10752,
+    "resident_ctas": 6,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.0872255996,
+      0.0859967992,
+      0.0872319996,
+      0.0860031992,
+      0.0863999993,
+      0.0868287995,
+      0.0863999993,
+      0.0868287995,
+      0.0863999993
+    ],
+    "latency_ms_median": 0.0863999993,
+    "elapsed_seconds": 14.966546535491943
+  },
+  {
+    "tile": [
+      16,
+      96,
+      64
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 48,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 14336,
+    "resident_ctas": 5,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.0704512015,
+      0.0700224012,
+      0.0696256012,
+      0.0700416014,
+      0.0696128011,
+      0.0696128011,
+      0.0696128011,
+      0.0696128011,
+      0.0696192011
+    ],
+    "latency_ms_median": 0.0696192011,
+    "elapsed_seconds": 15.540142297744751
+  },
+  {
+    "tile": [
+      32,
+      16,
+      16
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 28,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 1536,
+    "resident_ctas": 12,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.0921408013,
+      0.0921408013,
+      0.0921408013,
+      0.0921408013,
+      0.0921344012,
+      0.0917504013,
+      0.0921408013,
+      0.0921472013,
+      0.0917312011
+    ],
+    "latency_ms_median": 0.0921408013,
+    "elapsed_seconds": 16.146682262420654
+  },
+  {
+    "tile": [
+      32,
+      16,
+      32
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 3072,
+    "resident_ctas": 12,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.0536511995,
+      0.0536383994,
+      0.0536511995,
+      0.0532287993,
+      0.0532159992,
+      0.0540607996,
+      0.0536447994,
+      0.0536511995,
+      0.0536447994
+    ],
+    "latency_ms_median": 0.0536447994,
+    "elapsed_seconds": 16.796175241470337
+  },
+  {
+    "tile": [
+      32,
+      16,
+      48
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 4608,
+    "resident_ctas": 10,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.0663295999,
+      0.066336,
+      0.0655231997,
+      0.0655039996,
+      0.0655039996,
+      0.0655231997,
+      0.0663488001,
+      0.0651071995,
+      0.0659199998
+    ],
+    "latency_ms_median": 0.0655231997,
+    "elapsed_seconds": 17.373024463653564
+  },
+  {
+    "tile": [
+      32,
+      16,
+      64
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 6144,
+    "resident_ctas": 9,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.0393087998,
+      0.0389119983,
+      0.0401343994,
+      0.0388928004,
+      0.0388991997,
+      0.0385023996,
+      0.0388991997,
+      0.0380736001,
+      0.0380736008
+    ],
+    "latency_ms_median": 0.0388991997,
+    "elapsed_seconds": 17.940467357635498
+  },
+  {
+    "tile": [
+      32,
+      32,
+      16
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 31,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 2048,
+    "resident_ctas": 12,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.118764803,
+      0.118380803,
+      0.117964803,
+      0.118361603,
+      0.118374403,
+      0.118771203,
+      0.118784003,
+      0.118374403,
+      0.118764803
+    ],
+    "latency_ms_median": 0.118380803,
+    "elapsed_seconds": 18.657506704330444
+  },
+  {
+    "tile": [
+      32,
+      32,
+      32
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 4096,
+    "resident_ctas": 11,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.0413439989,
+      0.0409407988,
+      0.0409343988,
+      0.0409279987,
+      0.0413375989,
+      0.0409407988,
+      0.0409343988,
+      0.041753599,
+      0.0409343988
+    ],
+    "latency_ms_median": 0.0409407988,
+    "elapsed_seconds": 19.214313983917236
+  },
+  {
+    "tile": [
+      32,
+      32,
+      48
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 6144,
+    "resident_ctas": 9,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.0409343988,
+      0.0409471989,
+      0.0409535989,
+      0.0409343988,
+      0.0409343988,
+      0.0409407988,
+      0.0409407988,
+      0.0409279987,
+      0.0409471989
+    ],
+    "latency_ms_median": 0.0409407988,
+    "elapsed_seconds": 19.819905757904053
+  },
+  {
+    "tile": [
+      32,
+      48,
+      16
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 2560,
+    "resident_ctas": 12,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.129830402,
+      0.129030401,
+      0.128614399,
+      0.1290176,
+      0.129011202,
+      0.129420802,
+      0.129023999,
+      0.129024002,
+      0.129023999
+    ],
+    "latency_ms_median": 0.129023999,
+    "elapsed_seconds": 20.378509283065796
+  },
+  {
+    "tile": [
+      32,
+      48,
+      32
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 48,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 5120,
+    "resident_ctas": 10,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.0511871986,
+      0.0512063988,
+      0.0511999987,
+      0.0511999987,
+      0.0511999987,
+      0.0511871986,
+      0.0511999987,
+      0.0511999987,
+      0.0511999987
+    ],
+    "latency_ms_median": 0.0511999987,
+    "elapsed_seconds": 20.976503610610962
+  },
+  {
+    "tile": [
+      32,
+      48,
+      48
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 56,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 7680,
+    "resident_ctas": 8,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.0577408008,
+      0.0573184006,
+      0.0573184006,
+      0.0573184006,
+      0.0573248006,
+      0.0573184006,
+      0.0573120005,
+      0.0577280007,
+      0.0575232007
+    ],
+    "latency_ms_median": 0.0573184006,
+    "elapsed_seconds": 21.54395818710327
+  },
+  {
+    "tile": [
+      32,
+      48,
+      64
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 56,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 10240,
+    "resident_ctas": 6,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.0507903993,
+      0.0503743999,
+      0.0511935987,
+      0.0507903993,
+      0.0507903993,
+      0.0507775992,
+      0.0507839993,
+      0.0503679998,
+      0.0495488003
+    ],
+    "latency_ms_median": 0.0507839993,
+    "elapsed_seconds": 22.128963470458984
+  },
+  {
+    "tile": [
+      32,
+      64,
+      16
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 3072,
+    "resident_ctas": 12,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.101990397,
+      0.102399997,
+      0.101171197,
+      0.101574397,
+      0.101574397,
+      0.101171197,
+      0.101977597,
+      0.101990397,
+      0.101171197
+    ],
+    "latency_ms_median": 0.101574397,
+    "elapsed_seconds": 22.760056734085083
+  },
+  {
+    "tile": [
+      32,
+      64,
+      32
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 48,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 6144,
+    "resident_ctas": 9,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.0601920001,
+      0.0597952008,
+      0.0593792014,
+      0.0597888008,
+      0.0601920001,
+      0.0601856001,
+      0.0593856014,
+      0.0597952008,
+      0.0593728013
+    ],
+    "latency_ms_median": 0.0597952008,
+    "elapsed_seconds": 23.40420174598694
+  },
+  {
+    "tile": [
+      32,
+      64,
+      48
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 9216,
+    "resident_ctas": 7,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.0835391983,
+      0.0835455984,
+      0.0839615986,
+      0.0839487985,
+      0.0827263981,
+      0.0831359982,
+      0.0839615986,
+      0.0831423983,
+      0.0835583985
+    ],
+    "latency_ms_median": 0.0835455984,
+    "elapsed_seconds": 23.994872331619263
+  },
+  {
+    "tile": [
+      32,
+      64,
+      64
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 48,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 12288,
+    "resident_ctas": 5,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.0607999995,
+      0.0606207997,
+      0.0593664013,
+      0.0597760007,
+      0.0593856014,
+      0.0606143996,
+      0.0602112003,
+      0.0601856001,
+      0.0597824007
+    ],
+    "latency_ms_median": 0.0601856001,
+    "elapsed_seconds": 24.552191972732544
+  },
+  {
+    "tile": [
+      32,
+      80,
+      16
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 54,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 3584,
+    "resident_ctas": 9,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.133939201,
+      0.133113599,
+      0.133939201,
+      0.133113599,
+      0.13312,
+      0.13312,
+      0.133113599,
+      0.133510396,
+      0.133516797
+    ],
+    "latency_ms_median": 0.13312,
+    "elapsed_seconds": 25.174076318740845
+  },
+  {
+    "tile": [
+      32,
+      80,
+      32
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 7168,
+    "resident_ctas": 8,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.0802687973,
+      0.079846397,
+      0.0798591971,
+      0.0798591971,
+      0.079846397,
+      0.0798527971,
+      0.0798591971,
+      0.0798527971,
+      0.079846397
+    ],
+    "latency_ms_median": 0.0798527971,
+    "elapsed_seconds": 25.74970293045044
+  },
+  {
+    "tile": [
+      32,
+      80,
+      48
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 10752,
+    "resident_ctas": 6,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.0774015978,
+      0.0777983963,
+      0.0778047964,
+      0.0778047964,
+      0.0778047964,
+      0.0778047964,
+      0.0778239965,
+      0.0778111964,
+      0.0774015978
+    ],
+    "latency_ms_median": 0.0778047964,
+    "elapsed_seconds": 26.327150344848633
+  },
+  {
+    "tile": [
+      32,
+      80,
+      64
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 14336,
+    "resident_ctas": 5,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.0700288013,
+      0.0696256012,
+      0.0696256012,
+      0.0700288013,
+      0.0696192011,
+      0.0696384013,
+      0.0696256012,
+      0.0696256012,
+      0.0696192011
+    ],
+    "latency_ms_median": 0.0696256012,
+    "elapsed_seconds": 26.92313838005066
+  },
+  {
+    "tile": [
+      32,
+      96,
+      16
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 56,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 4096,
+    "resident_ctas": 9,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.121248002,
+      0.120838402,
+      0.120832002,
+      0.120825604,
+      0.120838402,
+      0.120832002,
+      0.120838402,
+      0.120825604,
+      0.120825602
+    ],
+    "latency_ms_median": 0.120832002,
+    "elapsed_seconds": 27.5242702960968
+  },
+  {
+    "tile": [
+      32,
+      96,
+      32
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 8192,
+    "resident_ctas": 7,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.0880576,
+      0.0880576,
+      0.0880576,
+      0.088064,
+      0.0880511999,
+      0.0880704001,
+      0.0880511999,
+      0.088064,
+      0.088064
+    ],
+    "latency_ms_median": 0.0880576,
+    "elapsed_seconds": 28.094817399978638
+  },
+  {
+    "tile": [
+      32,
+      96,
+      48
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 12288,
+    "resident_ctas": 5,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.0782335967,
+      0.0770047992,
+      0.0778239965,
+      0.0778239965,
+      0.0778239965,
+      0.0778175965,
+      0.0778239965,
+      0.0774079978,
+      0.0778239965
+    ],
+    "latency_ms_median": 0.0778239965,
+    "elapsed_seconds": 28.666116952896118
+  },
+  {
+    "tile": [
+      32,
+      96,
+      64
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 16384,
+    "resident_ctas": 4,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.0778111964,
+      0.0777983963,
+      0.0777983963,
+      0.0778047964,
+      0.0778047964,
+      0.0778111964,
+      0.0777983963,
+      0.0778111964,
+      0.0778047964
+    ],
+    "latency_ms_median": 0.0778047964,
+    "elapsed_seconds": 29.365363597869873
+  },
+  {
+    "tile": [
+      48,
+      16,
+      16
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 28,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 2048,
+    "resident_ctas": 12,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.106879999,
+      0.106483199,
+      0.106476799,
+      0.106476799,
+      0.106495999,
+      0.106495999,
+      0.106508799,
+      0.106495999,
+      0.106483199
+    ],
+    "latency_ms_median": 0.106495999,
+    "elapsed_seconds": 29.934601545333862
+  },
+  {
+    "tile": [
+      48,
+      16,
+      32
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 4096,
+    "resident_ctas": 11,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.0491328016,
+      0.0491200015,
+      0.0491264015,
+      0.0491328016,
+      0.0491264015,
+      0.0491264015,
+      0.0491392009,
+      0.0491264015,
+      0.049548801
+    ],
+    "latency_ms_median": 0.0491264015,
+    "elapsed_seconds": 30.526557445526123
+  },
+  {
+    "tile": [
+      48,
+      16,
+      48
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 6144,
+    "resident_ctas": 9,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.0729024023,
+      0.0729088023,
+      0.0733120024,
+      0.0733184025,
+      0.0733120024,
+      0.072480002,
+      0.072076802,
+      0.0729088023,
+      0.0733056024
+    ],
+    "latency_ms_median": 0.0729088023,
+    "elapsed_seconds": 31.331883668899536
+  },
+  {
+    "tile": [
+      48,
+      16,
+      64
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 8192,
+    "resident_ctas": 7,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.0466752008,
+      0.0462784007,
+      0.0458496004,
+      0.0462720007,
+      0.0462656006,
+      0.0458432004,
+      0.0462720007,
+      0.0458560005,
+      0.0462720007
+    ],
+    "latency_ms_median": 0.0462720007,
+    "elapsed_seconds": 31.98838996887207
+  },
+  {
+    "tile": [
+      48,
+      32,
+      16
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 2560,
+    "resident_ctas": 12,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.121651199,
+      0.121228802,
+      0.120832004,
+      0.121241602,
+      0.121235201,
+      0.121241602,
+      0.122048,
+      0.121216002,
+      0.121644799
+    ],
+    "latency_ms_median": 0.121241602,
+    "elapsed_seconds": 32.508352279663086
+  },
+  {
+    "tile": [
+      48,
+      32,
+      32
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 48,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 5120,
+    "resident_ctas": 10,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.0425727993,
+      0.0425855994,
+      0.0430015996,
+      0.0430015996,
+      0.0421695992,
+      0.0425791994,
+      0.0430015996,
+      0.0421695992,
+      0.0421759993
+    ],
+    "latency_ms_median": 0.0425791994,
+    "elapsed_seconds": 33.026134729385376
+  },
+  {
+    "tile": [
+      48,
+      32,
+      48
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 48,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 7680,
+    "resident_ctas": 8,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.0515839987,
+      0.0511679985,
+      0.0511807986,
+      0.0511743985,
+      0.0511743985,
+      0.0511871986,
+      0.0511807986,
+      0.0511807986,
+      0.0511743985
+    ],
+    "latency_ms_median": 0.0511807986,
+    "elapsed_seconds": 33.63476896286011
+  },
+  {
+    "tile": [
+      48,
+      32,
+      64
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 48,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 10240,
+    "resident_ctas": 6,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.0429823995,
+      0.0429951996,
+      0.0430015996,
+      0.0429951996,
+      0.0430015996,
+      0.0429951996,
+      0.0429887995,
+      0.0430079997,
+      0.0429887995
+    ],
+    "latency_ms_median": 0.0429951996,
+    "elapsed_seconds": 34.14195156097412
+  },
+  {
+    "tile": [
+      48,
+      48,
+      16
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 48,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 3072,
+    "resident_ctas": 10,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.131897601,
+      0.1323008,
+      0.131072003,
+      0.1327104,
+      0.1327104,
+      0.131878403,
+      0.131891203,
+      0.132294402,
+      0.1327104
+    ],
+    "latency_ms_median": 0.132294402,
+    "elapsed_seconds": 34.644760847091675
+  },
+  {
+    "tile": [
+      48,
+      48,
+      32
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 6144,
+    "resident_ctas": 8,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.0515967987,
+      0.0511999987,
+      0.0511743985,
+      0.0511999987,
+      0.0511871986,
+      0.0511807986,
+      0.0511935987,
+      0.0511999987,
+      0.0511999987
+    ],
+    "latency_ms_median": 0.0511999987,
+    "elapsed_seconds": 35.14068841934204
+  },
+  {
+    "tile": [
+      48,
+      48,
+      48
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 9216,
+    "resident_ctas": 7,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.0655231997,
+      0.0659327999,
+      0.0655103996,
+      0.0655103996,
+      0.0655231997,
+      0.0655231997,
+      0.0655103996,
+      0.0655295998,
+      0.0655167997
+    ],
+    "latency_ms_median": 0.0655231997,
+    "elapsed_seconds": 35.654858112335205
+  },
+  {
+    "tile": [
+      48,
+      48,
+      64
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 66,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 12288,
+    "resident_ctas": 5,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.0534399994,
+      0.0532415994,
+      0.0532415994,
+      0.0532351993,
+      0.0532351993,
+      0.0532415994,
+      0.0532415994,
+      0.0532351993,
+      0.0532351993
+    ],
+    "latency_ms_median": 0.0532415994,
+    "elapsed_seconds": 36.228797912597656
+  },
+  {
+    "tile": [
+      48,
+      64,
+      16
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 56,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 3584,
+    "resident_ctas": 9,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.121254399,
+      0.120832004,
+      0.120838402,
+      0.121241602,
+      0.121241602,
+      0.120838402,
+      0.121254399,
+      0.121241602,
+      0.120825604
+    ],
+    "latency_ms_median": 0.121241602,
+    "elapsed_seconds": 36.77844762802124
+  },
+  {
+    "tile": [
+      48,
+      64,
+      32
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 56,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 7168,
+    "resident_ctas": 8,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.0601984002,
+      0.0593792014,
+      0.0593664013,
+      0.0593728013,
+      0.0602112003,
+      0.0593600012,
+      0.0597824007,
+      0.0601984002,
+      0.0597888008
+    ],
+    "latency_ms_median": 0.0597824007,
+    "elapsed_seconds": 37.32918119430542
+  },
+  {
+    "tile": [
+      48,
+      64,
+      48
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 56,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 10752,
+    "resident_ctas": 6,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.0671680003,
+      0.0677696005,
+      0.0671744004,
+      0.0671616003,
+      0.0667648003,
+      0.0671808004,
+      0.0667648003,
+      0.0667648003,
+      0.0663552001
+    ],
+    "latency_ms_median": 0.0671616003,
+    "elapsed_seconds": 38.072102308273315
+  },
+  {
+    "tile": [
+      48,
+      64,
+      64
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 56,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 14336,
+    "resident_ctas": 5,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.0602176003,
+      0.0606271997,
+      0.0598016009,
+      0.0602112003,
+      0.0602112003,
+      0.0598016009,
+      0.0602112003,
+      0.059814401,
+      0.0598016009
+    ],
+    "latency_ms_median": 0.0602112003,
+    "elapsed_seconds": 38.794076919555664
+  },
+  {
+    "tile": [
+      48,
+      80,
+      16
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 70,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 4096,
+    "resident_ctas": 7,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.135372797,
+      0.135577598,
+      0.135584,
+      0.1359936,
+      0.135167998,
+      0.135167998,
+      0.135168001,
+      0.1351616,
+      0.135564798
+    ],
+    "latency_ms_median": 0.135372797,
+    "elapsed_seconds": 39.37754273414612
+  },
+  {
+    "tile": [
+      48,
+      80,
+      32
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 8192,
+    "resident_ctas": 7,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.0679744005,
+      0.0675712004,
+      0.0675584003,
+      0.0675648004,
+      0.0675648004,
+      0.0675712004,
+      0.0679744005,
+      0.0679744005,
+      0.0675712004
+    ],
+    "latency_ms_median": 0.0675712004,
+    "elapsed_seconds": 39.96491837501526
+  },
+  {
+    "tile": [
+      48,
+      80,
+      48
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 79,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 12288,
+    "resident_ctas": 5,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.081926398,
+      0.0815167978,
+      0.0815039977,
+      0.0811071977,
+      0.0819135979,
+      0.0819135979,
+      0.0811007977,
+      0.0819199979,
+      0.0815103978
+    ],
+    "latency_ms_median": 0.0815167978,
+    "elapsed_seconds": 40.627779483795166
+  },
+  {
+    "tile": [
+      48,
+      80,
+      64
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 72,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 16384,
+    "resident_ctas": 4,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.0688128009,
+      0.0679744005,
+      0.0688000008,
+      0.0688064009,
+      0.069209601,
+      0.0683968008,
+      0.069216001,
+      0.0684032008,
+      0.0688000008
+    ],
+    "latency_ms_median": 0.0688000008,
+    "elapsed_seconds": 41.31651830673218
+  },
+  {
+    "tile": [
+      48,
+      96,
+      16
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 72,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 4608,
+    "resident_ctas": 7,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.138015997,
+      0.137203199,
+      0.1372096,
+      0.137216002,
+      0.1372096,
+      0.137228799,
+      0.137216002,
+      0.137215999,
+      0.137612799
+    ],
+    "latency_ms_median": 0.137216002,
+    "elapsed_seconds": 41.875539779663086
+  },
+  {
+    "tile": [
+      48,
+      96,
+      32
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 9216,
+    "resident_ctas": 7,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.126566398,
+      0.126566398,
+      0.1269696,
+      0.126553603,
+      0.126163201,
+      0.126156798,
+      0.126975998,
+      0.126143998,
+      0.126566403
+    ],
+    "latency_ms_median": 0.126566398,
+    "elapsed_seconds": 42.465352296829224
+  },
+  {
+    "tile": [
+      48,
+      96,
+      48
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 96,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 13824,
+    "resident_ctas": 5,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.0860095993,
+      0.0855999991,
+      0.0851775989,
+      0.0860095993,
+      0.085196799,
+      0.0855935991,
+      0.0847743988,
+      0.0855935991,
+      0.0855999991
+    ],
+    "latency_ms_median": 0.0855935991,
+    "elapsed_seconds": 43.0977828502655
+  },
+  {
+    "tile": [
+      48,
+      96,
+      64
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 94,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 18432,
+    "resident_ctas": 4,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.0798719972,
+      0.0798655972,
+      0.0798655972,
+      0.0798719972,
+      0.0798719972,
+      0.0798655972,
+      0.0798655972,
+      0.0798719972,
+      0.0798719972
+    ],
+    "latency_ms_median": 0.0798719972,
+    "elapsed_seconds": 43.67577314376831
+  },
+  {
+    "tile": [
+      64,
+      16,
+      16
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 39,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 2560,
+    "resident_ctas": 12,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.0700352013,
+      0.069606401,
+      0.069600001,
+      0.069606401,
+      0.0696128011,
+      0.069606401,
+      0.0696128011,
+      0.0696192011,
+      0.0696128011
+    ],
+    "latency_ms_median": 0.0696128011,
+    "elapsed_seconds": 44.22599244117737
+  },
+  {
+    "tile": [
+      64,
+      16,
+      32
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 5120,
+    "resident_ctas": 10,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.0675840005,
+      0.0675776005,
+      0.0675840005,
+      0.0675840005,
+      0.0671680003,
+      0.0675840005,
+      0.0675712004,
+      0.0675776005,
+      0.0675776005
+    ],
+    "latency_ms_median": 0.0675776005,
+    "elapsed_seconds": 44.95277738571167
+  },
+  {
+    "tile": [
+      64,
+      16,
+      48
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 7680,
+    "resident_ctas": 8,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.0909120008,
+      0.0909056008,
+      0.0909120008,
+      0.0901056007,
+      0.0900928006,
+      0.090931201,
+      0.0905024007,
+      0.0904960006,
+      0.0905024007
+    ],
+    "latency_ms_median": 0.0905024007,
+    "elapsed_seconds": 45.512547731399536
+  },
+  {
+    "tile": [
+      64,
+      16,
+      64
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 10240,
+    "resident_ctas": 6,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.0565376006,
+      0.0560960002,
+      0.0561024003,
+      0.0557056002,
+      0.0556864001,
+      0.0565056004,
+      0.0565120004,
+      0.0552832,
+      0.0560960002
+    ],
+    "latency_ms_median": 0.0560960002,
+    "elapsed_seconds": 46.06735849380493
+  },
+  {
+    "tile": [
+      64,
+      32,
+      16
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 48,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 3072,
+    "resident_ctas": 10,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.100761597,
+      0.100351997,
+      0.100345597,
+      0.100351997,
+      0.100351997,
+      0.100761597,
+      0.100339197,
+      0.100332797,
+      0.100332797
+    ],
+    "latency_ms_median": 0.100351997,
+    "elapsed_seconds": 46.69559836387634
+  },
+  {
+    "tile": [
+      64,
+      32,
+      32
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 48,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 6144,
+    "resident_ctas": 9,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.0593920015,
+      0.0593920015,
+      0.0593856014,
+      0.0593920015,
+      0.0589696012,
+      0.0589824013,
+      0.0589696012,
+      0.0593920015,
+      0.0593984015
+    ],
+    "latency_ms_median": 0.0593920015,
+    "elapsed_seconds": 47.297579288482666
+  },
+  {
+    "tile": [
+      64,
+      32,
+      48
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 48,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 9216,
+    "resident_ctas": 7,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.0593664013,
+      0.0593792014,
+      0.0589632012,
+      0.0593792014,
+      0.0593856014,
+      0.0593856014,
+      0.0593856014,
+      0.0593792014,
+      0.0593856014
+    ],
+    "latency_ms_median": 0.0593792014,
+    "elapsed_seconds": 47.872188329696655
+  },
+  {
+    "tile": [
+      64,
+      32,
+      64
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 48,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 12288,
+    "resident_ctas": 5,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.057760001,
+      0.0573440008,
+      0.0573440008,
+      0.0573440008,
+      0.0573440008,
+      0.0573440008,
+      0.0573504008,
+      0.0573376007,
+      0.0573376007
+    ],
+    "latency_ms_median": 0.0573440008,
+    "elapsed_seconds": 48.49095916748047
+  },
+  {
+    "tile": [
+      64,
+      48,
+      16
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 48,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 3584,
+    "resident_ctas": 10,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.136793599,
+      0.1368,
+      0.136390397,
+      0.136787197,
+      0.1368128,
+      0.136806399,
+      0.1368128,
+      0.136780795,
+      0.136793599
+    ],
+    "latency_ms_median": 0.136793599,
+    "elapsed_seconds": 49.05978083610535
+  },
+  {
+    "tile": [
+      64,
+      48,
+      32
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 7168,
+    "resident_ctas": 8,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.0679808006,
+      0.0675840005,
+      0.0675712004,
+      0.0675712004,
+      0.0675776005,
+      0.0675840005,
+      0.0675648004,
+      0.0675712004,
+      0.0675712004
+    ],
+    "latency_ms_median": 0.0675712004,
+    "elapsed_seconds": 49.60593771934509
+  },
+  {
+    "tile": [
+      64,
+      48,
+      48
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 10752,
+    "resident_ctas": 6,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.0761856019,
+      0.0757760033,
+      0.0757760033,
+      0.0757696033,
+      0.0757696033,
+      0.0757696033,
+      0.0757824033,
+      0.0757760033,
+      0.0757824033
+    ],
+    "latency_ms_median": 0.0757760033,
+    "elapsed_seconds": 50.170610427856445
+  },
+  {
+    "tile": [
+      64,
+      48,
+      64
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 56,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 14336,
+    "resident_ctas": 5,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.0694272012,
+      0.069216001,
+      0.0688000008,
+      0.0688128009,
+      0.0688000008,
+      0.0688064009,
+      0.069216001,
+      0.0692224011,
+      0.0688064009
+    ],
+    "latency_ms_median": 0.0688128009,
+    "elapsed_seconds": 50.740241289138794
+  },
+  {
+    "tile": [
+      64,
+      64,
+      16
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 4096,
+    "resident_ctas": 8,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.0872447997,
+      0.0872511998,
+      0.0876607999,
+      0.0876607999,
+      0.0868415996,
+      0.0876479998,
+      0.0864319995,
+      0.0872383997,
+      0.0868415996
+    ],
+    "latency_ms_median": 0.0872447997,
+    "elapsed_seconds": 51.31551551818848
+  },
+  {
+    "tile": [
+      64,
+      64,
+      32
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 8192,
+    "resident_ctas": 7,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.0839615986,
+      0.0827327982,
+      0.0835519984,
+      0.082323198,
+      0.0831551984,
+      0.0835583985,
+      0.0823295981,
+      0.0831423983,
+      0.0831423983
+    ],
+    "latency_ms_median": 0.0831423983,
+    "elapsed_seconds": 51.87536120414734
+  },
+  {
+    "tile": [
+      64,
+      64,
+      48
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 12288,
+    "resident_ctas": 5,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.0831487983,
+      0.082323198,
+      0.0819199979,
+      0.082323198,
+      0.0819199979,
+      0.0827391982,
+      0.0823359981,
+      0.0819199979,
+      0.0819199979
+    ],
+    "latency_ms_median": 0.082323198,
+    "elapsed_seconds": 52.54942965507507
+  },
+  {
+    "tile": [
+      64,
+      64,
+      64
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 66,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 16384,
+    "resident_ctas": 4,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.0835519984,
+      0.0827455983,
+      0.0835583985,
+      0.0839551985,
+      0.0839743987,
+      0.0835455984,
+      0.0831487983,
+      0.0835519984,
+      0.0831359982
+    ],
+    "latency_ms_median": 0.0835519984,
+    "elapsed_seconds": 53.22071814537048
+  },
+  {
+    "tile": [
+      64,
+      80,
+      16
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 72,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 4608,
+    "resident_ctas": 7,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.139673603,
+      0.139263999,
+      0.139257601,
+      0.139667201,
+      0.1396608,
+      0.139257601,
+      0.139257601,
+      0.139264002,
+      0.139244798
+    ],
+    "latency_ms_median": 0.139263999,
+    "elapsed_seconds": 53.8186399936676
+  },
+  {
+    "tile": [
+      64,
+      80,
+      32
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 72,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 9216,
+    "resident_ctas": 7,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.0921536013,
+      0.0913344011,
+      0.0921408013,
+      0.0917376012,
+      0.0917568013,
+      0.0921472013,
+      0.0909184009,
+      0.0917504013,
+      0.0921600014
+    ],
+    "latency_ms_median": 0.0917568013,
+    "elapsed_seconds": 54.40820503234863
+  },
+  {
+    "tile": [
+      64,
+      80,
+      48
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 96,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 13824,
+    "resident_ctas": 5,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.116729602,
+      0.116723202,
+      0.116716802,
+      0.116729602,
+      0.116716802,
+      0.116729602,
+      0.116736002,
+      0.116729602,
+      0.116723202
+    ],
+    "latency_ms_median": 0.116729602,
+    "elapsed_seconds": 54.99749732017517
+  },
+  {
+    "tile": [
+      64,
+      80,
+      64
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 96,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 18432,
+    "resident_ctas": 4,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.0909248009,
+      0.0901184008,
+      0.0901248008,
+      0.0901120007,
+      0.0905024007,
+      0.0901184008,
+      0.0901056007,
+      0.0905088007,
+      0.0905216008
+    ],
+    "latency_ms_median": 0.0901248008,
+    "elapsed_seconds": 55.59508466720581
+  },
+  {
+    "tile": [
+      64,
+      96,
+      16
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 96,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 5120,
+    "resident_ctas": 5,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.108927999,
+      0.108524799,
+      0.108524799,
+      0.108524799,
+      0.108543999,
+      0.108543999,
+      0.108531199,
+      0.1089408,
+      0.1089472
+    ],
+    "latency_ms_median": 0.108543999,
+    "elapsed_seconds": 56.213088274002075
+  },
+  {
+    "tile": [
+      64,
+      96,
+      32
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 120,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 10240,
+    "resident_ctas": 4,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.101990397,
+      0.101587197,
+      0.101977597,
+      0.101990397,
+      0.101580797,
+      0.101990397,
+      0.102399997,
+      0.101990397,
+      0.101574397
+    ],
+    "latency_ms_median": 0.101990397,
+    "elapsed_seconds": 56.79692244529724
+  },
+  {
+    "tile": [
+      64,
+      96,
+      48
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 126,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 15360,
+    "resident_ctas": 4,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.102803198,
+      0.101580797,
+      0.102399997,
+      0.101977597,
+      0.101574397,
+      0.101977597,
+      0.102393597,
+      0.101574397,
+      0.100345597
+    ],
+    "latency_ms_median": 0.101977597,
+    "elapsed_seconds": 57.40597176551819
+  },
+  {
+    "tile": [
+      64,
+      96,
+      64
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 95,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 20480,
+    "resident_ctas": 4,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.104435198,
+      0.102387197,
+      0.103615998,
+      0.102387197,
+      0.102809598,
+      0.103622398,
+      0.102790397,
+      0.102803198,
+      0.102809598
+    ],
+    "latency_ms_median": 0.102809598,
+    "elapsed_seconds": 58.08596086502075
+  },
+  {
+    "tile": [
+      80,
+      16,
+      16
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 3072,
+    "resident_ctas": 12,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.099935998,
+      0.100351997,
+      0.0995263994,
+      0.0999487981,
+      0.0983104035,
+      0.0999423981,
+      0.0995263994,
+      0.099935998,
+      0.0991168007
+    ],
+    "latency_ms_median": 0.099935998,
+    "elapsed_seconds": 58.65697693824768
+  },
+  {
+    "tile": [
+      80,
+      16,
+      32
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 6144,
+    "resident_ctas": 9,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.0782015964,
+      0.0782079965,
+      0.0778111964,
+      0.0782207966,
+      0.0778047964,
+      0.0777983963,
+      0.0782207966,
+      0.0782143965,
+      0.0782207966
+    ],
+    "latency_ms_median": 0.0782079965,
+    "elapsed_seconds": 59.22473931312561
+  },
+  {
+    "tile": [
+      80,
+      16,
+      48
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 48,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 9216,
+    "resident_ctas": 7,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.091321601,
+      0.0909120008,
+      0.0909184009,
+      0.0909056008,
+      0.0900928006,
+      0.0904960006,
+      0.0900928006,
+      0.091328001,
+      0.0905024007
+    ],
+    "latency_ms_median": 0.0909056008,
+    "elapsed_seconds": 59.853678703308105
+  },
+  {
+    "tile": [
+      80,
+      16,
+      64
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 48,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 12288,
+    "resident_ctas": 5,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.0671552002,
+      0.0663295999,
+      0.0663616002,
+      0.0667456001,
+      0.0671616003,
+      0.0671552002,
+      0.0667648003,
+      0.0671680003,
+      0.0659327999
+    ],
+    "latency_ms_median": 0.0667648003,
+    "elapsed_seconds": 60.44640135765076
+  },
+  {
+    "tile": [
+      80,
+      32,
+      16
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 48,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 3584,
+    "resident_ctas": 10,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.156051195,
+      0.155622399,
+      0.156044796,
+      0.156460798,
+      0.156044796,
+      0.155635196,
+      0.155622399,
+      0.156044796,
+      0.156038398
+    ],
+    "latency_ms_median": 0.156044796,
+    "elapsed_seconds": 61.117923736572266
+  },
+  {
+    "tile": [
+      80,
+      32,
+      32
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 56,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 7168,
+    "resident_ctas": 8,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.0683840007,
+      0.0675648004,
+      0.0675584003,
+      0.0679680005,
+      0.0675520003,
+      0.0675584003,
+      0.0675584003,
+      0.0675648004,
+      0.0675712004
+    ],
+    "latency_ms_median": 0.0675648004,
+    "elapsed_seconds": 61.83454895019531
+  },
+  {
+    "tile": [
+      80,
+      32,
+      48
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 56,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 10752,
+    "resident_ctas": 6,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.0769983992,
+      0.0774143979,
+      0.0769983992,
+      0.076192002,
+      0.0761856019,
+      0.0770047992,
+      0.0765952006,
+      0.0765952006,
+      0.0778239965
+    ],
+    "latency_ms_median": 0.0769983992,
+    "elapsed_seconds": 62.485857009887695
+  },
+  {
+    "tile": [
+      80,
+      32,
+      64
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 56,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 14336,
+    "resident_ctas": 5,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.0679936007,
+      0.0675712004,
+      0.0675840005,
+      0.0675776005,
+      0.0675776005,
+      0.0675712004,
+      0.0675776005,
+      0.0675776005,
+      0.0675840005
+    ],
+    "latency_ms_median": 0.0675776005,
+    "elapsed_seconds": 63.058783769607544
+  },
+  {
+    "tile": [
+      80,
+      48,
+      16
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 63,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 4096,
+    "resident_ctas": 8,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.1417088,
+      0.1412992,
+      0.141299197,
+      0.1412992,
+      0.141279995,
+      0.141305602,
+      0.141312003,
+      0.141715202,
+      0.141279995
+    ],
+    "latency_ms_median": 0.1412992,
+    "elapsed_seconds": 63.65804314613342
+  },
+  {
+    "tile": [
+      80,
+      48,
+      32
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 8192,
+    "resident_ctas": 7,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.0798527971,
+      0.0798591971,
+      0.079846397,
+      0.0798591971,
+      0.0798655972,
+      0.0798655972,
+      0.0798655972,
+      0.079846397,
+      0.0798719972
+    ],
+    "latency_ms_median": 0.0798591971,
+    "elapsed_seconds": 64.36159682273865
+  },
+  {
+    "tile": [
+      80,
+      48,
+      48
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 79,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 12288,
+    "resident_ctas": 5,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.0937920019,
+      0.093798402,
+      0.0937920019,
+      0.0942080021,
+      0.094201602,
+      0.0933824018,
+      0.0942080021,
+      0.0933952019,
+      0.0933888018
+    ],
+    "latency_ms_median": 0.0937920019,
+    "elapsed_seconds": 64.92550683021545
+  },
+  {
+    "tile": [
+      80,
+      48,
+      64
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 72,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 16384,
+    "resident_ctas": 4,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.0806719974,
+      0.079846397,
+      0.0798591971,
+      0.079839997,
+      0.0798591971,
+      0.0798527971,
+      0.0798527971,
+      0.0798527971,
+      0.079846397
+    ],
+    "latency_ms_median": 0.0798527971,
+    "elapsed_seconds": 65.48722100257874
+  },
+  {
+    "tile": [
+      80,
+      64,
+      16
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 4608,
+    "resident_ctas": 8,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.145811203,
+      0.145401603,
+      0.145401603,
+      0.145401603,
+      0.145401603,
+      0.145408005,
+      0.145401603,
+      0.145408005,
+      0.145408005
+    ],
+    "latency_ms_median": 0.145401603,
+    "elapsed_seconds": 66.0660469532013
+  },
+  {
+    "tile": [
+      80,
+      64,
+      32
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 9216,
+    "resident_ctas": 7,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.154815999,
+      0.154835197,
+      0.154815999,
+      0.155238396,
+      0.155647993,
+      0.154835197,
+      0.155231994,
+      0.1548224,
+      0.153996801
+    ],
+    "latency_ms_median": 0.154835197,
+    "elapsed_seconds": 66.71344780921936
+  },
+  {
+    "tile": [
+      80,
+      64,
+      48
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 13824,
+    "resident_ctas": 5,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.161382398,
+      0.1617984,
+      0.161779198,
+      0.1617856,
+      0.161375996,
+      0.161382395,
+      0.1617856,
+      0.161791995,
+      0.161779198
+    ],
+    "latency_ms_median": 0.161779198,
+    "elapsed_seconds": 67.28577494621277
+  },
+  {
+    "tile": [
+      80,
+      64,
+      64
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 18432,
+    "resident_ctas": 4,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.123289597,
+      0.122879997,
+      0.122873597,
+      0.122886397,
+      0.122873597,
+      0.122879997,
+      0.122879997,
+      0.122879997,
+      0.122879997
+    ],
+    "latency_ms_median": 0.122879997,
+    "elapsed_seconds": 67.89364671707153
+  },
+  {
+    "tile": [
+      80,
+      80,
+      16
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 96,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 5120,
+    "resident_ctas": 5,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.1757312,
+      0.175302401,
+      0.176128,
+      0.176128,
+      0.175705603,
+      0.175712001,
+      0.175315198,
+      0.175705603,
+      0.175289604
+    ],
+    "latency_ms_median": 0.175705603,
+    "elapsed_seconds": 68.53054308891296
+  },
+  {
+    "tile": [
+      80,
+      80,
+      32
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 128,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 10240,
+    "resident_ctas": 4,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.102815998,
+      0.102399997,
+      0.102399997,
+      0.102399997,
+      0.101990397,
+      0.102393597,
+      0.102399997,
+      0.102399997,
+      0.102393597
+    ],
+    "latency_ms_median": 0.102399997,
+    "elapsed_seconds": 69.12121057510376
+  },
+  {
+    "tile": [
+      80,
+      80,
+      48
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 127,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 15360,
+    "resident_ctas": 4,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.116326402,
+      0.115923202,
+      0.115916802,
+      0.116326402,
+      0.116326402,
+      0.115500802,
+      0.115904002,
+      0.115923202,
+      0.116742402
+    ],
+    "latency_ms_median": 0.115923202,
+    "elapsed_seconds": 69.72383308410645
+  },
+  {
+    "tile": [
+      80,
+      80,
+      64
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 126,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 20480,
+    "resident_ctas": 4,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.104851198,
+      0.104447998,
+      0.104447998,
+      0.104435198,
+      0.104441598,
+      0.104441598,
+      0.104454398,
+      0.104435198,
+      0.104441598
+    ],
+    "latency_ms_median": 0.104441598,
+    "elapsed_seconds": 70.34223198890686
+  },
+  {
+    "tile": [
+      80,
+      96,
+      16
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 127,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 5632,
+    "resident_ctas": 4,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.141715202,
+      0.141312003,
+      0.1412992,
+      0.141312,
+      0.1412992,
+      0.141305602,
+      0.1412992,
+      0.141305602,
+      0.141305602
+    ],
+    "latency_ms_median": 0.141305602,
+    "elapsed_seconds": 70.97764587402344
+  },
+  {
+    "tile": [
+      80,
+      96,
+      32
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 127,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 11264,
+    "resident_ctas": 4,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.117139202,
+      0.116729602,
+      0.116716802,
+      0.116736002,
+      0.116736002,
+      0.116716802,
+      0.116723202,
+      0.116736002,
+      0.116723202
+    ],
+    "latency_ms_median": 0.116729602,
+    "elapsed_seconds": 71.71446633338928
+  },
+  {
+    "tile": [
+      80,
+      96,
+      48
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 127,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 16896,
+    "resident_ctas": 4,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.122873597,
+      0.121228802,
+      0.122048,
+      0.121638401,
+      0.1220544,
+      0.122048,
+      0.1220608,
+      0.1220544,
+      0.122067198
+    ],
+    "latency_ms_median": 0.1220544,
+    "elapsed_seconds": 72.3086884021759
+  },
+  {
+    "tile": [
+      80,
+      96,
+      64
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 96,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 22528,
+    "resident_ctas": 3,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.119603203,
+      0.119603203,
+      0.118784003,
+      0.118784003,
+      0.119187203,
+      0.119200003,
+      0.118784003,
+      0.118784003,
+      0.119193603
+    ],
+    "latency_ms_median": 0.119187203,
+    "elapsed_seconds": 72.91890263557434
+  },
+  {
+    "tile": [
+      96,
+      16,
+      16
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 3584,
+    "resident_ctas": 11,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.0794367969,
+      0.0798591971,
+      0.079443197,
+      0.0798527971,
+      0.079846397,
+      0.079839997,
+      0.079449597,
+      0.0798655972,
+      0.079455997
+    ],
+    "latency_ms_median": 0.079839997,
+    "elapsed_seconds": 73.55183625221252
+  },
+  {
+    "tile": [
+      96,
+      16,
+      32
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 7168,
+    "resident_ctas": 8,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.182681602,
+      0.182265601,
+      0.182272002,
+      0.181862402,
+      0.182272002,
+      0.182272002,
+      0.182681602,
+      0.182284799,
+      0.182688001
+    ],
+    "latency_ms_median": 0.182272002,
+    "elapsed_seconds": 74.13104748725891
+  },
+  {
+    "tile": [
+      96,
+      16,
+      48
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 48,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 10752,
+    "resident_ctas": 6,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.082713598,
+      0.0823103979,
+      0.0831551984,
+      0.0831295982,
+      0.0835583985,
+      0.0827327982,
+      0.0839615986,
+      0.0827519983,
+      0.0827263981
+    ],
+    "latency_ms_median": 0.0827519983,
+    "elapsed_seconds": 74.70595812797546
+  },
+  {
+    "tile": [
+      96,
+      16,
+      64
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 48,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 14336,
+    "resident_ctas": 5,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.072076802,
+      0.0720704019,
+      0.0716672018,
+      0.0724864021,
+      0.0716480017,
+      0.072083202,
+      0.0716672018,
+      0.072076802,
+      0.072480002
+    ],
+    "latency_ms_median": 0.072076802,
+    "elapsed_seconds": 75.41761112213135
+  },
+  {
+    "tile": [
+      96,
+      32,
+      16
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 56,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 4096,
+    "resident_ctas": 9,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.106086399,
+      0.106086399,
+      0.106086399,
+      0.106508799,
+      0.106099199,
+      0.105676799,
+      0.106092799,
+      0.106079999,
+      0.106073599
+    ],
+    "latency_ms_median": 0.106086399,
+    "elapsed_seconds": 75.98118376731873
+  },
+  {
+    "tile": [
+      96,
+      32,
+      32
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 56,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 8192,
+    "resident_ctas": 7,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.0704512015,
+      0.0712704018,
+      0.0700352013,
+      0.0700352013,
+      0.0708608016,
+      0.0704448014,
+      0.0700352013,
+      0.0700416014,
+      0.0704512015
+    ],
+    "latency_ms_median": 0.0704448014,
+    "elapsed_seconds": 76.56422853469849
+  },
+  {
+    "tile": [
+      96,
+      32,
+      48
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 56,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 12288,
+    "resident_ctas": 5,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.072480002,
+      0.0725056022,
+      0.0716608018,
+      0.072076802,
+      0.072083202,
+      0.0716608018,
+      0.072083202,
+      0.0724928021,
+      0.0716672018
+    ],
+    "latency_ms_median": 0.072083202,
+    "elapsed_seconds": 77.23076033592224
+  },
+  {
+    "tile": [
+      96,
+      32,
+      64
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 63,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 16384,
+    "resident_ctas": 4,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.0688128009,
+      0.0696320012,
+      0.0696192011,
+      0.0696384013,
+      0.0696256012,
+      0.0688128009,
+      0.069216001,
+      0.0696320012,
+      0.0684032008
+    ],
+    "latency_ms_median": 0.0696192011,
+    "elapsed_seconds": 77.78890776634216
+  },
+  {
+    "tile": [
+      96,
+      48,
+      16
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 4608,
+    "resident_ctas": 8,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.147865602,
+      0.147449604,
+      0.147046402,
+      0.147449604,
+      0.147449604,
+      0.147456005,
+      0.147456002,
+      0.147449604,
+      0.147449604
+    ],
+    "latency_ms_median": 0.147449604,
+    "elapsed_seconds": 78.34421944618225
+  },
+  {
+    "tile": [
+      96,
+      48,
+      32
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 72,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 9216,
+    "resident_ctas": 7,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.0810943976,
+      0.0802815974,
+      0.0806719974,
+      0.0798783973,
+      0.0811007977,
+      0.0802815974,
+      0.0802815974,
+      0.0806975976,
+      0.0802751973
+    ],
+    "latency_ms_median": 0.0802815974,
+    "elapsed_seconds": 78.9310245513916
+  },
+  {
+    "tile": [
+      96,
+      48,
+      48
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 96,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 13824,
+    "resident_ctas": 5,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.114694402,
+      0.114688002,
+      0.114688002,
+      0.114681602,
+      0.114688002,
+      0.113868801,
+      0.114688002,
+      0.114688002,
+      0.114681602
+    ],
+    "latency_ms_median": 0.114688002,
+    "elapsed_seconds": 79.49852681159973
+  },
+  {
+    "tile": [
+      96,
+      48,
+      64
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 80,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 18432,
+    "resident_ctas": 4,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.197004801,
+      0.197017601,
+      0.196998399,
+      0.196601605,
+      0.197017604,
+      0.196595204,
+      0.196608004,
+      0.196614406,
+      0.196601602
+    ],
+    "latency_ms_median": 0.196614406,
+    "elapsed_seconds": 80.06981945037842
+  },
+  {
+    "tile": [
+      96,
+      64,
+      16
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 72,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 5120,
+    "resident_ctas": 7,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.178988799,
+      0.1790016,
+      0.178585601,
+      0.178988799,
+      0.178585601,
+      0.1794112,
+      0.178995201,
+      0.179404801,
+      0.180224001
+    ],
+    "latency_ms_median": 0.178995201,
+    "elapsed_seconds": 80.621337890625
+  },
+  {
+    "tile": [
+      96,
+      64,
+      32
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 72,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 10240,
+    "resident_ctas": 6,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.207667196,
+      0.208479998,
+      0.207244799,
+      0.207673597,
+      0.207660797,
+      0.207251197,
+      0.207673597,
+      0.207263997,
+      0.206847996
+    ],
+    "latency_ms_median": 0.207660797,
+    "elapsed_seconds": 81.21178674697876
+  },
+  {
+    "tile": [
+      96,
+      64,
+      48
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 94,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 15360,
+    "resident_ctas": 5,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.0958400026,
+      0.0958336025,
+      0.0941888019,
+      0.0958400026,
+      0.0958592027,
+      0.0950208023,
+      0.0950144023,
+      0.0958336025,
+      0.0954304025
+    ],
+    "latency_ms_median": 0.0958336025,
+    "elapsed_seconds": 81.79280757904053
+  },
+  {
+    "tile": [
+      96,
+      64,
+      64
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 96,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 20480,
+    "resident_ctas": 4,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.0979008034,
+      0.0974784032,
+      0.0987072021,
+      0.0978944033,
+      0.0978944033,
+      0.0978944033,
+      0.0983104035,
+      0.0978880033,
+      0.0979072034
+    ],
+    "latency_ms_median": 0.0978944033,
+    "elapsed_seconds": 82.37293887138367
+  },
+  {
+    "tile": [
+      96,
+      80,
+      16
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 127,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 5632,
+    "resident_ctas": 4,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.127379203,
+      0.126963201,
+      0.126975998,
+      0.126963201,
+      0.1269696,
+      0.126559998,
+      0.126982403,
+      0.1269824,
+      0.1269696
+    ],
+    "latency_ms_median": 0.1269696,
+    "elapsed_seconds": 83.01728367805481
+  },
+  {
+    "tile": [
+      96,
+      80,
+      32
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 128,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 11264,
+    "resident_ctas": 4,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.102399997,
+      0.101990397,
+      0.102406397,
+      0.102387197,
+      0.102393597,
+      0.102399997,
+      0.102393597,
+      0.101990397,
+      0.101996797
+    ],
+    "latency_ms_median": 0.102393597,
+    "elapsed_seconds": 83.63073468208313
+  },
+  {
+    "tile": [
+      96,
+      80,
+      48
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 128,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 16896,
+    "resident_ctas": 4,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.108537599,
+      0.108537599,
+      0.108537599,
+      0.108127999,
+      0.108543999,
+      0.108537599,
+      0.108121599,
+      0.108543999,
+      0.108543999
+    ],
+    "latency_ms_median": 0.108537599,
+    "elapsed_seconds": 84.23141431808472
+  },
+  {
+    "tile": [
+      96,
+      80,
+      64
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 128,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 22528,
+    "resident_ctas": 3,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.105683199,
+      0.104441598,
+      0.104838398,
+      0.104435198,
+      0.104422398,
+      0.104838398,
+      0.104435198,
+      0.104422398,
+      0.104857598
+    ],
+    "latency_ms_median": 0.104441598,
+    "elapsed_seconds": 84.81232929229736
+  },
+  {
+    "tile": [
+      96,
+      96,
+      16
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 128,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 6144,
+    "resident_ctas": 4,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.116326402,
+      0.115923202,
+      0.115513602,
+      0.116332802,
+      0.116326402,
+      0.116326402,
+      0.115916802,
+      0.116742402,
+      0.115916802
+    ],
+    "latency_ms_median": 0.116326402,
+    "elapsed_seconds": 85.47768044471741
+  },
+  {
+    "tile": [
+      96,
+      96,
+      32
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 128,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 12288,
+    "resident_ctas": 4,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.113043201,
+      0.112633601,
+      0.113043201,
+      0.113036801,
+      0.113043201,
+      0.112652801,
+      0.113043201,
+      0.113043201,
+      0.112633601
+    ],
+    "latency_ms_median": 0.113043201,
+    "elapsed_seconds": 86.2037181854248
+  },
+  {
+    "tile": [
+      96,
+      96,
+      48
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 128,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 18432,
+    "resident_ctas": 4,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.114278401,
+      0.113036801,
+      0.113868801,
+      0.113043201,
+      0.113459201,
+      0.113452801,
+      0.113472001,
+      0.113452801,
+      0.112627201
+    ],
+    "latency_ms_median": 0.113452801,
+    "elapsed_seconds": 86.77561044692993
+  },
+  {
+    "tile": [
+      96,
+      96,
+      64
+    ],
+    "shape": [
+      640,
+      640,
+      640
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 168,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 24576,
+    "resident_ctas": 3,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.116742402,
+      0.116736002,
+      0.116742402,
+      0.116723202,
+      0.116742402,
+      0.116729602,
+      0.116729602,
+      0.116742402,
+      0.116736002
+    ],
+    "latency_ms_median": 0.116736002,
+    "elapsed_seconds": 87.37646579742432
+  },
+  {
+    "tile": [
+      32,
+      64,
+      32
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 48,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 6144,
+    "resident_ctas": 9,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.181862399,
+      0.181446397,
+      0.182259199,
+      0.182259199,
+      0.181856,
+      0.181459197,
+      0.1814592,
+      0.182272002,
+      0.182252797
+    ],
+    "latency_ms_median": 0.181862399,
+    "elapsed_seconds": 88.04539394378662
+  },
+  {
+    "tile": [
+      16,
+      16,
+      16
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 26,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 1024,
+    "resident_ctas": 12,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.681990397,
+      0.676646399,
+      0.683212805,
+      0.68199681,
+      0.685248005,
+      0.683622396,
+      0.686496007,
+      0.686502409,
+      0.680761588
+    ],
+    "latency_ms_median": 0.683212805,
+    "elapsed_seconds": 88.6754560470581
+  },
+  {
+    "tile": [
+      16,
+      16,
+      32
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 36,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 2048,
+    "resident_ctas": 12,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.632838392,
+      0.632831991,
+      0.634054399,
+      0.633235216,
+      0.634470403,
+      0.634880006,
+      0.633228791,
+      0.633651197,
+      0.633235192
+    ],
+    "latency_ms_median": 0.633235216,
+    "elapsed_seconds": 89.29835963249207
+  },
+  {
+    "tile": [
+      16,
+      16,
+      48
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 39,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 3072,
+    "resident_ctas": 12,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.707795191,
+      0.709843194,
+      0.709017599,
+      0.709011197,
+      0.708198392,
+      0.709811211,
+      0.70942719,
+      0.71106559,
+      0.7094208
+    ],
+    "latency_ms_median": 0.7094208,
+    "elapsed_seconds": 89.98474025726318
+  },
+  {
+    "tile": [
+      16,
+      16,
+      64
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 42,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 4096,
+    "resident_ctas": 10,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.312934393,
+      0.313740796,
+      0.312921602,
+      0.312511998,
+      0.310867196,
+      0.312115192,
+      0.312921602,
+      0.313753599,
+      0.312102395
+    ],
+    "latency_ms_median": 0.312921602,
+    "elapsed_seconds": 90.6665587425232
+  },
+  {
+    "tile": [
+      16,
+      32,
+      16
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 32,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 1536,
+    "resident_ctas": 12,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.486195201,
+      0.485785598,
+      0.485785598,
+      0.485369599,
+      0.485779202,
+      0.485376,
+      0.485791999,
+      0.485376,
+      0.485779196
+    ],
+    "latency_ms_median": 0.485779202,
+    "elapsed_seconds": 91.30860805511475
+  },
+  {
+    "tile": [
+      16,
+      32,
+      32
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 3072,
+    "resident_ctas": 12,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.307596809,
+      0.305964804,
+      0.306784004,
+      0.30718081,
+      0.306771201,
+      0.307200015,
+      0.30678401,
+      0.307187212,
+      0.30678401
+    ],
+    "latency_ms_median": 0.30678401,
+    "elapsed_seconds": 91.98551535606384
+  },
+  {
+    "tile": [
+      16,
+      32,
+      48
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 4608,
+    "resident_ctas": 10,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.334220797,
+      0.334643203,
+      0.334643203,
+      0.334643203,
+      0.333414406,
+      0.334636801,
+      0.334233606,
+      0.334630406,
+      0.3350528
+    ],
+    "latency_ms_median": 0.334636801,
+    "elapsed_seconds": 92.59678554534912
+  },
+  {
+    "tile": [
+      16,
+      32,
+      64
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 6144,
+    "resident_ctas": 9,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.237971205,
+      0.237568006,
+      0.237958401,
+      0.237580803,
+      0.237971205,
+      0.237977606,
+      0.236339206,
+      0.238387206,
+      0.238400003
+    ],
+    "latency_ms_median": 0.237971205,
+    "elapsed_seconds": 93.18575882911682
+  },
+  {
+    "tile": [
+      16,
+      48,
+      16
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 32,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 2048,
+    "resident_ctas": 12,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.527148795,
+      0.524691188,
+      0.527948797,
+      0.526316798,
+      0.5292032,
+      0.533305597,
+      0.530041599,
+      0.530022407,
+      0.527551997
+    ],
+    "latency_ms_median": 0.527948797,
+    "elapsed_seconds": 93.89639854431152
+  },
+  {
+    "tile": [
+      16,
+      48,
+      32
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 4096,
+    "resident_ctas": 11,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.260505611,
+      0.260512006,
+      0.259680009,
+      0.260108805,
+      0.259680009,
+      0.260102409,
+      0.260096014,
+      0.260096008,
+      0.260505611
+    ],
+    "latency_ms_median": 0.260102409,
+    "elapsed_seconds": 94.49675583839417
+  },
+  {
+    "tile": [
+      16,
+      48,
+      48
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 6144,
+    "resident_ctas": 9,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.383398396,
+      0.380928004,
+      0.382982403,
+      0.380928004,
+      0.382566398,
+      0.382156795,
+      0.379692805,
+      0.3825728,
+      0.381337607
+    ],
+    "latency_ms_median": 0.382156795,
+    "elapsed_seconds": 95.11026334762573
+  },
+  {
+    "tile": [
+      16,
+      48,
+      64
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 8192,
+    "resident_ctas": 7,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.253145599,
+      0.253126401,
+      0.253535998,
+      0.252313602,
+      0.252723199,
+      0.253542399,
+      0.253535998,
+      0.253132802,
+      0.253132802
+    ],
+    "latency_ms_median": 0.253132802,
+    "elapsed_seconds": 95.71890878677368
+  },
+  {
+    "tile": [
+      16,
+      64,
+      16
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 2560,
+    "resident_ctas": 12,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.294086403,
+      0.292863995,
+      0.294080001,
+      0.293683195,
+      0.293279999,
+      0.294086397,
+      0.2936768,
+      0.2936768,
+      0.294105601
+    ],
+    "latency_ms_median": 0.293683195,
+    "elapsed_seconds": 96.3661277294159
+  },
+  {
+    "tile": [
+      16,
+      64,
+      32
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 5120,
+    "resident_ctas": 10,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.281388801,
+      0.280159998,
+      0.280575997,
+      0.280985594,
+      0.280575991,
+      0.280582392,
+      0.280166405,
+      0.280985594,
+      0.280569595
+    ],
+    "latency_ms_median": 0.280575997,
+    "elapsed_seconds": 96.98836207389832
+  },
+  {
+    "tile": [
+      16,
+      64,
+      48
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 7680,
+    "resident_ctas": 8,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.281376004,
+      0.280153602,
+      0.279756796,
+      0.280172807,
+      0.280575991,
+      0.280569595,
+      0.280582392,
+      0.281395203,
+      0.281401598
+    ],
+    "latency_ms_median": 0.280575991,
+    "elapsed_seconds": 97.604496717453
+  },
+  {
+    "tile": [
+      16,
+      64,
+      64
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 10240,
+    "resident_ctas": 6,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.280166399,
+      0.278112006,
+      0.279763198,
+      0.278124797,
+      0.279750401,
+      0.277292794,
+      0.280985606,
+      0.283033603,
+      0.278937602
+    ],
+    "latency_ms_median": 0.279750401,
+    "elapsed_seconds": 98.23901057243347
+  },
+  {
+    "tile": [
+      16,
+      80,
+      16
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 3072,
+    "resident_ctas": 12,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.254784006,
+      0.255993599,
+      0.255180812,
+      0.256,
+      0.255180806,
+      0.253958398,
+      0.256,
+      0.254771203,
+      0.256409609
+    ],
+    "latency_ms_median": 0.255180812,
+    "elapsed_seconds": 98.88247489929199
+  },
+  {
+    "tile": [
+      16,
+      80,
+      32
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 6144,
+    "resident_ctas": 9,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.320716804,
+      0.320307201,
+      0.3203008,
+      0.321536005,
+      0.3203008,
+      0.320294404,
+      0.320307201,
+      0.321126401,
+      0.320704007
+    ],
+    "latency_ms_median": 0.320307201,
+    "elapsed_seconds": 99.53507542610168
+  },
+  {
+    "tile": [
+      16,
+      80,
+      48
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 9216,
+    "resident_ctas": 7,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.330950403,
+      0.330943996,
+      0.329299206,
+      0.329728001,
+      0.329740798,
+      0.33054719,
+      0.328492802,
+      0.329324794,
+      0.3305408
+    ],
+    "latency_ms_median": 0.329740798,
+    "elapsed_seconds": 100.1571307182312
+  },
+  {
+    "tile": [
+      16,
+      80,
+      64
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 48,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 12288,
+    "resident_ctas": 5,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.322367996,
+      0.321120006,
+      0.3248128,
+      0.3203008,
+      0.322342396,
+      0.321126395,
+      0.321126401,
+      0.324403197,
+      0.320716798
+    ],
+    "latency_ms_median": 0.321126401,
+    "elapsed_seconds": 100.80769276618958
+  },
+  {
+    "tile": [
+      16,
+      96,
+      16
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 3584,
+    "resident_ctas": 11,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.353043199,
+      0.354297596,
+      0.353049594,
+      0.356767994,
+      0.353875196,
+      0.353881603,
+      0.353894395,
+      0.353881603,
+      0.354291195
+    ],
+    "latency_ms_median": 0.353881603,
+    "elapsed_seconds": 101.4834394454956
+  },
+  {
+    "tile": [
+      16,
+      96,
+      32
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 7168,
+    "resident_ctas": 8,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.382982397,
+      0.383795208,
+      0.382975996,
+      0.382976002,
+      0.380102402,
+      0.384198403,
+      0.378880006,
+      0.381747204,
+      0.382143998
+    ],
+    "latency_ms_median": 0.382975996,
+    "elapsed_seconds": 102.10852313041687
+  },
+  {
+    "tile": [
+      16,
+      96,
+      48
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 10752,
+    "resident_ctas": 6,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.383795196,
+      0.380921602,
+      0.378873599,
+      0.380934399,
+      0.380095994,
+      0.382566398,
+      0.383398396,
+      0.381337595,
+      0.3829696
+    ],
+    "latency_ms_median": 0.381337595,
+    "elapsed_seconds": 102.7445969581604
+  },
+  {
+    "tile": [
+      16,
+      96,
+      64
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 48,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 14336,
+    "resident_ctas": 5,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.3469504,
+      0.344473606,
+      0.346105599,
+      0.3440768,
+      0.344070399,
+      0.346105599,
+      0.345299208,
+      0.343654406,
+      0.346528006
+    ],
+    "latency_ms_median": 0.345299208,
+    "elapsed_seconds": 103.35808491706848
+  },
+  {
+    "tile": [
+      32,
+      16,
+      16
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 28,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 1536,
+    "resident_ctas": 12,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.732371199,
+      0.731955206,
+      0.732774401,
+      0.729497612,
+      0.729907203,
+      0.734822404,
+      0.730323207,
+      0.73236481,
+      0.729900801
+    ],
+    "latency_ms_median": 0.731955206,
+    "elapsed_seconds": 103.99705719947815
+  },
+  {
+    "tile": [
+      32,
+      16,
+      32
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 3072,
+    "resident_ctas": 12,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.311295992,
+      0.310067201,
+      0.308844799,
+      0.308019203,
+      0.309657604,
+      0.308838397,
+      0.308422405,
+      0.309241599,
+      0.308838403
+    ],
+    "latency_ms_median": 0.308844799,
+    "elapsed_seconds": 104.66275405883789
+  },
+  {
+    "tile": [
+      32,
+      16,
+      48
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 4608,
+    "resident_ctas": 10,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.450572795,
+      0.450163203,
+      0.448927999,
+      0.450150394,
+      0.4505472,
+      0.448511994,
+      0.450143993,
+      0.451795202,
+      0.448921597
+    ],
+    "latency_ms_median": 0.450150394,
+    "elapsed_seconds": 105.29742670059204
+  },
+  {
+    "tile": [
+      32,
+      16,
+      64
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 6144,
+    "resident_ctas": 9,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.291225606,
+      0.292864007,
+      0.290412796,
+      0.2912256,
+      0.291628802,
+      0.290399998,
+      0.291225606,
+      0.292038399,
+      0.290399998
+    ],
+    "latency_ms_median": 0.291225606,
+    "elapsed_seconds": 105.92202687263489
+  },
+  {
+    "tile": [
+      32,
+      32,
+      16
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 31,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 2048,
+    "resident_ctas": 12,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.480870408,
+      0.481689602,
+      0.480454397,
+      0.481286401,
+      0.481280005,
+      0.480460805,
+      0.481273609,
+      0.480051208,
+      0.481280005
+    ],
+    "latency_ms_median": 0.481273609,
+    "elapsed_seconds": 106.62340521812439
+  },
+  {
+    "tile": [
+      32,
+      32,
+      32
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 4096,
+    "resident_ctas": 11,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.1793984,
+      0.178169599,
+      0.178988796,
+      0.178176001,
+      0.178169599,
+      0.178169602,
+      0.178163198,
+      0.178572798,
+      0.1798208
+    ],
+    "latency_ms_median": 0.178176001,
+    "elapsed_seconds": 107.22906136512756
+  },
+  {
+    "tile": [
+      32,
+      32,
+      48
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 6144,
+    "resident_ctas": 9,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.197427201,
+      0.196608004,
+      0.196608004,
+      0.196601602,
+      0.197427198,
+      0.1978432,
+      0.1966144,
+      0.197011203,
+      0.196601602
+    ],
+    "latency_ms_median": 0.1966144,
+    "elapsed_seconds": 107.82250165939331
+  },
+  {
+    "tile": [
+      32,
+      32,
+      64
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 8192,
+    "resident_ctas": 7,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.216678402,
+      0.216678399,
+      0.216262403,
+      0.216268799,
+      0.216678399,
+      0.2162752,
+      0.216268799,
+      0.216678399,
+      0.2166848
+    ],
+    "latency_ms_median": 0.216678399,
+    "elapsed_seconds": 108.49727654457092
+  },
+  {
+    "tile": [
+      32,
+      48,
+      16
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 2560,
+    "resident_ctas": 12,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.386233604,
+      0.3870592,
+      0.386252797,
+      0.385011202,
+      0.38624,
+      0.387475199,
+      0.387884808,
+      0.386239994,
+      0.3874816
+    ],
+    "latency_ms_median": 0.386252797,
+    "elapsed_seconds": 109.10281610488892
+  },
+  {
+    "tile": [
+      32,
+      48,
+      32
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 48,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 5120,
+    "resident_ctas": 10,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.163839996,
+      0.163839996,
+      0.163423997,
+      0.163430396,
+      0.163839996,
+      0.163846397,
+      0.163436797,
+      0.163839996,
+      0.163839996
+    ],
+    "latency_ms_median": 0.163839996,
+    "elapsed_seconds": 109.70817685127258
+  },
+  {
+    "tile": [
+      32,
+      48,
+      48
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 56,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 7680,
+    "resident_ctas": 8,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.248223996,
+      0.247807997,
+      0.247398394,
+      0.246982396,
+      0.247391996,
+      0.246988797,
+      0.246995196,
+      0.247795197,
+      0.246988794
+    ],
+    "latency_ms_median": 0.247391996,
+    "elapsed_seconds": 110.30012130737305
+  },
+  {
+    "tile": [
+      32,
+      48,
+      64
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 56,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 10240,
+    "resident_ctas": 6,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.234278402,
+      0.235507202,
+      0.234694403,
+      0.235923204,
+      0.233868802,
+      0.233868802,
+      0.234707204,
+      0.235097602,
+      0.235929605
+    ],
+    "latency_ms_median": 0.234707204,
+    "elapsed_seconds": 110.93704986572266
+  },
+  {
+    "tile": [
+      32,
+      64,
+      16
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 3072,
+    "resident_ctas": 12,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.253107196,
+      0.252288002,
+      0.251878405,
+      0.252697599,
+      0.253119999,
+      0.252288002,
+      0.252710402,
+      0.252697599,
+      0.252716804
+    ],
+    "latency_ms_median": 0.252697599,
+    "elapsed_seconds": 111.55990028381348
+  },
+  {
+    "tile": [
+      32,
+      64,
+      48
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 9216,
+    "resident_ctas": 7,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.212998399,
+      0.21216,
+      0.2125824,
+      0.2125696,
+      0.212575999,
+      0.2117632,
+      0.212588799,
+      0.212153602,
+      0.2125824
+    ],
+    "latency_ms_median": 0.212575999,
+    "elapsed_seconds": 112.20280361175537
+  },
+  {
+    "tile": [
+      32,
+      64,
+      64
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 48,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 12288,
+    "resident_ctas": 5,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.260915208,
+      0.260492802,
+      0.262137604,
+      0.260505611,
+      0.260102403,
+      0.260505605,
+      0.260499209,
+      0.2609088,
+      0.260518408
+    ],
+    "latency_ms_median": 0.260505611,
+    "elapsed_seconds": 112.87710213661194
+  },
+  {
+    "tile": [
+      32,
+      80,
+      16
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 54,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 3584,
+    "resident_ctas": 9,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.292441595,
+      0.292038399,
+      0.2916224,
+      0.2912,
+      0.292460799,
+      0.290796798,
+      0.291219199,
+      0.292031997,
+      0.291635203
+    ],
+    "latency_ms_median": 0.291635203,
+    "elapsed_seconds": 113.5217559337616
+  },
+  {
+    "tile": [
+      32,
+      80,
+      32
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 7168,
+    "resident_ctas": 8,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.200691196,
+      0.200710395,
+      0.200287995,
+      0.199891195,
+      0.199468794,
+      0.199052796,
+      0.199462396,
+      0.200287995,
+      0.199462396
+    ],
+    "latency_ms_median": 0.199891195,
+    "elapsed_seconds": 114.16881060600281
+  },
+  {
+    "tile": [
+      32,
+      80,
+      48
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 10752,
+    "resident_ctas": 6,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.1843328,
+      0.184320003,
+      0.184326401,
+      0.183910403,
+      0.184313601,
+      0.183903998,
+      0.184320003,
+      0.184313601,
+      0.184320003
+    ],
+    "latency_ms_median": 0.184320003,
+    "elapsed_seconds": 114.80293297767639
+  },
+  {
+    "tile": [
+      32,
+      80,
+      64
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 14336,
+    "resident_ctas": 5,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.290399998,
+      0.291219205,
+      0.290393603,
+      0.291219199,
+      0.290816009,
+      0.2895872,
+      0.290816009,
+      0.290809608,
+      0.2904064
+    ],
+    "latency_ms_median": 0.290809608,
+    "elapsed_seconds": 115.46959447860718
+  },
+  {
+    "tile": [
+      32,
+      96,
+      16
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 56,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 4096,
+    "resident_ctas": 9,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.297759998,
+      0.29693439,
+      0.296537596,
+      0.296947193,
+      0.296947193,
+      0.297343999,
+      0.297369599,
+      0.296934396,
+      0.296953595
+    ],
+    "latency_ms_median": 0.296947193,
+    "elapsed_seconds": 116.10433387756348
+  },
+  {
+    "tile": [
+      32,
+      96,
+      32
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 8192,
+    "resident_ctas": 7,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.2289536,
+      0.229779202,
+      0.228947198,
+      0.229369599,
+      0.229376,
+      0.228966403,
+      0.228960001,
+      0.228537598,
+      0.2289536
+    ],
+    "latency_ms_median": 0.228960001,
+    "elapsed_seconds": 116.72866868972778
+  },
+  {
+    "tile": [
+      32,
+      96,
+      48
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 12288,
+    "resident_ctas": 5,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.206425601,
+      0.206438395,
+      0.204799995,
+      0.206432003,
+      0.206425598,
+      0.205612797,
+      0.206854397,
+      0.204806396,
+      0.205612797
+    ],
+    "latency_ms_median": 0.206425598,
+    "elapsed_seconds": 117.36776041984558
+  },
+  {
+    "tile": [
+      32,
+      96,
+      64
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 16384,
+    "resident_ctas": 4,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.335878402,
+      0.339551997,
+      0.339968002,
+      0.338739204,
+      0.338329595,
+      0.335878402,
+      0.338329601,
+      0.337913603,
+      0.3387456
+    ],
+    "latency_ms_median": 0.338329601,
+    "elapsed_seconds": 117.97814083099365
+  },
+  {
+    "tile": [
+      48,
+      16,
+      16
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 28,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 2048,
+    "resident_ctas": 12,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.744236791,
+      0.742598403,
+      0.74178561,
+      0.744652808,
+      0.743008006,
+      0.745056009,
+      0.744243205,
+      0.745887995,
+      0.744256008
+    ],
+    "latency_ms_median": 0.744243205,
+    "elapsed_seconds": 118.62018346786499
+  },
+  {
+    "tile": [
+      48,
+      16,
+      32
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 4096,
+    "resident_ctas": 11,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.281792003,
+      0.280153596,
+      0.28179841,
+      0.280159998,
+      0.281395197,
+      0.281791997,
+      0.280972803,
+      0.282220799,
+      0.280556804
+    ],
+    "latency_ms_median": 0.281395197,
+    "elapsed_seconds": 119.38890671730042
+  },
+  {
+    "tile": [
+      48,
+      16,
+      48
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 6144,
+    "resident_ctas": 9,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.559104002,
+      0.555827212,
+      0.55869441,
+      0.555007994,
+      0.557881594,
+      0.557875204,
+      0.557881594,
+      0.555417609,
+      0.55705601
+    ],
+    "latency_ms_median": 0.557875204,
+    "elapsed_seconds": 120.01103019714355
+  },
+  {
+    "tile": [
+      48,
+      16,
+      64
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 8192,
+    "resident_ctas": 7,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.332595193,
+      0.33503359,
+      0.333004808,
+      0.332166398,
+      0.333811194,
+      0.333407992,
+      0.332588804,
+      0.333004802,
+      0.332172799
+    ],
+    "latency_ms_median": 0.333004802,
+    "elapsed_seconds": 120.6257050037384
+  },
+  {
+    "tile": [
+      48,
+      32,
+      16
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 2560,
+    "resident_ctas": 12,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.353887999,
+      0.353062391,
+      0.353881592,
+      0.353062397,
+      0.353068793,
+      0.353465593,
+      0.353055996,
+      0.352953595,
+      0.35305599
+    ],
+    "latency_ms_median": 0.353062397,
+    "elapsed_seconds": 121.28386664390564
+  },
+  {
+    "tile": [
+      48,
+      32,
+      32
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 48,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 5120,
+    "resident_ctas": 10,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.158099195,
+      0.158111995,
+      0.158118397,
+      0.157702395,
+      0.157695994,
+      0.157695994,
+      0.157695994,
+      0.157695994,
+      0.157702395
+    ],
+    "latency_ms_median": 0.157702395,
+    "elapsed_seconds": 121.8898777961731
+  },
+  {
+    "tile": [
+      48,
+      32,
+      48
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 48,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 7680,
+    "resident_ctas": 8,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.292044806,
+      0.292051196,
+      0.291219205,
+      0.291232002,
+      0.291219199,
+      0.290815997,
+      0.291635203,
+      0.289990401,
+      0.292044806
+    ],
+    "latency_ms_median": 0.291232002,
+    "elapsed_seconds": 122.50422978401184
+  },
+  {
+    "tile": [
+      48,
+      32,
+      64
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 48,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 10240,
+    "resident_ctas": 6,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.255167997,
+      0.256812811,
+      0.256819201,
+      0.253958398,
+      0.253939205,
+      0.255987197,
+      0.253548807,
+      0.256819201,
+      0.254777604
+    ],
+    "latency_ms_median": 0.255167997,
+    "elapsed_seconds": 123.24087119102478
+  },
+  {
+    "tile": [
+      48,
+      48,
+      16
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 48,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 3072,
+    "resident_ctas": 10,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.447679996,
+      0.449331206,
+      0.4480896,
+      0.448083198,
+      0.447686398,
+      0.448499197,
+      0.447667199,
+      0.447667205,
+      0.447257596
+    ],
+    "latency_ms_median": 0.447686398,
+    "elapsed_seconds": 123.85738253593445
+  },
+  {
+    "tile": [
+      48,
+      48,
+      32
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 6144,
+    "resident_ctas": 8,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.156876794,
+      0.156063995,
+      0.156057593,
+      0.155647993,
+      0.156467193,
+      0.156454396,
+      0.156883195,
+      0.156051195,
+      0.156876794
+    ],
+    "latency_ms_median": 0.156454396,
+    "elapsed_seconds": 124.43982362747192
+  },
+  {
+    "tile": [
+      48,
+      48,
+      48
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 9216,
+    "resident_ctas": 7,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.205209598,
+      0.2039552,
+      0.206015998,
+      0.206431997,
+      0.206425598,
+      0.2056128,
+      0.2056128,
+      0.206022397,
+      0.205222398
+    ],
+    "latency_ms_median": 0.2056128,
+    "elapsed_seconds": 125.02510261535645
+  },
+  {
+    "tile": [
+      48,
+      48,
+      64
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 66,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 12288,
+    "resident_ctas": 5,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.280979198,
+      0.280556804,
+      0.280569601,
+      0.282214403,
+      0.280153602,
+      0.282214403,
+      0.280985594,
+      0.280979204,
+      0.281408
+    ],
+    "latency_ms_median": 0.280979204,
+    "elapsed_seconds": 125.64853286743164
+  },
+  {
+    "tile": [
+      48,
+      64,
+      16
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 56,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 3584,
+    "resident_ctas": 9,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.327251202,
+      0.325619203,
+      0.326419204,
+      0.326022398,
+      0.326841605,
+      0.326022398,
+      0.326841599,
+      0.326016003,
+      0.327257597
+    ],
+    "latency_ms_median": 0.326419204,
+    "elapsed_seconds": 126.26765990257263
+  },
+  {
+    "tile": [
+      48,
+      64,
+      32
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 56,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 7168,
+    "resident_ctas": 8,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.196614403,
+      0.196204805,
+      0.195788804,
+      0.195782405,
+      0.196192005,
+      0.196601605,
+      0.196198407,
+      0.195788807,
+      0.195379207
+    ],
+    "latency_ms_median": 0.196192005,
+    "elapsed_seconds": 126.91944003105164
+  },
+  {
+    "tile": [
+      48,
+      64,
+      48
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 56,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 10752,
+    "resident_ctas": 6,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.201510397,
+      0.201523194,
+      0.201516795,
+      0.201107195,
+      0.200691196,
+      0.200697595,
+      0.201100799,
+      0.201510397,
+      0.201932797
+    ],
+    "latency_ms_median": 0.201510397,
+    "elapsed_seconds": 127.6365327835083
+  },
+  {
+    "tile": [
+      48,
+      64,
+      64
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 56,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 14336,
+    "resident_ctas": 5,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.209305596,
+      0.208486396,
+      0.209305596,
+      0.208492801,
+      0.209299198,
+      0.209708798,
+      0.208902398,
+      0.209305596,
+      0.209305596
+    ],
+    "latency_ms_median": 0.209305596,
+    "elapsed_seconds": 128.27761721611023
+  },
+  {
+    "tile": [
+      48,
+      80,
+      16
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 70,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 4096,
+    "resident_ctas": 7,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.356339198,
+      0.356755197,
+      0.355916798,
+      0.356339198,
+      0.356748796,
+      0.3559232,
+      0.356339198,
+      0.356755197,
+      0.356339198
+    ],
+    "latency_ms_median": 0.356339198,
+    "elapsed_seconds": 128.91888809204102
+  },
+  {
+    "tile": [
+      48,
+      80,
+      32
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 8192,
+    "resident_ctas": 7,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.196601602,
+      0.196991998,
+      0.196998399,
+      0.196575999,
+      0.196172801,
+      0.197004801,
+      0.196595204,
+      0.197004798,
+      0.196992001
+    ],
+    "latency_ms_median": 0.196991998,
+    "elapsed_seconds": 129.5363471508026
+  },
+  {
+    "tile": [
+      48,
+      80,
+      48
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 79,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 12288,
+    "resident_ctas": 5,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.2068288,
+      0.207641602,
+      0.208883199,
+      0.2072384,
+      0.206835201,
+      0.208063999,
+      0.20848,
+      0.206822401,
+      0.2068288
+    ],
+    "latency_ms_median": 0.2072384,
+    "elapsed_seconds": 130.18343377113342
+  },
+  {
+    "tile": [
+      48,
+      80,
+      64
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 72,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 16384,
+    "resident_ctas": 4,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.214617601,
+      0.214214399,
+      0.213388801,
+      0.214624,
+      0.213798401,
+      0.214617601,
+      0.214214402,
+      0.215436801,
+      0.213792002
+    ],
+    "latency_ms_median": 0.214214402,
+    "elapsed_seconds": 130.81976103782654
+  },
+  {
+    "tile": [
+      48,
+      96,
+      16
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 72,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 4608,
+    "resident_ctas": 7,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.387475199,
+      0.387065595,
+      0.38624,
+      0.387046391,
+      0.387078398,
+      0.386649597,
+      0.386643195,
+      0.387078398,
+      0.3874816
+    ],
+    "latency_ms_median": 0.387065595,
+    "elapsed_seconds": 131.44229173660278
+  },
+  {
+    "tile": [
+      48,
+      96,
+      32
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 9216,
+    "resident_ctas": 7,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.364531201,
+      0.364940798,
+      0.364115202,
+      0.363289607,
+      0.364531201,
+      0.364531201,
+      0.364121604,
+      0.3649472,
+      0.364537603
+    ],
+    "latency_ms_median": 0.364531201,
+    "elapsed_seconds": 132.08318734169006
+  },
+  {
+    "tile": [
+      48,
+      96,
+      48
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 96,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 13824,
+    "resident_ctas": 5,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.248217595,
+      0.247795197,
+      0.247398397,
+      0.248204798,
+      0.248198399,
+      0.248192,
+      0.247379199,
+      0.2473728,
+      0.247801596
+    ],
+    "latency_ms_median": 0.247801596,
+    "elapsed_seconds": 132.69760918617249
+  },
+  {
+    "tile": [
+      48,
+      96,
+      64
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 94,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 18432,
+    "resident_ctas": 4,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.254355198,
+      0.253951997,
+      0.253945595,
+      0.253951997,
+      0.253542399,
+      0.253945595,
+      0.253945595,
+      0.253535998,
+      0.253535998
+    ],
+    "latency_ms_median": 0.253945595,
+    "elapsed_seconds": 133.30855679512024
+  },
+  {
+    "tile": [
+      64,
+      16,
+      16
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 39,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 2560,
+    "resident_ctas": 12,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.326432002,
+      0.326841605,
+      0.3252096,
+      0.326047999,
+      0.3260288,
+      0.3252096,
+      0.324403191,
+      0.325216001,
+      0.325222403
+    ],
+    "latency_ms_median": 0.325222403,
+    "elapsed_seconds": 134.05373907089233
+  },
+  {
+    "tile": [
+      64,
+      16,
+      32
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 5120,
+    "resident_ctas": 10,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.329305601,
+      0.330540806,
+      0.331776005,
+      0.330144,
+      0.332588804,
+      0.332179201,
+      0.332185596,
+      0.329715204,
+      0.330956793
+    ],
+    "latency_ms_median": 0.330956793,
+    "elapsed_seconds": 134.6802532672882
+  },
+  {
+    "tile": [
+      64,
+      16,
+      48
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 7680,
+    "resident_ctas": 8,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.52469759,
+      0.521830404,
+      0.523462391,
+      0.521017599,
+      0.5230528,
+      0.522649598,
+      0.524275208,
+      0.522656012,
+      0.525932801
+    ],
+    "latency_ms_median": 0.5230528,
+    "elapsed_seconds": 135.30251550674438
+  },
+  {
+    "tile": [
+      64,
+      16,
+      64
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 10240,
+    "resident_ctas": 6,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.397715205,
+      0.394860798,
+      0.396095997,
+      0.396499199,
+      0.392806405,
+      0.394048005,
+      0.394035202,
+      0.394035202,
+      0.393625605
+    ],
+    "latency_ms_median": 0.394048005,
+    "elapsed_seconds": 135.98361253738403
+  },
+  {
+    "tile": [
+      64,
+      32,
+      16
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 48,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 3072,
+    "resident_ctas": 10,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.249843198,
+      0.249855995,
+      0.249433598,
+      0.249427199,
+      0.250271997,
+      0.248595202,
+      0.249459198,
+      0.248614398,
+      0.249011201
+    ],
+    "latency_ms_median": 0.249433598,
+    "elapsed_seconds": 136.61069750785828
+  },
+  {
+    "tile": [
+      64,
+      32,
+      32
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 48,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 6144,
+    "resident_ctas": 9,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.1544256,
+      0.153606406,
+      0.154016006,
+      0.154003203,
+      0.154003203,
+      0.153600007,
+      0.1544128,
+      0.154009604,
+      0.154009604
+    ],
+    "latency_ms_median": 0.154009604,
+    "elapsed_seconds": 137.28238582611084
+  },
+  {
+    "tile": [
+      64,
+      32,
+      48
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 48,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 9216,
+    "resident_ctas": 7,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.173670399,
+      0.1712192,
+      0.172454402,
+      0.174080002,
+      0.172844803,
+      0.1720384,
+      0.172851199,
+      0.172428802,
+      0.172851202
+    ],
+    "latency_ms_median": 0.172844803,
+    "elapsed_seconds": 138.050390958786
+  },
+  {
+    "tile": [
+      64,
+      32,
+      64
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 48,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 12288,
+    "resident_ctas": 5,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.292044795,
+      0.2916224,
+      0.289580798,
+      0.292025602,
+      0.2916224,
+      0.291641593,
+      0.289990401,
+      0.293267196,
+      0.2908032
+    ],
+    "latency_ms_median": 0.2916224,
+    "elapsed_seconds": 138.87901401519775
+  },
+  {
+    "tile": [
+      64,
+      48,
+      16
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 48,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 3584,
+    "resident_ctas": 10,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.389920002,
+      0.389100808,
+      0.389932805,
+      0.389113611,
+      0.3890944,
+      0.389504004,
+      0.389516801,
+      0.389094406,
+      0.389523208
+    ],
+    "latency_ms_median": 0.389504004,
+    "elapsed_seconds": 139.4800660610199
+  },
+  {
+    "tile": [
+      64,
+      48,
+      32
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 7168,
+    "resident_ctas": 8,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.171212801,
+      0.170790401,
+      0.170796803,
+      0.171200001,
+      0.171193603,
+      0.170790401,
+      0.170374402,
+      0.171200001,
+      0.171622398
+    ],
+    "latency_ms_median": 0.171193603,
+    "elapsed_seconds": 140.04707765579224
+  },
+  {
+    "tile": [
+      64,
+      48,
+      48
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 10752,
+    "resident_ctas": 6,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.198239994,
+      0.198655996,
+      0.198252797,
+      0.198655996,
+      0.19824,
+      0.198239994,
+      0.198649594,
+      0.197427201,
+      0.198655996
+    ],
+    "latency_ms_median": 0.198252797,
+    "elapsed_seconds": 140.61783361434937
+  },
+  {
+    "tile": [
+      64,
+      48,
+      64
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 56,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 14336,
+    "resident_ctas": 5,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.199059197,
+      0.198649597,
+      0.198239997,
+      0.197836798,
+      0.198649594,
+      0.199475196,
+      0.198655999,
+      0.198233595,
+      0.197427201
+    ],
+    "latency_ms_median": 0.198649594,
+    "elapsed_seconds": 141.1878252029419
+  },
+  {
+    "tile": [
+      64,
+      64,
+      16
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 4096,
+    "resident_ctas": 8,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.226495999,
+      0.226918399,
+      0.226495999,
+      0.226073596,
+      0.226086399,
+      0.226495999,
+      0.225247994,
+      0.226092798,
+      0.225676796
+    ],
+    "latency_ms_median": 0.226092798,
+    "elapsed_seconds": 141.82382822036743
+  },
+  {
+    "tile": [
+      64,
+      64,
+      32
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 8192,
+    "resident_ctas": 7,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.2211712,
+      0.220767999,
+      0.219123203,
+      0.221184,
+      0.219942397,
+      0.220345601,
+      0.219942403,
+      0.2207744,
+      0.2207616
+    ],
+    "latency_ms_median": 0.2207616,
+    "elapsed_seconds": 142.43449544906616
+  },
+  {
+    "tile": [
+      64,
+      64,
+      48
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 12288,
+    "resident_ctas": 5,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.215859205,
+      0.215443203,
+      0.215449598,
+      0.215039998,
+      0.215027201,
+      0.2150336,
+      0.215040001,
+      0.215040001,
+      0.215430403
+    ],
+    "latency_ms_median": 0.215040001,
+    "elapsed_seconds": 143.02277374267578
+  },
+  {
+    "tile": [
+      64,
+      64,
+      64
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 66,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 16384,
+    "resident_ctas": 4,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.228147203,
+      0.227731201,
+      0.228550401,
+      0.228153601,
+      0.227731201,
+      0.228960001,
+      0.228140798,
+      0.228153601,
+      0.228550398
+    ],
+    "latency_ms_median": 0.228153601,
+    "elapsed_seconds": 143.62506318092346
+  },
+  {
+    "tile": [
+      64,
+      80,
+      16
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 72,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 4608,
+    "resident_ctas": 7,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.308832002,
+      0.310054392,
+      0.310067195,
+      0.309663999,
+      0.309235197,
+      0.309248,
+      0.309651196,
+      0.309657598,
+      0.309215993
+    ],
+    "latency_ms_median": 0.309651196,
+    "elapsed_seconds": 144.2524871826172
+  },
+  {
+    "tile": [
+      64,
+      80,
+      32
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 72,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 9216,
+    "resident_ctas": 7,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.224031997,
+      0.223225597,
+      0.2232256,
+      0.223622397,
+      0.223206395,
+      0.223219198,
+      0.223206395,
+      0.223628795,
+      0.223206395
+    ],
+    "latency_ms_median": 0.223225597,
+    "elapsed_seconds": 144.91805934906006
+  },
+  {
+    "tile": [
+      64,
+      80,
+      48
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 96,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 13824,
+    "resident_ctas": 5,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.258393598,
+      0.258841598,
+      0.259251201,
+      0.2592704,
+      0.258438396,
+      0.259251201,
+      0.260089606,
+      0.258848,
+      0.259686404
+    ],
+    "latency_ms_median": 0.259251201,
+    "elapsed_seconds": 145.66686725616455
+  },
+  {
+    "tile": [
+      64,
+      80,
+      64
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 96,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 18432,
+    "resident_ctas": 4,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.232230401,
+      0.231404799,
+      0.230995199,
+      0.230988798,
+      0.232243201,
+      0.230175999,
+      0.231820801,
+      0.231820798,
+      0.231807998
+    ],
+    "latency_ms_median": 0.231807998,
+    "elapsed_seconds": 146.26646518707275
+  },
+  {
+    "tile": [
+      64,
+      96,
+      16
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 96,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 5120,
+    "resident_ctas": 5,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.263359994,
+      0.263775986,
+      0.26252799,
+      0.264191985,
+      0.263366395,
+      0.264191985,
+      0.263372791,
+      0.263782388,
+      0.263359988
+    ],
+    "latency_ms_median": 0.263372791,
+    "elapsed_seconds": 146.87133288383484
+  },
+  {
+    "tile": [
+      64,
+      96,
+      32
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 120,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 10240,
+    "resident_ctas": 4,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.254355198,
+      0.254771203,
+      0.253932792,
+      0.254348797,
+      0.253939193,
+      0.253945595,
+      0.253932792,
+      0.254368001,
+      0.253939193
+    ],
+    "latency_ms_median": 0.253945595,
+    "elapsed_seconds": 147.49889492988586
+  },
+  {
+    "tile": [
+      64,
+      96,
+      48
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 126,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 15360,
+    "resident_ctas": 4,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.244524798,
+      0.244108796,
+      0.243686399,
+      0.243705595,
+      0.244511998,
+      0.244108796,
+      0.244108796,
+      0.244115198,
+      0.244115198
+    ],
+    "latency_ms_median": 0.244108796,
+    "elapsed_seconds": 148.2779734134674
+  },
+  {
+    "tile": [
+      64,
+      96,
+      64
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 95,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 20480,
+    "resident_ctas": 4,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.274009603,
+      0.274016005,
+      0.273600006,
+      0.273612803,
+      0.2744192,
+      0.2736,
+      0.274412799,
+      0.2731776,
+      0.274003202
+    ],
+    "latency_ms_median": 0.274003202,
+    "elapsed_seconds": 148.89978861808777
+  },
+  {
+    "tile": [
+      80,
+      16,
+      16
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 3072,
+    "resident_ctas": 12,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.339148802,
+      0.340780807,
+      0.340780801,
+      0.340780801,
+      0.341593593,
+      0.339135998,
+      0.337913603,
+      0.335865605,
+      0.336268795
+    ],
+    "latency_ms_median": 0.339148802,
+    "elapsed_seconds": 149.53892040252686
+  },
+  {
+    "tile": [
+      80,
+      16,
+      32
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 6144,
+    "resident_ctas": 9,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.413702399,
+      0.4145024,
+      0.412063998,
+      0.410803205,
+      0.413689601,
+      0.410822397,
+      0.410406405,
+      0.4091712,
+      0.410419202
+    ],
+    "latency_ms_median": 0.410822397,
+    "elapsed_seconds": 150.20808386802673
+  },
+  {
+    "tile": [
+      80,
+      16,
+      48
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 48,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 9216,
+    "resident_ctas": 7,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.528377593,
+      0.525913596,
+      0.526336002,
+      0.527968001,
+      0.530835199,
+      0.530028796,
+      0.528774393,
+      0.526323199,
+      0.525907195
+    ],
+    "latency_ms_median": 0.527968001,
+    "elapsed_seconds": 150.84733414649963
+  },
+  {
+    "tile": [
+      80,
+      16,
+      64
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 48,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 12288,
+    "resident_ctas": 5,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.4800448,
+      0.477593601,
+      0.478406399,
+      0.475539201,
+      0.475948799,
+      0.479635209,
+      0.4722624,
+      0.480863994,
+      0.478412807
+    ],
+    "latency_ms_median": 0.478406399,
+    "elapsed_seconds": 151.48017740249634
+  },
+  {
+    "tile": [
+      80,
+      32,
+      16
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 48,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 3584,
+    "resident_ctas": 10,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.309638393,
+      0.309644794,
+      0.309235197,
+      0.308409601,
+      0.309215993,
+      0.309631991,
+      0.309235197,
+      0.308812797,
+      0.309651196
+    ],
+    "latency_ms_median": 0.309235197,
+    "elapsed_seconds": 152.22818851470947
+  },
+  {
+    "tile": [
+      80,
+      32,
+      32
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 56,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 7168,
+    "resident_ctas": 8,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.160563198,
+      0.160563195,
+      0.160166398,
+      0.159750396,
+      0.160159996,
+      0.159340796,
+      0.159750396,
+      0.160153598,
+      0.160159999
+    ],
+    "latency_ms_median": 0.160159996,
+    "elapsed_seconds": 152.84366989135742
+  },
+  {
+    "tile": [
+      80,
+      32,
+      48
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 56,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 10752,
+    "resident_ctas": 6,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.206432003,
+      0.2056128,
+      0.206847996,
+      0.206835198,
+      0.206854397,
+      0.207257599,
+      0.206444797,
+      0.206015998,
+      0.206847996
+    ],
+    "latency_ms_median": 0.206835198,
+    "elapsed_seconds": 153.45797157287598
+  },
+  {
+    "tile": [
+      80,
+      32,
+      64
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 56,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 14336,
+    "resident_ctas": 5,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.336281598,
+      0.334233594,
+      0.334227198,
+      0.3334144,
+      0.335462403,
+      0.334233606,
+      0.333004797,
+      0.335039997,
+      0.334240001
+    ],
+    "latency_ms_median": 0.334233606,
+    "elapsed_seconds": 154.07821464538574
+  },
+  {
+    "tile": [
+      80,
+      48,
+      16
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 63,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 4096,
+    "resident_ctas": 8,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.3518336,
+      0.3530752,
+      0.35429759,
+      0.353887993,
+      0.353055996,
+      0.353875202,
+      0.353062403,
+      0.353465599,
+      0.353887999
+    ],
+    "latency_ms_median": 0.353465599,
+    "elapsed_seconds": 154.70662021636963
+  },
+  {
+    "tile": [
+      80,
+      48,
+      32
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 8192,
+    "resident_ctas": 7,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.167526397,
+      0.167935997,
+      0.1679232,
+      0.1675392,
+      0.167507201,
+      0.167935997,
+      0.1675392,
+      0.167935997,
+      0.167110398
+    ],
+    "latency_ms_median": 0.1675392,
+    "elapsed_seconds": 155.3487765789032
+  },
+  {
+    "tile": [
+      80,
+      48,
+      48
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 79,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 12288,
+    "resident_ctas": 5,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.212575999,
+      0.211353597,
+      0.211763197,
+      0.212179202,
+      0.212172797,
+      0.211763197,
+      0.211347198,
+      0.211769599,
+      0.210937598
+    ],
+    "latency_ms_median": 0.211763197,
+    "elapsed_seconds": 156.004221200943
+  },
+  {
+    "tile": [
+      80,
+      48,
+      64
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 72,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 16384,
+    "resident_ctas": 4,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.193753603,
+      0.196601602,
+      0.195372805,
+      0.196620798,
+      0.195795205,
+      0.193734404,
+      0.195372805,
+      0.195776004,
+      0.193331206
+    ],
+    "latency_ms_median": 0.195372805,
+    "elapsed_seconds": 156.65862822532654
+  },
+  {
+    "tile": [
+      80,
+      64,
+      16
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 4608,
+    "resident_ctas": 8,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.318265599,
+      0.317420805,
+      0.318259197,
+      0.318252796,
+      0.318252802,
+      0.3182464,
+      0.319487995,
+      0.318252796,
+      0.318265599
+    ],
+    "latency_ms_median": 0.318252802,
+    "elapsed_seconds": 157.2959520816803
+  },
+  {
+    "tile": [
+      80,
+      64,
+      32
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 9216,
+    "resident_ctas": 7,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.340384007,
+      0.340371197,
+      0.339967996,
+      0.341600007,
+      0.339142406,
+      0.340793604,
+      0.339148802,
+      0.340377599,
+      0.340793604
+    ],
+    "latency_ms_median": 0.340377599,
+    "elapsed_seconds": 157.96416902542114
+  },
+  {
+    "tile": [
+      80,
+      64,
+      48
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 13824,
+    "resident_ctas": 5,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.349388802,
+      0.349382406,
+      0.348979205,
+      0.348576003,
+      0.349382406,
+      0.348972803,
+      0.348972803,
+      0.349388808,
+      0.349395204
+    ],
+    "latency_ms_median": 0.349382406,
+    "elapsed_seconds": 158.64999675750732
+  },
+  {
+    "tile": [
+      80,
+      64,
+      64
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 18432,
+    "resident_ctas": 4,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.267059189,
+      0.267065603,
+      0.265414399,
+      0.266649598,
+      0.267871994,
+      0.267468792,
+      0.265830398,
+      0.266643196,
+      0.266649598
+    ],
+    "latency_ms_median": 0.266649598,
+    "elapsed_seconds": 159.43095707893372
+  },
+  {
+    "tile": [
+      80,
+      80,
+      16
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 96,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 5120,
+    "resident_ctas": 5,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.341190404,
+      0.339967996,
+      0.340371197,
+      0.339974397,
+      0.339967996,
+      0.339551997,
+      0.339974403,
+      0.339558399,
+      0.339974403
+    ],
+    "latency_ms_median": 0.339974397,
+    "elapsed_seconds": 160.10473036766052
+  },
+  {
+    "tile": [
+      80,
+      80,
+      32
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 128,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 10240,
+    "resident_ctas": 4,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.215436804,
+      0.213798401,
+      0.213792005,
+      0.217075202,
+      0.215424004,
+      0.2154432,
+      0.2129792,
+      0.210515201,
+      0.2154432
+    ],
+    "latency_ms_median": 0.215424004,
+    "elapsed_seconds": 160.74877429008484
+  },
+  {
+    "tile": [
+      80,
+      80,
+      48
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 127,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 15360,
+    "resident_ctas": 4,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.217900801,
+      0.2170816,
+      0.216678399,
+      0.216678399,
+      0.216256002,
+      0.217088002,
+      0.2166848,
+      0.217497599,
+      0.216672
+    ],
+    "latency_ms_median": 0.2166848,
+    "elapsed_seconds": 161.41540026664734
+  },
+  {
+    "tile": [
+      80,
+      80,
+      64
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 126,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 20480,
+    "resident_ctas": 4,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.253113598,
+      0.252710402,
+      0.252313608,
+      0.252307206,
+      0.252300805,
+      0.252307206,
+      0.251891208,
+      0.251891208,
+      0.251897603
+    ],
+    "latency_ms_median": 0.252307206,
+    "elapsed_seconds": 162.03773403167725
+  },
+  {
+    "tile": [
+      80,
+      96,
+      16
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 127,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 5632,
+    "resident_ctas": 4,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.28179841,
+      0.282630408,
+      0.282208002,
+      0.282201606,
+      0.281792009,
+      0.282195204,
+      0.281798404,
+      0.281382406,
+      0.281811202
+    ],
+    "latency_ms_median": 0.281811202,
+    "elapsed_seconds": 162.6605772972107
+  },
+  {
+    "tile": [
+      80,
+      96,
+      32
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 127,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 11264,
+    "resident_ctas": 4,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.238777602,
+      0.239206403,
+      0.238777602,
+      0.239193603,
+      0.239609599,
+      0.238784003,
+      0.238368002,
+      0.238380802,
+      0.2387712
+    ],
+    "latency_ms_median": 0.238777602,
+    "elapsed_seconds": 163.32065534591675
+  },
+  {
+    "tile": [
+      80,
+      96,
+      48
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 127,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 16896,
+    "resident_ctas": 4,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.243308794,
+      0.242470399,
+      0.242873597,
+      0.242060801,
+      0.242886397,
+      0.242047998,
+      0.242886397,
+      0.242886397,
+      0.242886397
+    ],
+    "latency_ms_median": 0.242886397,
+    "elapsed_seconds": 163.94557237625122
+  },
+  {
+    "tile": [
+      80,
+      96,
+      64
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 96,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 22528,
+    "resident_ctas": 3,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.267878389,
+      0.267475194,
+      0.266220796,
+      0.266220796,
+      0.265798396,
+      0.266643196,
+      0.267462397,
+      0.267046398,
+      0.266233599
+    ],
+    "latency_ms_median": 0.266643196,
+    "elapsed_seconds": 164.6076169013977
+  },
+  {
+    "tile": [
+      96,
+      16,
+      16
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 3584,
+    "resident_ctas": 11,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.273619205,
+      0.271155196,
+      0.274028796,
+      0.274431998,
+      0.275654399,
+      0.274431998,
+      0.276480001,
+      0.274425596,
+      0.2727808
+    ],
+    "latency_ms_median": 0.274425596,
+    "elapsed_seconds": 165.35264921188354
+  },
+  {
+    "tile": [
+      96,
+      16,
+      32
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 40,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 7168,
+    "resident_ctas": 8,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.969920003,
+      0.969529593,
+      0.968703997,
+      0.967891192,
+      0.968703997,
+      0.969120014,
+      0.9691136,
+      0.968294406,
+      0.967878401
+    ],
+    "latency_ms_median": 0.968703997,
+    "elapsed_seconds": 166.0167350769043
+  },
+  {
+    "tile": [
+      96,
+      16,
+      48
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 48,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 10752,
+    "resident_ctas": 6,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.515276802,
+      0.513651204,
+      0.513228798,
+      0.508729613,
+      0.513638413,
+      0.507481599,
+      0.511180794,
+      0.514054406,
+      0.512416005
+    ],
+    "latency_ms_median": 0.513228798,
+    "elapsed_seconds": 166.68451571464539
+  },
+  {
+    "tile": [
+      96,
+      16,
+      64
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 48,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 14336,
+    "resident_ctas": 5,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.421049601,
+      0.420659202,
+      0.420652801,
+      0.421062404,
+      0.420659202,
+      0.42023679,
+      0.419008005,
+      0.420652795,
+      0.421472001
+    ],
+    "latency_ms_median": 0.420659202,
+    "elapsed_seconds": 167.30443263053894
+  },
+  {
+    "tile": [
+      96,
+      32,
+      16
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 56,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 4096,
+    "resident_ctas": 9,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.2916224,
+      0.292038399,
+      0.291212803,
+      0.290784001,
+      0.291225606,
+      0.291628802,
+      0.2912,
+      0.292038399,
+      0.291206402
+    ],
+    "latency_ms_median": 0.291225606,
+    "elapsed_seconds": 167.9268901348114
+  },
+  {
+    "tile": [
+      96,
+      32,
+      32
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 56,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 8192,
+    "resident_ctas": 7,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.194137603,
+      0.194553605,
+      0.193721601,
+      0.194566405,
+      0.192896,
+      0.193312001,
+      0.194150406,
+      0.193312001,
+      0.193728003
+    ],
+    "latency_ms_median": 0.193728003,
+    "elapsed_seconds": 168.6386113166809
+  },
+  {
+    "tile": [
+      96,
+      32,
+      48
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 56,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 12288,
+    "resident_ctas": 5,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.219936001,
+      0.218713602,
+      0.218304002,
+      0.218304005,
+      0.218713602,
+      0.218707204,
+      0.219116804,
+      0.219539201,
+      0.218707204
+    ],
+    "latency_ms_median": 0.218713602,
+    "elapsed_seconds": 169.29924607276917
+  },
+  {
+    "tile": [
+      96,
+      32,
+      64
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 63,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 16384,
+    "resident_ctas": 4,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.3661888,
+      0.367820793,
+      0.369043201,
+      0.367007995,
+      0.367014402,
+      0.368646401,
+      0.366182393,
+      0.368236804,
+      0.3661888
+    ],
+    "latency_ms_median": 0.367014402,
+    "elapsed_seconds": 169.93347334861755
+  },
+  {
+    "tile": [
+      96,
+      48,
+      16
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 64,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 4608,
+    "resident_ctas": 8,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.468569595,
+      0.468985593,
+      0.468985593,
+      0.468575996,
+      0.468159997,
+      0.468569595,
+      0.468979192,
+      0.468992001,
+      0.468575996
+    ],
+    "latency_ms_median": 0.468575996,
+    "elapsed_seconds": 170.69374012947083
+  },
+  {
+    "tile": [
+      96,
+      48,
+      32
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 72,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 9216,
+    "resident_ctas": 7,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.2297728,
+      0.229369602,
+      0.2289536,
+      0.228959998,
+      0.229369602,
+      0.228537598,
+      0.228940797,
+      0.229779202,
+      0.229356799
+    ],
+    "latency_ms_median": 0.229356799,
+    "elapsed_seconds": 171.40570759773254
+  },
+  {
+    "tile": [
+      96,
+      48,
+      48
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 96,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 13824,
+    "resident_ctas": 5,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.3125184,
+      0.312927997,
+      0.312928003,
+      0.313747197,
+      0.313324797,
+      0.314150393,
+      0.313747197,
+      0.313331199,
+      0.313740796
+    ],
+    "latency_ms_median": 0.313331199,
+    "elapsed_seconds": 172.06766366958618
+  },
+  {
+    "tile": [
+      96,
+      48,
+      64
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 80,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 18432,
+    "resident_ctas": 4,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.520172811,
+      0.520192003,
+      0.520601606,
+      0.519776022,
+      0.520185602,
+      0.521011209,
+      0.519347215,
+      0.520601606,
+      0.520992005
+    ],
+    "latency_ms_median": 0.520192003,
+    "elapsed_seconds": 172.73873591423035
+  },
+  {
+    "tile": [
+      96,
+      64,
+      16
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 72,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 5120,
+    "resident_ctas": 7,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.457907206,
+      0.457926399,
+      0.45708161,
+      0.458323205,
+      0.457497603,
+      0.457497609,
+      0.458739209,
+      0.458336002,
+      0.458316803
+    ],
+    "latency_ms_median": 0.457926399,
+    "elapsed_seconds": 173.46052861213684
+  },
+  {
+    "tile": [
+      96,
+      64,
+      32
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 72,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 10240,
+    "resident_ctas": 6,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.531251192,
+      0.531251192,
+      0.530835187,
+      0.531238389,
+      0.530425584,
+      0.530835187,
+      0.531244791,
+      0.530835187,
+      0.530828786
+    ],
+    "latency_ms_median": 0.530835187,
+    "elapsed_seconds": 174.25289011001587
+  },
+  {
+    "tile": [
+      96,
+      64,
+      48
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 94,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 15360,
+    "resident_ctas": 5,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.264191991,
+      0.262963194,
+      0.264179194,
+      0.26378879,
+      0.263372791,
+      0.264191985,
+      0.263782388,
+      0.262969595,
+      0.263366389
+    ],
+    "latency_ms_median": 0.263782388,
+    "elapsed_seconds": 174.90511894226074
+  },
+  {
+    "tile": [
+      96,
+      64,
+      64
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 96,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 20480,
+    "resident_ctas": 4,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.288761592,
+      0.288767993,
+      0.288767993,
+      0.288767993,
+      0.288345593,
+      0.288364792,
+      0.288351995,
+      0.288358396,
+      0.288767993
+    ],
+    "latency_ms_median": 0.288761592,
+    "elapsed_seconds": 175.57875895500183
+  },
+  {
+    "tile": [
+      96,
+      80,
+      16
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 127,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 5632,
+    "resident_ctas": 4,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.302681607,
+      0.302272004,
+      0.302265602,
+      0.302694404,
+      0.302694404,
+      0.302688003,
+      0.303104001,
+      0.302688009,
+      0.302668804
+    ],
+    "latency_ms_median": 0.302688003,
+    "elapsed_seconds": 176.25919795036316
+  },
+  {
+    "tile": [
+      96,
+      80,
+      32
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 128,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 11264,
+    "resident_ctas": 4,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.263353598,
+      0.264198393,
+      0.262937593,
+      0.263763195,
+      0.263366389,
+      0.263775992,
+      0.263775986,
+      0.263372791,
+      0.263372791
+    ],
+    "latency_ms_median": 0.263372791,
+    "elapsed_seconds": 176.8787968158722
+  },
+  {
+    "tile": [
+      96,
+      80,
+      48
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 128,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 16896,
+    "resident_ctas": 4,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.267039996,
+      0.267033595,
+      0.267033595,
+      0.267865592,
+      0.267455989,
+      0.26703999,
+      0.267468792,
+      0.267462391,
+      0.266630393
+    ],
+    "latency_ms_median": 0.267039996,
+    "elapsed_seconds": 177.4894392490387
+  },
+  {
+    "tile": [
+      96,
+      80,
+      64
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 128,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 22528,
+    "resident_ctas": 3,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.272787201,
+      0.272371197,
+      0.272396791,
+      0.272371197,
+      0.272364801,
+      0.272364801,
+      0.272787201,
+      0.272383994,
+      0.272390389
+    ],
+    "latency_ms_median": 0.272383994,
+    "elapsed_seconds": 178.221036195755
+  },
+  {
+    "tile": [
+      96,
+      96,
+      16
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 128,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 6144,
+    "resident_ctas": 4,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.299417603,
+      0.29900161,
+      0.298995209,
+      0.29900161,
+      0.299411201,
+      0.299008006,
+      0.299200004,
+      0.299404806,
+      0.299001604
+    ],
+    "latency_ms_median": 0.299008006,
+    "elapsed_seconds": 178.84462237358093
+  },
+  {
+    "tile": [
+      96,
+      96,
+      32
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 128,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 12288,
+    "resident_ctas": 4,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.289555192,
+      0.2904064,
+      0.28915199,
+      0.289574397,
+      0.289158386,
+      0.289990401,
+      0.289567995,
+      0.289984,
+      0.289580792
+    ],
+    "latency_ms_median": 0.289574397,
+    "elapsed_seconds": 179.51505064964294
+  },
+  {
+    "tile": [
+      96,
+      96,
+      48
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 128,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 18432,
+    "resident_ctas": 4,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.284652805,
+      0.284665596,
+      0.285081595,
+      0.284652805,
+      0.284665596,
+      0.284659201,
+      0.284665596,
+      0.284665596,
+      0.284665596
+    ],
+    "latency_ms_median": 0.284665596,
+    "elapsed_seconds": 180.1818356513977
+  },
+  {
+    "tile": [
+      96,
+      96,
+      64
+    ],
+    "shape": [
+      1536,
+      1536,
+      1536
+    ],
+    "correct": true,
+    "max_abs_error": 0,
+    "registers_thread": 168,
+    "local_bytes_thread": 0,
+    "static_shared_bytes": 4096,
+    "dynamic_shared_bytes": 24576,
+    "resident_ctas": 3,
+    "timing": "512MiB sweep before each launch; sweep excluded",
+    "latency_ms_samples": [
+      0.301446396,
+      0.301049596,
+      0.301055998,
+      0.301055998,
+      0.3006464,
+      0.301055998,
+      0.300224,
+      0.301036793,
+      0.301055998
+    ],
+    "latency_ms_median": 0.301055998,
+    "elapsed_seconds": 180.80127215385437
+  }
+]
