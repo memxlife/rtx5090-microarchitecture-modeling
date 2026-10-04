@@ -1,0 +1,281 @@
+{
+  "scope": "Current source reproduces original saved numerical predictions on exact original inputs; historical source binary identity not implied. Registry records evidence hashes, not historical component code hashes. Current dense source includes later bounded resident-control/domain amendments.",
+  "command": "python imports runtime_v3.predict_us(32,32,128,96,k,warm=True,single_block=False); dense_runtime.predict_us(32,32,m,n,k), default resident_blocks=None",
+  "source_hashes": {
+    "model_components/runtime_v3.py": "4491260fd11ae32a9cc55e11ad6b6de21d7b7c340d395db5837684a17021948c",
+    "model_components/dense_runtime.py": "966ff6dbf9a653c7f1dedb4053dfa820a6f97e8beb30667efe83d129d3615a4a",
+    "model_components/actual_path_parameters.json": "19efbe3f6e1efe8c307c73abe3539aee94479b89df6b5beac75dc48b74b1b871",
+    "model_components/dense_parameters.json": "a43914b71595472b70a7461b75bf329bfd0591f153a2cecc087b9bfa9b62c24e",
+    "model_components/learning_registry.json": "878cdf96662bc433741fe53c15aaa6789cec0ba3a628239fb4717a808e043474",
+    "diagnostic_044/frozen_absolute_and_multi_predictions.json": "3d4ab8388f5a3f652eb57a2ced3dcdae465c6b6ffdcb4ac9c41b548917039a0f",
+    "diagnostic_050/frozen_predictions.json": "46c829cc255bc2530ec95748521d0d59652ea75c4196e155349bdec56922f47b"
+  },
+  "registry_evidence_hash_audit": [
+    {
+      "experiment": "diagnostic_044",
+      "path": "diagnostic_044/frozen_predictions.json",
+      "expected": "ec11a08bb58ad1132b5a3aa7f7637bdb53c1fe892b6b0eee34f0b7b915c41a94",
+      "actual": "ec11a08bb58ad1132b5a3aa7f7637bdb53c1fe892b6b0eee34f0b7b915c41a94",
+      "matches": true
+    },
+    {
+      "experiment": "diagnostic_044",
+      "path": "diagnostic_044/verification.json",
+      "expected": "a62344b8d651c3f66323d4fc248245b8ef0ff70972e4ae179c4c9a3d59411af7",
+      "actual": "a62344b8d651c3f66323d4fc248245b8ef0ff70972e4ae179c4c9a3d59411af7",
+      "matches": true
+    },
+    {
+      "experiment": "diagnostic_044",
+      "path": "diagnostic_044/absolute_multi_verification.json",
+      "expected": "239cd62b94cb646cc4b6b469ef2e7fee27cff90ce3d2b01c13d9d4762520847f",
+      "actual": "239cd62b94cb646cc4b6b469ef2e7fee27cff90ce3d2b01c13d9d4762520847f",
+      "matches": true
+    },
+    {
+      "experiment": "diagnostic_050",
+      "path": "diagnostic_050/verification.json",
+      "expected": "38b951a77f6187f1347d643b8b8d9b66e383866470ad766713c49cbad5908c26",
+      "actual": "38b951a77f6187f1347d643b8b8d9b66e383866470ad766713c49cbad5908c26",
+      "matches": true
+    },
+    {
+      "experiment": "diagnostic_051",
+      "path": "diagnostic_051/verification.json",
+      "expected": "43f335bc6778a529379aca304ce348f689eb4004af2296eb431775499f87bc5f",
+      "actual": "43f335bc6778a529379aca304ce348f689eb4004af2296eb431775499f87bc5f",
+      "matches": true
+    }
+  ],
+  "checks": [
+    {
+      "case": [
+        128,
+        96,
+        12288
+      ],
+      "saved_us": 366.7125284166667,
+      "replay": {
+        "predicted_us": 366.7125284166667,
+        "stage_us": 0.9450916618489584,
+        "fixed_us": 3.7973302666666484,
+        "blocks": 12,
+        "calibration": "isolated actual paths; no full-GEMM coefficients",
+        "model": "actual_path_v3",
+        "unresolved": [
+          "precise latency origin inside staging path",
+          "cross-block transfer beyond tested grid",
+          "mixed cache states",
+          "broader workloads"
+        ],
+        "full_microarchitecture_model_complete": false
+      },
+      "exact_prediction": true
+    },
+    {
+      "case": [
+        128,
+        96,
+        49152
+      ],
+      "saved_us": 1455.4581228666668,
+      "replay": {
+        "predicted_us": 1455.4581228666668,
+        "stage_us": 0.9450916618489584,
+        "fixed_us": 3.7973302666666484,
+        "blocks": 12,
+        "calibration": "isolated actual paths; no full-GEMM coefficients",
+        "model": "actual_path_v3",
+        "unresolved": [
+          "precise latency origin inside staging path",
+          "cross-block transfer beyond tested grid",
+          "mixed cache states",
+          "broader workloads"
+        ],
+        "full_microarchitecture_model_complete": false
+      },
+      "exact_prediction": true
+    },
+    {
+      "case": [
+        1920,
+        1920,
+        1536
+      ],
+      "saved_us": 257.4634641,
+      "replay": {
+        "predicted_us": 257.4634641,
+        "phase_predictions": {
+          "0": 13.984000483333332,
+          "1": 148.46186516666666,
+          "2": 122.98559941666666
+        },
+        "phase_limits": {
+          "0": {
+            "latency_wave_us": 0.06985454820075758,
+            "service_demand_us": 0.1324000052083333,
+            "stage_us": 0.1324000052083333
+          },
+          "1": {
+            "latency_wave_us": 1.5493879630681817,
+            "service_demand_us": 2.7008666979166667,
+            "stage_us": 2.7008666979166667
+          },
+          "2": {
+            "latency_wave_us": 0.4018605946969696,
+            "service_demand_us": 2.3386000322916667,
+            "stage_us": 2.3386000322916667
+          }
+        },
+        "allowed_resident_blocks": 11,
+        "coefficients_from_full_gemm": false,
+        "full_model_complete": false,
+        "unresolved": [
+          "exact shared service resource",
+          "phase interaction",
+          "clock/calibration context",
+          "cache partition confound",
+          "broader grids"
+        ]
+      },
+      "exact_prediction": true,
+      "difference_us": 0.0
+    },
+    {
+      "case": [
+        1920,
+        1920,
+        4608
+      ],
+      "saved_us": 728.5418696999999,
+      "replay": {
+        "predicted_us": 728.5418696999999,
+        "phase_predictions": {
+          "0": 26.69440098333333,
+          "1": 407.74506816666667,
+          "2": 347.49120251666665
+        },
+        "phase_limits": {
+          "0": {
+            "latency_wave_us": 0.06985454820075758,
+            "service_demand_us": 0.1324000052083333,
+            "stage_us": 0.1324000052083333
+          },
+          "1": {
+            "latency_wave_us": 1.5493879630681817,
+            "service_demand_us": 2.7008666979166667,
+            "stage_us": 2.7008666979166667
+          },
+          "2": {
+            "latency_wave_us": 0.4018605946969696,
+            "service_demand_us": 2.3386000322916667,
+            "stage_us": 2.3386000322916667
+          }
+        },
+        "allowed_resident_blocks": 11,
+        "coefficients_from_full_gemm": false,
+        "full_model_complete": false,
+        "unresolved": [
+          "exact shared service resource",
+          "phase interaction",
+          "clock/calibration context",
+          "cache partition confound",
+          "broader grids"
+        ]
+      },
+      "exact_prediction": true,
+      "difference_us": 0.0
+    },
+    {
+      "case": [
+        2048,
+        2112,
+        1536
+      ],
+      "saved_us": 293.382651592,
+      "replay": {
+        "predicted_us": 293.382651592,
+        "phase_predictions": {
+          "0": 16.1729440730202,
+          "1": 169.40244440676764,
+          "2": 140.15315125825254
+        },
+        "phase_limits": {
+          "0": {
+            "latency_wave_us": 0.10478182230113636,
+            "service_demand_us": 0.15045455137310604,
+            "stage_us": 0.15045455137310604
+          },
+          "1": {
+            "latency_wave_us": 2.3240819446022725,
+            "service_demand_us": 3.06916670217803,
+            "stage_us": 3.06916670217803
+          },
+          "2": {
+            "latency_wave_us": 0.6027908920454544,
+            "service_demand_us": 2.657500036695076,
+            "stage_us": 2.657500036695076
+          }
+        },
+        "allowed_resident_blocks": 11,
+        "coefficients_from_full_gemm": false,
+        "full_model_complete": false,
+        "unresolved": [
+          "exact shared service resource",
+          "phase interaction",
+          "clock/calibration context",
+          "cache partition confound",
+          "broader grids"
+        ]
+      },
+      "exact_prediction": true,
+      "difference_us": 0.0
+    },
+    {
+      "case": [
+        2048,
+        2112,
+        4608
+      ],
+      "saved_us": 828.699021592,
+      "replay": {
+        "predicted_us": 828.699021592,
+        "phase_predictions": {
+          "0": 30.61658100483838,
+          "1": 464.04244781585857,
+          "2": 395.27315478097984
+        },
+        "phase_limits": {
+          "0": {
+            "latency_wave_us": 0.10478182230113636,
+            "service_demand_us": 0.15045455137310604,
+            "stage_us": 0.15045455137310604
+          },
+          "1": {
+            "latency_wave_us": 2.3240819446022725,
+            "service_demand_us": 3.06916670217803,
+            "stage_us": 3.06916670217803
+          },
+          "2": {
+            "latency_wave_us": 0.6027908920454544,
+            "service_demand_us": 2.657500036695076,
+            "stage_us": 2.657500036695076
+          }
+        },
+        "allowed_resident_blocks": 11,
+        "coefficients_from_full_gemm": false,
+        "full_model_complete": false,
+        "unresolved": [
+          "exact shared service resource",
+          "phase interaction",
+          "clock/calibration context",
+          "cache partition confound",
+          "broader grids"
+        ]
+      },
+      "exact_prediction": true,
+      "difference_us": 0.0
+    }
+  ],
+  "all_exact": true
+}

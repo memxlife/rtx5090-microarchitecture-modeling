@@ -1,0 +1,358 @@
+{
+  "created_utc": "2026-10-04T12:15:04.503230+00:00",
+  "reference_cycles_per_us": 2940,
+  "threshold_percent": 5,
+  "source_identities": {
+    "full_cpp": {
+      "rtl/calibration_large_001/event_cpp/backing.hpp": "140d6929416127251dc8fb66a415e19ae418c43cc2657ec08a6776b5e6d37a55",
+      "rtl/calibration_large_001/event_cpp/full_gpu_parallel.cpp": "3b6d1c890f86b2e813d6bb80aef6c4349acdb333409d625c9ddb7c5c74de15a5",
+      "rtl/calibration_large_001/event_cpp/generation_metadata.hpp": "32b8aff44983f29e0623611070202226c13d3029bc24b8a98131f81caf86c7b4",
+      "rtl/calibration_large_001/event_cpp/grid_metadata.hpp": "b7cb619ec1b756c34af947fada415b53bddc49e35627154ff213e2a08d900105",
+      "rtl/calibration_large_001/event_cpp/l2_slice.hpp": "a2394a00b41d75d6b6fce924844a6a1c722d4fe98d429f37abb7c0760dec3ccd",
+      "rtl/calibration_large_001/event_cpp/native_engine_event.hpp": "56ae7321d29552199d043f466c9b1ddab0604fc54da5a907c075ea75c0c77216",
+      "rtl/calibration_large_001/event_cpp/native_schedule.hpp": "cc903710a14275ca26ea56ad2d5b804e37cd6ee3e3f41873665ba2a5242114ea",
+      "rtl/calibration_large_001/event_cpp/native_stage_event.hpp": "e5d0f71be713774009020c869b71a64491fac6f1ff47f02824f158ec2d90dd98",
+      "rtl/calibration_large_001/event_cpp/output_metadata.hpp": "86e07a8c18f0da075ec88bae56069ff805fd211961e985f83c789397787c55d2",
+      "rtl/calibration_large_001/event_cpp/resident_metadata.hpp": "e80f43ba854c0621f50b671a5de37fd8d7f85a6574ae362e9c89e03a1a07a3fa",
+      "rtl/calibration_large_001/event_cpp/shared_hub_event.hpp": "593b961d10f8b8e929a148cb6aadadde4f32866fdfae9206b21d011a5fea182d",
+      "rtl/calibration_large_001/event_cpp/sm_event.hpp": "165acd89eff389a0f60c038c60f41181facf5a9be574be2d4fbbbd64809368ec",
+      "rtl/calibration_large_001/event_cpp/sm_pool.hpp": "ecb082831652d9d9ad116364c6156ae3a0cec32512678ec57ef4e09cafdfe2b4",
+      "rtl/calibration_large_001/event_cpp/staging_event.hpp": "f8a39e4c0c7637c66f449a3dfb291ed54fd8c38f37634880abd71a290a2a1f1b",
+      "rtl/calibration_large_001/event_cpp/units.hpp": "6f92d6ed06913bd4622a43f29ad6cec4f5ad9ac02b7c20e2510b78890f4bffbe"
+    },
+    "direct_cpp": {
+      "step8_operand_ready_diagnosis_001/direct_K1024.tsv": "1509e6768fa1f2c36f3b2dae77f5e53a1ed79cfbebcf7c482847b4c323f64672",
+      "step8_operand_ready_diagnosis_001/direct_K2048.tsv": "8ac51e572405e280b518b2634b0fa833014d757ace6ed75f31395b2765e13bec",
+      "step8_operand_ready_diagnosis_001/direct_K3072.tsv": "babc3b87b7b6221325efbc7c5b8098014a87d61326ec0db0cc51e14fe933ab6c",
+      "step8_operand_ready_diagnosis_001/freeze_prediction.py": "136b3cf89cf473759aed948467a00ee95af52c822d0383395320480dc93a05cc",
+      "step8_operand_ready_diagnosis_001/instruction_executor.hpp": "26da34b56ced841840e23b2b004547e0a45d431d8d4cdc8b867692e8ef33a579",
+      "step8_operand_ready_diagnosis_001/run_executor.cpp": "317b13fb0c02aad653a2dd595fd0f56e4328f509c3c4b5589d611f76d821ac73"
+    },
+    "hlm": {
+      "model_components/actual_path_parameters.json": "d15c3fb53b494cc7bd382234882e83ddfcee872ecd66b36cb7a85787d2b1e939",
+      "model_components/dense_parameters.json": "f89958977671c712c94dc78270d726eaa28724473914326a811a6999bac7424b",
+      "model_components/dense_runtime.py": "966ff6dbf9a653c7f1dedb4053dfa820a6f97e8beb30667efe83d129d3615a4a",
+      "model_components/runtime_v3.py": "4491260fd11ae32a9cc55e11ad6b6de21d7b7c340d395db5837684a17021948c"
+    },
+    "direct_hlm": {
+      "step23_hlm_connected_gpu_reproduction_001/direct_highlevel/frozen_contract.json": "1813b254e00dc04310ce463bb3194933dc69fbe635e29e8824005fadf72df7fb",
+      "step23_hlm_connected_gpu_reproduction_001/direct_highlevel/predict.py": "44dcdd58a3007e0bcad6ebf0766fb3f06d80209436027680fd6a55a5dbe5262e"
+    }
+  },
+  "full_cpp_binary_path": "rtl/calibration_large_001/event_cpp/full_gpu_parallel",
+  "full_cpp_binary_sha256": "acfe9886da70bd332b81ccd6257f5411804e92f99f0ac3828bc06e529d127fae",
+  "hardware_args": "170SM48slices11contexts32sharedslots,hashed,warm,1024sets",
+  "evidence_identity": {
+    "step15_same_cubin_pitch_001/instruction_identity_receipt.json": "8f70b05f4ea280fcb1302d0dc389117796477f1d550f00ba9d454bdfb1853106",
+    "step23_three_way_original_workloads_001/GPU/large_receipt.json": "eacb8e79670c3579ba38cd4410dd7012118266f12cecf6403b219870447bc0ee",
+    "step23_three_way_original_workloads_001/GPU/small_receipt.json": "6d874c40acf4c1877089cb3156fe99ea52788585b4d142e9a630dd82580c27a3",
+    "step6_data_path_mip_001/direct.sass": "1a3faba5dad054914f0949b42cc209412d38e29d83b2c9c016829e7ceeeba30c",
+    "step8_direct_timing_diagnosis_001/final_confirmation_summary.json": "a9a56d6f6171be5e674b742250cdf4ee254e282d7a182cd65282267c8370cf42"
+  },
+  "cases": [
+    {
+      "id": "staged_128_96_12288",
+      "shape": [
+        128,
+        96,
+        12288
+      ],
+      "kernel": "preserved diagnostic_044/050 staged32tile",
+      "gpu_us": 380.345607,
+      "gpu_numeric": {
+        "full_matrix_checks": 45,
+        "values_checked": 552960,
+        "correct": true
+      },
+      "gpu_reference": "references/staged_128_96_12288_gpu.json",
+      "gpu_reference_sha256": "fde974def033a7b997f4a6541e0bd5102318c861c1d0c717f2b824db6c016a8f",
+      "old_hlm_us": 366.7125284166667,
+      "old_cpp_us": 226.87312925170068,
+      "cpp_model": "full_cpp",
+      "argv": [
+        "128",
+        "96",
+        "12288",
+        "1",
+        "170",
+        "48",
+        "11",
+        "20000000",
+        "1",
+        "1024",
+        "1",
+        "1",
+        "32"
+      ],
+      "model_reference": "references/staged_128_96_12288_model.json",
+      "model_reference_sha256": "b2401a4111f14be4752d97d86e11f85d0281eeb97c44cd51bdcfdbf71d5113cd",
+      "cpp_numeric_payload": false,
+      "output_addresses": 12288
+    },
+    {
+      "id": "staged_128_96_49152",
+      "shape": [
+        128,
+        96,
+        49152
+      ],
+      "kernel": "preserved diagnostic_044/050 staged32tile",
+      "gpu_us": 1519.21279,
+      "gpu_numeric": {
+        "full_matrix_checks": 45,
+        "values_checked": 552960,
+        "correct": true
+      },
+      "gpu_reference": "references/staged_128_96_49152_gpu.json",
+      "gpu_reference_sha256": "50b9b89936156ad3e4a7a702d8d70d8369ac8fad246de03a6fcc2858c06b13aa",
+      "old_hlm_us": 1455.4581228666668,
+      "old_cpp_us": 898.2955782312926,
+      "cpp_model": "full_cpp",
+      "argv": [
+        "128",
+        "96",
+        "49152",
+        "1",
+        "170",
+        "48",
+        "11",
+        "20000000",
+        "1",
+        "1024",
+        "1",
+        "1",
+        "32"
+      ],
+      "model_reference": "references/staged_128_96_49152_model.json",
+      "model_reference_sha256": "fdd8448930ad92059a1e1f7bcbf291d49efa53ea265b84cc48820e6e6d1c345e",
+      "cpp_numeric_payload": false,
+      "output_addresses": 12288
+    },
+    {
+      "id": "staged_1920_1920_1536",
+      "shape": [
+        1920,
+        1920,
+        1536
+      ],
+      "kernel": "preserved diagnostic_044/050 staged32tile",
+      "gpu_us": 244.518396,
+      "gpu_numeric": {
+        "full_matrix_checks": 45,
+        "values_checked": 165888000,
+        "correct": true
+      },
+      "gpu_reference": "references/staged_1920_1920_1536_gpu.json",
+      "gpu_reference_sha256": "c3ef836017d221602968acd1fe2796aafc3b3ad85b641218822cbf6c5463bc2b",
+      "old_hlm_us": 257.4634641,
+      "old_cpp_us": 245.18809523809523,
+      "cpp_model": "full_cpp",
+      "argv": [
+        "1920",
+        "1920",
+        "1536",
+        "1",
+        "170",
+        "48",
+        "11",
+        "20000000",
+        "1",
+        "1024",
+        "1",
+        "4",
+        "32"
+      ],
+      "model_reference": "references/staged_1920_1920_1536_model.json",
+      "model_reference_sha256": "ccbae83e0514e44401884aa5b7954b390df588a144aee95d7df9bb99ea5c8bc9",
+      "cpp_numeric_payload": false,
+      "output_addresses": 3686400
+    },
+    {
+      "id": "staged_1920_1920_4608",
+      "shape": [
+        1920,
+        1920,
+        4608
+      ],
+      "kernel": "preserved diagnostic_044/050 staged32tile",
+      "gpu_us": 693.0368070000001,
+      "gpu_numeric": {
+        "full_matrix_checks": 45,
+        "values_checked": 165888000,
+        "correct": true
+      },
+      "gpu_reference": "references/staged_1920_1920_4608_gpu.json",
+      "gpu_reference_sha256": "8309d01cf94448044d7902cac9a8275130b2b5276b4106affc26d7c9561c3a2f",
+      "old_hlm_us": 728.5418696999999,
+      "old_cpp_us": 697.5884353741496,
+      "cpp_model": "full_cpp",
+      "argv": [
+        "1920",
+        "1920",
+        "4608",
+        "1",
+        "170",
+        "48",
+        "11",
+        "20000000",
+        "1",
+        "1024",
+        "1",
+        "4",
+        "32"
+      ],
+      "model_reference": "references/staged_1920_1920_4608_model.json",
+      "model_reference_sha256": "064ef97e0d00c17328d922dc82bff63225b9ecba638c293f2b25886f127491da",
+      "cpp_numeric_payload": false,
+      "output_addresses": 3686400
+    },
+    {
+      "id": "staged_2048_2112_1536",
+      "shape": [
+        2048,
+        2112,
+        1536
+      ],
+      "kernel": "preserved diagnostic_044/050 staged32tile",
+      "gpu_us": 275.628805,
+      "gpu_numeric": {
+        "full_matrix_checks": 45,
+        "values_checked": 194641920,
+        "correct": true
+      },
+      "gpu_reference": "references/staged_2048_2112_1536_gpu.json",
+      "gpu_reference_sha256": "f5147028391a78872b8e3eab0b297e1f9b6e0a45b98e536357dd54b816e613a4",
+      "old_hlm_us": 293.382651592,
+      "old_cpp_us": 284.6551020408163,
+      "cpp_model": "full_cpp",
+      "argv": [
+        "2048",
+        "2112",
+        "1536",
+        "1",
+        "170",
+        "48",
+        "11",
+        "20000000",
+        "1",
+        "1024",
+        "1",
+        "4",
+        "32"
+      ],
+      "model_reference": "references/staged_2048_2112_1536_model.json",
+      "model_reference_sha256": "296074a113a44dae1834515de1d491ebf61879bd9de85c32297c32980ffd9d8f",
+      "cpp_numeric_payload": false,
+      "output_addresses": 4325376
+    },
+    {
+      "id": "staged_2048_2112_4608",
+      "shape": [
+        2048,
+        2112,
+        4608
+      ],
+      "kernel": "preserved diagnostic_044/050 staged32tile",
+      "gpu_us": 781.100786,
+      "gpu_numeric": {
+        "full_matrix_checks": 45,
+        "values_checked": 194641920,
+        "correct": true
+      },
+      "gpu_reference": "references/staged_2048_2112_4608_gpu.json",
+      "gpu_reference_sha256": "07db95cf7a6a7a0a9b7d1e00f6f220f5824c4c1c4eb31285742a447329dabbac",
+      "old_hlm_us": 828.699021592,
+      "old_cpp_us": 826.9537414965987,
+      "cpp_model": "full_cpp",
+      "argv": [
+        "2048",
+        "2112",
+        "4608",
+        "1",
+        "170",
+        "48",
+        "11",
+        "20000000",
+        "1",
+        "1024",
+        "1",
+        "4",
+        "32"
+      ],
+      "model_reference": "references/staged_2048_2112_4608_model.json",
+      "model_reference_sha256": "b389a88ef9685b869ab4710c2c57bb4612a4fd5f9f405eaadf49bd366b924cd9",
+      "cpp_numeric_payload": false,
+      "output_addresses": 4325376
+    },
+    {
+      "id": "direct_192_768_3072",
+      "shape": [
+        192,
+        768,
+        3072
+      ],
+      "kernel": "original general-purpose direct kernel144blocks; recordedStep8measurements",
+      "gpu_us": 43.5147171,
+      "gpu_numeric": {
+        "correct": true,
+        "scope": "Step8two-seedfullcustomoutputchecks; seeimmutableconfirmationreceipt"
+      },
+      "gpu_reference": "references/direct_192_768_3072_gpu.json",
+      "gpu_reference_sha256": "18368d4277e6694842c611a244ccc0199aa2b3215fdf64a16565fa1f383e2e2b",
+      "old_hlm_us": 34.491207817687055,
+      "hlm_model": "new_provisional_direct_adaptation",
+      "old_cpp_us": 29.796598639455784,
+      "cpp_model": "direct_cpp",
+      "cpp_numeric_payload": false,
+      "output_addresses": null,
+      "kernel_identity_limit": "Historical wholeGPUexecutable hash unavailable; nativeSASSandrawtiminghashes preserved."
+    },
+    {
+      "id": "direct_192_768_1024",
+      "shape": [
+        192,
+        768,
+        1024
+      ],
+      "kernel": "original general-purpose direct kernel144blocks; recordedStep8measurements",
+      "gpu_us": 15.1331205,
+      "gpu_numeric": {
+        "correct": true,
+        "scope": "Step8two-seedfullcustomoutputchecks; seeimmutableconfirmationreceipt"
+      },
+      "gpu_reference": "references/direct_192_768_1024_gpu.json",
+      "gpu_reference_sha256": "2253e9d29ef301ecc4518391c8da562d8f960055d51fbf270ab0f58d1be6e3c5",
+      "old_hlm_us": 14.028622783673452,
+      "hlm_model": "new_provisional_direct_adaptation",
+      "old_cpp_us": 11.764285714285714,
+      "cpp_model": "direct_cpp",
+      "cpp_numeric_payload": false,
+      "output_addresses": null,
+      "kernel_identity_limit": "Historical wholeGPUexecutable hash unavailable; nativeSASSandrawtiminghashes preserved."
+    },
+    {
+      "id": "direct_192_768_2048",
+      "shape": [
+        192,
+        768,
+        2048
+      ],
+      "kernel": "original general-purpose direct kernel144blocks; recordedStep8measurements",
+      "gpu_us": 29.2510395,
+      "gpu_numeric": {
+        "correct": true,
+        "scope": "Step8two-seedfullcustomoutputchecks; seeimmutableconfirmationreceipt"
+      },
+      "gpu_reference": "references/direct_192_768_2048_gpu.json",
+      "gpu_reference_sha256": "306b40961426494d5d32301bf376db6f0a5ee7b9669ee658fd50285e59d052d7",
+      "old_hlm_us": 24.259915300680255,
+      "hlm_model": "new_provisional_direct_adaptation",
+      "old_cpp_us": 20.773469387755103,
+      "cpp_model": "direct_cpp",
+      "cpp_numeric_payload": false,
+      "output_addresses": null,
+      "kernel_identity_limit": "Historical wholeGPUexecutable hash unavailable; nativeSASSandrawtiminghashes preserved."
+    }
+  ],
+  "scope": "NoVerilog. GPUreferencesareimmutable copiedobservations; directHLMisnewpostmeasurementprovisionaladaptation, notunchangedHLM."
+}

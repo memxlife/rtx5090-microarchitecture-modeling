@@ -1,0 +1,7 @@
+/Users/lishang/work/research/MLSYS_homework_1/studies/rtx5090_gemm_milp/step23_hlm_connected_gpu_reproduction_001/regression_suite/staging_screen.cpp:10:106: error: too few arguments to function call, expected 2, have 1
+   10 | if(s.done_valid){if(s.done_id!=7)throw std::runtime_error("completion ownership");done=true;}model.edge(i);}
+      |                                                                                              ~~~~~~~~~~  ^
+/Users/lishang/work/research/MLSYS_homework_1/studies/rtx5090_gemm_milp/step23_hlm_connected_gpu_reproduction_001/staging_cpp_repair/staging_event.hpp:35:7: note: 'edge' declared here
+   35 |  void edge(const Input&in,Cycle t){now_=t;auto s=signals(in.request,t);
+      |       ^    ~~~~~~~~~~~~~~~~~~~~~~
+1 error generated.

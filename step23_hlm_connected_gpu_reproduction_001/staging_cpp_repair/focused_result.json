@@ -1,0 +1,54 @@
+{
+  "created_utc": "2026-10-04T12:20:20.543087+00:00",
+  "sole_completed_run_receipt": "../regression_suite/candidate_quick.json",
+  "raw_log": "../regression_suite/build/staged_128_96_12288.log",
+  "candidate_core_source_sha256": {
+    "backing.hpp": "140d6929416127251dc8fb66a415e19ae418c43cc2657ec08a6776b5e6d37a55",
+    "grid_metadata.hpp": "b7cb619ec1b756c34af947fada415b53bddc49e35627154ff213e2a08d900105",
+    "producer_path.hpp": "0798182f916ede07205dd85c02646a9c60ef5e1c519f51270d3942439c126151",
+    "generation_metadata.hpp": "32b8aff44983f29e0623611070202226c13d3029bc24b8a98131f81caf86c7b4",
+    "output_metadata.hpp": "02d09768df2f636b350b9502d4a3d3fdf655b51ca8d29057444b818accc0e729",
+    "sm_pool.hpp": "ecb082831652d9d9ad116364c6156ae3a0cec32512678ec57ef4e09cafdfe2b4",
+    "l2_slice.hpp": "a2394a00b41d75d6b6fce924844a6a1c722d4fe98d429f37abb7c0760dec3ccd",
+    "native_stage_event.hpp": "e5d0f71be713774009020c869b71a64491fac6f1ff47f02824f158ec2d90dd98",
+    "sm_event.hpp": "cf97c8cd9153a1fac819b1efee2b22d269a2da0d088bdc5a09377a9b7a6102a7",
+    "shared_hub_event.hpp": "593b961d10f8b8e929a148cb6aadadde4f32866fdfae9206b21d011a5fea182d",
+    "units.hpp": "6f92d6ed06913bd4622a43f29ad6cec4f5ad9ac02b7c20e2510b78890f4bffbe",
+    "resident_metadata.hpp": "e80f43ba854c0621f50b671a5de37fd8d7f85a6574ae362e9c89e03a1a07a3fa",
+    "staging_event.hpp": "df569dc4fd92615f9d0d4c359ae82535b2dda219f691aebf39cfdaec33306572",
+    "native_schedule.hpp": "cc903710a14275ca26ea56ad2d5b804e37cd6ee3e3f41873665ba2a5242114ea",
+    "native_engine_event.hpp": "56ae7321d29552199d043f466c9b1ddab0604fc54da5a907c075ea75c0c77216"
+  },
+  "case": [
+    128,
+    96,
+    12288
+  ],
+  "candidate_cycles": 994607,
+  "baseline_cycles": 667007,
+  "candidate_us_at2940": 338.3017006802721,
+  "baseline_us_at2940": 226.87312925170068,
+  "HLM_us": 366.7125284166667,
+  "GPU_us": 380.345607,
+  "signed_error_pct": -11.05413222762104,
+  "prediction_increase_cycles": 327600,
+  "fraction_baseline_time_gap_removed": 0.7260492113206026,
+  "remaining_time_gap_us": 42.04390631972785,
+  "within_5percent": false,
+  "promotion": "Not promoted. Focused error still exceeds5%; relevantoldlongsmall/accuratedense regressions running with parallel_rtl. No whole-time latency fit.",
+  "fixed_params": {
+    "ready_prior": 340,
+    "capture": 1,
+    "commit": 1,
+    "ALU": 1,
+    "unchanged_native_model": "40-instruction template, arithmetic32/II8/pending2, shared28, MOVM29",
+    "unchanged_hardware": "170SM/48slices/11contexts/shared32/warmcache/reference2940"
+  },
+  "limits": [
+    "Prior340 transferredfromindependentU16composite; addressgeometry/cache/issuecontextnotuniquelycalibrated here.",
+    "Uniform/predicate and encodedcontroltiming are unmodeled or effectiveonecycle.",
+    "Actualanchor remainder/nativecontrolpath differs from original40instruction native template; nativeunchanged inthisscopedstagingrepair.",
+    "Address-only model, no new numerical payloadsimvalidation.",
+    "No Verilog orGPUrun bythislane."
+  ]
+}

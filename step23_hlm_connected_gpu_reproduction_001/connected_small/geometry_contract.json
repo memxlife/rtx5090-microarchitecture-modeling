@@ -1,0 +1,33 @@
+{
+  "M": 128,
+  "N": 96,
+  "K_cases": [
+    12288,
+    49152
+  ],
+  "blocks": 12,
+  "SMS": 12,
+  "contexts_per_SM": 1,
+  "shared_read_slots": 2,
+  "shared_return_delay": 28,
+  "MOVM_latency": 29,
+  "HMMA_latency": 32,
+  "HMMA_interval": 8,
+  "hit_delay": 4,
+  "setup_cycles": 3346,
+  "L2_sets": 49152,
+  "L2_ways": 16,
+  "L2_bytes": 100663296,
+  "A_base": 0,
+  "B_base": 268435456,
+  "C_base": 536870912,
+  "A_max_end_exclusive": 12582912,
+  "B_max_end_exclusive": 277872640,
+  "C_end_exclusive": 536920064,
+  "cycle_timeout": 20000000,
+  "run_timeout_seconds": 2400,
+  "independent_cpp_host_rerun": false,
+  "cpp_consistency_scope": "Original four smaller cases passed host versus testbench inStep22; this new longer shape is not independently rerun through that host.",
+  "implementation_tested": "Verilog model executed through Verilator-generated C++ with generated testbench main",
+  "not_tested": "Independent handwritten C++ implementation"
+}

@@ -1,0 +1,73 @@
+{
+  "state": "operand_executor_implemented_waiting_independent_primitives",
+  "created_utc": "2026-10-04T07:03:16.578929+00:00",
+  "unchanged_baseline": {
+    "uniform_load_ready_cycles": 352,
+    "K3072_instruction_cycles": 79995,
+    "issue_events": 26416,
+    "whole_prediction_us": 29.796598639455784,
+    "physical_us": 43.5187225,
+    "signed_error_percent": -31.53154107532503,
+    "all_issue_records_byte_identical": true
+  },
+  "classification": {
+    "stage_load_ordinals_A": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      14,
+      15
+    ],
+    "stage_load_ordinals_B": [
+      0,
+      1,
+      2,
+      3,
+      10,
+      11,
+      12,
+      13
+    ],
+    "first_main_A_PCs": [
+      "04b0",
+      "04c0",
+      "04d0",
+      "04e0",
+      "0580",
+      "0590",
+      "0660",
+      "0670"
+    ],
+    "first_main_B_PCs": [
+      "0440",
+      "0450",
+      "0460",
+      "0470",
+      "0620",
+      "0630",
+      "0640",
+      "0650"
+    ]
+  },
+  "unchanged_rules": [
+    "register source readiness",
+    "pending writer readiness",
+    "read capture ownership",
+    "aggregate request-mask barrier expiry",
+    "finite global/MOVM/HMMA queues",
+    "actual source instruction order with fixed round-robin ready scan",
+    "no artificial direct stage barrier"
+  ],
+  "unknowns": [
+    "B exposed readiness independently unmeasured",
+    "352 is batch composite not intrinsic single-load latency",
+    "predicate and uniform-register dependency timing",
+    "encoded trans/WAIT interpretation",
+    "global return queue arbitration"
+  ],
+  "acceptance": "Require compiled endpoint-after-load-readiness before MOVM, matching control, and no whole-kernel residual used as parameter. Freeze before fresh confirmations.",
+  "classification_correction": "Beforeasymmetricparameterfreeze, actualUR12/c388 BpointerandUR10/c380Apointerancestryreversesearlierlabels. Uniform352predictionunaffected; oldStep7mappingretainedasoldcontract."
+}

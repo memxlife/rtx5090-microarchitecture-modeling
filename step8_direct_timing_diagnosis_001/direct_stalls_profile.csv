@@ -1,0 +1,43 @@
+==WARNING== Note: Running with uncontrolled GPU caches. Profiling results may be inconsistent.
+==WARNING== Note: Running with unmodified GPU clocks. If not controlled otherwise, profiling results may be inconsistent.
+==PROF== Connected to process 216263 (/tmp/rtx5090_step6_data_path_mip_001/benchmark_all_paths)
+{"kind":"device","gpu":7,"name":"NVIDIA GeForce RTX 5090","SMs":170,"M":192,"N":768,"K":3072,"selected_stride":0,"timing_mode":"warm CUDA graph200 independent alpha1 beta0 GEMMs;5 warm graphs;11 samples"}
+{"kind":"correctness","seed":0,"stride":32,"checked":147456,"correct":true,"max_abs_error":0,"max_error_over_tolerance":0,"bad":0}
+{"kind":"correctness","seed":0,"stride":48,"checked":147456,"correct":true,"max_abs_error":0,"max_error_over_tolerance":0,"bad":0}
+{"kind":"correctness","seed":0,"stride":64,"checked":147456,"correct":true,"max_abs_error":0,"max_error_over_tolerance":0,"bad":0}
+{"kind":"correctness","seed":0,"stride":0,"checked":147456,"correct":true,"max_abs_error":0,"max_error_over_tolerance":0,"bad":0}
+{"kind":"correctness","seed":1,"stride":32,"checked":147456,"correct":true,"max_abs_error":0.00043708086,"max_error_over_tolerance":0.0804552647,"bad":0}
+{"kind":"correctness","seed":1,"stride":48,"checked":147456,"correct":true,"max_abs_error":0.00043708086,"max_error_over_tolerance":0.0804552647,"bad":0}
+{"kind":"correctness","seed":1,"stride":64,"checked":147456,"correct":true,"max_abs_error":0.00043708086,"max_error_over_tolerance":0.0804552647,"bad":0}
+{"kind":"correctness","seed":1,"stride":0,"checked":147456,"correct":true,"max_abs_error":0.00043708086,"max_error_over_tolerance":0.0804552647,"bad":0}
+{"kind":"resources","stride":32,"registers_thread":40,"static_shared":4096,"local_bytes":0,"resident_ctas":11}
+{"kind":"resources","stride":48,"registers_thread":40,"static_shared":4096,"local_bytes":0,"resident_ctas":10}
+{"kind":"resources","stride":64,"registers_thread":40,"static_shared":4096,"local_bytes":0,"resident_ctas":9}
+{"kind":"resources","stride":0,"registers_thread":38,"static_shared":4096,"local_bytes":0,"resident_ctas":12}
+{"kind":"timing","name":"custom_original","stride":32,"median_us":97.0494308,"samples_us":[97.2868881,96.740799,96.7025604,96.8649597,97.1523132,97.217598,97.0601578,97.0494308,97.0995178,97.0188751,97.0462418]}
+{"kind":"timing","name":"custom_staged48","stride":48,"median_us":96.6383972,"samples_us":[97.2763214,96.6383972,96.647995,96.6345596,96.6299133,96.6391983,96.6358414,96.5081635,96.6363297,96.6590424,96.7588806]}
+{"kind":"timing","name":"custom_staged64","stride":64,"median_us":101.197289,"samples_us":[101.957596,101.324486,101.226562,101.344635,101.325592,101.195038,101.197289,101.131683,101.187195,101.170876,101.079521]}
+{"kind":"timing","name":"custom_direct_global","stride":0,"median_us":45.6620789,"samples_us":[45.6667175,45.5332794,45.6620789,45.5692825,45.6604843,45.7076797,45.7984047,45.6591988,45.7672005,45.5940819,45.6878433]}
+{"kind":"library_correctness","name":"cublas_default","seed":1,"checked":147456,"correct":true,"max_abs_error":8.60095024e-05,"max_error_over_tolerance":0.014667803}
+{"kind":"timing","name":"cublas_default","stride":0,"median_us":118.662079,"samples_us":[116.706078,119.788963,118.576477,118.553123,118.662079,116.164482,118.798721,119.84433,119.985443,119.05632,117.373604]}
+{"kind":"lt_candidate","index":0,"algorithm_id":21,"workspace_required":2359296,"median_us":77.0184021,"checked":147456,"max_abs_error":8.60095024e-05}
+{"kind":"lt_candidate","index":1,"algorithm_id":21,"workspace_required":4718592,"median_us":77.4961624,"checked":147456,"max_abs_error":4.991889e-05}
+{"kind":"lt_candidate","index":2,"algorithm_id":21,"workspace_required":0,"median_us":38.4566422,"checked":147456,"max_abs_error":0.00043708086}
+{"kind":"lt_candidate","index":3,"algorithm_id":21,"workspace_required":1179648,"median_us":82.7950363,"checked":147456,"max_abs_error":0.000208079815}
+{"kind":"lt_candidate","index":4,"algorithm_id":21,"workspace_required":9437184,"median_us":78.0702362,"checked":147456,"max_abs_error":3.17543745e-05}
+{"kind":"library_tuning_cost","heuristics_returned":5,"seconds":1.31883512}
+{"kind":"timing","name":"cublasLt_tuned_confirmation","stride":0,"median_us":38.2358398,"samples_us":[37.9915199,37.5592003,37.7478409,38.9608002,38.978241,38.4587173,38.2358398,38.3687973,37.9216003,38.1264,38.73312]}
+{"kind":"complete","custom_choice_frozen":0,"lt_heuristics_returned":5,"lt_selected_index":2,"workspace_allocated":67108864,"cublas_version":120804}
+==PROF== Disconnected from process 216263
+"ID","Process ID","Process Name","Host Name","Kernel Name","Context","Stream","Block Size","Grid Size","Device","CC","Section Name","Metric Name","Metric Unit","Metric Value"
+"0","216263","benchmark_all_paths","127.0.0.1","direct_gemm(const __nv_bfloat16 *, const __nv_bfloat16 *, float *, int, int, int)","1","20","(128, 1, 1)","(24, 6, 1)","7","12.0","Command line profiler metrics","sm__cycles_elapsed.avg.per_second","hz","2925641730.45"
+"0","216263","benchmark_all_paths","127.0.0.1","direct_gemm(const __nv_bfloat16 *, const __nv_bfloat16 *, float *, int, int, int)","1","20","(128, 1, 1)","(24, 6, 1)","7","12.0","Command line profiler metrics","smsp__cycles_active.sum","cycle","69339928"
+"0","216263","benchmark_all_paths","127.0.0.1","direct_gemm(const __nv_bfloat16 *, const __nv_bfloat16 *, float *, int, int, int)","1","20","(128, 1, 1)","(24, 6, 1)","7","12.0","Command line profiler metrics","smsp__inst_executed.sum","inst","3897216"
+"0","216263","benchmark_all_paths","127.0.0.1","direct_gemm(const __nv_bfloat16 *, const __nv_bfloat16 *, float *, int, int, int)","1","20","(128, 1, 1)","(24, 6, 1)","7","12.0","Command line profiler metrics","smsp__inst_issued.sum","inst","3897216"
+"0","216263","benchmark_all_paths","127.0.0.1","direct_gemm(const __nv_bfloat16 *, const __nv_bfloat16 *, float *, int, int, int)","1","20","(128, 1, 1)","(24, 6, 1)","7","12.0","Command line profiler metrics","smsp__warp_issue_stalled_barrier_per_warp_active.pct","%","0"
+"0","216263","benchmark_all_paths","127.0.0.1","direct_gemm(const __nv_bfloat16 *, const __nv_bfloat16 *, float *, int, int, int)","1","20","(128, 1, 1)","(24, 6, 1)","7","12.0","Command line profiler metrics","smsp__warp_issue_stalled_long_scoreboard_per_warp_active.pct","%","72.09"
+"0","216263","benchmark_all_paths","127.0.0.1","direct_gemm(const __nv_bfloat16 *, const __nv_bfloat16 *, float *, int, int, int)","1","20","(128, 1, 1)","(24, 6, 1)","7","12.0","Command line profiler metrics","smsp__warp_issue_stalled_math_pipe_throttle_per_warp_active.pct","%","0.95"
+"0","216263","benchmark_all_paths","127.0.0.1","direct_gemm(const __nv_bfloat16 *, const __nv_bfloat16 *, float *, int, int, int)","1","20","(128, 1, 1)","(24, 6, 1)","7","12.0","Command line profiler metrics","smsp__warp_issue_stalled_mio_throttle_per_warp_active.pct","%","0"
+"0","216263","benchmark_all_paths","127.0.0.1","direct_gemm(const __nv_bfloat16 *, const __nv_bfloat16 *, float *, int, int, int)","1","20","(128, 1, 1)","(24, 6, 1)","7","12.0","Command line profiler metrics","smsp__warp_issue_stalled_not_selected_per_warp_active.pct","%","0"
+"0","216263","benchmark_all_paths","127.0.0.1","direct_gemm(const __nv_bfloat16 *, const __nv_bfloat16 *, float *, int, int, int)","1","20","(128, 1, 1)","(24, 6, 1)","7","12.0","Command line profiler metrics","smsp__warp_issue_stalled_short_scoreboard_per_warp_active.pct","%","4.16"
+"0","216263","benchmark_all_paths","127.0.0.1","direct_gemm(const __nv_bfloat16 *, const __nv_bfloat16 *, float *, int, int, int)","1","20","(128, 1, 1)","(24, 6, 1)","7","12.0","Command line profiler metrics","smsp__warp_issue_stalled_wait_per_warp_active.pct","%","15.79"

@@ -1,0 +1,56 @@
+[
+  {
+    "shape": [
+      128,
+      96,
+      12288
+    ],
+    "prediction_us": 366.7125284166667,
+    "exact_saved_prediction": true
+  },
+  {
+    "shape": [
+      128,
+      96,
+      49152
+    ],
+    "prediction_us": 1455.4581228666668,
+    "exact_saved_prediction": true
+  },
+  {
+    "shape": [
+      1920,
+      1920,
+      1536
+    ],
+    "prediction_us": 257.4634641,
+    "exact_saved_prediction": true
+  },
+  {
+    "shape": [
+      1920,
+      1920,
+      4608
+    ],
+    "prediction_us": 728.5418696999999,
+    "exact_saved_prediction": true
+  },
+  {
+    "shape": [
+      2048,
+      2112,
+      1536
+    ],
+    "prediction_us": 293.382651592,
+    "exact_saved_prediction": true
+  },
+  {
+    "shape": [
+      2048,
+      2112,
+      4608
+    ],
+    "prediction_us": 828.699021592,
+    "exact_saved_prediction": true
+  }
+]

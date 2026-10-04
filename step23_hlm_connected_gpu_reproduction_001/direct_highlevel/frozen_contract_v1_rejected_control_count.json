@@ -1,0 +1,25 @@
+{
+  "frozen_utc": "2026-10-04T11:54:14.011301+00:00",
+  "state": "new_provisional_highlevel_direct_adaptation_after_hardware_results_known_not_blind_validation",
+  "parameters": {
+    "global_batch_ready_cycles": 352,
+    "MOVM_ready_cycles": 29,
+    "effective_HMMA_result_use_cycles": 64,
+    "HMMA_initiation_cycles": 8,
+    "ready_instruction_issue_cycles": 1,
+    "shared_clock_reference_cycles_per_us": 2940,
+    "fixed_us_original_HLM": 3.7973302666666484,
+    "independent_compound_first_result_cycles": 586,
+    "L2_service_TB_per_second": 3.444,
+    "active_blocks": 144,
+    "SMs": 170
+  },
+  "algorithm": "From compiledtwo16Khalfblocks per32Kstage: dependency bound2*(352+29+64+8+controlcount) referencecycles/stage. Controlcount counts nonmemory/nonMOVM/nonHMMA compiledfirsthalf PCs0320..06f0. max(block-wave dependency duration,sourceunique128sector*32B/stage/block total/L2service). Add originalHLM fixed3.79733us as explicittransferprior. Separate compound-handoff hypothesis2*(586+8)cycles/stage, no control subtraction. Both are coarse sequential-half bounds; overlap/observer transfer not recovered. No wholeGPU runtime or C++model result is used in either calculation.",
+  "scope": "Samefull144block M192N768 K1024/2048/3072; provisional new adaptation, not unchanged runtime_v3.",
+  "source_sha256": {
+    "step6_data_path_mip_001/direct.sass": "5e8fa2e85e5c35e81b6bc5b5add5f6cd3b946b2a1a3d0ffd44a3c4dac8646326",
+    "model_components/actual_path_parameters.json": "19efbe3f6e1efe8c307c73abe3539aee94479b89df6b5beac75dc48b74b1b871",
+    "step10_in_context_ready_001/repeated_validation_receipt.json": "70665caf3ed71a2cfb62a7b5e1befb1f5c8924c772d9815040057e61c3222231",
+    "step18_compute_isolation_001/compute64_prospective_validation.json": "94297fd81e055c3c1fa9ef78a4c9e4554d70682ea1947718bfcd213548d2532f"
+  }
+}

@@ -191,3 +191,33 @@ Retain the verification expectations and existing receipts in Section 8. The [in
 Register demand bounds residency. Dependency edges bound earliest issue. Unknown port conflicts should not be inserted as additional penalties without evidence or combined-path validation.
 
 A parameter checked through documentation or a transferred prior can be used provisionally. Refine it when a new end-to-end case disagrees materially or when it changes the optimization choice. Do not spend time recovering a private property that the supported execution path does not exercise.
+
+## 11. Candidate staging register ownership
+
+The latest staging repair asks when a global-loaded register may be consumed by a shared store. A fast cache response does not, by itself, establish that the compiled producer has made the register available. The candidate therefore tracks destination readiness separately from request completion. This section supplements the older helpers above; it describes the separate [C++ staging candidate](../../../step23_hlm_connected_gpu_reproduction_001/staging_cpp_repair/staging_event.hpp), not a change to their defaults.
+
+### State and acceptance rules
+
+Each resident context contains four warp instruction cursors. Each warp owns 64 register-ready times, 64 source-release times, and six encoded dependency-tag times. A ready time is the earliest integer cycle at which a consumer may read that register. A source-release time is the earliest cycle at which a later writer may overwrite it. Dependency tags preserve the compiled instruction's requested waits; they are not a claim about the GPU's physical scoreboard capacity.
+
+| State or parameter | Candidate value | Meaning and evidence boundary |
+|---|---:|---|
+| Register ownership entries | 64 per warp | Covers register identities in the extracted staging prefix. |
+| Dependency tags | 6 per warp | Decoded from the preserved instruction annotations. |
+| Global-load readiness prior | 340 cycles | Transferred composite U16 probe estimate; not an identified L2 circuit latency. |
+| Source capture/release | 1 cycle | Provisional model rule for the load/store path. |
+| Other instruction result readiness | 1 cycle | Effective rule; constant, uniform, predicate and encoded-control timing remain incomplete. |
+
+For a load issued at cycle `i`, let `r` be the cycle when its final sector is returned. Its register-ready cycle is `max(i + 340, r + 1)`. The extra edge means a return accepted at an edge cannot enable a pre-edge consumer at that same edge. This is a maximum of two restrictions, not their sum. A five-cycle cache return cannot bypass the 340-cycle prior; a return later than the prior remains the limiting event.
+
+A candidate instruction must satisfy every source-ready time, destination-ready time, destination source-release time and requested dependency tag. Pending loads carrying a requested write tag also block issue. An accepted shared store captures its source before the register may be reused. Readiness release and store commit remain distinct events, as specified in [load/store execution](07_load_store_execution.md#11-candidate-compiled-staging-path).
+
+### Implementation and checks
+
+The instruction descriptors are generated from the exact preserved 376-instruction GEMM: [descriptor generator](../../../step23_hlm_connected_gpu_reproduction_001/staging_cpp_repair/generate_producer_path.py), [decoded prefix](../../../step23_hlm_connected_gpu_reproduction_001/staging_cpp_repair/producer_path.json), and [C++ descriptor table](../../../step23_hlm_connected_gpu_reproduction_001/staging_cpp_repair/producer_path.hpp). The bounded prefix starts at program address `0x220` and reaches the first barrier at `0x1010`; it does not reconstruct the complete kernel control path.
+
+The [unit receipt](../../../step23_hlm_connected_gpu_reproduction_001/staging_cpp_repair/unit_receipt.json) records early and delayed sector-return checks, source ownership, store backpressure and rejection of completed-stage callbacks. These are address/timing checks. They do not establish numerical GPU equivalence or identify a physical 340-cycle parameter. The matching Verilog implementation and its differential-test status are recorded in the [integration chapter](../integration_and_verification.md#compiled-staging-repair-candidate).
+
+**Separate Verilog realization.** [The behavioral staging module](../../../step23_hlm_connected_gpu_reproduction_001/staging_rtl_repair/repaired_staging.sv) implements the same candidate state and ordered edge transitions, using [generated instruction tables](../../../step23_hlm_connected_gpu_reproduction_001/staging_rtl_repair/producer_tables.svh). It adds numerical sector payloads and shared halfword outputs to the C++ metadata interface. This component implementation does not by itself replace or validate the full-chip model.
+
+[The completed component parity receipt](../../../step23_hlm_connected_gpu_reproduction_001/staging_rtl_repair/parity_receipt.json) records 921,445 protocol/address/counter comparisons and 36,864 BF16 payload checks across 18 frames. It does not validate full-chip timing, Verilog matrix arithmetic, mid-flight reset, or RTL negative-response rejection.

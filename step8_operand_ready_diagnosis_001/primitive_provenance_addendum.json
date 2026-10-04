@@ -1,0 +1,17 @@
+{
+  "state": "primitive_provenance_addendum_no_prediction_change",
+  "created_utc": "2026-10-04T07:12:40.385281+00:00",
+  "freeze_sha256": "03fe429f3ae61cc429133a97d8d17c0a785891236cfd50e22bf267d5abbfd6f4",
+  "receipts": {
+    "mapped_A_summary.json": "e6a7b4b70ed3713be23dff34710a9a836696fee052321a0a5a74fedacf4b26c0",
+    "mapped_B_summary.json": "71d1c52a1dd31108a96398465263bf5481a07cd4c872117bc29b7874f8b94db3",
+    "paired_primitives_receipt.json": "116a53967f778c15302f446aa0090f663717ff75566fcc8405d21eb61f2fb858"
+  },
+  "priors": {
+    "A": 292,
+    "B": 305,
+    "LDC": 1,
+    "S2R": 1
+  },
+  "rejected_constant_probe": "Clock placement repaired, but functional check failed; no timing prior accepted."
+}

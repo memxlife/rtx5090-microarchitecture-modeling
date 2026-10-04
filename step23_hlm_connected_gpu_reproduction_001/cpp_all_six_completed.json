@@ -1,0 +1,99 @@
+{
+  "all_six_completed": true,
+  "all_exit_zero": true,
+  "same_hardware_parameters": "170SM/48slices/11contexts/shared32; original cache/timing settings unchanged",
+  "reference_cycles_per_us": 2940,
+  "no_pending_jobs": true,
+  "rows": [
+    {
+      "shape": [
+        128,
+        96,
+        12288
+      ],
+      "cpp_cycles": 667007,
+      "cpp_us_at2940": 226.87312925170068,
+      "gpu_original045_us": 380.345607,
+      "signed_error_pct": -40.3507954144188,
+      "receipt": "step23_hlm_connected_gpu_reproduction_001/cpp_small/128_96_12288_result.json",
+      "host_seconds": 177.72435337491333,
+      "scope": "Runtime M,N,K arguments to preserved original large-model executable; hardware/resource/timing parameters unchanged.",
+      "numerical_payload_validation_cpp": false
+    },
+    {
+      "shape": [
+        128,
+        96,
+        49152
+      ],
+      "cpp_cycles": 2640989,
+      "cpp_us_at2940": 898.2955782312926,
+      "gpu_original045_us": 1519.21279,
+      "signed_error_pct": -40.87098369996658,
+      "receipt": "step23_hlm_connected_gpu_reproduction_001/cpp_small/128_96_49152_result.json",
+      "host_seconds": 694.509909958113,
+      "scope": "Runtime M,N,K arguments to preserved original large-model executable; hardware/resource/timing parameters unchanged.",
+      "numerical_payload_validation_cpp": false
+    },
+    {
+      "shape": [
+        1920,
+        1920,
+        1536
+      ],
+      "cpp_cycles": 720853,
+      "cpp_us_at2940": 245.18809523809523,
+      "gpu_original045_us": 244.518396,
+      "signed_error_pct": 0.2738850119461844,
+      "receipt": "step23_hlm_connected_gpu_reproduction_001/connected_large/1920_1920_1536_result.json",
+      "host_seconds": 496.3712630420923,
+      "scope": "Runtime M,N,K arguments to preserved original large-model executable; hardware/resource/timing parameters unchanged.",
+      "numerical_payload_validation_cpp": false
+    },
+    {
+      "shape": [
+        1920,
+        1920,
+        4608
+      ],
+      "cpp_cycles": 2050910,
+      "cpp_us_at2940": 697.5884353741496,
+      "gpu_original045_us": 693.036807,
+      "signed_error_pct": 0.6567657486840739,
+      "receipt": "step23_hlm_connected_gpu_reproduction_001/connected_large/1920_1920_4608_result.json",
+      "host_seconds": 1371.8968247498851,
+      "scope": "Runtime M,N,K arguments to preserved original large-model executable; hardware/resource/timing parameters unchanged.",
+      "numerical_payload_validation_cpp": false
+    },
+    {
+      "shape": [
+        2048,
+        2112,
+        1536
+      ],
+      "cpp_cycles": 836886,
+      "cpp_us_at2940": 284.6551020408163,
+      "gpu_original045_us": 275.628805,
+      "signed_error_pct": 3.2748017903340365,
+      "receipt": "step22_original_validation_reproduction_001/model_large/K1536_repeat_receipt.json",
+      "host_seconds": 549.0167236248963,
+      "scope": "Reused exact same-shape completed repeat, unchanged original full-chip configuration.",
+      "numerical_payload_validation_cpp": false
+    },
+    {
+      "shape": [
+        2048,
+        2112,
+        4608
+      ],
+      "cpp_cycles": 2431244,
+      "cpp_us_at2940": 826.9537414965987,
+      "gpu_original045_us": 781.100786,
+      "signed_error_pct": 5.870299495076781,
+      "receipt": "step23_hlm_connected_gpu_reproduction_001/connected_large/2048_2112_4608_result.json",
+      "host_seconds": 1599.539479332976,
+      "scope": "Runtime M,N,K arguments to preserved original large-model executable; hardware/resource/timing parameters unchanged.",
+      "numerical_payload_validation_cpp": false
+    }
+  ]
+}

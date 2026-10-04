@@ -1,0 +1,30 @@
+{
+  "shape": [
+    2048,
+    2112,
+    1536
+  ],
+  "predicted_hlm_us": 293.382651592,
+  "original_measured_us": 276.863998,
+  "repeat_measured_us": 275.628805,
+  "repeat_hlm_error_percent": 6.441215965073033,
+  "full_matrix_checks": 45,
+  "numeric_values_checked": 194641920,
+  "correct": true,
+  "raw_samples_ms": [
+    0.287936002,
+    0.275244796,
+    0.2743936,
+    0.274822402,
+    0.275628805,
+    0.276032001,
+    0.276032001,
+    0.275212795,
+    0.276844805
+  ],
+  "connected_reference_mhz": 2940,
+  "implementation": "C++ model",
+  "implementation_cycles": 836886,
+  "implementation_us": 284.6551020408163,
+  "implementation_error_percent": 3.2748017903340365
+}

@@ -1,0 +1,213 @@
+{
+  "rows": [
+    {
+      "implementation": "original general-purpose direct operand kernel,full144blockgrid",
+      "M": 192,
+      "N": 768,
+      "K": 3072,
+      "GPU_us": 43.5147171,
+      "HLM_prediction": null,
+      "HLM_status": "Outside admitted shape and staged-path domain",
+      "handwritten_full_GPU_CPP_prediction": null,
+      "full_GPU_CPP_status": "Global-to-shared staging frontend cannot realize direct global WMMA operand path",
+      "separate_instruction_phase_CPP_us": 29.796598639455784,
+      "separate_instruction_phase_error_percent": -31.5252387577724,
+      "source": "studies/rtx5090_gemm_milp/step8_operand_ready_diagnosis_001/final_timing_diagnosis.json"
+    },
+    {
+      "implementation": "original general-purpose direct operand kernel,full144blockgrid",
+      "M": 192,
+      "N": 768,
+      "K": 1024,
+      "GPU_us": 15.1331205,
+      "HLM_prediction": null,
+      "HLM_status": "Outside admitted shape and staged-path domain",
+      "handwritten_full_GPU_CPP_prediction": null,
+      "full_GPU_CPP_status": "Global-to-shared staging frontend cannot realize direct global WMMA operand path",
+      "separate_instruction_phase_CPP_us": 11.764285714285714,
+      "separate_instruction_phase_error_percent": -22.261335893772117,
+      "source": "studies/rtx5090_gemm_milp/step8_operand_ready_diagnosis_001/final_timing_diagnosis.json"
+    },
+    {
+      "implementation": "original general-purpose direct operand kernel,full144blockgrid",
+      "M": 192,
+      "N": 768,
+      "K": 2048,
+      "GPU_us": 29.2510395,
+      "HLM_prediction": null,
+      "HLM_status": "Outside admitted shape and staged-path domain",
+      "handwritten_full_GPU_CPP_prediction": null,
+      "full_GPU_CPP_status": "Global-to-shared staging frontend cannot realize direct global WMMA operand path",
+      "separate_instruction_phase_CPP_us": 20.773469387755103,
+      "separate_instruction_phase_error_percent": -28.98211570308432,
+      "source": "studies/rtx5090_gemm_milp/step8_operand_ready_diagnosis_001/final_timing_diagnosis.json"
+    },
+    {
+      "implementation": "new specialized ordinary direct",
+      "M": 192,
+      "N": 768,
+      "K": 1024,
+      "grid_blocks": 1,
+      "computed_output_tile": [
+        32,
+        32
+      ],
+      "GPU_us": 10.3737602,
+      "HLM_prediction": null,
+      "HLM_status": "Outside admitted shape and staged-path domain",
+      "handwritten_full_GPU_CPP_prediction": null,
+      "full_GPU_CPP_status": "Global-to-shared staging frontend cannot realize direct global WMMA operand path",
+      "separate_instruction_phase_CPP_us": 11.074149659863945,
+      "separate_instruction_phase_error_percent": 6.751548583742517,
+      "source": "studies/rtx5090_gemm_milp/step19_direct_cg_001/model_comparison.json"
+    },
+    {
+      "implementation": "new specialized direct.cg",
+      "M": 192,
+      "N": 768,
+      "K": 1024,
+      "grid_blocks": 1,
+      "computed_output_tile": [
+        32,
+        32
+      ],
+      "GPU_us": 14.3289604,
+      "HLM_prediction": null,
+      "HLM_status": "Outside admitted shape and staged-path domain",
+      "handwritten_full_GPU_CPP_prediction": null,
+      "full_GPU_CPP_status": "Global-to-shared staging frontend cannot realize direct global WMMA operand path",
+      "separate_instruction_phase_CPP_us": 11.51734693877551,
+      "separate_instruction_phase_error_percent": -19.621894280791572,
+      "source": "studies/rtx5090_gemm_milp/step19_direct_cg_001/model_comparison.json"
+    },
+    {
+      "implementation": "new specialized ordinary direct",
+      "M": 192,
+      "N": 768,
+      "K": 2048,
+      "grid_blocks": 1,
+      "computed_output_tile": [
+        32,
+        32
+      ],
+      "GPU_us": 19.9035206,
+      "HLM_prediction": null,
+      "HLM_status": "Outside admitted shape and staged-path domain",
+      "handwritten_full_GPU_CPP_prediction": null,
+      "full_GPU_CPP_status": "Global-to-shared staging frontend cannot realize direct global WMMA operand path",
+      "separate_instruction_phase_CPP_us": 19.270068027210883,
+      "separate_instruction_phase_error_percent": -3.1826157066359273,
+      "source": "studies/rtx5090_gemm_milp/step19_direct_cg_001/model_comparison.json"
+    },
+    {
+      "implementation": "new specialized direct.cg",
+      "M": 192,
+      "N": 768,
+      "K": 2048,
+      "grid_blocks": 1,
+      "computed_output_tile": [
+        32,
+        32
+      ],
+      "GPU_us": 27.52384,
+      "HLM_prediction": null,
+      "HLM_status": "Outside admitted shape and staged-path domain",
+      "handwritten_full_GPU_CPP_prediction": null,
+      "full_GPU_CPP_status": "Global-to-shared staging frontend cannot realize direct global WMMA operand path",
+      "separate_instruction_phase_CPP_us": 20.29013605442177,
+      "separate_instruction_phase_error_percent": -26.28159423095844,
+      "source": "studies/rtx5090_gemm_milp/step19_direct_cg_001/model_comparison.json"
+    },
+    {
+      "implementation": "new specialized ordinary direct",
+      "M": 192,
+      "N": 768,
+      "K": 3072,
+      "grid_blocks": 1,
+      "computed_output_tile": [
+        32,
+        32
+      ],
+      "GPU_us": 29.4167995,
+      "HLM_prediction": null,
+      "HLM_status": "Outside admitted shape and staged-path domain",
+      "handwritten_full_GPU_CPP_prediction": null,
+      "full_GPU_CPP_status": "Global-to-shared staging frontend cannot realize direct global WMMA operand path",
+      "separate_instruction_phase_CPP_us": 27.474149659863947,
+      "separate_instruction_phase_error_percent": -6.60387898464635,
+      "source": "studies/rtx5090_gemm_milp/step19_direct_cg_001/model_comparison.json"
+    },
+    {
+      "implementation": "new specialized direct.cg",
+      "M": 192,
+      "N": 768,
+      "K": 3072,
+      "grid_blocks": 1,
+      "computed_output_tile": [
+        32,
+        32
+      ],
+      "GPU_us": 42.5296021,
+      "HLM_prediction": null,
+      "HLM_status": "Outside admitted shape and staged-path domain",
+      "handwritten_full_GPU_CPP_prediction": null,
+      "full_GPU_CPP_status": "Global-to-shared staging frontend cannot realize direct global WMMA operand path",
+      "separate_instruction_phase_CPP_us": 29.062925170068027,
+      "separate_instruction_phase_error_percent": -31.66424387951651,
+      "source": "studies/rtx5090_gemm_milp/step19_direct_cg_001/model_comparison.json"
+    }
+  ],
+  "clock": "Instruction-phase predictions use2940referencecycles/us;GPUtimes CUDAeventmedians, notprofiledurations.",
+  "no_new_measurements": true,
+  "no_parameter_changes": true,
+  "no_HLM_adaptation_admitted": "Existing measured staging+compute-common costs cannot simply subtract shared time to predict directglobal; compiledpath/order/readiness differ, and direct352 composite transfer itself alreadymissesGPU.",
+  "source_sha256": {
+    "studies/rtx5090_gemm_milp/model_components/runtime_v3.py": "4491260fd11ae32a9cc55e11ad6b6de21d7b7c340d395db5837684a17021948c",
+    "studies/rtx5090_gemm_milp/model_components/dense_runtime.py": "966ff6dbf9a653c7f1dedb4053dfa820a6f97e8beb30667efe83d129d3615a4a",
+    "studies/rtx5090_gemm_milp/step8_operand_ready_diagnosis_001/final_timing_diagnosis.json": "ea65c9a15642dccd7906a5b6e63f7635e4cb9b488c58f61ae771881ed0c0082d",
+    "studies/rtx5090_gemm_milp/step19_direct_cg_001/model_comparison.json": "39e5ee47458033062e299a5e0a49ec57c7f0ef0858462ee92bf602e8560068d2",
+    "studies/rtx5090_gemm_milp/step19_direct_cg_001/frozen_repaired_cg_model_predictions.json": "46f5d11f394a77612a886e50a7353e6e114156ef51e31629ee956c0afc0d79d4",
+    "studies/rtx5090_gemm_milp/step19_direct_cg_001/measurement_receipt.json": "dda057de64091899d24413b170cb78695f6af456b2fe6cc947f705277dc1ecf3",
+    "studies/rtx5090_gemm_milp/rtl/calibration_large_001/event_cpp/full_gpu_parallel.cpp": "3b6d1c890f86b2e813d6bb80aef6c4349acdb333409d625c9ddb7c5c74de15a5"
+  },
+  "implementation_detail": {
+    "C++": "step8 operand_executor executes parsed actual compiled instruction stream with register readiness, finite queues and fixed round-robin issue.",
+    "Python": "freeze_prediction.py adds approximate7607cycle startup/output term; completion=max(localcycles+7607,7607+ceil(144*(K/32)*128/48)).",
+    "baseline_arguments": "operand_executor direct_K{K}.tsv 352 352 baseline.events 1 1",
+    "not_full_chip": "No explicit144SM/cache/network connectedexecution in this direct prediction. Aggregatecapacity bound nonbinding.",
+    "C++source_sha256": {
+      "instruction_executor.hpp": "26da34b56ced841840e23b2b004547e0a45d431d8d4cdc8b867692e8ef33a579",
+      "run_executor.cpp": "317b13fb0c02aad653a2dd595fd0f56e4328f509c3c4b5589d611f76d821ac73",
+      "freeze_prediction.py": "136b3cf89cf473759aed948467a00ee95af52c822d0383395320480dc93a05cc"
+    },
+    "historical_executable_identity": "Frozen source hashes/commands recorded; baseline temporary executable hash not preserved in citedreceipt. Currentbinaryidentity not asserted."
+  },
+  "instruction_source_frozen_hash_audit": {
+    "instruction_executor.hpp": {
+      "recorded": "26da34b56ced841840e23b2b004547e0a45d431d8d4cdc8b867692e8ef33a579",
+      "current": "26da34b56ced841840e23b2b004547e0a45d431d8d4cdc8b867692e8ef33a579",
+      "matches": true
+    },
+    "run_executor.cpp": {
+      "recorded": "317b13fb0c02aad653a2dd595fd0f56e4328f509c3c4b5589d611f76d821ac73",
+      "current": "317b13fb0c02aad653a2dd595fd0f56e4328f509c3c4b5589d611f76d821ac73",
+      "matches": true
+    },
+    "freeze_prediction.py": {
+      "recorded": "136b3cf89cf473759aed948467a00ee95af52c822d0383395320480dc93a05cc",
+      "current": "136b3cf89cf473759aed948467a00ee95af52c822d0383395320480dc93a05cc",
+      "matches": true
+    }
+  },
+  "original_direct_GPU_provenance": {
+    "measurement_receipt": "step8_direct_timing_diagnosis_001/final_confirmation_summary.json",
+    "preserved_direct_assembly": "step6_data_path_mip_001/direct.sass",
+    "later_native_instruction_identity_receipt": "step15_same_cubin_pitch_001/instruction_identity_receipt.json",
+    "scope": "Step8 records raw GPU timing result hashes; preserved Step6 direct SASS defines original native path. Later Step15 confirms its672nativewords match a pitch-control compilation. No historical wholeStep8GPU executable hash is recorded here; no whole-binary identity assertion.",
+    "source_sha256": {
+      "step8_direct_timing_diagnosis_001/final_confirmation_summary.json": "a9a56d6f6171be5e674b742250cdf4ee254e282d7a182cd65282267c8370cf42",
+      "step6_data_path_mip_001/direct.sass": "5e8fa2e85e5c35e81b6bc5b5add5f6cd3b946b2a1a3d0ffd44a3c4dac8646326",
+      "step15_same_cubin_pitch_001/instruction_identity_receipt.json": "8f70b05f4ea280fcb1302d0dc389117796477f1d550f00ba9d454bdfb1853106"
+    }
+  }
+}

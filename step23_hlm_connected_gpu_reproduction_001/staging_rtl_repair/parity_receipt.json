@@ -1,0 +1,47 @@
+{
+  "status": "passed_component_differential",
+  "protocol_address_counter_comparisons": 921445,
+  "completed_frames": 18,
+  "rtl_halfword_payload_checks": 36864,
+  "scenario_cycles": [
+    5868,
+    7062,
+    5872
+  ],
+  "contexts": 3,
+  "stages_per_context": 2,
+  "timing": {
+    "register_ready_floor_cycles": 340,
+    "register_ready_rule": "max(issue + 340, last sector return + 1)",
+    "source_capture_cycles": 1,
+    "store_commit_cycles": 1
+  },
+  "coverage": [
+    "early sector returns (5 cycles)",
+    "late sector returns (500 cycles)",
+    "backing, store and done backpressure",
+    "simultaneous queue operations",
+    "context reuse after completion"
+  ],
+  "reset_scope": "Fresh reset before each scenario; midflight reset not tested.",
+  "stale_response_scope": "C++ rejects repeated completed-frame response ID; RTL negative response test not executed.",
+  "numerical_scope": "RTL delivers 36,864 nonconstant BF16 halfwords checked against global-address oracle. Host C++ multiplies delivered operands and compares stage products. No Verilog compute or full GEMM execution is tested.",
+  "payload_capture": "RTL group payload read at STS commit. Each group is written once per drained stage, so no intervening update is possible in this supported path. General store-data capture is not validated.",
+  "implementation_scope": "Behavioral blocking edge-order reproduces frozen C++ component. Not full-chip RTL equivalence, synthesis readiness, or calibrated hardware timing.",
+  "files_sha256": {
+    "adapter_lint.txt": "ff564379f0b4f9e34add29a96a25bdc25646dd4338808f6047f87b672a9f25b2",
+    "repaired_staging.sv": "87cd30e181f902a26ee7f7f56800e0fc55dd89807056dcffb894c13357769a4f",
+    "build.txt": "31286bf56233b55b0fea929afbc36dc0bd9b6a39f7f6851678a23868a80716ca",
+    "producer_tables.svh": "0bcaca21c227e8b04d16ac65c35659c61d5e642f4ae506629b6b0df253650659",
+    "large_operand_staging_repaired.sv": "db616809a8eafb877dd5c0078241b0af0b434718c69affaabc632194f70894f9",
+    "parity_stdout.txt": "3a965a799522f059923df5a957ecbcb673bf03d3d59e1345d1067852ddfdcfef",
+    "lint.txt": "a3356f05509677bc7eecba3b72e360887b4eb40b9151e3695823999c8c118cde",
+    "generate_tables.py": "e785edd85cd27cd948da120fe86288ed7795a5f3a1c0c9b2b440361416da96e9",
+    "parity.cpp": "a43dcdbf83333237ff4fc71bc42c753d5e75178f0729b288ac53e2e30ba2ed66",
+    "README.md": "507f706a2949073cb064d71c9881e17ea2d261ecc7e3c73947605d7bc0846d0c"
+  },
+  "cpp_reference_sha256": "df569dc4fd92615f9d0d4c359ae82535b2dda219f691aebf39cfdaec33306572",
+  "build_command": "/opt/homebrew/bin/verilator --cc --exe --build -j 4 -Wno-fatal --top-module repaired_staging --Mdir /private/tmp/staging_rtl_repair_build -Istep23_hlm_connected_gpu_reproduction_001/staging_rtl_repair -CFLAGS \"-std=c++20 -O2\" step23_hlm_connected_gpu_reproduction_001/staging_rtl_repair/repaired_staging.sv step23_hlm_connected_gpu_reproduction_001/staging_rtl_repair/parity.cpp",
+  "run_command": "/private/tmp/staging_rtl_repair_build/Vrepaired_staging",
+  "adapter_status": "Existing numerical staging interface adapter lint passed; full numerical Verilog compute integration not executed."
+}

@@ -1,0 +1,33 @@
+{
+  "started_utc": "2026-10-04T12:21:45.913978+00:00",
+  "implementation": "C++ direct instruction executor followed by unchanged Python phase composition; not full-chip staged C++ model",
+  "shape_base": [
+    192,
+    768
+  ],
+  "grid_blocks": 144,
+  "K": [
+    1024,
+    2048,
+    3072
+  ],
+  "parameters": {
+    "A_ready": 352,
+    "B_ready": 352,
+    "constant_ready": 1,
+    "special_ready": 1,
+    "fixed_cycles": 7607,
+    "capacity_formula": "7607+ceil(144*(K/32)*128/48)",
+    "reference_cycles_per_us": 2940
+  },
+  "source_sha256": {
+    "step8_operand_ready_diagnosis_001/run_executor.cpp": "317b13fb0c02aad653a2dd595fd0f56e4328f509c3c4b5589d611f76d821ac73",
+    "step8_operand_ready_diagnosis_001/instruction_executor.hpp": "26da34b56ced841840e23b2b004547e0a45d431d8d4cdc8b867692e8ef33a579",
+    "step8_operand_ready_diagnosis_001/freeze_prediction.py": "136b3cf89cf473759aed948467a00ee95af52c822d0383395320480dc93a05cc",
+    "step8_operand_ready_diagnosis_001/direct_K1024.tsv": "1509e6768fa1f2c36f3b2dae77f5e53a1ed79cfbebcf7c482847b4c323f64672",
+    "step8_operand_ready_diagnosis_001/direct_K2048.tsv": "8ac51e572405e280b518b2634b0fa833014d757ace6ed75f31395b2765e13bec",
+    "step8_operand_ready_diagnosis_001/direct_K3072.tsv": "babc3b87b7b6221325efbc7c5b8098014a87d61326ec0db0cc51e14fe933ab6c"
+  },
+  "no_parameter_changes": true,
+  "GPU_reference": "step8_direct_timing_diagnosis_001/final_confirmation_summary.json"
+}

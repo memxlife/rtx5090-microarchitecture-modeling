@@ -1,0 +1,67 @@
+{
+  "created_utc": "2026-10-04T12:03:22.992999+00:00",
+  "scope": "Same original staged M128N96 kernel, fixed32tile, warm cache. Source-based mechanism comparison; observed model slope is diagnostic, not a new fitted parameter.",
+  "cpp_results": {
+    "cycles": [
+      667007,
+      2640989
+    ],
+    "cycles_per_reduction_stage_from_two_completed_runs": 1713.5260416666667,
+    "effective_fixed_cycles_from_two_completed_runs": 9013.0,
+    "us_per_stage_at2940": 0.5828319869614512
+  },
+  "hlm_actual_path_composition": {
+    "source": "model_components/runtime_v3.py",
+    "phase_slope_global_staging_and_common_us": 0.7802749934895834,
+    "phase_slope_compute_and_common_us": 0.2021416666666667,
+    "phase_slope_common_us": 0.03732499830729166,
+    "full_slope_us": 0.9450916618489584,
+    "fixed_us": 3.7973302666666484,
+    "formula": "phase1 + phase2 - phase0; these coefficients came from isolated physical paths, not full-GEMM timing."
+  },
+  "cpp_source_rules": {
+    "driver": "rtl/calibration_large_001/event_cpp/full_gpu_parallel.cpp",
+    "hit_delay": 4,
+    "staging": "rtl/calibration_large_001/event_cpp/staging_event.hpp",
+    "groups_per_stage": 64,
+    "sectors_per_contiguous32_halfword_group": 2,
+    "sectors_per_stage": 128,
+    "group_commit": "After two returned sectors, a registered response owner directly commits32 halfword values to shared memory. No explicit per-warp LDG destination-register readiness or dependent STS issue path.",
+    "compute": "native40instruction per warp; matrix32/II8/pending2 and MOVM29/shared28 baseline unchanged.",
+    "phase_rule_screen": {
+      "staging_cycles": 1155,
+      "compute_cycles": 555,
+      "registered_boundary_cycles": 4,
+      "sum_cycles": 1714,
+      "basis": "Existing source-derived single-context warm all-hit phase graph; not newly calibrated from small runtime. Shared cache arbitration can perturb this by a few cycles.",
+      "predicted_us_per_stage_at2940": 0.5829931972789115
+    },
+    "global_paths_not_intrinsic_latency": "Four-cycle L2Slice hit eligibility is a behavioral cache-owner rule, not physical end-to-end global data readiness.",
+    "stage_compute_overlap": "Current SM controller serializes staging then compute for the same CTA. No claim of perfect inter-stage overlap; omitted physical load/store issue-readiness path is the capability gap."
+  },
+  "comparison": {
+    "hlm_exclusive_staging_us": 0.7429499951822918,
+    "cpp_staging_screen_us": 0.39285714285714285,
+    "exclusive_staging_difference_us": 0.3500928523251489,
+    "hlm_compute_us": 0.2021416666666667,
+    "cpp_compute_screen_us": 0.18877551020408162,
+    "whole_stage_slope_difference_us": 0.3622596748875072
+  },
+  "conclusion": "Most of the HLM-to-C++ stage-cost difference lies in the staging-path composition. The HLM retains an independently measured global-to-shared physical path; the C++ model substitutes sector-return/shared-commit state transitions. This locates a capability difference, not a uniquely identified physical delay or justification for installing the observed difference as latency.",
+  "limits": [
+    "HLM physical phase coefficients include compiled issue/control/ownership/service effects.",
+    "C++ model phase screening and empirical model slope do not separately identify which omitted staging effect dominates.",
+    "Same large-hardware configuration used for both small shapes; no historical two-slot SV configuration conflation.",
+    "No new GPU run or model parameter adjustment."
+  ],
+  "phase_screen_provenance": [
+    {
+      "path": "step2_layout_gpu_001/mip_verification.json",
+      "sha256": "c8d729d5a3dc72a4c746f287d441560bf2013395dd2edbf0d9cbb9e3bef1710d"
+    },
+    {
+      "path": "step4_staging_dependency_001/mechanism_predictions.json",
+      "sha256": "a8d890c2025a09273987be6379ce901f80491f1ae0e0b9dec12bf3c6998cc715"
+    }
+  ]
+}

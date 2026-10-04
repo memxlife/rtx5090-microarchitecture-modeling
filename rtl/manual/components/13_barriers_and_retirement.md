@@ -216,3 +216,25 @@ Retain the verification expectations and existing receipts in Section 8. The [in
 Barrier edges become precedence constraints. Use measured compound synchronization costs at their scope; do not label a loop cost as isolated barrier latency.
 
 A parameter checked through documentation or a transferred prior can be used provisionally. Refine it when a new end-to-end case disagrees materially or when it changes the optimization choice. Do not spend time recovering a private property that the supported execution path does not exercise.
+
+## 11. Staging barrier and context reuse contract
+
+The compiled staging candidate reaches a block barrier only after each warp has finished its producer prefix. A barrier represents agreement among all four warps; it cannot release a context whose last load or shared commit is still pending. This connects the register-readiness rules in [Chapter 04](04_registers_readiness_and_operand_collection.md#11-candidate-staging-register-ownership) to the transaction ownership rules in [Chapter 07](07_load_store_execution.md#11-candidate-compiled-staging-path).
+
+For each resident context, the candidate records the original stage-request ID and four warp cursors. Stage completion requires all four cursors at the end of the decoded prefix, no outstanding load for that context, and no outstanding shared-store commit. `done_valid` then carries that context and request ID until `done_ready` is accepted. The surrounding generation barrier and controller still govern the transition from staging to compute; this candidate does not introduce early staging/compute overlap.
+
+Transaction IDs increase across loads and each load owns two sector IDs. A returned sector must still belong to an accepted live load. After the completion handshake, the context can be reused, but an old callback must never satisfy a new stage. The C++ component rejects completed-stage, duplicate and unowned callbacks rather than silently updating current register state. These checks provide ownership isolation; they do not implement a general GPU memory-consistency model.
+
+| Event | Required condition | Consequence |
+|---|---|---|
+| Warp reaches producer barrier | Its extracted instruction cursor has drained | Wait for the other warps and pending transactions. |
+| Shared commit becomes visible to the model | Commit packet accepted by `write_ready` | Release that store's commit ownership. |
+| Stage completion offered | All four warps and all loads/stores drained | Hold original context/request ID. |
+| Completion acknowledged | `done_valid` and `done_ready` | Release the staging context. |
+| Callback from a retired stage | No matching live accepted load | Reject; do not mutate a reused context. |
+
+See [the C++ source](../../../step23_hlm_connected_gpu_reproduction_001/staging_cpp_repair/staging_event.hpp) and [unit receipt](../../../step23_hlm_connected_gpu_reproduction_001/staging_cpp_repair/unit_receipt.json) for executable checks. The RTL counterpart has its own interface and ownership implementation; its source and completed or pending differential checks are linked in the [integration chapter](../integration_and_verification.md#compiled-staging-repair-candidate). No physical barrier-release latency has been inferred from the focused whole-kernel error reduction.
+
+**Separate Verilog realization.** [The behavioral staging module](../../../step23_hlm_connected_gpu_reproduction_001/staging_rtl_repair/repaired_staging.sv) implements the same candidate state and ordered edge transitions, using [generated instruction tables](../../../step23_hlm_connected_gpu_reproduction_001/staging_rtl_repair/producer_tables.svh). It adds numerical sector payloads and shared halfword outputs to the C++ metadata interface. This component implementation does not by itself replace or validate the full-chip model.
+
+[The completed component parity receipt](../../../step23_hlm_connected_gpu_reproduction_001/staging_rtl_repair/parity_receipt.json) records 921,445 protocol/address/counter comparisons and 36,864 BF16 payload checks across 18 frames. It does not validate full-chip timing, Verilog matrix arithmetic, mid-flight reset, or RTL negative-response rejection.

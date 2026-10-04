@@ -1,0 +1,89 @@
+{
+  "state": "unmeasured_source_timing_candidates_no_parameter_change",
+  "per_warp_dynamic_counts": {
+    "LDCU": 3,
+    "S2R": 96,
+    "LDC": 241
+  },
+  "PCs": [
+    {
+      "pc": "0x1b0",
+      "opcode": "LDCU",
+      "wr_tag": 0,
+      "req_mask": 0,
+      "executions_per_warp": 1
+    },
+    {
+      "pc": "0x1e0",
+      "opcode": "LDCU.64",
+      "wr_tag": 1,
+      "req_mask": 0,
+      "executions_per_warp": 1
+    },
+    {
+      "pc": "0x290",
+      "opcode": "LDCU.64",
+      "wr_tag": 2,
+      "req_mask": 0,
+      "executions_per_warp": 1
+    },
+    {
+      "pc": "0x320",
+      "opcode": "S2R",
+      "wr_tag": 0,
+      "req_mask": 0,
+      "executions_per_warp": 48
+    },
+    {
+      "pc": "0x330",
+      "opcode": "LDC",
+      "wr_tag": 1,
+      "req_mask": 0,
+      "executions_per_warp": 48
+    },
+    {
+      "pc": "0x370",
+      "opcode": "LDC",
+      "wr_tag": 3,
+      "req_mask": 0,
+      "executions_per_warp": 48
+    },
+    {
+      "pc": "0x720",
+      "opcode": "S2R",
+      "wr_tag": 0,
+      "req_mask": 0,
+      "executions_per_warp": 48
+    },
+    {
+      "pc": "0x730",
+      "opcode": "LDC",
+      "wr_tag": 1,
+      "req_mask": 0,
+      "executions_per_warp": 48
+    },
+    {
+      "pc": "0x770",
+      "opcode": "LDC",
+      "wr_tag": 3,
+      "req_mask": 0,
+      "executions_per_warp": 48
+    },
+    {
+      "pc": "0xb00",
+      "opcode": "LDC",
+      "wr_tag": 0,
+      "req_mask": 0,
+      "executions_per_warp": 48
+    },
+    {
+      "pc": "0xbb0",
+      "opcode": "LDC",
+      "wr_tag": 0,
+      "req_mask": 0,
+      "executions_per_warp": 1
+    }
+  ],
+  "model": "Allcurrentlykind0/ALUready1 despiteencodedwritebarrierandlateraddressdependencies",
+  "candidate_test": "Independentlytimevalue-dependent addressdecode after LDC or S2R versus matched register-immediatecontrol; audit endpointbeforeLD.E. Do not infer latency fromlongscoreboardpercent orfitmissingwholecycles."
+}

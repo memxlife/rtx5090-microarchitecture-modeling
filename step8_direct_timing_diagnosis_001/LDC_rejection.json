@@ -1,0 +1,8 @@
+{
+  "state": "rejected_numerical_before_parameter_adoption",
+  "exit_code": 3,
+  "target_LDC_after_clock_verified": true,
+  "raw_result": "{\"kind\":\"correctness\",\"unit\":0,\"dep\":0,\"bad\":18432}\n",
+  "no_latency_prior_adopted": true,
+  "no_further_repair": true
+}

@@ -1,0 +1,718 @@
+# RTX 5090 GEMM Tiling as a Genuine MILP
+## Stage-0 Design and Experiment
+
+## What this rewrite corrects
+
+The previous design incorrectly enumerated complete tile triples and let the MILP select one. That reduces the solver to table lookup. This rewrite makes the tile dimensions themselves integer decision variables and starts from the physical GPU equations.
+
+Stage 0 fixes the RTX 5090 hardware, GEMM workload, datatype, shared-memory tiling concept, reuse knowledge, coalescing strategy, thread/warp mapping, layouts, Tensor Core programming strategy, and initial pipeline structure. **Stage 0 is not structure discovery yet.**
+
+The experiment is:
+
+\[
+\text{physical GPU model}
+\rightarrow
+\text{mixed-integer nonlinear equations}
+\rightarrow
+\text{MILP reformulation}
+\rightarrow
+\text{solver}
+\rightarrow
+(B_M^\star,B_N^\star,B_K^\star)
+\rightarrow
+\text{RTX 5090 measurement}.
+\]
+
+---
+
+# 1. Research question
+
+> Can we formulate real GEMM software tiling on an NVIDIA GeForce RTX 5090 as a MILP in which \(B_M,B_N,B_K\) are integer decision variables, solve it efficiently, and have the solver-selected tile agree with measured RTX 5090 performance?
+
+The solver must discover the tile. We do **not** supply a hand-picked list such as 128/160/192/256.
+
+---
+
+# 2. Experimental platform
+
+Target: **NVIDIA GeForce RTX 5090**.
+
+Important correction: RTX 5090 uses **GDDR7**, not HBM. The experiment therefore models global/off-chip GDDR7 memory.
+
+Before solving, populate a hardware table. Every number must be tagged **published**, **queried**, **measured**, **inferred**, or **assumed**.
+
+| Quantity | Symbol | Evidence |
+|---|---:|---|
+| Peak global bandwidth | \(BW_G^{peak}\) | published |
+| Sustainable global bandwidth | \(BW_G\) | measured |
+| Global transaction granularity | \(G_G\) | verify |
+| Global-memory latency | \(L_G\) | measured |
+| Shared memory per SM | \(S_{SM}\) | query/verify |
+| Shared memory per CTA | \(S_{CTA}^{max}\) | query/verify |
+| Shared-memory bandwidth | \(BW_S\) | measured |
+| Shared-memory latency | \(L_S\) | measured |
+| Register capacity | \(R_{SM}\) | query/verify |
+| Register/thread limit | \(R_{thr}^{max}\) | query/verify |
+| Register allocation granularity | \(G_R\) | verify |
+| Tensor Core instruction shapes | — | NVIDIA CUDA/CUTLASS |
+| Sustainable Tensor Core throughput | \(P_{TC}\) | measured |
+
+Do not invent undocumented microarchitectural values.
+
+---
+
+# 3. Fixed workload and Stage-0 assumptions
+
+\[
+C=AB,
+\]
+
+\[
+A\in\mathbb{R}^{M\times K},\qquad
+B\in\mathbb{R}^{K\times N},\qquad
+C\in\mathbb{R}^{M\times N}.
+\]
+
+Useful work:
+
+\[
+W_{useful}=2MNK.
+\]
+
+Freeze one datatype/kernel family first, e.g. BF16 Tensor Core GEMM.
+
+Fixed at Stage 0:
+
+- shared-memory staging;
+- global-memory coalescing/vectorization strategy;
+- CTA thread count;
+- warp/thread-to-data mapping;
+- global/shared layouts;
+- Tensor Core instruction family;
+- pipeline-stage count;
+- epilogue.
+
+---
+
+# 4. Integer decision variables
+
+\[
+B_M,B_N,B_K\in\mathbb{Z}_+.
+\]
+
+Physical bounds:
+
+\[
+B_M^{min}\le B_M\le B_M^{max},
+\]
+
+\[
+B_N^{min}\le B_N\le B_N^{max},
+\]
+
+\[
+B_K^{min}\le B_K\le B_K^{max}.
+\]
+
+If legal granularity is \(g_M,g_N,g_K\), introduce integer quotients:
+
+\[
+B_M=g_Mq_M,\qquad
+B_N=g_Nq_N,\qquad
+B_K=g_Kq_K.
+\]
+
+No power-of-two assumption is imposed. A dimension such as 160 remains searchable whenever it is legal.
+
+---
+
+# 5. Physical equations
+
+## 5.1 Tile counts and padding
+
+\[
+n_M=\left\lceil\frac{M}{B_M}\right\rceil,\qquad
+n_N=\left\lceil\frac{N}{B_N}\right\rceil,\qquad
+n_K=\left\lceil\frac{K}{B_K}\right\rceil.
+\]
+
+\[
+\widetilde M=n_MB_M,\qquad
+\widetilde N=n_NB_N,\qquad
+\widetilde K=n_KB_K.
+\]
+
+\[
+W_{exec}=2\widetilde M\widetilde N\widetilde K.
+\]
+
+\[
+\eta_{pad}=\frac{W_{exec}}{2MNK}.
+\]
+
+Padding is a cost, not a legality rule.
+
+## 5.2 Global-memory traffic and reuse
+
+For one CTA and one \(K\)-step:
+
+\[
+D_{G,step}=sB_K(B_M+B_N).
+\]
+
+This supports
+
+\[
+2B_MB_NB_K
+\]
+
+FLOPs, so
+
+\[
+I_G=\frac{2B_MB_N}{s(B_M+B_N)}.
+\]
+
+Ignoring cross-CTA cache reuse initially:
+
+\[
+D_G^{AB}
+=
+n_Mn_Nn_K\,sB_K(B_M+B_N).
+\]
+
+\[
+D_G=D_G^{AB}+D_G^C+D_G^{spill}.
+\]
+
+Stage 0 forbids spilling, so
+
+\[
+D_G^{spill}=0.
+\]
+
+## 5.3 Global transactions, bandwidth, and latency
+
+With fixed mapping/layout, derive transaction count \(N_G\).
+
+\[
+D_G^{phys}=N_GG_G.
+\]
+
+\[
+T_G^{BW}=\frac{D_G^{phys}}{BW_G}.
+\]
+
+With effective outstanding requests \(Q_G\):
+
+\[
+T_G^{LAT}=\frac{N_GL_G}{Q_G}.
+\]
+
+Require
+
+\[
+T_G\ge T_G^{BW},\qquad
+T_G\ge T_G^{LAT}.
+\]
+
+The \(Q_G\) model must be validated experimentally.
+
+## 5.4 Shared memory
+
+With \(p\) buffering stages:
+
+\[
+S_{CTA}=p\,sB_K(B_M+B_N).
+\]
+
+Constraint:
+
+\[
+S_{CTA}\le S_{CTA}^{max}.
+\]
+
+Physical shared-memory-limited residency:
+
+\[
+n_{CTA}^{SMEM}
+=
+\left\lfloor
+\frac{S_{SM}}
+{\operatorname{round}_{G_S}(S_{CTA})}
+\right\rfloor.
+\]
+
+Fixed mapping determines shared-memory traffic \(D_S\). With bank-conflict factor \(\gamma_{bank}\):
+
+\[
+T_S^{BW}=\frac{\gamma_{bank}D_S}{BW_S}.
+\]
+
+Optionally:
+
+\[
+T_S^{LAT}=\frac{N_SL_S}{Q_S}.
+\]
+
+Require
+
+\[
+T_S\ge T_S^{BW},\qquad
+T_S\ge T_S^{LAT}.
+\]
+
+## 5.5 Registers
+
+\[
+R_{thread}
+=
+R_{acc}+R_{operand}+R_{temp}.
+\]
+
+Under the fixed mapping, derive accumulator demand from the number of output accumulators owned by each thread/warp. Symbolically,
+
+\[
+R_{acc}\approx \alpha_RB_MB_N,
+\]
+
+where \(\alpha_R\) is derived from the mapping, not arbitrarily fitted.
+
+Allocated registers:
+
+\[
+R_{alloc}
+=
+\operatorname{round}_{G_R}
+\left(T_{CTA}R_{thread}\right).
+\]
+
+Register-limited residency:
+
+\[
+n_{CTA}^{REG}
+=
+\left\lfloor\frac{R_{SM}}{R_{alloc}}\right\rfloor.
+\]
+
+Stage 0 requires
+
+\[
+R_{thread}\le R_{thr}^{max}
+\]
+
+and forbids spills.
+
+## 5.6 Occupancy
+
+\[
+n_{CTA}^{resident}
+=
+\min
+\left(
+n_{CTA}^{REG},
+n_{CTA}^{SMEM},
+n_{CTA}^{THREAD},
+n_{CTA}^{ARCH}
+\right).
+\]
+
+Occupancy is not itself the objective. It matters through latency hiding, memory-level parallelism, and compute utilization.
+
+## 5.7 Tensor Core legality
+
+For fixed instruction shape
+
+\[
+(m_{TC},n_{TC},k_{TC}),
+\]
+
+introduce integer instruction counts \(i_M,i_N,i_K\):
+
+\[
+i_Mm_{TC}\ge B_M,
+\]
+
+\[
+i_Nn_{TC}\ge B_N,
+\]
+
+\[
+i_Kk_{TC}\ge B_K.
+\]
+
+Instruction rounding contributes executed work. Exact legality must match the RTX 5090 CUDA/CUTLASS path used by the experiment.
+
+## 5.8 Compute time
+
+\[
+T_C=\frac{W_{exec}}{P_{TC}\eta_C}.
+\]
+
+Potential dependencies:
+
+\[
+\eta_C=f(n_{CTA}^{resident},i_M,i_N,i_K,\text{pipeline state}).
+\]
+
+Do not invent \(f\). Derive what can be derived and measure the remainder.
+
+## 5.9 Overall time
+
+Initial overlap hypothesis:
+
+\[
+T=\max(T_C,T_G,T_S).
+\]
+
+This assumption is experimentally testable.
+
+---
+
+# 6. Why the physical model is not yet a MILP
+
+The physical equations contain:
+
+- integer products such as \(B_MB_K\);
+- products such as \(n_MB_M\);
+- triple products in executed work;
+- ceilings and floors;
+- allocation rounding;
+- min/max;
+- latency/concurrency coupling;
+- empirical utilization functions.
+
+Therefore the direct physical model is MINLP-like.
+
+**The Stage-0 mathematical task is to reformulate this faithfully as a MILP.**
+
+---
+
+# 7. MILP reformulation
+
+## 7.1 Max — exact
+
+Replace
+
+\[
+T=\max(T_C,T_G,T_S)
+\]
+
+with
+
+\[
+T\ge T_C,\qquad
+T\ge T_G,\qquad
+T\ge T_S
+\]
+
+and minimize \(T\).
+
+## 7.2 Bounded integer encoding
+
+For example,
+
+\[
+q_M=q_M^{min}+\sum_{r=0}^{R_M-1}2^rb_{M,r},
+\qquad b_{M,r}\in\{0,1\}.
+\]
+
+Then
+
+\[
+B_M=g_Mq_M.
+\]
+
+Encode \(q_N,q_K\) independently.
+
+This is **not** one-hot enumeration of complete tile triples. The solver constructs the combination.
+
+## 7.3 Exact bounded integer products
+
+For
+
+\[
+w=bx,
+\qquad b\in\{0,1\},
+\qquad L_x\le x\le U_x,
+\]
+
+use
+
+\[
+w\le U_xb,
+\]
+
+\[
+w\ge L_xb,
+\]
+
+\[
+w\le x-L_x(1-b),
+\]
+
+\[
+w\ge x-U_x(1-b).
+\]
+
+Using binary expansion of one bounded integer factor, products such as
+
+\[
+B_MB_K
+\]
+
+can be represented exactly with auxiliary variables. Higher-order products can be decomposed recursively.
+
+## 7.4 Exact ceiling relation
+
+Instead of directly using
+
+\[
+n_M=\left\lceil M/B_M\right\rceil,
+\]
+
+enforce
+
+\[
+n_MB_M\ge M
+\]
+
+and
+
+\[
+(n_M-1)B_M\le M-1.
+\]
+
+For positive integers this exactly expresses the ceiling. Linearize the products using the bounded-integer construction. Repeat for \(N,K\).
+
+## 7.5 Allocation rounding
+
+For granularity \(G\), introduce integer allocation units \(a\):
+
+\[
+A=Ga,
+\]
+
+with constraints making \(A\) the smallest legal allocation not below the requested amount.
+
+## 7.6 Residency/minimum
+
+Residency has a small bounded integer range. Encode possible residency levels with binary indicators \(o_r\), requiring exactly one level and enforcing all register/shared-memory/thread/architectural feasibility conditions.
+
+## 7.7 Empirical utilization
+
+Tensor Core utilization and latency hiding should not be fabricated analytically when documentation is insufficient.
+
+Measure them versus a small set of physically meaningful state variables and encode the response using:
+
+- discrete regime variables; or
+- piecewise-linear approximation where justified.
+
+Every such term remains explicitly labeled empirical.
+
+---
+
+# 8. Final optimization problem
+
+Minimize
+
+\[
+\boxed{\min T}
+\]
+
+over:
+
+- \(B_M,B_N,B_K\);
+- \(n_M,n_N,n_K\);
+- \(i_M,i_N,i_K\);
+- residency variables;
+- binary encodings;
+- product/rounding auxiliaries;
+- measured-regime variables.
+
+Constraints encode:
+
+1. tile bounds/granularity;
+2. matrix coverage and padding;
+3. Tensor Core legality;
+4. global-memory traffic/transactions;
+5. shared-memory capacity/traffic;
+6. register capacity;
+7. occupancy/residency;
+8. measured utilization regimes;
+9. latency lower bounds;
+10. makespan lower bounds.
+
+**The solver chooses the tile dimensions.**
+
+---
+
+# 9. RTX 5090 experiment
+
+## Phase A — characterize the device
+
+Measure/query:
+
+- sustainable GDDR7/global bandwidth;
+- global-memory latency;
+- shared-memory bandwidth/latency;
+- exposed register/resource limits;
+- Tensor Core throughput for the selected datatype/instruction path;
+- throughput versus residency where needed.
+
+Record GPU clocks, thermal/power state, driver, CUDA version, compiler flags, and launch configuration.
+
+## Phase B — parameterized GEMM kernel
+
+Implement a kernel generator accepting
+
+\[
+(B_M,B_N,B_K).
+\]
+
+It must cover the full legal MILP domain rather than a curated set of conventional tiles.
+
+If a tile cannot compile or execute legally, identify the actual legality condition and add that condition to the model.
+
+## Phase C — solve
+
+For each matrix shape:
+
+1. instantiate hardware parameters;
+2. solve MILP to proven optimality when practical;
+3. record \((B_M^\star,B_N^\star,B_K^\star)\);
+4. record predicted latency;
+5. record active constraints;
+6. record near-optimal solutions and solver gap/runtime.
+
+## Phase D — execute and profile
+
+Run:
+
+- MILP optimum;
+- nearby legal configurations;
+- conventional human baselines;
+- nonstandard legal configurations;
+- adversarial cases near register/shared-memory/occupancy cliffs.
+
+Measure repeated kernel latency after warm-up.
+
+Collect Nsight Compute metrics for global traffic/throughput, shared-memory traffic, register count, achieved occupancy, Tensor Core utilization, stalls, and later spill traffic.
+
+## Phase E — compare
+
+Prediction error:
+
+\[
+E_T=
+\frac{|T_{pred}-T_{meas}|}{T_{meas}}.
+\]
+
+Optimization regret:
+
+\[
+\mathrm{regret}
+=
+\frac{
+T_{meas}(x_{MILP})-T_{meas}(x_{best})
+}{
+T_{meas}(x_{best})
+}.
+\]
+
+Primary question:
+
+> **Does the MILP select the measured best or near-best tile for the correct architectural reasons?**
+
+---
+
+# 10. Falsification and model evolution
+
+If prediction is wrong, identify the first missing mechanism that reverses tile ordering. Candidates include:
+
+- alignment/transaction effects;
+- wrong concurrency model;
+- bank conflicts;
+- register allocation granularity;
+- compiler-generated extra registers;
+- occupancy cliffs;
+- Tensor Core scheduling;
+- pipeline overlap;
+- cache effects;
+- edge-tile execution;
+- spilling.
+
+Do not add arbitrary correction factors.
+
+Iterate:
+
+\[
+\text{physical model}
+\rightarrow
+\text{MILP}
+\rightarrow
+\text{prediction}
+\rightarrow
+\text{RTX 5090 measurement}
+\rightarrow
+\text{counterexample}
+\rightarrow
+\text{model revision}.
+\]
+
+---
+
+# 11. Ablations
+
+Remove one mechanism at a time:
+
+1. padding cost;
+2. register constraint;
+3. occupancy dependence;
+4. latency term;
+5. shared-memory bandwidth;
+6. Tensor Core utilization dependence;
+7. allocation granularity.
+
+Observe whether the selected tile changes. This identifies which details are decision-critical.
+
+---
+
+# 12. Success criteria
+
+Stage 0 succeeds if:
+
+1. tile dimensions are genuine solver variables;
+2. the MILP solves efficiently over a meaningful legal domain;
+3. the optimum generates a legal RTX 5090 kernel;
+4. measured performance is near the best configuration found by broad validation;
+5. active constraints explain why the optimum wins;
+6. the model captures cases where padding is outweighed by register/occupancy/compute effects;
+7. model failures can be traced to identifiable missing mechanisms.
+
+---
+
+# 13. Progression toward agentic structure discovery
+
+Only after Stage 0 is validated do we remove domain knowledge.
+
+### Stage 1
+Allow spilling and require the model to represent its cost.
+
+### Stage 2
+Expose warp/register tile dimensions.
+
+### Stage 3
+Expose shared-memory layout and pipeline stages.
+
+### Stage 4
+Expose thread/data mapping and coalescing.
+
+### Stage 5
+Stop providing the shared-memory tiling structure and ask the agent to infer reuse/staging.
+
+### Stage 6
+Ask the agent to derive the mathematical formulation and reduction strategy from the semantic GPU problem.
+
+The long-term research question becomes:
+
+> **Can an agent reproduce the expert process that transformed physical GPU behavior into the Stage-0 mathematical model, verify its assumptions against real hardware, and improve the formulation when measurements falsify it?**

@@ -1,0 +1,143 @@
+{
+  "state": "independent_AB_transfer_rejected_no_default_promotion",
+  "created_utc": "2026-10-04T07:14:17.141229+00:00",
+  "frozen_prediction_sha256": "03fe429f3ae61cc429133a97d8d17c0a785891236cfd50e22bf267d5abbfd6f4",
+  "cases": [
+    {
+      "K": 3072,
+      "baseline_uniform352_prediction_us": 29.796598639455784,
+      "AB_prediction_us": 26.548299319727892,
+      "physical_us": 43.5147171,
+      "baseline_signed_error_percent": -31.5252387577724,
+      "AB_signed_error_percent": -38.990067983854836,
+      "baseline_missing_us": 13.718118460544215,
+      "AB_missing_us": 16.966417780272106,
+      "gap_change_explained_us": -3.2482993197278915,
+      "gap_closed_fraction": -0.2367889830570123,
+      "AB_ablations_prediction_us": {
+        "baseline_uniform352": 29.796598639455784,
+        "A_only": 29.61530612244898,
+        "B_only": 29.780272108843537,
+        "AB_only": 26.548299319727892,
+        "constant_only": 29.796598639455784,
+        "special_only": 29.796598639455784
+      },
+      "validation_kind": "repeated validation"
+    },
+    {
+      "K": 1024,
+      "baseline_uniform352_prediction_us": 11.764285714285714,
+      "AB_prediction_us": 10.696938775510205,
+      "physical_us": 15.1331205,
+      "baseline_signed_error_percent": -22.261335893772117,
+      "AB_signed_error_percent": -29.314388426959237,
+      "baseline_missing_us": 3.368834785714286,
+      "AB_missing_us": 4.436181724489796,
+      "gap_change_explained_us": -1.0673469387755095,
+      "gap_closed_fraction": -0.3168297072037038,
+      "AB_ablations_prediction_us": {
+        "baseline_uniform352": 11.764285714285714,
+        "A_only": 11.724149659863945,
+        "B_only": 11.75578231292517,
+        "AB_only": 10.696938775510205,
+        "constant_only": 11.764285714285714,
+        "special_only": 11.764285714285714
+      },
+      "validation_kind": "repeated validation"
+    },
+    {
+      "K": 2048,
+      "baseline_uniform352_prediction_us": 20.773469387755103,
+      "AB_prediction_us": 18.6265306122449,
+      "physical_us": 29.2510395,
+      "baseline_signed_error_percent": -28.98211570308432,
+      "AB_signed_error_percent": -36.32181648708621,
+      "baseline_missing_us": 8.477570112244898,
+      "AB_missing_us": 10.624508887755102,
+      "gap_change_explained_us": -2.146938775510204,
+      "gap_closed_fraction": -0.2532493093049378,
+      "AB_ablations_prediction_us": {
+        "baseline_uniform352": 20.773469387755103,
+        "A_only": 20.69251700680272,
+        "B_only": 20.768027210884355,
+        "AB_only": 18.6265306122449,
+        "constant_only": 20.773469387755103,
+        "special_only": 20.773469387755103
+      },
+      "validation_kind": "new reduction-length prediction"
+    }
+  ],
+  "MIP": {
+    "selected_path": "direct",
+    "predicted_us": 26.548299319727892,
+    "same_four_path_domain": true,
+    "actual_domain_winner": "direct",
+    "actual_paths_us": {
+      "direct": 43.5147171,
+      "staged32": 96.0012817,
+      "staged48": 94.4910431,
+      "staged64": 100.097282
+    },
+    "ranking_still_matches": true,
+    "model_solver_gap": 0.0,
+    "source_executor_issue_mismatches": 0
+  },
+  "mechanism_result": "Independent raw A292/B305 readiness substitution lowers the source timing and increases every runtime error. It does not explain the missing positive delay. Source operand labels are corrected, but these timing priors are not promoted to the default model.",
+  "accepted_functional_updates": [
+    "Correct A/B pointer ancestry and PC load identities",
+    "Separate instruction readiness classes implemented with unchanged default behavior",
+    "Source cache counter regenerated with correct operand identities; aggregate counts unchanged"
+  ],
+  "rejected_or_unknown": [
+    "LDC/S2R first probes hoisted target before clock",
+    "LDC clock repair passed bracket but failed numerical check; no timing prior accepted",
+    "Global return/ownership/control timing remains incomplete",
+    "Raw single-word primitive transfer into full WMMA load stream is falsified as accuracy improvement"
+  ],
+  "not_claimed": [
+    "Unique root cause",
+    "5percent hardware timing accuracy",
+    "Full executor RTL equivalence",
+    "Global kernel optimum"
+  ],
+  "cost": {
+    "prediction_and_ablations_seconds": 0.4032102080527693,
+    "successful_MIP_construction_and_solve_seconds": 8.116633417084813,
+    "successful_MIP_solve_seconds": 5.7318593331146985,
+    "two_failed_MIP_attempts": "Preserved status4; elapsed costs not separately recorded",
+    "GPU_confirmation_receipts": "../step8_direct_timing_diagnosis_001/K1024_results.jsonl, K2048_results.jsonl, K3072_results.jsonl"
+  },
+  "next_consequential_test": "A numerically correct constant-load or special-register readiness probe with audited clock bracket, or source queue/return arbitration timing. Do not tune cache capacity when request counts already match.",
+  "reduction_slope_diagnostic": {
+    "intervals": [
+      {
+        "K_from": 1024,
+        "K_to": 2048,
+        "additional_stages": 32,
+        "physical_increment_us": 14.117919,
+        "AB_model_increment_us": 7.929591836734694,
+        "missing_increment_us": 6.188327163265306,
+        "missing_us_per_stage": 0.19338522385204082,
+        "missing_reference_cycles_per_stage_at2940": 568.552558125
+      },
+      {
+        "K_from": 2048,
+        "K_to": 3072,
+        "additional_stages": 32,
+        "physical_increment_us": 14.263677599999998,
+        "AB_model_increment_us": 7.921768707482993,
+        "missing_increment_us": 6.341908892517004,
+        "missing_us_per_stage": 0.1981846528911564,
+        "missing_reference_cycles_per_stage_at2940": 582.6628794999998
+      }
+    ],
+    "interpretation": "Both adjacent 32-stage increments have a similar positive missing cost. This points to repeated loop behavior rather than a fixed launch or output tail. The residual slope is diagnostic only and is not installed as a parameter.",
+    "not_unique_attribution": true
+  },
+  "promotion_decision": {
+    "AB_ready_timing_priors": "rejected as a default replacement",
+    "correct_pointer_and_operand_classification": "accepted functional correction",
+    "default_direct_uniform352": "retained provisional prior; still fails timing target",
+    "new_constant_special_readiness": "none accepted"
+  }
+}

@@ -194,3 +194,43 @@ Retain the verification expectations and existing receipts in Section 8. The [in
 Addresses and masks determine transaction counts. Bound outstanding work by modeled ownership/queue capacity; a guessed per-warp transaction cap is not a documented hardware fact.
 
 A parameter checked through documentation or a transferred prior can be used provisionally. Refine it when a new end-to-end case disagrees materially or when it changes the optimization choice. Do not spend time recovering a private property that the supported execution path does not exercise.
+
+## 11. Candidate compiled staging path
+
+The previous connected timing model treated staging as a sequence of sector transfers and row commits. The repair adds the compiled load-to-register-to-store dependency path. Its purpose is to prevent an early cache return from allowing a dependent shared store to issue before its source register is ready. The candidate is implemented separately in [C++ staging](../../../step23_hlm_connected_gpu_reproduction_001/staging_cpp_repair/staging_event.hpp), preserving the frozen baseline.
+
+### Interface contract
+
+| Interface | Fields | Acceptance and ownership |
+|---|---|---|
+| Stage request | `valid`, context, ID, A/B bases, tile row/column, stage index | Accept when `request_ready` is true. The named context must be inactive and geometry/alignment legal. |
+| Sector request | `backing_valid`, ID, byte address | Accept when `backing_ready` is true. Hold the original packet while stalled. |
+| Sector return | `response_valid`, ID | Match an accepted, unfinished sector. Duplicate, unaccepted or unowned returns are errors. |
+| Shared commit | `write_valid`, context, 32 byte addresses | Accept when `write_ready` is true. The packet identifies one 64-byte shared operand row. |
+| Stage completion | `done_valid`, context, original request ID | Hold until `done_ready`. Acknowledgment releases the context only after all instructions and transfers have drained. |
+
+The stage request contains workload coordinates, not a measured duration. For each 32×32×32 reduction stage, the component generates 128 distinct 32-byte input sectors and 64 shared row commits. Each commit covers 32 BF16 values, or 64 bytes. The complete A/B shared operands occupy 4,096 bytes; there are 2,048 distinct BF16 operand addresses. These component-level addresses must not be confused with the 12,288 output addresses in the focused 128×96 workload.
+
+### Storage, ordering and timing
+
+The component keeps a load queue, a store-commit queue, four warp cursors per context, and the register/tag ownership described in [Chapter 04](04_registers_readiness_and_operand_collection.md#11-candidate-staging-register-ownership). Load and commit queues each permit 32 pending entries. One eligible instruction is selected by a rotating cursor across resident warps. This is a reconstructed arbitration rule, not an identified NVIDIA scheduler.
+
+| Operation | Candidate timing rule | Status |
+|---|---|---|
+| Cache sector acceptance | External ready/valid handshake | Connected cache and credit rules remain unchanged. |
+| Loaded register availability | Maximum of issue plus 340 cycles and final return plus one edge | Scoped prior plus actual completion dependency. |
+| Shared-store source capture | One cycle | Provisional; no independent physical capture delay identified. |
+| Shared-store commit eligibility | Issue plus one cycle, then external commit handshake | Provisional service/visibility rule. |
+| Stage done | All four cursors at the barrier and no pending load or store | Logical drain condition, not a fitted runtime. |
+
+The decoded path contains 217 prefix operations per warp, or 868 per four-warp stage. Instructions retain source, destination and dependency-tag identities. A store is not counted as committed merely because its instruction issued: its commit packet must be accepted. The metadata model does not carry the numerical loaded values.
+
+### Verification boundary
+
+The [unit checks](../../../step23_hlm_connected_gpu_reproduction_001/staging_cpp_repair/unit_receipt.json) cover 128 sectors, 64 commits, early and delayed returns, backpressure and stale callbacks. The [focused comparison](../../../step23_hlm_connected_gpu_reproduction_001/staging_cpp_repair/focused_result.json) reports 994,607 candidate cycles versus 667,007 baseline cycles for 128×96×12,288. At the 2.94 GHz reference, these are 338.302 and 226.873 microseconds; the unchanged GPU median is 380.346 microseconds. The candidate still underpredicts by 11.054%, so it is not promoted as a 5% model.
+
+The new producer prefix leaves the native 40-instruction compute template and complete control tail unchanged. Whole-kernel regressions and the Verilog counterpart must be evaluated separately; their current status is linked from [integration and verification](../integration_and_verification.md#compiled-staging-repair-candidate).
+
+**Separate Verilog realization.** [The behavioral staging module](../../../step23_hlm_connected_gpu_reproduction_001/staging_rtl_repair/repaired_staging.sv) implements the same candidate state and ordered edge transitions, using [generated instruction tables](../../../step23_hlm_connected_gpu_reproduction_001/staging_rtl_repair/producer_tables.svh). It adds numerical sector payloads and shared halfword outputs to the C++ metadata interface. This component implementation does not by itself replace or validate the full-chip model.
+
+[The completed component parity receipt](../../../step23_hlm_connected_gpu_reproduction_001/staging_rtl_repair/parity_receipt.json) records 921,445 protocol/address/counter comparisons and 36,864 BF16 payload checks across 18 frames. It does not validate full-chip timing, Verilog matrix arithmetic, mid-flight reset, or RTL negative-response rejection.

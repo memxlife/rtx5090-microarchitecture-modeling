@@ -1,0 +1,51 @@
+{
+  "control_shape": [
+    32,
+    32,
+    32
+  ],
+  "same_architecture_final_counters": true,
+  "scope": "Bounded exact worker-count control; host threading changes execution organization, not model parameters. Large-shape equivalence remains checked by deterministic source scheduling, not this small control alone.",
+  "cases": [
+    {
+      "host_workers": 1,
+      "argv": [
+        "32",
+        "32",
+        "32",
+        "1",
+        "170",
+        "48",
+        "11",
+        "20000000",
+        "1",
+        "1024",
+        "1",
+        "1",
+        "32"
+      ],
+      "host_seconds": 1.9969962919130921,
+      "final_record": "FULL_CPP_PASS launch=0 M=32 N=32 K=32 shared_slots=32 hashed=1 warm=1 cycles=9035 checked=1024 peak=1 requests=128 hits=128 misses=0 merges=0 fills=0"
+    },
+    {
+      "host_workers": 4,
+      "argv": [
+        "32",
+        "32",
+        "32",
+        "1",
+        "170",
+        "48",
+        "11",
+        "20000000",
+        "1",
+        "1024",
+        "1",
+        "4",
+        "32"
+      ],
+      "host_seconds": 2.398590666009113,
+      "final_record": "FULL_CPP_PASS launch=0 M=32 N=32 K=32 shared_slots=32 hashed=1 warm=1 cycles=9035 checked=1024 peak=1 requests=128 hits=128 misses=0 merges=0 fills=0"
+    }
+  ]
+}

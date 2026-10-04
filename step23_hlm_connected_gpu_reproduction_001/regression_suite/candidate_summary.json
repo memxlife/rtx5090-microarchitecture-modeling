@@ -1,0 +1,159 @@
+{
+  "rows": [
+    {
+      "id": "staged_128_96_12288",
+      "shape": [
+        128,
+        96,
+        12288
+      ],
+      "GPU_us": 380.345607,
+      "gpu_numeric": {
+        "full_matrix_checks": 45,
+        "values_checked": 552960,
+        "correct": true
+      },
+      "old_hlm_us": 366.7125284166667,
+      "old_cpp_us": 226.87312925170068,
+      "CPP_kind": "full_cpp",
+      "cpp_numeric_payload": false,
+      "new_hlm_us": 366.7125284166667,
+      "new_cpp_us": 338.3017006802721,
+      "CPP_evaluation": "fresh_candidate_source_execution",
+      "address_coverage": 12288,
+      "address_coverage_expected": 12288,
+      "hlm_signed_error_percent": -3.584392282289006,
+      "hlm_within_5percent": true,
+      "hlm_regressed": false,
+      "cpp_signed_error_percent": -11.05413222762104,
+      "cpp_within_5percent": false,
+      "cpp_regressed": false,
+      "status": "evaluated",
+      "reported_model_elapsed_seconds": 178.368,
+      "whole_wrapper_wall_seconds": null
+    },
+    {
+      "id": "staged_128_96_49152",
+      "shape": [
+        128,
+        96,
+        49152
+      ],
+      "GPU_us": 1519.21279,
+      "gpu_numeric": {
+        "full_matrix_checks": 45,
+        "values_checked": 552960,
+        "correct": true
+      },
+      "old_hlm_us": 1455.4581228666668,
+      "old_cpp_us": 898.2955782312926,
+      "CPP_kind": "full_cpp",
+      "cpp_numeric_payload": false,
+      "new_hlm_us": 1455.4581228666668,
+      "new_cpp_us": 1345.7139455782312,
+      "address_coverage": 12288,
+      "address_coverage_expected": 12288,
+      "CPP_evaluation": "fresh_current_source_execution",
+      "CPP_host_seconds": 785.9796794168651,
+      "hlm_signed_error_percent": -4.19655939924869,
+      "hlm_within_5percent": true,
+      "hlm_regressed": false,
+      "cpp_signed_error_percent": -11.420312254070009,
+      "cpp_within_5percent": false,
+      "cpp_regressed": false,
+      "host_seconds": 785.9800889999606,
+      "status": "evaluated"
+    },
+    {
+      "id": "staged_1920_1920_1536",
+      "shape": [
+        1920,
+        1920,
+        1536
+      ],
+      "GPU_us": 244.518396,
+      "gpu_numeric": {
+        "full_matrix_checks": 45,
+        "values_checked": 165888000,
+        "correct": true
+      },
+      "old_hlm_us": 257.4634641,
+      "old_cpp_us": 245.18809523809523,
+      "CPP_kind": "full_cpp",
+      "cpp_numeric_payload": false,
+      "new_hlm_us": 257.4634641,
+      "new_cpp_us": 321.7214285714286,
+      "address_coverage": 3686400,
+      "address_coverage_expected": 3686400,
+      "CPP_evaluation": "fresh_current_source_execution",
+      "CPP_host_seconds": 464.1540144169703,
+      "hlm_signed_error_percent": 5.294108055575508,
+      "hlm_within_5percent": false,
+      "hlm_regressed": false,
+      "cpp_signed_error_percent": 31.573506874889112,
+      "cpp_within_5percent": false,
+      "cpp_regressed": true,
+      "host_seconds": 464.1544453341048,
+      "status": "evaluated"
+    }
+  ],
+  "receipts": [
+    {
+      "path": "candidate_quick.json",
+      "sha256": "88498112a56b16db1b7e96117170ba893f4387e521baf392567a2c99d8fd047c"
+    },
+    {
+      "path": "candidate_long_small.json",
+      "sha256": "e94c6f53f3b31410e798c3202273927b2dd9d676511aebf560b469f94f8d042f"
+    },
+    {
+      "path": "candidate_dense.json",
+      "sha256": "0f00d389209fe3815884ecd9b3029a7476b4751da5c38a1ae4cd737577704d4e"
+    }
+  ],
+  "reproduction_commands": [
+    [
+      "python",
+      "step23_hlm_connected_gpu_reproduction_001/regression_suite/run.py",
+      "--scope",
+      "quick",
+      "--evaluate",
+      "--cpp-source",
+      "step23_hlm_connected_gpu_reproduction_001/staging_cpp_repair/full_gpu_parallel.cpp",
+      "--output",
+      "candidate_quick.json"
+    ],
+    [
+      "python",
+      "step23_hlm_connected_gpu_reproduction_001/regression_suite/run.py",
+      "--evaluate",
+      "--cases",
+      "staged_128_96_49152",
+      "--cpp-source",
+      "step23_hlm_connected_gpu_reproduction_001/staging_cpp_repair/full_gpu_parallel.cpp",
+      "--output",
+      "candidate_long_small.json"
+    ],
+    [
+      "python",
+      "step23_hlm_connected_gpu_reproduction_001/regression_suite/run.py",
+      "--evaluate",
+      "--cases",
+      "staged_1920_1920_1536",
+      "--cpp-source",
+      "step23_hlm_connected_gpu_reproduction_001/staging_cpp_repair/full_gpu_parallel.cpp",
+      "--output",
+      "candidate_dense.json"
+    ]
+  ],
+  "source_freeze": "../staging_cpp_repair/candidate_launch_freeze.json",
+  "all_jobs_completed": true,
+  "no_further_runs": "Requested bounded checks complete; no further simulations launched.",
+  "candidate_promotion": false,
+  "reason": "Both small cases remain outside5%; dense previouslywithin5% regresses to31.57%.",
+  "GPU_observations_are_previously_known": true,
+  "C++correctness_scope": "Outputaddresscoverage and protocol/tracechecks only; no numericalpayload. GPU numericalchecksareseparateunchangedreferences.",
+  "reference_cycles_per_microsecond": 2940,
+  "no_GPU_or_Verilog_execution": true,
+  "suite_sha256": "459b4e84fcf3dac5e8e6aa2d0dd8686158e16a63d1484e57ffe128b04f7801af"
+}

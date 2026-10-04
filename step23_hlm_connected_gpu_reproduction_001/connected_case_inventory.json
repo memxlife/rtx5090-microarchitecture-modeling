@@ -1,0 +1,168 @@
+{
+  "created_utc": "2026-10-04T11:13:20.934952+00:00",
+  "purpose": "Proposed same-shape crossing against HLM GPU cases, no new physics parameters or silent substitution",
+  "cases": [
+    {
+      "shape": [
+        128,
+        96,
+        12288
+      ],
+      "connected_argv": [
+        "128",
+        "96",
+        "12288",
+        "1",
+        "170",
+        "48",
+        "11",
+        "20000000",
+        "1",
+        "1024",
+        "1",
+        "4",
+        "32"
+      ],
+      "status": "not launched",
+      "scope": "Preserved full-chip connected executable new shape instantiation; not the earlier calibrated six-SM small model.",
+      "binary_sha256": "acfe9886da70bd332b81ccd6257f5411804e92f99f0ac3828bc06e529d127fae"
+    },
+    {
+      "shape": [
+        128,
+        96,
+        49152
+      ],
+      "connected_argv": [
+        "128",
+        "96",
+        "49152",
+        "1",
+        "170",
+        "48",
+        "11",
+        "20000000",
+        "1",
+        "1024",
+        "1",
+        "4",
+        "32"
+      ],
+      "status": "not launched",
+      "scope": "Preserved full-chip connected executable new shape instantiation; not the earlier calibrated six-SM small model.",
+      "binary_sha256": "acfe9886da70bd332b81ccd6257f5411804e92f99f0ac3828bc06e529d127fae"
+    },
+    {
+      "shape": [
+        1920,
+        1920,
+        1536
+      ],
+      "connected_argv": [
+        "1920",
+        "1920",
+        "1536",
+        "1",
+        "170",
+        "48",
+        "11",
+        "20000000",
+        "1",
+        "1024",
+        "1",
+        "4",
+        "32"
+      ],
+      "status": "not launched",
+      "scope": "Preserved full-chip connected executable new shape instantiation; not the earlier calibrated six-SM small model.",
+      "binary_sha256": "acfe9886da70bd332b81ccd6257f5411804e92f99f0ac3828bc06e529d127fae"
+    },
+    {
+      "shape": [
+        1920,
+        1920,
+        4608
+      ],
+      "connected_argv": [
+        "1920",
+        "1920",
+        "4608",
+        "1",
+        "170",
+        "48",
+        "11",
+        "20000000",
+        "1",
+        "1024",
+        "1",
+        "4",
+        "32"
+      ],
+      "status": "not launched",
+      "scope": "Preserved full-chip connected executable new shape instantiation; not the earlier calibrated six-SM small model.",
+      "binary_sha256": "acfe9886da70bd332b81ccd6257f5411804e92f99f0ac3828bc06e529d127fae"
+    },
+    {
+      "shape": [
+        2048,
+        2112,
+        1536
+      ],
+      "connected_argv": [
+        "2048",
+        "2112",
+        "1536",
+        "1",
+        "170",
+        "48",
+        "11",
+        "20000000",
+        "1",
+        "1024",
+        "1",
+        "4",
+        "32"
+      ],
+      "status": "already repeated in Step22; reusable connected result only",
+      "scope": "Preserved full-chip connected executable new shape instantiation; not the earlier calibrated six-SM small model.",
+      "binary_sha256": "acfe9886da70bd332b81ccd6257f5411804e92f99f0ac3828bc06e529d127fae"
+    },
+    {
+      "shape": [
+        2048,
+        2112,
+        4608
+      ],
+      "connected_argv": [
+        "2048",
+        "2112",
+        "4608",
+        "1",
+        "170",
+        "48",
+        "11",
+        "20000000",
+        "1",
+        "1024",
+        "1",
+        "4",
+        "32"
+      ],
+      "status": "not launched",
+      "scope": "Preserved full-chip connected executable new shape instantiation; not the earlier calibrated six-SM small model.",
+      "binary_sha256": "acfe9886da70bd332b81ccd6257f5411804e92f99f0ac3828bc06e529d127fae"
+    }
+  ],
+  "limits": [
+    "Original calibrated small model has fixed six-SM configuration and M64N96; M128N96 requires separately reviewed shape instantiation rather than claiming same executable.",
+    "Full-chip preserved model supports all listed runtime shapes, but large shape runs are expensive.",
+    "Physical diagnostic045 host method differs from connected diagnostic057 even with identical main-kernel instructions.",
+    "No new run launched by this contract."
+  ],
+  "recommended_first_missing_connected_case": [
+    128,
+    96,
+    12288
+  ],
+  "calibrated_small_extension": "requires exact top shape/SM instantiation review; do not substitute full-chip shared32 for calibrated shared2"
+}

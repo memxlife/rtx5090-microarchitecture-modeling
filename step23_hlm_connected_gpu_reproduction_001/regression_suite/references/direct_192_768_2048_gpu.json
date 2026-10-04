@@ -1,0 +1,21 @@
+{
+  "K": 2048,
+  "baseline_uniform352_prediction_us": 20.773469387755103,
+  "AB_prediction_us": 18.6265306122449,
+  "physical_us": 29.2510395,
+  "baseline_signed_error_percent": -28.98211570308432,
+  "AB_signed_error_percent": -36.32181648708621,
+  "baseline_missing_us": 8.477570112244898,
+  "AB_missing_us": 10.624508887755102,
+  "gap_change_explained_us": -2.146938775510204,
+  "gap_closed_fraction": -0.2532493093049378,
+  "AB_ablations_prediction_us": {
+    "baseline_uniform352": 20.773469387755103,
+    "A_only": 20.69251700680272,
+    "B_only": 20.768027210884355,
+    "AB_only": 18.6265306122449,
+    "constant_only": 20.773469387755103,
+    "special_only": 20.773469387755103
+  },
+  "validation_kind": "new reduction-length prediction"
+}

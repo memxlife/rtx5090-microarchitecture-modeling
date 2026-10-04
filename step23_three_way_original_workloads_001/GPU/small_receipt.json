@@ -1,0 +1,60 @@
+{
+  "binary_sha256": "917b2dd398f75b65c69f4a9511a7469a03ce622520fca270aa11ef6149e3a495",
+  "comparisons": [
+    {
+      "shape": [
+        128,
+        96,
+        12288
+      ],
+      "predicted_hlm_us": 366.7125284166667,
+      "original_measured_us": 380.844808,
+      "repeat_measured_us": 380.345607,
+      "repeat_hlm_error_percent": -3.584392282289006,
+      "full_matrix_checks": 45,
+      "numeric_values_checked": 552960,
+      "correct": true,
+      "raw_samples_ms": [
+        0.3817536,
+        0.380537593,
+        0.380121607,
+        0.380543995,
+        0.379641598,
+        0.380524802,
+        0.379948801,
+        0.379724801,
+        0.380345607
+      ]
+    },
+    {
+      "shape": [
+        128,
+        96,
+        49152
+      ],
+      "predicted_hlm_us": 1455.4581228666668,
+      "original_measured_us": 1519.20002,
+      "repeat_measured_us": 1519.21279,
+      "repeat_hlm_error_percent": -4.19655939924869,
+      "full_matrix_checks": 45,
+      "numeric_values_checked": 552960,
+      "correct": true,
+      "raw_samples_ms": [
+        1.5224896,
+        1.51840003,
+        1.51921279,
+        1.51758082,
+        1.52084479,
+        1.52003841,
+        1.51838078,
+        1.52044802,
+        1.51880322
+      ]
+    }
+  ],
+  "same_original_method": true,
+  "hostenvresident_override_absent": true,
+  "no_recompile": true,
+  "clock_scope": "NVMLreportedclock10mspollnotinstantaneousproof",
+  "raw_sha256": "de099b30ea9f5f9b660963f7932fecf43b49a08cc1153eaa4cdafa53ccf3d4be"
+}

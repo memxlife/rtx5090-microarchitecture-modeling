@@ -1,0 +1,21 @@
+B_u32_mapped_probe.cu(31): warning #177-D: variable "i" was declared but never referenced
+   for(int j=0;j<WINDOW;j++){int i=tid+128*(group+j);int word=(group+j)%4,kk=(group+j)/4*16,lane=tid%32,warp=tid/32;const __nv_bfloat16*src=operand?B+(k+kk+(word%2)*8+lane/4)*768+blockIdx.x*32+(warp%2)*16+(word/2)*8+(lane%4)*2:A+(blockIdx.y*32+(warp/2)*16+(word%2)*8+lane/4)*3072+k+kk+(word/2)*8+(lane%4)*2;if(k==1024&&operand==1&&group==0&&j==0){if constexpr(DEP)asm volatile("{.reg .pred p; mov.u64 %1, %%clock64; ld.u32 %0,[%3]; setp.ne.u32 p,%0,%4; @p mov.u64 %2, %%clock64;}" :"=r"(vals[j]),"=l"(t0),"=l"(t1):"l"(src),"r"(sentinel):"memory");else asm volatile("{.reg .pred p; mov.u64 %1, %%clock64; ld.u32 %0,[%3]; setp.ne.u32 p,%5,%4; @p mov.u64 %2, %%clock64;}" :"=r"(vals[j]),"=l"(t0),"=l"(t1):"l"(src),"r"(sentinel),"r"(unsigned(tid)):"memory");}else asm volatile("ld.u32 %0, [%1];":"=r"(vals[j]):"l"(src):"memory");}
+                                 ^
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+B_u32_mapped_probe.cu(21): warning #177-D: variable "SLOTS" was declared but never referenced
+  static constexpr int TM=32/16,TN=32/16,SLOTS=(TM*TN+3)/4;
+                                         ^
+
+ptxas info    : 0 bytes gmem
+ptxas info    : Compiling entry function '_Z11ready_probeILi4ELi0EEvPK13__nv_bfloat16S2_PtPyj' for 'sm_120'
+ptxas info    : Function properties for _Z11ready_probeILi4ELi0EEvPK13__nv_bfloat16S2_PtPyj
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 40 registers, used 1 barriers
+ptxas info    : Compile time = 9.115 ms
+ptxas info    : Compiling entry function '_Z11ready_probeILi4ELi1EEvPK13__nv_bfloat16S2_PtPyj' for 'sm_120'
+ptxas info    : Function properties for _Z11ready_probeILi4ELi1EEvPK13__nv_bfloat16S2_PtPyj
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 40 registers, used 1 barriers
+ptxas info    : Compile time = 7.516 ms

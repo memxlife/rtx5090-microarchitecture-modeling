@@ -1,0 +1,1 @@
+UNIT_PASS early_cycles=2012 late_cycles=2661 pressure_cycles=2012 sectors=128 writes=64 instructions=868 early_first=521 delayed_first=684 stale_rejected=true

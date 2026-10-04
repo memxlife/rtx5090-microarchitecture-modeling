@@ -1,0 +1,95 @@
+{
+  "rows": [
+    {
+      "shape": [
+        64,
+        96,
+        64
+      ],
+      "heldout": false,
+      "model_cycles": 13852,
+      "measured_cycles": 13852.31,
+      "cycle_error_percent": -0.002237893896395171,
+      "model_us_at_measured_clock": 4.703896127715502,
+      "measured_kernel_us": 4.704,
+      "measured_SM_GHz": 2.94479291717,
+      "fixed_2_94_GHz_error_percent": 0.1608126243694885,
+      "checked_words": 12288
+    },
+    {
+      "shape": [
+        64,
+        96,
+        1536
+      ],
+      "heldout": false,
+      "model_cycles": 141639,
+      "measured_cycles": 146612.45,
+      "cycle_error_percent": -3.392242609682883,
+      "model_us_at_measured_clock": 48.07202104174151,
+      "measured_kernel_us": 49.76,
+      "measured_SM_GHz": 2.94639162096,
+      "fixed_2_94_GHz_error_percent": -3.182213399829381,
+      "checked_words": 12288
+    },
+    {
+      "shape": [
+        64,
+        96,
+        128
+      ],
+      "heldout": true,
+      "model_cycles": 19408,
+      "measured_cycles": 19375.44,
+      "cycle_error_percent": 0.16804779659198577,
+      "model_us_at_measured_clock": 6.635133097590233,
+      "measured_kernel_us": 6.624,
+      "measured_SM_GHz": 2.92503552145,
+      "fixed_2_94_GHz_error_percent": -0.3417792237667916,
+      "checked_words": 12288
+    },
+    {
+      "shape": [
+        64,
+        96,
+        768
+      ],
+      "heldout": true,
+      "model_cycles": 74968,
+      "measured_cycles": 75657.89,
+      "cycle_error_percent": -0.911854665785683,
+      "model_us_at_measured_clock": 30.6301258186281,
+      "measured_kernel_us": 30.912,
+      "measured_SM_GHz": 2.44752504263,
+      "fixed_2_94_GHz_error_percent": -17.509964648385235,
+      "checked_words": 12288
+    }
+  ],
+  "frozen_candidate": {
+    "hit_delay_additional_cycles": 4,
+    "kernel_setup_cycles": 3346,
+    "setup_fit": "K64 measured13852.31 SMcycles minus aligned simulator10506cycles; rounded to3346. This is an effective launch/prologue cost, not independently measured intrinsic hardware latency.",
+    "hit_delay_basis": "Provisional four-cycle additional return-eligibility delay; scoped candidate, not physical L2 hit latency.",
+    "heldout_shapes": [
+      [
+        64,
+        96,
+        128
+      ],
+      [
+        64,
+        96,
+        768
+      ]
+    ],
+    "source_sha256": {
+      "calibration_gemm_complete.sv": "0b7226cf1e41be82c507e968587a90523aac9448260f7963f1f37aa59d6c84c5",
+      "calibration_connected_tb.sv": "84fb047606bbb31bae736fbda280d5f8e076da685465a2bc193c10294ef72f6d",
+      "calibration_shared_l2.sv": "cd9890937cb615812117af4a8eade1deb97e5d78209c7383d37f4b0856763205",
+      "calibration_connected_top.sv": "98d0ff83a69b25a0bab6968f82cfe389f1711782070a64371dab896be78d0a8a"
+    },
+    "frozen_before_heldout_gpu_measurement": true,
+    "large_chip_timing_validation_complete": false
+  },
+  "hardware_binary_sha256": "aaee4f0855dbefb30e0b2a1b74e40cc1e30f50d56899f4108b9b43511d4d6b59"
+}

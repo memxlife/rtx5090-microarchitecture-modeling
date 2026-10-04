@@ -1,0 +1,7 @@
+{
+  "previous_incorrect_interpretation": "output_checks45as45sampledvalues",
+  "source_proof": "diagnostic045/057gemm_checked.cu:for9samples\u00d75launches copiesM*Nanditerateseveryobservedvalue",
+  "correct_interpretation": "45fulloutputmatrixchecks; numericvaluecount45*M*N",
+  "applies_to": "Step21anchor,Step22originalreproductions",
+  "old_receipts_preserved": true
+}

@@ -1,0 +1,36 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "stride": 32,
+      "replay_compute_phase": 555,
+      "independent_predicted_cycles": 172151,
+      "source_staging_cycles": 1155,
+      "source_output_cycles": 3974,
+      "prediction_matches": true,
+      "footprint_matches": true
+    },
+    {
+      "stride": 48,
+      "replay_compute_phase": 491,
+      "independent_predicted_cycles": 166007,
+      "source_staging_cycles": 1155,
+      "source_output_cycles": 3974,
+      "prediction_matches": true,
+      "footprint_matches": true
+    },
+    {
+      "stride": 64,
+      "replay_compute_phase": 683,
+      "independent_predicted_cycles": 184439,
+      "source_staging_cycles": 1155,
+      "source_output_cycles": 3974,
+      "prediction_matches": true,
+      "footprint_matches": true
+    }
+  ],
+  "selected_stride": 48,
+  "GPU_timing_used": false,
+  "verification_seconds": 0.004380667116492987,
+  "scope": "Finite3layout source surrogate arithmetic/earliest readiness replay; no detailed cross-SM cache scheduling proof."
+}

@@ -1,0 +1,692 @@
+{
+  "chronology_source": "one_hour_results_20261003.md/current_physical_model.md",
+  "round": {
+    "started_utc": "2026-10-03 07:31:48",
+    "deadline_utc": "2026-10-03 08:31:48",
+    "human_constraint": "Focus largest error and simplest benchmark; minimize prediction error in one hour.",
+    "priority": "32x32 current heldout25.3percent underestimate",
+    "active_experiment": "none; launched jobs terminal",
+    "next_if_oneblock_reproduces": "Singlebinary actualstage controls; no broad hardware probes.",
+    "model_requirements": "Each meaningful outcome reflected in executable model or explicit rejection; report physical versus calibrated accuracy separately.",
+    "latest_evidence": "diagnostic_055/verification.json",
+    "largest_validated_error": 0.05966342215429554,
+    "model_components": [
+      "runtime_v3.py",
+      "dense_runtime.py"
+    ],
+    "remaining": "dense32x32 overestimate; intrinsic control/phase resource mechanism unresolved",
+    "round_state": "completed bounded experiment round; overall physical model goal remains unfinished"
+  },
+  "model_sources": {
+    "studies/rtx5090_gemm_milp/model_components/runtime_v3.py": "4491260fd11ae32a9cc55e11ad6b6de21d7b7c340d395db5837684a17021948c",
+    "studies/rtx5090_gemm_milp/model_components/dense_runtime.py": "966ff6dbf9a653c7f1dedb4053dfa820a6f97e8beb30667efe83d129d3615a4a"
+  },
+  "model_kind": "Highlevelactualpathphasecomposition; fittedisolatedphasecosts, nofullGEMMruntimecoefficients; notRTLengine/sourceinstructionlatencies",
+  "date_scope": "one_hour_focus records2026-10-03T07:31:48UTCstart08:31:48deadline; perdiagnosticexecutiontimestampsnotrecorded; no mtimeclaim",
+  "milestones": [
+    {
+      "milestone": "diagnostic_044",
+      "tile": [
+        32,
+        32,
+        32
+      ],
+      "layout_MN": [
+        128,
+        96
+      ],
+      "verification": {
+        "absolute_rows": [
+          {
+            "single_block": false,
+            "k": 12288,
+            "predicted_us": 366.7125284166667,
+            "observed_us": 380.844808,
+            "relative_error": 0.03710771234495413
+          },
+          {
+            "single_block": false,
+            "k": 49152,
+            "predicted_us": 1455.4581228666668,
+            "observed_us": 1519.20002,
+            "relative_error": 0.04195754100459607
+          },
+          {
+            "single_block": true,
+            "k": 20480,
+            "predicted_us": 608.6559938500001,
+            "observed_us": 608.262384,
+            "relative_error": 0.0006471053616889044
+          },
+          {
+            "single_block": true,
+            "k": 73728,
+            "predicted_us": 2181.288519166667,
+            "observed_us": 2183.9935800000003,
+            "relative_error": 0.0012385846085378102
+          }
+        ],
+        "multi_block_increment": {
+          "predicted_us": 1088.7455944500002,
+          "observed_us": 1138.355212,
+          "relative_error": 0.04358008557174306
+        },
+        "all_correct": true,
+        "checks": 180,
+        "all_spill_free": true,
+        "accepted": true
+      },
+      "raw_path": "studies/rtx5090_gemm_milp/diagnostic_044/absolute_multi_measurements.json",
+      "raw_sha256": "6af8205ede2ea69dd4050673114c76174f1eee0d063ca21ee75e999750c5f4ae",
+      "executable_sha256": []
+    },
+    {
+      "milestone": "diagnostic_046",
+      "tile": [
+        64,
+        48,
+        32
+      ],
+      "layout_MN": [
+        128,
+        96
+      ],
+      "verification": {
+        "rows": [
+          {
+            "variant": "original",
+            "single_block": false,
+            "k": 12288,
+            "predicted_us": 679.5936028166667,
+            "observed_us": 676.2496110000001,
+            "relative_error": 0.004944907564119294
+          },
+          {
+            "variant": "original",
+            "single_block": false,
+            "k": 49152,
+            "predicted_us": 2704.032064166667,
+            "observed_us": 2691.8911900000003,
+            "relative_error": 0.004510165274052882
+          },
+          {
+            "variant": "original",
+            "single_block": true,
+            "k": 20480,
+            "predicted_us": 1129.46881645,
+            "observed_us": 1101.83043,
+            "relative_error": 0.02508406529487491
+          },
+          {
+            "variant": "original",
+            "single_block": true,
+            "k": 73728,
+            "predicted_us": 4053.6577050666674,
+            "observed_us": 3962.47039,
+            "relative_error": 0.023012743589654296
+          },
+          {
+            "variant": "combined",
+            "single_block": true,
+            "k": 12288,
+            "predicted_us": 679.5936028166667,
+            "observed_us": 685.203195,
+            "relative_error": 0.00818675719008191
+          },
+          {
+            "variant": "combined",
+            "single_block": true,
+            "k": 49152,
+            "predicted_us": 2704.032064166667,
+            "observed_us": 2741.66393,
+            "relative_error": 0.013725922211528309
+          }
+        ],
+        "multi_block_increment": {
+          "predicted_us": 2024.4384613500004,
+          "observed_us": 2015.6415790000003,
+          "relative_error": 0.004364308834294011
+        },
+        "all_correct": true,
+        "checks": 270,
+        "all_spill_free": true,
+        "accepted": true
+      },
+      "raw_path": "studies/rtx5090_gemm_milp/diagnostic_046/confirmation_measurements.json",
+      "raw_sha256": "b0ce0ae9036ccfc922743a57fb536c79f45e39405ec9c59870b3091ef8752b66",
+      "executable_sha256": []
+    },
+    {
+      "milestone": "diagnostic_047",
+      "tile": "perrow",
+      "layout_MN": [
+        128,
+        96
+      ],
+      "verification": {
+        "rows": [
+          {
+            "k": 12288,
+            "predicted_us": 688.5074263758504,
+            "observed_us": 716.096008,
+            "relative_error": 0.03852637260358751
+          },
+          {
+            "k": 49152,
+            "predicted_us": 2742.637714703402,
+            "observed_us": 2822.90559,
+            "relative_error": 0.028434488061146266
+          }
+        ],
+        "accepted": true,
+        "all_correct": true,
+        "checks": 90,
+        "cold_full_gemm_used_for_coefficients": false
+      },
+      "raw_path": null,
+      "raw_sha256": null,
+      "executable_sha256": []
+    },
+    {
+      "milestone": "diagnostic_048",
+      "tile": "perrow",
+      "layout_MN": [
+        128,
+        96
+      ],
+      "verification": {
+        "rows": [
+          {
+            "tile": [
+              32,
+              32,
+              32
+            ],
+            "shape": [
+              128,
+              96,
+              12288
+            ],
+            "single_block": false,
+            "k": 12288,
+            "predicted_us": 688.5074263758504,
+            "observed_us": 712.6591920000001,
+            "relative_error": 0.03388964303732667
+          },
+          {
+            "tile": [
+              32,
+              32,
+              32
+            ],
+            "shape": [
+              128,
+              96,
+              49152
+            ],
+            "single_block": false,
+            "k": 49152,
+            "predicted_us": 2742.637714703402,
+            "observed_us": 2834.15036,
+            "relative_error": 0.0322892696831365
+          },
+          {
+            "tile": [
+              64,
+              48,
+              32
+            ],
+            "shape": [
+              128,
+              96,
+              12288
+            ],
+            "single_block": true,
+            "k": 12288,
+            "predicted_us": 1242.7346742452382,
+            "observed_us": 1246.4959900000001,
+            "relative_error": 0.00301751131566963
+          },
+          {
+            "tile": [
+              64,
+              48,
+              32
+            ],
+            "shape": [
+              128,
+              96,
+              49152
+            ],
+            "single_block": true,
+            "k": 49152,
+            "predicted_us": 4956.596349880952,
+            "observed_us": 5002.72636,
+            "relative_error": 0.009220974084828248
+          },
+          {
+            "tile": [
+              64,
+              48,
+              32
+            ],
+            "shape": [
+              128,
+              96,
+              12288
+            ],
+            "single_block": false,
+            "k": 12288,
+            "predicted_us": 1242.7346742452382,
+            "observed_us": 1251.3727900000001,
+            "relative_error": 0.006902911605391249
+          },
+          {
+            "tile": [
+              64,
+              48,
+              32
+            ],
+            "shape": [
+              128,
+              96,
+              49152
+            ],
+            "single_block": false,
+            "k": 49152,
+            "predicted_us": 4956.596349880952,
+            "observed_us": 4983.35361,
+            "relative_error": 0.005369328009426133
+          }
+        ],
+        "accepted": true,
+        "checks": 270,
+        "all_correct": true,
+        "coefficients_from_full_gemm": false
+      },
+      "raw_path": "studies/rtx5090_gemm_milp/diagnostic_048/measurements.json",
+      "raw_sha256": "be9e4926bfaf00376e505d15a38b8d668da9ceb14c2704a80090088de027cdd2",
+      "executable_sha256": []
+    },
+    {
+      "milestone": "diagnostic_049",
+      "tile": [
+        32,
+        32,
+        32
+      ],
+      "layout_MN": "perrow",
+      "verification": {
+        "rows": [
+          {
+            "shape": [
+              1920,
+              1920,
+              1536
+            ],
+            "predicted_us": 94.52612980416666,
+            "observed_us": 246.464002,
+            "relative_error": 0.6164708475188736
+          },
+          {
+            "shape": [
+              1920,
+              1920,
+              4608
+            ],
+            "predicted_us": 275.98372887916673,
+            "observed_us": 696.710396,
+            "relative_error": 0.6038759713308961
+          }
+        ],
+        "decision": "reject perfect occupancy-wave scaling",
+        "all_correct": true
+      },
+      "raw_path": "studies/rtx5090_gemm_milp/diagnostic_049/measurements.json",
+      "raw_sha256": "356f465a4a3f6132bb99517aa640f57e38893e0ba2aa890ec8a8d46759a1ef9f",
+      "executable_sha256": []
+    },
+    {
+      "milestone": "diagnostic_050",
+      "tile": [
+        32,
+        32,
+        32
+      ],
+      "layout_MN": "perrow",
+      "verification": {
+        "rows": [
+          {
+            "tile": [
+              32,
+              32,
+              32
+            ],
+            "shape": [
+              1920,
+              1920,
+              1536
+            ],
+            "observed_us": 246.5408,
+            "predicted_us": 257.4634641,
+            "relative_error": 0.04430367752518061
+          },
+          {
+            "tile": [
+              32,
+              32,
+              32
+            ],
+            "shape": [
+              1920,
+              1920,
+              4608
+            ],
+            "observed_us": 697.1328020000001,
+            "predicted_us": 728.5418696999999,
+            "relative_error": 0.04505464039260598
+          },
+          {
+            "tile": [
+              32,
+              32,
+              32
+            ],
+            "shape": [
+              2048,
+              2112,
+              1536
+            ],
+            "observed_us": 276.863998,
+            "predicted_us": 293.382651592,
+            "relative_error": 0.05966342215429554
+          },
+          {
+            "tile": [
+              32,
+              32,
+              32
+            ],
+            "shape": [
+              2048,
+              2112,
+              4608
+            ],
+            "observed_us": 784.377611,
+            "predicted_us": 828.699021592,
+            "relative_error": 0.05650519592915826
+          }
+        ],
+        "all_correct": true,
+        "checks": 180,
+        "largest_error": 0.05966342215429554,
+        "full_gemm_coefficients": false,
+        "accepted_bounded": true
+      },
+      "raw_path": "studies/rtx5090_gemm_milp/diagnostic_050/confirmation_measurements.json",
+      "raw_sha256": "48a3fa2757fb6253395c6d2156adebac8b71ebcb6d11d0ef8d646d7a1a934c96",
+      "executable_sha256": []
+    },
+    {
+      "milestone": "diagnostic_051",
+      "tile": [
+        64,
+        48,
+        32
+      ],
+      "layout_MN": "perrow",
+      "verification": {
+        "rows": [
+          {
+            "tile": [
+              64,
+              48,
+              32
+            ],
+            "shape": [
+              1920,
+              1920,
+              1536
+            ],
+            "observed_us": 210.502404,
+            "predicted_us": 211.7866622,
+            "relative_error": 0.0061009193985261945
+          },
+          {
+            "tile": [
+              64,
+              48,
+              32
+            ],
+            "shape": [
+              1920,
+              1920,
+              4608
+            ],
+            "observed_us": 594.316792,
+            "predicted_us": 603.0314546000001,
+            "relative_error": 0.014663328913647966
+          },
+          {
+            "tile": [
+              64,
+              48,
+              32
+            ],
+            "shape": [
+              2048,
+              2112,
+              1536
+            ],
+            "observed_us": 244.511998,
+            "predicted_us": 250.1708701816667,
+            "relative_error": 0.02314353580991435
+          },
+          {
+            "tile": [
+              64,
+              48,
+              32
+            ],
+            "shape": [
+              2048,
+              2112,
+              4608
+            ],
+            "observed_us": 695.481586,
+            "predicted_us": 712.5804663316666,
+            "relative_error": 0.02458566937768869
+          }
+        ],
+        "all_correct": true,
+        "checks": 180,
+        "largest_error": 0.02458566937768869,
+        "full_gemm_coefficients": false
+      },
+      "raw_path": "studies/rtx5090_gemm_milp/diagnostic_051/confirmation_measurements.json",
+      "raw_sha256": "f80a55d3dc8111f9e8e52b218b2dadfd54ee500dd2d0dac5c211090eff65e2f2",
+      "executable_sha256": []
+    },
+    {
+      "milestone": "diagnostic_054",
+      "tile": "perrow",
+      "layout_MN": "perrow",
+      "verification": {
+        "rows": [
+          {
+            "tile": [
+              32,
+              32,
+              32
+            ],
+            "shape": [
+              1920,
+              1920,
+              16384
+            ],
+            "warm": 1,
+            "predicted_us": 2534.3424245,
+            "observed_us": 2514.73927,
+            "relative_error": 0.007795302969917817
+          },
+          {
+            "tile": [
+              32,
+              32,
+              32
+            ],
+            "shape": [
+              1920,
+              1920,
+              16384
+            ],
+            "warm": 0,
+            "predicted_us": 2534.3424245,
+            "observed_us": 2545.13278,
+            "relative_error": 0.004239604151418663
+          },
+          {
+            "tile": [
+              64,
+              48,
+              32
+            ],
+            "shape": [
+              1920,
+              1920,
+              16384
+            ],
+            "warm": 1,
+            "predicted_us": 2102.8031588000003,
+            "observed_us": 2033.66399,
+            "relative_error": 0.03399734132087384
+          },
+          {
+            "tile": [
+              64,
+              48,
+              32
+            ],
+            "shape": [
+              1920,
+              1920,
+              16384
+            ],
+            "warm": 0,
+            "predicted_us": 2102.8031588000003,
+            "observed_us": 2058.20799,
+            "relative_error": 0.021666988475737226
+          }
+        ],
+        "all_correct": true,
+        "checks": 180,
+        "largest_error": 0.03399734132087384,
+        "cold_penalty_fraction": [
+          0.012086147602888397,
+          0.012068857058338489
+        ],
+        "cold_runtime_physically_modeled": false
+      },
+      "raw_path": "studies/rtx5090_gemm_milp/diagnostic_054/measurements.json",
+      "raw_sha256": "98c380bd679aae1ee3cfe2ed5633dcbd8e2804518a99dcbdfe55f6c35ee8cff1",
+      "executable_sha256": []
+    },
+    {
+      "milestone": "diagnostic_057",
+      "tile": [
+        32,
+        32,
+        32
+      ],
+      "layout_MN": "perrow",
+      "verification": {
+        "rows": [
+          {
+            "allowed_resident_blocks": 1,
+            "k": 1536,
+            "predicted_us": 1015.3002983499997,
+            "observed_us": 1003.0912199999999,
+            "relative_error": 0.012171453708865965,
+            "sample_min_us": 1002.1760200000001,
+            "sample_max_us": 1004.31359
+          },
+          {
+            "allowed_resident_blocks": 1,
+            "k": 4608,
+            "predicted_us": 3002.0523724499994,
+            "observed_us": 2980.864,
+            "relative_error": 0.00710813121631837,
+            "sample_min_us": 2976.97282,
+            "sample_max_us": 2982.6944399999998
+          },
+          {
+            "allowed_resident_blocks": 4,
+            "k": 1536,
+            "predicted_us": 347.22987459090905,
+            "observed_us": 332.153594,
+            "relative_error": 0.04538948505524543,
+            "sample_min_us": 331.33439999999996,
+            "sample_max_us": 333.785599
+          },
+          {
+            "allowed_resident_blocks": 4,
+            "k": 4608,
+            "predicted_us": 997.8411011727271,
+            "observed_us": 965.017617,
+            "relative_error": 0.03401335228963709,
+            "sample_min_us": 964.601612,
+            "sample_max_us": 966.649616
+          },
+          {
+            "allowed_resident_blocks": 11,
+            "k": 1536,
+            "predicted_us": 257.4634641,
+            "observed_us": 245.318401,
+            "relative_error": 0.04950734657690847,
+            "sample_min_us": 243.270397,
+            "sample_max_us": 246.13760100000002
+          },
+          {
+            "allowed_resident_blocks": 11,
+            "k": 4608,
+            "predicted_us": 728.5418696999999,
+            "observed_us": 693.4463979999999,
+            "relative_error": 0.050610215585833895,
+            "sample_min_us": 692.217612,
+            "sample_max_us": 694.26558
+          }
+        ],
+        "increments": [
+          {
+            "allowed_resident_blocks": 1,
+            "predicted_increment_us": 1986.7520740999998,
+            "observed_increment_us": 1977.7727800000002
+          },
+          {
+            "allowed_resident_blocks": 4,
+            "predicted_increment_us": 650.6112265818181,
+            "observed_increment_us": 632.864023
+          },
+          {
+            "allowed_resident_blocks": 11,
+            "predicted_increment_us": 471.0784055999999,
+            "observed_increment_us": 448.12799699999994
+          }
+        ],
+        "counts_checked": 270,
+        "runtime_coefficients_fitted": false,
+        "native_path_unchanged": true,
+        "causal_admission_pending": [
+          "cache outcome comparison",
+          "clock/context comparison",
+          "resident limit is capacity, not measured average active blocks"
+        ],
+        "decision": "Timing contrast alone does not identify a hardware resource"
+      },
+      "raw_path": "studies/rtx5090_gemm_milp/diagnostic_057/measurements.json",
+      "raw_sha256": "4031f0b1261ab8ad35cb471eeb7ec0d60f57451ae0934d658d3b522fa0c5bbf8",
+      "executable_sha256": []
+    }
+  ],
+  "reproduction_scope": "EarlierStep22GPUreproductionisconnectedRTLmilestone64x96smallcases,NOTOct3highlevel128x96smallcases. Userhistorymatchpending."
+}

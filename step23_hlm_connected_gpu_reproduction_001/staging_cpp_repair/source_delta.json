@@ -1,0 +1,23 @@
+{
+  "created_utc": "2026-10-04T12:21:59.305094+00:00",
+  "changed_headers": [
+    {
+      "file": "producer_path.hpp",
+      "old_sha256": null,
+      "new_sha256": "0798182f916ede07205dd85c02646a9c60ef5e1c519f51270d3942439c126151"
+    },
+    {
+      "file": "sm_event.hpp",
+      "old_sha256": "165acd89eff389a0f60c038c60f41181facf5a9be574be2d4fbbbd64809368ec",
+      "new_sha256": "cf97c8cd9153a1fac819b1efee2b22d269a2da0d088bdc5a09377a9b7a6102a7"
+    },
+    {
+      "file": "staging_event.hpp",
+      "old_sha256": "f8a39e4c0c7637c66f449a3dfb291ed54fd8c38f37634880abd71a290a2a1f1b",
+      "new_sha256": "df569dc4fd92615f9d0d4c359ae82535b2dda219f691aebf39cfdaec33306572"
+    }
+  ],
+  "driver_byte_identical": true,
+  "original_model_unchanged": true,
+  "model_tree_frozen_since_candidate_launch": true
+}

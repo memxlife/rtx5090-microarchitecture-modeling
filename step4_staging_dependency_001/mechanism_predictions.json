@@ -1,0 +1,82 @@
+{
+  "state": "competing_predictions_before_probe_results",
+  "created_utc": "2026-10-04T04:47:28.429034+00:00",
+  "question": "Does actual global-load-to-shared-store readiness, rather than traffic volume, explain the missing staging time?",
+  "immutable_baseline": {
+    "model_staging_cycles_per_CTA_stage": 1155,
+    "model_global_sector_hit_delay": 4,
+    "model_effective_sector_return_cycles": 5,
+    "model_request_sequence": "64rowgroups, each2serialsectors then1logicalcommit",
+    "physical_useful_work_per_warp_stage": "16scalarU16global-load/store pairs, with predicated branches and some batches in compiledSASS"
+  },
+  "competing_hypotheses": [
+    {
+      "name": "load_return_dependency_dominated",
+      "mechanism": "An STS cannot issue until its source register produced by LDG is ready. Several independent LDGs may overlap; each still consumes request ownership and issue service.",
+      "predictions": [
+        "Dependent pairs have larger normalized cycles/pair than independent batches on identical warm addresses.",
+        "Increasing independent window reduces exposed return waits until request/issue/store service saturates.",
+        "SASS confirms intended scoreboard write/req chain; measured change persists after matched-loop and scheduling controls."
+      ],
+      "diagnostic_not_fit": "If L is scoped load-to-dependent-store-ready delay and W independent requests, exposed wait can decrease toward L/W plus service limits. This is a mechanism envelope, not a complete timing equation."
+    },
+    {
+      "name": "instruction_or_service_dominated",
+      "mechanism": "Address/control issue, shared-store service or global request processing dominate after readiness overlap.",
+      "predictions": [
+        "Independent windows give little speedup after matching instruction counts/order and request footprint.",
+        "Request/service throughput reaches a plateau despite larger windows.",
+        "Any apparent win tracks changed address/control instructions rather than the requested dependency separation."
+      ]
+    },
+    {
+      "name": "probe_not_transferable",
+      "mechanism": "Probe changes cache residency, number of requesters, load width, divergence, register pressure or compiler scheduling relative to full GEMM.",
+      "predictions": [
+        "Correctness may pass while SASS/control/traffic differ materially.",
+        "Full-stage prediction using probe parameters fails untouchedstage confirmation."
+      ],
+      "action": "Preserve result as scoped probe behavior; do not insert its latency into the GEMM model."
+    }
+  ],
+  "source_model_mapping": {
+    "nodes": [
+      "warp instruction issue",
+      "LDG request admission",
+      "per-request sector service completion",
+      "destination-register readiness",
+      "dependentSTS instruction issue",
+      "shared write completion",
+      "blockbarrier arrival and release"
+    ],
+    "edges": [
+      "Warp issue order/control flags constrain every instruction.",
+      "LDG request accepted only when queue ownership available; all relevant sectors must return before destination ready.",
+      "STS issue follows both source-register readiness and next issue edge; scoreboardbarrier req masks remain explicit.",
+      "Shared writes obey bank/service ownership; barrier release waits all required writes/warp arrivals.",
+      "Independent windows permit multiple live destination registers but cannot discard queue or issue service limits."
+    ],
+    "state": [
+      "per-warpPC/readiness and pendingbarriertags",
+      "request IDs\u2192register owners\u2192sectorpending counts",
+      "finite global request credits/owners",
+      "shared write service/cooldown",
+      "barrier arrival generations"
+    ],
+    "parameters_to_measure": [
+      "scoped dependent load-to-store-ready delay underwarm traffic",
+      "load admission interval and useful outstanding window",
+      "store issue/service contribution using matchedshared-only control",
+      "compiler instruction/control path for eachprobe and originalstaging"
+    ],
+    "forbidden_update": "Do not replace1155 with2212 or add the107676/96 full residual as a stageconstant."
+  },
+  "transfer_plan": [
+    "Validate probe numerical output and intendedSASS dependency structure.",
+    "Infer latency/service bounds from contrasting windows and controls; do not fit a single phase duration.",
+    "Translate actual original/selected staging SASS executed paths, including predicates and register/barrier dependencies.",
+    "Freeze full-stage prediction before an independent instruction-matched stage or unchangedfullkernel confirmation."
+  ],
+  "current_limit": "StaticSASS has14LDG sites but runtime loop visits16usefulLDGs perwarp perstage; exact executed CFG/order must be resolved before claiming fullstaging prediction.",
+  "GPUtiming_results_used": false
+}

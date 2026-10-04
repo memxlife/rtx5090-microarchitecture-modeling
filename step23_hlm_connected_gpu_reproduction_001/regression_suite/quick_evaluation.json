@@ -1,0 +1,159 @@
+{
+  "scope": "quick",
+  "requested_cases": null,
+  "candidate_cpp_source": "rtl/calibration_large_001/event_cpp/full_gpu_parallel.cpp",
+  "current_source_identity": {
+    "full_cpp": {
+      "rtl/calibration_large_001/event_cpp/backing.hpp": "140d6929416127251dc8fb66a415e19ae418c43cc2657ec08a6776b5e6d37a55",
+      "rtl/calibration_large_001/event_cpp/full_gpu_parallel.cpp": "3b6d1c890f86b2e813d6bb80aef6c4349acdb333409d625c9ddb7c5c74de15a5",
+      "rtl/calibration_large_001/event_cpp/generation_metadata.hpp": "32b8aff44983f29e0623611070202226c13d3029bc24b8a98131f81caf86c7b4",
+      "rtl/calibration_large_001/event_cpp/grid_metadata.hpp": "b7cb619ec1b756c34af947fada415b53bddc49e35627154ff213e2a08d900105",
+      "rtl/calibration_large_001/event_cpp/l2_slice.hpp": "a2394a00b41d75d6b6fce924844a6a1c722d4fe98d429f37abb7c0760dec3ccd",
+      "rtl/calibration_large_001/event_cpp/native_engine_event.hpp": "56ae7321d29552199d043f466c9b1ddab0604fc54da5a907c075ea75c0c77216",
+      "rtl/calibration_large_001/event_cpp/native_schedule.hpp": "cc903710a14275ca26ea56ad2d5b804e37cd6ee3e3f41873665ba2a5242114ea",
+      "rtl/calibration_large_001/event_cpp/native_stage_event.hpp": "e5d0f71be713774009020c869b71a64491fac6f1ff47f02824f158ec2d90dd98",
+      "rtl/calibration_large_001/event_cpp/output_metadata.hpp": "02d09768df2f636b350b9502d4a3d3fdf655b51ca8d29057444b818accc0e729",
+      "rtl/calibration_large_001/event_cpp/resident_metadata.hpp": "e80f43ba854c0621f50b671a5de37fd8d7f85a6574ae362e9c89e03a1a07a3fa",
+      "rtl/calibration_large_001/event_cpp/shared_hub_event.hpp": "593b961d10f8b8e929a148cb6aadadde4f32866fdfae9206b21d011a5fea182d",
+      "rtl/calibration_large_001/event_cpp/sm_event.hpp": "165acd89eff389a0f60c038c60f41181facf5a9be574be2d4fbbbd64809368ec",
+      "rtl/calibration_large_001/event_cpp/sm_pool.hpp": "ecb082831652d9d9ad116364c6156ae3a0cec32512678ec57ef4e09cafdfe2b4",
+      "rtl/calibration_large_001/event_cpp/staging_event.hpp": "f8a39e4c0c7637c66f449a3dfb291ed54fd8c38f37634880abd71a290a2a1f1b",
+      "rtl/calibration_large_001/event_cpp/units.hpp": "6f92d6ed06913bd4622a43f29ad6cec4f5ad9ac02b7c20e2510b78890f4bffbe"
+    },
+    "direct_cpp": {
+      "step8_operand_ready_diagnosis_001/direct_K1024.tsv": "1509e6768fa1f2c36f3b2dae77f5e53a1ed79cfbebcf7c482847b4c323f64672",
+      "step8_operand_ready_diagnosis_001/direct_K2048.tsv": "8ac51e572405e280b518b2634b0fa833014d757ace6ed75f31395b2765e13bec",
+      "step8_operand_ready_diagnosis_001/direct_K3072.tsv": "babc3b87b7b6221325efbc7c5b8098014a87d61326ec0db0cc51e14fe933ab6c",
+      "step8_operand_ready_diagnosis_001/freeze_prediction.py": "136b3cf89cf473759aed948467a00ee95af52c822d0383395320480dc93a05cc",
+      "step8_operand_ready_diagnosis_001/instruction_executor.hpp": "26da34b56ced841840e23b2b004547e0a45d431d8d4cdc8b867692e8ef33a579",
+      "step8_operand_ready_diagnosis_001/run_executor.cpp": "317b13fb0c02aad653a2dd595fd0f56e4328f509c3c4b5589d611f76d821ac73"
+    },
+    "hlm": {
+      "model_components/actual_path_parameters.json": "19efbe3f6e1efe8c307c73abe3539aee94479b89df6b5beac75dc48b74b1b871",
+      "model_components/dense_parameters.json": "a43914b71595472b70a7461b75bf329bfd0591f153a2cecc087b9bfa9b62c24e",
+      "model_components/dense_runtime.py": "966ff6dbf9a653c7f1dedb4053dfa820a6f97e8beb30667efe83d129d3615a4a",
+      "model_components/runtime_v3.py": "4491260fd11ae32a9cc55e11ad6b6de21d7b7c340d395db5837684a17021948c"
+    },
+    "direct_hlm": {
+      "step23_hlm_connected_gpu_reproduction_001/direct_highlevel/frozen_contract.json": "1813b254e00dc04310ce463bb3194933dc69fbe635e29e8824005fadf72df7fb",
+      "step23_hlm_connected_gpu_reproduction_001/direct_highlevel/predict.py": "44dcdd58a3007e0bcad6ebf0766fb3f06d80209436027680fd6a55a5dbe5262e"
+    }
+  },
+  "evaluate_requested": true,
+  "source_identity_match": {
+    "full_cpp": true,
+    "direct_cpp": true,
+    "hlm": true,
+    "direct_hlm": true
+  },
+  "full_cpp_binary_match": true,
+  "evaluated_full_cpp_binary_sha256": "acfe9886da70bd332b81ccd6257f5411804e92f99f0ac3828bc06e529d127fae",
+  "suite_sha256": "459b4e84fcf3dac5e8e6aa2d0dd8686158e16a63d1484e57ffe128b04f7801af",
+  "rows": [
+    {
+      "id": "staged_128_96_12288",
+      "shape": [
+        128,
+        96,
+        12288
+      ],
+      "GPU_us": 380.345607,
+      "gpu_numeric": {
+        "full_matrix_checks": 45,
+        "values_checked": 552960,
+        "correct": true
+      },
+      "old_hlm_us": 366.7125284166667,
+      "old_cpp_us": 226.87312925170068,
+      "CPP_kind": "full_cpp",
+      "cpp_numeric_payload": false,
+      "new_hlm_us": 366.7125284166667,
+      "new_cpp_us": 226.87312925170068,
+      "CPP_evaluation": "identity_verified_cached_complete_execution",
+      "address_coverage": 12288,
+      "address_coverage_expected": 12288,
+      "hlm_signed_error_percent": -3.584392282289006,
+      "hlm_within_5percent": true,
+      "hlm_regressed": false,
+      "cpp_signed_error_percent": -40.3507954144188,
+      "cpp_within_5percent": false,
+      "cpp_regressed": false,
+      "host_seconds": 0.00015395809896290302,
+      "status": "evaluated"
+    },
+    {
+      "id": "direct_192_768_1024",
+      "shape": [
+        192,
+        768,
+        1024
+      ],
+      "GPU_us": 15.1331205,
+      "gpu_numeric": {
+        "correct": true,
+        "scope": "Step8two-seedfullcustomoutputchecks; seeimmutableconfirmationreceipt"
+      },
+      "old_hlm_us": 14.028622783673452,
+      "old_cpp_us": 11.764285714285714,
+      "CPP_kind": "direct_cpp",
+      "cpp_numeric_payload": false,
+      "new_hlm_us": 14.028622783673452,
+      "new_cpp_us": 11.764285714285714,
+      "CPP_evaluation": "identity_verified_frozen_instruction_plus_Python_prediction",
+      "hlm_signed_error_percent": -7.2985457052730744,
+      "hlm_within_5percent": false,
+      "hlm_regressed": false,
+      "cpp_signed_error_percent": -22.261335893772117,
+      "cpp_within_5percent": false,
+      "cpp_regressed": false,
+      "host_seconds": 0.03584045800380409,
+      "status": "evaluated"
+    }
+  ],
+  "mechanisms": [
+    {
+      "name": "native",
+      "source_identity": {
+        "rtl/calibration_large_001/event_cpp/native_schedule.hpp": "cc903710a14275ca26ea56ad2d5b804e37cd6ee3e3f41873665ba2a5242114ea",
+        "rtl/calibration_large_001/event_cpp/native_stage_event.hpp": "e5d0f71be713774009020c869b71a64491fac6f1ff47f02824f158ec2d90dd98",
+        "step23_hlm_connected_gpu_reproduction_001/regression_suite/build/quick_evaluation/native_stage_test.cpp": "d6ea44826aa0f10a0288a3be3788ce87ec70a1b333df8e7ea9d2a181befc7b76"
+      },
+      "command": [
+        "c++",
+        "-std=c++20",
+        "-O2",
+        "-Irtl/calibration_large_001/event_cpp",
+        "step23_hlm_connected_gpu_reproduction_001/regression_suite/build/quick_evaluation/native_stage_test.cpp",
+        "-o",
+        "step23_hlm_connected_gpu_reproduction_001/regression_suite/build/quick_evaluation/native"
+      ],
+      "stdout": "NATIVE_EVENT_PASS contexts=1 start=0 cycles=1091 events=272 evaluated_edges=434 skipped_cycles=657\nNATIVE_EVENT_PASS contexts=1 start=10000 cycles=11091 events=272 evaluated_edges=434 skipped_cycles=10657\nNATIVE_EVENT_PASS contexts=2 start=0 cycles=2134 events=544 evaluated_edges=860 skipped_cycles=1274\nNATIVE_EVENT_PASS contexts=2 start=10000 cycles=12134 events=544 evaluated_edges=860 skipped_cycles=11274\nNATIVE_EVENT_PASS contexts=11 start=0 cycles=11517 events=2992 evaluated_edges=4630 skipped_cycles=6887\nNATIVE_EVENT_PASS contexts=11 start=10000 cycles=21517 events=2992 evaluated_edges=4630 skipped_cycles=16887\n",
+      "host_seconds": 0.4790408748667687,
+      "functional_screen_pass": true,
+      "physical_5percent_validation": "notapplicable; thesearesourcefunctional/protocolscreens"
+    },
+    {
+      "name": "staging",
+      "source_identity": {
+        "rtl/calibration_large_001/event_cpp/staging_event.hpp": "f8a39e4c0c7637c66f449a3dfb291ed54fd8c38f37634880abd71a290a2a1f1b",
+        "step23_hlm_connected_gpu_reproduction_001/regression_suite/staging_screen.cpp": "10d95a6ee727d6298ef50a2f20600413e12a2338eaa1ccd6e2a6d23455b6251e"
+      },
+      "command": [
+        "c++",
+        "-std=c++20",
+        "-O2",
+        "-Irtl/calibration_large_001/event_cpp",
+        "step23_hlm_connected_gpu_reproduction_001/regression_suite/staging_screen.cpp",
+        "-o",
+        "step23_hlm_connected_gpu_reproduction_001/regression_suite/build/quick_evaluation/staging"
+      ],
+      "stdout": "STAGING_SCREEN_PASS requests=128 groups=64 words=2048 cycles=1027\n",
+      "host_seconds": 0.37857483280822635,
+      "functional_screen_pass": true,
+      "physical_5percent_validation": "notapplicable; thesearesourcefunctional/protocolscreens"
+    }
+  ],
+  "correction_accepted": false,
+  "acceptance_policy": "Neverautomatic: focusedcasewithin5%, relevantold/newregressionsnotworse, physicalnumericsvalid, no source/cacheidentitygap. Baselinefailures remainfailures.",
+  "no_GPU_or_Verilog_execution": true
+}

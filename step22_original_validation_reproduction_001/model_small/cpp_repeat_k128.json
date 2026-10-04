@@ -1,0 +1,21 @@
+{
+  "K": 128,
+  "command": [
+    "rtl/calibration_connected_001/build_configured_k128/Vcalibration_connected_tb",
+    "+hit_delay=4",
+    "+setup_cycles=3346"
+  ],
+  "executable_sha256": "e79a2bda06922ce91d93ba1acee86e9578e123e7f83c5f4d9d6f820377d9298d",
+  "returncode": 0,
+  "wall_seconds": 4.556171457981691,
+  "expected_metrics": [
+    "RESIDENT_MULTI_SM_NB_L2_LAUNCH id=20 words=6144 blocks=6 peak_resident=6 elapsed_cycles=30111 l2_requests=3072 l2_hits=210 l2_misses=2862 l2_merges=1582 l2_fills=1280",
+    "RESIDENT_MULTI_SM_NB_L2_LAUNCH id=21 words=6144 blocks=6 peak_resident=6 elapsed_cycles=19408 l2_requests=6144 l2_hits=3282 l2_misses=2862 l2_merges=1582 l2_fills=1280"
+  ],
+  "repeat_metrics": [
+    "RESIDENT_MULTI_SM_NB_L2_LAUNCH id=20 words=6144 blocks=6 peak_resident=6 elapsed_cycles=30111 l2_requests=3072 l2_hits=210 l2_misses=2862 l2_merges=1582 l2_fills=1280",
+    "RESIDENT_MULTI_SM_NB_L2_LAUNCH id=21 words=6144 blocks=6 peak_resident=6 elapsed_cycles=19408 l2_requests=6144 l2_hits=3282 l2_misses=2862 l2_merges=1582 l2_fills=1280"
+  ],
+  "exact_metrics": true,
+  "checked_words_12288": true
+}

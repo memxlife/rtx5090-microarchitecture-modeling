@@ -1,0 +1,422 @@
+{
+  "state": "6 C++ model rows complete; 0 pending",
+  "clock_convention": "Model cycles divided by 2940 cycles/us (2.94GHz reference). Hardware elapsed times measured by CUDA events; NVML telemetry is contextual, not per-kernel clock integration. HLM time predictions retain original calibration.",
+  "rows": [
+    {
+      "shape": [
+        128,
+        96,
+        12288
+      ],
+      "predicted_hlm_us": 366.7125284166667,
+      "original_measured_us": 380.844808,
+      "repeat_measured_us": 380.345607,
+      "repeat_hlm_error_percent": -3.584392282289006,
+      "full_matrix_checks": 45,
+      "numeric_values_checked": 552960,
+      "correct": true,
+      "raw_samples_ms": [
+        0.3817536,
+        0.380537593,
+        0.380121607,
+        0.380543995,
+        0.379641598,
+        0.380524802,
+        0.379948801,
+        0.379724801,
+        0.380345607
+      ],
+      "implementation": "C++ model",
+      "implementation_cycles": 667007,
+      "implementation_us": 226.87312925170068,
+      "implementation_error_percent": -40.3507954144188,
+      "implementation_receipt": "cpp_small/128_96_12288_result.json"
+    },
+    {
+      "shape": [
+        128,
+        96,
+        49152
+      ],
+      "predicted_hlm_us": 1455.4581228666668,
+      "original_measured_us": 1519.20002,
+      "repeat_measured_us": 1519.21279,
+      "repeat_hlm_error_percent": -4.19655939924869,
+      "full_matrix_checks": 45,
+      "numeric_values_checked": 552960,
+      "correct": true,
+      "raw_samples_ms": [
+        1.5224896,
+        1.51840003,
+        1.51921279,
+        1.51758082,
+        1.52084479,
+        1.52003841,
+        1.51838078,
+        1.52044802,
+        1.51880322
+      ],
+      "implementation": "C++ model",
+      "implementation_cycles": 2640989,
+      "implementation_us": 898.2955782312926,
+      "implementation_error_percent": -40.87098369996658,
+      "implementation_receipt": "cpp_small/128_96_49152_result.json"
+    },
+    {
+      "shape": [
+        1920,
+        1920,
+        1536
+      ],
+      "predicted_hlm_us": 257.4634641,
+      "original_measured_us": 246.5408,
+      "repeat_measured_us": 244.518396,
+      "repeat_hlm_error_percent": 5.294108055575508,
+      "full_matrix_checks": 45,
+      "numeric_values_checked": 165888000,
+      "correct": true,
+      "raw_samples_ms": [
+        0.244096002,
+        0.244505599,
+        0.245318395,
+        0.244089597,
+        0.244518396,
+        0.244902399,
+        0.244908801,
+        0.244518396,
+        0.244511998
+      ],
+      "implementation": "C++ model",
+      "implementation_cycles": 720853,
+      "implementation_us": 245.18809523809523,
+      "implementation_error_percent": 0.2738850119461844,
+      "implementation_receipt": "connected_large/1920_1920_1536_result.json"
+    },
+    {
+      "shape": [
+        1920,
+        1920,
+        4608
+      ],
+      "predicted_hlm_us": 728.5418696999999,
+      "original_measured_us": 697.1328020000001,
+      "repeat_measured_us": 693.0368070000001,
+      "repeat_hlm_error_percent": 5.123113569348958,
+      "full_matrix_checks": 45,
+      "numeric_values_checked": 165888000,
+      "correct": true,
+      "raw_samples_ms": [
+        0.692217612,
+        0.6926144,
+        0.692608011,
+        0.692633605,
+        0.693036807,
+        0.694662392,
+        0.693043208,
+        0.693862379,
+        0.694675195
+      ],
+      "implementation": "C++ model",
+      "implementation_cycles": 2050910,
+      "implementation_us": 697.5884353741496,
+      "implementation_error_percent": 0.6567657486840517,
+      "implementation_receipt": "connected_large/1920_1920_4608_result.json"
+    },
+    {
+      "shape": [
+        2048,
+        2112,
+        1536
+      ],
+      "predicted_hlm_us": 293.382651592,
+      "original_measured_us": 276.863998,
+      "repeat_measured_us": 275.628805,
+      "repeat_hlm_error_percent": 6.441215965073033,
+      "full_matrix_checks": 45,
+      "numeric_values_checked": 194641920,
+      "correct": true,
+      "raw_samples_ms": [
+        0.287936002,
+        0.275244796,
+        0.2743936,
+        0.274822402,
+        0.275628805,
+        0.276032001,
+        0.276032001,
+        0.275212795,
+        0.276844805
+      ],
+      "connected_reference_mhz": 2940,
+      "implementation": "C++ model",
+      "implementation_cycles": 836886,
+      "implementation_us": 284.6551020408163,
+      "implementation_error_percent": 3.2748017903340365,
+      "implementation_receipt": "../step22_original_validation_reproduction_001/model_large/K1536_repeat_receipt.json"
+    },
+    {
+      "shape": [
+        2048,
+        2112,
+        4608
+      ],
+      "predicted_hlm_us": 828.699021592,
+      "original_measured_us": 784.377611,
+      "repeat_measured_us": 781.100786,
+      "repeat_hlm_error_percent": 6.093738022688422,
+      "full_matrix_checks": 45,
+      "numeric_values_checked": 194641920,
+      "correct": true,
+      "raw_samples_ms": [
+        0.780691195,
+        0.781100786,
+        0.781503987,
+        0.781107187,
+        0.781926394,
+        0.780684781,
+        0.781100786,
+        0.780287981,
+        0.78191359
+      ],
+      "implementation": "C++ model",
+      "implementation_cycles": 2431244,
+      "implementation_us": 826.9537414965987,
+      "implementation_error_percent": 5.870299495076781,
+      "implementation_receipt": "connected_large/2048_2112_4608_result.json"
+    }
+  ],
+  "direct_rows": [
+    {
+      "implementation": "original general-purpose direct operand kernel,full144blockgrid",
+      "M": 192,
+      "N": 768,
+      "K": 3072,
+      "GPU_us": 43.5147171,
+      "HLM_prediction": null,
+      "HLM_status": "Outside admitted shape and staged-path domain",
+      "handwritten_full_GPU_CPP_prediction": null,
+      "full_GPU_CPP_status": "Global-to-shared staging frontend cannot realize direct global WMMA operand path",
+      "separate_instruction_phase_CPP_us": 29.796598639455784,
+      "separate_instruction_phase_error_percent": -31.5252387577724,
+      "source": "studies/rtx5090_gemm_milp/step8_operand_ready_diagnosis_001/final_timing_diagnosis.json",
+      "adapted_HLM_us": 34.491207817687055,
+      "adapted_HLM_error_percent": -20.73668377890694
+    },
+    {
+      "implementation": "original general-purpose direct operand kernel,full144blockgrid",
+      "M": 192,
+      "N": 768,
+      "K": 1024,
+      "GPU_us": 15.1331205,
+      "HLM_prediction": null,
+      "HLM_status": "Outside admitted shape and staged-path domain",
+      "handwritten_full_GPU_CPP_prediction": null,
+      "full_GPU_CPP_status": "Global-to-shared staging frontend cannot realize direct global WMMA operand path",
+      "separate_instruction_phase_CPP_us": 11.764285714285714,
+      "separate_instruction_phase_error_percent": -22.261335893772117,
+      "source": "studies/rtx5090_gemm_milp/step8_operand_ready_diagnosis_001/final_timing_diagnosis.json",
+      "adapted_HLM_us": 14.028622783673452,
+      "adapted_HLM_error_percent": -7.2985457052730744
+    },
+    {
+      "implementation": "original general-purpose direct operand kernel,full144blockgrid",
+      "M": 192,
+      "N": 768,
+      "K": 2048,
+      "GPU_us": 29.2510395,
+      "HLM_prediction": null,
+      "HLM_status": "Outside admitted shape and staged-path domain",
+      "handwritten_full_GPU_CPP_prediction": null,
+      "full_GPU_CPP_status": "Global-to-shared staging frontend cannot realize direct global WMMA operand path",
+      "separate_instruction_phase_CPP_us": 20.773469387755103,
+      "separate_instruction_phase_error_percent": -28.98211570308432,
+      "source": "studies/rtx5090_gemm_milp/step8_operand_ready_diagnosis_001/final_timing_diagnosis.json",
+      "adapted_HLM_us": 24.259915300680255,
+      "adapted_HLM_error_percent": -17.06306608118917
+    },
+    {
+      "implementation": "new specialized ordinary direct",
+      "M": 192,
+      "N": 768,
+      "K": 1024,
+      "grid_blocks": 1,
+      "computed_output_tile": [
+        32,
+        32
+      ],
+      "GPU_us": 10.3737602,
+      "HLM_prediction": null,
+      "HLM_status": "Outside admitted shape and staged-path domain",
+      "handwritten_full_GPU_CPP_prediction": null,
+      "full_GPU_CPP_status": "Global-to-shared staging frontend cannot realize direct global WMMA operand path",
+      "separate_instruction_phase_CPP_us": 11.074149659863945,
+      "separate_instruction_phase_error_percent": 6.751548583742517,
+      "source": "studies/rtx5090_gemm_milp/step19_direct_cg_001/model_comparison.json"
+    },
+    {
+      "implementation": "new specialized direct.cg",
+      "M": 192,
+      "N": 768,
+      "K": 1024,
+      "grid_blocks": 1,
+      "computed_output_tile": [
+        32,
+        32
+      ],
+      "GPU_us": 14.3289604,
+      "HLM_prediction": null,
+      "HLM_status": "Outside admitted shape and staged-path domain",
+      "handwritten_full_GPU_CPP_prediction": null,
+      "full_GPU_CPP_status": "Global-to-shared staging frontend cannot realize direct global WMMA operand path",
+      "separate_instruction_phase_CPP_us": 11.51734693877551,
+      "separate_instruction_phase_error_percent": -19.621894280791572,
+      "source": "studies/rtx5090_gemm_milp/step19_direct_cg_001/model_comparison.json"
+    },
+    {
+      "implementation": "new specialized ordinary direct",
+      "M": 192,
+      "N": 768,
+      "K": 2048,
+      "grid_blocks": 1,
+      "computed_output_tile": [
+        32,
+        32
+      ],
+      "GPU_us": 19.9035206,
+      "HLM_prediction": null,
+      "HLM_status": "Outside admitted shape and staged-path domain",
+      "handwritten_full_GPU_CPP_prediction": null,
+      "full_GPU_CPP_status": "Global-to-shared staging frontend cannot realize direct global WMMA operand path",
+      "separate_instruction_phase_CPP_us": 19.270068027210883,
+      "separate_instruction_phase_error_percent": -3.1826157066359273,
+      "source": "studies/rtx5090_gemm_milp/step19_direct_cg_001/model_comparison.json"
+    },
+    {
+      "implementation": "new specialized direct.cg",
+      "M": 192,
+      "N": 768,
+      "K": 2048,
+      "grid_blocks": 1,
+      "computed_output_tile": [
+        32,
+        32
+      ],
+      "GPU_us": 27.52384,
+      "HLM_prediction": null,
+      "HLM_status": "Outside admitted shape and staged-path domain",
+      "handwritten_full_GPU_CPP_prediction": null,
+      "full_GPU_CPP_status": "Global-to-shared staging frontend cannot realize direct global WMMA operand path",
+      "separate_instruction_phase_CPP_us": 20.29013605442177,
+      "separate_instruction_phase_error_percent": -26.28159423095844,
+      "source": "studies/rtx5090_gemm_milp/step19_direct_cg_001/model_comparison.json"
+    },
+    {
+      "implementation": "new specialized ordinary direct",
+      "M": 192,
+      "N": 768,
+      "K": 3072,
+      "grid_blocks": 1,
+      "computed_output_tile": [
+        32,
+        32
+      ],
+      "GPU_us": 29.4167995,
+      "HLM_prediction": null,
+      "HLM_status": "Outside admitted shape and staged-path domain",
+      "handwritten_full_GPU_CPP_prediction": null,
+      "full_GPU_CPP_status": "Global-to-shared staging frontend cannot realize direct global WMMA operand path",
+      "separate_instruction_phase_CPP_us": 27.474149659863947,
+      "separate_instruction_phase_error_percent": -6.60387898464635,
+      "source": "studies/rtx5090_gemm_milp/step19_direct_cg_001/model_comparison.json"
+    },
+    {
+      "implementation": "new specialized direct.cg",
+      "M": 192,
+      "N": 768,
+      "K": 3072,
+      "grid_blocks": 1,
+      "computed_output_tile": [
+        32,
+        32
+      ],
+      "GPU_us": 42.5296021,
+      "HLM_prediction": null,
+      "HLM_status": "Outside admitted shape and staged-path domain",
+      "handwritten_full_GPU_CPP_prediction": null,
+      "full_GPU_CPP_status": "Global-to-shared staging frontend cannot realize direct global WMMA operand path",
+      "separate_instruction_phase_CPP_us": 29.062925170068027,
+      "separate_instruction_phase_error_percent": -31.66424387951651,
+      "source": "studies/rtx5090_gemm_milp/step19_direct_cg_001/model_comparison.json"
+    }
+  ],
+  "direct_scope": "Original high-level staged model and full-chip C++ frontend do not admit direct path. Separate C++ instruction executor plus Python phase composition provided and explicitly labeled.",
+  "direct_highlevel_adaptation": {
+    "new_adaptation_not_blind_holdout": true,
+    "rows": [
+      {
+        "K": 1024,
+        "compiled_control_instructions_per_stage": 34,
+        "prior_stage_cycles": 940,
+        "L2_service_bound_us": 5.480362369337979,
+        "prior_prediction_us": 14.028622783673452,
+        "GPU_us": 15.1331205,
+        "signed_error_percent": -7.2985457052730744
+      },
+      {
+        "K": 2048,
+        "compiled_control_instructions_per_stage": 34,
+        "prior_stage_cycles": 940,
+        "L2_service_bound_us": 10.960724738675959,
+        "prior_prediction_us": 24.259915300680255,
+        "GPU_us": 29.2510395,
+        "signed_error_percent": -17.06306608118917
+      },
+      {
+        "K": 3072,
+        "compiled_control_instructions_per_stage": 34,
+        "prior_stage_cycles": 940,
+        "L2_service_bound_us": 16.44108710801394,
+        "prior_prediction_us": 34.491207817687055,
+        "GPU_us": 43.5147171,
+        "signed_error_percent": -20.73668377890694
+      }
+    ],
+    "compiled_stage_instruction_count": 62,
+    "compiled_control_PCs": [
+      "0x320",
+      "0x330",
+      "0x340",
+      "0x350",
+      "0x360",
+      "0x370",
+      "0x380",
+      "0x390",
+      "0x3a0",
+      "0x3b0",
+      "0x3c0",
+      "0x3d0",
+      "0x3e0",
+      "0x3f0",
+      "0x400",
+      "0x410",
+      "0x420",
+      "0x430",
+      "0x480",
+      "0x490",
+      "0x4a0",
+      "0x4f0",
+      "0x500",
+      "0x560",
+      "0x5a0",
+      "0x5b0",
+      "0x5c0",
+      "0x5d0",
+      "0x5e0",
+      "0x5f0",
+      "0x600",
+      "0x610",
+      "0x6d0",
+      "0x6f0"
+    ],
+    "state": "newprovisionalhighleveldirectadaptation, notunchangedHLM and notblindholdout"
+  }
+}

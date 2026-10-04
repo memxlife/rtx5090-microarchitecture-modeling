@@ -32,6 +32,21 @@ The C++ executor tracks timing and addresses without storing matrix values. Its 
 
 ## Recorded results and limits
 
+The latest [staging experiment](step23_hlm_connected_gpu_reproduction_001/staging_cpp_repair/result_report.md) adds the compiled global-load → register → shared-store dependency path. Its separate C++ and Verilog components agree in the tested traffic scenarios, but the candidate is **not promoted**: improving the small workload comes with a large timing regression on the dense workload.
+
+| Matrix dimensions M × N × K | Baseline C++ error | Candidate C++ error |
+|---|---:|---:|
+| 128 × 96 × 12,288 | −40.35% | −11.05% |
+| 128 × 96 × 49,152 | −40.87% | −11.42% |
+| 1,920 × 1,920 × 1,536 | +0.27% | +31.57% |
+
+Error is `100 × (prediction / GPU measurement − 1)`; negative values mean the model predicts a shorter runtime. [The regression summary](step23_hlm_connected_gpu_reproduction_001/regression_suite/candidate_summary.json) records all three completed executions. The preserved baseline remains unchanged.
+
+[Verilog component checks](step23_hlm_connected_gpu_reproduction_001/staging_rtl_repair/README.md) pass 921,445 protocol/address/counter comparisons and 36,864 operand-value checks. Matrix multiplication of the returned operands runs on the host; this is not full Verilog GEMM validation or a 5% hardware timing result. Both implementations and their test commands are linked from the revised development manual.
+
+The percentages below are earlier comparisons against saved GPU measurements, with a different measurement lineage from the latest repeats.
+
+
 For an output matrix of 2048 by 2112, the completed timing model overestimates saved GPU measurements by **2.662%** at reduction length 1536 and **4.515%** at reduction length 3072. Both retire 4,224 blocks and cover 4,325,376 output addresses. The [combined receipt](rtl/calibration_large_001/event_cpp/full_completed_comparison.json) preserves the results.
 
 Those percentages convert model cycles at a 2.94 GHz reference; the GPU measurements do not have matched active-clock records. Both tests begin with inputs resident in the modeled cache, and all reads hit. The 48-slice organization, XOR address routing, and 32 shared-read slots are provisional choices. These results do not identify NVIDIA's private RTL, validate cold-cache or DRAM timing, or establish full-chip large-workload equivalence with Verilog. Component and small-grid timing comparisons are narrower implementation checks.

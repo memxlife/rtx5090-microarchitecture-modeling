@@ -1,0 +1,62 @@
+{
+  "binary_sha256": "aaee4f0855dbefb30e0b2a1b74e40cc1e30f50d56899f4108b9b43511d4d6b59",
+  "start_utc": "2026-10-04T11:06:50.499387+00:00",
+  "end_utc": "2026-10-04T11:06:53.527574+00:00",
+  "comparisons": [
+    {
+      "shape": [
+        2048,
+        2112,
+        1536
+      ],
+      "prior_us": 277.273601,
+      "repeat_us": 275.641596,
+      "model_cycles": 836886,
+      "model_reference_us": 284.6551020408163,
+      "reference_clock_error_percent": 3.2700093787065176,
+      "correct": true,
+      "output_checks": 45,
+      "latency_ms_samples": [
+        0.275641596,
+        0.274406397,
+        0.276851201,
+        0.278079998,
+        0.274803197,
+        0.274828798,
+        0.277260804,
+        0.274816,
+        0.276851207
+      ]
+    },
+    {
+      "shape": [
+        2048,
+        2112,
+        3072
+      ],
+      "prior_us": 532.447994,
+      "repeat_us": 529.587173,
+      "model_cycles": 1636081,
+      "model_reference_us": 556.4901360544218,
+      "reference_clock_error_percent": 5.07998766322495,
+      "correct": true,
+      "output_checks": 45,
+      "latency_ms_samples": [
+        0.528780794,
+        0.529587173,
+        0.529190385,
+        0.529177582,
+        0.529996789,
+        0.53040638,
+        0.529593575,
+        0.53000958,
+        0.529183996
+      ]
+    }
+  ],
+  "raw_sha256": "d4eeaeee6a9697a67d09779e7a3832f4fba52567fc2f0dfde9006dc02a330a13",
+  "method": "originalCUDAeventsamewarmcommand/effective11residentCTAs no recompile",
+  "numeric_scope": "original45samplechecksnotfullnumeric",
+  "clock_scope": "model2940referencecycles/us; concurrentNVMLcachedreportedsamplesnotinstantaneousclockproof",
+  "all_remote_jobs_finished": true
+}

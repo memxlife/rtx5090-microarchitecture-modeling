@@ -1,0 +1,11 @@
+{
+  "terminated_at_utc": "2026-10-04T11:48:45.180101+00:00",
+  "reason": "Explicit user instruction: do not run Verilog, including Verilator-generated C++ simulation.",
+  "driver_session": 22576,
+  "termination": "SIGINT via execution session; driver exit130 KeyboardInterrupt; subprocess under same session terminated.",
+  "K12288_completed": false,
+  "K49152_started": false,
+  "no_prediction_claimed": true,
+  "raw_log": "studies/rtx5090_gemm_milp/step23_hlm_connected_gpu_reproduction_001/connected_small/run_k12288.log",
+  "no_more_verilog_execution_authorized": true
+}

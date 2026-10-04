@@ -1,0 +1,39 @@
+{
+  "frozen_utc": "2026-10-04T11:55:22.725188+00:00",
+  "state": "new_provisional_highlevel_direct_adaptation_after_hardware_results_known_not_blind_validation",
+  "parameters": {
+    "global_batch_ready_cycles": 352,
+    "MOVM_ready_cycles": 29,
+    "effective_HMMA_result_use_cycles": 64,
+    "HMMA_initiation_cycles": 8,
+    "ready_instruction_issue_cycles": 1,
+    "shared_clock_reference_cycles_per_us": 2940,
+    "fixed_us_original_HLM": 3.7973302666666484,
+    "L2_service_TB_per_second": 3.444,
+    "active_blocks": 144,
+    "SMs": 170
+  },
+  "algorithm": "From compiledtwo16Khalfblocks per32Kstage: dependency bound2*(352+29+64+8)+controlcount referencecycles/stage. Controlcount counts nonmemory/nonMOVM/nonHMMA compiled32Kstage PCs0320..06f0. max(block-wave dependency duration,sourceunique128sector*32B/stage/block total/L2service). Add originalHLM fixed3.79733us as explicittransferprior. No measuredwholekernelruntime or C++modelresult used. Sequentialtwo-half composition isprovisional, notproven criticalpath or mathematicalbound onhardware.",
+  "scope": "Samefull144block M192N768 K1024/2048/3072; provisional new adaptation, not unchanged runtime_v3.",
+  "source_sha256": {
+    "step6_data_path_mip_001/direct.sass": "5e8fa2e85e5c35e81b6bc5b5add5f6cd3b946b2a1a3d0ffd44a3c4dac8646326",
+    "model_components/actual_path_parameters.json": "19efbe3f6e1efe8c307c73abe3539aee94479b89df6b5beac75dc48b74b1b871",
+    "step18_compute_isolation_001/compute64_prospective_validation.json": "94297fd81e055c3c1fa9ef78a4c9e4554d70682ea1947718bfcd213548d2532f"
+  },
+  "rejected_v1": "Controlcount mistakenly chargedtwice; actualPC span iscomplete32Kstage. Correctedsourcecount notruntimefit.",
+  "prediction_script_sha256": "44dcdd58a3007e0bcad6ebf0766fb3f06d80209436027680fd6a55a5dbe5262e",
+  "parameter_provenance": {
+    "global_batch_ready_cycles": "step6_data_path_mip_001/direct_ready_summary.json:437minus85=352exposedfirstA4loadbatch; transfer toB+all8loadbatch isunvalidated",
+    "MOVM_ready_cycles": "rtl/calibration_connected_001/frozen_candidate.json pluspreservedtestbenchMOVM_LATENCY29; provisionalmatrixlayoutconversionprior",
+    "effective_HMMA_result_use_cycles": "step18_compute_isolation_001/compute64_prospective_validation.json independentlyunrun48iterationregistertests; includescontrol, notintrinsiclatency",
+    "fixed_us_original_HLM": "model_components/actual_path_parameters.json tile32 phase1fixed+phase2fixed\u2212phase0fixed; shape/pathtransferunvalidated",
+    "L2_service_TB_per_second": "3.444TB/s earliercoordinatorprovided measuredserviceprior; exactrawreceiptnotlocatedinthisaudit. Nonbindinginallthreecases."
+  },
+  "limitations": [
+    "Two16Koperandgroupschargedserially; actualoverlap notmodeled",
+    "EightglobalLD perhalf usefirstA4batchcomposite prior; B/readgeometrydifferent andbatchassemblysharedcontrolunidentified",
+    "Control34instructions countedonceper32Kstage withonecycleeach; uniform/predicatereadiness ignored",
+    "FixedstartupfromoriginaldifferentHLMshape transferredwithoutfit",
+    "Thisisnewprovisionalhighleveladaptation aftertargettimesknown, notblindvalidation or promotedbaseline"
+  ]
+}

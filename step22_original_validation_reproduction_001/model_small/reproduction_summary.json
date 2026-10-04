@@ -1,0 +1,52 @@
+{
+  "all_four_pass": true,
+  "total_checked_values_per_execution_path": 49152,
+  "source_hashes_match": true,
+  "scope": "Preserved explicit C++ hosts and separately relinked original generated main share Verilator-generated behavior. Original separate testbench binary was overwritten historically, not preserved. No new GPU runs.",
+  "checks": [
+    {
+      "K": 64,
+      "outputs_checked_each_host": 12288,
+      "exact_original_and_host_metrics": true,
+      "cpp_wall_seconds": 2.8467385419644415,
+      "relinked_testbench_wall_seconds": 3.6012754580006003,
+      "launch_metrics": [
+        "RESIDENT_MULTI_SM_NB_L2_LAUNCH id=20 words=6144 blocks=6 peak_resident=6 elapsed_cycles=19491 l2_requests=1536 l2_hits=70 l2_misses=1466 l2_merges=826 l2_fills=640",
+        "RESIDENT_MULTI_SM_NB_L2_LAUNCH id=21 words=6144 blocks=6 peak_resident=6 elapsed_cycles=13852 l2_requests=3072 l2_hits=1606 l2_misses=1466 l2_merges=826 l2_fills=640"
+      ]
+    },
+    {
+      "K": 128,
+      "outputs_checked_each_host": 12288,
+      "exact_original_and_host_metrics": true,
+      "cpp_wall_seconds": 4.556171457981691,
+      "relinked_testbench_wall_seconds": 4.5173980828840286,
+      "launch_metrics": [
+        "RESIDENT_MULTI_SM_NB_L2_LAUNCH id=20 words=6144 blocks=6 peak_resident=6 elapsed_cycles=30111 l2_requests=3072 l2_hits=210 l2_misses=2862 l2_merges=1582 l2_fills=1280",
+        "RESIDENT_MULTI_SM_NB_L2_LAUNCH id=21 words=6144 blocks=6 peak_resident=6 elapsed_cycles=19408 l2_requests=6144 l2_hits=3282 l2_misses=2862 l2_merges=1582 l2_fills=1280"
+      ]
+    },
+    {
+      "K": 768,
+      "outputs_checked_each_host": 12288,
+      "exact_original_and_host_metrics": true,
+      "cpp_wall_seconds": 18.01394254085608,
+      "relinked_testbench_wall_seconds": 16.709943333873525,
+      "launch_metrics": [
+        "RESIDENT_MULTI_SM_NB_L2_LAUNCH id=20 words=6144 blocks=6 peak_resident=6 elapsed_cycles=136311 l2_requests=18432 l2_hits=1610 l2_misses=16822 l2_merges=9142 l2_fills=7680",
+        "RESIDENT_MULTI_SM_NB_L2_LAUNCH id=21 words=6144 blocks=6 peak_resident=6 elapsed_cycles=74968 l2_requests=36864 l2_hits=20042 l2_misses=16822 l2_merges=9142 l2_fills=7680"
+      ]
+    },
+    {
+      "K": 1536,
+      "outputs_checked_each_host": 12288,
+      "exact_original_and_host_metrics": true,
+      "cpp_wall_seconds": 32.16664108308032,
+      "relinked_testbench_wall_seconds": 33.06855866708793,
+      "launch_metrics": [
+        "RESIDENT_MULTI_SM_NB_L2_LAUNCH id=20 words=6144 blocks=6 peak_resident=6 elapsed_cycles=263751 l2_requests=36864 l2_hits=3290 l2_misses=33574 l2_merges=18214 l2_fills=15360",
+        "RESIDENT_MULTI_SM_NB_L2_LAUNCH id=21 words=6144 blocks=6 peak_resident=6 elapsed_cycles=141639 l2_requests=73728 l2_hits=40154 l2_misses=33574 l2_merges=18214 l2_fills=15360"
+      ]
+    }
+  ]
+}

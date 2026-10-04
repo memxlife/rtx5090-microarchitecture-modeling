@@ -1,0 +1,57 @@
+{
+  "started_utc": "2026-10-04T11:01:01.730576+00:00",
+  "binary": "rtl/calibration_large_001/event_cpp/full_gpu_parallel",
+  "binary_sha256": "acfe9886da70bd332b81ccd6257f5411804e92f99f0ac3828bc06e529d127fae",
+  "source_sha256": {
+    "full_gpu_parallel.cpp": "3b6d1c890f86b2e813d6bb80aef6c4349acdb333409d625c9ddb7c5c74de15a5",
+    "sm_pool.hpp": "ecb082831652d9d9ad116364c6156ae3a0cec32512678ec57ef4e09cafdfe2b4",
+    "sm_event.hpp": "165acd89eff389a0f60c038c60f41181facf5a9be574be2d4fbbbd64809368ec",
+    "l2_slice.hpp": "a2394a00b41d75d6b6fce924844a6a1c722d4fe98d429f37abb7c0760dec3ccd",
+    "backing.hpp": "140d6929416127251dc8fb66a415e19ae418c43cc2657ec08a6776b5e6d37a55",
+    "grid_metadata.hpp": "b7cb619ec1b756c34af947fada415b53bddc49e35627154ff213e2a08d900105"
+  },
+  "cpu_count": 18,
+  "mode": "two concurrent preserved executable runs; no rebuild or parameter change",
+  "cases": [
+    {
+      "K": 1536,
+      "argv": [
+        "2048",
+        "2112",
+        "1536",
+        "1",
+        "170",
+        "48",
+        "11",
+        "20000000",
+        "1",
+        "1024",
+        "1",
+        "4",
+        "32"
+      ],
+      "pid": 97263,
+      "original_cycles": 836886
+    },
+    {
+      "K": 3072,
+      "argv": [
+        "2048",
+        "2112",
+        "3072",
+        "1",
+        "170",
+        "48",
+        "11",
+        "20000000",
+        "1",
+        "1024",
+        "1",
+        "4",
+        "32"
+      ],
+      "pid": 97264,
+      "original_cycles": 1636081
+    }
+  ]
+}

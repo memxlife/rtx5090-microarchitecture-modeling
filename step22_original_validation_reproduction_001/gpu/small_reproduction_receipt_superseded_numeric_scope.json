@@ -1,0 +1,83 @@
+{
+  "binary_sha256": "aaee4f0855dbefb30e0b2a1b74e40cc1e30f50d56899f4108b9b43511d4d6b59",
+  "start_utc": "2026-10-04T11:05:44.122879+00:00",
+  "end_utc": "2026-10-04T11:06:01.840456+00:00",
+  "comparisons": [
+    {
+      "K": 64,
+      "kind": "originalCUDAevent",
+      "new_event_us": 6.144000220000001,
+      "correct": true,
+      "output_checks": 45
+    },
+    {
+      "K": 1536,
+      "kind": "originalCUDAevent",
+      "new_event_us": 51.1935987,
+      "correct": true,
+      "output_checks": 45
+    },
+    {
+      "K": 128,
+      "kind": "originalCUDAevent",
+      "new_event_us": 8.19199998,
+      "correct": true,
+      "output_checks": 45
+    },
+    {
+      "K": 768,
+      "kind": "originalCUDAevent",
+      "new_event_us": 26.6303997,
+      "correct": true,
+      "output_checks": 45
+    },
+    {
+      "K": 64,
+      "kind": "originalNCUmethod",
+      "old_cycles": 13852.31,
+      "repeat_cycles": 13956.86,
+      "old_us": 4.704,
+      "repeat_us": 4.768,
+      "repeat_SM_GHz": 2.9271935451999997,
+      "frozen_model_cycles": 13852,
+      "repeat_prediction_cycle_error_percent": -0.7513151238889071
+    },
+    {
+      "K": 1536,
+      "kind": "originalNCUmethod",
+      "old_cycles": 146612.45,
+      "repeat_cycles": 146686.81,
+      "old_us": 49.76,
+      "repeat_us": 49.824,
+      "repeat_SM_GHz": 2.94409946541,
+      "frozen_model_cycles": 141639,
+      "repeat_prediction_cycle_error_percent": -3.441216016627535
+    },
+    {
+      "K": 128,
+      "kind": "originalNCUmethod",
+      "old_cycles": 19375.44,
+      "repeat_cycles": 19709.74,
+      "old_us": 6.624,
+      "repeat_us": 6.72,
+      "repeat_SM_GHz": 2.9329971988800003,
+      "frozen_model_cycles": 19408,
+      "repeat_prediction_cycle_error_percent": -1.530918216069832
+    },
+    {
+      "K": 768,
+      "kind": "originalNCUmethod",
+      "old_cycles": 75657.89,
+      "repeat_cycles": 77183.27,
+      "old_us": 30.912,
+      "repeat_us": 26.144,
+      "repeat_SM_GHz": 2.95223648211,
+      "frozen_model_cycles": 74968,
+      "repeat_prediction_cycle_error_percent": -2.870142713569923
+    }
+  ],
+  "no_recompile": true,
+  "telemetry_scope": "10msNVMLhostpoll;reportedcachedclocknotinstantaneouskernelproof",
+  "raw_sha256": "ce61c3d7f68b89cd8f346019dba4d22f1e1b1f466a690bafbf2126ab46a4d3be",
+  "numeric_scope": "original45sampledoutputchecksnotfullnumeric"
+}

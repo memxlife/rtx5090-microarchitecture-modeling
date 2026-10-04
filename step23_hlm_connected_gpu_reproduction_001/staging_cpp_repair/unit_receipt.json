@@ -1,0 +1,25 @@
+{
+  "created_utc": "2026-10-04T12:17:06.416590+00:00",
+  "result": "pass",
+  "stdout": "unit_stdout.txt",
+  "tests": [
+    "128distinct32B global sectors and64distinct64Bshared groups perstage",
+    "compiled217prefix instructions perwarp/868perfourwarps",
+    "fivecyclecachearrival cannotpermitdependentSTS before340prior",
+    "500cyclecachearrival blocksdependentSTS; actualmax notadding340",
+    "storehandshake backpressure retainscommitcoverage",
+    "completedstage callback ID rejected"
+  ],
+  "early_cache_cycles": 2012,
+  "delayed_cache_cycles": 2661,
+  "backpressure_cycles": 2012,
+  "first_commit_with_early_cache": 521,
+  "first_commit_with_delayed_cache": 684,
+  "limits": [
+    "Address/payloadless model; not a GPU numerical output test.",
+    "Readownershipcapture1 remains sourceprior; noindependenttimingcontribution identified.",
+    "Full C++ staging model not checked against Verilog."
+  ],
+  "focused_run_owner": "parallel_rtl regression suite session71039",
+  "own_duplicate_session15973": "stopped exit130; partialrawlogs retained; no completedpredictionclaimed"
+}

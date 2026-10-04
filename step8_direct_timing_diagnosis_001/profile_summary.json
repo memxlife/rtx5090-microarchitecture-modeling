@@ -1,0 +1,46 @@
+{
+  "sm__cycles_elapsed.avg.per_second": {
+    "value": "2925641730.45",
+    "unit": "hz"
+  },
+  "smsp__cycles_active.sum": {
+    "value": "69339928",
+    "unit": "cycle"
+  },
+  "smsp__inst_executed.sum": {
+    "value": "3897216",
+    "unit": "inst"
+  },
+  "smsp__inst_issued.sum": {
+    "value": "3897216",
+    "unit": "inst"
+  },
+  "smsp__warp_issue_stalled_barrier_per_warp_active.pct": {
+    "value": "0",
+    "unit": "%"
+  },
+  "smsp__warp_issue_stalled_long_scoreboard_per_warp_active.pct": {
+    "value": "72.09",
+    "unit": "%"
+  },
+  "smsp__warp_issue_stalled_math_pipe_throttle_per_warp_active.pct": {
+    "value": "0.95",
+    "unit": "%"
+  },
+  "smsp__warp_issue_stalled_mio_throttle_per_warp_active.pct": {
+    "value": "0",
+    "unit": "%"
+  },
+  "smsp__warp_issue_stalled_not_selected_per_warp_active.pct": {
+    "value": "0",
+    "unit": "%"
+  },
+  "smsp__warp_issue_stalled_short_scoreboard_per_warp_active.pct": {
+    "value": "4.16",
+    "unit": "%"
+  },
+  "smsp__warp_issue_stalled_wait_per_warp_active.pct": {
+    "value": "15.79",
+    "unit": "%"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "binary_sha256": "917b2dd398f75b65c69f4a9511a7469a03ce622520fca270aa11ef6149e3a495",
+  "native_equals_preserved057": true,
+  "native_words": 752,
+  "sass_sha256": "7681dace308b4f9898c6ffe3d20b1f20cebe45bcfe17ea071fa0686fedf4510b",
+  "native_instructions": 376,
+  "native_u64_words": 752,
+  "host_method_difference_from057": "045no preferredcarveout100/no RESIDENT_CTAS override"
+}

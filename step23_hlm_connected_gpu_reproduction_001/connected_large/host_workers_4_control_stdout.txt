@@ -1,0 +1,4 @@
+PROGRESS cycles=9035 elapsed=9035 dispatched=1 completed=1 checked=1024 native=160 host_seconds=2.3937 cycles_per_second=3774.49
+FULL_CPP_PASS launch=0 M=32 N=32 K=32 shared_slots=32 hashed=1 warm=1 cycles=9035 checked=1024 peak=1 requests=128 hits=128 misses=0 merges=0 fills=0
+SLICE_READS 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4
+SLICE_WRITES 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4

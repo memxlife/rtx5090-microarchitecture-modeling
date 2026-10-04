@@ -1,0 +1,54 @@
+{
+  "HLM_phase_costs_us": {
+    "0": {
+      "stage_us": 0.03732499830729166,
+      "fixed_us": 2.739200733333334
+    },
+    "1": {
+      "stage_us": 0.7802749934895834,
+      "fixed_us": 2.9951976666666553
+    },
+    "2": {
+      "stage_us": 0.2021416666666667,
+      "fixed_us": 3.541333333333327
+    }
+  },
+  "HLM_stage_us": 0.9450916618489584,
+  "HLM_fixed_us": 3.7973302666666484,
+  "HLM_stage_reference_cycles": 2778.569485835938,
+  "CPP_two_case_effective_stage_cycles": 1713.5260416666667,
+  "CPP_two_case_effective_stage_us": 0.5828319869614512,
+  "CPP_two_case_effective_fixed_cycles": 9013.0,
+  "CPP_two_case_effective_fixed_us": 3.0656462585034014,
+  "stage_cost_difference_us": 0.3622596748875072,
+  "stage_cost_difference_cycles": 1065.0434441692712,
+  "K12288_HLM_us": 366.7125284166667,
+  "K12288_CPP_us": 226.87312925170068,
+  "K12288_GPU_us": 380.345607,
+  "K12288_HLM_minus_CPP_us": 139.83939916496604,
+  "K12288_difference_from_stage_us": 139.10771515680278,
+  "K12288_difference_from_fixed_us": 0.731684008163247,
+  "K12288_CPP_missing_to_GPU_us": 153.4724777482993,
+  "K12288_HLM_missing_to_GPU_us": 13.633078583333258,
+  "observations": {
+    "small_grid_blocks": 12,
+    "CPP_peak": 12,
+    "requests_K12288": 589824,
+    "requests_K49152": 2359296,
+    "all_CPP_L2_hits": true,
+    "misses_both": 0,
+    "fills_both": 0,
+    "native_K12288": 737280,
+    "native_K49152": 2949120
+  },
+  "scope": "Two-point slope/intercept descriptive attribution only; notnewmodel coefficients or identifiedphysicalpipeline delays. CPPreference2.94GHz vsHLMmeasuredmicrosecondphasecosts, clockcontext notidentical.",
+  "recurring_fraction_of_HLM_CPP_difference_percent": 99.47676834101661,
+  "CPP_signed_error_to_GPU_percent": -40.3507954144188,
+  "phase1_stage_cost_minus_CPP_totalstage_us": 0.19744300652813218,
+  "source_sha256": {
+    "model_components/actual_path_parameters.json": "19efbe3f6e1efe8c307c73abe3539aee94479b89df6b5beac75dc48b74b1b871",
+    "model_components/runtime_v3.py": "4491260fd11ae32a9cc55e11ad6b6de21d7b7c340d395db5837684a17021948c",
+    "step23_hlm_connected_gpu_reproduction_001/cpp_small/128_96_12288_result.json": "b2401a4111f14be4752d97d86e11f85d0281eeb97c44cd51bdcfdbf71d5113cd",
+    "step23_hlm_connected_gpu_reproduction_001/cpp_small/128_96_49152_result.json": "fdd8448930ad92059a1e1f7bcbf291d49efa53ea265b84cc48820e6e6d1c345e"
+  }
+}

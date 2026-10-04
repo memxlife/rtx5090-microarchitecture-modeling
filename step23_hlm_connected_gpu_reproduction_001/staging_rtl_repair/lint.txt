@@ -1,0 +1,27 @@
+%Warning-WIDTHTRUNC: studies/rtx5090_gemm_milp/step23_hlm_connected_gpu_reproduction_001/staging_rtl_repair/repaired_staging.sv:25:38: Logical operator LOGAND expects 1 bit on the LHS, but LHS's AND generates 32 bits.
+                                                                                                                                     : ... note: In instance 'repaired_staging'
+   25 |   for(int b=0;b<6;b++)if((req&(1<<b))&&tags[c][w][b]>t)ok=0;
+      |                                      ^~
+                     ... For warning description see https://verilator.org/warn/WIDTHTRUNC?v=5.050
+                     ... Use "/* verilator lint_off WIDTHTRUNC */" and lint_on around source to disable this message.
+%Warning-WIDTHTRUNC: studies/rtx5090_gemm_milp/step23_hlm_connected_gpu_reproduction_001/staging_rtl_repair/repaired_staging.sv:26:72: Logical operator LOGAND expects 1 bit on the RHS, but RHS's AND generates 32 bits.
+                                                                                                                                     : ... note: In instance 'repaired_staging'
+   26 |   for(int l=0;l<32;l++)if(l<lcount&&lc[l]==c&&lw[l]==w&&op_wr(li[l])>=0&&(req&(1<<op_wr(li[l]))))ok=0;
+      |                                                                        ^~
+%Warning-WIDTHEXPAND: studies/rtx5090_gemm_milp/step23_hlm_connected_gpu_reproduction_001/staging_rtl_repair/repaired_staging.sv:36:70: Operator ADD expects 64 bits on the RHS, but RHS's ARRAYSEL generates 32 bits.
+                                                                                                                                      : ... note: In instance 'repaired_staging'
+   36 |    else backing_address=bb[lc[offer]]+32'(2*(64'(stages[lc[offer]]*32+lg[offer]-32)*N+cols[lc[offer]]*32));
+      |                                                                      ^
+                      ... For warning description see https://verilator.org/warn/WIDTHEXPAND?v=5.050
+                      ... Use "/* verilator lint_off WIDTHEXPAND */" and lint_on around source to disable this message.
+%Warning-WIDTHTRUNC: studies/rtx5090_gemm_milp/step23_hlm_connected_gpu_reproduction_001/staging_rtl_repair/repaired_staging.sv:58:49: Logical operator LOGOR expects 1 bit on the LHS, but LHS's AND generates 32 bits.
+                                                                                                                                     : ... note: In instance 'repaired_staging'
+   58 |     b=int'(response_id-lid[l]);if((lr[l]&(1<<b))||b>=la[l])$fatal(1,"duplicate/unaccepted sector response");lr[l]|=1<<b;for(int a=0;a<16;a++)payload[lc[l]][lg[l]][b*16+a]=response_data[a*16+:16];
+      |                                                 ^~
+%Warning-WIDTHEXPAND: studies/rtx5090_gemm_milp/step23_hlm_connected_gpu_reproduction_001/staging_rtl_repair/repaired_staging.sv:59:39: Operator ADD expects 64 bits on the RHS, but RHS's VARREF 'READY_FLOOR' generates 32 bits.
+                                                                                                                                      : ... note: In instance 'repaired_staging'
+   59 |     if(lr[l]==3)ldue[l]=umax(lissue[l]+READY_FLOOR,cycle+1);found=1;end if(!found)$fatal(1,"unowned sector response");end
+      |                                       ^
+- V e r i l a t i o n   R e p o r t: Verilator 5.050 2026-07-01 rev vUNKNOWN-built20260701
+- Verilator: Built from 0.073 MB sources in 2 modules, into 2.955 MB in 4 C++ files needing 0.000 MB
+- Verilator: Walltime 0.201 s (elab=0.005, cvt=0.169, bld=0.000); cpu 0.198 s on 1 threads; allocated 63.141 MB

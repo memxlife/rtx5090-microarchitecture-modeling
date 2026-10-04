@@ -1,0 +1,6 @@
+{
+  "state": "HiGHS_status4_solve_error",
+  "created_utc": "2026-10-04T07:09:21.590553+00:00",
+  "bound": 1000000,
+  "repair": "Tighten horizon to max verified source graph earliest completion plus1; allfinitebranchfeasibleearliestwitnesseswithinhorizon. No physicalparameterchange."
+}

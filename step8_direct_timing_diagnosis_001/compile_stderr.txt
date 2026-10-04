@@ -1,0 +1,31 @@
+ptxas info    : 0 bytes gmem
+ptxas info    : Compiling entry function '_Z12direct_probeILi0EEvPK13__nv_bfloat16S2_PfiiiPyj' for 'sm_120'
+ptxas info    : Function properties for _Z12direct_probeILi0EEvPK13__nv_bfloat16S2_PfiiiPyj
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 48 registers, used 0 barriers, 4096 bytes smem
+ptxas info    : Compile time = 20.360 ms
+ptxas info    : Compiling entry function '_Z12direct_probeILi1EEvPK13__nv_bfloat16S2_PfiiiPyj' for 'sm_120'
+ptxas info    : Function properties for _Z12direct_probeILi1EEvPK13__nv_bfloat16S2_PfiiiPyj
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 48 registers, used 0 barriers, 4096 bytes smem
+ptxas info    : Compile time = 18.278 ms
+ptxas info    : Compiling entry function '_Z11layout_gemmILi64EEvPK13__nv_bfloat16S2_Pfiii' for 'sm_120'
+ptxas info    : Function properties for _Z11layout_gemmILi64EEvPK13__nv_bfloat16S2_Pfiii
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 40 registers, used 1 barriers, 4096 bytes smem
+ptxas info    : Compile time = 18.848 ms
+ptxas info    : Compiling entry function '_Z11layout_gemmILi48EEvPK13__nv_bfloat16S2_Pfiii' for 'sm_120'
+ptxas info    : Function properties for _Z11layout_gemmILi48EEvPK13__nv_bfloat16S2_Pfiii
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 40 registers, used 1 barriers, 4096 bytes smem
+ptxas info    : Compile time = 18.757 ms
+ptxas info    : Compiling entry function '_Z11layout_gemmILi32EEvPK13__nv_bfloat16S2_Pfiii' for 'sm_120'
+ptxas info    : Function properties for _Z11layout_gemmILi32EEvPK13__nv_bfloat16S2_Pfiii
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 40 registers, used 1 barriers, 4096 bytes smem
+ptxas info    : Compile time = 18.588 ms
+ptxas info    : Compiling entry function '_Z11direct_gemmPK13__nv_bfloat16S1_Pfiii' for 'sm_120'
+ptxas info    : Function properties for _Z11direct_gemmPK13__nv_bfloat16S1_Pfiii
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 38 registers, used 0 barriers, 4096 bytes smem
+ptxas info    : Compile time = 15.860 ms

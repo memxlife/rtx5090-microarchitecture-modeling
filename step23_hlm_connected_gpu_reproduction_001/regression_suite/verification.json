@@ -1,0 +1,14 @@
+{
+  "case_count": 9,
+  "all_baseline_model_source_identities_match": true,
+  "CPP_within5_count": 3,
+  "HLM_within5_count": 2,
+  "staged_coverage_matches": true,
+  "native_and_staging_screens_pass": true,
+  "transitive_header_invalidation_test": "PASS: changing a locally included child header changes recursive fingerprint without changing parent source",
+  "correction_accepted": false,
+  "run_py_sha256": "459b4e84fcf3dac5e8e6aa2d0dd8686158e16a63d1484e57ffe128b04f7801af",
+  "api_compatible_baseline_staging_screen": "PASS after queued-provider/API dispatch repair",
+  "candidate_bounded_regressions_completed": 3,
+  "candidate_promotion": false
+}

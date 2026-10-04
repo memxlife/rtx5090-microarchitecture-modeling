@@ -1,0 +1,58 @@
+{
+  "created_utc": "2026-10-04T12:15:20.516059+00:00",
+  "source_sha256": {
+    "backing.hpp": "140d6929416127251dc8fb66a415e19ae418c43cc2657ec08a6776b5e6d37a55",
+    "grid_metadata.hpp": "b7cb619ec1b756c34af947fada415b53bddc49e35627154ff213e2a08d900105",
+    "producer_path.hpp": "0798182f916ede07205dd85c02646a9c60ef5e1c519f51270d3942439c126151",
+    "generation_metadata.hpp": "32b8aff44983f29e0623611070202226c13d3029bc24b8a98131f81caf86c7b4",
+    "output_metadata.hpp": "02d09768df2f636b350b9502d4a3d3fdf655b51ca8d29057444b818accc0e729",
+    "sm_pool.hpp": "ecb082831652d9d9ad116364c6156ae3a0cec32512678ec57ef4e09cafdfe2b4",
+    "l2_slice.hpp": "a2394a00b41d75d6b6fce924844a6a1c722d4fe98d429f37abb7c0760dec3ccd",
+    "native_stage_event.hpp": "e5d0f71be713774009020c869b71a64491fac6f1ff47f02824f158ec2d90dd98",
+    "sm_event.hpp": "cf97c8cd9153a1fac819b1efee2b22d269a2da0d088bdc5a09377a9b7a6102a7",
+    "shared_hub_event.hpp": "593b961d10f8b8e929a148cb6aadadde4f32866fdfae9206b21d011a5fea182d",
+    "units.hpp": "6f92d6ed06913bd4622a43f29ad6cec4f5ad9ac02b7c20e2510b78890f4bffbe",
+    "resident_metadata.hpp": "e80f43ba854c0621f50b671a5de37fd8d7f85a6574ae362e9c89e03a1a07a3fa",
+    "staging_event.hpp": "df569dc4fd92615f9d0d4c359ae82535b2dda219f691aebf39cfdaec33306572",
+    "native_schedule.hpp": "cc903710a14275ca26ea56ad2d5b804e37cd6ee3e3f41873665ba2a5242114ea",
+    "native_engine_event.hpp": "56ae7321d29552199d043f466c9b1ddab0604fc54da5a907c075ea75c0c77216"
+  },
+  "driver_sha256": "3b6d1c890f86b2e813d6bb80aef6c4349acdb333409d625c9ddb7c5c74de15a5",
+  "candidate_sha256": "f06349b01cf20670cded33c2c904d9f871f485a6394b50fe9eb3a8ccd5160ef9",
+  "argv": [
+    "128",
+    "96",
+    "12288",
+    "1",
+    "170",
+    "48",
+    "11",
+    "20000000",
+    "1",
+    "1024",
+    "1",
+    "1",
+    "32"
+  ],
+  "prior": {
+    "global_result_floor": 340,
+    "basis": "Step5 exposed stagedU16 load-ready339.5 rounded340, independent primitive; heldoutstage64A333. CompositepriornotintrinsicL2.",
+    "result_ready_rule": "max(issue+340,lastsectorreturn+1)",
+    "alu_ready": 1,
+    "store_capture": 1,
+    "store_commit": 1,
+    "pending_global_slots": 32,
+    "pending_store_slots": 32,
+    "issue_ports_per_SM": 1
+  },
+  "changed_capability": "actual compiled producer prefix register/tag ownership plus128livecoalescedsectorrequests and64dependentSTScommits; collectivecompletion beforeexistingnative compute.",
+  "unit_result": "868issues,128sectors,64uniquecommits, firstglobaloffer181,firstsharedcommit521",
+  "limits": [
+    "No numerical payload; address coverage only.",
+    "Encodedinstructioncontrols, uniform/predicate producer readiness, constant/specialregister reads remain prior1 or unmodeled.",
+    "Fullinbounds128threadCFG limited to multiples32. FalsePRMTretainednoeffects.",
+    "Newstageprefixresets its localownershipeachstage after drainedstage; physicalcarry-state beyondboundary not recovered.",
+    "No wholekernel timing used to set340 or otherparameters.",
+    "No newRTLverification claimed."
+  ]
+}

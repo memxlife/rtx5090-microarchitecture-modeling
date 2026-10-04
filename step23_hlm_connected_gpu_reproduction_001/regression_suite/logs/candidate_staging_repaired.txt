@@ -1,0 +1,1 @@
+STAGING_SCREEN_PASS requests=128 groups=64 words=2048 cycles=2013

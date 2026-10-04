@@ -1,0 +1,107 @@
+{
+  "completed_utc": "2026-10-04T12:21:47.059162+00:00",
+  "contract": "frozen_run_contract.json",
+  "source_sha256": {
+    "step8_operand_ready_diagnosis_001/run_executor.cpp": "317b13fb0c02aad653a2dd595fd0f56e4328f509c3c4b5589d611f76d821ac73",
+    "step8_operand_ready_diagnosis_001/instruction_executor.hpp": "26da34b56ced841840e23b2b004547e0a45d431d8d4cdc8b867692e8ef33a579",
+    "step8_operand_ready_diagnosis_001/freeze_prediction.py": "136b3cf89cf473759aed948467a00ee95af52c822d0383395320480dc93a05cc",
+    "step8_operand_ready_diagnosis_001/direct_K1024.tsv": "1509e6768fa1f2c36f3b2dae77f5e53a1ed79cfbebcf7c482847b4c323f64672",
+    "step8_operand_ready_diagnosis_001/direct_K2048.tsv": "8ac51e572405e280b518b2634b0fa833014d757ace6ed75f31395b2765e13bec",
+    "step8_operand_ready_diagnosis_001/direct_K3072.tsv": "babc3b87b7b6221325efbc7c5b8098014a87d61326ec0db0cc51e14fe933ab6c"
+  },
+  "executable_sha256": "6e89b0c29971e6cbead001ea17bf95205ffe6a7ae5283ee546f2a3c876f4efdb",
+  "build_command": [
+    "c++",
+    "-std=c++20",
+    "-O2",
+    "step8_operand_ready_diagnosis_001/run_executor.cpp",
+    "-o",
+    "step23_hlm_connected_gpu_reproduction_001/direct_cpp_rerun_001/operand_executor"
+  ],
+  "build_seconds": 0.6986532500013709,
+  "GPU_reference_sha256": "a9a56d6f6171be5e674b742250cdf4ee254e282d7a182cd65282267c8370cf42",
+  "clock_convention": "2940 reference cycles/us; preserved GPU CUDA-event timings, not fresh GPU runs",
+  "rows": [
+    {
+      "K": 1024,
+      "argv": [
+        "step23_hlm_connected_gpu_reproduction_001/direct_cpp_rerun_001/operand_executor",
+        "step8_operand_ready_diagnosis_001/direct_K1024.tsv",
+        "352",
+        "352",
+        "step23_hlm_connected_gpu_reproduction_001/direct_cpp_rerun_001/K1024.events",
+        "1",
+        "1"
+      ],
+      "instruction_cycles": 26980,
+      "issued_instructions": 8880,
+      "completion_cycles": 34587,
+      "prediction_us": 11.764285714285714,
+      "host_seconds": 0.4163367080036551,
+      "events_sha256": "6eea9a8c48284602f36badbdb7ce7677458e1aae8c45794fe2c6683436d6dfc7",
+      "exit_code": 0,
+      "numerical_payload": false,
+      "GPU_us": 15.1331205,
+      "GPU_correct": true,
+      "signed_error_percent": -22.261335893772117,
+      "target_5percent_pass": false,
+      "saved_prediction_us": 11.764285714285714,
+      "exact_saved_prediction_match": true
+    },
+    {
+      "K": 2048,
+      "argv": [
+        "step23_hlm_connected_gpu_reproduction_001/direct_cpp_rerun_001/operand_executor",
+        "step8_operand_ready_diagnosis_001/direct_K2048.tsv",
+        "352",
+        "352",
+        "step23_hlm_connected_gpu_reproduction_001/direct_cpp_rerun_001/K2048.events",
+        "1",
+        "1"
+      ],
+      "instruction_cycles": 53467,
+      "issued_instructions": 17648,
+      "completion_cycles": 61074,
+      "prediction_us": 20.773469387755103,
+      "host_seconds": 0.0121926658321172,
+      "events_sha256": "ef3caff06af7a35ed2fe25f6d9362fc27ebf111cc712e780e2cddde5694125b0",
+      "exit_code": 0,
+      "numerical_payload": false,
+      "GPU_us": 29.2510395,
+      "GPU_correct": true,
+      "signed_error_percent": -28.98211570308432,
+      "target_5percent_pass": false,
+      "saved_prediction_us": 20.773469387755103,
+      "exact_saved_prediction_match": true
+    },
+    {
+      "K": 3072,
+      "argv": [
+        "step23_hlm_connected_gpu_reproduction_001/direct_cpp_rerun_001/operand_executor",
+        "step8_operand_ready_diagnosis_001/direct_K3072.tsv",
+        "352",
+        "352",
+        "step23_hlm_connected_gpu_reproduction_001/direct_cpp_rerun_001/K3072.events",
+        "1",
+        "1"
+      ],
+      "instruction_cycles": 79995,
+      "issued_instructions": 26416,
+      "completion_cycles": 87602,
+      "prediction_us": 29.796598639455784,
+      "host_seconds": 0.01591624994762242,
+      "events_sha256": "c45e062d3dcbe975f10cee6c3d107bcd0889af03ca24604e43cae5e074d4a2c7",
+      "exit_code": 0,
+      "numerical_payload": false,
+      "GPU_us": 43.5147171,
+      "GPU_correct": true,
+      "signed_error_percent": -31.5252387577724,
+      "target_5percent_pass": false,
+      "saved_prediction_us": 29.796598639455784,
+      "exact_saved_prediction_match": true
+    }
+  ],
+  "no_Verilog_or_GPU_run": true,
+  "no_parameter_changes": true,
+  "historical_gpu_executable_identity": "Whole executable hash unavailable in original confirmation; native instruction identity separately preserved."
+}

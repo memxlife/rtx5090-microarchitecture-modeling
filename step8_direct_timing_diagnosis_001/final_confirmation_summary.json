@@ -1,0 +1,59 @@
+{
+  "1024": {
+    "timings_us": {
+      "custom_direct_global": 15.1331205
+    },
+    "prediction_us": 10.696938775510205,
+    "error_percent": -29.314388426959237,
+    "all_correct": true,
+    "prediction_cycles": 31449,
+    "baseline_uniform352_prediction_us": 11.764285714285714,
+    "baseline_uniform352_error_percent": -22.261335893772117
+  },
+  "2048": {
+    "timings_us": {
+      "custom_direct_global": 29.2510395
+    },
+    "prediction_us": 18.6265306122449,
+    "error_percent": -36.32181648708621,
+    "all_correct": true,
+    "prediction_cycles": 54762,
+    "baseline_uniform352_prediction_us": 20.773469387755103,
+    "baseline_uniform352_error_percent": -28.98211570308432
+  },
+  "3072": {
+    "timings_us": {
+      "custom_original": 96.0012817,
+      "custom_staged48": 94.4910431,
+      "custom_staged64": 100.097282,
+      "custom_direct_global": 43.5147171
+    },
+    "prediction_us": 26.548299319727892,
+    "error_percent": -38.990067983854836,
+    "all_correct": true,
+    "prediction_cycles": 78052,
+    "baseline_uniform352_prediction_us": 29.796598639455784,
+    "baseline_uniform352_error_percent": -31.5252387577724
+  },
+  "provenance": {
+    "frozen_prediction_file": "studies/rtx5090_gemm_milp/step8_operand_ready_diagnosis_001/frozen_operand_prediction.json",
+    "frozen_prediction_sha256": "03fe429f3ae61cc429133a97d8d17c0a785891236cfd50e22bf267d5abbfd6f4",
+    "written_utc": "2026-10-04T07:14:18.965845+00:00",
+    "raw_sha256": {
+      "1024": "9e860087eb462c22a41f1d357c00776099be8cd1512269ac5ce737ecfbf9f1d1",
+      "2048": "382cff7bd306e62e26a1fa4ca0f5d693425a4026a17aa249cddcd8808735be66",
+      "3072": "d5d90641c6ec3a20d2435ee0810a02d5c9c95132e7b3be970d488251f70af97a"
+    }
+  },
+  "conclusion": {
+    "timing_validation_pass": false,
+    "promoted": false,
+    "finite_four_candidate_winner": "custom_direct_global",
+    "interpretation": "Paired primitive readiness does not transfer accurately to whole-kernel timing. No parameter was fitted to these confirmation results. Constant and special-register priors remain unidentified. LDC repair failed correctness and contributed no prior.",
+    "jobs_complete": true,
+    "additional_runs": false,
+    "clock_reference_cycles_per_us": 2940,
+    "sampling": "Eleven raw timing samples retained in each results JSONL.",
+    "scope": "Fixed M192 N768; K1024 and K3072 repeated cases, K2048 independently held out. All custom candidates checked on two seeds."
+  }
+}

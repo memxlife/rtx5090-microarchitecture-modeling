@@ -1,0 +1,77 @@
+{
+  "references": [
+    {
+      "reference": "XiangShan",
+      "path": "/Users/lishang/Downloads/xiangshan-design-doc-en (1).pdf",
+      "sha256": "4f6395c7fe13dcf73c8007ffbe30ddcb6148987865959f22d9b3dce131565b45",
+      "text_review_page_ranges": [
+        [
+          116,
+          142
+        ],
+        [
+          232,
+          246
+        ],
+        [
+          363,
+          384
+        ],
+        [
+          464,
+          483
+        ],
+        [
+          572,
+          601
+        ]
+      ],
+      "visually_inspected_pages": [
+        117,
+        236,
+        468,
+        591
+      ],
+      "purpose": "documentation format only; no imported RTX constants"
+    },
+    {
+      "reference": "Intel",
+      "path": "/Users/lishang/Downloads/325462-sdm-vol-1-2abcd-3abcd.pdf",
+      "sha256": "b8f91c5fbe1d4116a1b0c9148ac340d6db7782b6228e375d7d67e16489f21333",
+      "text_review_page_ranges": [
+        [
+          70,
+          82
+        ],
+        [
+          597,
+          613
+        ],
+        [
+          628,
+          630
+        ],
+        [
+          1255,
+          1259
+        ],
+        [
+          3285,
+          3297
+        ],
+        [
+          3441,
+          3459
+        ]
+      ],
+      "visually_inspected_pages": [
+        597,
+        610,
+        628,
+        3443
+      ],
+      "purpose": "documentation format only; no imported RTX constants"
+    }
+  ],
+  "hardware_code_changed": false
+}

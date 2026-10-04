@@ -1,0 +1,70 @@
+{
+  "new_adaptation_not_blind_holdout": true,
+  "rows": [
+    {
+      "K": 1024,
+      "compiled_control_instructions_per_stage": 34,
+      "prior_stage_cycles": 940,
+      "L2_service_bound_us": 5.480362369337979,
+      "prior_prediction_us": 14.028622783673452,
+      "GPU_us": 15.1331205,
+      "signed_error_percent": -7.2985457052730744
+    },
+    {
+      "K": 2048,
+      "compiled_control_instructions_per_stage": 34,
+      "prior_stage_cycles": 940,
+      "L2_service_bound_us": 10.960724738675959,
+      "prior_prediction_us": 24.259915300680255,
+      "GPU_us": 29.2510395,
+      "signed_error_percent": -17.06306608118917
+    },
+    {
+      "K": 3072,
+      "compiled_control_instructions_per_stage": 34,
+      "prior_stage_cycles": 940,
+      "L2_service_bound_us": 16.44108710801394,
+      "prior_prediction_us": 34.491207817687055,
+      "GPU_us": 43.5147171,
+      "signed_error_percent": -20.73668377890694
+    }
+  ],
+  "compiled_stage_instruction_count": 62,
+  "compiled_control_PCs": [
+    "0x320",
+    "0x330",
+    "0x340",
+    "0x350",
+    "0x360",
+    "0x370",
+    "0x380",
+    "0x390",
+    "0x3a0",
+    "0x3b0",
+    "0x3c0",
+    "0x3d0",
+    "0x3e0",
+    "0x3f0",
+    "0x400",
+    "0x410",
+    "0x420",
+    "0x430",
+    "0x480",
+    "0x490",
+    "0x4a0",
+    "0x4f0",
+    "0x500",
+    "0x560",
+    "0x5a0",
+    "0x5b0",
+    "0x5c0",
+    "0x5d0",
+    "0x5e0",
+    "0x5f0",
+    "0x600",
+    "0x610",
+    "0x6d0",
+    "0x6f0"
+  ],
+  "state": "newprovisionalhighleveldirectadaptation, notunchangedHLM and notblindholdout"
+}

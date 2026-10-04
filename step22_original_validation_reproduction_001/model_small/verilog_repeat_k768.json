@@ -1,0 +1,59 @@
+{
+  "K": 768,
+  "scope": "Relinked preserved generated original main with preserved model archive/runtime objects; original separate --binary executable had been overwritten by C++ host. Not original executable identity.",
+  "compile_command": [
+    "c++",
+    "-std=c++20",
+    "-Os",
+    "-Irtl/calibration_connected_001/build_configured_k768",
+    "-I/opt/homebrew/Cellar/verilator/5.050/share/verilator/include",
+    "-I/opt/homebrew/Cellar/verilator/5.050/share/verilator/include/vltstd",
+    "-DVM_TIMING=1",
+    "-c",
+    "rtl/calibration_connected_001/build_configured_k768/Vcalibration_connected_tb__main.cpp",
+    "-o",
+    "step22_original_validation_reproduction_001/model_small/original_main_k768.o"
+  ],
+  "link_command": [
+    "c++",
+    "-Wl,-U,__Z15vl_time_stamp64v,-U,__Z13sc_time_stampv,-U,_vlog_startup_routines",
+    "step22_original_validation_reproduction_001/model_small/original_main_k768.o",
+    "rtl/calibration_connected_001/build_configured_k768/bf16_reference.o",
+    "rtl/calibration_connected_001/build_configured_k768/verilated.o",
+    "rtl/calibration_connected_001/build_configured_k768/verilated_dpi.o",
+    "rtl/calibration_connected_001/build_configured_k768/verilated_timing.o",
+    "rtl/calibration_connected_001/build_configured_k768/verilated_threads.o",
+    "rtl/calibration_connected_001/build_configured_k768/Vcalibration_connected_tb__ALL.a",
+    "-pthread",
+    "-o",
+    "step22_original_validation_reproduction_001/model_small/relinked_verilog_tb_k768"
+  ],
+  "run_command": [
+    "step22_original_validation_reproduction_001/model_small/relinked_verilog_tb_k768",
+    "+hit_delay=4",
+    "+setup_cycles=3346"
+  ],
+  "input_sha256": {
+    "rtl/calibration_connected_001/build_configured_k768/Vcalibration_connected_tb__main.cpp": "743cdaceffa556d049441fcf76e60558bebf1f408d4e8c460bbbb2a9fab0bddb",
+    "step22_original_validation_reproduction_001/model_small/original_main_k768.o": "fb18877fc38c8962756c3f3ddeb7c141310c4fa9dcc006a3e8fb22092a2eec15",
+    "rtl/calibration_connected_001/build_configured_k768/bf16_reference.o": "53ac70f66279de6f74e28545db82a8eda98e1934b958682228b0e6121fc4ee63",
+    "rtl/calibration_connected_001/build_configured_k768/verilated.o": "95989b27f597ed68852c474839ad98bbc7835612db048868aeb4d391ff2d51b9",
+    "rtl/calibration_connected_001/build_configured_k768/verilated_dpi.o": "09cfb69cac87eb0ca9cf516d04b70df15204cf9bd31ed4198e250c86323b1ce3",
+    "rtl/calibration_connected_001/build_configured_k768/verilated_timing.o": "02de76e6a3eb213c6bb6aebec8e61394a7d6c033233d6a799f58ee1949004530",
+    "rtl/calibration_connected_001/build_configured_k768/verilated_threads.o": "87d7c3df440a11b90d4a3ee114e3daf502f81e2639c98dae28af02d6161b6287",
+    "rtl/calibration_connected_001/build_configured_k768/Vcalibration_connected_tb__ALL.a": "e23e61baeb7a88f08b108b5ebe577fab0b225d492eafa41630d217c7e40b99c2"
+  },
+  "executable_sha256": "c2b435712be097fdf4a0b5b8c608313a7427cf86d5cc56f6a31290873008f9fd",
+  "returncode": 0,
+  "wall_seconds": 16.709943333873525,
+  "exact_metrics": true,
+  "checked_words_12288": true,
+  "original_metrics": [
+    "RESIDENT_MULTI_SM_NB_L2_LAUNCH id=20 words=6144 blocks=6 peak_resident=6 elapsed_cycles=136311 l2_requests=18432 l2_hits=1610 l2_misses=16822 l2_merges=9142 l2_fills=7680",
+    "RESIDENT_MULTI_SM_NB_L2_LAUNCH id=21 words=6144 blocks=6 peak_resident=6 elapsed_cycles=74968 l2_requests=36864 l2_hits=20042 l2_misses=16822 l2_merges=9142 l2_fills=7680"
+  ],
+  "repeat_metrics": [
+    "RESIDENT_MULTI_SM_NB_L2_LAUNCH id=20 words=6144 blocks=6 peak_resident=6 elapsed_cycles=136311 l2_requests=18432 l2_hits=1610 l2_misses=16822 l2_merges=9142 l2_fills=7680",
+    "RESIDENT_MULTI_SM_NB_L2_LAUNCH id=21 words=6144 blocks=6 peak_resident=6 elapsed_cycles=74968 l2_requests=36864 l2_hits=20042 l2_misses=16822 l2_merges=9142 l2_fills=7680"
+  ]
+}

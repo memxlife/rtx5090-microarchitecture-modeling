@@ -1,0 +1,84 @@
+{
+  "scope": "Separate earlier 2-SM, 2-context, 64KiB-cache smoke parity; not calibrated 6-SM validation. Inventoried, not rerun because exact calibrated four-case repeats are primary and already suffice.",
+  "saved_receipt": "studies/rtx5090_gemm_milp/rtl/calibration_connected_001/cpp_equivalence.json",
+  "preserved_hosts": {
+    "studies/rtx5090_gemm_milp/rtl/calibration_connected_001/build_cpp_k64/Vresident_gemm_multi_sm_nb_l2_tb": {
+      "exists": true,
+      "sha256": "6b63449c55caea5e585dcc195c73ec56c94a297ce9c47e1cf7152129ada07eb1"
+    },
+    "studies/rtx5090_gemm_milp/rtl/calibration_connected_001/build_cpp_k1536/Vresident_gemm_multi_sm_nb_l2_tb": {
+      "exists": true,
+      "sha256": "fff0f90b1e76733f74cfdc6c40b2f4fb32d298587e933da7468861b5231e0a2f"
+    }
+  },
+  "historical_results": {
+    "results": [
+      {
+        "K": 64,
+        "checked_output_words": 12288,
+        "exact_cycle_and_cache_counter_match": true,
+        "launch_metrics": [
+          {
+            "id": 20,
+            "words": 6144,
+            "blocks": 6,
+            "peak_resident": 4,
+            "modeled_elapsed_cycles": 26731,
+            "l2_requests": 1024,
+            "l2_hits": 264,
+            "l2_misses": 760,
+            "l2_merges": 120,
+            "l2_fills": 640
+          },
+          {
+            "id": 21,
+            "words": 6144,
+            "blocks": 6,
+            "peak_resident": 4,
+            "modeled_elapsed_cycles": 16154,
+            "l2_requests": 1280,
+            "l2_hits": 520,
+            "l2_misses": 760,
+            "l2_merges": 120,
+            "l2_fills": 640
+          }
+        ],
+        "host_wall_seconds": 1.8062252500094473
+      },
+      {
+        "K": 1536,
+        "checked_output_words": 12288,
+        "exact_cycle_and_cache_counter_match": true,
+        "launch_metrics": [
+          {
+            "id": 20,
+            "words": 6144,
+            "blocks": 6,
+            "peak_resident": 4,
+            "modeled_elapsed_cycles": 582963,
+            "l2_requests": 33792,
+            "l2_hits": 5140,
+            "l2_misses": 28652,
+            "l2_merges": 4076,
+            "l2_fills": 24576
+          },
+          {
+            "id": 21,
+            "words": 6144,
+            "blocks": 6,
+            "peak_resident": 4,
+            "modeled_elapsed_cycles": 583000,
+            "l2_requests": 67584,
+            "l2_hits": 10283,
+            "l2_misses": 57301,
+            "l2_merges": 8149,
+            "l2_fills": 49152
+          }
+        ],
+        "host_wall_seconds": 37.887364000082016
+      }
+    ],
+    "scope": "Explicit C++ host versus saved same-source SystemVerilog timed harness; not an independent microarchitecture implementation",
+    "physical_timing_calibrated": false
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "K": 64,
+  "command": [
+    "rtl/calibration_connected_001/build_configured_k64/Vcalibration_connected_tb",
+    "+hit_delay=4",
+    "+setup_cycles=3346"
+  ],
+  "executable_sha256": "a2b97cded00be801df0a821a46d5b0c6bd75da150b85d114c28b940849ec4e04",
+  "returncode": 0,
+  "wall_seconds": 2.8467385419644415,
+  "expected_metrics": [
+    "RESIDENT_MULTI_SM_NB_L2_LAUNCH id=20 words=6144 blocks=6 peak_resident=6 elapsed_cycles=19491 l2_requests=1536 l2_hits=70 l2_misses=1466 l2_merges=826 l2_fills=640",
+    "RESIDENT_MULTI_SM_NB_L2_LAUNCH id=21 words=6144 blocks=6 peak_resident=6 elapsed_cycles=13852 l2_requests=3072 l2_hits=1606 l2_misses=1466 l2_merges=826 l2_fills=640"
+  ],
+  "repeat_metrics": [
+    "RESIDENT_MULTI_SM_NB_L2_LAUNCH id=20 words=6144 blocks=6 peak_resident=6 elapsed_cycles=19491 l2_requests=1536 l2_hits=70 l2_misses=1466 l2_merges=826 l2_fills=640",
+    "RESIDENT_MULTI_SM_NB_L2_LAUNCH id=21 words=6144 blocks=6 peak_resident=6 elapsed_cycles=13852 l2_requests=3072 l2_hits=1606 l2_misses=1466 l2_merges=826 l2_fills=640"
+  ],
+  "exact_metrics": true,
+  "checked_words_12288": true
+}

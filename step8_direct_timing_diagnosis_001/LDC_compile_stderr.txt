@@ -1,0 +1,21 @@
+ptxas info    : 0 bytes gmem
+ptxas info    : Compiling entry function '_Z5probeILi1ELi0EEvPyPjjj' for 'sm_120'
+ptxas info    : Function properties for _Z5probeILi1ELi0EEvPyPjjj
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 16 registers, used 0 barriers
+ptxas info    : Compile time = 4.897 ms
+ptxas info    : Compiling entry function '_Z5probeILi1ELi1EEvPyPjjj' for 'sm_120'
+ptxas info    : Function properties for _Z5probeILi1ELi1EEvPyPjjj
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 16 registers, used 0 barriers
+ptxas info    : Compile time = 3.448 ms
+ptxas info    : Compiling entry function '_Z5probeILi0ELi0EEvPyPjjj' for 'sm_120'
+ptxas info    : Function properties for _Z5probeILi0ELi0EEvPyPjjj
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 16 registers, used 0 barriers
+ptxas info    : Compile time = 3.904 ms
+ptxas info    : Compiling entry function '_Z5probeILi0ELi1EEvPyPjjj' for 'sm_120'
+ptxas info    : Function properties for _Z5probeILi0ELi1EEvPyPjjj
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 16 registers, used 0 barriers
+ptxas info    : Compile time = 4.215 ms
